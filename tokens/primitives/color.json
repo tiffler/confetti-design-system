@@ -6,14 +6,15 @@
       "300": { "value": "#ede4d3", "comment": "page background baseline" }
     },
     "ink": {
-      "900": { "value": "#1a150d" },
-      "800": { "value": "#211b12" },
-      "700": { "value": "#2a2317" },
-      "600": { "value": "#332a1c" },
-      "500": { "value": "#3b3121" },
-      "400": { "value": "#2e2618", "comment": "canonical Ink — warm near-black, text and borders" },
+      "$comment": "Numbered by luminance: 200 lightest, 900 darkest. Renumbering is safe only while nothing outside this repo consumes primitives by name.",
+      "200": { "value": "#bfb6a6" },
       "300": { "value": "#6b5f4a" },
-      "200": { "value": "#9c8f76" },
+      "400": { "value": "#3b3121" },
+      "500": { "value": "#332a1c" },
+      "600": { "value": "#2e2618", "comment": "canonical Ink — warm near-black, text and borders" },
+      "700": { "value": "#2a2317" },
+      "800": { "value": "#211b12" },
+      "900": { "value": "#1a150d" },
       "a24": { "value": "rgba(46, 38, 24, 0.24)" },
       "a18": { "value": "rgba(46, 38, 24, 0.18)" },
       "a12": { "value": "rgba(46, 38, 24, 0.12)" }

@@ -2,7 +2,7 @@
   "shadow": {
     "none": { "value": "none" },
     "hard-ink": {
-      "value": "3px 3px 0px 0px {color.ink.400.value}",
+      "value": "3px 3px 0px 0px {color.ink.600.value}",
       "comment": "hard offset shadow — the sticker lift, no blur"
     },
     "hard-cream": {
@@ -13,6 +13,12 @@
   "motion": {
     "lift": { "value": "translate(-2px, -2px)" },
     "rest": { "value": "translate(0, 0)" },
+    "tilt": {
+      "subtle": {
+        "value": "0.8deg",
+        "comment": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1"
+      }
+    },
     "duration": {
       "fast": { "value": "120ms" },
       "base": { "value": "180ms" }

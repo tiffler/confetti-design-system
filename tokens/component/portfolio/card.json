@@ -11,6 +11,7 @@
     "gap": { "value": "{space.stack.value}" },
     "shadow-hover": { "value": "{shadow.lift.value}" },
     "transform-hover": { "value": "{motion.lift.value}" },
+    "tilt-max": { "value": "{motion.tilt.subtle.value}" },
     "transition-duration": { "value": "{motion.duration.base.value}" },
     "transition-easing": { "value": "{motion.easing.standard.value}" },
     "eyebrow": {
@@ -21,7 +22,7 @@
     },
     "title": {
       "font-family": { "value": "{font.family.display.value}" },
-      "font-size": { "value": "{font.size.heading.value}" },
+      "font-size": { "value": "{font.size.h4.value}" },
       "font-weight": { "value": "{font.weight.display.value}" },
       "tracking": { "value": "{font.tracking.display.value}" },
       "leading": { "value": "{font.leading.heading.value}" }
