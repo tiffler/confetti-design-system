@@ -27,8 +27,9 @@ const meta = {
     interactive: false,
   },
   decorators: [
-    (Story) => (
-      <div style={{ maxWidth: 380 }}>
+    // Width is per-story so grid stories aren't squeezed into the single-card frame.
+    (Story, ctx) => (
+      <div style={{ maxWidth: (ctx.parameters.frameWidth as number | undefined) ?? 380 }}>
         <Story />
       </div>
     ),
@@ -50,6 +51,43 @@ export const Interactive: Story = {
 export const RaisedSurface: Story = {
   name: 'Raised surface',
   args: { surface: 'raised' },
+};
+
+const WORK = [
+  { title: 'Atlas', eyebrow: 'Design systems', body: 'A component library and token system built to bring six product teams onto one visual language.' },
+  { title: 'Coldwater', eyebrow: 'Case studies', body: 'A checkout redesign that cut cart abandonment by simplifying shipping and payment into a single step.' },
+  { title: 'Northline', eyebrow: 'Case studies', body: 'Reworked first-run onboarding to get new users to their first meaningful action in under a minute.' },
+  { title: 'Meridian', eyebrow: 'Design systems', body: 'An accessible component set built from the ground up, documented for both design and engineering.' },
+  { title: 'Marginalia', eyebrow: 'Tools', body: 'A personal sketchbook project exploring linework and hand lettering over one year.' },
+  { title: 'Paper Trail', eyebrow: 'Tools', body: 'A set of editorial illustrations for a quarterly print zine on independent design practice.' },
+];
+
+export const TiltedGrid: Story = {
+  name: 'Tilted grid',
+  parameters: {
+    frameWidth: 900,
+    docs: {
+      description: {
+        story:
+          'Each card derives its tilt from its title, so the angles vary across a grid but never change between renders. Filtering or re-sorting moves a card without re-tilting it. Pass `tilt={0}` to sit one flat, or `tilt` in -1..1 to place it by hand.',
+      },
+    },
+  },
+  render: (args) => (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+        gap: 'var(--space-stack)',
+      }}
+    >
+      {WORK.map((w) => (
+        <Card key={w.title} {...args} eyebrow={w.eyebrow} title={w.title} interactive>
+          {w.body}
+        </Card>
+      ))}
+    </div>
+  ),
 };
 
 export const WithContent: Story = {

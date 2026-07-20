@@ -1,7 +1,13 @@
 .cf-card {
+  /* Overridden per instance by Card.tsx; flat is the fallback when the component
+     isn't driving it (e.g. plain markup using the class). */
+  --card-tilt: 0deg;
+  --card-tilt-hover: var(--card-tilt);
+
   display: flex;
   flex-direction: column;
   gap: var(--card-gap);
+  transform: rotate(var(--card-tilt));
 
   padding: var(--card-padding);
   background: var(--card-bg);
@@ -24,8 +30,10 @@
   cursor: pointer;
 }
 
+/* The sticker rises off the page and settles at a slightly different angle — it never
+   straightens. Order matters: rotate first, then translate along the page axes. */
 .cf-card--interactive:hover {
-  transform: var(--card-transform-hover);
+  transform: rotate(var(--card-tilt-hover)) var(--card-transform-hover);
   box-shadow: var(--card-shadow-hover);
 }
 
@@ -60,7 +68,9 @@
   .cf-card {
     transition: none;
   }
+  /* Drops the lift but keeps the tilt — the tilt is a static layout property, not
+     motion, so reduced-motion users should still see the intended composition. */
   .cf-card--interactive:hover {
-    transform: none;
+    transform: rotate(var(--card-tilt));
   }
 }
