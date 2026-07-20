@@ -15,7 +15,8 @@
     },
     "border": {
       "default": { "value": "{color.ink.600.value}" },
-      "subtle": { "value": "{color.ink.a12.value}" }
+      "subtle": { "value": "{color.ink.a12.value}" },
+      "none": { "value": "{color.base.transparent.value}", "comment": "an explicit absence — variants that keep the border box without drawing an edge" }
     },
     "action": {
       "primary": {
@@ -27,6 +28,7 @@
         "fg": { "value": "{color.ink.600.value}" }
       },
       "ghost": {
+        "bg": { "value": "{color.base.transparent.value}" },
         "fg": { "value": "{color.ink.600.value}" },
         "fg-hover": { "value": "{color.red.500.value}" }
       }
@@ -114,5 +116,21 @@
     "inset-tight": { "value": "{space.2.value}", "comment": "8px — compact control padding" },
     "stack": { "value": "{space.4.value}", "comment": "16px — vertical rhythm inside a container" },
     "inset": { "value": "{space.6.value}", "comment": "24px — container padding" }
+  },
+  "motion": {
+    "$comment": "Leaf names differ from the primitives they alias — motion.transform.lift vs motion.lift — because a semantic role sharing a primitive's full path would collide in the flat CSS namespace.",
+    "transform": {
+      "lift": { "value": "{motion.lift.value}", "comment": "how far an interactive surface rises on hover" },
+      "rest": { "value": "{motion.rest.value}" }
+    },
+    "tilt": {
+      "max": { "value": "{motion.tilt.subtle.value}", "comment": "outer bound of the hand-placed sticker angle" }
+    },
+    "duration": {
+      "interaction": { "value": "{motion.duration.base.value}", "comment": "hover and focus transitions" }
+    },
+    "easing": {
+      "interaction": { "value": "{motion.easing.standard.value}" }
+    }
   }
 }

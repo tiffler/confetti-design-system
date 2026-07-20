@@ -13,7 +13,8 @@ npm run storybook     # builds tokens, then serves Storybook on :6006
 
 | Script | What it does |
 | --- | --- |
-| `npm run tokens` | Style Dictionary build — `tokens/` → `build/portfolio/` |
+| `npm run tokens` | Layer audit, then Style Dictionary build — `tokens/` → `build/portfolio/` |
+| `npm run audit:tokens` | Three-tier contract check on its own |
 | `npm run storybook` | Token build, then Storybook dev server |
 | `npm run build-storybook` | Token build, then static Storybook into `storybook-static/` |
 | `npm run typecheck` | `tsc --noEmit` |
@@ -42,6 +43,30 @@ raw values     purpose        per-component
 
 Components consume component tokens and nothing else. They never know which skin or
 mode is active — the custom property name is stable, only its value repoints.
+
+### The contract is enforced, not documented
+
+`npm run audit:tokens` walks every token declaration and fails on:
+
+- a semantic or component token holding a **literal** instead of an alias;
+- a component token **skipping a layer** to reach a primitive;
+- a reference to a token that **does not exist**.
+
+It runs as the first step of `npm run tokens`, so a violation fails the build with the
+offending token named — the same way `_schema.json` already fails a skin that omits a
+required role. Schema validation checks *completeness*; this checks *discipline*.
+
+Running it against the system as originally built found ten violations that reviewing by
+eye had missed: every motion token in Button and Card reached straight past the semantic
+layer into primitives, `button.ghost` inlined `transparent` twice, and dark mode's
+`border.subtle` inlined an rgba value. Fixing those added a semantic motion vocabulary
+(`motion.transform.lift`, `motion.duration.interaction`), a `color.border.none` role for
+deliberate absence, and a `cream.a16` primitive. No rendered value changed.
+
+The audit also reports primitives no role aliases and roles no component consumes.
+Neither is a defect — primitives are a palette, and the semantic layer is the public API
+for application code, not merely an input to component tokens — so they print as
+information rather than failures.
 
 ### Build output
 

@@ -3,7 +3,8 @@
     "cream": {
       "100": { "value": "#f4f0e4", "comment": "lightest cream — raised surfaces" },
       "200": { "value": "#ede7d8", "comment": "panel chrome" },
-      "300": { "value": "#ede4d3", "comment": "page background baseline" }
+      "300": { "value": "#ede4d3", "comment": "page background baseline" },
+      "a16": { "value": "rgba(237, 228, 211, 0.16)", "comment": "cream at 16% — the dark-mode counterpart to ink.a12" }
     },
     "ink": {
       "$comment": "Numbered by luminance: 200 lightest, 900 darkest. Renumbering is safe only while nothing outside this repo consumes primitives by name.",
