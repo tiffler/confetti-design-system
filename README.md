@@ -112,6 +112,27 @@ TypeScript and the Storybook toolbar know the new value exists.
 Parked skin directions, from the design brief: **Vintage** (muted/warm/serif),
 **Arcade** (neon/blocky), **Glitch** (high-contrast/chromatic aberration).
 
+## Publishing
+
+The repo is private; the Storybook is published publicly through Chromatic.
+
+`.github/workflows/chromatic.yml` runs on every push to `main` and on pull requests.
+It runs `build-storybook` (so tokens are built first), uploads the result, and:
+
+- **auto-accepts baselines on `main`**, so the published Storybook always tracks main;
+- **reports visual diffs on PRs without failing CI** (`exitZeroOnChanges`) — diffs are
+  reviewed in the Chromatic UI rather than gating the build.
+
+One-time setup: create the project at [chromatic.com](https://www.chromatic.com), then
+store its token as the `CHROMATIC_PROJECT_TOKEN` repo secret:
+
+```bash
+gh secret set CHROMATIC_PROJECT_TOKEN --body "<token>"
+```
+
+To publish from your machine instead, put the same token in `CHROMATIC_PROJECT_TOKEN`
+and run `npm run chromatic`.
+
 ## Folder structure
 
 ```
