@@ -1,0 +1,3366 @@
+{
+  "$description": "Confetti design tokens, W3C DTCG format. One group per skin+mode; values are fully resolved.",
+  "confetti-light": {
+    "color": {
+      "cream": {
+        "100": {
+          "$value": "#f4f0e4",
+          "$type": "color",
+          "$description": "lightest cream — raised surfaces",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-cream-100"
+          }
+        },
+        "200": {
+          "$value": "#ede7d8",
+          "$type": "color",
+          "$description": "panel chrome",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-cream-200"
+          }
+        },
+        "300": {
+          "$value": "#ede4d3",
+          "$type": "color",
+          "$description": "page background baseline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-cream-300"
+          }
+        },
+        "a16": {
+          "$value": "rgba(237, 228, 211, 0.16)",
+          "$type": "color",
+          "$description": "cream at 16% — the dark-mode counterpart to ink.a12",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-cream-a16"
+          }
+        }
+      },
+      "ink": {
+        "200": {
+          "$value": "#bfb6a6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-200"
+          }
+        },
+        "300": {
+          "$value": "#6b5f4a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-300"
+          }
+        },
+        "400": {
+          "$value": "#3b3121",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-400"
+          }
+        },
+        "500": {
+          "$value": "#332a1c",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-500"
+          }
+        },
+        "600": {
+          "$value": "#2e2618",
+          "$type": "color",
+          "$description": "canonical Ink — warm near-black, text and borders",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-600"
+          }
+        },
+        "700": {
+          "$value": "#2a2317",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-700"
+          }
+        },
+        "800": {
+          "$value": "#211b12",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-800"
+          }
+        },
+        "900": {
+          "$value": "#1a150d",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-900"
+          }
+        },
+        "a24": {
+          "$value": "rgba(46, 38, 24, 0.24)",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a24"
+          }
+        },
+        "a18": {
+          "$value": "rgba(46, 38, 24, 0.18)",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a18"
+          }
+        },
+        "a12": {
+          "$value": "rgba(46, 38, 24, 0.12)",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a12"
+          }
+        }
+      },
+      "red": {
+        "400": {
+          "$value": "#e33b2e",
+          "$type": "color",
+          "$description": "lifted for dark surfaces",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-400"
+          }
+        },
+        "500": {
+          "$value": "#c40000",
+          "$type": "color",
+          "$description": "canonical brand Red",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-500"
+          }
+        }
+      },
+      "purple": {
+        "100": {
+          "$value": "#f0e5f2",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-100"
+          }
+        },
+        "400": {
+          "$value": "#c6adda",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-400"
+          }
+        },
+        "700": {
+          "$value": "#453552",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-700"
+          }
+        }
+      },
+      "teal": {
+        "100": {
+          "$value": "#e4f1ec",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-100"
+          }
+        },
+        "400": {
+          "$value": "#a8d6cb",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-400"
+          }
+        },
+        "700": {
+          "$value": "#2c463f",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-700"
+          }
+        }
+      },
+      "orange": {
+        "100": {
+          "$value": "#fbf0dc",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-100"
+          }
+        },
+        "400": {
+          "$value": "#f0c07a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-400"
+          }
+        },
+        "700": {
+          "$value": "#54401f",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-700"
+          }
+        }
+      },
+      "pink": {
+        "100": {
+          "$value": "#f5e4ea",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-100"
+          }
+        },
+        "400": {
+          "$value": "#e8b8cd",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-400"
+          }
+        },
+        "700": {
+          "$value": "#4d323c",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-700"
+          }
+        }
+      },
+      "base": {
+        "white": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-base-white"
+          }
+        },
+        "transparent": {
+          "$value": "transparent",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-base-transparent"
+          }
+        }
+      },
+      "surface": {
+        "page": {
+          "$value": "#ede4d3",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-page"
+          }
+        },
+        "raised": {
+          "$value": "#f4f0e4",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-raised"
+          }
+        },
+        "panel": {
+          "$value": "#ede7d8",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-panel"
+          }
+        },
+        "card": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-card"
+          }
+        }
+      },
+      "text": {
+        "primary": {
+          "$value": "#2e2618",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-text-primary"
+          }
+        },
+        "muted": {
+          "$value": "#6b5f4a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-text-muted"
+          }
+        },
+        "inverse": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-text-inverse"
+          }
+        },
+        "accent": {
+          "$value": "#c40000",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-text-accent"
+          }
+        }
+      },
+      "border": {
+        "default": {
+          "$value": "#2e2618",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-border-default"
+          }
+        },
+        "subtle": {
+          "$value": "rgba(46, 38, 24, 0.12)",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-border-subtle"
+          }
+        },
+        "none": {
+          "$value": "transparent",
+          "$type": "color",
+          "$description": "an explicit absence — variants that keep the border box without drawing an edge",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-border-none"
+          }
+        }
+      },
+      "action": {
+        "primary": {
+          "bg": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-primary-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-primary-fg"
+            }
+          }
+        },
+        "secondary": {
+          "bg": {
+            "$value": "#ede4d3",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-secondary-bg"
+            }
+          },
+          "fg": {
+            "$value": "#2e2618",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-secondary-fg"
+            }
+          }
+        },
+        "ghost": {
+          "bg": {
+            "$value": "transparent",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-ghost-bg"
+            }
+          },
+          "fg": {
+            "$value": "#2e2618",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-ghost-fg"
+            }
+          },
+          "fg-hover": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-ghost-fg-hover"
+            }
+          }
+        }
+      },
+      "accent": {
+        "purple": {
+          "subtle": {
+            "$value": "#f0e5f2",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-purple-subtle"
+            }
+          },
+          "bold": {
+            "$value": "#c6adda",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-purple-bold"
+            }
+          }
+        },
+        "teal": {
+          "subtle": {
+            "$value": "#e4f1ec",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-teal-subtle"
+            }
+          },
+          "bold": {
+            "$value": "#a8d6cb",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-teal-bold"
+            }
+          }
+        },
+        "orange": {
+          "subtle": {
+            "$value": "#fbf0dc",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-orange-subtle"
+            }
+          },
+          "bold": {
+            "$value": "#f0c07a",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-orange-bold"
+            }
+          }
+        },
+        "pink": {
+          "subtle": {
+            "$value": "#f5e4ea",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-pink-subtle"
+            }
+          },
+          "bold": {
+            "$value": "#e8b8cd",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-pink-bold"
+            }
+          }
+        },
+        "on-bold": {
+          "$value": "#2e2618",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-accent-on-bold"
+          }
+        },
+        "on-subtle": {
+          "$value": "#2e2618",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-accent-on-subtle"
+          }
+        }
+      }
+    },
+    "radius": {
+      "none": {
+        "$value": "0",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-none"
+        }
+      },
+      "xs": {
+        "$value": "2px",
+        "$type": "dimension",
+        "$description": "small UI chips / icons",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-xs"
+        }
+      },
+      "sm": {
+        "$value": "4px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-sm"
+        }
+      },
+      "md": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$description": "card container",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-md"
+        }
+      },
+      "full": {
+        "$value": "999px",
+        "$type": "dimension",
+        "$description": "buttons / pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-full"
+        }
+      },
+      "circle": {
+        "$value": "50%",
+        "$type": "dimension",
+        "$description": "dots / avatars",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-circle"
+        }
+      },
+      "control": {
+        "$value": "999px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-control"
+        }
+      },
+      "container": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-container"
+        }
+      },
+      "chip": {
+        "$value": "2px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-chip"
+        }
+      },
+      "avatar": {
+        "$value": "50%",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-avatar"
+        }
+      }
+    },
+    "border": {
+      "width": {
+        "hairline": {
+          "$value": "1px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-hairline"
+          }
+        },
+        "sticker": {
+          "$value": "2px",
+          "$type": "dimension",
+          "$description": "thick-outline card and button borders",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-sticker"
+          }
+        },
+        "default": {
+          "$value": "2px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-default"
+          }
+        }
+      }
+    },
+    "shadow": {
+      "none": {
+        "$value": "none",
+        "$type": "shadow",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-none"
+        }
+      },
+      "hard-ink": {
+        "$value": "3px 3px 0px 0px #2e2618",
+        "$type": "shadow",
+        "$description": "hard offset shadow — the sticker lift, no blur",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-hard-ink"
+        }
+      },
+      "hard-cream": {
+        "$value": "3px 3px 0px 0px #ede4d3",
+        "$type": "shadow",
+        "$description": "dark-mode counterpart — light offset against dark surfaces",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-hard-cream"
+        }
+      },
+      "lift": {
+        "$value": "3px 3px 0px 0px #2e2618",
+        "$type": "shadow",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lift"
+        }
+      }
+    },
+    "motion": {
+      "lift": {
+        "$value": "translate(-2px, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--motion-lift"
+        }
+      },
+      "rest": {
+        "$value": "translate(0, 0)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--motion-rest"
+        }
+      },
+      "tilt": {
+        "subtle": {
+          "$value": "0.8deg",
+          "$type": "other",
+          "$description": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-tilt-subtle"
+          }
+        },
+        "max": {
+          "$value": "0.8deg",
+          "$type": "other",
+          "$description": "outer bound of the hand-placed sticker angle",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-tilt-max"
+          }
+        }
+      },
+      "duration": {
+        "fast": {
+          "$value": "120ms",
+          "$type": "duration",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-fast"
+          }
+        },
+        "base": {
+          "$value": "180ms",
+          "$type": "duration",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-base"
+          }
+        },
+        "interaction": {
+          "$value": "180ms",
+          "$type": "duration",
+          "$description": "hover and focus transitions",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-interaction"
+          }
+        }
+      },
+      "easing": {
+        "standard": {
+          "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+          "$type": "cubicBezier",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-standard"
+          }
+        },
+        "interaction": {
+          "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+          "$type": "cubicBezier",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-interaction"
+          }
+        }
+      },
+      "transform": {
+        "lift": {
+          "$value": "translate(-2px, -2px)",
+          "$type": "other",
+          "$description": "how far an interactive surface rises on hover",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-transform-lift"
+          }
+        },
+        "rest": {
+          "$value": "translate(0, 0)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-transform-rest"
+          }
+        }
+      }
+    },
+    "z": {
+      "base": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--z-base"
+        }
+      },
+      "raised": {
+        "$value": "10",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--z-raised"
+        }
+      },
+      "sticky": {
+        "$value": "100",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--z-sticky"
+        }
+      },
+      "overlay": {
+        "$value": "1000",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--z-overlay"
+        }
+      }
+    },
+    "space": {
+      "0": {
+        "$value": "0",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-0"
+        }
+      },
+      "1": {
+        "$value": "4px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-1"
+        }
+      },
+      "2": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-2"
+        }
+      },
+      "3": {
+        "$value": "12px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-3"
+        }
+      },
+      "4": {
+        "$value": "16px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-4"
+        }
+      },
+      "5": {
+        "$value": "20px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-5"
+        }
+      },
+      "6": {
+        "$value": "24px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-6"
+        }
+      },
+      "8": {
+        "$value": "32px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-8"
+        }
+      },
+      "10": {
+        "$value": "40px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-10"
+        }
+      },
+      "12": {
+        "$value": "48px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-12"
+        }
+      },
+      "16": {
+        "$value": "64px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-16"
+        }
+      },
+      "20": {
+        "$value": "80px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-20"
+        }
+      },
+      "inset-xs": {
+        "$value": "4px",
+        "$type": "dimension",
+        "$description": "4px — tightest inset, chips and dots",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-inset-xs"
+        }
+      },
+      "inline": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$description": "8px — gap between inline siblings",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-inline"
+        }
+      },
+      "inset-tight": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$description": "8px — compact control padding",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-inset-tight"
+        }
+      },
+      "stack": {
+        "$value": "16px",
+        "$type": "dimension",
+        "$description": "16px — vertical rhythm inside a container",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-stack"
+        }
+      },
+      "inset": {
+        "$value": "24px",
+        "$type": "dimension",
+        "$description": "24px — container padding",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-inset"
+        }
+      }
+    },
+    "font": {
+      "family": {
+        "fredoka": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "fontFamily",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-family-fredoka"
+          }
+        },
+        "mono": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "fontFamily",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-family-mono"
+          }
+        },
+        "display": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "fontFamily",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-family-display"
+          }
+        },
+        "body": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "fontFamily",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-family-body"
+          }
+        },
+        "label": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "fontFamily",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-family-label"
+          }
+        }
+      },
+      "size": {
+        "12": {
+          "$value": "12px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-12"
+          }
+        },
+        "14": {
+          "$value": "14px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-14"
+          }
+        },
+        "16": {
+          "$value": "16px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-16"
+          }
+        },
+        "20": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-20"
+          }
+        },
+        "24": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-24"
+          }
+        },
+        "32": {
+          "$value": "32px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-32"
+          }
+        },
+        "40": {
+          "$value": "40px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-40"
+          }
+        },
+        "48": {
+          "$value": "48px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-48"
+          }
+        },
+        "hero": {
+          "$value": "clamp(36px, 13cqw, 104px)",
+          "$type": "dimension",
+          "$description": "container-query driven headline, above the fixed ramp",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-hero"
+          }
+        },
+        "display": {
+          "$value": "clamp(36px, 13cqw, 104px)",
+          "$type": "dimension",
+          "$description": "hero only — fluid, sits above h1",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-display"
+          }
+        },
+        "h1": {
+          "$value": "48px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h1"
+          }
+        },
+        "h2": {
+          "$value": "40px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h2"
+          }
+        },
+        "h3": {
+          "$value": "32px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h3"
+          }
+        },
+        "h4": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h4"
+          }
+        },
+        "h5": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h5"
+          }
+        },
+        "h6": {
+          "$value": "16px",
+          "$type": "dimension",
+          "$description": "meets body size — weight and family carry the distinction",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h6"
+          }
+        },
+        "body": {
+          "$value": "16px",
+          "$type": "dimension",
+          "$description": "16px — body primary",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-body"
+          }
+        },
+        "body-secondary": {
+          "$value": "14px",
+          "$type": "dimension",
+          "$description": "14px — captions, meta, dense UI",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-body-secondary"
+          }
+        },
+        "label": {
+          "$value": "12px",
+          "$type": "dimension",
+          "$description": "12px — mono eyebrows, uppercase",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-label"
+          }
+        }
+      },
+      "weight": {
+        "medium": {
+          "$value": "500",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-medium"
+          }
+        },
+        "semibold": {
+          "$value": "600",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-semibold"
+          }
+        },
+        "bold": {
+          "$value": "700",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-bold"
+          }
+        },
+        "display": {
+          "$value": "600",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-display"
+          }
+        },
+        "body": {
+          "$value": "500",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-body"
+          }
+        },
+        "control": {
+          "$value": "700",
+          "$type": "fontWeight",
+          "$description": "700 — button and control labels",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-control"
+          }
+        },
+        "label": {
+          "$value": "700",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-label"
+          }
+        }
+      },
+      "tracking": {
+        "tight": {
+          "$value": "-0.03em",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-tracking-tight"
+          }
+        },
+        "normal": {
+          "$value": "0",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-tracking-normal"
+          }
+        },
+        "wide": {
+          "$value": "0.16em",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-tracking-wide"
+          }
+        },
+        "display": {
+          "$value": "-0.03em",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-tracking-display"
+          }
+        },
+        "label": {
+          "$value": "0.16em",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-tracking-label"
+          }
+        }
+      },
+      "leading": {
+        "none": {
+          "$value": "1",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-none"
+          }
+        },
+        "snug": {
+          "$value": "1.3",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-snug"
+          }
+        },
+        "normal": {
+          "$value": "1.5",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-normal"
+          }
+        },
+        "display": {
+          "$value": "1",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-display"
+          }
+        },
+        "heading": {
+          "$value": "1.3",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-heading"
+          }
+        },
+        "body": {
+          "$value": "1.5",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-body"
+          }
+        }
+      }
+    },
+    "size": {
+      "control": {
+        "$value": "48px",
+        "$type": "dimension",
+        "$description": "48px — height of a tappable control. Padding sets the horizontal rhythm; this sets the vertical.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--size-control"
+        }
+      }
+    },
+    "badge": {
+      "radius": {
+        "$value": "999px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-radius"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-border-color"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-font-size"
+        }
+      },
+      "font-weight": {
+        "$value": "700",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-font-weight"
+        }
+      },
+      "tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-tracking"
+        }
+      },
+      "padding-x": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-padding-x"
+        }
+      },
+      "padding-y": {
+        "$value": "4px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-padding-y"
+        }
+      },
+      "fg": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg"
+        }
+      },
+      "fg-subtle": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle"
+        }
+      },
+      "bg": {
+        "purple": {
+          "$value": "#c6adda",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-purple"
+          }
+        },
+        "teal": {
+          "$value": "#a8d6cb",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-teal"
+          }
+        },
+        "orange": {
+          "$value": "#f0c07a",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-orange"
+          }
+        },
+        "pink": {
+          "$value": "#e8b8cd",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        }
+      },
+      "bg-subtle": {
+        "purple": {
+          "$value": "#f0e5f2",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-purple"
+          }
+        },
+        "teal": {
+          "$value": "#e4f1ec",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-teal"
+          }
+        },
+        "orange": {
+          "$value": "#fbf0dc",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-orange"
+          }
+        },
+        "pink": {
+          "$value": "#f5e4ea",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-pink"
+          }
+        }
+      }
+    },
+    "button": {
+      "radius": {
+        "$value": "999px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-radius"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-border-width"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "14px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-font-size"
+        }
+      },
+      "font-weight": {
+        "$value": "700",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-font-weight"
+        }
+      },
+      "tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-tracking"
+        }
+      },
+      "min-height": {
+        "$value": "48px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-min-height"
+        }
+      },
+      "padding-x": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-padding-x"
+        }
+      },
+      "padding-y": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-padding-y"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-gap"
+        }
+      },
+      "shadow-hover": {
+        "$value": "3px 3px 0px 0px #2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-shadow-hover"
+        }
+      },
+      "transform-hover": {
+        "$value": "translate(-2px, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transform-hover"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transition-easing"
+        }
+      },
+      "primary": {
+        "bg": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-primary-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ffffff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-primary-fg"
+          }
+        },
+        "border": {
+          "$value": "#2e2618",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-primary-border"
+          }
+        }
+      },
+      "secondary": {
+        "bg": {
+          "$value": "#ede4d3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-secondary-bg"
+          }
+        },
+        "fg": {
+          "$value": "#2e2618",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-secondary-fg"
+          }
+        },
+        "border": {
+          "$value": "#2e2618",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-secondary-border"
+          }
+        }
+      },
+      "ghost": {
+        "bg": {
+          "$value": "transparent",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-ghost-bg"
+          }
+        },
+        "fg": {
+          "$value": "#2e2618",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-ghost-fg"
+          }
+        },
+        "fg-hover": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-ghost-fg-hover"
+          }
+        },
+        "border": {
+          "$value": "transparent",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-ghost-border"
+          }
+        }
+      }
+    },
+    "card": {
+      "bg": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-bg"
+        }
+      },
+      "bg-raised": {
+        "$value": "#f4f0e4",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-bg-raised"
+        }
+      },
+      "fg": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#6b5f4a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-fg-muted"
+        }
+      },
+      "border-color": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-border-color"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-border-width"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-radius"
+        }
+      },
+      "padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-gap"
+        }
+      },
+      "shadow-hover": {
+        "$value": "3px 3px 0px 0px #2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-shadow-hover"
+        }
+      },
+      "transform-hover": {
+        "$value": "translate(-2px, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-transform-hover"
+        }
+      },
+      "tilt-max": {
+        "$value": "0.8deg",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-tilt-max"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-transition-easing"
+        }
+      },
+      "eyebrow": {
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-eyebrow-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "12px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-eyebrow-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-eyebrow-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-eyebrow-tracking"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "24px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-body-leading"
+          }
+        }
+      }
+    }
+  },
+  "confetti-dark": {
+    "color": {
+      "cream": {
+        "100": {
+          "$value": "#f4f0e4",
+          "$type": "color",
+          "$description": "lightest cream — raised surfaces",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-cream-100"
+          }
+        },
+        "200": {
+          "$value": "#ede7d8",
+          "$type": "color",
+          "$description": "panel chrome",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-cream-200"
+          }
+        },
+        "300": {
+          "$value": "#ede4d3",
+          "$type": "color",
+          "$description": "page background baseline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-cream-300"
+          }
+        },
+        "a16": {
+          "$value": "rgba(237, 228, 211, 0.16)",
+          "$type": "color",
+          "$description": "cream at 16% — the dark-mode counterpart to ink.a12",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-cream-a16"
+          }
+        }
+      },
+      "ink": {
+        "200": {
+          "$value": "#bfb6a6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-200"
+          }
+        },
+        "300": {
+          "$value": "#6b5f4a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-300"
+          }
+        },
+        "400": {
+          "$value": "#3b3121",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-400"
+          }
+        },
+        "500": {
+          "$value": "#332a1c",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-500"
+          }
+        },
+        "600": {
+          "$value": "#2e2618",
+          "$type": "color",
+          "$description": "canonical Ink — warm near-black, text and borders",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-600"
+          }
+        },
+        "700": {
+          "$value": "#2a2317",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-700"
+          }
+        },
+        "800": {
+          "$value": "#211b12",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-800"
+          }
+        },
+        "900": {
+          "$value": "#1a150d",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-900"
+          }
+        },
+        "a24": {
+          "$value": "rgba(46, 38, 24, 0.24)",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a24"
+          }
+        },
+        "a18": {
+          "$value": "rgba(46, 38, 24, 0.18)",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a18"
+          }
+        },
+        "a12": {
+          "$value": "rgba(46, 38, 24, 0.12)",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a12"
+          }
+        }
+      },
+      "red": {
+        "400": {
+          "$value": "#e33b2e",
+          "$type": "color",
+          "$description": "lifted for dark surfaces",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-400"
+          }
+        },
+        "500": {
+          "$value": "#c40000",
+          "$type": "color",
+          "$description": "canonical brand Red",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-500"
+          }
+        }
+      },
+      "purple": {
+        "100": {
+          "$value": "#f0e5f2",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-100"
+          }
+        },
+        "400": {
+          "$value": "#c6adda",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-400"
+          }
+        },
+        "700": {
+          "$value": "#453552",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-700"
+          }
+        }
+      },
+      "teal": {
+        "100": {
+          "$value": "#e4f1ec",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-100"
+          }
+        },
+        "400": {
+          "$value": "#a8d6cb",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-400"
+          }
+        },
+        "700": {
+          "$value": "#2c463f",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-700"
+          }
+        }
+      },
+      "orange": {
+        "100": {
+          "$value": "#fbf0dc",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-100"
+          }
+        },
+        "400": {
+          "$value": "#f0c07a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-400"
+          }
+        },
+        "700": {
+          "$value": "#54401f",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-700"
+          }
+        }
+      },
+      "pink": {
+        "100": {
+          "$value": "#f5e4ea",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-100"
+          }
+        },
+        "400": {
+          "$value": "#e8b8cd",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-400"
+          }
+        },
+        "700": {
+          "$value": "#4d323c",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-700"
+          }
+        }
+      },
+      "base": {
+        "white": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-base-white"
+          }
+        },
+        "transparent": {
+          "$value": "transparent",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-base-transparent"
+          }
+        }
+      },
+      "surface": {
+        "page": {
+          "$value": "#211b12",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-page"
+          }
+        },
+        "raised": {
+          "$value": "#2a2317",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-raised"
+          }
+        },
+        "panel": {
+          "$value": "#332a1c",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-panel"
+          }
+        },
+        "card": {
+          "$value": "#3b3121",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-card"
+          }
+        }
+      },
+      "text": {
+        "primary": {
+          "$value": "#ede4d3",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-text-primary"
+          }
+        },
+        "muted": {
+          "$value": "#bfb6a6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-text-muted"
+          }
+        },
+        "inverse": {
+          "$value": "#2e2618",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-text-inverse"
+          }
+        },
+        "accent": {
+          "$value": "#e33b2e",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-text-accent"
+          }
+        }
+      },
+      "border": {
+        "default": {
+          "$value": "#ede4d3",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-border-default"
+          }
+        },
+        "subtle": {
+          "$value": "rgba(237, 228, 211, 0.16)",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-border-subtle"
+          }
+        },
+        "none": {
+          "$value": "transparent",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-border-none"
+          }
+        }
+      },
+      "action": {
+        "primary": {
+          "bg": {
+            "$value": "#e33b2e",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-primary-bg"
+            }
+          },
+          "fg": {
+            "$value": "#1a150d",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-primary-fg"
+            }
+          }
+        },
+        "secondary": {
+          "bg": {
+            "$value": "#332a1c",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-secondary-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ede4d3",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-secondary-fg"
+            }
+          }
+        },
+        "ghost": {
+          "bg": {
+            "$value": "transparent",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-ghost-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ede4d3",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-ghost-fg"
+            }
+          },
+          "fg-hover": {
+            "$value": "#e33b2e",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-action-ghost-fg-hover"
+            }
+          }
+        }
+      },
+      "accent": {
+        "purple": {
+          "subtle": {
+            "$value": "#453552",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-purple-subtle"
+            }
+          },
+          "bold": {
+            "$value": "#c6adda",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-purple-bold"
+            }
+          }
+        },
+        "teal": {
+          "subtle": {
+            "$value": "#2c463f",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-teal-subtle"
+            }
+          },
+          "bold": {
+            "$value": "#a8d6cb",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-teal-bold"
+            }
+          }
+        },
+        "orange": {
+          "subtle": {
+            "$value": "#54401f",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-orange-subtle"
+            }
+          },
+          "bold": {
+            "$value": "#f0c07a",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-orange-bold"
+            }
+          }
+        },
+        "pink": {
+          "subtle": {
+            "$value": "#4d323c",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-pink-subtle"
+            }
+          },
+          "bold": {
+            "$value": "#e8b8cd",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-accent-pink-bold"
+            }
+          }
+        },
+        "on-bold": {
+          "$value": "#2e2618",
+          "$type": "color",
+          "$description": "bold accents stay light in dark mode, so ink still reads on them",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-accent-on-bold"
+          }
+        },
+        "on-subtle": {
+          "$value": "#ede4d3",
+          "$type": "color",
+          "$description": "subtle accents are deep in dark mode — needs the light foreground",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-accent-on-subtle"
+          }
+        }
+      }
+    },
+    "radius": {
+      "none": {
+        "$value": "0",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-none"
+        }
+      },
+      "xs": {
+        "$value": "2px",
+        "$type": "dimension",
+        "$description": "small UI chips / icons",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-xs"
+        }
+      },
+      "sm": {
+        "$value": "4px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-sm"
+        }
+      },
+      "md": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$description": "card container",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-md"
+        }
+      },
+      "full": {
+        "$value": "999px",
+        "$type": "dimension",
+        "$description": "buttons / pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-full"
+        }
+      },
+      "circle": {
+        "$value": "50%",
+        "$type": "dimension",
+        "$description": "dots / avatars",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-circle"
+        }
+      },
+      "control": {
+        "$value": "999px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-control"
+        }
+      },
+      "container": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-container"
+        }
+      },
+      "chip": {
+        "$value": "2px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-chip"
+        }
+      },
+      "avatar": {
+        "$value": "50%",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-avatar"
+        }
+      }
+    },
+    "border": {
+      "width": {
+        "hairline": {
+          "$value": "1px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-hairline"
+          }
+        },
+        "sticker": {
+          "$value": "2px",
+          "$type": "dimension",
+          "$description": "thick-outline card and button borders",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-sticker"
+          }
+        },
+        "default": {
+          "$value": "2px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-default"
+          }
+        }
+      }
+    },
+    "shadow": {
+      "none": {
+        "$value": "none",
+        "$type": "shadow",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-none"
+        }
+      },
+      "hard-ink": {
+        "$value": "3px 3px 0px 0px #2e2618",
+        "$type": "shadow",
+        "$description": "hard offset shadow — the sticker lift, no blur",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-hard-ink"
+        }
+      },
+      "hard-cream": {
+        "$value": "3px 3px 0px 0px #ede4d3",
+        "$type": "shadow",
+        "$description": "dark-mode counterpart — light offset against dark surfaces",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-hard-cream"
+        }
+      },
+      "lift": {
+        "$value": "3px 3px 0px 0px #ede4d3",
+        "$type": "shadow",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lift"
+        }
+      }
+    },
+    "motion": {
+      "lift": {
+        "$value": "translate(-2px, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--motion-lift"
+        }
+      },
+      "rest": {
+        "$value": "translate(0, 0)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--motion-rest"
+        }
+      },
+      "tilt": {
+        "subtle": {
+          "$value": "0.8deg",
+          "$type": "other",
+          "$description": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-tilt-subtle"
+          }
+        },
+        "max": {
+          "$value": "0.8deg",
+          "$type": "other",
+          "$description": "outer bound of the hand-placed sticker angle",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-tilt-max"
+          }
+        }
+      },
+      "duration": {
+        "fast": {
+          "$value": "120ms",
+          "$type": "duration",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-fast"
+          }
+        },
+        "base": {
+          "$value": "180ms",
+          "$type": "duration",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-base"
+          }
+        },
+        "interaction": {
+          "$value": "180ms",
+          "$type": "duration",
+          "$description": "hover and focus transitions",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-interaction"
+          }
+        }
+      },
+      "easing": {
+        "standard": {
+          "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+          "$type": "cubicBezier",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-standard"
+          }
+        },
+        "interaction": {
+          "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+          "$type": "cubicBezier",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-interaction"
+          }
+        }
+      },
+      "transform": {
+        "lift": {
+          "$value": "translate(-2px, -2px)",
+          "$type": "other",
+          "$description": "how far an interactive surface rises on hover",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-transform-lift"
+          }
+        },
+        "rest": {
+          "$value": "translate(0, 0)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-transform-rest"
+          }
+        }
+      }
+    },
+    "z": {
+      "base": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--z-base"
+        }
+      },
+      "raised": {
+        "$value": "10",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--z-raised"
+        }
+      },
+      "sticky": {
+        "$value": "100",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--z-sticky"
+        }
+      },
+      "overlay": {
+        "$value": "1000",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--z-overlay"
+        }
+      }
+    },
+    "space": {
+      "0": {
+        "$value": "0",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-0"
+        }
+      },
+      "1": {
+        "$value": "4px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-1"
+        }
+      },
+      "2": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-2"
+        }
+      },
+      "3": {
+        "$value": "12px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-3"
+        }
+      },
+      "4": {
+        "$value": "16px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-4"
+        }
+      },
+      "5": {
+        "$value": "20px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-5"
+        }
+      },
+      "6": {
+        "$value": "24px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-6"
+        }
+      },
+      "8": {
+        "$value": "32px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-8"
+        }
+      },
+      "10": {
+        "$value": "40px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-10"
+        }
+      },
+      "12": {
+        "$value": "48px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-12"
+        }
+      },
+      "16": {
+        "$value": "64px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-16"
+        }
+      },
+      "20": {
+        "$value": "80px",
+        "$type": "dimension",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-20"
+        }
+      },
+      "inset-xs": {
+        "$value": "4px",
+        "$type": "dimension",
+        "$description": "4px — tightest inset, chips and dots",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-inset-xs"
+        }
+      },
+      "inline": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$description": "8px — gap between inline siblings",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-inline"
+        }
+      },
+      "inset-tight": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$description": "8px — compact control padding",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-inset-tight"
+        }
+      },
+      "stack": {
+        "$value": "16px",
+        "$type": "dimension",
+        "$description": "16px — vertical rhythm inside a container",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-stack"
+        }
+      },
+      "inset": {
+        "$value": "24px",
+        "$type": "dimension",
+        "$description": "24px — container padding",
+        "$extensions": {
+          "com.confetti.cssVariable": "--space-inset"
+        }
+      }
+    },
+    "font": {
+      "family": {
+        "fredoka": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "fontFamily",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-family-fredoka"
+          }
+        },
+        "mono": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "fontFamily",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-family-mono"
+          }
+        },
+        "display": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "fontFamily",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-family-display"
+          }
+        },
+        "body": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "fontFamily",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-family-body"
+          }
+        },
+        "label": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "fontFamily",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-family-label"
+          }
+        }
+      },
+      "size": {
+        "12": {
+          "$value": "12px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-12"
+          }
+        },
+        "14": {
+          "$value": "14px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-14"
+          }
+        },
+        "16": {
+          "$value": "16px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-16"
+          }
+        },
+        "20": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-20"
+          }
+        },
+        "24": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-24"
+          }
+        },
+        "32": {
+          "$value": "32px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-32"
+          }
+        },
+        "40": {
+          "$value": "40px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-40"
+          }
+        },
+        "48": {
+          "$value": "48px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-48"
+          }
+        },
+        "hero": {
+          "$value": "clamp(36px, 13cqw, 104px)",
+          "$type": "dimension",
+          "$description": "container-query driven headline, above the fixed ramp",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-hero"
+          }
+        },
+        "display": {
+          "$value": "clamp(36px, 13cqw, 104px)",
+          "$type": "dimension",
+          "$description": "hero only — fluid, sits above h1",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-display"
+          }
+        },
+        "h1": {
+          "$value": "48px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h1"
+          }
+        },
+        "h2": {
+          "$value": "40px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h2"
+          }
+        },
+        "h3": {
+          "$value": "32px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h3"
+          }
+        },
+        "h4": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h4"
+          }
+        },
+        "h5": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h5"
+          }
+        },
+        "h6": {
+          "$value": "16px",
+          "$type": "dimension",
+          "$description": "meets body size — weight and family carry the distinction",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-h6"
+          }
+        },
+        "body": {
+          "$value": "16px",
+          "$type": "dimension",
+          "$description": "16px — body primary",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-body"
+          }
+        },
+        "body-secondary": {
+          "$value": "14px",
+          "$type": "dimension",
+          "$description": "14px — captions, meta, dense UI",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-body-secondary"
+          }
+        },
+        "label": {
+          "$value": "12px",
+          "$type": "dimension",
+          "$description": "12px — mono eyebrows, uppercase",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-label"
+          }
+        }
+      },
+      "weight": {
+        "medium": {
+          "$value": "500",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-medium"
+          }
+        },
+        "semibold": {
+          "$value": "600",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-semibold"
+          }
+        },
+        "bold": {
+          "$value": "700",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-bold"
+          }
+        },
+        "display": {
+          "$value": "600",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-display"
+          }
+        },
+        "body": {
+          "$value": "500",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-body"
+          }
+        },
+        "control": {
+          "$value": "700",
+          "$type": "fontWeight",
+          "$description": "700 — button and control labels",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-control"
+          }
+        },
+        "label": {
+          "$value": "700",
+          "$type": "fontWeight",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-weight-label"
+          }
+        }
+      },
+      "tracking": {
+        "tight": {
+          "$value": "-0.03em",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-tracking-tight"
+          }
+        },
+        "normal": {
+          "$value": "0",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-tracking-normal"
+          }
+        },
+        "wide": {
+          "$value": "0.16em",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-tracking-wide"
+          }
+        },
+        "display": {
+          "$value": "-0.03em",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-tracking-display"
+          }
+        },
+        "label": {
+          "$value": "0.16em",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-tracking-label"
+          }
+        }
+      },
+      "leading": {
+        "none": {
+          "$value": "1",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-none"
+          }
+        },
+        "snug": {
+          "$value": "1.3",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-snug"
+          }
+        },
+        "normal": {
+          "$value": "1.5",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-normal"
+          }
+        },
+        "display": {
+          "$value": "1",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-display"
+          }
+        },
+        "heading": {
+          "$value": "1.3",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-heading"
+          }
+        },
+        "body": {
+          "$value": "1.5",
+          "$type": "number",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-leading-body"
+          }
+        }
+      }
+    },
+    "size": {
+      "control": {
+        "$value": "48px",
+        "$type": "dimension",
+        "$description": "48px — height of a tappable control. Padding sets the horizontal rhythm; this sets the vertical.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--size-control"
+        }
+      }
+    },
+    "badge": {
+      "radius": {
+        "$value": "999px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-radius"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-border-color"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-font-size"
+        }
+      },
+      "font-weight": {
+        "$value": "700",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-font-weight"
+        }
+      },
+      "tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-tracking"
+        }
+      },
+      "padding-x": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-padding-x"
+        }
+      },
+      "padding-y": {
+        "$value": "4px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-padding-y"
+        }
+      },
+      "fg": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg"
+        }
+      },
+      "fg-subtle": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle"
+        }
+      },
+      "bg": {
+        "purple": {
+          "$value": "#c6adda",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-purple"
+          }
+        },
+        "teal": {
+          "$value": "#a8d6cb",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-teal"
+          }
+        },
+        "orange": {
+          "$value": "#f0c07a",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-orange"
+          }
+        },
+        "pink": {
+          "$value": "#e8b8cd",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        }
+      },
+      "bg-subtle": {
+        "purple": {
+          "$value": "#453552",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-purple"
+          }
+        },
+        "teal": {
+          "$value": "#2c463f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-teal"
+          }
+        },
+        "orange": {
+          "$value": "#54401f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-orange"
+          }
+        },
+        "pink": {
+          "$value": "#4d323c",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-pink"
+          }
+        }
+      }
+    },
+    "button": {
+      "radius": {
+        "$value": "999px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-radius"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-border-width"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "14px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-font-size"
+        }
+      },
+      "font-weight": {
+        "$value": "700",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-font-weight"
+        }
+      },
+      "tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-tracking"
+        }
+      },
+      "min-height": {
+        "$value": "48px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-min-height"
+        }
+      },
+      "padding-x": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-padding-x"
+        }
+      },
+      "padding-y": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-padding-y"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-gap"
+        }
+      },
+      "shadow-hover": {
+        "$value": "3px 3px 0px 0px #ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-shadow-hover"
+        }
+      },
+      "transform-hover": {
+        "$value": "translate(-2px, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transform-hover"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transition-easing"
+        }
+      },
+      "primary": {
+        "bg": {
+          "$value": "#e33b2e",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-primary-bg"
+          }
+        },
+        "fg": {
+          "$value": "#1a150d",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-primary-fg"
+          }
+        },
+        "border": {
+          "$value": "#ede4d3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-primary-border"
+          }
+        }
+      },
+      "secondary": {
+        "bg": {
+          "$value": "#332a1c",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-secondary-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ede4d3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-secondary-fg"
+          }
+        },
+        "border": {
+          "$value": "#ede4d3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-secondary-border"
+          }
+        }
+      },
+      "ghost": {
+        "bg": {
+          "$value": "transparent",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-ghost-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ede4d3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-ghost-fg"
+          }
+        },
+        "fg-hover": {
+          "$value": "#e33b2e",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-ghost-fg-hover"
+          }
+        },
+        "border": {
+          "$value": "transparent",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-ghost-border"
+          }
+        }
+      }
+    },
+    "card": {
+      "bg": {
+        "$value": "#3b3121",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-bg"
+        }
+      },
+      "bg-raised": {
+        "$value": "#2a2317",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-bg-raised"
+        }
+      },
+      "fg": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#bfb6a6",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-fg-muted"
+        }
+      },
+      "border-color": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-border-color"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-border-width"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-radius"
+        }
+      },
+      "padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-gap"
+        }
+      },
+      "shadow-hover": {
+        "$value": "3px 3px 0px 0px #ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-shadow-hover"
+        }
+      },
+      "transform-hover": {
+        "$value": "translate(-2px, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-transform-hover"
+        }
+      },
+      "tilt-max": {
+        "$value": "0.8deg",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-tilt-max"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--card-transition-easing"
+        }
+      },
+      "eyebrow": {
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-eyebrow-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "12px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-eyebrow-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-eyebrow-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-eyebrow-tracking"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "24px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--card-body-leading"
+          }
+        }
+      }
+    }
+  }
+}

@@ -145,10 +145,62 @@ writeFileSync(
     `export default ${JSON.stringify(tailwindTheme, null, 2)};\n`
 );
 
+// --- W3C DTCG export ---------------------------------------------------------
+// The interchange format Figma, Tokens Studio and most importers read. Values are
+// fully resolved rather than aliased: a consumer that cannot run this build should
+// still receive exact values instead of inferring them from the CSS.
+
+/** Maps a flat token name to a DTCG `$type`. */
+function dtcgType(name) {
+  if (name.startsWith('color-')) return 'color';
+  if (name.startsWith('space-') || name.startsWith('size-')) return 'dimension';
+  if (name.startsWith('radius-')) return 'dimension';
+  if (name.startsWith('border-width-')) return 'dimension';
+  if (name.startsWith('font-family-')) return 'fontFamily';
+  if (name.startsWith('font-size-')) return 'dimension';
+  if (name.startsWith('font-weight-')) return 'fontWeight';
+  if (name.startsWith('font-leading-') || name.startsWith('font-tracking-')) return 'number';
+  if (name.startsWith('shadow-')) return 'shadow';
+  if (name.startsWith('motion-duration-')) return 'duration';
+  if (name.startsWith('motion-easing-')) return 'cubicBezier';
+  return 'other';
+}
+
+/** Rebuilds `color-surface-page` into nested { color: { surface: { page: {...} } } }. */
+function nest(flat) {
+  const tree = {};
+  for (const [name, token] of Object.entries(flat)) {
+    const path = token.path ?? name.split('-');
+    let node = tree;
+    for (const segment of path.slice(0, -1)) {
+      node[segment] ??= {};
+      node = node[segment];
+    }
+    const leaf = path[path.length - 1];
+    node[leaf] = {
+      $value: token.value,
+      $type: dtcgType(name),
+      ...(token.comment ? { $description: token.comment } : {}),
+      $extensions: { 'com.confetti.cssVariable': `--${name}` },
+    };
+  }
+  return tree;
+}
+
+const dtcg = {
+  $description:
+    'Confetti design tokens, W3C DTCG format. One group per skin+mode; values are fully resolved.',
+  ...Object.fromEntries(
+    Object.entries(tokenIndex).map(([key, flat]) => [key.replace('.', '-'), nest(flat)])
+  ),
+};
+
+writeFileSync(join(outDir, 'tokens.dtcg.json'), JSON.stringify(dtcg, null, 2) + '\n');
+
 rmSync(tmpDir, { recursive: true, force: true });
 
 console.log(
   `✓ tokens built — ${skins.length} skin(s) × ${MODES.length} modes` +
     `\n  ${skins.map((s) => `${s} (${MODES.join(', ')})`).join('\n  ')}` +
-    `\n  → build/portfolio/tokens.css, tokens.json, tailwind.theme.js`
+    `\n  → build/portfolio/tokens.css, tokens.json, tokens.dtcg.json, tailwind.theme.js`
 );

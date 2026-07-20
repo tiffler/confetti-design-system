@@ -13,6 +13,8 @@
       "text.accent",
       "border.default",
       "border.subtle",
+      "border.none",
+      "action.ghost.bg",
       "action.primary.bg",
       "action.primary.fg",
       "action.secondary.bg",
@@ -60,6 +62,13 @@
     "radius": ["control", "container", "chip", "avatar"],
     "border": ["width.default"],
     "size": ["control"],
+    "motion": [
+      "transform.lift",
+      "transform.rest",
+      "tilt.max",
+      "duration.interaction",
+      "easing.interaction"
+    ],
     "space": ["inline", "stack", "inset", "inset-tight", "inset-xs"]
   }
 }

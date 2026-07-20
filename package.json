@@ -6,7 +6,8 @@
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {
-    "tokens": "node style-dictionary/build.js",
+    "tokens": "npm run audit:tokens && node style-dictionary/build.js",
+    "audit:tokens": "node style-dictionary/audit-layers.js",
     "storybook": "npm run tokens && storybook dev -p 6006",
     "build-storybook": "npm run tokens && storybook build",
     "chromatic": "chromatic --exit-zero-on-changes",

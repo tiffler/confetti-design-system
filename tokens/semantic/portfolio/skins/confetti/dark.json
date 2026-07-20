@@ -15,7 +15,8 @@
     },
     "border": {
       "default": { "value": "{color.cream.300.value}" },
-      "subtle": { "value": "rgba(237, 228, 211, 0.16)" }
+      "subtle": { "value": "{color.cream.a16.value}" },
+      "none": { "value": "{color.base.transparent.value}" }
     },
     "action": {
       "primary": {

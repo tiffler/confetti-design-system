@@ -3,17 +3,19 @@
   "button": {
     "radius": { "value": "{radius.control.value}" },
     "border-width": { "value": "{border.width.default.value}" },
-    "font-family": { "value": "{font.family.body.value}" },
-    "font-size": { "value": "{font.size.body.value}" },
+    "font-family": { "value": "{font.family.label.value}" },
+    "font-size": { "value": "{font.size.body-secondary.value}" },
     "font-weight": { "value": "{font.weight.control.value}" },
+    "$comment": "Mono uppercase always carries the wide label tracking — without it the caps set too tight to read.",
+    "tracking": { "value": "{font.tracking.label.value}" },
     "min-height": { "value": "{size.control.value}" },
     "padding-x": { "value": "{space.inset.value}" },
     "padding-y": { "value": "{space.inset-tight.value}" },
     "gap": { "value": "{space.inline.value}" },
     "shadow-hover": { "value": "{shadow.lift.value}" },
-    "transform-hover": { "value": "{motion.lift.value}" },
-    "transition-duration": { "value": "{motion.duration.base.value}" },
-    "transition-easing": { "value": "{motion.easing.standard.value}" },
+    "transform-hover": { "value": "{motion.transform.lift.value}" },
+    "transition-duration": { "value": "{motion.duration.interaction.value}" },
+    "transition-easing": { "value": "{motion.easing.interaction.value}" },
     "primary": {
       "bg": { "value": "{color.action.primary.bg.value}" },
       "fg": { "value": "{color.action.primary.fg.value}" },
@@ -26,10 +28,10 @@
       "border": { "value": "{color.border.default.value}" }
     },
     "ghost": {
-      "bg": { "value": "transparent" },
+      "bg": { "value": "{color.action.ghost.bg.value}" },
       "fg": { "value": "{color.action.ghost.fg.value}" },
       "fg-hover": { "value": "{color.action.ghost.fg-hover.value}" },
-      "border": { "value": "transparent" }
+      "border": { "value": "{color.border.none.value}" }
     }
   }
 }
