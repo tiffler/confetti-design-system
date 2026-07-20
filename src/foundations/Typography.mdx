@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/blocks';
+import { TypeSpecimens } from './Specimens';
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+Three roles. Each specimen renders using its own semantic tokens.
+
+<TypeSpecimens
+  roles={[
+    {
+      label: 'Display — Fredoka 600, tracking -0.03em, leading 1',
+      family: 'font-family-display',
+      size: 'font-size-display',
+      weight: 'font-weight-display',
+      tracking: 'font-tracking-display',
+      leading: 'font-leading-display',
+    },
+    {
+      label: 'Heading — display face at heading size',
+      family: 'font-family-display',
+      size: 'font-size-heading',
+      weight: 'font-weight-display',
+      tracking: 'font-tracking-display',
+      leading: 'font-leading-heading',
+    },
+    {
+      label: 'Body / nav — system humanist sans',
+      family: 'font-family-body',
+      size: 'font-size-body',
+      weight: 'font-weight-body',
+      leading: 'font-leading-body',
+    },
+    {
+      label: 'Eyebrow / label — JetBrains Mono 700, tracking 0.16em, uppercase',
+      family: 'font-family-label',
+      size: 'font-size-label',
+      weight: 'font-weight-label',
+      tracking: 'font-tracking-label',
+      uppercase: true,
+    },
+  ]}
+/>
+
+## Notes
+
+**Display size is container-query driven** — `clamp(36px, 13cqw, 104px)`. The `cqw`
+unit needs an ancestor with `container-type: inline-size`; the specimen above sets
+it on itself, so the headline scales with the docs panel rather than the viewport.
+
+**Fredoka is the headline face**, not Bricolage Grotesque. The font families here
+declare system fallbacks — Fredoka and JetBrains Mono need to be loaded by the
+consuming app (or added as a webfont in `.storybook/preview-head.html`) to render
+exactly as designed.

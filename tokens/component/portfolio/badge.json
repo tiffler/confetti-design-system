@@ -1,0 +1,27 @@
+{
+  "badge": {
+    "radius": { "value": "{radius.control.value}" },
+    "border-width": { "value": "{border.width.default.value}" },
+    "border-color": { "value": "{color.border.default.value}" },
+    "font-family": { "value": "{font.family.label.value}" },
+    "font-size": { "value": "{font.size.label.value}" },
+    "font-weight": { "value": "{font.weight.label.value}" },
+    "tracking": { "value": "{font.tracking.label.value}" },
+    "padding-x": { "value": "{space.inset-tight.value}" },
+    "padding-y": { "value": "{space.inset-xs.value}" },
+    "fg": { "value": "{color.accent.on-bold.value}" },
+    "fg-subtle": { "value": "{color.accent.on-subtle.value}" },
+    "bg": {
+      "purple": { "value": "{color.accent.purple.bold.value}" },
+      "teal": { "value": "{color.accent.teal.bold.value}" },
+      "orange": { "value": "{color.accent.orange.bold.value}" },
+      "pink": { "value": "{color.accent.pink.bold.value}" }
+    },
+    "bg-subtle": {
+      "purple": { "value": "{color.accent.purple.subtle.value}" },
+      "teal": { "value": "{color.accent.teal.subtle.value}" },
+      "orange": { "value": "{color.accent.orange.subtle.value}" },
+      "pink": { "value": "{color.accent.pink.subtle.value}" }
+    }
+  }
+}

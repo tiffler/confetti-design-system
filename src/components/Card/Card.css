@@ -1,0 +1,66 @@
+.cf-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+
+  padding: var(--card-padding);
+  background: var(--card-bg);
+  color: var(--card-fg);
+  border: var(--card-border-width) solid var(--card-border-color);
+  border-radius: var(--card-radius);
+
+  transition:
+    transform var(--card-transition-duration) var(--card-transition-easing),
+    box-shadow var(--card-transition-duration) var(--card-transition-easing);
+}
+
+/* `raised` sits on the paper-raised surface instead of the card interior —
+   the elevation step used for canvas and widget chrome. */
+.cf-card--raised {
+  background: var(--card-bg-raised);
+}
+
+.cf-card--interactive {
+  cursor: pointer;
+}
+
+.cf-card--interactive:hover {
+  transform: var(--card-transform-hover);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.cf-card__eyebrow {
+  font-family: var(--card-eyebrow-font-family);
+  font-size: var(--card-eyebrow-font-size);
+  font-weight: var(--card-eyebrow-font-weight);
+  letter-spacing: var(--card-eyebrow-tracking);
+  text-transform: uppercase;
+  color: var(--card-fg-muted);
+}
+
+.cf-card__title {
+  margin: 0;
+  font-family: var(--card-title-font-family);
+  font-weight: var(--card-title-font-weight);
+  letter-spacing: var(--card-title-tracking);
+  font-size: var(--card-title-font-size);
+  line-height: var(--card-title-leading);
+}
+
+.cf-card__body {
+  margin: 0;
+  font-family: var(--card-body-font-family);
+  font-size: var(--card-body-font-size);
+  font-weight: var(--card-body-font-weight);
+  line-height: var(--card-body-leading);
+  color: var(--card-fg-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf-card {
+    transition: none;
+  }
+  .cf-card--interactive:hover {
+    transform: none;
+  }
+}

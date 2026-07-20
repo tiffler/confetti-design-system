@@ -1,0 +1,57 @@
+{
+  "$comment": "Required semantic token vocabulary. Every skin must satisfy the `required` list. Tokens in `inheritable` may be omitted by a skin, in which case the value falls back to confetti (the base skin). Validated at build time by style-dictionary/validate-schema.js.",
+  "baseSkin": "confetti",
+  "required": {
+    "color": [
+      "surface.page",
+      "surface.raised",
+      "surface.panel",
+      "surface.card",
+      "text.primary",
+      "text.muted",
+      "text.inverse",
+      "text.accent",
+      "border.default",
+      "border.subtle",
+      "action.primary.bg",
+      "action.primary.fg",
+      "action.secondary.bg",
+      "action.secondary.fg",
+      "action.ghost.fg",
+      "action.ghost.fg-hover",
+      "accent.purple.subtle",
+      "accent.purple.bold",
+      "accent.teal.subtle",
+      "accent.teal.bold",
+      "accent.orange.subtle",
+      "accent.orange.bold",
+      "accent.pink.subtle",
+      "accent.pink.bold",
+      "accent.on-bold",
+      "accent.on-subtle"
+    ],
+    "shadow": ["lift"]
+  },
+  "inheritable": {
+    "font": [
+      "family.display",
+      "family.body",
+      "family.label",
+      "size.display",
+      "size.heading",
+      "size.body",
+      "size.label",
+      "weight.display",
+      "weight.body",
+      "weight.label",
+      "tracking.display",
+      "tracking.label",
+      "leading.display",
+      "leading.heading",
+      "leading.body"
+    ],
+    "radius": ["control", "container", "chip", "avatar"],
+    "border": ["width.default"],
+    "space": ["inline", "stack", "inset", "inset-tight", "inset-xs"]
+  }
+}

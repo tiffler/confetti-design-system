@@ -1,0 +1,58 @@
+{
+  "$comment": "Confetti — dark mode. PENDING A DESIGN PASS. These values are derived systematically from the light comps (surface ramp inverted, Red and the accent hues lifted for legibility on dark) — they are not extracted from artwork. Typography and radii are omitted deliberately: they deep-merge from confetti/light.",
+  "color": {
+    "surface": {
+      "page": { "value": "{color.ink.800.value}" },
+      "raised": { "value": "{color.ink.700.value}" },
+      "panel": { "value": "{color.ink.600.value}" },
+      "card": { "value": "{color.ink.500.value}" }
+    },
+    "text": {
+      "primary": { "value": "{color.cream.300.value}" },
+      "muted": { "value": "{color.ink.200.value}" },
+      "inverse": { "value": "{color.ink.400.value}" },
+      "accent": { "value": "{color.red.400.value}" }
+    },
+    "border": {
+      "default": { "value": "{color.cream.300.value}" },
+      "subtle": { "value": "rgba(237, 228, 211, 0.16)" }
+    },
+    "action": {
+      "primary": {
+        "bg": { "value": "{color.red.400.value}" },
+        "fg": { "value": "{color.ink.900.value}" }
+      },
+      "secondary": {
+        "bg": { "value": "{color.ink.600.value}" },
+        "fg": { "value": "{color.cream.300.value}" }
+      },
+      "ghost": {
+        "fg": { "value": "{color.cream.300.value}" },
+        "fg-hover": { "value": "{color.red.400.value}" }
+      }
+    },
+    "accent": {
+      "purple": {
+        "subtle": { "value": "{color.purple.700.value}" },
+        "bold": { "value": "{color.purple.400.value}" }
+      },
+      "teal": {
+        "subtle": { "value": "{color.teal.700.value}" },
+        "bold": { "value": "{color.teal.400.value}" }
+      },
+      "orange": {
+        "subtle": { "value": "{color.orange.700.value}" },
+        "bold": { "value": "{color.orange.400.value}" }
+      },
+      "pink": {
+        "subtle": { "value": "{color.pink.700.value}" },
+        "bold": { "value": "{color.pink.400.value}" }
+      },
+      "on-bold": { "value": "{color.ink.400.value}", "comment": "bold accents stay light in dark mode, so ink still reads on them" },
+      "on-subtle": { "value": "{color.cream.300.value}", "comment": "subtle accents are deep in dark mode — needs the light foreground" }
+    }
+  },
+  "shadow": {
+    "lift": { "value": "{shadow.hard-cream.value}" }
+  }
+}

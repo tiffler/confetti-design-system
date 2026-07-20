@@ -1,0 +1,30 @@
+{
+  "shadow": {
+    "none": { "value": "none" },
+    "hard-ink": {
+      "value": "3px 3px 0px 0px {color.ink.400.value}",
+      "comment": "hard offset shadow — the sticker lift, no blur"
+    },
+    "hard-cream": {
+      "value": "3px 3px 0px 0px {color.cream.300.value}",
+      "comment": "dark-mode counterpart — light offset against dark surfaces"
+    }
+  },
+  "motion": {
+    "lift": { "value": "translate(-2px, -2px)" },
+    "rest": { "value": "translate(0, 0)" },
+    "duration": {
+      "fast": { "value": "120ms" },
+      "base": { "value": "180ms" }
+    },
+    "easing": {
+      "standard": { "value": "cubic-bezier(0.2, 0, 0.2, 1)" }
+    }
+  },
+  "z": {
+    "base": { "value": "0" },
+    "raised": { "value": "10" },
+    "sticky": { "value": "100" },
+    "overlay": { "value": "1000" }
+  }
+}

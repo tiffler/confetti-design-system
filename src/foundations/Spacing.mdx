@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/blocks';
+import { SpacingScale, RadiusGrid } from './Specimens';
+
+<Meta title="Foundations/Spacing" />
+
+# Spacing
+
+## Semantic roles
+
+What component tokens actually reference. Components never reach past this layer
+into the raw scale.
+
+<SpacingScale
+  names={[
+    'space-inline',
+    'space-stack',
+    'space-inset',
+    'space-inset-tight',
+    'space-inset-xs',
+  ]}
+/>
+
+## Primitive scale
+
+The 4px-based ramp the semantic roles alias. Theme-independent — these do not
+change with skin or mode.
+
+<SpacingScale
+  names={[
+    'space-1',
+    'space-2',
+    'space-3',
+    'space-4',
+    'space-5',
+    'space-6',
+    'space-8',
+    'space-10',
+    'space-12',
+    'space-16',
+    'space-20',
+  ]}
+/>
+
+## Radii
+
+Semantic radii come first — `control` for buttons and pills, `container` for cards,
+`chip` for small UI, `avatar` for dots. The primitive scale sits underneath.
+
+<RadiusGrid prefix="radius-" />

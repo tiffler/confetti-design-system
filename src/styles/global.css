@@ -1,0 +1,22 @@
+/* Generated token layer first — everything below resolves against it. */
+@import '../../build/portfolio/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fallback so a page renders themed before a ThemeProvider mounts. */
+:root:not([data-skin]) {
+  --color-surface-page: #ede4d3;
+  --color-text-primary: #2e2618;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  -webkit-font-smoothing: antialiased;
+}

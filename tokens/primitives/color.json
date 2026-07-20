@@ -1,0 +1,50 @@
+{
+  "color": {
+    "cream": {
+      "100": { "value": "#f4f0e4", "comment": "lightest cream — raised surfaces" },
+      "200": { "value": "#ede7d8", "comment": "panel chrome" },
+      "300": { "value": "#ede4d3", "comment": "page background baseline" }
+    },
+    "ink": {
+      "900": { "value": "#1a150d" },
+      "800": { "value": "#211b12" },
+      "700": { "value": "#2a2317" },
+      "600": { "value": "#332a1c" },
+      "500": { "value": "#3b3121" },
+      "400": { "value": "#2e2618", "comment": "canonical Ink — warm near-black, text and borders" },
+      "300": { "value": "#6b5f4a" },
+      "200": { "value": "#9c8f76" },
+      "a24": { "value": "rgba(46, 38, 24, 0.24)" },
+      "a18": { "value": "rgba(46, 38, 24, 0.18)" },
+      "a12": { "value": "rgba(46, 38, 24, 0.12)" }
+    },
+    "red": {
+      "500": { "value": "#c40000", "comment": "canonical brand Red" },
+      "400": { "value": "#e33b2e", "comment": "lifted for dark surfaces" }
+    },
+    "purple": {
+      "700": { "value": "#453552" },
+      "400": { "value": "#c6adda" },
+      "100": { "value": "#f0e5f2" }
+    },
+    "teal": {
+      "700": { "value": "#2c463f" },
+      "400": { "value": "#a8d6cb" },
+      "100": { "value": "#e4f1ec" }
+    },
+    "orange": {
+      "700": { "value": "#54401f" },
+      "400": { "value": "#f0c07a" },
+      "100": { "value": "#fbf0dc" }
+    },
+    "pink": {
+      "700": { "value": "#4d323c" },
+      "400": { "value": "#e8b8cd" },
+      "100": { "value": "#f5e4ea" }
+    },
+    "base": {
+      "white": { "value": "#ffffff" },
+      "transparent": { "value": "transparent" }
+    }
+  }
+}

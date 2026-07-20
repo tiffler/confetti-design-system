@@ -1,0 +1,38 @@
+import { Meta } from '@storybook/blocks';
+import { ElevationStack, ShadowSpecimen } from './Specimens';
+
+<Meta title="Foundations/Elevation" />
+
+# Elevation
+
+Confetti has no blur-based elevation. Depth comes from two things: a small surface
+ramp, and a hard offset shadow on hover.
+
+## Surface ramp
+
+Four steps. These are distinct surfaces, not opacity variants of one another —
+the exact values came out of the homepage hero widget code.
+
+<ElevationStack
+  steps={[
+    { token: 'color-surface-page', label: 'page background baseline' },
+    { token: 'color-surface-raised', label: 'widget / canvas surface, one step up from page' },
+    { token: 'color-surface-panel', label: 'toolbar, sidebar, floating panel chrome' },
+    { token: 'color-surface-card', label: 'card interiors, contrast surfaces' },
+  ]}
+/>
+
+## Lift
+
+`--shadow-lift` is a 3px hard offset with no blur, paired with a
+`translate(-2px, -2px)`. Buttons and interactive cards share it, which is what makes
+the whole system read as one sticker language.
+
+In dark mode the shadow inverts to cream — a dark shadow on a dark surface reads as
+nothing, so the token repoints rather than the component changing.
+
+<ShadowSpecimen />
+
+Both the transform and the transition are tokens
+(`--button-transform-hover`, `--button-transition-duration`), and both are dropped
+under `prefers-reduced-motion: reduce`.

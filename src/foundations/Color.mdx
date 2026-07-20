@@ -1,0 +1,50 @@
+import { Meta } from '@storybook/blocks';
+import { ColorGrid } from './Specimens';
+
+<Meta title="Foundations/Color" />
+
+# Color
+
+Every swatch below is read from `build/portfolio/tokens.json` for the skin and mode
+selected in the toolbar — nothing on this page is hardcoded. Switch **Mode** in the
+toolbar to see the semantic layer repoint while the token names stay put.
+
+## Surfaces
+
+The elevation ramp. `page` is the baseline, `raised` is canvas and widget surfaces,
+`panel` is toolbar and sidebar chrome, `card` is the contrast interior.
+
+<ColorGrid prefix="color-surface-" />
+
+## Text
+
+<ColorGrid prefix="color-text-" />
+
+## Border
+
+<ColorGrid prefix="color-border-" />
+
+## Action
+
+Button-facing roles. Primary is the brand red, secondary the paper fill with an
+ink outline, ghost text-only with a red hover.
+
+<ColorGrid prefix="color-action-" />
+
+## Accents
+
+Four hues, each a tint/bold pair. `on-bold` and `on-subtle` are the foregrounds that
+stay legible against each end of the pair — they diverge in dark mode, which is why
+they are separate tokens.
+
+<ColorGrid prefix="color-accent-" />
+
+## Primitives
+
+The raw ramp underneath. Primitives are theme-independent — they are emitted once
+under `:root` and do not change with skin or mode. Semantic tokens are the only
+layer that should be consumed by name.
+
+<ColorGrid prefix="color-cream-" />
+<ColorGrid prefix="color-ink-" />
+<ColorGrid prefix="color-red-" />
