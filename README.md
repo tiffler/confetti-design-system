@@ -114,7 +114,11 @@ Parked skin directions, from the design brief: **Vintage** (muted/warm/serif),
 
 ## Publishing
 
-The repo is private; the Storybook is published publicly through Chromatic.
+**Live Storybook:** https://main--6a5dbe45138c58d9d6190f4d.chromatic.com
+
+The repo is private; the Storybook is published publicly through Chromatic. Visibility
+is a Chromatic project setting (Manage → Collaborate), not something the repo controls —
+a public Storybook from a private repo is the intended split.
 
 `.github/workflows/chromatic.yml` runs on every push to `main` and on pull requests.
 It runs `build-storybook` (so tokens are built first), uploads the result, and:
@@ -123,8 +127,8 @@ It runs `build-storybook` (so tokens are built first), uploads the result, and:
 - **reports visual diffs on PRs without failing CI** (`exitZeroOnChanges`) — diffs are
   reviewed in the Chromatic UI rather than gating the build.
 
-One-time setup: create the project at [chromatic.com](https://www.chromatic.com), then
-store its token as the `CHROMATIC_PROJECT_TOKEN` repo secret:
+Setup is done — the project exists and `CHROMATIC_PROJECT_TOKEN` is stored as a repo
+secret. To rotate the token, take a new one from Chromatic's Manage screen and run:
 
 ```bash
 gh secret set CHROMATIC_PROJECT_TOKEN --body "<token>"
