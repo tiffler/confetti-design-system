@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/blocks';
-import { ElevationStack, ShadowSpecimen } from './Specimens';
+import { ElevationStack, ShadowSpecimen, CardElevation } from './Specimens';
 
 <Meta title="Foundations/Elevation" />
 
@@ -32,6 +32,19 @@ In dark mode the shadow inverts to cream — a dark shadow on a dark surface rea
 nothing, so the token repoints rather than the component changing.
 
 <ShadowSpecimen />
+
+## Card elevation
+
+The Card component is where the two mechanisms meet: it sits on a surface from the ramp
+above, and interactive cards add the lift on hover. Both states below are built from the
+live `--card-*` tokens, so they cannot drift from the component.
+
+<CardElevation />
+
+Interactive cards also change tilt between these two states — see
+**Components → Card → Tilted grid**. The shadow reads as an extrusion of the card's own
+2px border, which is why every variant carries that border even when its fill already
+separates it from the page.
 
 Both the transform and the transition are tokens
 (`--button-transform-hover`, `--button-transition-duration`), and both are dropped

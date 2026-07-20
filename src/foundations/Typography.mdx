@@ -5,7 +5,11 @@ import { TypeSpecimens } from './Specimens';
 
 # Typography
 
-Three roles. Each specimen renders using its own semantic tokens.
+Each specimen renders using its own semantic tokens — nothing here is a hardcoded size.
+
+## Display
+
+Fluid, hero only. Sits above the fixed ramp and scales with its container.
 
 <TypeSpecimens
   roles={[
@@ -17,23 +21,47 @@ Three roles. Each specimen renders using its own semantic tokens.
       tracking: 'font-tracking-display',
       leading: 'font-leading-display',
     },
+  ]}
+/>
+
+## Headings
+
+A 1.25 modular scale rounded to the 4px grid — **48 / 40 / 32 / 24 / 20 / 16**. All six
+levels use the display face at heading leading, so the ramp is pure size.
+
+<TypeSpecimens
+  roles={[
+    { label: 'H1 — 48px', family: 'font-family-display', size: 'font-size-h1', weight: 'font-weight-display', tracking: 'font-tracking-display', leading: 'font-leading-heading' },
+    { label: 'H2 — 40px', family: 'font-family-display', size: 'font-size-h2', weight: 'font-weight-display', tracking: 'font-tracking-display', leading: 'font-leading-heading' },
+    { label: 'H3 — 32px', family: 'font-family-display', size: 'font-size-h3', weight: 'font-weight-display', tracking: 'font-tracking-display', leading: 'font-leading-heading' },
+    { label: 'H4 — 24px (card titles)', family: 'font-family-display', size: 'font-size-h4', weight: 'font-weight-display', tracking: 'font-tracking-display', leading: 'font-leading-heading' },
+    { label: 'H5 — 20px', family: 'font-family-display', size: 'font-size-h5', weight: 'font-weight-display', tracking: 'font-tracking-display', leading: 'font-leading-heading' },
+    { label: 'H6 — 16px', family: 'font-family-display', size: 'font-size-h6', weight: 'font-weight-display', tracking: 'font-tracking-display', leading: 'font-leading-heading' },
+  ]}
+/>
+
+## Body
+
+Primary at 16px, secondary at 14px for captions, metadata, and dense UI.
+
+<TypeSpecimens
+  roles={[
     {
-      label: 'Heading — display face at heading size',
-      family: 'font-family-display',
-      size: 'font-size-heading',
-      weight: 'font-weight-display',
-      tracking: 'font-tracking-display',
-      leading: 'font-leading-heading',
-    },
-    {
-      label: 'Body / nav — system humanist sans',
+      label: 'Body primary — 16px',
       family: 'font-family-body',
       size: 'font-size-body',
       weight: 'font-weight-body',
       leading: 'font-leading-body',
     },
     {
-      label: 'Eyebrow / label — JetBrains Mono 700, tracking 0.16em, uppercase',
+      label: 'Body secondary — 14px',
+      family: 'font-family-body',
+      size: 'font-size-body-secondary',
+      weight: 'font-weight-body',
+      leading: 'font-leading-body',
+    },
+    {
+      label: 'Eyebrow / label — JetBrains Mono 700, tracking 0.16em, uppercase, 12px',
       family: 'font-family-label',
       size: 'font-size-label',
       weight: 'font-weight-label',
@@ -45,11 +73,14 @@ Three roles. Each specimen renders using its own semantic tokens.
 
 ## Notes
 
+**H6 and body primary are both 16px.** That is deliberate — at the bottom of a heading
+ramp, size stops being the differentiator and the display face and weight carry it.
+Reach for `h6` when it is structurally a heading, `body` when it is prose.
+
 **Display size is container-query driven** — `clamp(36px, 13cqw, 104px)`. The `cqw`
 unit needs an ancestor with `container-type: inline-size`; the specimen above sets
 it on itself, so the headline scales with the docs panel rather than the viewport.
 
-**Fredoka is the headline face**, not Bricolage Grotesque. The font families here
-declare system fallbacks — Fredoka and JetBrains Mono need to be loaded by the
-consuming app (or added as a webfont in `.storybook/preview-head.html`) to render
-exactly as designed.
+**The font families here declare system fallbacks** — Fredoka and JetBrains Mono need
+to be loaded by the consuming app (or added as a webfont in
+`.storybook/preview-head.html`) to render exactly as designed.
