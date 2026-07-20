@@ -70,16 +70,44 @@ information rather than failures.
 
 ### Build output
 
-`npm run tokens` writes three files to `build/portfolio/`:
+`npm run tokens` writes four files to `build/portfolio/`:
 
 - **`tokens.css`** — primitives under `:root`, then semantic + component tokens under
   each `[data-skin][data-mode]` selector pair.
 - **`tokens.json`** — the same tokens as structured data, keyed `skin.mode`. The
   Storybook Foundations pages read this, so the docs cannot drift from the build.
+- **`tokens.dtcg.json`** — the same tokens in [W3C Design Tokens (DTCG)][dtcg] format,
+  one group per skin+mode, values fully resolved. This is the interchange file for
+  Figma, Tokens Studio, and design-tool importers.
 - **`tailwind.theme.js`** — Tailwind theme keys mapped to `var()` references, so a
   utility class follows whatever theme is active at runtime.
 
-`build/` is generated and gitignored. Run `npm run tokens` after a fresh clone.
+[dtcg]: https://tr.designtokens.org/format/
+
+**`build/portfolio/` is committed on purpose.** Generated output is normally gitignored,
+but a design system exists to be consumed, and the source tokens are Style Dictionary
+aliases (`{color.ink.600.value}`) that mean nothing without a Node toolchain. Committing
+the resolved output means anything downstream — a design tool, another repo, an importer
+reading the URL — gets exact values instead of inferring them from component CSS.
+
+Regenerate with `npm run tokens` and commit the result alongside any token change; the
+files carry a `GENERATED FILE — do not edit` banner.
+
+## Consuming the system
+
+For a design tool or importer, read **`build/portfolio/tokens.dtcg.json`** — resolved
+values, typed, with the CSS variable name on each token under `$extensions`.
+
+For an application, link `build/portfolio/tokens.css` and set the two root attributes:
+
+```html
+<link rel="stylesheet" href="build/portfolio/tokens.css" />
+<html data-skin="confetti" data-mode="light">
+```
+
+Then consume component tokens (`--button-primary-bg`) or semantic roles
+(`--color-text-primary`, `--font-size-h2`). Do not consume primitives directly — they
+are the palette, not the API, and they carry no theme awareness.
 
 ## Runtime theming
 

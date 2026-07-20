@@ -1,5 +1,9 @@
 node_modules/
-build/
+# build/ is generated, but build/portfolio/ is the consumable artifact: it carries
+# resolved token values so anything downstream can read the system without a Node
+# toolchain. Committed deliberately.
+build/*
+!build/portfolio/
 storybook-static/
 *.log
 
