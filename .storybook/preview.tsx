@@ -44,6 +44,11 @@ const preview: Preview = {
       const skin = context.globals.skin as Skin;
       const mode = context.globals.mode as Mode;
 
+      // Filling the frame is right in the story canvas — it lets the page surface read
+      // as the page. In docs each story is an inline block, so the same rule made every
+      // embedded example a full viewport tall regardless of its content.
+      const isDocs = context.viewMode === 'docs';
+
       return (
         <ThemeProvider skin={skin} mode={mode}>
           <div
@@ -52,7 +57,7 @@ const preview: Preview = {
               color: 'var(--color-text-primary)',
               fontFamily: 'var(--font-family-body)',
               padding: 'var(--space-inset)',
-              minHeight: '100vh',
+              minHeight: isDocs ? undefined : '100vh',
               boxSizing: 'border-box',
             }}
           >
