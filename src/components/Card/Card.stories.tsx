@@ -69,7 +69,7 @@ export const TiltedGrid: Story = {
     docs: {
       description: {
         story:
-          'Each card derives its tilt from its title, so the angles vary across a grid but never change between renders. Filtering or re-sorting moves a card without re-tilting it. Pass `tilt={0}` to sit one flat, or `tilt` in -1..1 to place it by hand.',
+          'Cards sit square at rest and turn only on hover — hover any card to see it. Each derives its angle from its title, so neighbours turn different ways but a given card always turns the same way, even after filtering or re-sorting. Pass `tilt={0}` to lift without turning, or `tilt` in -1..1 to set the angle by hand.',
       },
     },
   },

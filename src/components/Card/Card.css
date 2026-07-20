@@ -1,13 +1,11 @@
 .cf-card {
-  /* Overridden per instance by Card.tsx; flat is the fallback when the component
+  /* Overridden per instance by Card.tsx; square is the fallback when the component
      isn't driving it (e.g. plain markup using the class). */
-  --card-tilt: 0deg;
-  --card-tilt-hover: var(--card-tilt);
+  --card-tilt-hover: 0deg;
 
   display: flex;
   flex-direction: column;
   gap: var(--card-gap);
-  transform: rotate(var(--card-tilt));
 
   padding: var(--card-padding);
   background: var(--card-bg);
@@ -30,8 +28,8 @@
   cursor: pointer;
 }
 
-/* The sticker rises off the page and settles at a slightly different angle — it never
-   straightens. Order matters: rotate first, then translate along the page axes. */
+/* Square at rest; the sticker peels up and turns only on hover. Order matters: rotate
+   first, then translate along the page axes. */
 .cf-card--interactive:hover {
   transform: rotate(var(--card-tilt-hover)) var(--card-transform-hover);
   box-shadow: var(--card-shadow-hover);
@@ -68,9 +66,9 @@
   .cf-card {
     transition: none;
   }
-  /* Drops the lift but keeps the tilt — the tilt is a static layout property, not
-     motion, so reduced-motion users should still see the intended composition. */
+  /* Now that the tilt only happens on hover it is motion, not composition, so it goes
+     along with the lift rather than being preserved. */
   .cf-card--interactive:hover {
-    transform: rotate(var(--card-tilt));
+    transform: none;
   }
 }
