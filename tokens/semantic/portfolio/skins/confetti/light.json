@@ -79,7 +79,7 @@
     "weight": {
       "display": { "value": "{font.weight.semibold.value}" },
       "body": { "value": "{font.weight.medium.value}" },
-      "control": { "value": "{font.weight.medium.value}", "comment": "500 — button and control labels" },
+      "control": { "value": "{font.weight.bold.value}", "comment": "700 — button and control labels" },
       "label": { "value": "{font.weight.bold.value}" }
     },
     "tracking": {
