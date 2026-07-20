@@ -1,4 +1,8 @@
 .cf-card {
+  /* Overridden per instance by Card.tsx; square is the fallback when the component
+     isn't driving it (e.g. plain markup using the class). */
+  --card-tilt-hover: 0deg;
+
   display: flex;
   flex-direction: column;
   gap: var(--card-gap);
@@ -24,8 +28,10 @@
   cursor: pointer;
 }
 
+/* Square at rest; the sticker peels up and turns only on hover. Order matters: rotate
+   first, then translate along the page axes. */
 .cf-card--interactive:hover {
-  transform: var(--card-transform-hover);
+  transform: rotate(var(--card-tilt-hover)) var(--card-transform-hover);
   box-shadow: var(--card-shadow-hover);
 }
 
@@ -60,6 +66,8 @@
   .cf-card {
     transition: none;
   }
+  /* Now that the tilt only happens on hover it is motion, not composition, so it goes
+     along with the lift rather than being preserved. */
   .cf-card--interactive:hover {
     transform: none;
   }

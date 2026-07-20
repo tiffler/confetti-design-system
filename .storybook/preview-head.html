@@ -1,0 +1,10 @@
+<!--
+  Self-hosted webfonts, served from public/fonts via Storybook's staticDirs.
+
+  No third-party request: visual regression testing cannot depend on the network, and
+  the previous Google Fonts link meant a capture landing before the font arrived would
+  produce a phantom diff with no code change behind it.
+-->
+<link rel="preload" href="/fonts/fredoka-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/jetbrains-mono-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/fonts/fonts.css" />

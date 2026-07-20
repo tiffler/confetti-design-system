@@ -4,13 +4,13 @@
     "surface": {
       "page": { "value": "{color.ink.800.value}" },
       "raised": { "value": "{color.ink.700.value}" },
-      "panel": { "value": "{color.ink.600.value}" },
-      "card": { "value": "{color.ink.500.value}" }
+      "panel": { "value": "{color.ink.500.value}" },
+      "card": { "value": "{color.ink.400.value}" }
     },
     "text": {
       "primary": { "value": "{color.cream.300.value}" },
       "muted": { "value": "{color.ink.200.value}" },
-      "inverse": { "value": "{color.ink.400.value}" },
+      "inverse": { "value": "{color.ink.600.value}" },
       "accent": { "value": "{color.red.400.value}" }
     },
     "border": {
@@ -23,7 +23,7 @@
         "fg": { "value": "{color.ink.900.value}" }
       },
       "secondary": {
-        "bg": { "value": "{color.ink.600.value}" },
+        "bg": { "value": "{color.ink.500.value}" },
         "fg": { "value": "{color.cream.300.value}" }
       },
       "ghost": {
@@ -48,7 +48,7 @@
         "subtle": { "value": "{color.pink.700.value}" },
         "bold": { "value": "{color.pink.400.value}" }
       },
-      "on-bold": { "value": "{color.ink.400.value}", "comment": "bold accents stay light in dark mode, so ink still reads on them" },
+      "on-bold": { "value": "{color.ink.600.value}", "comment": "bold accents stay light in dark mode, so ink still reads on them" },
       "on-subtle": { "value": "{color.cream.300.value}", "comment": "subtle accents are deep in dark mode — needs the light foreground" }
     }
   },

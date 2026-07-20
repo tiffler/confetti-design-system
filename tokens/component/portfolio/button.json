@@ -5,7 +5,8 @@
     "border-width": { "value": "{border.width.default.value}" },
     "font-family": { "value": "{font.family.body.value}" },
     "font-size": { "value": "{font.size.body.value}" },
-    "font-weight": { "value": "{font.weight.label.value}" },
+    "font-weight": { "value": "{font.weight.control.value}" },
+    "min-height": { "value": "{size.control.value}" },
     "padding-x": { "value": "{space.inset.value}" },
     "padding-y": { "value": "{space.inset-tight.value}" },
     "gap": { "value": "{space.inline.value}" },
@@ -16,7 +17,8 @@
     "primary": {
       "bg": { "value": "{color.action.primary.bg.value}" },
       "fg": { "value": "{color.action.primary.fg.value}" },
-      "border": { "value": "transparent" }
+      "$comment": "Ink border is a global sticker rule — primary and secondary differ by fill, not by outline. The hard shadow extrudes from this edge.",
+      "border": { "value": "{color.border.default.value}" }
     },
     "secondary": {
       "bg": { "value": "{color.action.secondary.bg.value}" },

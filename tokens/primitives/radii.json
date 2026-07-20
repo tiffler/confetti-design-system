@@ -2,7 +2,7 @@
   "radius": {
     "none": { "value": "0" },
     "xs": { "value": "2px", "comment": "small UI chips / icons" },
-    "sm": { "value": "3px" },
+    "sm": { "value": "4px" },
     "md": { "value": "8px", "comment": "card container" },
     "full": { "value": "999px", "comment": "buttons / pills" },
     "circle": { "value": "50%", "comment": "dots / avatars" }

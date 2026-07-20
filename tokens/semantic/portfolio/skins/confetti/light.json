@@ -8,13 +8,13 @@
       "card": { "value": "{color.base.white.value}" }
     },
     "text": {
-      "primary": { "value": "{color.ink.400.value}" },
+      "primary": { "value": "{color.ink.600.value}" },
       "muted": { "value": "{color.ink.300.value}" },
       "inverse": { "value": "{color.base.white.value}" },
       "accent": { "value": "{color.red.500.value}" }
     },
     "border": {
-      "default": { "value": "{color.ink.400.value}" },
+      "default": { "value": "{color.ink.600.value}" },
       "subtle": { "value": "{color.ink.a12.value}" }
     },
     "action": {
@@ -24,10 +24,10 @@
       },
       "secondary": {
         "bg": { "value": "{color.cream.300.value}" },
-        "fg": { "value": "{color.ink.400.value}" }
+        "fg": { "value": "{color.ink.600.value}" }
       },
       "ghost": {
-        "fg": { "value": "{color.ink.400.value}" },
+        "fg": { "value": "{color.ink.600.value}" },
         "fg-hover": { "value": "{color.red.500.value}" }
       }
     },
@@ -48,8 +48,8 @@
         "subtle": { "value": "{color.pink.100.value}" },
         "bold": { "value": "{color.pink.400.value}" }
       },
-      "on-bold": { "value": "{color.ink.400.value}" },
-      "on-subtle": { "value": "{color.ink.400.value}" }
+      "on-bold": { "value": "{color.ink.600.value}" },
+      "on-subtle": { "value": "{color.ink.600.value}" }
     }
   },
   "shadow": {
@@ -58,18 +58,26 @@
   "font": {
     "family": {
       "display": { "value": "{font.family.fredoka.value}" },
-      "body": { "value": "{font.family.sans.value}" },
+      "body": { "value": "{font.family.fredoka.value}" },
       "label": { "value": "{font.family.mono.value}" }
     },
     "size": {
-      "display": { "value": "{font.size.hero.value}" },
-      "heading": { "value": "{font.size.xl.value}" },
-      "body": { "value": "{font.size.lg.value}" },
-      "label": { "value": "{font.size.sm.value}" }
+      "$comment": "Heading ramp is a 1.25 modular scale rounded to the 4px grid: 48 / 40 / 32 / 24 / 20 / 16.",
+      "display": { "value": "{font.size.hero.value}", "comment": "hero only — fluid, sits above h1" },
+      "h1": { "value": "{font.size.48.value}" },
+      "h2": { "value": "{font.size.40.value}" },
+      "h3": { "value": "{font.size.32.value}" },
+      "h4": { "value": "{font.size.24.value}" },
+      "h5": { "value": "{font.size.20.value}" },
+      "h6": { "value": "{font.size.16.value}", "comment": "meets body size — weight and family carry the distinction" },
+      "body": { "value": "{font.size.16.value}", "comment": "16px — body primary" },
+      "body-secondary": { "value": "{font.size.14.value}", "comment": "14px — captions, meta, dense UI" },
+      "label": { "value": "{font.size.12.value}", "comment": "12px — mono eyebrows, uppercase" }
     },
     "weight": {
       "display": { "value": "{font.weight.semibold.value}" },
       "body": { "value": "{font.weight.medium.value}" },
+      "control": { "value": "{font.weight.medium.value}", "comment": "500 — button and control labels" },
       "label": { "value": "{font.weight.bold.value}" }
     },
     "tracking": {
@@ -93,11 +101,18 @@
       "default": { "value": "{border.width.sticker.value}" }
     }
   },
+  "size": {
+    "control": {
+      "value": "{space.12.value}",
+      "comment": "48px — height of a tappable control. Padding sets the horizontal rhythm; this sets the vertical."
+    }
+  },
   "space": {
-    "inline": { "value": "{space.2.value}", "comment": "gap between inline siblings" },
-    "stack": { "value": "{space.3.value}", "comment": "vertical rhythm inside a container" },
-    "inset": { "value": "{space.6.value}", "comment": "container padding" },
-    "inset-tight": { "value": "{space.3.value}" },
-    "inset-xs": { "value": "{space.1.value}" }
+    "$comment": "Four steps, smallest to largest: 4, 8, 16, 24.",
+    "inset-xs": { "value": "{space.1.value}", "comment": "4px — tightest inset, chips and dots" },
+    "inline": { "value": "{space.2.value}", "comment": "8px — gap between inline siblings" },
+    "inset-tight": { "value": "{space.2.value}", "comment": "8px — compact control padding" },
+    "stack": { "value": "{space.4.value}", "comment": "16px — vertical rhythm inside a container" },
+    "inset": { "value": "{space.6.value}", "comment": "24px — container padding" }
   }
 }

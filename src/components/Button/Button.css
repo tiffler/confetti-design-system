@@ -6,6 +6,12 @@
   justify-content: center;
   gap: var(--button-gap);
 
+  /* Height is set here, not back-solved from padding — padding-y stays as the floor
+     for labels that wrap to two lines. `box-sizing: border-box` so the 2px sticker
+     border counts inward and the button measures exactly 48px. */
+  box-sizing: border-box;
+  min-height: var(--button-min-height);
+
   padding: var(--button-padding-y) var(--button-padding-x);
   border-radius: var(--button-radius);
   /* Every variant carries the border, transparent where the design has none,

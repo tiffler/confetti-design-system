@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/blocks';
-import { ColorGrid } from './Specimens';
+import { ColorGrid, ContrastPairs } from './Specimens';
 
 <Meta title="Foundations/Color" />
 
@@ -8,6 +8,32 @@ import { ColorGrid } from './Specimens';
 Every swatch below is read from `build/portfolio/tokens.json` for the skin and mode
 selected in the toolbar — nothing on this page is hardcoded. Switch **Mode** in the
 toolbar to see the semantic layer repoint while the token names stay put.
+
+Swatches run **lightest to darkest** by relative luminance. Translucent tokens are
+flattened onto the page surface first, since that is what renders.
+
+**Only combinations that clear 4.5:1 appear here** — the AA threshold for body text.
+Anything below it is left off the page entirely rather than shown as a failure, so
+every ratio you see is one you can use. Specimens render on `surface-page` rather than
+the Storybook docs canvas, so the text colors are measured against the surface they
+are actually meant for.
+
+## Text on surfaces
+
+The pairs the components actually produce. These are the ones that matter.
+
+<ContrastPairs
+  pairs={[
+    { fg: 'color-text-primary', bg: 'color-surface-page', label: 'primary on page' },
+    { fg: 'color-text-primary', bg: 'color-surface-card', label: 'primary on card' },
+    { fg: 'color-text-muted', bg: 'color-surface-page', label: 'muted on page' },
+    { fg: 'color-text-muted', bg: 'color-surface-card', label: 'muted on card' },
+    { fg: 'color-text-accent', bg: 'color-surface-page', label: 'accent on page' },
+    { fg: 'color-text-accent', bg: 'color-surface-card', label: 'accent on card' },
+    { fg: 'color-action-primary-fg', bg: 'color-action-primary-bg', label: 'primary button', sample: 'Primary button' },
+    { fg: 'color-action-secondary-fg', bg: 'color-action-secondary-bg', label: 'secondary button', sample: 'Secondary button' },
+  ]}
+/>
 
 ## Surfaces
 
@@ -38,6 +64,21 @@ stay legible against each end of the pair — they diverge in dark mode, which i
 they are separate tokens.
 
 <ColorGrid prefix="color-accent-" />
+
+Each pair carrying its own intended foreground:
+
+<ContrastPairs
+  pairs={[
+    { fg: 'color-accent-on-bold', bg: 'color-accent-purple-bold', label: 'purple bold', sample: 'Design systems' },
+    { fg: 'color-accent-on-subtle', bg: 'color-accent-purple-subtle', label: 'purple subtle', sample: 'Design systems' },
+    { fg: 'color-accent-on-bold', bg: 'color-accent-teal-bold', label: 'teal bold', sample: 'Case studies' },
+    { fg: 'color-accent-on-subtle', bg: 'color-accent-teal-subtle', label: 'teal subtle', sample: 'Case studies' },
+    { fg: 'color-accent-on-bold', bg: 'color-accent-orange-bold', label: 'orange bold', sample: "Tools I've built" },
+    { fg: 'color-accent-on-subtle', bg: 'color-accent-orange-subtle', label: 'orange subtle', sample: "Tools I've built" },
+    { fg: 'color-accent-on-bold', bg: 'color-accent-pink-bold', label: 'pink bold', sample: 'Featured' },
+    { fg: 'color-accent-on-subtle', bg: 'color-accent-pink-subtle', label: 'pink subtle', sample: 'Featured' },
+  ]}
+/>
 
 ## Primitives
 

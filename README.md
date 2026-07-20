@@ -167,8 +167,8 @@ the homepage hero widget code, recorded in the
 [Notion page](https://app.notion.com/p/3a3b380ae3b281f68bc6c4d61e08b421). Pull from
 there rather than re-deriving.
 
-Headline face is **Fredoka**, not Bricolage Grotesque. Fredoka and JetBrains Mono are
-declared with system fallbacks — the consuming app loads the actual webfonts.
+Fredoka and JetBrains Mono are declared with system fallbacks — the consuming app loads
+the actual webfonts.
 
 > **Dark mode is pending a design pass.** The values in `confetti/dark.json` were derived
 > systematically from the light comps (surface ramp inverted, red and accents lifted for

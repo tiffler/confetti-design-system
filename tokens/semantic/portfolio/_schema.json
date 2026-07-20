@@ -38,11 +38,18 @@
       "family.body",
       "family.label",
       "size.display",
-      "size.heading",
+      "size.h1",
+      "size.h2",
+      "size.h3",
+      "size.h4",
+      "size.h5",
+      "size.h6",
       "size.body",
+      "size.body-secondary",
       "size.label",
       "weight.display",
       "weight.body",
+      "weight.control",
       "weight.label",
       "tracking.display",
       "tracking.label",
@@ -52,6 +59,7 @@
     ],
     "radius": ["control", "container", "chip", "avatar"],
     "border": ["width.default"],
+    "size": ["control"],
     "space": ["inline", "stack", "inset", "inset-tight", "inset-xs"]
   }
 }
