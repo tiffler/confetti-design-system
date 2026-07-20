@@ -3,9 +3,11 @@
   "button": {
     "radius": { "value": "{radius.control.value}" },
     "border-width": { "value": "{border.width.default.value}" },
-    "font-family": { "value": "{font.family.body.value}" },
-    "font-size": { "value": "{font.size.body.value}" },
+    "font-family": { "value": "{font.family.label.value}" },
+    "font-size": { "value": "{font.size.body-secondary.value}" },
     "font-weight": { "value": "{font.weight.control.value}" },
+    "$comment": "Mono uppercase always carries the wide label tracking — without it the caps set too tight to read.",
+    "tracking": { "value": "{font.tracking.label.value}" },
     "min-height": { "value": "{size.control.value}" },
     "padding-x": { "value": "{space.inset.value}" },
     "padding-y": { "value": "{space.inset-tight.value}" },

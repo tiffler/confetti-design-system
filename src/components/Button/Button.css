@@ -21,6 +21,8 @@
   font-family: var(--button-font-family);
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
+  letter-spacing: var(--button-tracking);
+  text-transform: uppercase;
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
