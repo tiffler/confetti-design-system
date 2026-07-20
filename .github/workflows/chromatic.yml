@@ -1,0 +1,31 @@
+name: Chromatic
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Chromatic needs full history to diff a build against its ancestors.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - uses: chromaui/action@v11
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          # Runs build-storybook, which builds tokens first.
+          buildScriptName: build-storybook
+          # Publish main as the public Storybook; don't fail CI on visual diffs.
+          autoAcceptChanges: main
+          exitZeroOnChanges: true
