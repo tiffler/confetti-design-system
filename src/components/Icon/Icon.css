@@ -1,0 +1,38 @@
+/* Consumes component tokens only — no hardcoded values, no primitives. */
+
+.cf-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+
+  /* Square box; the glyph fills it at size="100%". */
+  width: var(--cf-icon-size);
+  height: var(--cf-icon-size);
+
+  /* Optical alignment: a cap-height-matched icon sits slightly high on the text
+     baseline, because glyph boxes are centred on the em, not the cap. */
+  vertical-align: -0.125em;
+}
+
+.cf-icon--sm {
+  --cf-icon-size: var(--icon-size-sm);
+}
+.cf-icon--md {
+  --cf-icon-size: var(--icon-size-md);
+}
+.cf-icon--lg {
+  --cf-icon-size: var(--icon-size-lg);
+}
+
+/* `inherit` is the default and sets nothing — the glyph uses currentColor, so an icon
+   inside a button or link follows that context automatically, including on hover. */
+.cf-icon--default {
+  color: var(--icon-color-default);
+}
+.cf-icon--muted {
+  color: var(--icon-color-muted);
+}
+.cf-icon--accent {
+  color: var(--icon-color-accent);
+}

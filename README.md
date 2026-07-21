@@ -111,6 +111,33 @@ Then consume component tokens (`--button-primary-bg`) or semantic roles
 (`--color-text-primary`, `--font-size-h2`). Do not consume primitives directly — they
 are the palette, not the API, and they carry no theme awareness.
 
+## Iconography
+
+[Phosphor](https://phosphoricons.com) at **bold** weight, wrapped rather than
+re-exported:
+
+```tsx
+import { ArrowRight } from '@phosphor-icons/react';
+import { Icon } from './src';
+
+<Icon icon={ArrowRight} size="md" />;
+```
+
+The icon is passed as a component, not a name string, so bundlers tree-shake to the
+handful you use instead of pulling in all ~9,000.
+
+- **Weight is fixed at bold** by the system — it matches the 2px sticker linework;
+  regular reads thin beside it. `weight` exists as an escape hatch, but a mixed-weight
+  icon set is the fastest way to make a system look assembled rather than designed.
+- **Sizes mirror the type scale** — `sm` 16px, `md` 20px, `lg` 24px — via
+  `size.icon.*`, so an icon matches the cap height of the text it sits beside.
+- **Colour inherits by default.** `tone="inherit"` uses `currentColor`, so an icon in a
+  button or link follows that context including hover. `default` / `muted` / `accent`
+  are the explicit escapes.
+- **Decorative by default.** An icon with no `label` is `aria-hidden`; passing `label`
+  exposes it as `role="img"`. That way an arrow beside "View case study" is not read out
+  twice.
+
 ## Runtime theming
 
 Two independent root attributes:

@@ -107,6 +107,12 @@
     "control": {
       "value": "{space.12.value}",
       "comment": "48px — height of a tappable control. Padding sets the horizontal rhythm; this sets the vertical."
+    },
+    "icon": {
+      "$comment": "Icons sit on the type scale, not the space scale — an icon beside a label should match that label's cap height, so these mirror font sizes.",
+      "sm": { "value": "{font.size.16.value}", "comment": "16px — inline with body and control labels" },
+      "md": { "value": "{font.size.20.value}", "comment": "20px — standalone UI affordances" },
+      "lg": { "value": "{font.size.24.value}", "comment": "24px — feature and empty-state icons" }
     }
   },
   "space": {
