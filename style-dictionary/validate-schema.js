@@ -8,14 +8,14 @@ export function loadSchema(schemaPath) {
 const tokenName = (group, path) => [group, ...path.split('.')].join('-');
 
 /**
- * Enforces tokens/semantic/portfolio/_schema.json against a built skin+mode.
+ * Enforces tokens/semantic/portfolio/_schema.json against a built theme+mode.
  *
- * `required` tokens must be defined by the skin itself. `inheritable` tokens
- * may be omitted by a skin — they deep-merge from the base skin's light file —
+ * `required` tokens must be defined by the theme itself. `inheritable` tokens
+ * may be omitted by a theme — they deep-merge from the base theme's light file —
  * so for those we only assert the merge produced a value, which is what
- * guarantees the base skin stays complete.
+ * guarantees the base theme stays complete.
  */
-export function validateSkin({ schema, skin, mode, builtNames }) {
+export function validateTheme({ schema, theme, mode, builtNames }) {
   const errors = [];
 
   for (const [group, paths] of Object.entries(schema.required ?? {})) {
@@ -30,8 +30,8 @@ export function validateSkin({ schema, skin, mode, builtNames }) {
     for (const path of paths) {
       if (!builtNames.has(tokenName(group, path))) {
         errors.push(
-          `unresolved inheritable token  ${group}.${path}  — the base skin ` +
-            `"${schema.baseSkin}" must define it`
+          `unresolved inheritable token  ${group}.${path}  — the base theme ` +
+            `"${schema.baseTheme}" must define it`
         );
       }
     }
@@ -39,7 +39,7 @@ export function validateSkin({ schema, skin, mode, builtNames }) {
 
   if (errors.length) {
     throw new Error(
-      `Semantic schema violations in skin "${skin}" (${mode} mode):\n` +
+      `Semantic schema violations in theme "${theme}" (${mode} mode):\n` +
         errors.map((e) => `  • ${e}`).join('\n')
     );
   }
