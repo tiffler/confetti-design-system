@@ -1166,6 +1166,32 @@
         "$extensions": {
           "com.confetti.cssVariable": "--size-control"
         }
+      },
+      "icon": {
+        "sm": {
+          "$value": "16px",
+          "$type": "dimension",
+          "$description": "16px — inline with body and control labels",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-icon-sm"
+          }
+        },
+        "md": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$description": "20px — standalone UI affordances",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-icon-md"
+          }
+        },
+        "lg": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$description": "24px — feature and empty-state icons",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-icon-lg"
+          }
+        }
       }
     },
     "badge": {
@@ -1677,6 +1703,50 @@
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-leading"
           }
+        }
+      }
+    },
+    "icon": {
+      "size-sm": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-size-sm"
+        }
+      },
+      "size-md": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-size-md"
+        }
+      },
+      "size-lg": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-size-lg"
+        }
+      },
+      "color-default": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-color-default"
+        }
+      },
+      "color-muted": {
+        "$value": "#6b5f4a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-color-muted"
+        }
+      },
+      "color-accent": {
+        "$value": "#c40000",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-color-accent"
         }
       }
     }
@@ -2848,6 +2918,32 @@
         "$extensions": {
           "com.confetti.cssVariable": "--size-control"
         }
+      },
+      "icon": {
+        "sm": {
+          "$value": "16px",
+          "$type": "dimension",
+          "$description": "16px — inline with body and control labels",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-icon-sm"
+          }
+        },
+        "md": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$description": "20px — standalone UI affordances",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-icon-md"
+          }
+        },
+        "lg": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$description": "24px — feature and empty-state icons",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-icon-lg"
+          }
+        }
       }
     },
     "badge": {
@@ -3359,6 +3455,50 @@
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-leading"
           }
+        }
+      }
+    },
+    "icon": {
+      "size-sm": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-size-sm"
+        }
+      },
+      "size-md": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-size-md"
+        }
+      },
+      "size-lg": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-size-lg"
+        }
+      },
+      "color-default": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-color-default"
+        }
+      },
+      "color-muted": {
+        "$value": "#bfb6a6",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-color-muted"
+        }
+      },
+      "color-accent": {
+        "$value": "#e33b2e",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--icon-color-accent"
         }
       }
     }
