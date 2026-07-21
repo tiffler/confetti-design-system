@@ -9,20 +9,20 @@ import {
 } from 'react';
 
 /**
- * Skin and mode are independent axes. Confetti is the only skin today; the
- * union is what future skins widen, and nothing else in the system needs to
+ * Theme and mode are independent axes. Confetti is the only theme today; the
+ * union is what future themes widen, and nothing else in the system needs to
  * change when they do.
  */
-export type Skin = 'confetti';
+export type Theme = 'confetti';
 export type Mode = 'light' | 'dark';
 
-export const SKINS: Skin[] = ['confetti'];
+export const THEMES: Theme[] = ['confetti'];
 export const MODES: Mode[] = ['light', 'dark'];
 
 type ThemeContextValue = {
-  skin: Skin;
+  theme: Theme;
   mode: Mode;
-  setSkin: (skin: Skin) => void;
+  setTheme: (theme: Theme) => void;
   setMode: (mode: Mode) => void;
   toggleMode: () => void;
 };
@@ -31,10 +31,10 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export type ThemeProviderProps = {
   children: ReactNode;
-  skin?: Skin;
+  theme?: Theme;
   mode?: Mode;
   /**
-   * Where the data-skin / data-mode attributes get written. `root` themes the
+   * Where the data-theme / data-mode attributes get written. `root` themes the
    * whole document; `scope` themes only this subtree, which is what lets two
    * modes render side by side on one page.
    */
@@ -43,23 +43,23 @@ export type ThemeProviderProps = {
 
 export function ThemeProvider({
   children,
-  skin: skinProp = 'confetti',
+  theme: themeProp = 'confetti',
   mode: modeProp = 'light',
   target = 'root',
 }: ThemeProviderProps) {
-  const [skin, setSkin] = useState<Skin>(skinProp);
+  const [theme, setTheme] = useState<Theme>(themeProp);
   const [mode, setMode] = useState<Mode>(modeProp);
 
   // Follow controlled props when the consumer drives them (Storybook toolbar).
-  useEffect(() => setSkin(skinProp), [skinProp]);
+  useEffect(() => setTheme(themeProp), [themeProp]);
   useEffect(() => setMode(modeProp), [modeProp]);
 
   useEffect(() => {
     if (target !== 'root') return;
     const el = document.documentElement;
-    el.setAttribute('data-skin', skin);
+    el.setAttribute('data-theme', theme);
     el.setAttribute('data-mode', mode);
-  }, [skin, mode, target]);
+  }, [theme, mode, target]);
 
   const toggleMode = useCallback(
     () => setMode((current) => (current === 'light' ? 'dark' : 'light')),
@@ -67,14 +67,14 @@ export function ThemeProvider({
   );
 
   const value = useMemo(
-    () => ({ skin, mode, setSkin, setMode, toggleMode }),
-    [skin, mode, toggleMode]
+    () => ({ theme, mode, setTheme, setMode, toggleMode }),
+    [theme, mode, toggleMode]
   );
 
   return (
     <ThemeContext.Provider value={value}>
       {target === 'scope' ? (
-        <div data-skin={skin} data-mode={mode}>
+        <div data-theme={theme} data-mode={mode}>
           {children}
         </div>
       ) : (

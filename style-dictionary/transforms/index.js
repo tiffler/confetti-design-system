@@ -1,6 +1,6 @@
 import StyleDictionary from 'style-dictionary';
 
-/** Tokens under tokens/primitives/ — emitted once in :root, not per skin+mode. */
+/** Tokens under tokens/primitives/ — emitted once in :root, not per theme+mode. */
 export const isPrimitive = (token) => token.filePath?.includes('/tokens/primitives/');
 
 /** Doc keys like `$comment` sit alongside real token groups; never emit them. */

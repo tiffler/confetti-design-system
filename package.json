@@ -2,7 +2,7 @@
   "name": "confetti-design-system",
   "version": "0.1.0",
   "private": true,
-  "description": "Confetti — personal portfolio design system. Multi-skin, multi-mode token architecture.",
+  "description": "Confetti — personal portfolio design system. Multi-theme, multi-mode token architecture.",
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {

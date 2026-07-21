@@ -1,6 +1,6 @@
 // GENERATED FILE — do not edit. Build: npm run tokens
 // Values are var() references, so a Tailwind class resolves against
-// whichever skin+mode is active at runtime.
+// whichever theme+mode is active at runtime.
 export default {
   "colors": {
     "cream-100": "var(--color-cream-100)",

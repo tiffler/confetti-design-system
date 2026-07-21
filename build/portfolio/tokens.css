@@ -3,7 +3,7 @@
  * Source: tokens/  •  Build: npm run tokens
  *
  * Primitives are emitted once under :root. Semantic and component tokens are
- * emitted per skin+mode under [data-skin][data-mode], so components consume a
+ * emitted per theme+mode under [data-theme][data-mode], so components consume a
  * single stable custom-property name regardless of the active theme.
  */
 
@@ -94,7 +94,7 @@
   --font-leading-normal: 1.5;
 }
 
-[data-skin="confetti"][data-mode="light"] {
+[data-theme="confetti"][data-mode="light"] {
   --color-surface-page: #ede4d3;
   --color-surface-raised: #f4f0e4;
   --color-surface-panel: #ede7d8;
@@ -243,7 +243,7 @@
   --icon-color-accent: #c40000;
 }
 
-[data-skin="confetti"][data-mode="dark"] {
+[data-theme="confetti"][data-mode="dark"] {
   --color-surface-page: #211b12;
   --color-surface-raised: #2a2317;
   --color-surface-panel: #332a1c;

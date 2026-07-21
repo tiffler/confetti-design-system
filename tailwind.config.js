@@ -5,7 +5,7 @@ export default {
   content: ['./src/**/*.{ts,tsx,mdx}', './.storybook/**/*.{ts,tsx}'],
   theme: {
     // Generated from tokens/ — every value is a var() reference, so utilities
-    // follow whatever skin+mode is active at runtime.
+    // follow whatever theme+mode is active at runtime.
     extend: theme,
   },
   plugins: [],

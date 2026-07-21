@@ -1,6 +1,6 @@
 {
-  "$comment": "Required semantic token vocabulary. Every skin must satisfy the `required` list. Tokens in `inheritable` may be omitted by a skin, in which case the value falls back to confetti (the base skin). Validated at build time by style-dictionary/validate-schema.js.",
-  "baseSkin": "confetti",
+  "$comment": "Required semantic token vocabulary. Every theme must satisfy the `required` list. Tokens in `inheritable` may be omitted by a theme, in which case the value falls back to confetti (the base theme). Validated at build time by style-dictionary/validate-schema.js.",
+  "baseTheme": "confetti",
   "required": {
     "color": [
       "surface.page",

@@ -1,5 +1,5 @@
 {
-  "$description": "Confetti design tokens, W3C DTCG format. One group per skin+mode; values are fully resolved.",
+  "$description": "Confetti design tokens, W3C DTCG format. One group per theme+mode; values are fully resolved.",
   "confetti-light": {
     "color": {
       "cream": {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { addons } from '@storybook/preview-api';
 import tokenIndex from '../../build/portfolio/tokens.json';
-import type { Skin, Mode } from '../theme/ThemeProvider';
+import type { Theme, Mode } from '../theme/ThemeProvider';
 
 export type TokenRecord = {
   value: string;
@@ -10,16 +10,16 @@ export type TokenRecord = {
 };
 
 type TokenIndex = Record<string, Record<string, TokenRecord>>;
-type ThemeGlobals = { skin: Skin; mode: Mode };
+type ThemeGlobals = { theme: Theme; mode: Mode };
 
-const DEFAULTS: ThemeGlobals = { skin: 'confetti', mode: 'light' };
+const DEFAULTS: ThemeGlobals = { theme: 'confetti', mode: 'light' };
 
 // Event name literals rather than the @storybook/core-events import, whose
 // module path has moved between Storybook majors.
 const SET_GLOBALS = 'setGlobals';
 const GLOBALS_UPDATED = 'globalsUpdated';
 
-/** Preview iframe URL carries `globals=skin:confetti;mode:dark`. */
+/** Preview iframe URL carries `globals=theme:confetti;mode:dark`. */
 function readGlobalsFromUrl(): Partial<ThemeGlobals> {
   if (typeof window === 'undefined') return {};
   const raw = new URLSearchParams(window.location.search).get('globals');
@@ -52,7 +52,7 @@ export function useThemeGlobals(): ThemeGlobals {
       const next = (payload as { globals?: Partial<ThemeGlobals> })?.globals ?? payload;
       if (!next) return;
       setGlobals((current) => ({
-        skin: (next as ThemeGlobals).skin ?? current.skin,
+        theme: (next as ThemeGlobals).theme ?? current.theme,
         mode: (next as ThemeGlobals).mode ?? current.mode,
       }));
     };
@@ -72,19 +72,19 @@ export function useThemeGlobals(): ThemeGlobals {
  * Specimens must carry the theme attributes themselves, for the same reason —
  * spread this onto a specimen's root so its var() references resolve.
  */
-export function useThemeAttrs(): { 'data-skin': Skin; 'data-mode': Mode } {
-  const { skin, mode } = useThemeGlobals();
-  return { 'data-skin': skin, 'data-mode': mode };
+export function useThemeAttrs(): { 'data-theme': Theme; 'data-mode': Mode } {
+  const { theme, mode } = useThemeGlobals();
+  return { 'data-theme': theme, 'data-mode': mode };
 }
 
 /**
- * The generated token index, keyed `skin.mode`. Foundations read this rather
+ * The generated token index, keyed `theme.mode`. Foundations read this rather
  * than hardcoding values, so the docs cannot drift from the build output.
  */
 export function useTokens(): Record<string, TokenRecord> {
-  const { skin, mode } = useThemeGlobals();
+  const { theme, mode } = useThemeGlobals();
   const index = tokenIndex as unknown as TokenIndex;
-  return index[`${skin}.${mode}`] ?? {};
+  return index[`${theme}.${mode}`] ?? {};
 }
 
 /** All tokens whose name starts with `prefix`, in source order. */

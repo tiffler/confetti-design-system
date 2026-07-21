@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 /* Fallback so a page renders themed before a ThemeProvider mounts. */
-:root:not([data-skin]) {
+:root:not([data-theme]) {
   --color-surface-page: #ede4d3;
   --color-text-primary: #2e2618;
 }

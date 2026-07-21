@@ -3,10 +3,10 @@
 **Live Storybook:** https://main--6a5dbe45138c58d9d6190f4d.chromatic.com
 
 Personal portfolio design system. Powers the portfolio site and case studies, with a
-multi-skin, multi-mode token architecture built to scale.
+multi-theme, multi-mode token architecture built to scale.
 
-Confetti ships one skin (`confetti`) in light and dark. The skin axis is structurally
-real rather than hardcoded, so adding a skin later is a new folder — not a refactor.
+Confetti ships one theme (`confetti`) in light and dark. The theme axis is structurally
+real rather than hardcoded, so adding a theme later is a new folder — not a refactor.
 
 ```bash
 npm install
@@ -28,22 +28,22 @@ Three tiers, each layer only allowed to reference the one below it:
 ```
 primitives  →  semantic  →  component
 raw values     purpose        per-component
-               per skin       values
+               per theme       values
                per mode
 ```
 
 1. **Primitives** (`tokens/primitives/`) — raw color ramps, spacing scale, type scale,
    radii, shadows, motion, z-index. No semantic meaning, no theme awareness. Emitted
-   once under `:root`; identical for every skin and mode.
+   once under `:root`; identical for every theme and mode.
 
 2. **Semantic** (`tokens/semantic/portfolio/`) — purpose-driven aliases that reference
-   primitives only. This is the only layer that varies by skin and mode.
+   primitives only. This is the only layer that varies by theme and mode.
 
 3. **Component** (`tokens/component/portfolio/`) — component-specific values referencing
    semantic tokens only, never primitives. `--button-primary-bg`, `--card-radius`,
    `--badge-bg-teal`.
 
-Components consume component tokens and nothing else. They never know which skin or
+Components consume component tokens and nothing else. They never know which theme or
 mode is active — the custom property name is stable, only its value repoints.
 
 ### The contract is enforced, not documented
@@ -55,7 +55,7 @@ mode is active — the custom property name is stable, only its value repoints.
 - a reference to a token that **does not exist**.
 
 It runs as the first step of `npm run tokens`, so a violation fails the build with the
-offending token named — the same way `_schema.json` already fails a skin that omits a
+offending token named — the same way `_schema.json` already fails a theme that omits a
 required role. Schema validation checks *completeness*; this checks *discipline*.
 
 Running it against the system as originally built found ten violations that reviewing by
@@ -75,11 +75,11 @@ information rather than failures.
 `npm run tokens` writes four files to `build/portfolio/`:
 
 - **`tokens.css`** — primitives under `:root`, then semantic + component tokens under
-  each `[data-skin][data-mode]` selector pair.
-- **`tokens.json`** — the same tokens as structured data, keyed `skin.mode`. The
+  each `[data-theme][data-mode]` selector pair.
+- **`tokens.json`** — the same tokens as structured data, keyed `theme.mode`. The
   Storybook Foundations pages read this, so the docs cannot drift from the build.
 - **`tokens.dtcg.json`** — the same tokens in [W3C Design Tokens (DTCG)][dtcg] format,
-  one group per skin+mode, values fully resolved. This is the interchange file for
+  one group per theme+mode, values fully resolved. This is the interchange file for
   Figma, Tokens Studio, and design-tool importers.
 - **`tailwind.theme.js`** — Tailwind theme keys mapped to `var()` references, so a
   utility class follows whatever theme is active at runtime.
@@ -104,7 +104,7 @@ For an application, link `build/portfolio/tokens.css` and set the two root attri
 
 ```html
 <link rel="stylesheet" href="build/portfolio/tokens.css" />
-<html data-skin="confetti" data-mode="light">
+<html data-theme="confetti" data-mode="light">
 ```
 
 Then consume component tokens (`--button-primary-bg`) or semantic roles
@@ -143,7 +143,7 @@ handful you use instead of pulling in all ~9,000.
 Two independent root attributes:
 
 ```html
-<html data-skin="confetti" data-mode="dark">
+<html data-theme="confetti" data-mode="dark">
 ```
 
 `ThemeProvider` owns both. It is a context provider, not per-component logic — changing
@@ -152,7 +152,7 @@ either attribute updates every consuming component at once.
 ```tsx
 import { ThemeProvider, Button } from './src';
 
-<ThemeProvider skin="confetti" mode="dark">
+<ThemeProvider theme="confetti" mode="dark">
   <Button variant="primary">View case study</Button>
 </ThemeProvider>;
 ```
@@ -165,33 +165,33 @@ output is built-time themed.
 
 ## Schema
 
-`tokens/semantic/portfolio/_schema.json` defines the semantic vocabulary every skin must
-satisfy, and the build enforces it — a skin missing a required token fails
+`tokens/semantic/portfolio/_schema.json` defines the semantic vocabulary every theme must
+satisfy, and the build enforces it — a theme missing a required token fails
 `npm run tokens` with the specific token names, rather than silently emitting a
 half-themed stylesheet.
 
-- **`required`** — every skin must define these itself. All color roles, plus `shadow.lift`.
-- **`inheritable`** — typography, radii, and spacing roles. A skin may omit them and
-  inherit; the base skin must define them.
+- **`required`** — every theme must define these itself. All color roles, plus `shadow.lift`.
+- **`inheritable`** — typography, radii, and spacing roles. A theme may omit them and
+  inherit; the base theme must define them.
 
-**Inheritance rule:** the base skin's `light.json` (`confetti/light.json`) is the floor
-that every other skin+mode deep-merges onto. That is why `confetti/dark.json` contains
+**Inheritance rule:** the base theme's `light.json` (`confetti/light.json`) is the floor
+that every other theme+mode deep-merges onto. That is why `confetti/dark.json` contains
 only colors and a shadow — its typography, radii, and spacing come from the light file
 automatically, and a change there stays consistent across modes.
 
-## Adding a new skin
+## Adding a new theme
 
-1. Create `tokens/semantic/portfolio/skins/{name}/light.json` and `dark.json`.
+1. Create `tokens/semantic/portfolio/themes/{name}/light.json` and `dark.json`.
 2. Define every token in the schema's `required` list. Override anything from
    `inheritable` you want to differ; omit the rest and it falls back to Confetti.
-3. Add `'{name}'` to the `Skin` union and `SKINS` array in `src/theme/ThemeProvider.tsx`.
+3. Add `'{name}'` to the `Theme` union and `THEMES` array in `src/theme/ThemeProvider.tsx`.
 4. Run `npm run tokens`.
 
 No changes to primitives, component tokens, component code, or the build pipeline —
-the build discovers skins by reading the `skins/` directory. Step 3 is only there so
+the build discovers themes by reading the `themes/` directory. Step 3 is only there so
 TypeScript and the Storybook toolbar know the new value exists.
 
-Parked skin directions, from the design brief: **Vintage** (muted/warm/serif),
+Parked theme directions, from the design brief: **Vintage** (muted/warm/serif),
 **Arcade** (neon/blocky), **Glitch** (high-contrast/chromatic aberration).
 
 ## Publishing
@@ -227,10 +227,10 @@ design-system/
 │   ├── primitives/          color, spacing, typography, radii, shadows
 │   ├── semantic/portfolio/
 │   │   ├── _schema.json     required vocabulary, enforced at build time
-│   │   └── skins/confetti/  light.json, dark.json
+│   │   └── themes/confetti/  light.json, dark.json
 │   └── component/portfolio/ button, card, badge
 ├── style-dictionary/
-│   ├── build.js             loops skins × modes, validates, writes one tokens.css
+│   ├── build.js             loops themes × modes, validates, writes one tokens.css
 │   ├── validate-schema.js
 │   └── transforms/
 ├── build/portfolio/         GENERATED — tokens.css, tokens.json, tailwind.theme.js

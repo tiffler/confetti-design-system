@@ -12,5 +12,5 @@ export type { BadgeProps, BadgeHue, BadgeTone } from './components/Badge/Badge';
 export { Icon } from './components/Icon/Icon';
 export type { IconProps, IconSize, IconTone, PhosphorIcon } from './components/Icon/Icon';
 
-export { ThemeProvider, useTheme, SKINS, MODES } from './theme/ThemeProvider';
-export type { Skin, Mode, ThemeProviderProps } from './theme/ThemeProvider';
+export { ThemeProvider, useTheme, THEMES, MODES } from './theme/ThemeProvider';
+export type { Theme, Mode, ThemeProviderProps } from './theme/ThemeProvider';

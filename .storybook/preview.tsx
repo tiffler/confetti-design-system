@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react';
-import { ThemeProvider, SKINS, MODES, type Skin, type Mode } from '../src/theme/ThemeProvider';
+import { ThemeProvider, THEMES, MODES, type Theme, type Mode } from '../src/theme/ThemeProvider';
 import '../src/styles/global.css';
 
 const preview: Preview = {
@@ -12,14 +12,14 @@ const preview: Preview = {
     },
   },
 
-  // Two independent toolbar axes, mirroring data-skin and data-mode.
+  // Two independent toolbar axes, mirroring data-theme and data-mode.
   globalTypes: {
-    skin: {
-      description: 'Design system skin',
+    theme: {
+      description: 'Design system theme',
       toolbar: {
-        title: 'Skin',
+        title: 'Theme',
         icon: 'paintbrush',
-        items: SKINS.map((skin) => ({ value: skin, title: skin })),
+        items: THEMES.map((theme) => ({ value: theme, title: theme })),
         dynamicTitle: true,
       },
     },
@@ -35,13 +35,13 @@ const preview: Preview = {
   },
 
   initialGlobals: {
-    skin: 'confetti',
+    theme: 'confetti',
     mode: 'light',
   },
 
   decorators: [
     (Story, context) => {
-      const skin = context.globals.skin as Skin;
+      const theme = context.globals.theme as Theme;
       const mode = context.globals.mode as Mode;
 
       // Filling the frame is right in the story canvas — it lets the page surface read
@@ -50,7 +50,7 @@ const preview: Preview = {
       const isDocs = context.viewMode === 'docs';
 
       return (
-        <ThemeProvider skin={skin} mode={mode}>
+        <ThemeProvider theme={theme} mode={mode}>
           <div
             style={{
               background: 'var(--color-surface-page)',

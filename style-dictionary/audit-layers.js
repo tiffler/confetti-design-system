@@ -2,7 +2,7 @@
 /**
  * Audits the three-tier contract that the architecture claims to enforce.
  *
- * The build already fails when a skin is missing a required semantic token. That checks
+ * The build already fails when a theme is missing a required semantic token. That checks
  * completeness, not discipline: nothing stopped a component token from reaching past
  * the semantic layer into a primitive, or from inlining a raw value. This does.
  *
@@ -41,7 +41,7 @@ const layerOf = (file) => {
 };
 
 /**
- * Every token declaration, as a flat list. Deliberately not keyed by path: skins declare
+ * Every token declaration, as a flat list. Deliberately not keyed by path: themes declare
  * the same paths in light.json and dark.json, and a Map would silently drop one of them
  * along with every reference it makes.
  */
