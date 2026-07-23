@@ -13,3 +13,6 @@ storybook-static/
 
 # Local Claude Code settings
 .claude/
+
+# Local design/build reference — not tracked
+Confetti Build Spec.md
