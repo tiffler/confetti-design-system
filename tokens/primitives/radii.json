@@ -10,7 +10,8 @@
   "border": {
     "width": {
       "hairline": { "value": "1px" },
-      "sticker": { "value": "2px", "comment": "thick-outline card and button borders" }
+      "sticker": { "value": "2px", "comment": "thick-outline card and button borders" },
+      "heavy": { "value": "4px", "comment": "high-contrast focus ring / emphasis edges" }
     }
   }
 }

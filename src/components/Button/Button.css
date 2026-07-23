@@ -34,9 +34,11 @@
     color var(--button-transition-duration) var(--button-transition-easing);
 }
 
+/* Focus ring comes from the mode axis: 2px ink/cream in light/dark, 4px solid
+   black in high-contrast. Never colour-only — it is an outline with real width. */
 .cf-button:focus-visible {
-  outline: var(--button-border-width) solid var(--color-text-accent);
-  outline-offset: 2px;
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
 }
 
 .cf-button[disabled] {

@@ -21,8 +21,13 @@
       "a12": { "value": "rgba(46, 38, 24, 0.12)" }
     },
     "red": {
-      "500": { "value": "#c40000", "comment": "canonical brand Red" },
-      "400": { "value": "#e33b2e", "comment": "lifted for dark surfaces" }
+      "500": { "value": "#c40000", "comment": "confetti brand Red — light/HC surfaces" },
+      "400": { "value": "#e33b2e", "comment": "confetti brand Red, lifted" },
+      "300": { "value": "#f04b3a", "comment": "confetti brand Red, lifted enough to read AS TEXT on the dark surface (4.69:1)" }
+    },
+    "blue": {
+      "600": { "value": "#0a5c74", "comment": "ocean brand — light/HC surfaces" },
+      "400": { "value": "#57c2dd", "comment": "ocean brand, lifted for dark surfaces" }
     },
     "purple": {
       "700": { "value": "#453552" },
@@ -46,6 +51,7 @@
     },
     "base": {
       "white": { "value": "#ffffff" },
+      "black": { "value": "#000000", "comment": "true black — high-contrast mode only" },
       "transparent": { "value": "transparent" }
     }
   }

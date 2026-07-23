@@ -1,37 +1,37 @@
 {
   "$comment": "Component tokens reference semantic tokens only — never primitives, never raw values.",
   "button": {
-    "radius": { "value": "{radius.control.value}" },
-    "border-width": { "value": "{border.width.default.value}" },
-    "font-family": { "value": "{font.family.label.value}" },
-    "font-size": { "value": "{font.size.body-secondary.value}" },
-    "font-weight": { "value": "{font.weight.control.value}" },
+    "radius": { "value": "{radius.control}" },
+    "border-width": { "value": "{border.width.default}" },
+    "font-family": { "value": "{font.family.label}" },
+    "font-size": { "value": "{font.size.body-secondary}" },
+    "font-weight": { "value": "{font.weight.control}" },
     "$comment": "Mono uppercase always carries the wide label tracking — without it the caps set too tight to read.",
-    "tracking": { "value": "{font.tracking.label.value}" },
-    "min-height": { "value": "{size.control.value}" },
-    "padding-x": { "value": "{space.inset.value}" },
-    "padding-y": { "value": "{space.inset-tight.value}" },
-    "gap": { "value": "{space.inline.value}" },
-    "shadow-hover": { "value": "{shadow.lift.value}" },
-    "transform-hover": { "value": "{motion.transform.lift.value}" },
-    "transition-duration": { "value": "{motion.duration.interaction.value}" },
-    "transition-easing": { "value": "{motion.easing.interaction.value}" },
+    "tracking": { "value": "{font.tracking.label}" },
+    "min-height": { "value": "{size.control}" },
+    "padding-x": { "value": "{space.inset}" },
+    "padding-y": { "value": "{space.inset-tight}" },
+    "gap": { "value": "{space.inline}" },
+    "shadow-hover": { "value": "{shadow.lift}" },
+    "transform-hover": { "value": "{motion.transform.lift}" },
+    "transition-duration": { "value": "{motion.duration.interaction}" },
+    "transition-easing": { "value": "{motion.easing.interaction}" },
     "primary": {
-      "bg": { "value": "{color.action.primary.bg.value}" },
-      "fg": { "value": "{color.action.primary.fg.value}" },
+      "bg": { "value": "{color.action.primary.bg}" },
+      "fg": { "value": "{color.action.primary.fg}" },
       "$comment": "Ink border is a global sticker rule — primary and secondary differ by fill, not by outline. The hard shadow extrudes from this edge.",
-      "border": { "value": "{color.border.default.value}" }
+      "border": { "value": "{color.border.default}" }
     },
     "secondary": {
-      "bg": { "value": "{color.action.secondary.bg.value}" },
-      "fg": { "value": "{color.action.secondary.fg.value}" },
-      "border": { "value": "{color.border.default.value}" }
+      "bg": { "value": "{color.action.secondary.bg}" },
+      "fg": { "value": "{color.action.secondary.fg}" },
+      "border": { "value": "{color.border.default}" }
     },
     "ghost": {
-      "bg": { "value": "{color.action.ghost.bg.value}" },
-      "fg": { "value": "{color.action.ghost.fg.value}" },
-      "fg-hover": { "value": "{color.action.ghost.fg-hover.value}" },
-      "border": { "value": "{color.border.none.value}" }
+      "bg": { "value": "{color.action.ghost.bg}" },
+      "fg": { "value": "{color.action.ghost.fg}" },
+      "fg-hover": { "value": "{color.action.ghost.fg-hover}" },
+      "border": { "value": "{color.border.none}" }
     }
   }
 }

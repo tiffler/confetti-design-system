@@ -2,11 +2,11 @@
   "shadow": {
     "none": { "value": "none" },
     "hard-ink": {
-      "value": "3px 3px 0px 0px {color.ink.600.value}",
+      "value": "3px 3px 0px 0px {color.ink.600}",
       "comment": "hard offset shadow — the sticker lift, no blur"
     },
     "hard-cream": {
-      "value": "3px 3px 0px 0px {color.cream.300.value}",
+      "value": "3px 3px 0px 0px {color.cream.300}",
       "comment": "dark-mode counterpart — light offset against dark surfaces"
     }
   },

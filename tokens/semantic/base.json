@@ -1,0 +1,84 @@
+{
+  "$comment": "Base semantic layer — roles that do NOT vary by mode or theme (type, space, radius, border width, control/icon sizes, motion). Emitted once under :root. Colour roles live in modes/ (neutrals) and themes/ (brand/accent); those combine via the [data-mode] / [data-theme] cascade.",
+  "font": {
+    "family": {
+      "display": { "value": "{font.family.fredoka}" },
+      "body": { "value": "{font.family.fredoka}" },
+      "label": { "value": "{font.family.mono}" }
+    },
+    "size": {
+      "$comment": "Heading ramp is a 1.25 modular scale rounded to the 4px grid: 48 / 40 / 32 / 24 / 20 / 16.",
+      "display": { "value": "{font.size.hero}", "comment": "hero only — fluid, sits above h1" },
+      "h1": { "value": "{font.size.48}" },
+      "h2": { "value": "{font.size.40}" },
+      "h3": { "value": "{font.size.32}" },
+      "h4": { "value": "{font.size.24}" },
+      "h5": { "value": "{font.size.20}" },
+      "h6": { "value": "{font.size.16}", "comment": "meets body size — weight and family carry the distinction" },
+      "body": { "value": "{font.size.16}", "comment": "16px — body primary" },
+      "body-secondary": { "value": "{font.size.14}", "comment": "14px — captions, meta, dense UI" },
+      "label": { "value": "{font.size.12}", "comment": "12px — mono eyebrows, uppercase" }
+    },
+    "weight": {
+      "display": { "value": "{font.weight.semibold}" },
+      "body": { "value": "{font.weight.medium}" },
+      "control": { "value": "{font.weight.bold}", "comment": "700 — button and control labels" },
+      "label": { "value": "{font.weight.bold}" }
+    },
+    "tracking": {
+      "display": { "value": "{font.tracking.tight}" },
+      "label": { "value": "{font.tracking.wide}" }
+    },
+    "leading": {
+      "display": { "value": "{font.leading.none}" },
+      "heading": { "value": "{font.leading.snug}" },
+      "body": { "value": "{font.leading.normal}" }
+    }
+  },
+  "radius": {
+    "control": { "value": "{radius.full}" },
+    "container": { "value": "{radius.md}" },
+    "chip": { "value": "{radius.xs}" },
+    "avatar": { "value": "{radius.circle}" }
+  },
+  "border": {
+    "width": {
+      "default": { "value": "{border.width.sticker}" }
+    }
+  },
+  "size": {
+    "control": { "value": "{space.12}", "comment": "48px — height of a tappable control." },
+    "icon": {
+      "$comment": "Icons sit on the type scale, not the space scale.",
+      "sm": { "value": "{font.size.16}", "comment": "16px — inline with body and control labels" },
+      "md": { "value": "{font.size.20}", "comment": "20px — standalone UI affordances" },
+      "lg": { "value": "{font.size.24}", "comment": "24px — feature and empty-state icons" }
+    }
+  },
+  "space": {
+    "$comment": "Two families over one primitive ramp: COMPONENT (inset-* / stack / inline) and LAYOUT (layout-*).",
+    "none": { "value": "{space.0}", "comment": "0 — no space / reset" },
+    "inset-xs": { "value": "{space.1}", "comment": "4px — tightest inset, chips and dots" },
+    "inline": { "value": "{space.2}", "comment": "8px — gap between inline siblings" },
+    "inset-tight": { "value": "{space.2}", "comment": "8px — compact control padding" },
+    "inset-sm": { "value": "{space.3}", "comment": "12px — snug inset / tight stack gap" },
+    "stack": { "value": "{space.4}", "comment": "16px — vertical rhythm inside a container" },
+    "inset-lg": { "value": "{space.5}", "comment": "20px — roomy inset (e.g. stat cards)" },
+    "inset": { "value": "{space.6}", "comment": "24px — standard container padding" },
+    "stack-lg": { "value": "{space.8}", "comment": "32px — gap between larger blocks" },
+    "layout-sm": { "value": "{space.10}", "comment": "40px — small layout / section gap" },
+    "layout": { "value": "{space.12}", "comment": "48px — page / card gutter" },
+    "layout-lg": { "value": "{space.16}", "comment": "64px — space between major sections" },
+    "layout-xl": { "value": "{space.20}", "comment": "80px — largest section rhythm" }
+  },
+  "motion": {
+    "$comment": "Leaf names differ from the primitives they alias to avoid a flat-namespace collision.",
+    "transform": {
+      "lift": { "value": "{motion.lift}", "comment": "how far an interactive surface rises on hover" },
+      "rest": { "value": "{motion.rest}" }
+    },
+    "tilt": { "max": { "value": "{motion.tilt.subtle}", "comment": "outer bound of the hand-placed sticker angle" } },
+    "duration": { "interaction": { "value": "{motion.duration.base}", "comment": "hover and focus transitions" } },
+    "easing": { "interaction": { "value": "{motion.easing.standard}" } }
+  }
+}
