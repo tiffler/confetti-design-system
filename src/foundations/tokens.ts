@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { addons } from '@storybook/preview-api';
+import { addons } from 'storybook/preview-api';
 import tokenIndex from '../../build/portfolio/tokens.json';
 import type { Theme, Mode } from '../theme/ThemeProvider';
 
