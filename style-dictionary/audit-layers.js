@@ -35,7 +35,11 @@ const files = [];
 const layerOf = (file) => {
   const rel = relative(TOKENS, file);
   if (rel.startsWith('primitives')) return 'primitive';
-  if (rel.startsWith('semantic')) return 'semantic';
+  // The semantic layer is split across three independent-axis inputs plus the
+  // per-pairing accessibility exceptions — all obey the same "reference the
+  // layer below, no literals" contract.
+  if (rel.startsWith('semantic') || rel.startsWith('modes') || rel.startsWith('themes') || rel.startsWith('exceptions'))
+    return 'semantic';
   if (rel.startsWith('component')) return 'component';
   return 'unknown';
 };

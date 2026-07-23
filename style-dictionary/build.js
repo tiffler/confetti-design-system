@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { readdirSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { readdirSync, mkdirSync, writeFileSync, rmSync, readFileSync } from 'node:fs';
 import StyleDictionary from 'style-dictionary';
 
 import { registerTransforms } from './transforms/index.js';
@@ -11,34 +11,29 @@ const tokensDir = join(root, 'tokens');
 const outDir = join(root, 'build', 'portfolio');
 const tmpDir = join(root, 'build', '.tmp');
 
-const MODES = ['light', 'dark'];
-
 registerTransforms();
 
-const schema = loadSchema(join(tokensDir, 'semantic/portfolio/_schema.json'));
-const baseTheme = schema.baseTheme;
+const schema = loadSchema(join(tokensDir, '_schema.json'));
 
-const themes = readdirSync(join(tokensDir, 'semantic/portfolio/themes'), {
-  withFileTypes: true,
-})
-  .filter((entry) => entry.isDirectory())
-  .map((entry) => entry.name);
+const glob = (p) => join(tokensDir, p);
+const listNames = (dir) =>
+  readdirSync(join(tokensDir, dir))
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => f.replace(/\.json$/, ''));
 
-if (!themes.includes(baseTheme)) {
-  throw new Error(`Base theme "${baseTheme}" from _schema.json has no folder under themes/`);
-}
+const modes = listNames('modes').sort(); // dark, high-contrast, light
+const themes = listNames('themes').sort(); // confetti, ocean
+const exceptionFiles = readdirSync(join(tokensDir, 'exceptions')).filter((f) => f.endsWith('.json'));
 
-const primitiveSources = [join(tokensDir, 'primitives/*.json')];
-const componentSources = [join(tokensDir, 'component/portfolio/*.json')];
+// exceptions are named "<theme>.<mode>.json"
+const exceptionsFor = (theme, mode) =>
+  exceptionFiles.filter((f) => f === `${theme}.${mode}.json`).map((f) => glob(`exceptions/${f}`));
 
-const semanticSources = (theme, mode) => {
-  const file = (s, m) => join(tokensDir, `semantic/portfolio/themes/${s}/${m}.json`);
-  // Base theme's light file is the floor every theme+mode deep-merges onto, which
-  // is what makes typography/radii inheritance work without duplication.
-  const layers = [file(baseTheme, 'light')];
-  if (!(theme === baseTheme && mode === 'light')) layers.push(file(theme, mode));
-  return layers;
-};
+const primitiveSrc = glob('primitives/*.json');
+const baseSrc = glob('semantic/base.json');
+const modeSrc = (m) => glob(`modes/${m}.json`);
+const themeSrc = (t) => glob(`themes/${t}.json`);
+const componentSrc = glob('component/portfolio/*.json');
 
 /** Runs one Style Dictionary pass and returns the generated file contents. */
 async function build({ name, source, filter, format }) {
@@ -47,15 +42,10 @@ async function build({ name, source, filter, format }) {
     source,
     log: { warnings: 'disabled', verbosity: 'silent' },
     platforms: {
-      css: {
-        transformGroup: 'css',
-        buildPath: `${tmpDir}/`,
-        files: [{ destination, filter, format }],
-      },
+      css: { transformGroup: 'css', buildPath: `${tmpDir}/`, files: [{ destination, filter, format }] },
     },
   });
   await sd.buildPlatform('css');
-  const { readFileSync } = await import('node:fs');
   return readFileSync(join(tmpDir, destination), 'utf8');
 }
 
@@ -64,50 +54,81 @@ mkdirSync(tmpDir, { recursive: true });
 mkdirSync(outDir, { recursive: true });
 
 const banner = `/**
- * GENERATED FILE — do not edit.
- * Source: tokens/  •  Build: npm run tokens
+ * GENERATED FILE — do not edit.  Source: tokens/  •  Build: npm run tokens
  *
- * Primitives are emitted once under :root. Semantic and component tokens are
- * emitted per theme+mode under [data-theme][data-mode], so components consume a
- * single stable custom-property name regardless of the active theme.
+ * Independent axes, combined by the CSS cascade — NOT a per-combination matrix.
+ *   :root                                    primitives + base semantic; component tokens as var() refs
+ *   [data-mode="light|dark|high-contrast"]   neutrals — surfaces, text, borders, focus ring, shadow
+ *   [data-theme="confetti|ocean|…"]          brand + accent
+ *   [data-theme][data-mode]                  documented accessibility exceptions only
+ *
+ * Set both attributes on the root element. Component tokens are var() references, so they
+ * resolve against whatever mode+theme is active — the two axes never multiply into a matrix.
  */\n\n`;
 
 const blocks = [];
-const tokenIndex = {};
 
-// --- Primitives: theme-independent, emitted once -----------------------------
-const primitiveDecls = await build({
-  name: 'primitives',
-  source: primitiveSources,
-  filter: 'confetti/primitives',
+// :root — primitives + base semantic (resolved literals) --------------------------
+const rootLiteral = await build({
+  name: 'root',
+  source: [primitiveSrc, baseSrc],
+  filter: 'confetti/all',
   format: 'confetti/css-declarations',
 });
-blocks.push(`:root {\n${primitiveDecls}\n}`);
+blocks.push(`:root {\n${rootLiteral}\n}`);
 
-// --- Semantic + component, per theme and mode ---------------------------------
+// :root — component tokens as var() references (compose the active mode+theme) -----
+const componentRefs = await build({
+  name: 'component',
+  source: [primitiveSrc, baseSrc, modeSrc(schema.baseMode), themeSrc(schema.baseTheme), componentSrc],
+  filter: 'confetti/component',
+  format: 'confetti/css-declarations-refs',
+});
+blocks.push(`/* Component tokens — var() references that compose the active mode + theme. */\n:root {\n${componentRefs}\n}`);
+
+// [data-mode] blocks — neutrals ---------------------------------------------------
+for (const mode of modes) {
+  const decls = await build({
+    name: `mode-${mode}`,
+    source: [primitiveSrc, baseSrc, modeSrc(mode)],
+    filter: 'confetti/mode',
+    format: 'confetti/css-declarations',
+  });
+  blocks.push(`[data-mode="${mode}"] {\n${decls}\n}`);
+}
+
+// [data-theme] blocks — brand + accent --------------------------------------------
 for (const theme of themes) {
-  for (const mode of MODES) {
-    const source = [...primitiveSources, ...semanticSources(theme, mode), ...componentSources];
+  const decls = await build({
+    name: `theme-${theme}`,
+    source: [primitiveSrc, themeSrc(theme)],
+    filter: 'confetti/theme',
+    format: 'confetti/css-declarations',
+  });
+  blocks.push(`[data-theme="${theme}"] {\n${decls}\n}`);
+}
 
+// [data-theme][data-mode] blocks — accessibility exceptions only -------------------
+for (const file of exceptionFiles) {
+  const [theme, mode] = file.replace(/\.json$/, '').split('.');
+  const decls = await build({
+    name: `exc-${theme}-${mode}`,
+    source: [primitiveSrc, glob(`exceptions/${file}`)],
+    filter: 'confetti/exception',
+    format: 'confetti/css-declarations',
+  });
+  blocks.push(`/* Accessibility exception — see tokens/exceptions/${file} */\n[data-theme="${theme}"][data-mode="${mode}"] {\n${decls}\n}`);
+}
+
+// --- Resolved index, per theme×mode (for Storybook / DTCG / Tailwind + validation) --
+const tokenIndex = {};
+for (const theme of themes) {
+  for (const mode of modes) {
+    const source = [primitiveSrc, baseSrc, modeSrc(mode), themeSrc(theme), ...exceptionsFor(theme, mode), componentSrc];
     const flat = JSON.parse(
-      await build({
-        name: `${theme}-${mode}-index`,
-        source,
-        filter: 'confetti/all',
-        format: 'confetti/json-flat',
-      })
+      await build({ name: `idx-${theme}-${mode}`, source, filter: 'confetti/all', format: 'confetti/json-flat' })
     );
-
     validateTheme({ schema, theme, mode, builtNames: new Set(Object.keys(flat)) });
-
-    const decls = await build({
-      name: `${theme}-${mode}`,
-      source,
-      filter: 'confetti/themed',
-      format: 'confetti/css-declarations',
-    });
-
-    blocks.push(`[data-theme="${theme}"][data-mode="${mode}"] {\n${decls}\n}`);
     tokenIndex[`${theme}.${mode}`] = flat;
   }
 }
@@ -123,7 +144,7 @@ const themeFrom = (prefix, flat) =>
       .map((name) => [name.slice(prefix.length), `var(--${name})`])
   );
 
-const base = tokenIndex[`${baseTheme}.light`];
+const base = tokenIndex[`${schema.baseTheme}.${schema.baseMode}`];
 const tailwindTheme = {
   colors: themeFrom('color-', base),
   spacing: themeFrom('space-', base),
@@ -146,16 +167,15 @@ writeFileSync(
 );
 
 // --- W3C DTCG export ---------------------------------------------------------
-// The interchange format Figma, Tokens Studio and most importers read. Values are
-// fully resolved rather than aliased: a consumer that cannot run this build should
-// still receive exact values instead of inferring them from the CSS.
+// Fully-resolved values per theme+mode, so an importer that cannot run this build
+// still receives exact values rather than inferring them from the CSS.
 
-/** Maps a flat token name to a DTCG `$type`. */
 function dtcgType(name) {
   if (name.startsWith('color-')) return 'color';
   if (name.startsWith('space-') || name.startsWith('size-')) return 'dimension';
   if (name.startsWith('radius-')) return 'dimension';
   if (name.startsWith('border-width-')) return 'dimension';
+  if (name.startsWith('focus-ring-width') || name.startsWith('focus-ring-offset')) return 'dimension';
   if (name.startsWith('font-family-')) return 'fontFamily';
   if (name.startsWith('font-size-')) return 'dimension';
   if (name.startsWith('font-weight-')) return 'fontWeight';
@@ -166,7 +186,6 @@ function dtcgType(name) {
   return 'other';
 }
 
-/** Rebuilds `color-surface-page` into nested { color: { surface: { page: {...} } } }. */
 function nest(flat) {
   const tree = {};
   for (const [name, token] of Object.entries(flat)) {
@@ -189,10 +208,8 @@ function nest(flat) {
 
 const dtcg = {
   $description:
-    'Confetti design tokens, W3C DTCG format. One group per theme+mode; values are fully resolved.',
-  ...Object.fromEntries(
-    Object.entries(tokenIndex).map(([key, flat]) => [key.replace('.', '-'), nest(flat)])
-  ),
+    'Confetti design tokens, W3C DTCG format. One group per theme+mode; values are fully resolved (accessibility exceptions applied).',
+  ...Object.fromEntries(Object.entries(tokenIndex).map(([key, flat]) => [key.replace('.', '-'), nest(flat)])),
 };
 
 writeFileSync(join(outDir, 'tokens.dtcg.json'), JSON.stringify(dtcg, null, 2) + '\n');
@@ -200,7 +217,9 @@ writeFileSync(join(outDir, 'tokens.dtcg.json'), JSON.stringify(dtcg, null, 2) + 
 rmSync(tmpDir, { recursive: true, force: true });
 
 console.log(
-  `✓ tokens built — ${themes.length} theme(s) × ${MODES.length} modes` +
-    `\n  ${themes.map((s) => `${s} (${MODES.join(', ')})`).join('\n  ')}` +
+  `✓ tokens built — ${themes.length} theme(s) × ${modes.length} modes, independent axes` +
+    `\n  themes: ${themes.join(', ')}` +
+    `\n  modes:  ${modes.join(', ')}` +
+    `\n  exceptions: ${exceptionFiles.length} (${exceptionFiles.map((f) => f.replace(/\.json$/, '')).join(', ') || 'none'})` +
     `\n  → build/portfolio/tokens.css, tokens.json, tokens.dtcg.json, tailwind.theme.js`
 );

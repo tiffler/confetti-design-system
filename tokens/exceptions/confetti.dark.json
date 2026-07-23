@@ -1,0 +1,7 @@
+{
+  "$comment": "ACCESSIBILITY EXCEPTION — theme=confetti, mode=dark. Emitted under [data-theme='confetti'][data-mode='dark'] (specificity 0,2,0 — beats the theme's base). The brand red (#c40000) reads at only 2.72:1 as TEXT on the dark surface (#211b12), below WCAG AA 4.5:1. This lifts brand-as-text (text.accent + the ghost hover) to red.300 (#f04b3a → 4.69:1). NOTE: the primary BUTTON is not overridden — its white label on the deep-red fill is 6.27:1, which already passes, so the fill stays #c40000.",
+  "color": {
+    "text": { "accent": { "value": "{color.red.300}" } },
+    "action": { "ghost": { "fg-hover": { "value": "{color.red.300}" } } }
+  }
+}

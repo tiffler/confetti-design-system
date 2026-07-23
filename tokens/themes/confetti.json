@@ -1,0 +1,19 @@
+{
+  "$comment": "THEME = confetti (the flagship). Brand/accent only: the red brand and the four bold decorative hues. Neutrals (surfaces/text/borders + subtle tint-surfaces) come from the active mode via [data-mode]. Where the brand red fails contrast in a given mode, an explicit [data-theme='confetti'][data-mode='…'] override lives in tokens/exceptions/ — never edit the base value to fix one mode. Emitted under [data-theme='confetti'].",
+  "color": {
+    "text": { "accent": { "value": "{color.red.500}" } },
+    "action": {
+      "primary": {
+        "bg": { "value": "{color.red.500}" },
+        "fg": { "value": "{color.base.white}" }
+      },
+      "ghost": { "fg-hover": { "value": "{color.red.500}" } }
+    },
+    "accent": {
+      "purple": { "bold": { "value": "{color.purple.400}" } },
+      "teal": { "bold": { "value": "{color.teal.400}" } },
+      "orange": { "bold": { "value": "{color.orange.400}" } },
+      "pink": { "bold": { "value": "{color.pink.400}" } }
+    }
+  }
+}

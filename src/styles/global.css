@@ -1,14 +1,23 @@
 /* Generated token layer first — everything below resolves against it. */
 @import '../../build/portfolio/tokens.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind v4: one import replaces the old base/components/utilities triple.
+   `@config` loads the generated JS theme (token → utility mapping) so classes
+   like `bg-surface-page` still resolve against the active theme+mode. */
+@import 'tailwindcss';
+@config '../../tailwind.config.js';
 
 /* Fallback so a page renders themed before a ThemeProvider mounts. */
 :root:not([data-theme]) {
   --color-surface-page: #ede4d3;
   --color-text-primary: #2e2618;
+}
+
+/* Global keyboard focus ring — mode-driven (thickens + goes solid black in
+   high-contrast). Components may override with a tighter rule. */
+:focus-visible {
+  outline: var(--focus-ring-width, 2px) solid var(--focus-ring-color, currentColor);
+  outline-offset: var(--focus-ring-offset, 2px);
 }
 
 body {

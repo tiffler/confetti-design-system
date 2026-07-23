@@ -1,0 +1,44 @@
+{
+  "$comment": "MODE = light. Neutrals only: surfaces, text, borders, the decorative accent tint-surfaces (subtle) + their foregrounds, the hover shadow, and the focus ring. Brand/accent-bold colours come from the active theme via [data-theme]. Emitted under [data-mode='light'].",
+  "color": {
+    "surface": {
+      "page": { "value": "{color.cream.300}" },
+      "raised": { "value": "{color.cream.100}" },
+      "panel": { "value": "{color.cream.200}" },
+      "card": { "value": "{color.base.white}" }
+    },
+    "text": {
+      "primary": { "value": "{color.ink.600}" },
+      "muted": { "value": "{color.ink.300}" },
+      "inverse": { "value": "{color.base.white}" }
+    },
+    "border": {
+      "default": { "value": "{color.ink.600}" },
+      "subtle": { "value": "{color.ink.a12}" },
+      "none": { "value": "{color.base.transparent}" }
+    },
+    "action": {
+      "secondary": {
+        "bg": { "value": "{color.cream.300}" },
+        "fg": { "value": "{color.ink.600}" }
+      },
+      "ghost": { "bg": { "value": "{color.base.transparent}" }, "fg": { "value": "{color.ink.600}" } }
+    },
+    "accent": {
+      "purple": { "subtle": { "value": "{color.purple.100}" } },
+      "teal": { "subtle": { "value": "{color.teal.100}" } },
+      "orange": { "subtle": { "value": "{color.orange.100}" } },
+      "pink": { "subtle": { "value": "{color.pink.100}" } },
+      "on-bold": { "value": "{color.ink.600}", "comment": "ink reads on the light bold hues" },
+      "on-subtle": { "value": "{color.ink.600}", "comment": "ink reads on the pale subtle tints" }
+    }
+  },
+  "shadow": { "lift": { "value": "3px 3px 0px 0px {color.ink.600}" } },
+  "focus": {
+    "ring": {
+      "width": { "value": "{border.width.sticker}", "comment": "2px" },
+      "color": { "value": "{color.ink.600}" },
+      "offset": { "value": "{border.width.sticker}", "comment": "2px" }
+    }
+  }
+}

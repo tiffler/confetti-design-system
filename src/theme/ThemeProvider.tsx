@@ -9,15 +9,16 @@ import {
 } from 'react';
 
 /**
- * Theme and mode are independent axes. Confetti is the only theme today; the
- * union is what future themes widen, and nothing else in the system needs to
- * change when they do.
+ * Theme and mode are independent axes, combined by the CSS cascade at runtime
+ * (data-theme + data-mode) — never a per-combination matrix. THEME governs
+ * brand/accent; MODE governs neutrals + focus. Widening either union is a token
+ * file plus one entry here; nothing else in the system needs to change.
  */
-export type Theme = 'confetti';
-export type Mode = 'light' | 'dark';
+export type Theme = 'confetti' | 'ocean';
+export type Mode = 'light' | 'dark' | 'high-contrast';
 
-export const THEMES: Theme[] = ['confetti'];
-export const MODES: Mode[] = ['light', 'dark'];
+export const THEMES: Theme[] = ['confetti', 'ocean'];
+export const MODES: Mode[] = ['light', 'dark', 'high-contrast'];
 
 type ThemeContextValue = {
   theme: Theme;
@@ -62,7 +63,7 @@ export function ThemeProvider({
   }, [theme, mode, target]);
 
   const toggleMode = useCallback(
-    () => setMode((current) => (current === 'light' ? 'dark' : 'light')),
+    () => setMode((current) => MODES[(MODES.indexOf(current) + 1) % MODES.length]),
     []
   );
 

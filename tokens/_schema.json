@@ -1,0 +1,38 @@
+{
+  "$comment": "Required semantic vocabulary, validated at build time (style-dictionary/validate-schema.js) against every theme×mode combination's resolved output. NEUTRAL roles must be supplied by each modes/*.json; BRAND roles by each themes/*.json. Because the two axes combine via cascade, a single required list covers the union — if any mode or theme omits a role, the combined build for that pairing is missing it and the build fails.",
+  "baseTheme": "confetti",
+  "baseMode": "light",
+  "required": {
+    "color": [
+      "surface.page",
+      "surface.raised",
+      "surface.panel",
+      "surface.card",
+      "text.primary",
+      "text.muted",
+      "text.inverse",
+      "text.accent",
+      "border.default",
+      "border.subtle",
+      "border.none",
+      "action.primary.bg",
+      "action.primary.fg",
+      "action.secondary.bg",
+      "action.secondary.fg",
+      "action.ghost.fg",
+      "action.ghost.fg-hover",
+      "accent.purple.bold",
+      "accent.teal.bold",
+      "accent.orange.bold",
+      "accent.pink.bold",
+      "accent.purple.subtle",
+      "accent.teal.subtle",
+      "accent.orange.subtle",
+      "accent.pink.subtle",
+      "accent.on-bold",
+      "accent.on-subtle"
+    ],
+    "shadow": ["lift"],
+    "focus": ["ring.width", "ring.color", "ring.offset"]
+  }
+}

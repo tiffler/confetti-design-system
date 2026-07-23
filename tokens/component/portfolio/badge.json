@@ -1,27 +1,27 @@
 {
   "badge": {
-    "radius": { "value": "{radius.control.value}" },
-    "border-width": { "value": "{border.width.default.value}" },
-    "border-color": { "value": "{color.border.default.value}" },
-    "font-family": { "value": "{font.family.label.value}" },
-    "font-size": { "value": "{font.size.label.value}" },
-    "font-weight": { "value": "{font.weight.label.value}" },
-    "tracking": { "value": "{font.tracking.label.value}" },
-    "padding-x": { "value": "{space.inset-tight.value}" },
-    "padding-y": { "value": "{space.inset-xs.value}" },
-    "fg": { "value": "{color.accent.on-bold.value}" },
-    "fg-subtle": { "value": "{color.accent.on-subtle.value}" },
+    "radius": { "value": "{radius.control}" },
+    "border-width": { "value": "{border.width.default}" },
+    "border-color": { "value": "{color.border.default}" },
+    "font-family": { "value": "{font.family.label}" },
+    "font-size": { "value": "{font.size.label}" },
+    "font-weight": { "value": "{font.weight.label}" },
+    "tracking": { "value": "{font.tracking.label}" },
+    "padding-x": { "value": "{space.inset-tight}" },
+    "padding-y": { "value": "{space.inset-xs}" },
+    "fg": { "value": "{color.accent.on-bold}" },
+    "fg-subtle": { "value": "{color.accent.on-subtle}" },
     "bg": {
-      "purple": { "value": "{color.accent.purple.bold.value}" },
-      "teal": { "value": "{color.accent.teal.bold.value}" },
-      "orange": { "value": "{color.accent.orange.bold.value}" },
-      "pink": { "value": "{color.accent.pink.bold.value}" }
+      "purple": { "value": "{color.accent.purple.bold}" },
+      "teal": { "value": "{color.accent.teal.bold}" },
+      "orange": { "value": "{color.accent.orange.bold}" },
+      "pink": { "value": "{color.accent.pink.bold}" }
     },
     "bg-subtle": {
-      "purple": { "value": "{color.accent.purple.subtle.value}" },
-      "teal": { "value": "{color.accent.teal.subtle.value}" },
-      "orange": { "value": "{color.accent.orange.subtle.value}" },
-      "pink": { "value": "{color.accent.pink.subtle.value}" }
+      "purple": { "value": "{color.accent.purple.subtle}" },
+      "teal": { "value": "{color.accent.teal.subtle}" },
+      "orange": { "value": "{color.accent.orange.subtle}" },
+      "pink": { "value": "{color.accent.pink.subtle}" }
     }
   }
 }

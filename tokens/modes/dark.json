@@ -1,0 +1,44 @@
+{
+  "$comment": "MODE = dark. Neutrals only. Subtle accent tints deepen (X.700) so the light foreground reads on them; the hover shadow repoints to cream (a dark shadow on a dark surface reads as nothing). Emitted under [data-mode='dark'].",
+  "color": {
+    "surface": {
+      "page": { "value": "{color.ink.800}" },
+      "raised": { "value": "{color.ink.700}" },
+      "panel": { "value": "{color.ink.500}" },
+      "card": { "value": "{color.ink.400}" }
+    },
+    "text": {
+      "primary": { "value": "{color.cream.300}" },
+      "muted": { "value": "{color.ink.200}" },
+      "inverse": { "value": "{color.ink.600}" }
+    },
+    "border": {
+      "default": { "value": "{color.cream.300}" },
+      "subtle": { "value": "{color.cream.a16}" },
+      "none": { "value": "{color.base.transparent}" }
+    },
+    "action": {
+      "secondary": {
+        "bg": { "value": "{color.ink.500}" },
+        "fg": { "value": "{color.cream.300}" }
+      },
+      "ghost": { "bg": { "value": "{color.base.transparent}" }, "fg": { "value": "{color.cream.300}" } }
+    },
+    "accent": {
+      "purple": { "subtle": { "value": "{color.purple.700}" } },
+      "teal": { "subtle": { "value": "{color.teal.700}" } },
+      "orange": { "subtle": { "value": "{color.orange.700}" } },
+      "pink": { "subtle": { "value": "{color.pink.700}" } },
+      "on-bold": { "value": "{color.ink.600}", "comment": "bold hues stay light in dark mode, so ink still reads" },
+      "on-subtle": { "value": "{color.cream.300}", "comment": "subtle tints are deep in dark mode — needs the light foreground" }
+    }
+  },
+  "shadow": { "lift": { "value": "3px 3px 0px 0px {color.cream.300}" } },
+  "focus": {
+    "ring": {
+      "width": { "value": "{border.width.sticker}", "comment": "2px" },
+      "color": { "value": "{color.cream.300}" },
+      "offset": { "value": "{border.width.sticker}", "comment": "2px" }
+    }
+  }
+}
