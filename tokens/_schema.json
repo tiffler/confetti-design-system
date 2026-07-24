@@ -1,5 +1,5 @@
 {
-  "$comment": "Required semantic vocabulary, validated at build time (style-dictionary/validate-schema.js) against every theme×mode combination's resolved output. NEUTRAL roles must be supplied by each modes/*.json; BRAND roles by each themes/*.json. Because the two axes combine via cascade, a single required list covers the union — if any mode or theme omits a role, the combined build for that pairing is missing it and the build fails.",
+  "$comment": "Required semantic vocabulary, validated at build time (style-dictionary/validate-schema.js) against every theme×mode combination's resolved output. NEUTRAL roles are supplied by each modes/*.json; BRAND roles resolve through the wiring (semantic/theme-roles.json) from each theme's brand-kit inputs (themes/*.json). Because the axes combine via cascade, a single required list covers the union — if any mode omits a neutral, or a theme omits a brand-kit input a wired role needs, the combined build for that pairing is missing the role and the build fails.",
   "baseTheme": "confetti",
   "baseMode": "light",
   "required": {

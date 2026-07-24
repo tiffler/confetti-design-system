@@ -12,8 +12,9 @@
     "padding-x": { "value": "{space.inset}" },
     "padding-y": { "value": "{space.inset-tight}" },
     "gap": { "value": "{space.inline}" },
-    "shadow-hover": { "value": "{shadow.lift}" },
-    "transform-hover": { "value": "{motion.transform.lift}" },
+    "shadow-hover": { "value": "{shadow.button-lift}" },
+    "transform-hover": { "value": "{motion.button-lift}" },
+    "hover-brightness": { "value": "{effect.button-hover-brightness}" },
     "transition-duration": { "value": "{motion.duration.interaction}" },
     "transition-easing": { "value": "{motion.easing.interaction}" },
     "primary": {

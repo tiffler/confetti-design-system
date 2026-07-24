@@ -23,14 +23,16 @@ const listNames = (dir) =>
 
 const modes = listNames('modes').sort(); // dark, high-contrast, light
 const themes = listNames('themes').sort(); // confetti, ocean
-const exceptionFiles = readdirSync(join(tokensDir, 'exceptions')).filter((f) => f.endsWith('.json'));
+const overrideFiles = readdirSync(join(tokensDir, 'overrides')).filter((f) => f.endsWith('.json'));
 
-// exceptions are named "<theme>.<mode>.json"
-const exceptionsFor = (theme, mode) =>
-  exceptionFiles.filter((f) => f === `${theme}.${mode}.json`).map((f) => glob(`exceptions/${f}`));
+// overrides are named "<theme>.<mode>.json" — a theme's own neutrals for that mode
+// and/or a documented accessibility lift.
+const overridesFor = (theme, mode) =>
+  overrideFiles.filter((f) => f === `${theme}.${mode}.json`).map((f) => glob(`overrides/${f}`));
 
 const primitiveSrc = glob('primitives/*.json');
 const baseSrc = glob('semantic/base.json');
+const wiringSrc = glob('semantic/theme-roles.json');
 const modeSrc = (m) => glob(`modes/${m}.json`);
 const themeSrc = (t) => glob(`themes/${t}.json`);
 const componentSrc = glob('component/portfolio/*.json');
@@ -57,13 +59,18 @@ const banner = `/**
  * GENERATED FILE — do not edit.  Source: tokens/  •  Build: npm run tokens
  *
  * Independent axes, combined by the CSS cascade — NOT a per-combination matrix.
- *   :root                                    primitives + base semantic; component tokens as var() refs
- *   [data-mode="light|dark|high-contrast"]   neutrals — surfaces, text, borders, focus ring, shadow
- *   [data-theme="confetti|ocean|…"]          brand + accent
- *   [data-theme][data-mode]                  documented accessibility exceptions only
+ *   :root                          primitives + base semantic; theme wiring + component tokens as var() refs
+ *   [data-mode="light|dark"]       base neutrals — surfaces, text, borders, focus ring, shadow
+ *   [data-theme="confetti|adventure|…"]  brand-kit inputs (brand, accents, shape, fonts)
+ *   [data-theme][data-mode]        a theme's own neutrals + documented a11y lifts (tokens/overrides/)
  *
- * Set both attributes on the root element. Component tokens are var() references, so they
- * resolve against whatever mode+theme is active — the two axes never multiply into a matrix.
+ * THEMING: the :root wiring binds every themeable role to a brand-kit input (see
+ * tokens/themes/confetti.json). A downstream demo re-skins the system by setting only
+ * those inputs in its own [data-theme="<name>"] block — optionally per mode with an
+ * added [data-theme="<name>"][data-mode="dark"] block. No changes to Confetti needed.
+ *
+ * Set both attributes on the root element. Component + wiring tokens are var() references,
+ * so they resolve against whatever mode+theme is active — the axes never multiply into a matrix.
  */\n\n`;
 
 const blocks = [];
@@ -77,10 +84,21 @@ const rootLiteral = await build({
 });
 blocks.push(`:root {\n${rootLiteral}\n}`);
 
+// :root — theme wiring: themeable roles as var() references to the brand-kit inputs.
+// Emitted once (theme-independent) so overriding an input in a [data-theme] block
+// repoints every role via the cascade — the mechanism behind project-level theming.
+const wiringRefs = await build({
+  name: 'wiring',
+  source: [primitiveSrc, baseSrc, themeSrc(schema.baseTheme), wiringSrc],
+  filter: 'confetti/wiring',
+  format: 'confetti/css-declarations-refs',
+});
+blocks.push(`/* Theme wiring — themeable roles as var() refs to the brand-kit inputs (tokens/themes/). */\n:root {\n${wiringRefs}\n}`);
+
 // :root — component tokens as var() references (compose the active mode+theme) -----
 const componentRefs = await build({
   name: 'component',
-  source: [primitiveSrc, baseSrc, modeSrc(schema.baseMode), themeSrc(schema.baseTheme), componentSrc],
+  source: [primitiveSrc, baseSrc, wiringSrc, modeSrc(schema.baseMode), themeSrc(schema.baseTheme), componentSrc],
   filter: 'confetti/component',
   format: 'confetti/css-declarations-refs',
 });
@@ -108,23 +126,23 @@ for (const theme of themes) {
   blocks.push(`[data-theme="${theme}"] {\n${decls}\n}`);
 }
 
-// [data-theme][data-mode] blocks — accessibility exceptions only -------------------
-for (const file of exceptionFiles) {
+// [data-theme][data-mode] blocks — a theme's own neutrals + documented a11y lifts ---
+for (const file of overrideFiles) {
   const [theme, mode] = file.replace(/\.json$/, '').split('.');
   const decls = await build({
-    name: `exc-${theme}-${mode}`,
-    source: [primitiveSrc, glob(`exceptions/${file}`)],
-    filter: 'confetti/exception',
+    name: `ovr-${theme}-${mode}`,
+    source: [primitiveSrc, glob(`overrides/${file}`)],
+    filter: 'confetti/override',
     format: 'confetti/css-declarations',
   });
-  blocks.push(`/* Accessibility exception — see tokens/exceptions/${file} */\n[data-theme="${theme}"][data-mode="${mode}"] {\n${decls}\n}`);
+  blocks.push(`/* Theme override (own neutrals / a11y lift) — see tokens/overrides/${file} */\n[data-theme="${theme}"][data-mode="${mode}"] {\n${decls}\n}`);
 }
 
 // --- Resolved index, per theme×mode (for Storybook / DTCG / Tailwind + validation) --
 const tokenIndex = {};
 for (const theme of themes) {
   for (const mode of modes) {
-    const source = [primitiveSrc, baseSrc, modeSrc(mode), themeSrc(theme), ...exceptionsFor(theme, mode), componentSrc];
+    const source = [primitiveSrc, baseSrc, wiringSrc, modeSrc(mode), themeSrc(theme), ...overridesFor(theme, mode), componentSrc];
     const flat = JSON.parse(
       await build({ name: `idx-${theme}-${mode}`, source, filter: 'confetti/all', format: 'confetti/json-flat' })
     );
@@ -220,6 +238,6 @@ console.log(
   `✓ tokens built — ${themes.length} theme(s) × ${modes.length} modes, independent axes` +
     `\n  themes: ${themes.join(', ')}` +
     `\n  modes:  ${modes.join(', ')}` +
-    `\n  exceptions: ${exceptionFiles.length} (${exceptionFiles.map((f) => f.replace(/\.json$/, '')).join(', ') || 'none'})` +
+    `\n  overrides: ${overrideFiles.length} (${overrideFiles.map((f) => f.replace(/\.json$/, '')).join(', ') || 'none'})` +
     `\n  → build/portfolio/tokens.css, tokens.json, tokens.dtcg.json, tailwind.theme.js`
 );

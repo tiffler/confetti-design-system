@@ -35,10 +35,17 @@ const files = [];
 const layerOf = (file) => {
   const rel = relative(TOKENS, file);
   if (rel.startsWith('primitives')) return 'primitive';
-  // The semantic layer is split across three independent-axis inputs plus the
-  // per-pairing accessibility exceptions — all obey the same "reference the
-  // layer below, no literals" contract.
-  if (rel.startsWith('semantic') || rel.startsWith('modes') || rel.startsWith('themes') || rel.startsWith('exceptions'))
+  // ONE semantic tier — every purpose-named token. It's split across a few files by
+  // WHAT VARIES: base (axis-independent), modes/ (per-mode neutrals), themes/ (the
+  // brand-kit inputs a theme sets), semantic/theme-roles.json (the wiring that binds
+  // roles to those inputs), overrides/ (a theme's own neutrals + a11y lifts). All obey
+  // the same contract: reference primitives or other semantic tokens, never a literal.
+  if (
+    rel.startsWith('semantic') ||
+    rel.startsWith('modes') ||
+    rel.startsWith('themes') ||
+    rel.startsWith('overrides')
+  )
     return 'semantic';
   if (rel.startsWith('component')) return 'component';
   return 'unknown';
@@ -106,7 +113,10 @@ for (const token of declarations) {
 
     const allowed = {
       primitive: ['primitive'],
-      semantic: ['primitive'],
+      // semantic references primitives, or OTHER semantic tokens — the wiring binds a
+      // role (action.primary.bg) to a brand-kit input (brand.primary); both are semantic.
+      // Style Dictionary fails the build on any reference cycle, so same-tier refs stay safe.
+      semantic: ['primitive', 'semantic'],
       component: ['semantic'],
     }[token.layer];
 
@@ -134,7 +144,9 @@ const counts = {
   component: uniquePaths('component').length,
 };
 
-console.log(`\nTokens: ${counts.primitive} primitive · ${counts.semantic} semantic · ${counts.component} component\n`);
+console.log(
+  `\nTokens: ${counts.primitive} primitive · ${counts.semantic} semantic · ${counts.component} component  (three tiers)\n`
+);
 
 const errors = problems.filter((p) => p.severity === 'error');
 if (errors.length) {

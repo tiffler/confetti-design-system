@@ -18,10 +18,11 @@ export function registerTransforms() {
 
   byDir('confetti/primitives', '/tokens/primitives/');
   byDir('confetti/base', '/tokens/semantic/base');
+  byDir('confetti/wiring', '/tokens/semantic/theme-roles');
   byDir('confetti/mode', '/tokens/modes/');
   byDir('confetti/theme', '/tokens/themes/');
   byDir('confetti/component', '/tokens/component/');
-  byDir('confetti/exception', '/tokens/exceptions/');
+  byDir('confetti/override', '/tokens/overrides/');
 
   StyleDictionary.registerFilter({ name: 'confetti/all', filter: real });
 
