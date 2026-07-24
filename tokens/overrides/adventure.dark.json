@@ -1,0 +1,52 @@
+{
+  "$comment": "Adventure DARK — its own neutral palette (deep forest surfaces, warm cream text, earthy deep tints) PLUS a brand lift. The pine brand is too dark to read AS TEXT on the forest surface, so text.accent + ghost hover lift to pine.300 (7.1:1); the primary BUTTON FILL keeps pine.500 (white label passes at 6.5:1), so it is not overridden. Emitted under [data-theme='adventure'][data-mode='dark'].",
+  "color": {
+    "surface": {
+      "page": { "value": "{color.forest.800}" },
+      "raised": { "value": "{color.forest.700}" },
+      "panel": { "value": "{color.forest.500}" },
+      "card": { "value": "{color.forest.400}" }
+    },
+    "text": {
+      "primary": { "value": "{color.sand.200}" },
+      "muted": { "value": "{color.sage.400}" },
+      "inverse": { "value": "{color.forest.700}" },
+      "accent": { "value": "{color.pine.300}" }
+    },
+    "border": {
+      "default": { "value": "{color.sand.200}" },
+      "subtle": { "value": "{color.forest.a16}" },
+      "none": { "value": "{color.base.transparent}" }
+    },
+    "action": {
+      "secondary": {
+        "bg": { "value": "{color.forest.500}" },
+        "fg": { "value": "{color.sand.200}" }
+      },
+      "ghost": {
+        "bg": { "value": "{color.base.transparent}" },
+        "fg": { "value": "{color.sand.200}" },
+        "fg-hover": { "value": "{color.pine.300}" }
+      }
+    },
+    "accent": {
+      "purple": { "subtle": { "value": "{color.berry.700}" } },
+      "teal": { "subtle": { "value": "{color.moss.700}" } },
+      "orange": { "subtle": { "value": "{color.clay.700}" } },
+      "pink": { "subtle": { "value": "{color.amber.700}" } },
+      "on-bold": { "value": "{color.bark.600}" },
+      "on-subtle": { "value": "{color.sand.200}" }
+    }
+  },
+  "shadow": {
+    "lift": { "value": "3px 3px 0px 0px {color.sand.200}", "comment": "cards still lift" },
+    "button-lift": { "value": "{shadow.none}", "comment": "buttons do NOT lift — they brighten on hover instead" }
+  },
+  "focus": {
+    "ring": {
+      "width": { "value": "{border.width.sticker}" },
+      "color": { "value": "{color.sand.200}" },
+      "offset": { "value": "{border.width.sticker}" }
+    }
+  }
+}

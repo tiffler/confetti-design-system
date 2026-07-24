@@ -1,0 +1,52 @@
+{
+  "$comment": "Neon LIGHT — light-lavender 'haze' surfaces, deep-purple 'grape' ink, neon accent tints. The bright magenta brand is too light to read AS TEXT on the pale surface, so text.accent + ghost hover DARKEN to neon.pink.600 (#c0106e, 5.1:1) — the opposite direction from Confetti/Adventure's dark lifts. The primary BUTTON keeps the bright magenta fill with a black label (6:1). Buttons GLOW magenta on hover (shadow.button-lift). Emitted under [data-theme='neon'][data-mode='light'].",
+  "color": {
+    "surface": {
+      "page": { "value": "{color.haze.300}" },
+      "raised": { "value": "{color.haze.100}" },
+      "panel": { "value": "{color.haze.200}" },
+      "card": { "value": "{color.haze.50}" }
+    },
+    "text": {
+      "primary": { "value": "{color.grape.900}" },
+      "muted": { "value": "{color.grape.500}" },
+      "inverse": { "value": "{color.haze.50}" },
+      "accent": { "value": "{color.neon.pink.600}" }
+    },
+    "border": {
+      "default": { "value": "{color.grape.900}" },
+      "subtle": { "value": "{color.haze.a12}" },
+      "none": { "value": "{color.base.transparent}" }
+    },
+    "action": {
+      "secondary": {
+        "bg": { "value": "{color.haze.200}" },
+        "fg": { "value": "{color.grape.900}" }
+      },
+      "ghost": {
+        "bg": { "value": "{color.base.transparent}" },
+        "fg": { "value": "{color.grape.900}" },
+        "fg-hover": { "value": "{color.neon.pink.600}" }
+      }
+    },
+    "accent": {
+      "purple": { "subtle": { "value": "{color.neon.purple.100}" } },
+      "teal": { "subtle": { "value": "{color.neon.cyan.100}" } },
+      "orange": { "subtle": { "value": "{color.neon.lime.100}" } },
+      "pink": { "subtle": { "value": "{color.neon.magenta.100}" } },
+      "on-bold": { "value": "{color.base.black}" },
+      "on-subtle": { "value": "{color.grape.900}" }
+    }
+  },
+  "shadow": {
+    "lift": { "value": "3px 3px 0px 0px {color.grape.900}", "comment": "cards keep a hard offset" },
+    "button-lift": { "value": "0 0 18px 0 {color.neon.pink.500}", "comment": "buttons GLOW magenta on hover" }
+  },
+  "focus": {
+    "ring": {
+      "width": { "value": "{border.width.sticker}" },
+      "color": { "value": "{color.grape.900}" },
+      "offset": { "value": "{border.width.sticker}" }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$comment": "Adventure LIGHT — its own neutral palette: sand paper surfaces, warm bark ink, earthy accent tints. Emitted under [data-theme='adventure'][data-mode='light'] (specificity 0,2,0 beats the base [data-mode='light'] so it fully replaces Confetti's cream neutrals). Brand (pine) reads at 4.7:1 as text on sand, so no brand lift is needed in light.",
+  "color": {
+    "surface": {
+      "page": { "value": "{color.sand.300}" },
+      "raised": { "value": "{color.sand.100}" },
+      "panel": { "value": "{color.sand.200}" },
+      "card": { "value": "{color.sand.50}" }
+    },
+    "text": {
+      "primary": { "value": "{color.bark.600}" },
+      "muted": { "value": "{color.bark.400}" },
+      "inverse": { "value": "{color.sand.50}" }
+    },
+    "border": {
+      "default": { "value": "{color.bark.600}" },
+      "subtle": { "value": "{color.sand.a12}" },
+      "none": { "value": "{color.base.transparent}" }
+    },
+    "action": {
+      "secondary": {
+        "bg": { "value": "{color.sand.300}" },
+        "fg": { "value": "{color.bark.600}" }
+      },
+      "ghost": { "bg": { "value": "{color.base.transparent}" }, "fg": { "value": "{color.bark.600}" } }
+    },
+    "accent": {
+      "purple": { "subtle": { "value": "{color.berry.100}" } },
+      "teal": { "subtle": { "value": "{color.moss.100}" } },
+      "orange": { "subtle": { "value": "{color.clay.100}" } },
+      "pink": { "subtle": { "value": "{color.amber.100}" } },
+      "on-bold": { "value": "{color.bark.600}" },
+      "on-subtle": { "value": "{color.bark.600}" }
+    }
+  },
+  "shadow": {
+    "lift": { "value": "3px 3px 0px 0px {color.bark.600}", "comment": "cards still lift" },
+    "button-lift": { "value": "{shadow.none}", "comment": "buttons do NOT lift — they brighten on hover instead" }
+  },
+  "focus": {
+    "ring": {
+      "width": { "value": "{border.width.sticker}" },
+      "color": { "value": "{color.bark.600}" },
+      "offset": { "value": "{border.width.sticker}" }
+    }
+  }
+}

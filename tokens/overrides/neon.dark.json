@@ -1,0 +1,50 @@
+{
+  "$comment": "Neon DARK — the hero synthwave look: deep-purple 'synth' surfaces, light-lavender 'glow' text, vivid neon accent tints. The bright magenta brand reads AS TEXT on the near-black surface (5:1), so no lift is needed here (text.accent + ghost hover come straight from the brand kit). The magenta button fill keeps its black label; buttons GLOW magenta on hover. Emitted under [data-theme='neon'][data-mode='dark'].",
+  "color": {
+    "surface": {
+      "page": { "value": "{color.synth.900}" },
+      "raised": { "value": "{color.synth.800}" },
+      "panel": { "value": "{color.synth.700}" },
+      "card": { "value": "{color.synth.600}" }
+    },
+    "text": {
+      "primary": { "value": "{color.glow.100}" },
+      "muted": { "value": "{color.glow.400}" },
+      "inverse": { "value": "{color.synth.700}" }
+    },
+    "border": {
+      "default": { "value": "{color.glow.100}" },
+      "subtle": { "value": "{color.synth.a16}" },
+      "none": { "value": "{color.base.transparent}" }
+    },
+    "action": {
+      "secondary": {
+        "bg": { "value": "{color.synth.700}" },
+        "fg": { "value": "{color.glow.100}" }
+      },
+      "ghost": {
+        "bg": { "value": "{color.base.transparent}" },
+        "fg": { "value": "{color.glow.100}" }
+      }
+    },
+    "accent": {
+      "purple": { "subtle": { "value": "{color.neon.purple.700}" } },
+      "teal": { "subtle": { "value": "{color.neon.cyan.700}" } },
+      "orange": { "subtle": { "value": "{color.neon.lime.700}" } },
+      "pink": { "subtle": { "value": "{color.neon.magenta.700}" } },
+      "on-bold": { "value": "{color.base.black}" },
+      "on-subtle": { "value": "{color.glow.100}" }
+    }
+  },
+  "shadow": {
+    "lift": { "value": "3px 3px 0px 0px {color.glow.100}", "comment": "cards keep a hard offset" },
+    "button-lift": { "value": "0 0 18px 0 {color.neon.pink.500}", "comment": "buttons GLOW magenta on hover" }
+  },
+  "focus": {
+    "ring": {
+      "width": { "value": "{border.width.sticker}" },
+      "color": { "value": "{color.glow.100}" },
+      "offset": { "value": "{border.width.sticker}" }
+    }
+  }
+}
