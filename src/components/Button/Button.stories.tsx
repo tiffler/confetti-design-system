@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { ArrowRight } from '@phosphor-icons/react';
 import { Button } from './Button';
+import { Icon } from '../Icon/Icon';
 
 const meta = {
   title: 'Components/Button',
@@ -64,4 +66,21 @@ export const AllVariants: Story = {
 
 export const Disabled: Story = {
   args: { disabled: true },
+};
+
+export const IconOnly: Story = {
+  name: 'Icon-only (labeled)',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'An icon-only button needs an accessible name — pass an `aria-label` to the `<Button>` (or a `label` to the `<Icon>`). In development, an icon-only button with neither logs a console warning so the a11y gap is caught early.',
+      },
+    },
+  },
+  render: () => (
+    <Button aria-label="Next case study">
+      <Icon icon={ArrowRight} size="md" />
+    </Button>
+  ),
 };
