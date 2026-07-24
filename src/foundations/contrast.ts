@@ -26,7 +26,7 @@ export function parseColor(input: string): Rgba | null {
 }
 
 /**
- * Flattens a translucent colour onto an opaque backdrop. Contrast is only meaningful
+ * Flattens a translucent color onto an opaque backdrop. Contrast is only meaningful
  * against what actually renders — `border-subtle` is rgba, so comparing its raw value
  * to a surface would report a ratio no one ever sees.
  */
@@ -38,7 +38,7 @@ export function flatten(fg: Rgba, bg: Rgb): Rgb {
 
 const hex2 = (n: number) => Math.round(Math.max(0, Math.min(255, n))).toString(16).padStart(2, '0');
 
-/** `#rrggbb`, or `#rrggbbaa` when the colour carries alpha. Null if unparseable. */
+/** `#rrggbb`, or `#rrggbbaa` when the color carries alpha. Null if unparseable. */
 export function toHex(value: string): string | null {
   const c = parseColor(value);
   if (!c) return null;
@@ -46,7 +46,7 @@ export function toHex(value: string): string | null {
   return c[3] >= 1 ? base : `${base}${hex2(c[3] * 255)}`;
 }
 
-/** `rgb(r, g, b)`, or `rgba(r, g, b, a)` when the colour carries alpha. */
+/** `rgb(r, g, b)`, or `rgba(r, g, b, a)` when the color carries alpha. */
 export function toRgbString(value: string): string | null {
   const c = parseColor(value);
   if (!c) return null;
@@ -72,11 +72,11 @@ export function luminanceOf(value: string, backdrop = '#ffffff'): number | null 
 }
 
 /**
- * WCAG contrast ratio, 1–21. Returns null if either colour can't be parsed.
+ * WCAG contrast ratio, 1–21. Returns null if either color can't be parsed.
  *
  * `backdrop` is what sits behind a translucent *background* — required, because a
  * background like `rgba(46, 38, 24, 0.12)` renders as 12% ink over paper, not as solid
- * ink. Ignoring the background's own alpha reports the ratio of a colour nobody sees:
+ * ink. Ignoring the background's own alpha reports the ratio of a color nobody sees:
  * `ink-a12` measured 14.9:1 against cream that way, while the pixels on screen are
  * closer to 1.3:1.
  */

@@ -1,7 +1,7 @@
 {
   "$comment": "THEME = confetti (the flagship, and the default theme baked into the build). This file is the BRAND-KIT CONTRACT: the handful of input tokens a theme sets. Everything visible derives from these via the wiring in tokens/semantic/theme-roles.json (roles → inputs, emitted once under :root as var() refs). A downstream demo creates a new theme by overriding ONLY these inputs in its own [data-theme='<name>'] block — no changes to Confetti. Inputs reference primitives; neutrals (surfaces/text/borders) come from the active mode. Emitted under [data-theme='confetti'].",
   "brand": {
-    "primary": { "value": "{color.red.500}", "comment": "brand colour — drives text.accent, primary action fill, ghost hover" },
+    "primary": { "value": "{color.red.500}", "comment": "brand color — drives text.accent, primary action fill, ghost hover" },
     "on-primary": { "value": "{color.base.white}", "comment": "foreground on the primary/brand fill" }
   },
   "accent": {

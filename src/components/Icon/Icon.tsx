@@ -16,7 +16,7 @@ export interface IconProps {
   icon: PhosphorIcon;
   /** Mirrors the type scale: sm 16px, md 20px, lg 24px. */
   size?: IconSize;
-  /** `inherit` takes the surrounding text colour, which is right inside buttons and links. */
+  /** `inherit` takes the surrounding text color, which is right inside buttons and links. */
   tone?: IconTone;
   /**
    * Overrides the system weight. Reach for this rarely — a mixed-weight icon set is the

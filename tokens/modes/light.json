@@ -1,5 +1,5 @@
 {
-  "$comment": "MODE = light. Neutrals only: surfaces, text, borders, the decorative accent tint-surfaces (subtle) + their foregrounds, the hover shadow, and the focus ring. Brand/accent-bold colours come from the active theme via [data-theme]. Emitted under [data-mode='light'].",
+  "$comment": "MODE = light. Neutrals only: surfaces, text, borders, the decorative accent tint-surfaces (subtle) + their foregrounds, the hover shadow, and the focus ring. Brand/accent-bold colors come from the active theme via [data-theme]. Emitted under [data-mode='light'].",
   "color": {
     "surface": {
       "page": { "value": "{color.cream.300}" },

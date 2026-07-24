@@ -20,7 +20,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Wraps [Phosphor](https://phosphoricons.com) rather than re-exporting it, so the system fixes the weight and routes sizing and colour through tokens. Pass the icon component itself — `icon={ArrowRight}` — so bundlers tree-shake to what you use.',
+          'Wraps [Phosphor](https://phosphoricons.com) rather than re-exporting it, so the system fixes the weight and routes sizing and color through tokens. Pass the icon component itself — `icon={ArrowRight}` — so bundlers tree-shake to what you use.',
       },
     },
   },

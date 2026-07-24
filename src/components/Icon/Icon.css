@@ -11,7 +11,7 @@
   height: var(--cf-icon-size);
 
   /* Optical alignment: a cap-height-matched icon sits slightly high on the text
-     baseline, because glyph boxes are centred on the em, not the cap. */
+     baseline, because glyph boxes are centered on the em, not the cap. */
   vertical-align: -0.125em;
 }
 

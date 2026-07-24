@@ -1,5 +1,5 @@
 {
-  "$comment": "THEME WIRING — maps the semantic ROLES that components consume to the theme's brand-kit INPUTS (tokens/themes/*.json). Emitted ONCE under :root as var() references (confetti/css-declarations-refs), so it is theme-independent: overriding an input in a [data-theme] block repoints every role here via the cascade. This is what lets a demo re-skin the whole system by setting only a handful of input values. Neutral colour roles are NOT here — they live on the mode axis (tokens/modes/). References point at theme-input tokens; the layer audit allows semantic → theme-input.",
+  "$comment": "THEME WIRING — maps the semantic ROLES that components consume to the theme's brand-kit INPUTS (tokens/themes/*.json). Emitted ONCE under :root as var() references (confetti/css-declarations-refs), so it is theme-independent: overriding an input in a [data-theme] block repoints every role here via the cascade. This is what lets a demo re-skin the whole system by setting only a handful of input values. Neutral color roles are NOT here — they live on the mode axis (tokens/modes/). References point at theme-input tokens; the layer audit allows semantic → theme-input.",
   "font": {
     "family": {
       "display": { "value": "{font.display}" },
