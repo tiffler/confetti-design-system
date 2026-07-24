@@ -1,0 +1,29 @@
+{
+  "$comment": "THEME = adventure (Forest & trail). Brand-kit inputs only: a pine-green brand and four earthy accent hues (moss / clay / amber / berry mapped onto the teal / orange / pink / purple slots). Adventure OWNS ITS NEUTRALS per mode — see tokens/overrides/adventure.{light,dark}.json (sand paper in light, deep forest in dark). Shape and fonts match Confetti's defaults for now. Every brand-kit input must be defined here (the wiring under :root references them). Emitted under [data-theme='adventure'].",
+  "brand": {
+    "primary": { "value": "{color.pine.500}", "comment": "pine green — reads as text on sand (4.7:1) and as button fill with white (6.5:1)" },
+    "on-primary": { "value": "{color.base.white}" }
+  },
+  "accent": {
+    "purple": { "value": "{color.berry.400}" },
+    "teal": { "value": "{color.moss.400}" },
+    "orange": { "value": "{color.clay.400}" },
+    "pink": { "value": "{color.amber.400}" }
+  },
+  "shape": {
+    "$comment": "Rounded-SQUARE controls (radius.lg = 12px), not Confetti's full pills.",
+    "control-radius": { "value": "{radius.lg}" },
+    "container-radius": { "value": "{radius.md}" },
+    "border-width": { "value": "{border.width.sticker}" }
+  },
+  "font": {
+    "display": { "value": "{font.family.fredoka}" },
+    "body": { "value": "{font.family.fredoka}" },
+    "label": { "value": "{font.family.mono}" }
+  },
+  "interaction": {
+    "$comment": "Adventure buttons do NOT lift — button-lift = rest (no move) and the hover shadow is dropped in the overrides (shadow.button-lift = none). Instead they get 10% brighter on hover.",
+    "button-lift": { "value": "{motion.rest}" },
+    "hover-brightness": { "value": "{effect.brightness.lighten}" }
+  }
+}

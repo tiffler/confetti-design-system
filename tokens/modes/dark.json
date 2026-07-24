@@ -33,7 +33,10 @@
       "on-subtle": { "value": "{color.cream.300}", "comment": "subtle tints are deep in dark mode — needs the light foreground" }
     }
   },
-  "shadow": { "lift": { "value": "3px 3px 0px 0px {color.cream.300}" } },
+  "shadow": {
+    "lift": { "value": "3px 3px 0px 0px {color.cream.300}", "comment": "card hover shadow" },
+    "button-lift": { "value": "3px 3px 0px 0px {color.cream.300}", "comment": "button hover shadow — separate from card so a theme can drop or swap it" }
+  },
   "focus": {
     "ring": {
       "width": { "value": "{border.width.sticker}", "comment": "2px" },

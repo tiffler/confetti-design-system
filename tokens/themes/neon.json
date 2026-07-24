@@ -1,0 +1,30 @@
+{
+  "$comment": "THEME = neon (80s–90s synthwave homage). Bright magenta brand, electric accents (cyan / purple / lime / magenta), SHARP controls (no border radius on buttons or cards), mono display for a retro-tech feel. Neon owns its neutrals per mode — light-lavender 'haze' in light, deep-purple 'synth' in dark (see tokens/overrides/neon.{light,dark}.json). Buttons don't lift; they GLOW on hover (a magenta box-shadow set in the overrides). Emitted under [data-theme='neon'].",
+  "brand": {
+    "primary": { "value": "{color.neon.pink.500}", "comment": "bright magenta — fill (with black label, 6:1) and text.accent on dark" },
+    "on-primary": { "value": "{color.base.black}", "comment": "black label on the neon fill — 80s style, and the only thing that passes on bright magenta" }
+  },
+  "accent": {
+    "purple": { "value": "{color.neon.purple.400}" },
+    "teal": { "value": "{color.neon.cyan.400}" },
+    "orange": { "value": "{color.neon.lime.400}" },
+    "pink": { "value": "{color.neon.pink.500}" }
+  },
+  "shape": {
+    "$comment": "SHARP — no radius on buttons or cards (radius.none).",
+    "control-radius": { "value": "{radius.none}" },
+    "container-radius": { "value": "{radius.none}" },
+    "border-width": { "value": "{border.width.sticker}" }
+  },
+  "font": {
+    "$comment": "Mono display for a retro-terminal feel; body stays Fredoka.",
+    "display": { "value": "{font.family.mono}" },
+    "body": { "value": "{font.family.fredoka}" },
+    "label": { "value": "{font.family.mono}" }
+  },
+  "interaction": {
+    "$comment": "No lift — button-lift = rest; the hover effect is a magenta GLOW set per mode in the overrides (shadow.button-lift).",
+    "button-lift": { "value": "{motion.rest}" },
+    "hover-brightness": { "value": "{effect.brightness.none}" }
+  }
+}
