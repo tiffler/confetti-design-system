@@ -1,263 +1,192 @@
 # 🎊 Confetti
 
-**Live Storybook:** https://main--6a5dbe45138c58d9d6190f4d.chromatic.com
+A sticker-flavored, multi-theme design system — thick ink outlines, hard offset shadows
+(no blur), warm paper tones, and controls that sit square at rest and tilt on hover.
 
-Personal portfolio design system. Powers the portfolio site and case studies, with a
-multi-theme, multi-mode token architecture built to scale.
+It ships **three themes** — `confetti`, `adventure`, `neon` — each in **light and dark**.
+Theme and mode are two independent axes combined by the CSS cascade, not a per-combination
+matrix: **mode** owns the neutrals, **theme** owns a small brand kit, and a theme may bring
+its own neutrals per mode. Adding a theme is a few token values, never a refactor.
 
-Confetti ships one theme (`confetti`) in light and dark. The theme axis is structurally
-real rather than hardcoded, so adding a theme later is a new folder — not a refactor.
+---
+
+## Quick start
 
 ```bash
 npm install
-npm run storybook     # builds tokens, then serves Storybook on :6006
+npm run storybook      # builds tokens, then serves Storybook on :6006
 ```
+
+Storybook opens on a cover page; use the **Theme** and **Mode** switchers in the toolbar to
+flip between all six looks.
 
 | Script | What it does |
 | --- | --- |
-| `npm run tokens` | Layer audit, then Style Dictionary build — `tokens/` → `build/portfolio/` |
-| `npm run audit:tokens` | Three-tier contract check on its own |
-| `npm run storybook` | Token build, then Storybook dev server |
-| `npm run build-storybook` | Token build, then static Storybook into `storybook-static/` |
+| `npm run tokens` | Layer audit → Style Dictionary build (`tokens/` → `build/portfolio/`) |
+| `npm run audit:tokens` | The three-tier contract check on its own |
+| `npm run storybook` | Build tokens, then the Storybook dev server on `:6006` |
+| `npm run build-storybook` | Build tokens, then a static Storybook |
 | `npm run typecheck` | `tsc --noEmit` |
 
-## Token pipeline
+---
 
-Three tiers, each layer only allowed to reference the one below it:
+## How theming works
+
+### Three token tiers
+
+Each tier may reference only the tier below it — enforced at build time, not by convention.
 
 ```
-primitives  →  semantic  →  component
-raw values     purpose        per-component
-               per theme       values
-               per mode
+PRIMITIVE  ──▶  SEMANTIC  ──▶  COMPONENT
+raw values      roles + a       per-widget
+(the palette)   theme's inputs  values (var refs)
 ```
 
-1. **Primitives** (`tokens/primitives/`) — raw color ramps, spacing scale, type scale,
-   radii, shadows, motion, z-index. No semantic meaning, no theme awareness. Emitted
-   once under `:root`; identical for every theme and mode.
+- **Primitive** (`tokens/primitives/`) — raw values: color ramps, spacing, type scale,
+  radii, shadows, motion. No meaning, no theme awareness. Emitted once under `:root`.
+- **Semantic** (`tokens/semantic/`, `tokens/modes/`, `tokens/themes/`, `tokens/overrides/`)
+  — purpose-named roles. This includes the neutrals (per mode), the **brand-kit inputs** a
+  theme sets, and the wiring that binds roles to those inputs.
+- **Component** (`tokens/component/`) — per-widget values (`--button-primary-bg`,
+  `--badge-bg-neutral`) that reference semantic roles only. Components consume these and
+  nothing else, so they never know which theme or mode is active.
 
-2. **Semantic** (`tokens/semantic/portfolio/`) — purpose-driven aliases that reference
-   primitives only. This is the only layer that varies by theme and mode.
+### The brand-kit contract
 
-3. **Component** (`tokens/component/portfolio/`) — component-specific values referencing
-   semantic tokens only, never primitives. `--button-primary-bg`, `--card-radius`,
-   `--badge-bg-teal`.
+A theme is a small set of **inputs** — brand color, four accents, control/container radius,
+border width, three fonts, and the button hover style. A `wiring` layer binds the roles
+components use (e.g. `action.primary.bg`) to those inputs once, under `:root`. Override an
+input in a `[data-theme]` block and every wired role repoints through the cascade — that's
+how a whole theme comes from changing a handful of values.
 
-Components consume component tokens and nothing else. They never know which theme or
-mode is active — the custom property name is stable, only its value repoints.
+### Independent axes
 
-### The contract is enforced, not documented
-
-`npm run audit:tokens` walks every token declaration and fails on:
-
-- a semantic or component token holding a **literal** instead of an alias;
-- a component token **skipping a layer** to reach a primitive;
-- a reference to a token that **does not exist**.
-
-It runs as the first step of `npm run tokens`, so a violation fails the build with the
-offending token named — the same way `_schema.json` already fails a theme that omits a
-required role. Schema validation checks *completeness*; this checks *discipline*.
-
-Running it against the system as originally built found ten violations that reviewing by
-eye had missed: every motion token in Button and Card reached straight past the semantic
-layer into primitives, `button.ghost` inlined `transparent` twice, and dark mode's
-`border.subtle` inlined an rgba value. Fixing those added a semantic motion vocabulary
-(`motion.transform.lift`, `motion.duration.interaction`), a `color.border.none` role for
-deliberate absence, and a `cream.a16` primitive. No rendered value changed.
-
-The audit also reports primitives no role aliases and roles no component consumes.
-Neither is a defect — primitives are a palette, and the semantic layer is the public API
-for application code, not merely an input to component tokens — so they print as
-information rather than failures.
-
-### Build output
-
-`npm run tokens` writes four files to `build/portfolio/`:
-
-- **`tokens.css`** — primitives under `:root`, then semantic + component tokens under
-  each `[data-theme][data-mode]` selector pair.
-- **`tokens.json`** — the same tokens as structured data, keyed `theme.mode`. The
-  Storybook Foundations pages read this, so the docs cannot drift from the build.
-- **`tokens.dtcg.json`** — the same tokens in [W3C Design Tokens (DTCG)][dtcg] format,
-  one group per theme+mode, values fully resolved. This is the interchange file for
-  Figma, Tokens Studio, and design-tool importers.
-- **`tailwind.theme.js`** — Tailwind theme keys mapped to `var()` references, so a
-  utility class follows whatever theme is active at runtime.
-
-[dtcg]: https://tr.designtokens.org/format/
-
-**`build/portfolio/` is committed on purpose.** Generated output is normally gitignored,
-but a design system exists to be consumed, and the source tokens are Style Dictionary
-aliases (`{color.ink.600.value}`) that mean nothing without a Node toolchain. Committing
-the resolved output means anything downstream — a design tool, another repo, an importer
-reading the URL — gets exact values instead of inferring them from component CSS.
-
-Regenerate with `npm run tokens` and commit the result alongside any token change; the
-files carry a `GENERATED FILE — do not edit` banner.
-
-## Consuming the system
-
-For a design tool or importer, read **`build/portfolio/tokens.dtcg.json`** — resolved
-values, typed, with the CSS variable name on each token under `$extensions`.
-
-For an application, link `build/portfolio/tokens.css` and set the two root attributes:
-
-```html
-<link rel="stylesheet" href="build/portfolio/tokens.css" />
-<html data-theme="confetti" data-mode="light">
+```
+:root                         primitives + wiring + component tokens (var refs)
+[data-mode="light|dark"]      base neutrals
+[data-theme="confetti|…"]     the brand-kit inputs
+[data-theme][data-mode]       a theme's own neutrals + any a11y lift
 ```
 
-Then consume component tokens (`--button-primary-bg`) or semantic roles
-(`--color-text-primary`, `--font-size-h2`). Do not consume primitives directly — they
-are the palette, not the API, and they carry no theme awareness.
+An element under `[data-theme="neon"][data-mode="dark"]` picks Neon's brand from the theme
+block, Neon's own neutrals from its override block, and any base neutral it didn't override
+from the mode block. Adding a theme adds one CSS block and multiplies nothing.
 
-## Iconography
+### Enforced, not documented
 
-[Phosphor](https://phosphoricons.com) at **bold** weight, wrapped rather than
-re-exported:
+`npm run audit:tokens` walks every token and fails the build on: a semantic/component token
+holding a raw value, a component token skipping a layer into a primitive, or a reference to
+a token that doesn't exist. A companion schema check fails any theme × mode that's missing a
+required role. So the architecture can't quietly rot.
 
-```tsx
-import { ArrowRight } from '@phosphor-icons/react';
-import { Icon } from './src';
-
-<Icon icon={ArrowRight} size="md" />;
-```
-
-The icon is passed as a component, not a name string, so bundlers tree-shake to the
-handful you use instead of pulling in all ~9,000.
-
-- **Weight is fixed at bold** by the system — it matches the 2px sticker linework;
-  regular reads thin beside it. `weight` exists as an escape hatch, but a mixed-weight
-  icon set is the fastest way to make a system look assembled rather than designed.
-- **Sizes mirror the type scale** — `sm` 16px, `md` 20px, `lg` 24px — via
-  `size.icon.*`, so an icon matches the cap height of the text it sits beside.
-- **Colour inherits by default.** `tone="inherit"` uses `currentColor`, so an icon in a
-  button or link follows that context including hover. `default` / `muted` / `accent`
-  are the explicit escapes.
-- **Decorative by default.** An icon with no `label` is `aria-hidden`; passing `label`
-  exposes it as `role="img"`. That way an arrow beside "View case study" is not read out
-  twice.
+---
 
 ## Runtime theming
 
-Two independent root attributes:
+Two root attributes drive everything:
 
 ```html
-<html data-theme="confetti" data-mode="dark">
+<html data-theme="neon" data-mode="dark">
 ```
 
-`ThemeProvider` owns both. It is a context provider, not per-component logic — changing
-either attribute updates every consuming component at once.
+`ThemeProvider` owns both axes. Changing either attribute repoints every consuming component
+at once — pure CSS cascade, no re-render.
 
 ```tsx
 import { ThemeProvider, Button } from './src';
 
-<ThemeProvider theme="confetti" mode="dark">
+<ThemeProvider theme="adventure" mode="dark">
   <Button variant="primary">View case study</Button>
 </ThemeProvider>;
 ```
 
-`target="scope"` writes the attributes to a wrapper div instead of `documentElement`,
-which is what lets two modes render side by side on one page.
+`theme` is an open string, so a demo can pass its own theme name (a `[data-theme]` block in
+its own CSS) without touching Confetti. `target="scope"` writes the attributes to a wrapper
+`<div>` instead of the document root, which lets two combinations render side by side.
 
-Storybook exposes both axes as toolbar switchers for demo purposes. Compiled production
-output is built-time themed.
+---
 
-## Schema
+## Components
 
-`tokens/semantic/portfolio/_schema.json` defines the semantic vocabulary every theme must
-satisfy, and the build enforces it — a theme missing a required token fails
-`npm run tokens` with the specific token names, rather than silently emitting a
-half-themed stylesheet.
+React, one `.tsx` + `.css` + `.stories.tsx` triple each, consuming component tokens only.
 
-- **`required`** — every theme must define these itself. All color roles, plus `shadow.lift`.
-- **`inheritable`** — typography, radii, and spacing roles. A theme may omit them and
-  inherit; the base theme must define them.
+- **Button** — `primary` · `secondary` · `ghost`. Hover is per-theme: Confetti lifts onto a
+  hard shadow, Adventure brightens with no lift, Neon glows.
+- **Card** — eyebrow · title · body; tilts on hover by a deterministic hash of its seed (no
+  `Math.random()`, so visual snapshots stay stable).
+- **Badge** — four accent hues plus a `neutral` variant, in `bold` and `subtle` tones.
+- **Icon** — wraps Phosphor icons at bold weight; sizes mirror the type scale; decorative by
+  default (a `label` promotes it to `role="img"`).
 
-**Inheritance rule:** the base theme's `light.json` (`confetti/light.json`) is the floor
-that every other theme+mode deep-merges onto. That is why `confetti/dark.json` contains
-only colors and a shadow — its typography, radii, and spacing come from the light file
-automatically, and a change there stays consistent across modes.
+---
 
-## Adding a new theme
+## Generated output
 
-1. Create `tokens/semantic/portfolio/themes/{name}/light.json` and `dark.json`.
-2. Define every token in the schema's `required` list. Override anything from
-   `inheritable` you want to differ; omit the rest and it falls back to Confetti.
-3. Add `'{name}'` to the `Theme` union and `THEMES` array in `src/theme/ThemeProvider.tsx`.
-4. Run `npm run tokens`.
+`npm run tokens` writes four **committed** files to `build/portfolio/` (each carries a
+`GENERATED FILE — do not edit` banner):
 
-No changes to primitives, component tokens, component code, or the build pipeline —
-the build discovers themes by reading the `themes/` directory. Step 3 is only there so
-TypeScript and the Storybook toolbar know the new value exists.
+| File | For |
+| --- | --- |
+| `tokens.css` | The product — CSS custom properties for every theme × mode. |
+| `tokens.json` | Flat index the Storybook Foundations read live, so docs can't drift. |
+| `tokens.dtcg.json` | W3C DTCG format, values fully resolved — the interchange file for design tools (Figma, Tokens Studio). |
+| `tailwind.theme.js` | Tailwind keys mapped to `var()` refs, so utilities follow the active theme. |
 
-Parked theme directions, from the design brief: **Vintage** (muted/warm/serif),
-**Arcade** (neon/blocky), **Glitch** (high-contrast/chromatic aberration).
+Build output is committed on purpose: the source tokens are Style Dictionary aliases that
+mean nothing without a Node toolchain, so committing the resolved output lets anything
+downstream read exact values. Regenerate with `npm run tokens` and commit alongside any
+token change.
 
-## Publishing
+---
 
-**Live Storybook:** https://main--6a5dbe45138c58d9d6190f4d.chromatic.com
+## Consuming it
 
-The repo is private; the Storybook is published publicly through Chromatic. Visibility
-is a Chromatic project setting (Manage → Collaborate), not something the repo controls —
-a public Storybook from a private repo is the intended split.
+- **A design tool / importer** → read `build/portfolio/tokens.dtcg.json` (resolved values,
+  typed, with each token's CSS variable name under `$extensions`).
+- **An app** → link `build/portfolio/tokens.css`, set `data-theme` + `data-mode`, and
+  consume component tokens (`--button-primary-bg`) or semantic roles
+  (`--color-text-primary`). Never primitives directly — they're the palette, not the API.
 
-`.github/workflows/chromatic.yml` runs on every push to `main` and on pull requests.
-It runs `build-storybook` (so tokens are built first), uploads the result, and:
+---
 
-- **auto-accepts baselines on `main`**, so the published Storybook always tracks main;
-- **reports visual diffs on PRs without failing CI** (`exitZeroOnChanges`) — diffs are
-  reviewed in the Chromatic UI rather than gating the build.
+## Adding a theme
 
-Setup is done — the project exists and `CHROMATIC_PROJECT_TOKEN` is stored as a repo
-secret. To rotate the token, take a new one from Chromatic's Manage screen and run:
+1. `tokens/themes/<name>.json` — the brand-kit inputs (brand, accents, shape, fonts, hover),
+   referencing primitives. Define all of them; the wiring references them all.
+2. *(optional)* `tokens/overrides/<name>.light.json` + `.dark.json` — the theme's own
+   neutrals per mode, plus any accessibility lift.
+3. Add the brand/neutral primitives to `tokens/primitives/color.json`; add `'<name>'` to
+   `THEMES` in `src/theme/ThemeProvider.tsx`.
+4. `npm run tokens`, then measure contrast and add a lift wherever a brand color fails AA.
 
-```bash
-gh secret set CHROMATIC_PROJECT_TOKEN --body "<token>"
+No changes to component tokens, component code, or the pipeline — the build discovers themes
+by reading the folder.
+
+---
+
+## Project structure
+
+```
+Confetti/
+├─ tokens/                    authored token source (the input)
+│  ├─ primitives/             raw values — color, spacing, type, radii, shadows
+│  ├─ semantic/
+│  │  ├─ base.json            axis-independent roles (type, space, size, motion)
+│  │  └─ theme-roles.json     the wiring — roles → brand-kit inputs
+│  ├─ modes/                  light / dark base neutrals
+│  ├─ themes/                 brand-kit inputs — confetti · adventure · neon
+│  ├─ overrides/              per-theme-per-mode neutrals + a11y lifts
+│  └─ component/portfolio/    button · card · badge · icon
+├─ style-dictionary/          build.js · audit-layers.js · validate-schema.js
+├─ build/portfolio/           GENERATED, committed — tokens.css/json/dtcg + tailwind
+├─ public/fonts/              self-hosted Fredoka + JetBrains Mono
+└─ src/
+   ├─ components/             Button · Card · Badge · Icon
+   ├─ foundations/            Storybook docs + live token specimens
+   ├─ theme/ThemeProvider.tsx
+   └─ Cover.stories.tsx       the Storybook landing page
 ```
 
-To publish from your machine instead, put the same token in `CHROMATIC_PROJECT_TOKEN`
-and run `npm run chromatic`.
+---
 
-## Folder structure
-
-```
-design-system/
-├── tokens/
-│   ├── primitives/          color, spacing, typography, radii, shadows
-│   ├── semantic/portfolio/
-│   │   ├── _schema.json     required vocabulary, enforced at build time
-│   │   └── themes/confetti/  light.json, dark.json
-│   └── component/portfolio/ button, card, badge
-├── style-dictionary/
-│   ├── build.js             loops themes × modes, validates, writes one tokens.css
-│   ├── validate-schema.js
-│   └── transforms/
-├── build/portfolio/         GENERATED — tokens.css, tokens.json, tailwind.theme.js
-├── src/
-│   ├── components/          Button, Card, Badge
-│   ├── foundations/         Storybook docs pages + live token specimens
-│   ├── theme/               ThemeProvider
-│   └── styles/global.css
-└── .storybook/
-```
-
-## Design reference
-
-Confetti's light-mode values are canonical — extracted from the Claude Design comps and
-the homepage hero widget code, recorded in the
-[Notion page](https://app.notion.com/p/3a3b380ae3b281f68bc6c4d61e08b421). Pull from
-there rather than re-deriving.
-
-Fredoka and JetBrains Mono are declared with system fallbacks — the consuming app loads
-the actual webfonts.
-
-> **Dark mode is pending a design pass.** The values in `confetti/dark.json` were derived
-> systematically from the light comps (surface ramp inverted, red and accents lifted for
-> legibility) rather than extracted from artwork. They are structurally complete and
-> contrast-checked, but not art-directed.
-
-## Deployment
-
-Private GitHub repo → Chromatic. Chromatic publishes a public Storybook URL, linked from
-the portfolio case study; the code stays private.
+Built by [tiffler](https://tienmedia.com).
