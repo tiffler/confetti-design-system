@@ -25,10 +25,6 @@
       "400": { "value": "#e33b2e", "comment": "confetti brand Red, lifted" },
       "300": { "value": "#f04b3a", "comment": "confetti brand Red, lifted enough to read AS TEXT on the dark surface (4.69:1)" }
     },
-    "blue": {
-      "600": { "value": "#0a5c74", "comment": "ocean brand — light/HC surfaces" },
-      "400": { "value": "#57c2dd", "comment": "ocean brand, lifted for dark surfaces" }
-    },
     "purple": {
       "700": { "value": "#453552" },
       "400": { "value": "#c6adda" },
@@ -48,6 +44,86 @@
       "700": { "value": "#4d323c" },
       "400": { "value": "#e8b8cd" },
       "100": { "value": "#f5e4ea" }
+    },
+
+    "$comment-adventure": "Adventure theme (Forest & trail) — pine brand, sand light neutrals, forest dark neutrals, warm bark ink, and four earthy accent hues.",
+    "pine": {
+      "700": { "value": "#234f2f" },
+      "500": { "value": "#2f6b3f", "comment": "Adventure brand green — reads as text on sand (4.8:1) and as button fill w/ white (6.6:1)" },
+      "400": { "value": "#4a8f5b", "comment": "brand, lifted" },
+      "300": { "value": "#79b98c", "comment": "brand, lifted enough to read AS TEXT on the forest dark surface" }
+    },
+    "sand": {
+      "50": { "value": "#fbf7ee", "comment": "warm card surface" },
+      "100": { "value": "#f3ecdd", "comment": "raised" },
+      "200": { "value": "#ece2ce", "comment": "panel / dark-mode text" },
+      "300": { "value": "#e6dcc4", "comment": "page baseline" },
+      "a12": { "value": "rgba(51, 48, 31, 0.12)", "comment": "bark at 12% — subtle border on sand" }
+    },
+    "bark": {
+      "600": { "value": "#33301f", "comment": "warm near-black — Adventure light-mode text and borders" },
+      "400": { "value": "#6b6146", "comment": "muted" }
+    },
+    "forest": {
+      "800": { "value": "#16231a", "comment": "Adventure dark page" },
+      "700": { "value": "#1e2c20", "comment": "raised" },
+      "500": { "value": "#2a3b2d", "comment": "panel" },
+      "400": { "value": "#35492f", "comment": "card" },
+      "a16": { "value": "rgba(236, 226, 206, 0.16)", "comment": "sand at 16% — subtle border on forest" }
+    },
+    "sage": {
+      "400": { "value": "#9aa88f", "comment": "muted text on forest dark" }
+    },
+    "moss": {
+      "400": { "value": "#9cc088" },
+      "100": { "value": "#e8f0df" },
+      "700": { "value": "#26341f" }
+    },
+    "clay": {
+      "400": { "value": "#dba679" },
+      "100": { "value": "#f5e6d6" },
+      "700": { "value": "#46311f" }
+    },
+    "amber": {
+      "400": { "value": "#e9c766" },
+      "100": { "value": "#f8f0d5" },
+      "700": { "value": "#453a1c" }
+    },
+    "berry": {
+      "400": { "value": "#d98fab" },
+      "100": { "value": "#f4e2ea" },
+      "700": { "value": "#402631" }
+    },
+
+    "$comment-neon": "Neon theme (80s–90s synthwave) — magenta brand, cyan/purple/lime accents, light-lavender (haze) light surfaces, deep-purple (synth) dark surfaces.",
+    "neon": {
+      "pink": { "500": { "value": "#ff2d95", "comment": "bright magenta brand + fill" }, "600": { "value": "#c0106e", "comment": "deep magenta — brand AS TEXT on light" } },
+      "cyan": { "400": { "value": "#00e5ff" }, "100": { "value": "#d9f9ff" }, "700": { "value": "#093c48" } },
+      "purple": { "400": { "value": "#b26bff" }, "100": { "value": "#efe4ff" }, "700": { "value": "#2a1550" } },
+      "lime": { "400": { "value": "#aaff00" }, "100": { "value": "#eefcd0" }, "700": { "value": "#2e3d0a" } },
+      "magenta": { "100": { "value": "#ffe0f0" }, "700": { "value": "#4a0f2e" } }
+    },
+    "haze": {
+      "50": { "value": "#ffffff", "comment": "neon light card" },
+      "100": { "value": "#faf6ff", "comment": "raised" },
+      "200": { "value": "#f2e9ff", "comment": "panel" },
+      "300": { "value": "#ede0ff", "comment": "page — light lavender" },
+      "a12": { "value": "rgba(26, 4, 48, 0.12)" }
+    },
+    "grape": {
+      "900": { "value": "#1a0430", "comment": "neon light text / border — deep purple" },
+      "500": { "value": "#5b3d7a", "comment": "muted" }
+    },
+    "synth": {
+      "900": { "value": "#0d0221", "comment": "neon dark page — deep purple-black" },
+      "800": { "value": "#170a2e", "comment": "raised" },
+      "700": { "value": "#23113f", "comment": "panel" },
+      "600": { "value": "#2e1650", "comment": "card" },
+      "a16": { "value": "rgba(237, 224, 255, 0.16)" }
+    },
+    "glow": {
+      "100": { "value": "#ede0ff", "comment": "neon dark text / border — light lavender" },
+      "400": { "value": "#a98fc9", "comment": "muted" }
     },
     "base": {
       "white": { "value": "#ffffff" },
