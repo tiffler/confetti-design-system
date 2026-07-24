@@ -1,11 +1,7 @@
 {
-  "$comment": "Base semantic layer — roles that do NOT vary by mode or theme (type, space, radius, border width, control/icon sizes, motion). Emitted once under :root. Colour roles live in modes/ (neutrals) and themes/ (brand/accent); those combine via the [data-mode] / [data-theme] cascade.",
+  "$comment": "Base semantic layer — roles that do NOT vary by mode OR theme (type, space, non-themed radii, control/icon sizes, motion). Emitted once under :root. Colour neutrals live in modes/; the THEME-tunable roles (brand colours, control/container radius, sticker border width) live in the wiring (tokens/semantic/theme-roles.json) as var() refs to the brand-kit inputs. Those combine via the [data-mode] / [data-theme] cascade.",
   "font": {
-    "family": {
-      "display": { "value": "{font.family.fredoka}" },
-      "body": { "value": "{font.family.fredoka}" },
-      "label": { "value": "{font.family.mono}" }
-    },
+    "$comment": "family (display/body/label) is THEME-tunable and lives in the wiring; size/weight/tracking/leading are axis-independent here.",
     "size": {
       "$comment": "Heading ramp is a 1.25 modular scale rounded to the 4px grid: 48 / 40 / 32 / 24 / 20 / 16.",
       "display": { "value": "{font.size.hero}", "comment": "hero only — fluid, sits above h1" },
@@ -36,15 +32,9 @@
     }
   },
   "radius": {
-    "control": { "value": "{radius.full}" },
-    "container": { "value": "{radius.md}" },
+    "$comment": "control (pills/buttons) and container (cards) are THEME-tunable and live in the wiring; chip/avatar are fixed here.",
     "chip": { "value": "{radius.xs}" },
     "avatar": { "value": "{radius.circle}" }
-  },
-  "border": {
-    "width": {
-      "default": { "value": "{border.width.sticker}" }
-    }
   },
   "size": {
     "control": { "value": "{space.12}", "comment": "48px — height of a tappable control." },

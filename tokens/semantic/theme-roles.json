@@ -1,0 +1,41 @@
+{
+  "$comment": "THEME WIRING — maps the semantic ROLES that components consume to the theme's brand-kit INPUTS (tokens/themes/*.json). Emitted ONCE under :root as var() references (confetti/css-declarations-refs), so it is theme-independent: overriding an input in a [data-theme] block repoints every role here via the cascade. This is what lets a demo re-skin the whole system by setting only a handful of input values. Neutral colour roles are NOT here — they live on the mode axis (tokens/modes/). References point at theme-input tokens; the layer audit allows semantic → theme-input.",
+  "font": {
+    "family": {
+      "display": { "value": "{font.display}" },
+      "body": { "value": "{font.body}" },
+      "label": { "value": "{font.label}" }
+    }
+  },
+  "color": {
+    "text": { "accent": { "value": "{brand.primary}" } },
+    "action": {
+      "primary": {
+        "bg": { "value": "{brand.primary}" },
+        "fg": { "value": "{brand.on-primary}" }
+      },
+      "ghost": { "fg-hover": { "value": "{brand.primary}" } }
+    },
+    "accent": {
+      "purple": { "bold": { "value": "{accent.purple}" } },
+      "teal": { "bold": { "value": "{accent.teal}" } },
+      "orange": { "bold": { "value": "{accent.orange}" } },
+      "pink": { "bold": { "value": "{accent.pink}" } }
+    }
+  },
+  "radius": {
+    "control": { "value": "{shape.control-radius}" },
+    "container": { "value": "{shape.container-radius}" }
+  },
+  "border": {
+    "width": {
+      "default": { "value": "{shape.border-width}" }
+    }
+  },
+  "motion": {
+    "button-lift": { "value": "{interaction.button-lift}", "comment": "the hover transform on filled buttons — a lift, or rest (no move), per theme" }
+  },
+  "effect": {
+    "button-hover-brightness": { "value": "{interaction.hover-brightness}", "comment": "hover lightness multiplier for buttons that change lightness instead of lifting" }
+  }
+}
