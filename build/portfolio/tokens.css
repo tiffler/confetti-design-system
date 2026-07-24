@@ -241,10 +241,13 @@
   --badge-padding-y: var(--space-inset-xs);
   --badge-fg: var(--color-accent-on-bold);
   --badge-fg-subtle: var(--color-accent-on-subtle);
+  --badge-fg-neutral: var(--color-text-primary);
+  --badge-fg-subtle-neutral: var(--color-text-muted);
   --badge-bg-purple: var(--color-accent-purple-bold);
   --badge-bg-teal: var(--color-accent-teal-bold);
   --badge-bg-orange: var(--color-accent-orange-bold);
   --badge-bg-pink: var(--color-accent-pink-bold);
+  --badge-bg-neutral: var(--color-surface-raised);
   --badge-bg-subtle-purple: var(--color-accent-purple-subtle);
   --badge-bg-subtle-teal: var(--color-accent-teal-subtle);
   --badge-bg-subtle-orange: var(--color-accent-orange-subtle);

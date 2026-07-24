@@ -2004,6 +2004,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle"
         }
       },
+      "fg-neutral": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-neutral"
+        }
+      },
+      "fg-subtle-neutral": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#d98fab",
@@ -2031,6 +2045,14 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "neutral": {
+          "$value": "#1e2c20",
+          "$type": "other",
+          "$description": "paper fill — a badge that isn't a category",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-neutral"
           }
         }
       },
@@ -4494,6 +4516,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle"
         }
       },
+      "fg-neutral": {
+        "$value": "#33301f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-neutral"
+        }
+      },
+      "fg-subtle-neutral": {
+        "$value": "#6b6146",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#d98fab",
@@ -4521,6 +4557,14 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "neutral": {
+          "$value": "#f3ecdd",
+          "$type": "other",
+          "$description": "paper fill — a badge that isn't a category",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-neutral"
           }
         }
       },
@@ -6828,7 +6872,7 @@
       "primary": {
         "$value": "#c40000",
         "$type": "other",
-        "$description": "brand colour — drives text.accent, primary action fill, ghost hover",
+        "$description": "brand color — drives text.accent, primary action fill, ghost hover",
         "$extensions": {
           "com.confetti.cssVariable": "--brand-primary"
         }
@@ -6989,6 +7033,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle"
         }
       },
+      "fg-neutral": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-neutral"
+        }
+      },
+      "fg-subtle-neutral": {
+        "$value": "#bfb6a6",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#c6adda",
@@ -7016,6 +7074,14 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "neutral": {
+          "$value": "#2a2317",
+          "$type": "other",
+          "$description": "paper fill — a badge that isn't a category",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-neutral"
           }
         }
       },
@@ -9323,7 +9389,7 @@
       "primary": {
         "$value": "#c40000",
         "$type": "other",
-        "$description": "brand colour — drives text.accent, primary action fill, ghost hover",
+        "$description": "brand color — drives text.accent, primary action fill, ghost hover",
         "$extensions": {
           "com.confetti.cssVariable": "--brand-primary"
         }
@@ -9484,6 +9550,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle"
         }
       },
+      "fg-neutral": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-neutral"
+        }
+      },
+      "fg-subtle-neutral": {
+        "$value": "#6b5f4a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#c6adda",
@@ -9511,6 +9591,14 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "neutral": {
+          "$value": "#f4f0e4",
+          "$type": "other",
+          "$description": "paper fill — a badge that isn't a category",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-neutral"
           }
         }
       },
@@ -11975,6 +12063,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle"
         }
       },
+      "fg-neutral": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-neutral"
+        }
+      },
+      "fg-subtle-neutral": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#b26bff",
@@ -12002,6 +12104,14 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "neutral": {
+          "$value": "#170a2e",
+          "$type": "other",
+          "$description": "paper fill — a badge that isn't a category",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-neutral"
           }
         }
       },
@@ -14466,6 +14576,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle"
         }
       },
+      "fg-neutral": {
+        "$value": "#1a0430",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-neutral"
+        }
+      },
+      "fg-subtle-neutral": {
+        "$value": "#5b3d7a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#b26bff",
@@ -14493,6 +14617,14 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "neutral": {
+          "$value": "#faf6ff",
+          "$type": "other",
+          "$description": "paper fill — a badge that isn't a category",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-neutral"
           }
         }
       },

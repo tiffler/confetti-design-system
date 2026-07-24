@@ -29,7 +29,7 @@ function Cover() {
         }}
       >
         <div style={{ display: 'flex', gap: 'var(--space-inline)', alignItems: 'center' }}>
-          <Badge hue="orange" tone="bold">
+          <Badge hue="purple" tone="bold">
             Design System
           </Badge>
           <Badge hue="teal" tone="subtle">
@@ -58,7 +58,7 @@ function Cover() {
             margin: 0,
           }}
         >
-          A sticker-flavoured, multi-theme design system. Three themes, two modes, one set of
+          A sticker-flavored, multi-theme design system. Three themes, two modes, one set of
           tokens — change a handful of values and the whole thing re-skins. Built to make demos
           look <em>intentional</em>, not assembled.
         </p>

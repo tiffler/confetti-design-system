@@ -11,11 +11,14 @@
     "padding-y": { "value": "{space.inset-xs}" },
     "fg": { "value": "{color.accent.on-bold}" },
     "fg-subtle": { "value": "{color.accent.on-subtle}" },
+    "fg-neutral": { "value": "{color.text.primary}" },
+    "fg-subtle-neutral": { "value": "{color.text.muted}" },
     "bg": {
       "purple": { "value": "{color.accent.purple.bold}" },
       "teal": { "value": "{color.accent.teal.bold}" },
       "orange": { "value": "{color.accent.orange.bold}" },
-      "pink": { "value": "{color.accent.pink.bold}" }
+      "pink": { "value": "{color.accent.pink.bold}" },
+      "neutral": { "value": "{color.surface.raised}", "comment": "paper fill — a badge that isn't a category" }
     },
     "bg-subtle": {
       "purple": { "value": "{color.accent.purple.subtle}" },

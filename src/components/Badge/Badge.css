@@ -29,6 +29,15 @@
 .cf-badge--bold.cf-badge--pink {
   background: var(--badge-bg-pink);
 }
+/* Neutral: paper fill + ink text (not a category — labels, versions, counts). */
+.cf-badge--bold.cf-badge--neutral {
+  background: var(--badge-bg-neutral);
+  color: var(--badge-fg-neutral);
+}
+/* Neutral subtle: no fill, just the outline + muted text. */
+.cf-badge--subtle.cf-badge--neutral {
+  color: var(--badge-fg-subtle-neutral);
+}
 
 /* Subtle: pastel tint — the card-background end of each hue pair. In dark mode
    the tint end goes deep, so the foreground flips with it. */

@@ -1,7 +1,7 @@
 import type { HTMLAttributes, ReactNode } from 'react';
 import './Badge.css';
 
-export type BadgeHue = 'purple' | 'teal' | 'orange' | 'pink';
+export type BadgeHue = 'purple' | 'teal' | 'orange' | 'pink' | 'neutral';
 export type BadgeTone = 'bold' | 'subtle';
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {

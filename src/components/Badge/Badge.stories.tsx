@@ -11,12 +11,12 @@ const meta = {
     docs: {
       description: {
         component:
-          'Mono uppercase pill across the four accent hues. `bold` uses the saturated end of each hue pair, `subtle` the tint end — and the foreground token differs between them so both stay legible in dark mode.',
+          'Mono uppercase pill across the four accent hues, plus a `neutral` hue for non-category labels (versions, counts). `bold` uses the saturated end of each hue pair, `subtle` the tint end — and the foreground token differs between them so both stay legible in dark mode.',
       },
     },
   },
   argTypes: {
-    hue: { control: 'inline-radio', options: HUES },
+    hue: { control: 'inline-radio', options: [...HUES, 'neutral'] },
     tone: { control: 'inline-radio', options: ['bold', 'subtle'] },
   },
   args: {
@@ -53,6 +53,28 @@ export const Subtle: Story = {
           {hue}
         </Badge>
       ))}
+    </div>
+  ),
+};
+
+export const Neutral: Story = {
+  name: 'Neutral',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'The non-category badge — a paper fill (`bold`) or a plain outline (`subtle`) in the neutral palette, for labels that aren’t one of the accent categories.',
+      },
+    },
+  },
+  render: (args) => (
+    <div style={{ display: 'flex', gap: 'var(--space-inline)', alignItems: 'center' }}>
+      <Badge {...args} hue="neutral" tone="bold">
+        Bold
+      </Badge>
+      <Badge {...args} hue="neutral" tone="subtle">
+        Subtle
+      </Badge>
     </div>
   ),
 };
