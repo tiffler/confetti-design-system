@@ -2,13 +2,18 @@
  * GENERATED FILE — do not edit.  Source: tokens/  •  Build: npm run tokens
  *
  * Independent axes, combined by the CSS cascade — NOT a per-combination matrix.
- *   :root                                    primitives + base semantic; component tokens as var() refs
- *   [data-mode="light|dark|high-contrast"]   neutrals — surfaces, text, borders, focus ring, shadow
- *   [data-theme="confetti|ocean|…"]          brand + accent
- *   [data-theme][data-mode]                  documented accessibility exceptions only
+ *   :root                          primitives + base semantic; theme wiring + component tokens as var() refs
+ *   [data-mode="light|dark"]       base neutrals — surfaces, text, borders, focus ring, shadow
+ *   [data-theme="confetti|adventure|…"]  brand-kit inputs (brand, accents, shape, fonts)
+ *   [data-theme][data-mode]        a theme's own neutrals + documented a11y lifts (tokens/overrides/)
  *
- * Set both attributes on the root element. Component tokens are var() references, so they
- * resolve against whatever mode+theme is active — the two axes never multiply into a matrix.
+ * THEMING: the :root wiring binds every themeable role to a brand-kit input (see
+ * tokens/themes/confetti.json). A downstream demo re-skins the system by setting only
+ * those inputs in its own [data-theme="<name>"] block — optionally per mode with an
+ * added [data-theme="<name>"][data-mode="dark"] block. No changes to Confetti needed.
+ *
+ * Set both attributes on the root element. Component + wiring tokens are var() references,
+ * so they resolve against whatever mode+theme is active — the axes never multiply into a matrix.
  */
 
 :root {
@@ -30,8 +35,6 @@
   --color-red-300: #f04b3a;
   --color-red-400: #e33b2e;
   --color-red-500: #c40000;
-  --color-blue-400: #57c2dd;
-  --color-blue-600: #0a5c74;
   --color-purple-100: #f0e5f2;
   --color-purple-400: #c6adda;
   --color-purple-700: #453552;
@@ -44,6 +47,62 @@
   --color-pink-100: #f5e4ea;
   --color-pink-400: #e8b8cd;
   --color-pink-700: #4d323c;
+  --color-pine-300: #79b98c;
+  --color-pine-400: #4a8f5b;
+  --color-pine-500: #2f6b3f;
+  --color-pine-700: #234f2f;
+  --color-sand-50: #fbf7ee;
+  --color-sand-100: #f3ecdd;
+  --color-sand-200: #ece2ce;
+  --color-sand-300: #e6dcc4;
+  --color-sand-a12: rgba(51, 48, 31, 0.12);
+  --color-bark-400: #6b6146;
+  --color-bark-600: #33301f;
+  --color-forest-400: #35492f;
+  --color-forest-500: #2a3b2d;
+  --color-forest-700: #1e2c20;
+  --color-forest-800: #16231a;
+  --color-forest-a16: rgba(236, 226, 206, 0.16);
+  --color-sage-400: #9aa88f;
+  --color-moss-100: #e8f0df;
+  --color-moss-400: #9cc088;
+  --color-moss-700: #26341f;
+  --color-clay-100: #f5e6d6;
+  --color-clay-400: #dba679;
+  --color-clay-700: #46311f;
+  --color-amber-100: #f8f0d5;
+  --color-amber-400: #e9c766;
+  --color-amber-700: #453a1c;
+  --color-berry-100: #f4e2ea;
+  --color-berry-400: #d98fab;
+  --color-berry-700: #402631;
+  --color-neon-pink-500: #ff2d95;
+  --color-neon-pink-600: #c0106e;
+  --color-neon-cyan-100: #d9f9ff;
+  --color-neon-cyan-400: #00e5ff;
+  --color-neon-cyan-700: #093c48;
+  --color-neon-purple-100: #efe4ff;
+  --color-neon-purple-400: #b26bff;
+  --color-neon-purple-700: #2a1550;
+  --color-neon-lime-100: #eefcd0;
+  --color-neon-lime-400: #aaff00;
+  --color-neon-lime-700: #2e3d0a;
+  --color-neon-magenta-100: #ffe0f0;
+  --color-neon-magenta-700: #4a0f2e;
+  --color-haze-50: #ffffff;
+  --color-haze-100: #faf6ff;
+  --color-haze-200: #f2e9ff;
+  --color-haze-300: #ede0ff;
+  --color-haze-a12: rgba(26, 4, 48, 0.12);
+  --color-grape-500: #5b3d7a;
+  --color-grape-900: #1a0430;
+  --color-synth-600: #2e1650;
+  --color-synth-700: #23113f;
+  --color-synth-800: #170a2e;
+  --color-synth-900: #0d0221;
+  --color-synth-a16: rgba(237, 224, 255, 0.16);
+  --color-glow-100: #ede0ff;
+  --color-glow-400: #a98fc9;
   --color-base-white: #ffffff;
   --color-base-black: #000000;
   --color-base-transparent: transparent;
@@ -51,19 +110,19 @@
   --radius-xs: 2px;
   --radius-sm: 4px;
   --radius-md: 8px;
+  --radius-lg: 12px;
   --radius-full: 999px;
   --radius-circle: 50%;
-  --radius-control: 999px;
-  --radius-container: 8px;
   --radius-chip: 2px;
   --radius-avatar: 50%;
   --border-width-hairline: 1px;
   --border-width-sticker: 2px;
   --border-width-heavy: 4px;
-  --border-width-default: 2px;
   --shadow-none: none;
   --shadow-hard-ink: 3px 3px 0px 0px #2e2618;
   --shadow-hard-cream: 3px 3px 0px 0px #ede4d3;
+  --effect-brightness-none: 1;
+  --effect-brightness-lighten: 1.1;
   --motion-lift: translate(-2px, -2px);
   --motion-rest: translate(0, 0);
   --motion-tilt-subtle: 0.8deg;
@@ -106,9 +165,6 @@
   --space-layout-xl: 80px;
   --font-family-fredoka: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-family-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-family-display: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-family-body: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-family-label: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-size-12: 12px;
   --font-size-14: 14px;
   --font-size-16: 16px;
@@ -152,6 +208,26 @@
   --size-icon-lg: 24px;
 }
 
+/* Theme wiring — themeable roles as var() refs to the brand-kit inputs (tokens/themes/). */
+:root {
+  --color-text-accent: var(--brand-primary);
+  --color-action-primary-bg: var(--brand-primary);
+  --color-action-primary-fg: var(--brand-on-primary);
+  --color-action-ghost-fg-hover: var(--brand-primary);
+  --color-accent-purple-bold: var(--accent-purple);
+  --color-accent-teal-bold: var(--accent-teal);
+  --color-accent-orange-bold: var(--accent-orange);
+  --color-accent-pink-bold: var(--accent-pink);
+  --radius-control: var(--shape-control-radius);
+  --radius-container: var(--shape-container-radius);
+  --border-width-default: var(--shape-border-width);
+  --effect-button-hover-brightness: var(--interaction-hover-brightness);
+  --motion-button-lift: var(--interaction-button-lift);
+  --font-family-display: var(--font-display);
+  --font-family-body: var(--font-body);
+  --font-family-label: var(--font-label);
+}
+
 /* Component tokens — var() references that compose the active mode + theme. */
 :root {
   --badge-radius: var(--radius-control);
@@ -183,8 +259,9 @@
   --button-padding-x: var(--space-inset);
   --button-padding-y: var(--space-inset-tight);
   --button-gap: var(--space-inline);
-  --button-shadow-hover: var(--shadow-lift);
-  --button-transform-hover: var(--motion-transform-lift);
+  --button-shadow-hover: var(--shadow-button-lift);
+  --button-transform-hover: var(--motion-button-lift);
+  --button-hover-brightness: var(--effect-button-hover-brightness);
   --button-transition-duration: var(--motion-duration-interaction);
   --button-transition-easing: var(--motion-easing-interaction);
   --button-primary-bg: var(--color-action-primary-bg);
@@ -254,35 +331,9 @@
   --color-accent-on-bold: #2e2618;
   --color-accent-on-subtle: #ede4d3;
   --shadow-lift: 3px 3px 0px 0px #ede4d3;
+  --shadow-button-lift: 3px 3px 0px 0px #ede4d3;
   --focus-ring-width: 2px;
   --focus-ring-color: #ede4d3;
-  --focus-ring-offset: 2px;
-}
-
-[data-mode="high-contrast"] {
-  --color-surface-page: #ffffff;
-  --color-surface-raised: #ffffff;
-  --color-surface-panel: #ffffff;
-  --color-surface-card: #ffffff;
-  --color-text-primary: #000000;
-  --color-text-muted: #000000;
-  --color-text-inverse: #ffffff;
-  --color-border-default: #000000;
-  --color-border-subtle: #000000;
-  --color-border-none: transparent;
-  --color-action-secondary-bg: #ffffff;
-  --color-action-secondary-fg: #000000;
-  --color-action-ghost-bg: transparent;
-  --color-action-ghost-fg: #000000;
-  --color-accent-purple-subtle: #ffffff;
-  --color-accent-teal-subtle: #ffffff;
-  --color-accent-orange-subtle: #ffffff;
-  --color-accent-pink-subtle: #ffffff;
-  --color-accent-on-bold: #000000;
-  --color-accent-on-subtle: #000000;
-  --shadow-lift: 3px 3px 0px 0px #000000;
-  --focus-ring-width: 4px;
-  --focus-ring-color: #000000;
   --focus-ring-offset: 2px;
 }
 
@@ -308,41 +359,185 @@
   --color-accent-on-bold: #2e2618;
   --color-accent-on-subtle: #2e2618;
   --shadow-lift: 3px 3px 0px 0px #2e2618;
+  --shadow-button-lift: 3px 3px 0px 0px #2e2618;
   --focus-ring-width: 2px;
   --focus-ring-color: #2e2618;
   --focus-ring-offset: 2px;
 }
 
+[data-theme="adventure"] {
+  --font-display: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-label: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --brand-primary: #2f6b3f;
+  --brand-on-primary: #ffffff;
+  --accent-purple: #d98fab;
+  --accent-teal: #9cc088;
+  --accent-orange: #dba679;
+  --accent-pink: #e9c766;
+  --shape-control-radius: 12px;
+  --shape-container-radius: 8px;
+  --shape-border-width: 2px;
+  --interaction-button-lift: translate(0, 0);
+  --interaction-hover-brightness: 1.1;
+}
+
 [data-theme="confetti"] {
-  --color-text-accent: #c40000;
-  --color-action-primary-bg: #c40000;
-  --color-action-primary-fg: #ffffff;
-  --color-action-ghost-fg-hover: #c40000;
-  --color-accent-purple-bold: #c6adda;
-  --color-accent-teal-bold: #a8d6cb;
-  --color-accent-orange-bold: #f0c07a;
-  --color-accent-pink-bold: #e8b8cd;
+  --font-display: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-label: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --brand-primary: #c40000;
+  --brand-on-primary: #ffffff;
+  --accent-purple: #c6adda;
+  --accent-teal: #a8d6cb;
+  --accent-orange: #f0c07a;
+  --accent-pink: #e8b8cd;
+  --shape-control-radius: 999px;
+  --shape-container-radius: 8px;
+  --shape-border-width: 2px;
+  --interaction-button-lift: translate(-2px, -2px);
+  --interaction-hover-brightness: 1;
 }
 
-[data-theme="ocean"] {
-  --color-text-accent: #0a5c74;
-  --color-action-primary-bg: #0a5c74;
-  --color-action-primary-fg: #ffffff;
-  --color-action-ghost-fg-hover: #0a5c74;
-  --color-accent-purple-bold: #c6adda;
-  --color-accent-teal-bold: #a8d6cb;
-  --color-accent-orange-bold: #f0c07a;
-  --color-accent-pink-bold: #e8b8cd;
+[data-theme="neon"] {
+  --font-display: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-body: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-label: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --brand-primary: #ff2d95;
+  --brand-on-primary: #000000;
+  --accent-purple: #b26bff;
+  --accent-teal: #00e5ff;
+  --accent-orange: #aaff00;
+  --accent-pink: #ff2d95;
+  --shape-control-radius: 0;
+  --shape-container-radius: 0;
+  --shape-border-width: 2px;
+  --interaction-button-lift: translate(0, 0);
+  --interaction-hover-brightness: 1;
 }
 
-/* Accessibility exception — see tokens/exceptions/confetti.dark.json */
+/* Theme override (own neutrals / a11y lift) — see tokens/overrides/adventure.dark.json */
+[data-theme="adventure"][data-mode="dark"] {
+  --color-surface-page: #16231a;
+  --color-surface-raised: #1e2c20;
+  --color-surface-panel: #2a3b2d;
+  --color-surface-card: #35492f;
+  --color-text-primary: #ece2ce;
+  --color-text-muted: #9aa88f;
+  --color-text-inverse: #1e2c20;
+  --color-text-accent: #79b98c;
+  --color-border-default: #ece2ce;
+  --color-border-subtle: rgba(236, 226, 206, 0.16);
+  --color-border-none: transparent;
+  --color-action-secondary-bg: #2a3b2d;
+  --color-action-secondary-fg: #ece2ce;
+  --color-action-ghost-bg: transparent;
+  --color-action-ghost-fg: #ece2ce;
+  --color-action-ghost-fg-hover: #79b98c;
+  --color-accent-purple-subtle: #402631;
+  --color-accent-teal-subtle: #26341f;
+  --color-accent-orange-subtle: #46311f;
+  --color-accent-pink-subtle: #453a1c;
+  --color-accent-on-bold: #33301f;
+  --color-accent-on-subtle: #ece2ce;
+  --shadow-lift: 3px 3px 0px 0px #ece2ce;
+  --shadow-button-lift: none;
+  --focus-ring-width: 2px;
+  --focus-ring-color: #ece2ce;
+  --focus-ring-offset: 2px;
+}
+
+/* Theme override (own neutrals / a11y lift) — see tokens/overrides/adventure.light.json */
+[data-theme="adventure"][data-mode="light"] {
+  --color-surface-page: #e6dcc4;
+  --color-surface-raised: #f3ecdd;
+  --color-surface-panel: #ece2ce;
+  --color-surface-card: #fbf7ee;
+  --color-text-primary: #33301f;
+  --color-text-muted: #6b6146;
+  --color-text-inverse: #fbf7ee;
+  --color-border-default: #33301f;
+  --color-border-subtle: rgba(51, 48, 31, 0.12);
+  --color-border-none: transparent;
+  --color-action-secondary-bg: #e6dcc4;
+  --color-action-secondary-fg: #33301f;
+  --color-action-ghost-bg: transparent;
+  --color-action-ghost-fg: #33301f;
+  --color-accent-purple-subtle: #f4e2ea;
+  --color-accent-teal-subtle: #e8f0df;
+  --color-accent-orange-subtle: #f5e6d6;
+  --color-accent-pink-subtle: #f8f0d5;
+  --color-accent-on-bold: #33301f;
+  --color-accent-on-subtle: #33301f;
+  --shadow-lift: 3px 3px 0px 0px #33301f;
+  --shadow-button-lift: none;
+  --focus-ring-width: 2px;
+  --focus-ring-color: #33301f;
+  --focus-ring-offset: 2px;
+}
+
+/* Theme override (own neutrals / a11y lift) — see tokens/overrides/confetti.dark.json */
 [data-theme="confetti"][data-mode="dark"] {
   --color-text-accent: #f04b3a;
   --color-action-ghost-fg-hover: #f04b3a;
 }
 
-/* Accessibility exception — see tokens/exceptions/ocean.dark.json */
-[data-theme="ocean"][data-mode="dark"] {
-  --color-text-accent: #57c2dd;
-  --color-action-ghost-fg-hover: #57c2dd;
+/* Theme override (own neutrals / a11y lift) — see tokens/overrides/neon.dark.json */
+[data-theme="neon"][data-mode="dark"] {
+  --color-surface-page: #0d0221;
+  --color-surface-raised: #170a2e;
+  --color-surface-panel: #23113f;
+  --color-surface-card: #2e1650;
+  --color-text-primary: #ede0ff;
+  --color-text-muted: #a98fc9;
+  --color-text-inverse: #23113f;
+  --color-border-default: #ede0ff;
+  --color-border-subtle: rgba(237, 224, 255, 0.16);
+  --color-border-none: transparent;
+  --color-action-secondary-bg: #23113f;
+  --color-action-secondary-fg: #ede0ff;
+  --color-action-ghost-bg: transparent;
+  --color-action-ghost-fg: #ede0ff;
+  --color-accent-purple-subtle: #2a1550;
+  --color-accent-teal-subtle: #093c48;
+  --color-accent-orange-subtle: #2e3d0a;
+  --color-accent-pink-subtle: #4a0f2e;
+  --color-accent-on-bold: #000000;
+  --color-accent-on-subtle: #ede0ff;
+  --shadow-lift: 3px 3px 0px 0px #ede0ff;
+  --shadow-button-lift: 0 0 18px 0 #ff2d95;
+  --focus-ring-width: 2px;
+  --focus-ring-color: #ede0ff;
+  --focus-ring-offset: 2px;
+}
+
+/* Theme override (own neutrals / a11y lift) — see tokens/overrides/neon.light.json */
+[data-theme="neon"][data-mode="light"] {
+  --color-surface-page: #ede0ff;
+  --color-surface-raised: #faf6ff;
+  --color-surface-panel: #f2e9ff;
+  --color-surface-card: #ffffff;
+  --color-text-primary: #1a0430;
+  --color-text-muted: #5b3d7a;
+  --color-text-inverse: #ffffff;
+  --color-text-accent: #c0106e;
+  --color-border-default: #1a0430;
+  --color-border-subtle: rgba(26, 4, 48, 0.12);
+  --color-border-none: transparent;
+  --color-action-secondary-bg: #f2e9ff;
+  --color-action-secondary-fg: #1a0430;
+  --color-action-ghost-bg: transparent;
+  --color-action-ghost-fg: #1a0430;
+  --color-action-ghost-fg-hover: #c0106e;
+  --color-accent-purple-subtle: #efe4ff;
+  --color-accent-teal-subtle: #d9f9ff;
+  --color-accent-orange-subtle: #eefcd0;
+  --color-accent-pink-subtle: #ffe0f0;
+  --color-accent-on-bold: #000000;
+  --color-accent-on-subtle: #1a0430;
+  --shadow-lift: 3px 3px 0px 0px #1a0430;
+  --shadow-button-lift: 0 0 18px 0 #ff2d95;
+  --focus-ring-width: 2px;
+  --focus-ring-color: #1a0430;
+  --focus-ring-offset: 2px;
 }
