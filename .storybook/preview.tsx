@@ -10,7 +10,7 @@ const preview: Preview = {
     controls: { matchers: { color: /(background|color)$/i } },
     options: {
       storySort: {
-        order: ['Foundations', ['Color', 'Typography', 'Spacing', 'Elevation'], 'Components'],
+        order: ['Confetti', 'Foundations', ['Color', 'Typography', 'Spacing', 'Elevation'], 'Components'],
       },
     },
   },
