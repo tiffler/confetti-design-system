@@ -13,8 +13,8 @@
   --color-text-primary: #2e2618;
 }
 
-/* Global keyboard focus ring — mode-driven (thickens + goes solid black in
-   high-contrast). Components may override with a tighter rule. */
+/* Global keyboard focus ring — mode-driven (2px ink/cream in light/dark).
+   Components may override with a tighter rule. */
 :focus-visible {
   outline: var(--focus-ring-width, 2px) solid var(--focus-ring-color, currentColor);
   outline-offset: var(--focus-ring-offset, 2px);

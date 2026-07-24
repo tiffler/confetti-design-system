@@ -31,11 +31,12 @@
   transition:
     transform var(--button-transition-duration) var(--button-transition-easing),
     box-shadow var(--button-transition-duration) var(--button-transition-easing),
+    filter var(--button-transition-duration) var(--button-transition-easing),
     color var(--button-transition-duration) var(--button-transition-easing);
 }
 
-/* Focus ring comes from the mode axis: 2px ink/cream in light/dark, 4px solid
-   black in high-contrast. Never colour-only — it is an outline with real width. */
+/* Focus ring comes from the mode axis: 2px ink/cream in light/dark. Never
+   colour-only — it is an outline with real width. */
 .cf-button:focus-visible {
   outline: var(--focus-ring-width) solid var(--focus-ring-color);
   outline-offset: var(--focus-ring-offset);
@@ -68,11 +69,14 @@
 
 /* --- Hover ---------------------------------------------------------------- */
 
-/* Primary and secondary lift onto a hard ink shadow; ghost only shifts color. */
+/* Filled variants respond on hover per the active theme: a lift onto a hard shadow
+   (Confetti), a lightness bump with no lift (Adventure), or a neon glow (Neon) —
+   all driven by component tokens the theme repoints. Ghost only shifts color. */
 .cf-button--primary:hover:not([disabled]),
 .cf-button--secondary:hover:not([disabled]) {
   transform: var(--button-transform-hover);
   box-shadow: var(--button-shadow-hover);
+  filter: brightness(var(--button-hover-brightness));
 }
 
 .cf-button--ghost:hover:not([disabled]) {

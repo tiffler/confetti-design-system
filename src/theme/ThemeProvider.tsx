@@ -10,15 +10,19 @@ import {
 
 /**
  * Theme and mode are independent axes, combined by the CSS cascade at runtime
- * (data-theme + data-mode) — never a per-combination matrix. THEME governs
- * brand/accent; MODE governs neutrals + focus. Widening either union is a token
- * file plus one entry here; nothing else in the system needs to change.
+ * (data-theme + data-mode) — never a per-combination matrix. MODE governs the
+ * neutrals + focus and is Confetti's concern (light / dark). THEME is the
+ * project's concern: a demo re-skins Confetti by setting a handful of brand-kit
+ * inputs in its own `[data-theme="<name>"]` CSS block (see the brand-kit contract
+ * in tokens/themes/confetti.json). `Theme` is therefore an OPEN string — a demo
+ * passes its own theme name without editing this file. `THEMES` is just the list
+ * of themes built into Confetti itself (drives the Storybook toolbar).
  */
-export type Theme = 'confetti' | 'ocean';
-export type Mode = 'light' | 'dark' | 'high-contrast';
+export type Theme = 'confetti' | 'adventure' | 'neon' | (string & {});
+export type Mode = 'light' | 'dark';
 
-export const THEMES: Theme[] = ['confetti', 'ocean'];
-export const MODES: Mode[] = ['light', 'dark', 'high-contrast'];
+export const THEMES: Theme[] = ['confetti', 'adventure', 'neon'];
+export const MODES: Mode[] = ['light', 'dark'];
 
 type ThemeContextValue = {
   theme: Theme;

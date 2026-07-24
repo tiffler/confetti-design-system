@@ -2,6 +2,9 @@ import type { Preview } from '@storybook/react-vite';
 import { ThemeProvider, THEMES, MODES, type Theme, type Mode } from '../src/theme/ThemeProvider';
 import '../src/styles/global.css';
 
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const MODE_ICON: Record<string, string> = { light: 'sun', dark: 'moon' };
+
 const preview: Preview = {
   parameters: {
     controls: { matchers: { color: /(background|color)$/i } },
@@ -12,14 +15,14 @@ const preview: Preview = {
     },
   },
 
-  // Two independent toolbar axes, mirroring data-theme and data-mode.
+  // Two independent toolbar switchers in the navbar, mirroring data-theme and data-mode.
   globalTypes: {
     theme: {
       description: 'Design system theme',
       toolbar: {
         title: 'Theme',
         icon: 'paintbrush',
-        items: THEMES.map((theme) => ({ value: theme, title: theme })),
+        items: THEMES.map((theme) => ({ value: theme, title: cap(theme), icon: 'circlehollow' })),
         dynamicTitle: true,
       },
     },
@@ -28,7 +31,7 @@ const preview: Preview = {
       toolbar: {
         title: 'Mode',
         icon: 'contrast',
-        items: MODES.map((mode) => ({ value: mode, title: mode })),
+        items: MODES.map((mode) => ({ value: mode, title: cap(mode), icon: MODE_ICON[mode] ?? 'circle' })),
         dynamicTitle: true,
       },
     },
