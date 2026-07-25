@@ -18,7 +18,8 @@
       "900": { "value": "#1a150d" },
       "a24": { "value": "rgba(46, 38, 24, 0.24)" },
       "a18": { "value": "rgba(46, 38, 24, 0.18)" },
-      "a12": { "value": "rgba(46, 38, 24, 0.12)" }
+      "a12": { "value": "rgba(46, 38, 24, 0.12)" },
+      "a86": { "value": "rgba(26, 21, 13, 0.86)", "comment": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)" }
     },
     "red": {
       "500": { "value": "#c40000", "comment": "confetti brand Red — light/HC surfaces" },

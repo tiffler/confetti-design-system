@@ -5,7 +5,8 @@
       "page": { "value": "{color.ink.800}" },
       "raised": { "value": "{color.ink.700}" },
       "panel": { "value": "{color.ink.500}" },
-      "card": { "value": "{color.ink.400}" }
+      "card": { "value": "{color.ink.400}" },
+      "backdrop": { "value": "{color.ink.900}", "comment": "recessed mat — the deepest ink, below page" }
     },
     "text": {
       "primary": { "value": "{color.cream.300}" },

@@ -8,6 +8,7 @@
       "surface.raised",
       "surface.panel",
       "surface.card",
+      "surface.backdrop",
       "text.primary",
       "text.muted",
       "text.inverse",

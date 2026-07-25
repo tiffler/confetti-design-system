@@ -5,7 +5,8 @@
       "page": { "value": "{color.cream.300}" },
       "raised": { "value": "{color.cream.100}" },
       "panel": { "value": "{color.cream.200}" },
-      "card": { "value": "{color.base.white}" }
+      "card": { "value": "{color.base.white}" },
+      "backdrop": { "value": "{color.ink.200}", "comment": "recessed mat behind the app frame / control tracks — a step below page" }
     },
     "text": {
       "primary": { "value": "{color.ink.600}" },

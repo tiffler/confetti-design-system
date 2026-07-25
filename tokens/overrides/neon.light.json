@@ -5,7 +5,8 @@
       "page": { "value": "{color.haze.300}" },
       "raised": { "value": "{color.haze.100}" },
       "panel": { "value": "{color.haze.200}" },
-      "card": { "value": "{color.haze.50}" }
+      "card": { "value": "{color.haze.50}" },
+      "backdrop": { "value": "{color.glow.400}", "comment": "recessed mat — soft lavender-gray below the haze surfaces (demo default)" }
     },
     "text": {
       "primary": { "value": "{color.grape.900}" },

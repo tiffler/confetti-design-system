@@ -32,6 +32,7 @@
   --color-ink-a24: rgba(46, 38, 24, 0.24);
   --color-ink-a18: rgba(46, 38, 24, 0.18);
   --color-ink-a12: rgba(46, 38, 24, 0.12);
+  --color-ink-a86: rgba(26, 21, 13, 0.86);
   --color-red-300: #f04b3a;
   --color-red-400: #e33b2e;
   --color-red-500: #c40000;
@@ -106,6 +107,7 @@
   --color-base-white: #ffffff;
   --color-base-black: #000000;
   --color-base-transparent: transparent;
+  --color-scrim: rgba(26, 21, 13, 0.86);
   --radius-none: 0;
   --radius-xs: 2px;
   --radius-sm: 4px;
@@ -169,7 +171,9 @@
   --font-size-12: 12px;
   --font-size-14: 14px;
   --font-size-16: 16px;
+  --font-size-18: 18px;
   --font-size-20: 20px;
+  --font-size-22: 22px;
   --font-size-24: 24px;
   --font-size-32: 32px;
   --font-size-40: 40px;
@@ -333,6 +337,7 @@
   --color-surface-raised: #2a2317;
   --color-surface-panel: #332a1c;
   --color-surface-card: #3b3121;
+  --color-surface-backdrop: #1a150d;
   --color-text-primary: #ede4d3;
   --color-text-muted: #bfb6a6;
   --color-text-inverse: #2e2618;
@@ -361,6 +366,7 @@
   --color-surface-raised: #f4f0e4;
   --color-surface-panel: #ede7d8;
   --color-surface-card: #ffffff;
+  --color-surface-backdrop: #bfb6a6;
   --color-text-primary: #2e2618;
   --color-text-muted: #6b5f4a;
   --color-text-inverse: #ffffff;
@@ -441,6 +447,7 @@
   --color-surface-raised: #1e2c20;
   --color-surface-panel: #2a3b2d;
   --color-surface-card: #35492f;
+  --color-surface-backdrop: #16231a;
   --color-text-primary: #ece2ce;
   --color-text-muted: #9aa88f;
   --color-text-inverse: #1e2c20;
@@ -472,6 +479,7 @@
   --color-surface-raised: #f3ecdd;
   --color-surface-panel: #ece2ce;
   --color-surface-card: #fbf7ee;
+  --color-surface-backdrop: #9aa88f;
   --color-text-primary: #33301f;
   --color-text-muted: #6b6146;
   --color-text-inverse: #fbf7ee;
@@ -507,6 +515,7 @@
   --color-surface-raised: #170a2e;
   --color-surface-panel: #23113f;
   --color-surface-card: #2e1650;
+  --color-surface-backdrop: #0d0221;
   --color-text-primary: #ede0ff;
   --color-text-muted: #a98fc9;
   --color-text-inverse: #23113f;
@@ -536,6 +545,7 @@
   --color-surface-raised: #faf6ff;
   --color-surface-panel: #f2e9ff;
   --color-surface-card: #ffffff;
+  --color-surface-backdrop: #a98fc9;
   --color-text-primary: #1a0430;
   --color-text-muted: #5b3d7a;
   --color-text-inverse: #ffffff;

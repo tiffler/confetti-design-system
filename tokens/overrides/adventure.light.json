@@ -5,7 +5,8 @@
       "page": { "value": "{color.sand.300}" },
       "raised": { "value": "{color.sand.100}" },
       "panel": { "value": "{color.sand.200}" },
-      "card": { "value": "{color.sand.50}" }
+      "card": { "value": "{color.sand.50}" },
+      "backdrop": { "value": "{color.sage.400}", "comment": "recessed mat — soft sage-gray below the sand surfaces (demo default)" }
     },
     "text": {
       "primary": { "value": "{color.bark.600}" },

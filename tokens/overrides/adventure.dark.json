@@ -5,7 +5,8 @@
       "page": { "value": "{color.forest.800}" },
       "raised": { "value": "{color.forest.700}" },
       "panel": { "value": "{color.forest.500}" },
-      "card": { "value": "{color.forest.400}" }
+      "card": { "value": "{color.forest.400}" },
+      "backdrop": { "value": "{color.forest.800}", "comment": "recessed mat — collapses to the deepest forest (no darker neutral; demo default)" }
     },
     "text": {
       "primary": { "value": "{color.sand.200}" },

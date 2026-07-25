@@ -114,6 +114,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--color-ink-a12"
           }
+        },
+        "a86": {
+          "$value": "rgba(26, 21, 13, 0.86)",
+          "$type": "color",
+          "$description": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a86"
+          }
         }
       },
       "red": {
@@ -718,6 +726,14 @@
           }
         }
       },
+      "scrim": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "color",
+        "$description": "modal / lightbox overlay dim",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
       "text": {
         "accent": {
           "$value": "#79b98c",
@@ -912,6 +928,14 @@
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-card"
+          }
+        },
+        "backdrop": {
+          "$value": "#16231a",
+          "$type": "color",
+          "$description": "recessed mat — collapses to the deepest forest (no darker neutral; demo default)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-backdrop"
           }
         }
       },
@@ -1513,11 +1537,27 @@
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
+        "18": {
+          "$value": "18px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-18"
+          }
+        },
         "20": {
           "$value": "20px",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
+          }
+        },
+        "22": {
+          "$value": "22px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-22"
           }
         },
         "24": {
@@ -2750,6 +2790,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--color-ink-a12"
           }
+        },
+        "a86": {
+          "$value": "rgba(26, 21, 13, 0.86)",
+          "$type": "color",
+          "$description": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a86"
+          }
         }
       },
       "red": {
@@ -3354,6 +3402,14 @@
           }
         }
       },
+      "scrim": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "color",
+        "$description": "modal / lightbox overlay dim",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
       "text": {
         "accent": {
           "$value": "#2f6b3f",
@@ -3548,6 +3604,14 @@
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-card"
+          }
+        },
+        "backdrop": {
+          "$value": "#9aa88f",
+          "$type": "color",
+          "$description": "recessed mat — soft sage-gray below the sand surfaces (demo default)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-backdrop"
           }
         }
       },
@@ -4149,11 +4213,27 @@
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
+        "18": {
+          "$value": "18px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-18"
+          }
+        },
         "20": {
           "$value": "20px",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
+          }
+        },
+        "22": {
+          "$value": "22px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-22"
           }
         },
         "24": {
@@ -5386,6 +5466,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--color-ink-a12"
           }
+        },
+        "a86": {
+          "$value": "rgba(26, 21, 13, 0.86)",
+          "$type": "color",
+          "$description": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a86"
+          }
         }
       },
       "red": {
@@ -5990,6 +6078,14 @@
           }
         }
       },
+      "scrim": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "color",
+        "$description": "modal / lightbox overlay dim",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
       "text": {
         "accent": {
           "$value": "#f04b3a",
@@ -6186,6 +6282,14 @@
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-card"
+          }
+        },
+        "backdrop": {
+          "$value": "#1a150d",
+          "$type": "color",
+          "$description": "recessed mat — the deepest ink, below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-backdrop"
           }
         }
       },
@@ -6787,11 +6891,27 @@
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
+        "18": {
+          "$value": "18px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-18"
+          }
+        },
         "20": {
           "$value": "20px",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
+          }
+        },
+        "22": {
+          "$value": "22px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-22"
           }
         },
         "24": {
@@ -8027,6 +8147,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--color-ink-a12"
           }
+        },
+        "a86": {
+          "$value": "rgba(26, 21, 13, 0.86)",
+          "$type": "color",
+          "$description": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a86"
+          }
         }
       },
       "red": {
@@ -8631,6 +8759,14 @@
           }
         }
       },
+      "scrim": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "color",
+        "$description": "modal / lightbox overlay dim",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
       "text": {
         "accent": {
           "$value": "#c40000",
@@ -8827,6 +8963,14 @@
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-card"
+          }
+        },
+        "backdrop": {
+          "$value": "#bfb6a6",
+          "$type": "color",
+          "$description": "recessed mat behind the app frame / control tracks — a step below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-backdrop"
           }
         }
       },
@@ -9428,11 +9572,27 @@
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
+        "18": {
+          "$value": "18px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-18"
+          }
+        },
         "20": {
           "$value": "20px",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
+          }
+        },
+        "22": {
+          "$value": "22px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-22"
           }
         },
         "24": {
@@ -10668,6 +10828,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--color-ink-a12"
           }
+        },
+        "a86": {
+          "$value": "rgba(26, 21, 13, 0.86)",
+          "$type": "color",
+          "$description": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a86"
+          }
         }
       },
       "red": {
@@ -11272,6 +11440,14 @@
           }
         }
       },
+      "scrim": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "color",
+        "$description": "modal / lightbox overlay dim",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
       "text": {
         "accent": {
           "$value": "#ff2d95",
@@ -11466,6 +11642,14 @@
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-card"
+          }
+        },
+        "backdrop": {
+          "$value": "#0d0221",
+          "$type": "color",
+          "$description": "recessed mat — collapses to the deepest synth (no darker neutral; demo default)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-backdrop"
           }
         }
       },
@@ -12067,11 +12251,27 @@
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
+        "18": {
+          "$value": "18px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-18"
+          }
+        },
         "20": {
           "$value": "20px",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
+          }
+        },
+        "22": {
+          "$value": "22px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-22"
           }
         },
         "24": {
@@ -13305,6 +13505,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--color-ink-a12"
           }
+        },
+        "a86": {
+          "$value": "rgba(26, 21, 13, 0.86)",
+          "$type": "color",
+          "$description": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-ink-a86"
+          }
         }
       },
       "red": {
@@ -13909,6 +14117,14 @@
           }
         }
       },
+      "scrim": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "color",
+        "$description": "modal / lightbox overlay dim",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
       "text": {
         "accent": {
           "$value": "#c0106e",
@@ -14103,6 +14319,14 @@
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-card"
+          }
+        },
+        "backdrop": {
+          "$value": "#a98fc9",
+          "$type": "color",
+          "$description": "recessed mat — soft lavender-gray below the haze surfaces (demo default)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-surface-backdrop"
           }
         }
       },
@@ -14704,11 +14928,27 @@
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
+        "18": {
+          "$value": "18px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-18"
+          }
+        },
         "20": {
           "$value": "20px",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
+          }
+        },
+        "22": {
+          "$value": "22px",
+          "$type": "dimension",
+          "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--font-size-22"
           }
         },
         "24": {

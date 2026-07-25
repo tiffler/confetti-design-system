@@ -5,7 +5,8 @@
       "page": { "value": "{color.synth.900}" },
       "raised": { "value": "{color.synth.800}" },
       "panel": { "value": "{color.synth.700}" },
-      "card": { "value": "{color.synth.600}" }
+      "card": { "value": "{color.synth.600}" },
+      "backdrop": { "value": "{color.synth.900}", "comment": "recessed mat — collapses to the deepest synth (no darker neutral; demo default)" }
     },
     "text": {
       "primary": { "value": "{color.glow.100}" },
