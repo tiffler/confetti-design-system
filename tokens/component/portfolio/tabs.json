@@ -9,7 +9,7 @@
     "gap": { "value": "{space.inset-xs}", "comment": "4px between tabs" },
     "idle-fg": { "value": "{color.text.muted}", "comment": "inactive tab label" },
     "font-family": { "value": "{font.family.label}" },
-    "font-size": { "value": "{font.size.label}", "comment": "12px mono — the control label" },
+    "font-size": { "value": "{font.size.body-secondary}", "comment": "14px mono — the control label, sized for legibility" },
     "font-weight": { "value": "{font.weight.label}" },
     "tracking": { "value": "{font.tracking.label}" },
     "tab-padding-x": { "value": "{space.inset-lg}", "comment": "20px — roomy, so the control reads at a comfortable tap size" },

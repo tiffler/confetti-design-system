@@ -58,7 +58,7 @@
      indicator's, so the indicator overlays the tab exactly and the idle → active transition
      doesn't shift the label. */
   padding: var(--tabs-tab-padding-y) var(--tabs-tab-padding-x);
-  border: var(--badge-border-width) solid transparent;
+  border: var(--badge-border-width) solid var(--color-border-none);
   border-radius: var(--badge-radius);
   background: transparent;
   color: var(--tabs-idle-fg);
@@ -67,7 +67,7 @@
   font-size: var(--tabs-font-size);
   font-weight: var(--tabs-font-weight);
   letter-spacing: var(--tabs-tracking);
-  line-height: 1;
+  line-height: var(--font-leading-none);
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;

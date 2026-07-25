@@ -2583,9 +2583,9 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "14px",
         "$type": "other",
-        "$description": "12px mono — the control label",
+        "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-font-size"
         }
@@ -5219,9 +5219,9 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "14px",
         "$type": "other",
-        "$description": "12px mono — the control label",
+        "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-font-size"
         }
@@ -7860,9 +7860,9 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "14px",
         "$type": "other",
-        "$description": "12px mono — the control label",
+        "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-font-size"
         }
@@ -10501,9 +10501,9 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "14px",
         "$type": "other",
-        "$description": "12px mono — the control label",
+        "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-font-size"
         }
@@ -13138,9 +13138,9 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "14px",
         "$type": "other",
-        "$description": "12px mono — the control label",
+        "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-font-size"
         }
@@ -15775,9 +15775,9 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "14px",
         "$type": "other",
-        "$description": "12px mono — the control label",
+        "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-font-size"
         }
