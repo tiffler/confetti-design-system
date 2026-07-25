@@ -118,6 +118,7 @@
   --border-width-hairline: 1px;
   --border-width-sticker: 2px;
   --border-width-heavy: 4px;
+  --border-width-thin: 1px;
   --shadow-none: none;
   --shadow-hard-ink: 3px 3px 0px 0px #2e2618;
   --shadow-hard-cream: 3px 3px 0px 0px #ede4d3;
@@ -231,8 +232,8 @@
 /* Component tokens — var() references that compose the active mode + theme. */
 :root {
   --badge-radius: var(--radius-control);
-  --badge-border-width: var(--border-width-default);
-  --badge-border-color: var(--color-border-default);
+  --badge-border-width: var(--border-width-thin);
+  --badge-border-color: var(--color-border-subtle);
   --badge-font-family: var(--font-family-label);
   --badge-font-size: var(--font-size-label);
   --badge-font-weight: var(--font-weight-label);
@@ -310,6 +311,15 @@
   --icon-color-default: var(--color-text-primary);
   --icon-color-muted: var(--color-text-muted);
   --icon-color-accent: var(--color-text-accent);
+  --tabs-track-bg: var(--color-surface-panel);
+  --tabs-track-border-color: var(--color-border-subtle);
+  --tabs-track-border-width: var(--border-width-thin);
+  --tabs-track-radius: var(--radius-container);
+  --tabs-track-padding: var(--space-inset-xs);
+  --tabs-gap: var(--space-inset-xs);
+  --tabs-idle-fg: var(--color-text-muted);
+  --tabs-transition-duration: var(--motion-duration-interaction);
+  --tabs-transition-easing: var(--motion-easing-interaction);
 }
 
 [data-mode="dark"] {

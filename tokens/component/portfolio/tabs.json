@@ -1,0 +1,14 @@
+{
+  "$comment": "Tabs / segmented control. The TRACK (rail) and the idle label are owned here. The ACTIVE indicator is not — it reuses the Badge component tokens (--badge-bg-*, --badge-radius, --badge-border-*, --badge-padding-*, --badge-fg, --badge-font-*) directly in Tabs.css, so an active tab renders pixel-for-pixel as a Badge of the same hue. Badge is the single source of truth for the pill.",
+  "tabs": {
+    "track-bg": { "value": "{color.surface.panel}", "comment": "recessed rail behind the pills" },
+    "track-border-color": { "value": "{color.border.subtle}" },
+    "track-border-width": { "value": "{border.width.thin}" },
+    "track-radius": { "value": "{radius.container}" },
+    "track-padding": { "value": "{space.inset-xs}", "comment": "4px — tight inset around the pills" },
+    "gap": { "value": "{space.inset-xs}", "comment": "4px between tabs" },
+    "idle-fg": { "value": "{color.text.muted}", "comment": "inactive tab label" },
+    "transition-duration": { "value": "{motion.duration.interaction}" },
+    "transition-easing": { "value": "{motion.easing.interaction}" }
+  }
+}

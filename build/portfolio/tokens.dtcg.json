@@ -1048,6 +1048,14 @@
             "com.confetti.cssVariable": "--border-width-heavy"
           }
         },
+        "thin": {
+          "$value": "1px",
+          "$type": "dimension",
+          "$description": "1px — soft pill / chip outline (Badge, Tabs indicator)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-thin"
+          }
+        },
         "default": {
           "$value": "2px",
           "$type": "dimension",
@@ -1935,15 +1943,17 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
+        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
       },
       "border-color": {
-        "$value": "#ece2ce",
+        "$value": "rgba(236, 226, 206, 0.16)",
         "$type": "other",
+        "$description": "soft pill — subtle tint, not the ink sticker border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-color"
         }
@@ -2508,6 +2518,75 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "tabs": {
+      "track-bg": {
+        "$value": "#2a3b2d",
+        "$type": "other",
+        "$description": "recessed rail behind the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-bg"
+        }
+      },
+      "track-border-color": {
+        "$value": "rgba(236, 226, 206, 0.16)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-color"
+        }
+      },
+      "track-border-width": {
+        "$value": "1px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-width"
+        }
+      },
+      "track-radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-radius"
+        }
+      },
+      "track-padding": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px — tight inset around the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-padding"
+        }
+      },
+      "gap": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px between tabs",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-gap"
+        }
+      },
+      "idle-fg": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$description": "inactive tab label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
     }
@@ -3560,6 +3639,14 @@
             "com.confetti.cssVariable": "--border-width-heavy"
           }
         },
+        "thin": {
+          "$value": "1px",
+          "$type": "dimension",
+          "$description": "1px — soft pill / chip outline (Badge, Tabs indicator)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-thin"
+          }
+        },
         "default": {
           "$value": "2px",
           "$type": "dimension",
@@ -4447,15 +4534,17 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
+        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
       },
       "border-color": {
-        "$value": "#33301f",
+        "$value": "rgba(51, 48, 31, 0.12)",
         "$type": "other",
+        "$description": "soft pill — subtle tint, not the ink sticker border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-color"
         }
@@ -5020,6 +5109,75 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "tabs": {
+      "track-bg": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "recessed rail behind the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-bg"
+        }
+      },
+      "track-border-color": {
+        "$value": "rgba(51, 48, 31, 0.12)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-color"
+        }
+      },
+      "track-border-width": {
+        "$value": "1px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-width"
+        }
+      },
+      "track-radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-radius"
+        }
+      },
+      "track-padding": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px — tight inset around the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-padding"
+        }
+      },
+      "gap": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px between tabs",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-gap"
+        }
+      },
+      "idle-fg": {
+        "$value": "#6b6146",
+        "$type": "other",
+        "$description": "inactive tab label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
     }
@@ -6074,6 +6232,14 @@
             "com.confetti.cssVariable": "--border-width-heavy"
           }
         },
+        "thin": {
+          "$value": "1px",
+          "$type": "dimension",
+          "$description": "1px — soft pill / chip outline (Badge, Tabs indicator)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-thin"
+          }
+        },
         "default": {
           "$value": "2px",
           "$type": "dimension",
@@ -6964,15 +7130,17 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
+        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
       },
       "border-color": {
-        "$value": "#ede4d3",
+        "$value": "rgba(237, 228, 211, 0.16)",
         "$type": "other",
+        "$description": "soft pill — subtle tint, not the ink sticker border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-color"
         }
@@ -7537,6 +7705,75 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "tabs": {
+      "track-bg": {
+        "$value": "#332a1c",
+        "$type": "other",
+        "$description": "recessed rail behind the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-bg"
+        }
+      },
+      "track-border-color": {
+        "$value": "rgba(237, 228, 211, 0.16)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-color"
+        }
+      },
+      "track-border-width": {
+        "$value": "1px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-width"
+        }
+      },
+      "track-radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-radius"
+        }
+      },
+      "track-padding": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px — tight inset around the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-padding"
+        }
+      },
+      "gap": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px between tabs",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-gap"
+        }
+      },
+      "idle-fg": {
+        "$value": "#bfb6a6",
+        "$type": "other",
+        "$description": "inactive tab label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
     }
@@ -8591,6 +8828,14 @@
             "com.confetti.cssVariable": "--border-width-heavy"
           }
         },
+        "thin": {
+          "$value": "1px",
+          "$type": "dimension",
+          "$description": "1px — soft pill / chip outline (Badge, Tabs indicator)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-thin"
+          }
+        },
         "default": {
           "$value": "2px",
           "$type": "dimension",
@@ -9481,15 +9726,17 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
+        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
       },
       "border-color": {
-        "$value": "#2e2618",
+        "$value": "rgba(46, 38, 24, 0.12)",
         "$type": "other",
+        "$description": "soft pill — subtle tint, not the ink sticker border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-color"
         }
@@ -10054,6 +10301,75 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "tabs": {
+      "track-bg": {
+        "$value": "#ede7d8",
+        "$type": "other",
+        "$description": "recessed rail behind the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-bg"
+        }
+      },
+      "track-border-color": {
+        "$value": "rgba(46, 38, 24, 0.12)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-color"
+        }
+      },
+      "track-border-width": {
+        "$value": "1px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-width"
+        }
+      },
+      "track-radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-radius"
+        }
+      },
+      "track-padding": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px — tight inset around the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-padding"
+        }
+      },
+      "gap": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px between tabs",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-gap"
+        }
+      },
+      "idle-fg": {
+        "$value": "#6b5f4a",
+        "$type": "other",
+        "$description": "inactive tab label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
     }
@@ -11106,6 +11422,14 @@
             "com.confetti.cssVariable": "--border-width-heavy"
           }
         },
+        "thin": {
+          "$value": "1px",
+          "$type": "dimension",
+          "$description": "1px — soft pill / chip outline (Badge, Tabs indicator)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-thin"
+          }
+        },
         "default": {
           "$value": "2px",
           "$type": "dimension",
@@ -11994,15 +12318,17 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
+        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
       },
       "border-color": {
-        "$value": "#ede0ff",
+        "$value": "rgba(237, 224, 255, 0.16)",
         "$type": "other",
+        "$description": "soft pill — subtle tint, not the ink sticker border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-color"
         }
@@ -12567,6 +12893,75 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "tabs": {
+      "track-bg": {
+        "$value": "#23113f",
+        "$type": "other",
+        "$description": "recessed rail behind the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-bg"
+        }
+      },
+      "track-border-color": {
+        "$value": "rgba(237, 224, 255, 0.16)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-color"
+        }
+      },
+      "track-border-width": {
+        "$value": "1px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-width"
+        }
+      },
+      "track-radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-radius"
+        }
+      },
+      "track-padding": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px — tight inset around the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-padding"
+        }
+      },
+      "gap": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px between tabs",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-gap"
+        }
+      },
+      "idle-fg": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$description": "inactive tab label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
     }
@@ -13619,6 +14014,14 @@
             "com.confetti.cssVariable": "--border-width-heavy"
           }
         },
+        "thin": {
+          "$value": "1px",
+          "$type": "dimension",
+          "$description": "1px — soft pill / chip outline (Badge, Tabs indicator)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--border-width-thin"
+          }
+        },
         "default": {
           "$value": "2px",
           "$type": "dimension",
@@ -14507,15 +14910,17 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
+        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
       },
       "border-color": {
-        "$value": "#1a0430",
+        "$value": "rgba(26, 4, 48, 0.12)",
         "$type": "other",
+        "$description": "soft pill — subtle tint, not the ink sticker border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-color"
         }
@@ -15080,6 +15485,75 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "tabs": {
+      "track-bg": {
+        "$value": "#f2e9ff",
+        "$type": "other",
+        "$description": "recessed rail behind the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-bg"
+        }
+      },
+      "track-border-color": {
+        "$value": "rgba(26, 4, 48, 0.12)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-color"
+        }
+      },
+      "track-border-width": {
+        "$value": "1px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-border-width"
+        }
+      },
+      "track-radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-radius"
+        }
+      },
+      "track-padding": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px — tight inset around the pills",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-track-padding"
+        }
+      },
+      "gap": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px between tabs",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-gap"
+        }
+      },
+      "idle-fg": {
+        "$value": "#5b3d7a",
+        "$type": "other",
+        "$description": "inactive tab label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
     }

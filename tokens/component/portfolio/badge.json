@@ -1,8 +1,8 @@
 {
   "badge": {
     "radius": { "value": "{radius.control}" },
-    "border-width": { "value": "{border.width.default}" },
-    "border-color": { "value": "{color.border.default}" },
+    "border-width": { "value": "{border.width.thin}", "comment": "soft pill — 1px hairline, not the 2px sticker edge" },
+    "border-color": { "value": "{color.border.subtle}", "comment": "soft pill — subtle tint, not the ink sticker border" },
     "font-family": { "value": "{font.family.label}" },
     "font-size": { "value": "{font.size.label}" },
     "font-weight": { "value": "{font.weight.label}" },

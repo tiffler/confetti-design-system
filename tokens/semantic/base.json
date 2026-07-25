@@ -36,6 +36,12 @@
     "chip": { "value": "{radius.xs}" },
     "avatar": { "value": "{radius.circle}" }
   },
+  "border": {
+    "$comment": "default (the themeable 2px sticker edge) lives in the wiring; thin is the fixed 1px outline of the soft pill — Badge and the Tabs active indicator. Leaf name differs from the border.width.hairline primitive to avoid a flat-namespace collision.",
+    "width": {
+      "thin": { "value": "{border.width.hairline}", "comment": "1px — soft pill / chip outline (Badge, Tabs indicator)" }
+    }
+  },
   "size": {
     "control": { "value": "{space.12}", "comment": "48px — height of a tappable control." },
     "icon": {
