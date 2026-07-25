@@ -4,6 +4,21 @@ All notable changes to Confetti. Versions follow [semver](https://semver.org): a
 or component change that alters rendered output is a **minor** bump (consumers pull it via
 the token sync); additive-only, non-visual changes are **patch**.
 
+## [0.2.1] — 2026-07-25
+
+### Added — new tokens (additive; no change to existing output, so a patch)
+
+- **`--color-scrim`** — modal / lightbox overlay dim (`ink.900` @ 86%, fixed across
+  modes/themes). New primitive `color.ink.a86`.
+- **`--color-surface-backdrop`** — a recessed "mat" surface a step below `page`, for app
+  frames / control tracks. Defined per theme × mode (light = each theme's soft dark-muted
+  neutral: `ink.200` / `sage.400` / `glow.400`; dark = the deepest surface). Added to the
+  required schema, so every theme must supply it.
+- **`--font-size-18` / `--font-size-22`** — utility type steps (off the 4px grid, like `14`).
+
+Auto-exposed as Tailwind keys (`bg-scrim`, `bg-surface-backdrop`, `text-18`, `text-22`) and
+shown live in the Storybook Foundations.
+
 ## [0.2.0] — 2026-07-24
 
 ### Added

@@ -12,8 +12,8 @@ import pkg from '../package.json';
  */
 
 // Bump when you cut a release. (Version is read live from package.json.)
-const LAST_UPDATED = 'July 24, 2026';
-// (Tabs added + Badge softened to the shared pill — v0.2.0)
+const LAST_UPDATED = 'July 25, 2026';
+// (Scrim, surface-backdrop, 18/22 type steps — v0.2.1)
 const PORTFOLIO = 'https://tienmedia.com';
 
 function Cover() {

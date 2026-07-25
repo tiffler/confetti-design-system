@@ -37,10 +37,18 @@ The pairs the components actually produce. These are the ones that matter.
 
 ## Surfaces
 
-The elevation ramp. `page` is the baseline, `raised` is canvas and widget surfaces,
+The elevation ramp. `backdrop` is the recessed mat a step below page (app frames,
+control tracks), `page` is the baseline, `raised` is canvas and widget surfaces,
 `panel` is toolbar and sidebar chrome, `card` is the contrast interior.
 
 <ColorGrid prefix="color-surface-" />
+
+## Overlay
+
+`scrim` is the modal / lightbox dim — deep ink at high alpha, held constant across
+themes and modes so a dimmed backdrop reads the same everywhere.
+
+<ColorGrid prefix="color-scrim" />
 
 ## Text
 
