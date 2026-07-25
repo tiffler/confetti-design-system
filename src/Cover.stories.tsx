@@ -13,6 +13,7 @@ import pkg from '../package.json';
 
 // Bump when you cut a release. (Version is read live from package.json.)
 const LAST_UPDATED = 'July 24, 2026';
+// (Tabs added + Badge softened to the shared pill — v0.2.0)
 const PORTFOLIO = 'https://tienmedia.com';
 
 function Cover() {
@@ -128,7 +129,6 @@ const meta: Meta = {
   title: 'Confetti',
   parameters: {
     layout: 'fullscreen',
-    options: { showPanel: false },
     docs: { disable: true },
   },
 };
