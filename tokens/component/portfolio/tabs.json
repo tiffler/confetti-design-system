@@ -1,5 +1,5 @@
 {
-  "$comment": "Tabs / segmented control. The TRACK (rail) and the idle label are owned here. The ACTIVE indicator is not — it reuses the Badge component tokens (--badge-bg-*, --badge-radius, --badge-border-*, --badge-padding-*, --badge-fg, --badge-font-*) directly in Tabs.css, so an active tab renders pixel-for-pixel as a Badge of the same hue. Badge is the single source of truth for the pill.",
+  "$comment": "Tabs / segmented control. Its own tokens own the TRACK (rail), the idle label, and the tab's SIZE (a comfortable, tappable control — roomy padding + readable mono label, matching the portfolio's About-page slider). The active indicator borrows only Badge's PALETTE + treatment (--badge-bg-*, --badge-radius, --badge-border-*, --badge-fg) directly in Tabs.css, so a lit tab and a Badge share one look per hue — but a tab is deliberately larger than a category Badge.",
   "tabs": {
     "track-bg": { "value": "{color.surface.panel}", "comment": "recessed rail behind the pills" },
     "track-border-color": { "value": "{color.border.subtle}" },
@@ -8,6 +8,12 @@
     "track-padding": { "value": "{space.inset-xs}", "comment": "4px — tight inset around the pills" },
     "gap": { "value": "{space.inset-xs}", "comment": "4px between tabs" },
     "idle-fg": { "value": "{color.text.muted}", "comment": "inactive tab label" },
+    "font-family": { "value": "{font.family.label}" },
+    "font-size": { "value": "{font.size.label}", "comment": "12px mono — the control label" },
+    "font-weight": { "value": "{font.weight.label}" },
+    "tracking": { "value": "{font.tracking.label}" },
+    "tab-padding-x": { "value": "{space.inset-lg}", "comment": "20px — roomy, so the control reads at a comfortable tap size" },
+    "tab-padding-y": { "value": "{space.inset-sm}", "comment": "12px" },
     "transition-duration": { "value": "{motion.duration.interaction}" },
     "transition-easing": { "value": "{motion.easing.interaction}" }
   }

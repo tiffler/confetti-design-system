@@ -17,7 +17,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'A segmented control — a pill group with a sliding active indicator. The indicator consumes the **same `--badge-*` tokens** as Badge, so a lit tab is pixel-for-pixel a bold Badge of the matching hue. Full keyboard support (arrows / Home / End, roving tabindex).',
+          'A segmented control — a pill group with a sliding active indicator. The active pill borrows Badge’s **palette and treatment** (the `--badge-*` fill, 1px subtle border, radius, ink label), so a lit tab and a Badge read as one system per hue — but a tab is a larger, comfortable control (roomy padding, readable mono label), matched to the portfolio’s About-page slider. Full keyboard support (arrows / Home / End, roving `tabindex`).',
       },
     },
   },
@@ -40,16 +40,24 @@ function Demo({ tabs = CATEGORIES, hue }: { tabs?: TabItem[]; hue?: TabItem['hue
 }
 
 export const Default: Story = {
-  render: () => <Demo />,
-};
-
-export const MatchesBadge: Story = {
-  name: 'Active tab === Badge',
   parameters: {
     docs: {
       description: {
         story:
-          'The row of bold Badges and the segmented control below draw from one token set. Select a tab: the lit pill is the same object as the Badge above it — same fill, 1px subtle border, radius, ink label, and mono type.',
+          'Four category tabs, purple active. Click or arrow-key between them — the pill slides and takes the active tab’s hue.',
+      },
+    },
+  },
+  render: () => <Demo />,
+};
+
+export const SharesBadgePalette: Story = {
+  name: 'Shares Badge’s palette',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'The bold Badges (top) and the slider (below) draw from one token set, so each accent reads the same across both — same fill, 1px subtle border, radius, ink mono label. The slider is the larger control; the Badge is the compact label.',
       },
     },
   },

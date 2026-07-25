@@ -10,8 +10,9 @@
   border-radius: var(--tabs-track-radius);
 }
 
-/* The sliding active pill. It IS a Badge — same tokens — so a lit tab and a category
-   Badge of the same hue are identical. Position/size are measured from the active tab. */
+/* The sliding active pill borrows Badge's palette + treatment (fill / border / radius),
+   so it reads as the same object per hue. Its size comes from the tab, not the Badge —
+   a tab is a comfortable control, larger than a category Badge. Measured from the active tab. */
 .cf-tabs__indicator {
   position: absolute;
   top: var(--tabs-track-padding);
@@ -53,18 +54,19 @@
   align-items: center;
   gap: var(--space-inline);
 
-  /* Padding + a transparent border match the Badge footprint, so the indicator overlays
-     the tab exactly and the idle → active transition doesn't shift the label. */
-  padding: var(--badge-padding-y) var(--badge-padding-x);
+  /* Roomy control padding (the About-slider size), plus a transparent border matching the
+     indicator's, so the indicator overlays the tab exactly and the idle → active transition
+     doesn't shift the label. */
+  padding: var(--tabs-tab-padding-y) var(--tabs-tab-padding-x);
   border: var(--badge-border-width) solid transparent;
   border-radius: var(--badge-radius);
   background: transparent;
   color: var(--tabs-idle-fg);
 
-  font-family: var(--badge-font-family);
-  font-size: var(--badge-font-size);
-  font-weight: var(--badge-font-weight);
-  letter-spacing: var(--badge-tracking);
+  font-family: var(--tabs-font-family);
+  font-size: var(--tabs-font-size);
+  font-weight: var(--tabs-font-weight);
+  letter-spacing: var(--tabs-tracking);
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;

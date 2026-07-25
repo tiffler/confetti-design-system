@@ -318,6 +318,12 @@
   --tabs-track-padding: var(--space-inset-xs);
   --tabs-gap: var(--space-inset-xs);
   --tabs-idle-fg: var(--color-text-muted);
+  --tabs-font-family: var(--font-family-label);
+  --tabs-font-size: var(--font-size-label);
+  --tabs-font-weight: var(--font-weight-label);
+  --tabs-tracking: var(--font-tracking-label);
+  --tabs-tab-padding-x: var(--space-inset-lg);
+  --tabs-tab-padding-y: var(--space-inset-sm);
   --tabs-transition-duration: var(--motion-duration-interaction);
   --tabs-transition-easing: var(--motion-easing-interaction);
 }

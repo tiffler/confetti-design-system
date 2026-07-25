@@ -2575,6 +2575,51 @@
           "com.confetti.cssVariable": "--tabs-idle-fg"
         }
       },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px mono — the control label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-size"
+        }
+      },
+      "font-weight": {
+        "$value": "700",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-weight"
+        }
+      },
+      "tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tracking"
+        }
+      },
+      "tab-padding-x": {
+        "$value": "20px",
+        "$type": "other",
+        "$description": "20px — roomy, so the control reads at a comfortable tap size",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+        }
+      },
+      "tab-padding-y": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-y"
+        }
+      },
       "transition-duration": {
         "$value": "180ms",
         "$type": "other",
@@ -5164,6 +5209,51 @@
         "$description": "inactive tab label",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px mono — the control label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-size"
+        }
+      },
+      "font-weight": {
+        "$value": "700",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-weight"
+        }
+      },
+      "tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tracking"
+        }
+      },
+      "tab-padding-x": {
+        "$value": "20px",
+        "$type": "other",
+        "$description": "20px — roomy, so the control reads at a comfortable tap size",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+        }
+      },
+      "tab-padding-y": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-y"
         }
       },
       "transition-duration": {
@@ -7762,6 +7852,51 @@
           "com.confetti.cssVariable": "--tabs-idle-fg"
         }
       },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px mono — the control label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-size"
+        }
+      },
+      "font-weight": {
+        "$value": "700",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-weight"
+        }
+      },
+      "tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tracking"
+        }
+      },
+      "tab-padding-x": {
+        "$value": "20px",
+        "$type": "other",
+        "$description": "20px — roomy, so the control reads at a comfortable tap size",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+        }
+      },
+      "tab-padding-y": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-y"
+        }
+      },
       "transition-duration": {
         "$value": "180ms",
         "$type": "other",
@@ -10358,6 +10493,51 @@
           "com.confetti.cssVariable": "--tabs-idle-fg"
         }
       },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px mono — the control label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-size"
+        }
+      },
+      "font-weight": {
+        "$value": "700",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-weight"
+        }
+      },
+      "tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tracking"
+        }
+      },
+      "tab-padding-x": {
+        "$value": "20px",
+        "$type": "other",
+        "$description": "20px — roomy, so the control reads at a comfortable tap size",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+        }
+      },
+      "tab-padding-y": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-y"
+        }
+      },
       "transition-duration": {
         "$value": "180ms",
         "$type": "other",
@@ -12950,6 +13130,51 @@
           "com.confetti.cssVariable": "--tabs-idle-fg"
         }
       },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px mono — the control label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-size"
+        }
+      },
+      "font-weight": {
+        "$value": "700",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-weight"
+        }
+      },
+      "tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tracking"
+        }
+      },
+      "tab-padding-x": {
+        "$value": "20px",
+        "$type": "other",
+        "$description": "20px — roomy, so the control reads at a comfortable tap size",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+        }
+      },
+      "tab-padding-y": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-y"
+        }
+      },
       "transition-duration": {
         "$value": "180ms",
         "$type": "other",
@@ -15540,6 +15765,51 @@
         "$description": "inactive tab label",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px mono — the control label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-size"
+        }
+      },
+      "font-weight": {
+        "$value": "700",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-font-weight"
+        }
+      },
+      "tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tracking"
+        }
+      },
+      "tab-padding-x": {
+        "$value": "20px",
+        "$type": "other",
+        "$description": "20px — roomy, so the control reads at a comfortable tap size",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+        }
+      },
+      "tab-padding-y": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "12px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-padding-y"
         }
       },
       "transition-duration": {

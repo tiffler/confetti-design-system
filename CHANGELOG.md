@@ -9,8 +9,9 @@ the token sync); additive-only, non-visual changes are **patch**.
 ### Added
 
 - **`Tabs` component** — a segmented control (pill group with a sliding active indicator).
-  The active pill consumes the **same `--badge-*` tokens** as Badge, so a lit tab is
-  pixel-for-pixel a bold Badge of the matching hue. Per-tab `hue`, full keyboard support
+  The active pill borrows Badge's **palette** (the `--badge-*` fill, 1px subtle border,
+  radius, ink label), so a lit tab and a Badge read as one system per hue — sized as a
+  comfortable control (roomy padding, readable mono label). Per-tab `hue`, full keyboard support
   (arrows / Home / End, roving `tabindex`, `role="tablist"`). The system is now five
   components: Button, Card, Badge, **Tabs**, Icon.
 - **`--tabs-*` component tokens** (`tokens/component/portfolio/tabs.json`) — track fill,
