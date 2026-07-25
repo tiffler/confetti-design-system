@@ -11,7 +11,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Mono uppercase pill across the four accent hues, plus a `neutral` hue for non-category labels (versions, counts). `bold` uses the saturated end of each hue pair, `subtle` the tint end — and the foreground token differs between them so both stay legible in dark mode.',
+          'Mono uppercase pill across the four accent hues, plus a `neutral` hue for non-category labels (versions, counts). `bold` uses the saturated end of each hue pair, `subtle` the tint end — and the foreground token differs between them so both stay legible in dark mode. Badge is the source of truth for the pill treatment: the Tabs active indicator reuses these exact `--badge-*` tokens, so a category Badge and a lit tab are identical (see **Components/Tabs → Active tab === Badge**).',
       },
     },
   },

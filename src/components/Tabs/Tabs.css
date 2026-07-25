@@ -1,0 +1,91 @@
+.cf-tabs {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tabs-gap);
+
+  padding: var(--tabs-track-padding);
+  background: var(--tabs-track-bg);
+  border: var(--tabs-track-border-width) solid var(--tabs-track-border-color);
+  border-radius: var(--tabs-track-radius);
+}
+
+/* The sliding active pill. It IS a Badge — same tokens — so a lit tab and a category
+   Badge of the same hue are identical. Position/size are measured from the active tab. */
+.cf-tabs__indicator {
+  position: absolute;
+  top: var(--tabs-track-padding);
+  bottom: var(--tabs-track-padding);
+  left: 0;
+  z-index: 0;
+  box-sizing: border-box;
+
+  border: var(--badge-border-width) solid var(--badge-border-color);
+  border-radius: var(--badge-radius);
+
+  transition:
+    left var(--tabs-transition-duration) var(--tabs-transition-easing),
+    width var(--tabs-transition-duration) var(--tabs-transition-easing),
+    background-color var(--tabs-transition-duration) var(--tabs-transition-easing);
+}
+
+.cf-tabs__indicator--purple {
+  background: var(--badge-bg-purple);
+}
+.cf-tabs__indicator--teal {
+  background: var(--badge-bg-teal);
+}
+.cf-tabs__indicator--orange {
+  background: var(--badge-bg-orange);
+}
+.cf-tabs__indicator--pink {
+  background: var(--badge-bg-pink);
+}
+.cf-tabs__indicator--neutral {
+  background: var(--badge-bg-neutral);
+}
+
+.cf-tabs__tab {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-inline);
+
+  /* Padding + a transparent border match the Badge footprint, so the indicator overlays
+     the tab exactly and the idle → active transition doesn't shift the label. */
+  padding: var(--badge-padding-y) var(--badge-padding-x);
+  border: var(--badge-border-width) solid transparent;
+  border-radius: var(--badge-radius);
+  background: transparent;
+  color: var(--tabs-idle-fg);
+
+  font-family: var(--badge-font-family);
+  font-size: var(--badge-font-size);
+  font-weight: var(--badge-font-weight);
+  letter-spacing: var(--badge-tracking);
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: color var(--tabs-transition-duration) var(--tabs-transition-easing);
+}
+
+/* Ink over the accent fill — the same foreground a bold Badge uses. */
+.cf-tabs__tab[aria-selected='true'] {
+  color: var(--badge-fg);
+}
+
+.cf-tabs__tab:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf-tabs__indicator,
+  .cf-tabs__tab {
+    transition: none;
+  }
+}

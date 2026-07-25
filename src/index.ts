@@ -9,6 +9,9 @@ export type { CardProps, CardSurface } from './components/Card/Card';
 export { Badge } from './components/Badge/Badge';
 export type { BadgeProps, BadgeHue, BadgeTone } from './components/Badge/Badge';
 
+export { Tabs } from './components/Tabs/Tabs';
+export type { TabsProps, TabItem, TabHue } from './components/Tabs/Tabs';
+
 export { Icon } from './components/Icon/Icon';
 export type { IconProps, IconSize, IconTone, PhosphorIcon } from './components/Icon/Icon';
 
