@@ -11,7 +11,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Mono uppercase pill across the four accent hues, plus a `neutral` hue for non-category labels (versions, counts). `bold` uses the saturated end of each hue pair, `subtle` the tint end — and the foreground token differs between them so both stay legible in dark mode. Badge is the source of truth for the pill treatment: the Tabs active indicator reuses these exact `--badge-*` tokens, so a category Badge and a lit tab are identical (see **Components/Tabs → Active tab === Badge**).',
+          'Mono uppercase pill across the four accent hues, plus a `neutral` hue for non-category labels (versions, counts). `bold` uses the saturated end of each hue pair, `subtle` the tint end — and the foreground token differs between them so both stay legible in dark mode. Badge is the source of truth for the pill palette: the Tabs active indicator reuses these exact `--badge-*` fill/border/radius tokens, so a badge and a lit tab read as one system per hue (see **Components/Tabs → Shares Badge’s palette**).',
       },
     },
   },
@@ -29,10 +29,26 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: 'One badge with the default args (purple, bold). Use the controls to try any hue × tone combination.',
+      },
+    },
+  },
+};
 
 export const Bold: Story = {
   name: 'Bold — all hues',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'The saturated end of each hue pair — a filled accent pill with an ink label. This is the category badge, and the same fill the Tabs active pill borrows.',
+      },
+    },
+  },
   render: (args) => (
     <div style={{ display: 'flex', gap: 'var(--space-inline)', flexWrap: 'wrap' }}>
       {HUES.map((hue) => (
@@ -46,6 +62,14 @@ export const Bold: Story = {
 
 export const Subtle: Story = {
   name: 'Subtle — all hues',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'The tint end of each hue pair — a pale fill with a matching deeper label, for a quieter tag. The foreground flips with the tint in dark mode so it stays legible.',
+      },
+    },
+  },
   render: (args) => (
     <div style={{ display: 'flex', gap: 'var(--space-inline)', flexWrap: 'wrap' }}>
       {HUES.map((hue) => (
