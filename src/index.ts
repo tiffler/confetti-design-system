@@ -12,6 +12,9 @@ export type { BadgeProps, BadgeHue, BadgeTone } from './components/Badge/Badge';
 export { Tabs } from './components/Tabs/Tabs';
 export type { TabsProps, TabItem, TabHue } from './components/Tabs/Tabs';
 
+export { Modal } from './components/Modal/Modal';
+export type { ModalProps, ModalSize } from './components/Modal/Modal';
+
 export { Icon } from './components/Icon/Icon';
 export type { IconProps, IconSize, IconTone, PhosphorIcon } from './components/Icon/Icon';
 

@@ -48,6 +48,11 @@
   },
   "size": {
     "control": { "value": "{space.12}", "comment": "48px — height of a tappable control." },
+    "dialog": {
+      "$comment": "Max width of a modal panel. Leaf names differ from the width.* primitives they alias to avoid a flat-namespace collision.",
+      "sm": { "value": "{width.dialog-sm}", "comment": "420px — confirmations" },
+      "md": { "value": "{width.dialog-md}", "comment": "560px — the default dialog" }
+    },
     "icon": {
       "$comment": "Icons sit on the type scale, not the space scale.",
       "sm": { "value": "{font.size.16}", "comment": "16px — inline with body and control labels" },

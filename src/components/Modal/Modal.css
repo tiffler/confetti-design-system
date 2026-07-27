@@ -1,0 +1,113 @@
+/* The <dialog> element IS the scrim — it fills the viewport and paints the dim, so a click
+   that misses the panel lands here and dismisses. No z-index: showModal() promotes the
+   element to the top layer, which sits above every stacking context on the page. */
+.cf-modal {
+  position: fixed;
+  inset: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  /* The UA sheet constrains a dialog to fit its content and centers it with auto margins;
+     this one is the full-viewport surface instead, and centers the panel itself. */
+  max-width: none;
+  max-height: none;
+  margin: 0;
+
+  padding: var(--modal-viewport-padding);
+  border: 0;
+  background: var(--modal-scrim-bg);
+  overflow-y: auto;
+
+  display: grid;
+  place-items: center;
+}
+
+/* `display: grid` above overrides the UA's `display: none` for a closed dialog, which would
+   leave a shut modal painting a full-screen scrim. Put the hide back explicitly. */
+.cf-modal:not([open]) {
+  display: none;
+}
+
+/* The UA paints its own dim behind a modal dialog. Ours is on the element, so clear that
+   one — otherwise the two stack and the scrim reads darker than `--color-scrim` says. */
+.cf-modal::backdrop {
+  background: transparent;
+}
+
+/* A Card-weight surface: same fill, sticker border, container radius, and hard offset
+   shadow — a dialog is a card that has come forward, not a new kind of object. Unlike a
+   card it holds the lift at rest, since it is already raised. */
+.cf-modal__panel {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--modal-gap);
+
+  padding: var(--modal-padding);
+  background: var(--modal-bg);
+  color: var(--modal-fg);
+  border: var(--modal-border-width) solid var(--modal-border-color);
+  border-radius: var(--modal-radius);
+  box-shadow: var(--modal-shadow);
+}
+
+.cf-modal--sm .cf-modal__panel {
+  max-width: var(--modal-width-sm);
+}
+
+.cf-modal--md .cf-modal__panel {
+  max-width: var(--modal-width-md);
+}
+
+/* Title left, close button right. `flex-start` so the button stays on the first line of a
+   title that wraps to two. */
+.cf-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--modal-gap);
+}
+
+.cf-modal__title {
+  margin: 0;
+  font-family: var(--modal-title-font-family);
+  font-size: var(--modal-title-font-size);
+  font-weight: var(--modal-title-font-weight);
+  letter-spacing: var(--modal-title-tracking);
+  line-height: var(--modal-title-leading);
+}
+
+.cf-modal__body {
+  font-family: var(--modal-body-font-family);
+  font-size: var(--modal-body-font-size);
+  font-weight: var(--modal-body-font-weight);
+  line-height: var(--modal-body-leading);
+  color: var(--modal-fg-muted);
+}
+
+.cf-modal__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--modal-action-gap);
+}
+
+/* The panel arrives with a short rise. Running it on [open] means no @starting-style is
+   needed — the animation fires when the element goes from `display: none` to shown. */
+@media (prefers-reduced-motion: no-preference) {
+  .cf-modal[open] .cf-modal__panel {
+    animation: cf-modal-in var(--modal-transition-duration) var(--modal-transition-easing);
+  }
+}
+
+@keyframes cf-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

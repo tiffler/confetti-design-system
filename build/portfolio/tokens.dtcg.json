@@ -1287,6 +1287,24 @@
         }
       }
     },
+    "width": {
+      "dialog-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "a confirmation / short prompt",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-sm"
+        }
+      },
+      "dialog-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$description": "the default dialog — a paragraph or two plus actions",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-md"
+        }
+      }
+    },
     "space": {
       "0": {
         "$value": "0",
@@ -1834,6 +1852,24 @@
         "$description": "48px — height of a tappable control.",
         "$extensions": {
           "com.confetti.cssVariable": "--size-control"
+        }
+      },
+      "dialog": {
+        "sm": {
+          "$value": "420px",
+          "$type": "dimension",
+          "$description": "420px — confirmations",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-sm"
+          }
+        },
+        "md": {
+          "$value": "560px",
+          "$type": "dimension",
+          "$description": "560px — the default dialog",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-md"
+          }
         }
       },
       "icon": {
@@ -2558,6 +2594,192 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "modal": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim behind the panel — fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-scrim-bg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the panel off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-viewport-padding"
+        }
+      },
+      "bg": {
+        "$value": "#35492f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg-muted"
+        }
+      },
+      "border-color": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-color"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-width"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #ece2ce",
+        "$type": "other",
+        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-shadow"
+        }
+      },
+      "padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$description": "16px between header, body, and footer",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between footer buttons",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "width-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-sm"
+        }
+      },
+      "width-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-md"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-easing"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "24px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-leading"
+          }
         }
       }
     },
@@ -3963,6 +4185,24 @@
         }
       }
     },
+    "width": {
+      "dialog-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "a confirmation / short prompt",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-sm"
+        }
+      },
+      "dialog-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$description": "the default dialog — a paragraph or two plus actions",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-md"
+        }
+      }
+    },
     "space": {
       "0": {
         "$value": "0",
@@ -4510,6 +4750,24 @@
         "$description": "48px — height of a tappable control.",
         "$extensions": {
           "com.confetti.cssVariable": "--size-control"
+        }
+      },
+      "dialog": {
+        "sm": {
+          "$value": "420px",
+          "$type": "dimension",
+          "$description": "420px — confirmations",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-sm"
+          }
+        },
+        "md": {
+          "$value": "560px",
+          "$type": "dimension",
+          "$description": "560px — the default dialog",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-md"
+          }
         }
       },
       "icon": {
@@ -5234,6 +5492,192 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "modal": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim behind the panel — fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-scrim-bg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the panel off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-viewport-padding"
+        }
+      },
+      "bg": {
+        "$value": "#fbf7ee",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-bg"
+        }
+      },
+      "fg": {
+        "$value": "#33301f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#6b6146",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg-muted"
+        }
+      },
+      "border-color": {
+        "$value": "#33301f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-color"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-width"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #33301f",
+        "$type": "other",
+        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-shadow"
+        }
+      },
+      "padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$description": "16px between header, body, and footer",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between footer buttons",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "width-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-sm"
+        }
+      },
+      "width-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-md"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-easing"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "24px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-leading"
+          }
         }
       }
     },
@@ -6641,6 +7085,24 @@
         }
       }
     },
+    "width": {
+      "dialog-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "a confirmation / short prompt",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-sm"
+        }
+      },
+      "dialog-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$description": "the default dialog — a paragraph or two plus actions",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-md"
+        }
+      }
+    },
     "space": {
       "0": {
         "$value": "0",
@@ -7188,6 +7650,24 @@
         "$description": "48px — height of a tappable control.",
         "$extensions": {
           "com.confetti.cssVariable": "--size-control"
+        }
+      },
+      "dialog": {
+        "sm": {
+          "$value": "420px",
+          "$type": "dimension",
+          "$description": "420px — confirmations",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-sm"
+          }
+        },
+        "md": {
+          "$value": "560px",
+          "$type": "dimension",
+          "$description": "560px — the default dialog",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-md"
+          }
         }
       },
       "icon": {
@@ -7915,6 +8395,192 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "modal": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim behind the panel — fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-scrim-bg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the panel off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-viewport-padding"
+        }
+      },
+      "bg": {
+        "$value": "#3b3121",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#bfb6a6",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg-muted"
+        }
+      },
+      "border-color": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-color"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-width"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #ede4d3",
+        "$type": "other",
+        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-shadow"
+        }
+      },
+      "padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$description": "16px between header, body, and footer",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between footer buttons",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "width-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-sm"
+        }
+      },
+      "width-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-md"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-easing"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "24px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-leading"
+          }
         }
       }
     },
@@ -9322,6 +9988,24 @@
         }
       }
     },
+    "width": {
+      "dialog-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "a confirmation / short prompt",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-sm"
+        }
+      },
+      "dialog-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$description": "the default dialog — a paragraph or two plus actions",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-md"
+        }
+      }
+    },
     "space": {
       "0": {
         "$value": "0",
@@ -9869,6 +10553,24 @@
         "$description": "48px — height of a tappable control.",
         "$extensions": {
           "com.confetti.cssVariable": "--size-control"
+        }
+      },
+      "dialog": {
+        "sm": {
+          "$value": "420px",
+          "$type": "dimension",
+          "$description": "420px — confirmations",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-sm"
+          }
+        },
+        "md": {
+          "$value": "560px",
+          "$type": "dimension",
+          "$description": "560px — the default dialog",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-md"
+          }
         }
       },
       "icon": {
@@ -10596,6 +11298,192 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "modal": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim behind the panel — fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-scrim-bg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the panel off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-viewport-padding"
+        }
+      },
+      "bg": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-bg"
+        }
+      },
+      "fg": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#6b5f4a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg-muted"
+        }
+      },
+      "border-color": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-color"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-width"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #2e2618",
+        "$type": "other",
+        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-shadow"
+        }
+      },
+      "padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$description": "16px between header, body, and footer",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between footer buttons",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "width-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-sm"
+        }
+      },
+      "width-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-md"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-easing"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "24px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-leading"
+          }
         }
       }
     },
@@ -12001,6 +12889,24 @@
         }
       }
     },
+    "width": {
+      "dialog-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "a confirmation / short prompt",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-sm"
+        }
+      },
+      "dialog-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$description": "the default dialog — a paragraph or two plus actions",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-md"
+        }
+      }
+    },
     "space": {
       "0": {
         "$value": "0",
@@ -12548,6 +13454,24 @@
         "$description": "48px — height of a tappable control.",
         "$extensions": {
           "com.confetti.cssVariable": "--size-control"
+        }
+      },
+      "dialog": {
+        "sm": {
+          "$value": "420px",
+          "$type": "dimension",
+          "$description": "420px — confirmations",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-sm"
+          }
+        },
+        "md": {
+          "$value": "560px",
+          "$type": "dimension",
+          "$description": "560px — the default dialog",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-md"
+          }
         }
       },
       "icon": {
@@ -13273,6 +14197,192 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "modal": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim behind the panel — fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-scrim-bg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the panel off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-viewport-padding"
+        }
+      },
+      "bg": {
+        "$value": "#2e1650",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg-muted"
+        }
+      },
+      "border-color": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-color"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-width"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #ede0ff",
+        "$type": "other",
+        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-shadow"
+        }
+      },
+      "padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$description": "16px between header, body, and footer",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between footer buttons",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "width-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-sm"
+        }
+      },
+      "width-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-md"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-easing"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "24px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-leading"
+          }
         }
       }
     },
@@ -14678,6 +15788,24 @@
         }
       }
     },
+    "width": {
+      "dialog-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "a confirmation / short prompt",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-sm"
+        }
+      },
+      "dialog-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$description": "the default dialog — a paragraph or two plus actions",
+        "$extensions": {
+          "com.confetti.cssVariable": "--width-dialog-md"
+        }
+      }
+    },
     "space": {
       "0": {
         "$value": "0",
@@ -15225,6 +16353,24 @@
         "$description": "48px — height of a tappable control.",
         "$extensions": {
           "com.confetti.cssVariable": "--size-control"
+        }
+      },
+      "dialog": {
+        "sm": {
+          "$value": "420px",
+          "$type": "dimension",
+          "$description": "420px — confirmations",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-sm"
+          }
+        },
+        "md": {
+          "$value": "560px",
+          "$type": "dimension",
+          "$description": "560px — the default dialog",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-dialog-md"
+          }
         }
       },
       "icon": {
@@ -15950,6 +17096,192 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
+        }
+      }
+    },
+    "modal": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim behind the panel — fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-scrim-bg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the panel off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-viewport-padding"
+        }
+      },
+      "bg": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-bg"
+        }
+      },
+      "fg": {
+        "$value": "#1a0430",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#5b3d7a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-fg-muted"
+        }
+      },
+      "border-color": {
+        "$value": "#1a0430",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-color"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-border-width"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #1a0430",
+        "$type": "other",
+        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-shadow"
+        }
+      },
+      "padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$description": "16px between header, body, and footer",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between footer buttons",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "width-sm": {
+        "$value": "420px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-sm"
+        }
+      },
+      "width-md": {
+        "$value": "560px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-width-md"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-transition-easing"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "24px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--modal-body-leading"
+          }
         }
       }
     },

@@ -50,3 +50,17 @@ separates it from the page.
 Both the transform and the transition are tokens
 (`--button-transform-hover`, `--button-transition-duration`), and both are dropped
 under `prefers-reduced-motion: reduce`.
+
+## Above the page
+
+The surface ramp and the lift both work *within* the page. One step goes above it: a modal,
+which separates itself with `--color-scrim` rather than with elevation. The scrim is the only
+axis-independent color role in the system — deep ink at 86%, identical in all six theme × mode
+combinations — because a dim that shifted with the theme would read as a different depth each
+time you opened it.
+
+Modal is its only consumer, and it needs no z-index at all: `showModal()` puts the dialog in
+the browser's top layer, which sits above every stacking context on the page. Note the
+consequence for the panel's edge — on a deep scrim, dark mode's cream border and shadow read
+clearly while light mode's ink ones do not, so in light the panel's white silhouette is the
+edge. See **Components → Modal**.

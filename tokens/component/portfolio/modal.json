@@ -1,0 +1,34 @@
+{
+  "$comment": "Modal / dialog. Two parts: the SCRIM (the full-viewport dim, the one consumer of the axis-independent --color-scrim role) and the PANEL, which is a Card-weight surface — same card fill, sticker border, container radius, and hard offset shadow — so a dialog reads as a card that has come forward rather than a new kind of object. There is no z-index token: showModal() promotes the dialog to the browser's top layer, which no ancestor stacking context can trap.",
+  "modal": {
+    "scrim-bg": { "value": "{color.scrim}", "comment": "the dim behind the panel — fixed across themes and modes" },
+    "viewport-padding": { "value": "{space.inset}", "comment": "24px — keeps the panel off the viewport edge on small screens" },
+    "bg": { "value": "{color.surface.card}" },
+    "fg": { "value": "{color.text.primary}" },
+    "fg-muted": { "value": "{color.text.muted}" },
+    "border-color": { "value": "{color.border.default}" },
+    "border-width": { "value": "{border.width.default}" },
+    "radius": { "value": "{radius.container}" },
+    "shadow": { "value": "{shadow.lift}", "comment": "the sticker lift, held at rest — a dialog is already raised" },
+    "padding": { "value": "{space.inset}" },
+    "gap": { "value": "{space.stack}", "comment": "16px between header, body, and footer" },
+    "action-gap": { "value": "{space.inline}", "comment": "8px between footer buttons" },
+    "width-sm": { "value": "{size.dialog.sm}" },
+    "width-md": { "value": "{size.dialog.md}" },
+    "transition-duration": { "value": "{motion.duration.interaction}" },
+    "transition-easing": { "value": "{motion.easing.interaction}" },
+    "title": {
+      "font-family": { "value": "{font.family.display}" },
+      "font-size": { "value": "{font.size.h4}" },
+      "font-weight": { "value": "{font.weight.display}" },
+      "tracking": { "value": "{font.tracking.display}" },
+      "leading": { "value": "{font.leading.heading}" }
+    },
+    "body": {
+      "font-family": { "value": "{font.family.body}" },
+      "font-size": { "value": "{font.size.body}" },
+      "font-weight": { "value": "{font.weight.body}" },
+      "leading": { "value": "{font.leading.body}" }
+    }
+  }
+}

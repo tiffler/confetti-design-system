@@ -1,0 +1,7 @@
+{
+  "$comment": "Raw content widths — how wide a constrained container may grow. Deliberately off the 4px space ramp: these are measures, not spacing, and they answer 'how much text fits on a line' rather than 'how far apart are these two things'.",
+  "width": {
+    "dialog-sm": { "value": "420px", "comment": "a confirmation / short prompt" },
+    "dialog-md": { "value": "560px", "comment": "the default dialog — a paragraph or two plus actions" }
+  }
+}

@@ -4,6 +4,36 @@ All notable changes to Confetti. Versions follow [semver](https://semver.org): a
 or component change that alters rendered output is a **minor** bump (consumers pull it via
 the token sync); additive-only, non-visual changes are **patch**.
 
+## [0.3.0] — 2026-07-27
+
+### Added
+
+- **`Modal` component** — a dialog built on the native `<dialog>` element, opened with
+  `showModal()`, so the focus trap, `inert` on the page behind, Escape handling, and the
+  top layer come from the platform instead of component code. The element itself is the
+  scrim (it fills the viewport and paints the dim), which makes a click that misses the
+  panel the dismiss target and needs no z-index. The panel is **Card-weight** — same fill,
+  2px sticker border, container radius, and hard offset shadow, held at rest. Two widths
+  (`sm` 420px, `md` 560px), an optional `footer` for actions, and a `title` wired up as
+  `aria-labelledby`. Fully controlled: Escape, the close button, and a scrim click all
+  route through `onClose`. The system is now six components: Button, Card, Badge, Tabs,
+  **Modal**, Icon.
+- **`--modal-*` component tokens** (`tokens/component/portfolio/modal.json`) — scrim,
+  panel surface, border, radius, shadow, padding, gaps, the two widths, and the title /
+  body type ramps, all referencing semantic roles.
+- **`size.dialog.sm` / `size.dialog.md`** semantic roles, over new `width.dialog-*`
+  primitives (`tokens/primitives/sizes.json`) — raw content widths, deliberately off the
+  4px space ramp because they are measures, not spacing.
+
+### Notes
+
+- `--color-scrim`, added in v0.2.1, now has its first consumer. It stays fixed across
+  every theme × mode, so the panel always sits on a deep ink field. One consequence worth
+  knowing: in **dark** mode the panel's border and shadow resolve to cream and the sticker
+  edge reads against the dim; in **light** they resolve to ink on ink, so the outline is
+  painted but invisible and the panel's own silhouette carries the edge. This is the
+  per-mode token repointing working as intended — see **Components → Modal → Default**.
+
 ## [0.2.1] — 2026-07-25
 
 ### Added — new tokens (additive; no change to existing output, so a patch)

@@ -12,8 +12,8 @@ import pkg from '../package.json';
  */
 
 // Bump when you cut a release. (Version is read live from package.json.)
-const LAST_UPDATED = 'July 25, 2026';
-// (Scrim, surface-backdrop, 18/22 type steps — v0.2.1)
+const LAST_UPDATED = 'July 27, 2026';
+// (Modal — the sixth component, and the first consumer of the scrim — v0.3.0)
 const PORTFOLIO = 'https://tienmedia.com';
 
 function Cover() {
