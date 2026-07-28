@@ -328,6 +328,13 @@
   --code-string: var(--color-accent-teal-bold);
   --code-number: var(--color-accent-orange-bold);
   --code-function: var(--color-accent-pink-bold);
+  --code-inline-bg: var(--color-surface-panel);
+  --code-inline-fg: var(--color-text-primary);
+  --code-inline-border-color: var(--color-border-subtle);
+  --code-inline-border-width: var(--border-width-thin);
+  --code-inline-radius: var(--radius-chip);
+  --code-inline-padding-x: var(--space-inset-xs);
+  --code-inline-padding-y: var(--space-none);
   --code-radius: var(--radius-container);
   --code-padding: var(--space-inset-sm);
   --code-font-family: var(--font-family-label);

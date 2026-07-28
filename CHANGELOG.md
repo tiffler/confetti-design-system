@@ -35,6 +35,13 @@ the token sync); additive-only, non-visual changes are **patch**.
   than inventing new ones: they are already tuned to be light enough to carry ink on a fill,
   which is exactly what makes them legible as text on a deep ground. Every one clears WCAG AA
   on its own theme's ground (lowest: Neon's function pink at 5.79:1).
+- **`--code-inline-*` component tokens** — the `code` chip inside prose. Unlike the block,
+  this one *does* follow the mode: it sits in a running line of body text, so it takes the
+  panel surface a step off the page rather than the block's deep ground — a near-black chip
+  mid-sentence reads as a redaction, not as code. Fixes chips that stayed near-white in dark
+  mode: Storybook styles them as `.css-x :where(p:not(…)) code`, and because `:where()`
+  contributes no specificity that computes to an exact tie with a plain `.sbdocs-content
+  code` — a tie Storybook won, since Emotion injects at runtime.
 - **Storybook docs chrome is now token-driven** (`.storybook/preview-head.html`, preview-only)
   — page surface, prose, props table, and code blocks all follow the active theme × mode, so
   a docs page shows components on the surface they actually ship on.

@@ -2692,6 +2692,59 @@
           "com.confetti.cssVariable": "--code-function"
         }
       },
+      "inline": {
+        "bg": {
+          "$value": "#2a3b2d",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ece2ce",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-fg"
+          }
+        },
+        "border-color": {
+          "$value": "rgba(236, 226, 206, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-color"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-width"
+          }
+        },
+        "radius": {
+          "$value": "2px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-radius"
+          }
+        },
+        "padding-x": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — snug, so the chip does not disturb the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-x"
+          }
+        },
+        "padding-y": {
+          "$value": "0",
+          "$type": "other",
+          "$description": "0 — vertical padding on an inline box shifts line height without growing the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-y"
+          }
+        }
+      },
       "radius": {
         "$value": "8px",
         "$type": "other",
@@ -5774,6 +5827,59 @@
         "$description": "functions, class names, JSX tags",
         "$extensions": {
           "com.confetti.cssVariable": "--code-function"
+        }
+      },
+      "inline": {
+        "bg": {
+          "$value": "#ece2ce",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-bg"
+          }
+        },
+        "fg": {
+          "$value": "#33301f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-fg"
+          }
+        },
+        "border-color": {
+          "$value": "rgba(51, 48, 31, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-color"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-width"
+          }
+        },
+        "radius": {
+          "$value": "2px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-radius"
+          }
+        },
+        "padding-x": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — snug, so the chip does not disturb the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-x"
+          }
+        },
+        "padding-y": {
+          "$value": "0",
+          "$type": "other",
+          "$description": "0 — vertical padding on an inline box shifts line height without growing the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-y"
+          }
         }
       },
       "radius": {
@@ -8868,6 +8974,59 @@
           "com.confetti.cssVariable": "--code-function"
         }
       },
+      "inline": {
+        "bg": {
+          "$value": "#332a1c",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ede4d3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-fg"
+          }
+        },
+        "border-color": {
+          "$value": "rgba(237, 228, 211, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-color"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-width"
+          }
+        },
+        "radius": {
+          "$value": "2px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-radius"
+          }
+        },
+        "padding-x": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — snug, so the chip does not disturb the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-x"
+          }
+        },
+        "padding-y": {
+          "$value": "0",
+          "$type": "other",
+          "$description": "0 — vertical padding on an inline box shifts line height without growing the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-y"
+          }
+        }
+      },
       "radius": {
         "$value": "8px",
         "$type": "other",
@@ -11960,6 +12119,59 @@
           "com.confetti.cssVariable": "--code-function"
         }
       },
+      "inline": {
+        "bg": {
+          "$value": "#ede7d8",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-bg"
+          }
+        },
+        "fg": {
+          "$value": "#2e2618",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-fg"
+          }
+        },
+        "border-color": {
+          "$value": "rgba(46, 38, 24, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-color"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-width"
+          }
+        },
+        "radius": {
+          "$value": "2px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-radius"
+          }
+        },
+        "padding-x": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — snug, so the chip does not disturb the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-x"
+          }
+        },
+        "padding-y": {
+          "$value": "0",
+          "$type": "other",
+          "$description": "0 — vertical padding on an inline box shifts line height without growing the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-y"
+          }
+        }
+      },
       "radius": {
         "$value": "8px",
         "$type": "other",
@@ -15045,6 +15257,59 @@
           "com.confetti.cssVariable": "--code-function"
         }
       },
+      "inline": {
+        "bg": {
+          "$value": "#23113f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ede0ff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-fg"
+          }
+        },
+        "border-color": {
+          "$value": "rgba(237, 224, 255, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-color"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-width"
+          }
+        },
+        "radius": {
+          "$value": "2px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-radius"
+          }
+        },
+        "padding-x": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — snug, so the chip does not disturb the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-x"
+          }
+        },
+        "padding-y": {
+          "$value": "0",
+          "$type": "other",
+          "$description": "0 — vertical padding on an inline box shifts line height without growing the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-y"
+          }
+        }
+      },
       "radius": {
         "$value": "0",
         "$type": "other",
@@ -18128,6 +18393,59 @@
         "$description": "functions, class names, JSX tags",
         "$extensions": {
           "com.confetti.cssVariable": "--code-function"
+        }
+      },
+      "inline": {
+        "bg": {
+          "$value": "#f2e9ff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-bg"
+          }
+        },
+        "fg": {
+          "$value": "#1a0430",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-fg"
+          }
+        },
+        "border-color": {
+          "$value": "rgba(26, 4, 48, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-color"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-border-width"
+          }
+        },
+        "radius": {
+          "$value": "2px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-radius"
+          }
+        },
+        "padding-x": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — snug, so the chip does not disturb the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-x"
+          }
+        },
+        "padding-y": {
+          "$value": "0",
+          "$type": "other",
+          "$description": "0 — vertical padding on an inline box shifts line height without growing the line",
+          "$extensions": {
+            "com.confetti.cssVariable": "--code-inline-padding-y"
+          }
         }
       },
       "radius": {

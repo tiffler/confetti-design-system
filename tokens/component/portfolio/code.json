@@ -8,6 +8,16 @@
     "string": { "value": "{color.accent.teal.bold}", "comment": "strings, chars, attribute values" },
     "number": { "value": "{color.accent.orange.bold}", "comment": "numbers and units" },
     "function": { "value": "{color.accent.pink.bold}", "comment": "functions, class names, JSX tags" },
+    "inline": {
+      "$comment": "A `code` chip inside prose. Unlike the block, this one DOES follow the mode: it sits in a running line of body text, so it takes the panel surface a step off the page rather than the block's deep terminal ground — a near-black chip mid-sentence reads as a redaction, not as code.",
+      "bg": { "value": "{color.surface.panel}" },
+      "fg": { "value": "{color.text.primary}" },
+      "border-color": { "value": "{color.border.subtle}" },
+      "border-width": { "value": "{border.width.thin}" },
+      "radius": { "value": "{radius.chip}" },
+      "padding-x": { "value": "{space.inset-xs}", "comment": "4px — snug, so the chip does not disturb the line" },
+      "padding-y": { "value": "{space.none}", "comment": "0 — vertical padding on an inline box shifts line height without growing the line" }
+    },
     "radius": { "value": "{radius.container}" },
     "padding": { "value": "{space.inset-sm}" },
     "font-family": { "value": "{font.family.label}", "comment": "the mono face — same one Badge and Tabs label with" },

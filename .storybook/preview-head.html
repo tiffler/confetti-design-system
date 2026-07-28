@@ -40,10 +40,27 @@
     border-color: var(--color-border-subtle);
   }
 
-  .sbdocs-content :is(code, pre) {
-    background: var(--color-surface-panel);
-    color: var(--color-text-primary);
-    border-color: var(--color-border-subtle);
+  /* Inline `code` in prose. Storybook styles this as
+     `.css-xxx :where(p:not(…)) code` — `:where()` contributes no specificity, so that rule
+     computes to (0,1,1), an exact tie with a plain `.sbdocs-content code`. Emotion injects
+     at runtime, i.e. after this file, so the tie always went to Storybook and the chip
+     stayed near-white in dark mode. Hence `!important`, same as the code block below. */
+  .sbdocs-content code {
+    background: var(--code-inline-bg) !important;
+    color: var(--code-inline-fg) !important;
+    border: var(--code-inline-border-width) solid var(--code-inline-border-color) !important;
+    border-radius: var(--code-inline-radius) !important;
+    padding: var(--code-inline-padding-y) var(--code-inline-padding-x) !important;
+  }
+
+  /* …but not inside a block, which owns its own ground and syntax colors. Placed after the
+     rule above so it wins on order as well as specificity. */
+  .sbdocs-content pre code,
+  pre.prismjs code {
+    background: transparent !important;
+    color: inherit !important;
+    border: 0 !important;
+    padding: 0 !important;
   }
 
   /* The props table renders OUTSIDE .sbdocs-content, so the rules above never reach it. It
@@ -52,13 +69,32 @@
      renders the block wrapper and the table itself under different ones. Nested `div`s carry
      the hardcoded color; `span`s are left alone so the red required marker keeps its meaning. */
   :is(.sb-argstableBlock, .docblock-argstable) :is(th, td) {
-    background: var(--color-surface-raised);
-    color: var(--color-text-primary);
-    border-color: var(--color-border-subtle);
+    background: var(--color-surface-raised) !important;
+    color: var(--color-text-primary) !important;
+    border-color: var(--color-border-subtle) !important;
   }
 
   :is(.sb-argstableBlock, .docblock-argstable) :is(th, td) :is(div, p) {
-    color: inherit;
+    color: inherit !important;
+  }
+
+  /* The type pills ("boolean", "() => void") are spans with a hardcoded dark ink on a
+     near-transparent chip, so they vanished on a dark row. Spans are reset everywhere
+     EXCEPT the first column, which is where the red "required" asterisk lives — that one
+     keeps its color because it is carrying meaning, not just theme. */
+  :is(.sb-argstableBlock, .docblock-argstable) :is(th, td):not(:first-child) span {
+    color: inherit !important;
+  }
+
+  /* The story preview's own toolbar (zoom / reset). It is the first child of the preview
+     block and carries only a hashed Emotion class, so it has to be reached structurally. */
+  .sbdocs.sbdocs-preview > *:first-child {
+    background: var(--color-surface-panel) !important;
+    border-color: var(--color-border-subtle) !important;
+  }
+
+  .sbdocs.sbdocs-preview > *:first-child :is(button, svg, a) {
+    color: var(--color-text-muted) !important;
   }
 
   /* A drop-shadow tuned for a white table reads as a smudge on a dark one. */
