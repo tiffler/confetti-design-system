@@ -17,7 +17,23 @@ const meta = {
     },
   },
   argTypes: {
-    size: { control: 'inline-radio', options: ['sm', 'md'] },
+    size: {
+      control: 'inline-radio',
+      options: ['sm', 'md'],
+      description: '`sm` (420px) for a confirmation, `md` (560px) for a dialog with real content.',
+      table: { defaultValue: { summary: 'md' } },
+    },
+    open: {
+      control: false,
+      description: 'Controlled — the parent owns the open state. Every story drives it from its own trigger.',
+    },
+    onClose: {
+      control: false,
+      description: 'Called for every dismissal route — Escape, the close button, a click on the scrim.',
+    },
+    title: { control: 'text', description: 'Names the dialog for assistive tech (`aria-labelledby`) — required.' },
+    children: { control: 'text' },
+    footer: { control: false, description: 'Actions, end-aligned below the body. Usually one or two `<Button>`s.' },
   },
   // Defaults so the required props are typed; every story drives `open` via `render`.
   args: {

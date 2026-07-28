@@ -35,9 +35,17 @@
     color var(--button-transition-duration) var(--button-transition-easing);
 }
 
+/* `data-force` pins an interaction state that cannot otherwise be triggered from a
+   control or held still for a snapshot. Every state rule below pairs its real
+   pseudo-class with the matching forced attribute, so Storybook can show hover / focus /
+   pressed on demand and Chromatic can regression-test them. It changes nothing at
+   runtime: no consumer sets the attribute, and the pseudo-classes remain the real
+   trigger. Space-separated, so `data-force="hover pressed"` composes. */
+
 /* Focus ring comes from the mode axis: 2px ink/cream in light/dark. Never
    color-only — it is an outline with real width. */
-.cf-button:focus-visible {
+.cf-button:focus-visible,
+.cf-button[data-force~='focus'] {
   outline: var(--focus-ring-width) solid var(--focus-ring-color);
   outline-offset: var(--focus-ring-offset);
 }
@@ -73,14 +81,30 @@
    (Confetti), a lightness bump with no lift (Adventure), or a neon glow (Neon) —
    all driven by component tokens the theme repoints. Ghost only shifts color. */
 .cf-button--primary:hover:not([disabled]),
-.cf-button--secondary:hover:not([disabled]) {
+.cf-button--secondary:hover:not([disabled]),
+.cf-button--primary[data-force~='hover']:not([disabled]),
+.cf-button--secondary[data-force~='hover']:not([disabled]) {
   transform: var(--button-transform-hover);
   box-shadow: var(--button-shadow-hover);
   filter: brightness(var(--button-hover-brightness));
 }
 
-.cf-button--ghost:hover:not([disabled]) {
+.cf-button--ghost:hover:not([disabled]),
+.cf-button--ghost[data-force~='hover']:not([disabled]) {
   color: var(--button-ghost-fg-hover);
+}
+
+/* --- Pressed -------------------------------------------------------------- */
+
+/* The inverse of hover: the sticker settles back down. Because pressing happens while
+   hovering, this has to out-rank the hover rules above — hence the later position and
+   the matching specificity. Statically it reads the same as rest, which is the point:
+   the button is flat again. */
+.cf-button:active:not([disabled]),
+.cf-button[data-force~='pressed']:not([disabled]) {
+  transform: var(--button-transform-pressed);
+  box-shadow: var(--button-shadow-pressed);
+  filter: brightness(var(--button-pressed-brightness));
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -88,7 +112,9 @@
     transition: none;
   }
   .cf-button--primary:hover:not([disabled]),
-  .cf-button--secondary:hover:not([disabled]) {
+  .cf-button--secondary:hover:not([disabled]),
+  .cf-button--primary[data-force~='hover']:not([disabled]),
+  .cf-button--secondary[data-force~='hover']:not([disabled]) {
     transform: none;
   }
 }

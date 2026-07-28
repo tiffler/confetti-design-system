@@ -8,6 +8,23 @@ the token sync); additive-only, non-visual changes are **patch**.
 
 ### Added
 
+- **Every component now documents every state.** `argTypes` are complete across all six —
+  each prop has a typed control, a description, and its default in the props table — and
+  Button, Card and Tabs gained an **All states** story.
+- **`data-force` state hook.** Hover, focus and pressed cannot be triggered from a control
+  or held still for a snapshot, so each component's CSS pairs its real pseudo-class with a
+  matching `data-force` attribute (`.cf-button:hover, .cf-button[data-force~="hover"]`).
+  Nothing sets it at runtime and the pseudo-classes remain the real trigger, so runtime
+  behaviour is unchanged — but Storybook gets a **state** control and Chromatic can now
+  regression-test states it previously could not reach.
+- **Button `pressed` state** *(visual — new)*. The inverse of hover: the sticker settles
+  back down. New `--button-transform-pressed` / `--button-shadow-pressed` /
+  `--button-pressed-brightness`, over two new semantic roles (`shadow.flat`,
+  `effect.brightness-rest`). It resolves to the resting values in every theme, so a theme
+  that lifts collapses the lift and one that brightens drops back to no bump. Statically it
+  reads the same as rest, which is the point — the button is flat again.
+- **Tabs `hover` state** *(visual — new)*. An idle tab warms from muted to full-strength
+  text on hover, short of the lit pill. New `--tabs-hover-fg`.
 - **`syntax.*` brand-kit inputs + `color.syntax.*` roles** — a code-block ground and its two
   neutrals, per theme (Confetti deepest ink, Adventure deep forest, Neon synth-black). These
   sit on the **theme axis, not the mode axis**: a snippet is an inset terminal, deep in light

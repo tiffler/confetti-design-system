@@ -29,8 +29,12 @@
 }
 
 /* Square at rest; the sticker peels up and turns only on hover. Order matters: rotate
-   first, then translate along the page axes. */
-.cf-card--interactive:hover {
+   first, then translate along the page axes.
+
+   `data-force="hover"` pins the state so a control or a snapshot can hold it — see the
+   same hook in Button.css. It changes nothing at runtime; no consumer sets it. */
+.cf-card--interactive:hover,
+.cf-card--interactive[data-force~='hover'] {
   transform: rotate(var(--card-tilt-hover)) var(--card-transform-hover);
   box-shadow: var(--card-shadow-hover);
 }
@@ -68,7 +72,8 @@
   }
   /* Now that the tilt only happens on hover it is motion, not composition, so it goes
      along with the lift rather than being preserved. */
-  .cf-card--interactive:hover {
+  .cf-card--interactive:hover,
+  .cf-card--interactive[data-force~='hover'] {
     transform: none;
   }
 }

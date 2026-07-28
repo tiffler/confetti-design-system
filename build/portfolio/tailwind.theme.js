@@ -225,6 +225,7 @@ export default {
     "none": "var(--shadow-none)",
     "hard-ink": "var(--shadow-hard-ink)",
     "hard-cream": "var(--shadow-hard-cream)",
+    "flat": "var(--shadow-flat)",
     "lift": "var(--shadow-lift)",
     "button-lift": "var(--shadow-button-lift)"
   },

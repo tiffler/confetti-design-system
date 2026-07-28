@@ -80,9 +80,19 @@
   color: var(--badge-fg);
 }
 
-.cf-tabs__tab:focus-visible {
+/* `data-force` pins a state that a control cannot otherwise trigger — see the same hook
+   in Button.css. Nothing sets it at runtime. */
+.cf-tabs__tab:focus-visible,
+.cf-tabs__tab[data-force~='focus'] {
   outline: var(--focus-ring-width) solid var(--focus-ring-color);
   outline-offset: var(--focus-ring-offset);
+}
+
+/* An idle tab warms toward the active label on hover, so the group feels live before
+   the pill arrives. */
+.cf-tabs__tab:hover:not([aria-selected='true']),
+.cf-tabs__tab[data-force~='hover']:not([aria-selected='true']) {
+  color: var(--tabs-hover-fg);
 }
 
 @media (prefers-reduced-motion: reduce) {

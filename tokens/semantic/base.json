@@ -76,6 +76,14 @@
     "layout-lg": { "value": "{space.16}", "comment": "64px — space between major sections" },
     "layout-xl": { "value": "{space.20}", "comment": "80px — largest section rhythm" }
   },
+  "shadow": {
+    "$comment": "The lift shadows live on the mode axis (modes/) because they invert ink→cream. `flat` is axis-independent: it is the absence of one, used by the pressed state to collapse a hover lift. Leaf name differs from the shadow.none primitive it aliases.",
+    "flat": { "value": "{shadow.none}", "comment": "no shadow — pressed, and the resting default" }
+  },
+  "effect": {
+    "$comment": "Leaf name differs from the effect.brightness.none primitive it aliases.",
+    "brightness-rest": { "value": "{effect.brightness.none}", "comment": "1 — no lightness change, the pressed counterpart to a theme's hover brightness" }
+  },
   "motion": {
     "$comment": "Leaf names differ from the primitives they alias to avoid a flat-namespace collision.",
     "transform": {

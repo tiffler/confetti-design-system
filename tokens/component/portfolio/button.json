@@ -15,6 +15,10 @@
     "shadow-hover": { "value": "{shadow.button-lift}" },
     "transform-hover": { "value": "{motion.button-lift}" },
     "hover-brightness": { "value": "{effect.button-hover-brightness}" },
+    "$comment-pressed": "Pressed is the inverse of hover — the sticker settles back down. It resolves to the resting values in every theme, so a theme that lifts collapses the lift, and one that brightens (Adventure) drops back to no bump.",
+    "shadow-pressed": { "value": "{shadow.flat}" },
+    "transform-pressed": { "value": "{motion.transform.rest}" },
+    "pressed-brightness": { "value": "{effect.brightness-rest}" },
     "transition-duration": { "value": "{motion.duration.interaction}" },
     "transition-easing": { "value": "{motion.easing.interaction}" },
     "primary": {

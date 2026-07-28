@@ -1136,6 +1136,14 @@
           "com.confetti.cssVariable": "--shadow-hard-cream"
         }
       },
+      "flat": {
+        "$value": "none",
+        "$type": "shadow",
+        "$description": "no shadow — pressed, and the resting default",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-flat"
+        }
+      },
       "lift": {
         "$value": "3px 3px 0px 0px #ece2ce",
         "$type": "shadow",
@@ -1170,6 +1178,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
           }
+        }
+      },
+      "brightness-rest": {
+        "$value": "1",
+        "$type": "other",
+        "$description": "1 — no lightness change, the pressed counterpart to a theme's hover brightness",
+        "$extensions": {
+          "com.confetti.cssVariable": "--effect-brightness-rest"
         }
       },
       "button-hover-brightness": {
@@ -2309,6 +2325,27 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-hover-brightness"
+        }
+      },
+      "shadow-pressed": {
+        "$value": "none",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-shadow-pressed"
+        }
+      },
+      "transform-pressed": {
+        "$value": "translate(0, 0)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transform-pressed"
+        }
+      },
+      "pressed-brightness": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-pressed-brightness"
         }
       },
       "transition-duration": {
@@ -4183,6 +4220,14 @@
           "com.confetti.cssVariable": "--shadow-hard-cream"
         }
       },
+      "flat": {
+        "$value": "none",
+        "$type": "shadow",
+        "$description": "no shadow — pressed, and the resting default",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-flat"
+        }
+      },
       "lift": {
         "$value": "3px 3px 0px 0px #33301f",
         "$type": "shadow",
@@ -4217,6 +4262,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
           }
+        }
+      },
+      "brightness-rest": {
+        "$value": "1",
+        "$type": "other",
+        "$description": "1 — no lightness change, the pressed counterpart to a theme's hover brightness",
+        "$extensions": {
+          "com.confetti.cssVariable": "--effect-brightness-rest"
         }
       },
       "button-hover-brightness": {
@@ -5356,6 +5409,27 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-hover-brightness"
+        }
+      },
+      "shadow-pressed": {
+        "$value": "none",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-shadow-pressed"
+        }
+      },
+      "transform-pressed": {
+        "$value": "translate(0, 0)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transform-pressed"
+        }
+      },
+      "pressed-brightness": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-pressed-brightness"
         }
       },
       "transition-duration": {
@@ -7232,6 +7306,14 @@
           "com.confetti.cssVariable": "--shadow-hard-cream"
         }
       },
+      "flat": {
+        "$value": "none",
+        "$type": "shadow",
+        "$description": "no shadow — pressed, and the resting default",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-flat"
+        }
+      },
       "lift": {
         "$value": "3px 3px 0px 0px #ede4d3",
         "$type": "shadow",
@@ -7266,6 +7348,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
           }
+        }
+      },
+      "brightness-rest": {
+        "$value": "1",
+        "$type": "other",
+        "$description": "1 — no lightness change, the pressed counterpart to a theme's hover brightness",
+        "$extensions": {
+          "com.confetti.cssVariable": "--effect-brightness-rest"
         }
       },
       "button-hover-brightness": {
@@ -8411,6 +8501,27 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-hover-brightness"
+        }
+      },
+      "shadow-pressed": {
+        "$value": "none",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-shadow-pressed"
+        }
+      },
+      "transform-pressed": {
+        "$value": "translate(0, 0)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transform-pressed"
+        }
+      },
+      "pressed-brightness": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-pressed-brightness"
         }
       },
       "transition-duration": {
@@ -10287,6 +10398,14 @@
           "com.confetti.cssVariable": "--shadow-hard-cream"
         }
       },
+      "flat": {
+        "$value": "none",
+        "$type": "shadow",
+        "$description": "no shadow — pressed, and the resting default",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-flat"
+        }
+      },
       "lift": {
         "$value": "3px 3px 0px 0px #2e2618",
         "$type": "shadow",
@@ -10321,6 +10440,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
           }
+        }
+      },
+      "brightness-rest": {
+        "$value": "1",
+        "$type": "other",
+        "$description": "1 — no lightness change, the pressed counterpart to a theme's hover brightness",
+        "$extensions": {
+          "com.confetti.cssVariable": "--effect-brightness-rest"
         }
       },
       "button-hover-brightness": {
@@ -11466,6 +11593,27 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-hover-brightness"
+        }
+      },
+      "shadow-pressed": {
+        "$value": "none",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-shadow-pressed"
+        }
+      },
+      "transform-pressed": {
+        "$value": "translate(0, 0)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transform-pressed"
+        }
+      },
+      "pressed-brightness": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-pressed-brightness"
         }
       },
       "transition-duration": {
@@ -13340,6 +13488,14 @@
           "com.confetti.cssVariable": "--shadow-hard-cream"
         }
       },
+      "flat": {
+        "$value": "none",
+        "$type": "shadow",
+        "$description": "no shadow — pressed, and the resting default",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-flat"
+        }
+      },
       "lift": {
         "$value": "3px 3px 0px 0px #ede0ff",
         "$type": "shadow",
@@ -13374,6 +13530,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
           }
+        }
+      },
+      "brightness-rest": {
+        "$value": "1",
+        "$type": "other",
+        "$description": "1 — no lightness change, the pressed counterpart to a theme's hover brightness",
+        "$extensions": {
+          "com.confetti.cssVariable": "--effect-brightness-rest"
         }
       },
       "button-hover-brightness": {
@@ -14514,6 +14678,27 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-hover-brightness"
+        }
+      },
+      "shadow-pressed": {
+        "$value": "none",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-shadow-pressed"
+        }
+      },
+      "transform-pressed": {
+        "$value": "translate(0, 0)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transform-pressed"
+        }
+      },
+      "pressed-brightness": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-pressed-brightness"
         }
       },
       "transition-duration": {
@@ -16388,6 +16573,14 @@
           "com.confetti.cssVariable": "--shadow-hard-cream"
         }
       },
+      "flat": {
+        "$value": "none",
+        "$type": "shadow",
+        "$description": "no shadow — pressed, and the resting default",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-flat"
+        }
+      },
       "lift": {
         "$value": "3px 3px 0px 0px #1a0430",
         "$type": "shadow",
@@ -16422,6 +16615,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
           }
+        }
+      },
+      "brightness-rest": {
+        "$value": "1",
+        "$type": "other",
+        "$description": "1 — no lightness change, the pressed counterpart to a theme's hover brightness",
+        "$extensions": {
+          "com.confetti.cssVariable": "--effect-brightness-rest"
         }
       },
       "button-hover-brightness": {
@@ -17562,6 +17763,27 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-hover-brightness"
+        }
+      },
+      "shadow-pressed": {
+        "$value": "none",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-shadow-pressed"
+        }
+      },
+      "transform-pressed": {
+        "$value": "translate(0, 0)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-transform-pressed"
+        }
+      },
+      "pressed-brightness": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-pressed-brightness"
         }
       },
       "transition-duration": {

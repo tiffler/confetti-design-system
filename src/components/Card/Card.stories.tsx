@@ -1,7 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Card } from './Card';
+import { Card, type CardProps } from './Card';
 import { Badge } from '../Badge/Badge';
 import { Button } from '../Button/Button';
+
+/** Card only has a visual for hover, and only when `interactive`. */
+const STATES = ['rest', 'hover'] as const;
+type CardState = (typeof STATES)[number];
+
+type CardStoryArgs = CardProps & { state: CardState };
+
+/** Docs-only CSS hook — see the `data-force` note in Card.css. */
+const forceState = (state: CardState): Record<string, string> =>
+  state === 'rest' ? {} : { 'data-force': state };
 
 const meta = {
   title: 'Components/Card',
@@ -11,13 +21,36 @@ const meta = {
     docs: {
       description: {
         component:
-          'Thick-outline container with an optional mono eyebrow and display-face title. `interactive` adds the same hover lift the buttons use.',
+          'Thick-outline container with an optional mono eyebrow and display-face title. `interactive` adds the same hover lift the buttons use, plus a slight turn derived from `seed` — so a card always tilts the same way.\n\nThe **state** control pins hover via `data-force`; it only does anything while `interactive` is on, since a static card has no hover visual.',
       },
     },
   },
   argTypes: {
-    surface: { control: 'inline-radio', options: ['card', 'raised'] },
-    interactive: { control: 'boolean' },
+    surface: {
+      control: 'inline-radio',
+      options: ['card', 'raised'],
+      description: '`raised` uses the paper-raised surface instead of the card interior.',
+      table: { defaultValue: { summary: 'card' } },
+    },
+    interactive: {
+      control: 'boolean',
+      description: 'Adds the hover lift + hard shadow. Use for cards that link somewhere.',
+      table: { defaultValue: { summary: 'false' } },
+    },
+    state: {
+      control: 'inline-radio',
+      options: STATES,
+      description: 'Docs-only. Pins hover via `data-force` — requires `interactive`.',
+      table: { category: 'Docs controls', defaultValue: { summary: 'rest' } },
+    },
+    tilt: {
+      control: { type: 'range', min: -1, max: 1, step: 0.1 },
+      description: 'Hover angle as a multiplier of `--card-tilt-max`, bypassing the seed. `0` stays square.',
+    },
+    seed: { control: 'text', description: 'String the hover angle is derived from. Defaults to `title`.' },
+    eyebrow: { control: 'text' },
+    title: { control: 'text' },
+    children: { control: 'text' },
   },
   args: {
     eyebrow: 'Case study',
@@ -25,7 +58,9 @@ const meta = {
     children: 'Rebuilding a research tool around the way analysts actually read.',
     surface: 'card',
     interactive: false,
+    state: 'rest',
   },
+  render: ({ state, ...args }) => <Card {...args} {...forceState(state)} />,
   decorators: [
     // Width is per-story so grid stories aren't squeezed into the single-card frame.
     (Story, ctx) => (
@@ -34,10 +69,51 @@ const meta = {
       </div>
     ),
   ],
-} satisfies Meta<typeof Card>;
+} satisfies Meta<CardStoryArgs>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<CardStoryArgs>;
+
+export const AllStates: Story = {
+  name: 'All states',
+  parameters: {
+    frameWidth: 820,
+    docs: {
+      description: {
+        story:
+          'Both surfaces at rest and pinned to hover. Only `interactive` cards have a hover visual — a static card is identical in both columns, which is the point of the prop.',
+      },
+    },
+  },
+  render: () => (
+    <div style={{ display: 'grid', gap: 'var(--space-stack-lg)' }}>
+      {(['card', 'raised'] as const).map((surface) => (
+        <div key={surface} style={{ display: 'grid', gap: 'var(--space-inline)' }}>
+          <span
+            style={{
+              fontFamily: 'var(--font-family-label)',
+              fontSize: 'var(--font-size-label)',
+              letterSpacing: 'var(--font-tracking-label)',
+              textTransform: 'uppercase',
+              color: 'var(--color-text-muted)',
+            }}
+          >
+            {surface}
+          </span>
+          <div style={{ display: 'flex', gap: 'var(--space-stack-lg)', flexWrap: 'wrap' }}>
+            {STATES.map((state) => (
+              <div key={state} style={{ maxWidth: 340 }}>
+                <Card surface={surface} interactive title="Atlas" eyebrow={state} {...forceState(state)}>
+                  Interactive card, {state}.
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  ),
+};
 
 export const Default: Story = {};
 

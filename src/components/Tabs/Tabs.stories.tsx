@@ -1,7 +1,44 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Tabs, type TabItem } from './Tabs';
 import { Badge } from '../Badge/Badge';
+
+/** The states an individual tab has a visual for. */
+const STATES = ['rest', 'hover', 'focus', 'selected'] as const;
+type TabState = (typeof STATES)[number];
+
+/**
+ * Pins a state on ONE tab inside a rendered group. Tabs owns its buttons, so rather than
+ * widening the public API with a docs-only prop, the story reaches for the button through
+ * a ref and sets the same `data-force` hook the CSS reads.
+ */
+function ForcedTabs({
+  state,
+  index = 1,
+  tabs = CATEGORIES,
+}: {
+  state: TabState;
+  index?: number;
+  tabs?: TabItem[];
+}) {
+  const wrap = useRef<HTMLDivElement>(null);
+  // `selected` is real state, not a forced one — drive it through `value`.
+  const [value, setValue] = useState(state === 'selected' ? tabs[index].value : tabs[0].value);
+
+  useEffect(() => {
+    const buttons = wrap.current?.querySelectorAll<HTMLButtonElement>('[role="tab"]');
+    const target = buttons?.[index];
+    if (!target) return;
+    if (state === 'hover' || state === 'focus') target.setAttribute('data-force', state);
+    return () => target.removeAttribute('data-force');
+  }, [state, index]);
+
+  return (
+    <div ref={wrap}>
+      <Tabs tabs={tabs} value={value} onChange={setValue} aria-label="Filter projects by category" />
+    </div>
+  );
+}
 
 const CATEGORIES: TabItem[] = [
   { value: 'design', label: 'Design Systems', hue: 'purple' },
@@ -20,6 +57,15 @@ const meta = {
           'A segmented control — a pill group with a sliding active indicator. The active pill borrows Badge’s **palette and treatment** (the `--badge-*` fill, 1px subtle border, radius, ink label), so a lit tab and a Badge read as one system per hue — but a tab is a larger, comfortable control (roomy padding, readable mono label), matched to the portfolio’s About-page slider. Full keyboard support (arrows / Home / End, roving `tabindex`).',
       },
     },
+  },
+  argTypes: {
+    tabs: {
+      control: 'object',
+      description: 'The tab list. Each item takes a `value`, a `label`, and an optional `hue`.',
+    },
+    value: { control: false, description: 'The selected tab’s `value` (controlled).' },
+    onChange: { control: false, description: 'Called with the newly selected `value`.' },
+    'aria-label': { control: 'text', description: 'Accessible name for the tablist — required.' },
   },
   // Defaults so the required props are typed; every story drives its own state via `render`.
   args: {
@@ -71,6 +117,38 @@ export const SharesBadgePalette: Story = {
         ))}
       </div>
       <Demo />
+    </div>
+  ),
+};
+
+export const AllStates: Story = {
+  name: 'All states',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'The four states an individual tab can be in, each pinned on the **second** tab so it can be compared against its idle neighbours. `selected` is real state driven through `value`; `hover` and `focus` are pinned with `data-force`, since a control cannot trigger a pseudo-class.',
+      },
+    },
+  },
+  render: () => (
+    <div style={{ display: 'grid', gap: 'var(--space-stack-lg)', justifyItems: 'start' }}>
+      {STATES.map((state) => (
+        <div key={state} style={{ display: 'grid', gap: 'var(--space-inline)', justifyItems: 'start' }}>
+          <span
+            style={{
+              fontFamily: 'var(--font-family-label)',
+              fontSize: 'var(--font-size-label)',
+              letterSpacing: 'var(--font-tracking-label)',
+              textTransform: 'uppercase',
+              color: 'var(--color-text-muted)',
+            }}
+          >
+            {state}
+          </span>
+          <ForcedTabs state={state} />
+        </div>
+      ))}
     </div>
   ),
 };

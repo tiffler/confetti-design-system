@@ -16,8 +16,19 @@ const meta = {
     },
   },
   argTypes: {
-    hue: { control: 'inline-radio', options: [...HUES, 'neutral'] },
-    tone: { control: 'inline-radio', options: ['bold', 'subtle'] },
+    hue: {
+      control: 'inline-radio',
+      options: [...HUES, 'neutral'],
+      description: 'Four accent hues plus `neutral` for non-category labels (versions, counts).',
+      table: { defaultValue: { summary: 'purple' } },
+    },
+    tone: {
+      control: 'inline-radio',
+      options: ['bold', 'subtle'],
+      description: '`bold` is the saturated end of the hue pair, `subtle` the tint end.',
+      table: { defaultValue: { summary: 'bold' } },
+    },
+    children: { control: 'text' },
   },
   args: {
     children: 'Product',

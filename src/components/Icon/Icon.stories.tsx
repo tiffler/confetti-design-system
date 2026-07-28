@@ -25,9 +25,29 @@ const meta = {
     },
   },
   argTypes: {
-    size: { control: 'inline-radio', options: ['sm', 'md', 'lg'] },
-    tone: { control: 'inline-radio', options: ['inherit', 'default', 'muted', 'accent'] },
-    icon: { control: false },
+    size: {
+      control: 'inline-radio',
+      options: ['sm', 'md', 'lg'],
+      description: 'Mirrors the type scale: sm 16px, md 20px, lg 24px.',
+      table: { defaultValue: { summary: 'sm' } },
+    },
+    tone: {
+      control: 'inline-radio',
+      options: ['inherit', 'default', 'muted', 'accent'],
+      description: '`inherit` takes the surrounding text color — right inside buttons and links.',
+      table: { defaultValue: { summary: 'inherit' } },
+    },
+    weight: {
+      control: 'inline-radio',
+      options: ['thin', 'light', 'regular', 'bold', 'fill', 'duotone'],
+      description: 'Overrides the system weight. Reach for it rarely — mixed weights read as assembled, not designed.',
+      table: { defaultValue: { summary: 'bold' } },
+    },
+    label: {
+      control: 'text',
+      description: 'Names the icon for assistive tech, promoting it to `role="img"`. Omit when decorative — it is then hidden.',
+    },
+    icon: { control: false, description: 'A Phosphor icon passed as a value, so bundlers tree-shake.' },
   },
   args: {
     icon: ArrowRight,

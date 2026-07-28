@@ -124,8 +124,10 @@
   --shadow-none: none;
   --shadow-hard-ink: 3px 3px 0px 0px #2e2618;
   --shadow-hard-cream: 3px 3px 0px 0px #ede4d3;
+  --shadow-flat: none;
   --effect-brightness-none: 1;
   --effect-brightness-lighten: 1.1;
+  --effect-brightness-rest: 1;
   --motion-lift: translate(-2px, -2px);
   --motion-rest: translate(0, 0);
   --motion-tilt-subtle: 0.8deg;
@@ -277,6 +279,9 @@
   --button-shadow-hover: var(--shadow-button-lift);
   --button-transform-hover: var(--motion-button-lift);
   --button-hover-brightness: var(--effect-button-hover-brightness);
+  --button-shadow-pressed: var(--shadow-flat);
+  --button-transform-pressed: var(--motion-transform-rest);
+  --button-pressed-brightness: var(--effect-brightness-rest);
   --button-transition-duration: var(--motion-duration-interaction);
   --button-transition-easing: var(--motion-easing-interaction);
   --button-primary-bg: var(--color-action-primary-bg);
