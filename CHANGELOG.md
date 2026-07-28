@@ -4,6 +4,44 @@ All notable changes to Confetti. Versions follow [semver](https://semver.org): a
 or component change that alters rendered output is a **minor** bump (consumers pull it via
 the token sync); additive-only, non-visual changes are **patch**.
 
+## [Unreleased]
+
+### Added
+
+- **`syntax.*` brand-kit inputs + `color.syntax.*` roles** — a code-block ground and its two
+  neutrals, per theme (Confetti deepest ink, Adventure deep forest, Neon synth-black). These
+  sit on the **theme axis, not the mode axis**: a snippet is an inset terminal, deep in light
+  and dark alike, so one syntax palette reads against it in both. Added to the required
+  schema, so every theme must supply them.
+- **`--code-*` component tokens** (`tokens/component/portfolio/code.json`) — ground, plain
+  text, comments, and four syntax hues. The hues *reuse the existing accent roles* rather
+  than inventing new ones: they are already tuned to be light enough to carry ink on a fill,
+  which is exactly what makes them legible as text on a deep ground. Every one clears WCAG AA
+  on its own theme's ground (lowest: Neon's function pink at 5.79:1).
+- **Storybook docs chrome is now token-driven** (`.storybook/preview-head.html`, preview-only)
+  — page surface, prose, props table, and code blocks all follow the active theme × mode, so
+  a docs page shows components on the surface they actually ship on.
+
+### Fixed
+
+- **Mode toggle only worked one way.** Changing a global makes Storybook rewrite the preview
+  URL and remount the docs page, and Storybook only writes a `globals` param for values that
+  differ from `initialGlobals` — so `mode:dark` was added but switching back to light never
+  cleared it. The remount re-seeded `dark` from the stale URL and clobbered the correct value
+  the channel had just delivered. Foundations state is now cached at module scope, which
+  survives the remount.
+- **Foundations specimens lost their colors.** Those pages have no stories, so no
+  ThemeProvider ran and the docs `<html>` carried no `data-theme`/`data-mode`. Because a
+  `var()` is substituted where a property is *declared* and the theme wiring is declared once
+  under `:root`, every wired role resolved against missing inputs and computed to nothing —
+  fills, borders, radii and fonts vanished while the spacing ramp kept working. The
+  Foundations hook now mirrors the toolbar onto the docs root.
+
+### Changed
+
+- **Tabs track radius** now matches the pill (`radius.control` instead of `radius.container`)
+  — 999px in Confetti, 12px in Adventure, square in Neon.
+
 ## [0.3.0] — 2026-07-27
 
 ### Added

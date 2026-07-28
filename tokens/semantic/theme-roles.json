@@ -16,6 +16,12 @@
       },
       "ghost": { "fg-hover": { "value": "{brand.primary}" } }
     },
+    "syntax": {
+      "$comment": "Code-block ground and its neutrals. Mode-independent by design — the block is deep in both — so unlike the other surfaces these come from the theme, not from modes/.",
+      "surface": { "value": "{syntax.surface}" },
+      "fg": { "value": "{syntax.fg}" },
+      "muted": { "value": "{syntax.muted}" }
+    },
     "accent": {
       "purple": { "bold": { "value": "{accent.purple}" } },
       "teal": { "bold": { "value": "{accent.teal}" } },

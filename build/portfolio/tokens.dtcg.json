@@ -821,6 +821,29 @@
           }
         }
       },
+      "syntax": {
+        "surface": {
+          "$value": "#16231a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-surface"
+          }
+        },
+        "fg": {
+          "$value": "#ece2ce",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-fg"
+          }
+        },
+        "muted": {
+          "$value": "#9aa88f",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-muted"
+          }
+        }
+      },
       "accent": {
         "purple": {
           "bold": {
@@ -1971,6 +1994,29 @@
         }
       }
     },
+    "syntax": {
+      "surface": {
+        "$value": "#16231a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-surface"
+        }
+      },
+      "fg": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-fg"
+        }
+      },
+      "muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-muted"
+        }
+      }
+    },
     "shape": {
       "control-radius": {
         "$value": "12px",
@@ -2553,6 +2599,100 @@
         }
       }
     },
+    "code": {
+      "bg": {
+        "$value": "#16231a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "plain text — identifiers, properties, operators",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-fg"
+        }
+      },
+      "muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$description": "comments and punctuation — present but receding",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-muted"
+        }
+      },
+      "keyword": {
+        "$value": "#d98fab",
+        "$type": "other",
+        "$description": "keywords, booleans, constants",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-keyword"
+        }
+      },
+      "string": {
+        "$value": "#9cc088",
+        "$type": "other",
+        "$description": "strings, chars, attribute values",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-string"
+        }
+      },
+      "number": {
+        "$value": "#dba679",
+        "$type": "other",
+        "$description": "numbers and units",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-number"
+        }
+      },
+      "function": {
+        "$value": "#e9c766",
+        "$type": "other",
+        "$description": "functions, class names, JSX tags",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-function"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-padding"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$description": "the mono face — same one Badge and Tabs label with",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "14px",
+        "$type": "other",
+        "$description": "14px — dense but readable",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-size"
+        }
+      },
+      "leading": {
+        "$value": "1.5",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-leading"
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "16px",
@@ -2807,8 +2947,9 @@
         }
       },
       "track-radius": {
-        "$value": "8px",
+        "$value": "12px",
         "$type": "other",
+        "$description": "matches the pill — the rail is a control, not a container, so it takes the same radius the indicator does (999px round in Confetti, 12px in Adventure, square in Neon)",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-track-radius"
         }
@@ -2835,6 +2976,14 @@
         "$description": "inactive tab label",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "hover-fg": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-hover-fg"
         }
       },
       "font-family": {
@@ -3716,6 +3865,29 @@
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-secondary-fg"
             }
+          }
+        }
+      },
+      "syntax": {
+        "surface": {
+          "$value": "#16231a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-surface"
+          }
+        },
+        "fg": {
+          "$value": "#ece2ce",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-fg"
+          }
+        },
+        "muted": {
+          "$value": "#9aa88f",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-muted"
           }
         }
       },
@@ -4869,6 +5041,29 @@
         }
       }
     },
+    "syntax": {
+      "surface": {
+        "$value": "#16231a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-surface"
+        }
+      },
+      "fg": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-fg"
+        }
+      },
+      "muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-muted"
+        }
+      }
+    },
     "shape": {
       "control-radius": {
         "$value": "12px",
@@ -5451,6 +5646,100 @@
         }
       }
     },
+    "code": {
+      "bg": {
+        "$value": "#16231a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "plain text — identifiers, properties, operators",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-fg"
+        }
+      },
+      "muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$description": "comments and punctuation — present but receding",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-muted"
+        }
+      },
+      "keyword": {
+        "$value": "#d98fab",
+        "$type": "other",
+        "$description": "keywords, booleans, constants",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-keyword"
+        }
+      },
+      "string": {
+        "$value": "#9cc088",
+        "$type": "other",
+        "$description": "strings, chars, attribute values",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-string"
+        }
+      },
+      "number": {
+        "$value": "#dba679",
+        "$type": "other",
+        "$description": "numbers and units",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-number"
+        }
+      },
+      "function": {
+        "$value": "#e9c766",
+        "$type": "other",
+        "$description": "functions, class names, JSX tags",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-function"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-padding"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$description": "the mono face — same one Badge and Tabs label with",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "14px",
+        "$type": "other",
+        "$description": "14px — dense but readable",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-size"
+        }
+      },
+      "leading": {
+        "$value": "1.5",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-leading"
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "16px",
@@ -5705,8 +5994,9 @@
         }
       },
       "track-radius": {
-        "$value": "8px",
+        "$value": "12px",
         "$type": "other",
+        "$description": "matches the pill — the rail is a control, not a container, so it takes the same radius the indicator does (999px round in Confetti, 12px in Adventure, square in Neon)",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-track-radius"
         }
@@ -5733,6 +6023,14 @@
         "$description": "inactive tab label",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "hover-fg": {
+        "$value": "#33301f",
+        "$type": "other",
+        "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-hover-fg"
         }
       },
       "font-family": {
@@ -6614,6 +6912,29 @@
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-secondary-fg"
             }
+          }
+        }
+      },
+      "syntax": {
+        "surface": {
+          "$value": "#1a150d",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-surface"
+          }
+        },
+        "fg": {
+          "$value": "#ede4d3",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-fg"
+          }
+        },
+        "muted": {
+          "$value": "#bfb6a6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-muted"
           }
         }
       },
@@ -7772,6 +8093,32 @@
         }
       }
     },
+    "syntax": {
+      "surface": {
+        "$value": "#1a150d",
+        "$type": "other",
+        "$description": "deepest ink — the code block ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-surface"
+        }
+      },
+      "fg": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$description": "plain code text",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-fg"
+        }
+      },
+      "muted": {
+        "$value": "#bfb6a6",
+        "$type": "other",
+        "$description": "comments and punctuation",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-muted"
+        }
+      }
+    },
     "shape": {
       "control-radius": {
         "$value": "999px",
@@ -8354,6 +8701,100 @@
         }
       }
     },
+    "code": {
+      "bg": {
+        "$value": "#1a150d",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$description": "plain text — identifiers, properties, operators",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-fg"
+        }
+      },
+      "muted": {
+        "$value": "#bfb6a6",
+        "$type": "other",
+        "$description": "comments and punctuation — present but receding",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-muted"
+        }
+      },
+      "keyword": {
+        "$value": "#c6adda",
+        "$type": "other",
+        "$description": "keywords, booleans, constants",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-keyword"
+        }
+      },
+      "string": {
+        "$value": "#a8d6cb",
+        "$type": "other",
+        "$description": "strings, chars, attribute values",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-string"
+        }
+      },
+      "number": {
+        "$value": "#f0c07a",
+        "$type": "other",
+        "$description": "numbers and units",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-number"
+        }
+      },
+      "function": {
+        "$value": "#e8b8cd",
+        "$type": "other",
+        "$description": "functions, class names, JSX tags",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-function"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-padding"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$description": "the mono face — same one Badge and Tabs label with",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "14px",
+        "$type": "other",
+        "$description": "14px — dense but readable",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-size"
+        }
+      },
+      "leading": {
+        "$value": "1.5",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-leading"
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "16px",
@@ -8608,8 +9049,9 @@
         }
       },
       "track-radius": {
-        "$value": "8px",
+        "$value": "999px",
         "$type": "other",
+        "$description": "matches the pill — the rail is a control, not a container, so it takes the same radius the indicator does (999px round in Confetti, 12px in Adventure, square in Neon)",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-track-radius"
         }
@@ -8636,6 +9078,14 @@
         "$description": "inactive tab label",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "hover-fg": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-hover-fg"
         }
       },
       "font-family": {
@@ -9517,6 +9967,29 @@
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-secondary-fg"
             }
+          }
+        }
+      },
+      "syntax": {
+        "surface": {
+          "$value": "#1a150d",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-surface"
+          }
+        },
+        "fg": {
+          "$value": "#ede4d3",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-fg"
+          }
+        },
+        "muted": {
+          "$value": "#bfb6a6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-muted"
           }
         }
       },
@@ -10675,6 +11148,32 @@
         }
       }
     },
+    "syntax": {
+      "surface": {
+        "$value": "#1a150d",
+        "$type": "other",
+        "$description": "deepest ink — the code block ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-surface"
+        }
+      },
+      "fg": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$description": "plain code text",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-fg"
+        }
+      },
+      "muted": {
+        "$value": "#bfb6a6",
+        "$type": "other",
+        "$description": "comments and punctuation",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-muted"
+        }
+      }
+    },
     "shape": {
       "control-radius": {
         "$value": "999px",
@@ -11257,6 +11756,100 @@
         }
       }
     },
+    "code": {
+      "bg": {
+        "$value": "#1a150d",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$description": "plain text — identifiers, properties, operators",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-fg"
+        }
+      },
+      "muted": {
+        "$value": "#bfb6a6",
+        "$type": "other",
+        "$description": "comments and punctuation — present but receding",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-muted"
+        }
+      },
+      "keyword": {
+        "$value": "#c6adda",
+        "$type": "other",
+        "$description": "keywords, booleans, constants",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-keyword"
+        }
+      },
+      "string": {
+        "$value": "#a8d6cb",
+        "$type": "other",
+        "$description": "strings, chars, attribute values",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-string"
+        }
+      },
+      "number": {
+        "$value": "#f0c07a",
+        "$type": "other",
+        "$description": "numbers and units",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-number"
+        }
+      },
+      "function": {
+        "$value": "#e8b8cd",
+        "$type": "other",
+        "$description": "functions, class names, JSX tags",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-function"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-padding"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$description": "the mono face — same one Badge and Tabs label with",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "14px",
+        "$type": "other",
+        "$description": "14px — dense but readable",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-size"
+        }
+      },
+      "leading": {
+        "$value": "1.5",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-leading"
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "16px",
@@ -11511,8 +12104,9 @@
         }
       },
       "track-radius": {
-        "$value": "8px",
+        "$value": "999px",
         "$type": "other",
+        "$description": "matches the pill — the rail is a control, not a container, so it takes the same radius the indicator does (999px round in Confetti, 12px in Adventure, square in Neon)",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-track-radius"
         }
@@ -11539,6 +12133,14 @@
         "$description": "inactive tab label",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "hover-fg": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-hover-fg"
         }
       },
       "font-family": {
@@ -12420,6 +13022,29 @@
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-secondary-fg"
             }
+          }
+        }
+      },
+      "syntax": {
+        "surface": {
+          "$value": "#0d0221",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-surface"
+          }
+        },
+        "fg": {
+          "$value": "#ede0ff",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-fg"
+          }
+        },
+        "muted": {
+          "$value": "#a98fc9",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-muted"
           }
         }
       },
@@ -13574,6 +14199,29 @@
         }
       }
     },
+    "syntax": {
+      "surface": {
+        "$value": "#0d0221",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-surface"
+        }
+      },
+      "fg": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-fg"
+        }
+      },
+      "muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-muted"
+        }
+      }
+    },
     "shape": {
       "control-radius": {
         "$value": "0",
@@ -14156,6 +14804,100 @@
         }
       }
     },
+    "code": {
+      "bg": {
+        "$value": "#0d0221",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$description": "plain text — identifiers, properties, operators",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-fg"
+        }
+      },
+      "muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$description": "comments and punctuation — present but receding",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-muted"
+        }
+      },
+      "keyword": {
+        "$value": "#b26bff",
+        "$type": "other",
+        "$description": "keywords, booleans, constants",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-keyword"
+        }
+      },
+      "string": {
+        "$value": "#00e5ff",
+        "$type": "other",
+        "$description": "strings, chars, attribute values",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-string"
+        }
+      },
+      "number": {
+        "$value": "#aaff00",
+        "$type": "other",
+        "$description": "numbers and units",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-number"
+        }
+      },
+      "function": {
+        "$value": "#ff2d95",
+        "$type": "other",
+        "$description": "functions, class names, JSX tags",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-function"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-padding"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$description": "the mono face — same one Badge and Tabs label with",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "14px",
+        "$type": "other",
+        "$description": "14px — dense but readable",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-size"
+        }
+      },
+      "leading": {
+        "$value": "1.5",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-leading"
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "16px",
@@ -14412,6 +15154,7 @@
       "track-radius": {
         "$value": "0",
         "$type": "other",
+        "$description": "matches the pill — the rail is a control, not a container, so it takes the same radius the indicator does (999px round in Confetti, 12px in Adventure, square in Neon)",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-track-radius"
         }
@@ -14438,6 +15181,14 @@
         "$description": "inactive tab label",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "hover-fg": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-hover-fg"
         }
       },
       "font-family": {
@@ -15319,6 +16070,29 @@
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-secondary-fg"
             }
+          }
+        }
+      },
+      "syntax": {
+        "surface": {
+          "$value": "#0d0221",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-surface"
+          }
+        },
+        "fg": {
+          "$value": "#ede0ff",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-fg"
+          }
+        },
+        "muted": {
+          "$value": "#a98fc9",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-syntax-muted"
           }
         }
       },
@@ -16473,6 +17247,29 @@
         }
       }
     },
+    "syntax": {
+      "surface": {
+        "$value": "#0d0221",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-surface"
+        }
+      },
+      "fg": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-fg"
+        }
+      },
+      "muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--syntax-muted"
+        }
+      }
+    },
     "shape": {
       "control-radius": {
         "$value": "0",
@@ -17055,6 +17852,100 @@
         }
       }
     },
+    "code": {
+      "bg": {
+        "$value": "#0d0221",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$description": "plain text — identifiers, properties, operators",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-fg"
+        }
+      },
+      "muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$description": "comments and punctuation — present but receding",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-muted"
+        }
+      },
+      "keyword": {
+        "$value": "#b26bff",
+        "$type": "other",
+        "$description": "keywords, booleans, constants",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-keyword"
+        }
+      },
+      "string": {
+        "$value": "#00e5ff",
+        "$type": "other",
+        "$description": "strings, chars, attribute values",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-string"
+        }
+      },
+      "number": {
+        "$value": "#aaff00",
+        "$type": "other",
+        "$description": "numbers and units",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-number"
+        }
+      },
+      "function": {
+        "$value": "#ff2d95",
+        "$type": "other",
+        "$description": "functions, class names, JSX tags",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-function"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-padding"
+        }
+      },
+      "font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$description": "the mono face — same one Badge and Tabs label with",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-family"
+        }
+      },
+      "font-size": {
+        "$value": "14px",
+        "$type": "other",
+        "$description": "14px — dense but readable",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-font-size"
+        }
+      },
+      "leading": {
+        "$value": "1.5",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--code-leading"
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "16px",
@@ -17311,6 +18202,7 @@
       "track-radius": {
         "$value": "0",
         "$type": "other",
+        "$description": "matches the pill — the rail is a control, not a container, so it takes the same radius the indicator does (999px round in Confetti, 12px in Adventure, square in Neon)",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-track-radius"
         }
@@ -17337,6 +18229,14 @@
         "$description": "inactive tab label",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-idle-fg"
+        }
+      },
+      "hover-fg": {
+        "$value": "#1a0430",
+        "$type": "other",
+        "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-hover-fg"
         }
       },
       "font-family": {

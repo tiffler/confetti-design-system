@@ -8,3 +8,118 @@
 <link rel="preload" href="/fonts/fredoka-latin-var.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/jetbrains-mono-latin-var.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="/fonts/fonts.css" />
+
+<!--
+  Hand Storybook's docs chrome to the tokens.
+
+  global.css themes <body>, but the docs wrapper paints its own white background on top of
+  it and sets its own ink on headings and prose. In dark mode that left the page white with
+  cream specimen labels on it — illegible, and the opposite of the point: a Foundations page
+  should show the system on the surface it actually ships on. These rules are Storybook-only
+  (this file is injected into the preview iframe), so nothing here reaches consumers.
+-->
+<style>
+  .sbdocs.sbdocs-wrapper {
+    background: var(--color-surface-page);
+    color: var(--color-text-primary);
+  }
+
+  /* The story preview block is a canvas, which is exactly the `raised` role. */
+  .sbdocs .sb-previewBlock,
+  .sbdocs .sbdocs-preview,
+  .sbdocs .docs-story {
+    background: var(--color-surface-raised);
+  }
+
+  /* Storybook sets explicit colors here, so they have to be repointed rather than inherited. */
+  .sbdocs-content :is(h1, h2, h3, h4, h5, h6, p, li, td, th, strong, blockquote) {
+    color: var(--color-text-primary);
+  }
+
+  .sbdocs-content :is(hr, table, th, td) {
+    border-color: var(--color-border-subtle);
+  }
+
+  .sbdocs-content :is(code, pre) {
+    background: var(--color-surface-panel);
+    color: var(--color-text-primary);
+    border-color: var(--color-border-subtle);
+  }
+
+  /* The props table renders OUTSIDE .sbdocs-content, so the rules above never reach it. It
+     hardcodes a white cell background and a dark ink on the description column, which on a
+     dark page left pale text on white. Both table class names are covered because Storybook
+     renders the block wrapper and the table itself under different ones. Nested `div`s carry
+     the hardcoded color; `span`s are left alone so the red required marker keeps its meaning. */
+  :is(.sb-argstableBlock, .docblock-argstable) :is(th, td) {
+    background: var(--color-surface-raised);
+    color: var(--color-text-primary);
+    border-color: var(--color-border-subtle);
+  }
+
+  :is(.sb-argstableBlock, .docblock-argstable) :is(th, td) :is(div, p) {
+    color: inherit;
+  }
+
+  /* A drop-shadow tuned for a white table reads as a smudge on a dark one. */
+  .docblock-argstable-body {
+    filter: none;
+  }
+
+  /* ---- Code blocks -------------------------------------------------------------
+     Storybook ships a dark-theme Prism palette (near-white punctuation) but renders it
+     on a transparent block, so snippets were pale text on a pale page. The block is now
+     an inset terminal on --code-bg, which is deep in BOTH modes so a single syntax
+     palette reads against it. Colors come from tokens/component/portfolio/code.json,
+     which reuses each theme's four accent hues — every one clears AA on its own ground.
+
+     `!important` throughout is deliberate. Storybook ships its Prism palette as Emotion
+     styles injected at runtime, i.e. AFTER this stylesheet and at the same specificity, so
+     a plain rule always loses the tie. This is the sanctioned escape hatch for overriding
+     third-party chrome, and it only reaches Storybook's own docs markup.                  */
+  pre.prismjs,
+  .docblock-source {
+    background: var(--code-bg) !important;
+    color: var(--code-fg) !important;
+    border: 0 !important;
+    border-radius: var(--code-radius) !important;
+    padding: var(--code-padding) !important;
+    font-family: var(--code-font-family) !important;
+    font-size: var(--code-font-size) !important;
+    line-height: var(--code-leading) !important;
+  }
+
+  /* The inline-code rule above would otherwise repaint every <code> inside the block. */
+  pre.prismjs :is(code, span) {
+    background: transparent !important;
+  }
+
+  pre.prismjs :is(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+    color: var(--code-muted) !important;
+    font-style: italic;
+  }
+
+  pre.prismjs :is(.token.punctuation, .token.operator) {
+    color: var(--code-muted) !important;
+  }
+
+  pre.prismjs :is(.token.keyword, .token.boolean, .token.constant, .token.atrule, .token.important, .token.rule) {
+    color: var(--code-keyword) !important;
+  }
+
+  pre.prismjs :is(.token.string, .token.char, .token.attr-value, .token.regex, .token.inserted) {
+    color: var(--code-string) !important;
+  }
+
+  pre.prismjs :is(.token.number, .token.unit, .token.symbol) {
+    color: var(--code-number) !important;
+  }
+
+  pre.prismjs :is(.token.function, .token.class-name, .token.tag, .token.selector, .token.builtin) {
+    color: var(--code-function) !important;
+  }
+
+  pre.prismjs :is(.token.property, .token.literal-property, .token.attr-name, .token.variable, .token.parameter) {
+    color: var(--code-fg) !important;
+  }
+</style>

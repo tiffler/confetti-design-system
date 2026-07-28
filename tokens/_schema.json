@@ -31,7 +31,10 @@
       "accent.orange.subtle",
       "accent.pink.subtle",
       "accent.on-bold",
-      "accent.on-subtle"
+      "accent.on-subtle",
+      "syntax.surface",
+      "syntax.fg",
+      "syntax.muted"
     ],
     "shadow": ["lift"],
     "focus": ["ring.width", "ring.color", "ring.offset"]

@@ -10,6 +10,12 @@
     "orange": { "value": "{color.neon.lime.400}" },
     "pink": { "value": "{color.neon.pink.500}" }
   },
+  "syntax": {
+    "$comment": "Deepest synth purple-black for code, with lavender text and a dimmed lavender for comments — see the note in themes/confetti.json for why this sits on the theme axis rather than the mode axis.",
+    "surface": { "value": "{color.synth.900}" },
+    "fg": { "value": "{color.glow.100}" },
+    "muted": { "value": "{color.glow.400}" }
+  },
   "shape": {
     "$comment": "SHARP — no radius on buttons or cards (radius.none).",
     "control-radius": { "value": "{radius.none}" },

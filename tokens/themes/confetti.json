@@ -11,6 +11,12 @@
     "orange": { "value": "{color.orange.400}" },
     "pink": { "value": "{color.pink.400}" }
   },
+  "syntax": {
+    "$comment": "The code-block surface and the two neutrals that sit on it. Deliberately on the THEME axis, not the mode axis: a snippet is an inset terminal, deep in light and dark alike, so one set of syntax colors has to read against it in both. The four accent hues above are the syntax colors — they are already tuned to carry ink on a light fill, which makes them light enough to read as text on this deep surface.",
+    "surface": { "value": "{color.ink.900}", "comment": "deepest ink — the code block ground" },
+    "fg": { "value": "{color.cream.300}", "comment": "plain code text" },
+    "muted": { "value": "{color.ink.200}", "comment": "comments and punctuation" }
+  },
   "shape": {
     "$comment": "The theme's shape personality. control = pills/buttons, container = cards, border = the sticker outline weight.",
     "control-radius": { "value": "{radius.full}" },

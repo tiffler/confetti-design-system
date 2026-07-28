@@ -34,16 +34,27 @@ function readGlobalsFromUrl(): Partial<ThemeGlobals> {
 }
 
 /**
+ * Last known toolbar state, held at module scope so it survives a remount.
+ *
+ * This has to outlive the components. Changing a global makes Storybook rewrite the
+ * preview URL and remount the docs page, so a `useState` initializer that reads the URL
+ * runs again on every toggle — and the URL is not a reliable mirror of the toolbar.
+ * Storybook only writes a `globals` param for values that differ from `initialGlobals`,
+ * so switching to dark adds `globals=mode:dark` while switching back to light never
+ * clears it. The remount then re-seeded `dark` from the stale URL and clobbered the
+ * correct value the channel had just delivered — mode toggled one way and stuck.
+ * Seeding from this cache instead means a remount resumes from the live value.
+ */
+let lastKnown: ThemeGlobals = { ...DEFAULTS, ...readGlobalsFromUrl() };
+
+/**
  * Foundations pages cannot use `useGlobals` — that is a preview hook, valid
  * only inside decorators and story functions, and MDX prose renders outside
- * both. So we read the toolbar state off the addons channel instead: the URL
- * seeds the initial value, then SET_GLOBALS / GLOBALS_UPDATED keep it live.
+ * both. So we read the toolbar state off the addons channel instead: the cache
+ * above seeds the initial value, then SET_GLOBALS / GLOBALS_UPDATED keep it live.
  */
 export function useThemeGlobals(): ThemeGlobals {
-  const [globals, setGlobals] = useState<ThemeGlobals>(() => ({
-    ...DEFAULTS,
-    ...readGlobalsFromUrl(),
-  }));
+  const [globals, setGlobals] = useState<ThemeGlobals>(lastKnown);
 
   useEffect(() => {
     const channel = addons.getChannel();
@@ -51,10 +62,11 @@ export function useThemeGlobals(): ThemeGlobals {
     const apply = (payload: { globals?: Partial<ThemeGlobals> } | Partial<ThemeGlobals>) => {
       const next = (payload as { globals?: Partial<ThemeGlobals> })?.globals ?? payload;
       if (!next) return;
-      setGlobals((current) => ({
-        theme: (next as ThemeGlobals).theme ?? current.theme,
-        mode: (next as ThemeGlobals).mode ?? current.mode,
-      }));
+      lastKnown = {
+        theme: (next as ThemeGlobals).theme ?? lastKnown.theme,
+        mode: (next as ThemeGlobals).mode ?? lastKnown.mode,
+      };
+      setGlobals(lastKnown);
     };
 
     channel.on(SET_GLOBALS, apply);
@@ -71,9 +83,28 @@ export function useThemeGlobals(): ThemeGlobals {
 /**
  * Specimens must carry the theme attributes themselves, for the same reason —
  * spread this onto a specimen's root so its var() references resolve.
+ *
+ * The wrapper attributes alone are not enough, though. The theme WIRING
+ * (`--color-accent-purple-bold: var(--accent-purple)` and friends) is declared once
+ * under `:root`, and a `var()` is substituted where a property is DECLARED, not where
+ * it is used — so a wrapper only inherits whatever `:root` already resolved. Foundations
+ * pages have no stories, so no ThemeProvider ever runs in the docs iframe and `<html>`
+ * carries no attributes at all: every wired role resolves against missing inputs and
+ * computes to nothing, which strips specimens of their accent fills, borders, radii and
+ * fonts while mode-independent values (the spacing ramp) keep working. Mirror the toolbar
+ * onto the docs root so the wiring has its inputs.
  */
 export function useThemeAttrs(): { 'data-theme': Theme; 'data-mode': Mode } {
   const { theme, mode } = useThemeGlobals();
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.setAttribute('data-theme', theme);
+    root.setAttribute('data-mode', mode);
+    // Deliberately not cleaned up on unmount: ThemeProvider owns these same attributes in
+    // the story canvas, and clearing them here would blank the page between renders.
+  }, [theme, mode]);
+
   return { 'data-theme': theme, 'data-mode': mode };
 }
 

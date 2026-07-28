@@ -1,0 +1,17 @@
+{
+  "$comment": "Code block. The ground is `color.syntax.*`, which lives on the THEME axis rather than the mode axis — a snippet is an inset terminal, deep in light and dark alike, so one set of syntax colors reads against it in both. The syntax hues are the four accent roles, reused rather than invented: they are already tuned to be light enough to carry ink on a fill, which is exactly what makes them legible as text on a deep ground, and it means each theme's code block speaks in that theme's palette (Confetti purple/teal/orange/pink, Adventure berry/moss/clay/amber, Neon purple/cyan/lime/magenta).",
+  "code": {
+    "bg": { "value": "{color.syntax.surface}" },
+    "fg": { "value": "{color.syntax.fg}", "comment": "plain text — identifiers, properties, operators" },
+    "muted": { "value": "{color.syntax.muted}", "comment": "comments and punctuation — present but receding" },
+    "keyword": { "value": "{color.accent.purple.bold}", "comment": "keywords, booleans, constants" },
+    "string": { "value": "{color.accent.teal.bold}", "comment": "strings, chars, attribute values" },
+    "number": { "value": "{color.accent.orange.bold}", "comment": "numbers and units" },
+    "function": { "value": "{color.accent.pink.bold}", "comment": "functions, class names, JSX tags" },
+    "radius": { "value": "{radius.container}" },
+    "padding": { "value": "{space.inset-sm}" },
+    "font-family": { "value": "{font.family.label}", "comment": "the mono face — same one Badge and Tabs label with" },
+    "font-size": { "value": "{font.size.body-secondary}", "comment": "14px — dense but readable" },
+    "leading": { "value": "{font.leading.body}" }
+  }
+}
