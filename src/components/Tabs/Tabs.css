@@ -80,6 +80,16 @@
   color: var(--badge-fg);
 }
 
+/* Neutral is not an accent, and Badge already treats it as its own pair: the paper fill
+   carries `--badge-fg-neutral`, not the accent ink. The indicator mirrored Badge's fill per
+   hue but the label always took `--badge-fg`, so a neutral tab put accent ink on the neutral
+   fill — fine in light, 1.1:1 in dark, where that fill goes deep and the label disappeared.
+   The lit hue is on the track (`cf-tabs--<hue>`) rather than inferred from the indicator,
+   because the indicator only exists after the first measuring pass. */
+.cf-tabs--neutral .cf-tabs__tab[aria-selected='true'] {
+  color: var(--badge-fg-neutral);
+}
+
 /* `data-force` pins a state that a control cannot otherwise trigger — see the same hook
    in Button.css. Nothing sets it at runtime. */
 .cf-tabs__tab:focus-visible,

@@ -86,14 +86,17 @@
     color: inherit !important;
   }
 
-  /* The story preview's own toolbar (zoom / reset). It is the first child of the preview
-     block and carries only a hashed Emotion class, so it has to be reached structurally. */
-  .sbdocs.sbdocs-preview > *:first-child {
+  /* The story preview's own toolbar (zoom / reset). It carries only a hashed Emotion class,
+     so it has to be reached structurally — but `:first-child` alone is not enough: a canvas
+     rendered WITHOUT a toolbar makes `.docs-story` the first child, and these rules then
+     repaint the story itself, muting every button/link/icon inside it. Excluding
+     `.docs-story` keeps them on the toolbar, which is the only thing they are meant for. */
+  .sbdocs.sbdocs-preview > *:first-child:not(.docs-story) {
     background: var(--color-surface-panel) !important;
     border-color: var(--color-border-subtle) !important;
   }
 
-  .sbdocs.sbdocs-preview > *:first-child :is(button, svg, a) {
+  .sbdocs.sbdocs-preview > *:first-child:not(.docs-story) :is(button, svg, a) {
     color: var(--color-text-muted) !important;
   }
 

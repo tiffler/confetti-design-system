@@ -59,15 +59,16 @@ function Cover() {
             margin: 0,
           }}
         >
-          A sticker-flavored, multi-theme design system. Three themes, two modes, one set of
-          tokens — change a handful of values and the whole thing re-skins. Built to make demos
-          look <em>intentional</em>, not assembled.
+          A sticker-flavored, themeable design system. As many themes as you like, two modes,
+          one set of tokens — change a handful of values and the whole thing re-skins. Built to
+          make demos look <em>intentional</em>, not assembled.
         </p>
 
-        <Card surface="raised" eyebrow="What's inside" title="Tokens, themed three ways">
-          Primitive → semantic → component tokens, a brand-kit contract, and three built-in looks —
-          Confetti, Adventure, and Neon — each with its own light and dark. Have a poke around
-          Foundations and Components in the sidebar.
+        <Card surface="raised" eyebrow="What's inside" title="Tokens, themed any way you like">
+          Primitive → semantic → component tokens and a brand-kit contract: define a handful of
+          inputs and you have a new theme, in light and dark. Three ship as worked examples —
+          Confetti, Adventure and Neon. Have a poke around Foundations and Components in the
+          sidebar.
         </Card>
 
         <div style={{ display: 'flex', gap: 'var(--space-inline)', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -79,6 +80,10 @@ function Cover() {
           </Badge>
           <Badge hue="purple" tone="bold">
             Neon
+          </Badge>
+          {/* The row would otherwise read as the complete set. It isn't one. */}
+          <Badge hue="neutral" tone="subtle">
+            + yours
           </Badge>
         </div>
 

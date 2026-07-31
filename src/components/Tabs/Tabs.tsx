@@ -59,7 +59,7 @@ export function Tabs({ tabs, value, onChange, 'aria-label': ariaLabel }: TabsPro
   }
 
   return (
-    <div className="cf-tabs" role="tablist" aria-label={ariaLabel}>
+    <div className={`cf-tabs cf-tabs--${activeHue}`} role="tablist" aria-label={ariaLabel}>
       {indicator && (
         <span
           aria-hidden="true"

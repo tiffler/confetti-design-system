@@ -1,0 +1,25 @@
+/* Demo-page CSS, used only by the examples under `Pages/`. Not part of the shipped system.
+
+   Card puts everything you hand it as `children` into one `.cf-card__body` block. That is
+   the right default — a card is a container, not a layout — but it means a footer inside
+   the body has no flex context to pin to, and no way to reach the bottom of a card that
+   was stretched taller by its neighbour. A row of pricing cards then ends up with its CTAs
+   at four different heights.
+
+   `.pg-fill` opts a card's body into being a column that fills the card, so `margin-top:
+   auto` on a last child does what it looks like it does. The gap is a custom property so
+   each page can set its own rhythm without a second class. */
+/* Masonry sheet: frames pack by height down each column. A frame that splits across a
+   column break reads as two broken groups, so every direct child stays whole — and carries
+   its own bottom margin, since `column-gap` only spaces the columns, not the stack. */
+.pg-sheet > * {
+  break-inside: avoid;
+  margin-block-end: var(--space-stack);
+}
+
+.pg-fill > .cf-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pg-fill-gap, var(--space-stack));
+}

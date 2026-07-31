@@ -3,7 +3,7 @@
 <p align="center">
   A sticker-flavored, multi-theme design system — thick ink outlines, hard offset shadows
   (no blur), warm paper tones, and controls that sit square at rest and tilt on hover.<br>
-  Three themes, each in light and dark.
+  Themeable to any brand — a new look is a handful of token values, in light and dark.
 </p>
 
 ---

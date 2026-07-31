@@ -1,6 +1,9 @@
 # Architecture
 
-Confetti ships **three themes** — `confetti`, `adventure`, `neon` — each in **light and dark**.
+Confetti is **themeable** — a theme is a handful of brand-kit values, so a project can run as
+many as it needs, each in **light and dark**. Three ship as worked examples (`confetti`,
+`adventure`, `neon`); they are demonstrations of the contract, not the extent of it.
+
 Theme and mode are two independent axes combined by the CSS cascade, not a per-combination
 matrix: **mode** owns the neutrals, **theme** owns a small brand kit, and a theme may bring
 its own neutrals per mode. Adding a theme is a few token values, never a refactor.
@@ -15,7 +18,7 @@ npm run storybook      # builds tokens, then serves Storybook on :6006
 ```
 
 Storybook opens on a cover page; use the **Theme** and **Mode** switchers in the toolbar to
-flip between all six looks.
+flip through every theme × mode combination the project defines.
 
 | Script | What it does |
 | --- | --- |
