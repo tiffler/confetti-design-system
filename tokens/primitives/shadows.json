@@ -28,10 +28,12 @@
     },
     "duration": {
       "fast": { "value": "120ms" },
-      "base": { "value": "180ms" }
+      "base": { "value": "180ms" },
+      "drift": { "value": "1600ms", "comment": "one loop of a continuous ambient motion — slow enough to read as texture moving, not as a control reacting" }
     },
     "easing": {
-      "standard": { "value": "cubic-bezier(0.2, 0, 0.2, 1)" }
+      "standard": { "value": "cubic-bezier(0.2, 0, 0.2, 1)" },
+      "linear": { "value": "linear", "comment": "the only correct curve for a seamless loop — any easing makes a continuous animation pulse at the seam" }
     }
   },
   "z": {

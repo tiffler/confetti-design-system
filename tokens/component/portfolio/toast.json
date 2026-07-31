@@ -1,0 +1,37 @@
+{
+  "$comment": "Toast — a transient notification. It is Card-weight paper (raised surface, sticker border, hard offset shadow) with a tone carried by an ACCENT EDGE and the icon rather than by a coloured fill. That choice is deliberate: a solid green or red panel would force every foreground inside it — label, body, the dismiss control — onto a second set of tokens, and the dismiss button would stop matching every other ghost button in the system. Colouring the edge instead keeps the toast's interior identical to any other paper surface, so text.primary, text.muted and Button ghost all work unchanged, and the tone still reads instantly from across the page.",
+  "toast": {
+    "bg": { "value": "{color.surface.raised}" },
+    "fg": { "value": "{color.text.primary}" },
+    "fg-muted": { "value": "{color.text.muted}" },
+    "border-width": { "value": "{border.width.default}", "comment": "the 2px sticker edge — same as Card" },
+    "border-color": { "value": "{color.border.default}" },
+    "radius": { "value": "{radius.container}" },
+    "shadow": { "value": "{shadow.lift}", "comment": "the hard offset — a toast sits above the page, and this is how this system says so" },
+    "padding": { "value": "{space.inset-sm}" },
+    "gap": { "value": "{space.inline}" },
+    "min-width": { "value": "{size.dialog.sm}", "comment": "matches the small dialog, so a toast and a confirmation read as the same family" },
+    "$comment-edge": "The tone stripe down the leading edge. Wider than the sticker border it replaces on that side, so it reads as a deliberate rule rather than a recoloured edge — hence a space step rather than a border width.",
+    "edge-width": { "value": "{space.inset-xs}", "comment": "4px" },
+    "edge": {
+      "success": { "value": "{color.status.success.text}" },
+      "danger": { "value": "{color.status.danger.text}" },
+      "neutral": { "value": "{color.text.muted}" }
+    },
+    "icon": {
+      "success": { "value": "{color.status.success.text}" },
+      "danger": { "value": "{color.status.danger.text}" },
+      "neutral": { "value": "{color.text.muted}" }
+    },
+    "title": {
+      "font-family": { "value": "{font.family.body}" },
+      "font-size": { "value": "{font.size.body}" },
+      "font-weight": { "value": "{font.weight.control}" }
+    },
+    "body": {
+      "font-family": { "value": "{font.family.body}" },
+      "font-size": { "value": "{font.size.body-secondary}" },
+      "leading": { "value": "{font.leading.body}" }
+    }
+  }
+}

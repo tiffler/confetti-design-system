@@ -110,12 +110,16 @@ its own CSS) without touching Confetti. `target="scope"` writes the attributes t
 
 React, one `.tsx` + `.css` + `.stories.tsx` triple each, consuming component tokens only.
 
-- **Button** — `primary` · `secondary` · `ghost`. Hover is per-theme: Confetti lifts onto a
-  hard shadow, Adventure brightens with no lift, Neon glows.
+- **Button** — `primary` · `secondary` · `ghost` · `danger`. Hover is per-theme: Confetti
+  lifts onto a hard shadow, Adventure brightens with no lift, Neon glows. `danger` takes
+  primary's footprint but fills from `status.danger` rather than the brand — so it stays red
+  in a theme whose brand is not — and hazard-stripes it with a deepened step of that red.
 - **Card** — eyebrow · title · body; tilts on hover by a deterministic hash of its seed (no
   `Math.random()`, so visual snapshots stay stable).
-- **Badge** — four accent hues plus a `neutral` variant, in `bold` and `subtle` tones. The
-  source of truth for the pill palette, which Tabs reuses.
+- **Badge** — four accent hues plus `success` and `neutral`, in `bold` and `subtle` tones.
+  The source of truth for the pill palette, which Tabs reuses. `success` and `neutral` are
+  states rather than categories, so both carry their own foregrounds instead of the shared
+  accent pair — and neither appears in `TabHue`, because a tab is a category.
 - **Tabs** — a segmented control: a pill group with a sliding active indicator that borrows
   Badge's palette, so a lit tab and a Badge read as one system per hue. Arrows / Home / End,
   roving `tabindex`.
@@ -123,6 +127,11 @@ React, one `.tsx` + `.css` + `.stories.tsx` triple each, consuming component tok
   trap, `inert`, Escape, and the top layer; the element itself paints `--color-scrim`, so a
   click that misses the panel dismisses and nothing needs a z-index. The panel is
   Card-weight, in two widths.
+- **Toast** — a transient notification in `success` · `danger` · `neutral`. Card-weight
+  paper with the tone on the leading edge and the icon rather than in a coloured fill, so the
+  interior stays an ordinary surface and the ghost dismiss button matches every other one.
+  Announces itself correctly (`role="alert"` for danger, `role="status"` otherwise);
+  positioning, queueing and timers are the application's, as `open` is for Modal.
 - **Icon** — wraps Phosphor icons at bold weight; sizes mirror the type scale; decorative by
   default (a `label` promotes it to `role="img"`).
 
@@ -184,13 +193,13 @@ Confetti/
 │  ├─ modes/                  light / dark base neutrals
 │  ├─ themes/                 brand-kit inputs — confetti · adventure · neon
 │  ├─ overrides/              per-theme-per-mode neutrals + a11y lifts
-│  └─ component/portfolio/    button · card · badge · tabs · modal · icon
+│  └─ component/portfolio/    button · card · badge · tabs · modal · toast · icon
 ├─ style-dictionary/          build.js · audit-layers.js · validate-schema.js
 ├─ build/portfolio/           GENERATED, committed — tokens.css/json/dtcg + tailwind
 ├─ docs/ARCHITECTURE.md       this file
 ├─ public/fonts/              self-hosted Fredoka + JetBrains Mono
 └─ src/
-   ├─ components/             Button · Card · Badge · Tabs · Modal · Icon
+   ├─ components/             Button · Card · Badge · Tabs · Modal · Toast · Icon
    ├─ foundations/            Storybook docs + live token specimens
    ├─ theme/ThemeProvider.tsx
    └─ Cover.stories.tsx       the Storybook landing page

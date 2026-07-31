@@ -3,10 +3,15 @@ import { Children, isValidElement } from 'react';
 import { Icon } from '../Icon/Icon';
 import './Button.css';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  /** Primary = red fill. Secondary = paper fill with ink border. Ghost = text only. */
+  /**
+   * Primary = brand fill. Secondary = paper fill with ink border. Ghost = text only.
+   * Danger = the destructive action: same footprint as primary, filled with the danger
+   * status rather than the brand, and hazard-striped so it reads as different before you
+   * have read the label.
+   */
   variant?: ButtonVariant;
   children: ReactNode;
 }

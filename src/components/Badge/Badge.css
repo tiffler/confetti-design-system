@@ -29,6 +29,14 @@
 .cf-badge--bold.cf-badge--pink {
   background: var(--badge-bg-pink);
 }
+/* Success: a state, not a category. Its bold end inverts the accent recipe — a deep fill
+   carrying a light label, rather than a light fill carrying ink — so like neutral it brings
+   its own foreground instead of the shared `--badge-fg`. */
+.cf-badge--bold.cf-badge--success {
+  background: var(--badge-bg-success);
+  color: var(--badge-fg-success);
+}
+
 /* Neutral: paper fill + ink text (not a category — labels, versions, counts). */
 .cf-badge--bold.cf-badge--neutral {
   background: var(--badge-bg-neutral);
@@ -56,4 +64,9 @@
 }
 .cf-badge--subtle.cf-badge--pink {
   background: var(--badge-bg-subtle-pink);
+}
+
+.cf-badge--subtle.cf-badge--success {
+  background: var(--badge-bg-subtle-success);
+  color: var(--badge-fg-subtle-success);
 }

@@ -39,7 +39,16 @@
       "500": { "value": "#c40000", "comment": "confetti brand Red — light/HC surfaces" },
       "400": { "value": "#e33b2e", "comment": "confetti brand Red, lifted" },
       "300": { "value": "#f04b3a", "comment": "confetti brand Red, lifted — reads on the darker surfaces but not on card" },
-      "200": { "value": "#fa7263", "comment": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent" }
+      "200": { "value": "#fa7263", "comment": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent" },
+      "600": { "value": "#a80000", "comment": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout." }
+    },
+    "green": {
+      "$comment": "STATUS green — success. Not a brand hue and not one of the four confetti accents: it means one thing, so it sits on the status roles and is shared by every theme rather than being repointed per brand.",
+      "800": { "value": "#1a3b2c", "comment": "deep tint — the subtle end of the pair in DARK mode, carrying chalk (10.37:1)" },
+      "700": { "value": "#137043", "comment": "success AS TEXT on a light surface (4.86:1 on cream)" },
+      "600": { "value": "#1b7a4b", "comment": "the rich green — success as a FILL, carrying a white label (5.34:1). Same in both modes; a fill does not need to move." },
+      "400": { "value": "#3fbe83", "comment": "success AS TEXT on a dark surface — lifted enough to clear AA on card, the lightest dark surface (5.5:1)" },
+      "100": { "value": "#dff2e6", "comment": "pale tint — the subtle end of the pair in LIGHT mode, carrying green.700 (5.25:1)" }
     },
     "$comment-confetti-accents": "The four confetti hues. Each ramp reads 100 (pale tint, light mode) → 400 (bold, light mode) → 500 (bold, DARK mode — same hue pushed for chroma so it reads as a choice on gray rather than a dusty pastel) → 700 (deep tint, dark mode).",
     "purple": {

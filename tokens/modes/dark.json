@@ -25,6 +25,22 @@
       },
       "ghost": { "bg": { "value": "{color.base.transparent}" }, "fg": { "value": "{color.chalk.100}" } }
     },
+    "$comment-status": "STATUS roles — see the note in modes/light.json. Only `text` moves between modes: the rich green FILL carries its white label at 5.34:1 on any page, but the same green AS TEXT drops to 2.43:1 on the card surface, so it lifts to green.400 here.",
+    "status": {
+      "success": {
+        "bg": { "value": "{color.green.600}" },
+        "fg": { "value": "{color.base.white}" },
+        "text": { "value": "{color.green.400}" },
+        "subtle": { "value": "{color.green.800}", "comment": "the tint end goes deep in dark, like the accent tints" },
+        "on-subtle": { "value": "{color.chalk.100}" }
+      },
+      "danger": {
+        "bg": { "value": "{color.red.500}" },
+        "fg": { "value": "{color.base.white}" },
+        "text": { "value": "{color.red.200}", "comment": "danger AS TEXT — the same lift brand-as-text takes, so it clears AA on card (4.72:1)" },
+        "deep": { "value": "{color.red.600}", "comment": "the hazard stripe on a danger control" }
+      }
+    },
     "accent": {
       "purple": { "subtle": { "value": "{color.purple.700}" } },
       "teal": { "subtle": { "value": "{color.teal.700}" } },

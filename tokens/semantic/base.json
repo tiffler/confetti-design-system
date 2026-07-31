@@ -91,7 +91,13 @@
       "rest": { "value": "{motion.rest}" }
     },
     "tilt": { "max": { "value": "{motion.tilt.subtle}", "comment": "outer bound of the hand-placed sticker angle" } },
-    "duration": { "interaction": { "value": "{motion.duration.base}", "comment": "hover and focus transitions" } },
-    "easing": { "interaction": { "value": "{motion.easing.standard}" } }
+    "duration": {
+      "interaction": { "value": "{motion.duration.base}", "comment": "hover and focus transitions" },
+      "ambient": { "value": "{motion.duration.drift}", "comment": "one loop of a continuous, non-reactive animation — a texture that drifts rather than a state that changes" }
+    },
+    "easing": {
+      "interaction": { "value": "{motion.easing.standard}" },
+      "ambient": { "value": "{motion.easing.linear}", "comment": "constant speed, so a looping animation has no perceptible seam" }
+    }
   }
 }

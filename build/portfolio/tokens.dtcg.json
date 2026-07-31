@@ -224,6 +224,56 @@
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-500"
           }
+        },
+        "600": {
+          "$value": "#a80000",
+          "$type": "color",
+          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "green": {
+        "100": {
+          "$value": "#dff2e6",
+          "$type": "color",
+          "$description": "pale tint — the subtle end of the pair in LIGHT mode, carrying green.700 (5.25:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-100"
+          }
+        },
+        "400": {
+          "$value": "#3fbe83",
+          "$type": "color",
+          "$description": "success AS TEXT on a dark surface — lifted enough to clear AA on card, the lightest dark surface (5.5:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-400"
+          }
+        },
+        "600": {
+          "$value": "#1b7a4b",
+          "$type": "color",
+          "$description": "the rich green — success as a FILL, carrying a white label (5.34:1). Same in both modes; a fill does not need to move.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-600"
+          }
+        },
+        "700": {
+          "$value": "#137043",
+          "$type": "color",
+          "$description": "success AS TEXT on a light surface (4.86:1 on cream)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-700"
+          }
+        },
+        "800": {
+          "$value": "#1a3b2c",
+          "$type": "color",
+          "$description": "deep tint — the subtle end of the pair in DARK mode, carrying chalk (10.37:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-800"
+          }
         }
       },
       "purple": {
@@ -1088,6 +1138,78 @@
             "com.confetti.cssVariable": "--color-border-none"
           }
         }
+      },
+      "status": {
+        "success": {
+          "bg": {
+            "$value": "#1b7a4b",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-fg"
+            }
+          },
+          "text": {
+            "$value": "#3fbe83",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-text"
+            }
+          },
+          "subtle": {
+            "$value": "#1a3b2c",
+            "$type": "color",
+            "$description": "the tint end goes deep in dark, like the accent tints",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-subtle"
+            }
+          },
+          "on-subtle": {
+            "$value": "#e8ecf0",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-on-subtle"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-fg"
+            }
+          },
+          "text": {
+            "$value": "#fa7263",
+            "$type": "color",
+            "$description": "danger AS TEXT — the same lift brand-as-text takes, so it clears AA on card (4.72:1)",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-text"
+            }
+          },
+          "deep": {
+            "$value": "#a80000",
+            "$type": "color",
+            "$description": "the hazard stripe on a danger control",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-deep"
+            }
+          }
+        }
       }
     },
     "radius": {
@@ -1349,12 +1471,28 @@
             "com.confetti.cssVariable": "--motion-duration-base"
           }
         },
+        "drift": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous ambient motion — slow enough to read as texture moving, not as a control reacting",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-drift"
+          }
+        },
         "interaction": {
           "$value": "180ms",
           "$type": "duration",
           "$description": "hover and focus transitions",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-duration-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous, non-reactive animation — a texture that drifts rather than a state that changes",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-ambient"
           }
         }
       },
@@ -1366,11 +1504,27 @@
             "com.confetti.cssVariable": "--motion-easing-standard"
           }
         },
+        "linear": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "the only correct curve for a seamless loop — any easing makes a continuous animation pulse at the seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-linear"
+          }
+        },
         "interaction": {
           "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
           "$type": "cubicBezier",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-easing-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "constant speed, so a looping animation has no perceptible seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-ambient"
           }
         }
       },
@@ -2270,6 +2424,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
         }
       },
+      "fg-success": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-success"
+        }
+      },
+      "fg-subtle-success": {
+        "$value": "#e8ecf0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-success"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#d98fab",
@@ -2297,6 +2465,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "success": {
+          "$value": "#1b7a4b",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-success"
           }
         },
         "neutral": {
@@ -2335,6 +2510,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-subtle-pink"
+          }
+        },
+        "success": {
+          "$value": "#1a3b2c",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-success"
           }
         }
       }
@@ -2509,6 +2691,59 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-border"
+          }
+        }
+      },
+      "danger": {
+        "bg": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ffffff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-fg"
+          }
+        },
+        "border": {
+          "$value": "#ece2ce",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-border"
+          }
+        },
+        "stripe": {
+          "$value": "#a80000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe"
+          }
+        },
+        "stripe-width": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px band, so the diagonal repeats every 16px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-width"
+          }
+        },
+        "stripe-duration": {
+          "$value": "1600ms",
+          "$type": "other",
+          "$description": "one full pass of the pattern",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-duration"
+          }
+        },
+        "stripe-easing": {
+          "$value": "linear",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-easing"
           }
         }
       },
@@ -3239,6 +3474,181 @@
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
+    },
+    "toast": {
+      "bg": {
+        "$value": "#1e2c20",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg-muted"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the 2px sticker edge — same as Card",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-color"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #ece2ce",
+        "$type": "other",
+        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-shadow"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-padding"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-gap"
+        }
+      },
+      "min-width": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "matches the small dialog, so a toast and a confirmation read as the same family",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-min-width"
+        }
+      },
+      "edge-width": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-edge-width"
+        }
+      },
+      "edge": {
+        "success": {
+          "$value": "#3fbe83",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-success"
+          }
+        },
+        "danger": {
+          "$value": "#fa7263",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#9aa88f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-neutral"
+          }
+        }
+      },
+      "icon": {
+        "success": {
+          "$value": "#3fbe83",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-success"
+          }
+        },
+        "danger": {
+          "$value": "#fa7263",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#9aa88f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-neutral"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-weight"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "14px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-size"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
     }
   },
   "adventure-light": {
@@ -3464,6 +3874,56 @@
           "$description": "confetti brand Red — light/HC surfaces",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-500"
+          }
+        },
+        "600": {
+          "$value": "#a80000",
+          "$type": "color",
+          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "green": {
+        "100": {
+          "$value": "#dff2e6",
+          "$type": "color",
+          "$description": "pale tint — the subtle end of the pair in LIGHT mode, carrying green.700 (5.25:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-100"
+          }
+        },
+        "400": {
+          "$value": "#3fbe83",
+          "$type": "color",
+          "$description": "success AS TEXT on a dark surface — lifted enough to clear AA on card, the lightest dark surface (5.5:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-400"
+          }
+        },
+        "600": {
+          "$value": "#1b7a4b",
+          "$type": "color",
+          "$description": "the rich green — success as a FILL, carrying a white label (5.34:1). Same in both modes; a fill does not need to move.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-600"
+          }
+        },
+        "700": {
+          "$value": "#137043",
+          "$type": "color",
+          "$description": "success AS TEXT on a light surface (4.86:1 on cream)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-700"
+          }
+        },
+        "800": {
+          "$value": "#1a3b2c",
+          "$type": "color",
+          "$description": "deep tint — the subtle end of the pair in DARK mode, carrying chalk (10.37:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-800"
           }
         }
       },
@@ -4329,6 +4789,79 @@
             "com.confetti.cssVariable": "--color-border-none"
           }
         }
+      },
+      "status": {
+        "success": {
+          "bg": {
+            "$value": "#1b7a4b",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-fg"
+            }
+          },
+          "text": {
+            "$value": "#137043",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-text"
+            }
+          },
+          "subtle": {
+            "$value": "#dff2e6",
+            "$type": "color",
+            "$description": "the tint end of the pair — Badge subtle, Toast",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-subtle"
+            }
+          },
+          "on-subtle": {
+            "$value": "#137043",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-on-subtle"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$description": "the same red the brand uses — in Confetti they coincide; in another theme danger stays red while the brand goes wherever it likes",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-fg"
+            }
+          },
+          "text": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$description": "danger AS TEXT — 4.97:1 on the page, 6.27:1 on card",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-text"
+            }
+          },
+          "deep": {
+            "$value": "#a80000",
+            "$type": "color",
+            "$description": "the hazard stripe on a danger control",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-deep"
+            }
+          }
+        }
       }
     },
     "radius": {
@@ -4590,12 +5123,28 @@
             "com.confetti.cssVariable": "--motion-duration-base"
           }
         },
+        "drift": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous ambient motion — slow enough to read as texture moving, not as a control reacting",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-drift"
+          }
+        },
         "interaction": {
           "$value": "180ms",
           "$type": "duration",
           "$description": "hover and focus transitions",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-duration-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous, non-reactive animation — a texture that drifts rather than a state that changes",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-ambient"
           }
         }
       },
@@ -4607,11 +5156,27 @@
             "com.confetti.cssVariable": "--motion-easing-standard"
           }
         },
+        "linear": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "the only correct curve for a seamless loop — any easing makes a continuous animation pulse at the seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-linear"
+          }
+        },
         "interaction": {
           "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
           "$type": "cubicBezier",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-easing-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "constant speed, so a looping animation has no perceptible seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-ambient"
           }
         }
       },
@@ -5511,6 +6076,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
         }
       },
+      "fg-success": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-success"
+        }
+      },
+      "fg-subtle-success": {
+        "$value": "#137043",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-success"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#d98fab",
@@ -5538,6 +6117,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "success": {
+          "$value": "#1b7a4b",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-success"
           }
         },
         "neutral": {
@@ -5576,6 +6162,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-subtle-pink"
+          }
+        },
+        "success": {
+          "$value": "#dff2e6",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-success"
           }
         }
       }
@@ -5750,6 +6343,59 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-border"
+          }
+        }
+      },
+      "danger": {
+        "bg": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ffffff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-fg"
+          }
+        },
+        "border": {
+          "$value": "#33301f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-border"
+          }
+        },
+        "stripe": {
+          "$value": "#a80000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe"
+          }
+        },
+        "stripe-width": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px band, so the diagonal repeats every 16px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-width"
+          }
+        },
+        "stripe-duration": {
+          "$value": "1600ms",
+          "$type": "other",
+          "$description": "one full pass of the pattern",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-duration"
+          }
+        },
+        "stripe-easing": {
+          "$value": "linear",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-easing"
           }
         }
       },
@@ -6480,6 +7126,181 @@
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
+    },
+    "toast": {
+      "bg": {
+        "$value": "#f3ecdd",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-bg"
+        }
+      },
+      "fg": {
+        "$value": "#33301f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#6b6146",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg-muted"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the 2px sticker edge — same as Card",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#33301f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-color"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #33301f",
+        "$type": "other",
+        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-shadow"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-padding"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-gap"
+        }
+      },
+      "min-width": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "matches the small dialog, so a toast and a confirmation read as the same family",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-min-width"
+        }
+      },
+      "edge-width": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-edge-width"
+        }
+      },
+      "edge": {
+        "success": {
+          "$value": "#137043",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-success"
+          }
+        },
+        "danger": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#6b6146",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-neutral"
+          }
+        }
+      },
+      "icon": {
+        "success": {
+          "$value": "#137043",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-success"
+          }
+        },
+        "danger": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#6b6146",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-neutral"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-weight"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "14px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-size"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
     }
   },
   "confetti-dark": {
@@ -6705,6 +7526,56 @@
           "$description": "confetti brand Red — light/HC surfaces",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-500"
+          }
+        },
+        "600": {
+          "$value": "#a80000",
+          "$type": "color",
+          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "green": {
+        "100": {
+          "$value": "#dff2e6",
+          "$type": "color",
+          "$description": "pale tint — the subtle end of the pair in LIGHT mode, carrying green.700 (5.25:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-100"
+          }
+        },
+        "400": {
+          "$value": "#3fbe83",
+          "$type": "color",
+          "$description": "success AS TEXT on a dark surface — lifted enough to clear AA on card, the lightest dark surface (5.5:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-400"
+          }
+        },
+        "600": {
+          "$value": "#1b7a4b",
+          "$type": "color",
+          "$description": "the rich green — success as a FILL, carrying a white label (5.34:1). Same in both modes; a fill does not need to move.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-600"
+          }
+        },
+        "700": {
+          "$value": "#137043",
+          "$type": "color",
+          "$description": "success AS TEXT on a light surface (4.86:1 on cream)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-700"
+          }
+        },
+        "800": {
+          "$value": "#1a3b2c",
+          "$type": "color",
+          "$description": "deep tint — the subtle end of the pair in DARK mode, carrying chalk (10.37:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-800"
           }
         }
       },
@@ -7572,6 +8443,78 @@
             "com.confetti.cssVariable": "--color-border-none"
           }
         }
+      },
+      "status": {
+        "success": {
+          "bg": {
+            "$value": "#1b7a4b",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-fg"
+            }
+          },
+          "text": {
+            "$value": "#3fbe83",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-text"
+            }
+          },
+          "subtle": {
+            "$value": "#1a3b2c",
+            "$type": "color",
+            "$description": "the tint end goes deep in dark, like the accent tints",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-subtle"
+            }
+          },
+          "on-subtle": {
+            "$value": "#e8ecf0",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-on-subtle"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-fg"
+            }
+          },
+          "text": {
+            "$value": "#fa7263",
+            "$type": "color",
+            "$description": "danger AS TEXT — the same lift brand-as-text takes, so it clears AA on card (4.72:1)",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-text"
+            }
+          },
+          "deep": {
+            "$value": "#a80000",
+            "$type": "color",
+            "$description": "the hazard stripe on a danger control",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-deep"
+            }
+          }
+        }
       }
     },
     "radius": {
@@ -7833,12 +8776,28 @@
             "com.confetti.cssVariable": "--motion-duration-base"
           }
         },
+        "drift": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous ambient motion — slow enough to read as texture moving, not as a control reacting",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-drift"
+          }
+        },
         "interaction": {
           "$value": "180ms",
           "$type": "duration",
           "$description": "hover and focus transitions",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-duration-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous, non-reactive animation — a texture that drifts rather than a state that changes",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-ambient"
           }
         }
       },
@@ -7850,11 +8809,27 @@
             "com.confetti.cssVariable": "--motion-easing-standard"
           }
         },
+        "linear": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "the only correct curve for a seamless loop — any easing makes a continuous animation pulse at the seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-linear"
+          }
+        },
         "interaction": {
           "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
           "$type": "cubicBezier",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-easing-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "constant speed, so a looping animation has no perceptible seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-ambient"
           }
         }
       },
@@ -8760,6 +9735,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
         }
       },
+      "fg-success": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-success"
+        }
+      },
+      "fg-subtle-success": {
+        "$value": "#e8ecf0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-success"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#c9a4f5",
@@ -8787,6 +9776,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "success": {
+          "$value": "#1b7a4b",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-success"
           }
         },
         "neutral": {
@@ -8825,6 +9821,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-subtle-pink"
+          }
+        },
+        "success": {
+          "$value": "#1a3b2c",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-success"
           }
         }
       }
@@ -8999,6 +10002,59 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-border"
+          }
+        }
+      },
+      "danger": {
+        "bg": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ffffff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-fg"
+          }
+        },
+        "border": {
+          "$value": "#e8ecf0",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-border"
+          }
+        },
+        "stripe": {
+          "$value": "#a80000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe"
+          }
+        },
+        "stripe-width": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px band, so the diagonal repeats every 16px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-width"
+          }
+        },
+        "stripe-duration": {
+          "$value": "1600ms",
+          "$type": "other",
+          "$description": "one full pass of the pattern",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-duration"
+          }
+        },
+        "stripe-easing": {
+          "$value": "linear",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-easing"
           }
         }
       },
@@ -9729,6 +10785,181 @@
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
+    },
+    "toast": {
+      "bg": {
+        "$value": "#1a1e21",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-bg"
+        }
+      },
+      "fg": {
+        "$value": "#e8ecf0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#98a2ac",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg-muted"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the 2px sticker edge — same as Card",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#e8ecf0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-color"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #e8ecf0",
+        "$type": "other",
+        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-shadow"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-padding"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-gap"
+        }
+      },
+      "min-width": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "matches the small dialog, so a toast and a confirmation read as the same family",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-min-width"
+        }
+      },
+      "edge-width": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-edge-width"
+        }
+      },
+      "edge": {
+        "success": {
+          "$value": "#3fbe83",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-success"
+          }
+        },
+        "danger": {
+          "$value": "#fa7263",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#98a2ac",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-neutral"
+          }
+        }
+      },
+      "icon": {
+        "success": {
+          "$value": "#3fbe83",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-success"
+          }
+        },
+        "danger": {
+          "$value": "#fa7263",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#98a2ac",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-neutral"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-weight"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "14px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-size"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
     }
   },
   "confetti-light": {
@@ -9954,6 +11185,56 @@
           "$description": "confetti brand Red — light/HC surfaces",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-500"
+          }
+        },
+        "600": {
+          "$value": "#a80000",
+          "$type": "color",
+          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "green": {
+        "100": {
+          "$value": "#dff2e6",
+          "$type": "color",
+          "$description": "pale tint — the subtle end of the pair in LIGHT mode, carrying green.700 (5.25:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-100"
+          }
+        },
+        "400": {
+          "$value": "#3fbe83",
+          "$type": "color",
+          "$description": "success AS TEXT on a dark surface — lifted enough to clear AA on card, the lightest dark surface (5.5:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-400"
+          }
+        },
+        "600": {
+          "$value": "#1b7a4b",
+          "$type": "color",
+          "$description": "the rich green — success as a FILL, carrying a white label (5.34:1). Same in both modes; a fill does not need to move.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-600"
+          }
+        },
+        "700": {
+          "$value": "#137043",
+          "$type": "color",
+          "$description": "success AS TEXT on a light surface (4.86:1 on cream)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-700"
+          }
+        },
+        "800": {
+          "$value": "#1a3b2c",
+          "$type": "color",
+          "$description": "deep tint — the subtle end of the pair in DARK mode, carrying chalk (10.37:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-800"
           }
         }
       },
@@ -10821,6 +12102,79 @@
             "com.confetti.cssVariable": "--color-border-none"
           }
         }
+      },
+      "status": {
+        "success": {
+          "bg": {
+            "$value": "#1b7a4b",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-fg"
+            }
+          },
+          "text": {
+            "$value": "#137043",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-text"
+            }
+          },
+          "subtle": {
+            "$value": "#dff2e6",
+            "$type": "color",
+            "$description": "the tint end of the pair — Badge subtle, Toast",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-subtle"
+            }
+          },
+          "on-subtle": {
+            "$value": "#137043",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-on-subtle"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$description": "the same red the brand uses — in Confetti they coincide; in another theme danger stays red while the brand goes wherever it likes",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-fg"
+            }
+          },
+          "text": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$description": "danger AS TEXT — 4.97:1 on the page, 6.27:1 on card",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-text"
+            }
+          },
+          "deep": {
+            "$value": "#a80000",
+            "$type": "color",
+            "$description": "the hazard stripe on a danger control",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-deep"
+            }
+          }
+        }
       }
     },
     "radius": {
@@ -11082,12 +12436,28 @@
             "com.confetti.cssVariable": "--motion-duration-base"
           }
         },
+        "drift": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous ambient motion — slow enough to read as texture moving, not as a control reacting",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-drift"
+          }
+        },
         "interaction": {
           "$value": "180ms",
           "$type": "duration",
           "$description": "hover and focus transitions",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-duration-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous, non-reactive animation — a texture that drifts rather than a state that changes",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-ambient"
           }
         }
       },
@@ -11099,11 +12469,27 @@
             "com.confetti.cssVariable": "--motion-easing-standard"
           }
         },
+        "linear": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "the only correct curve for a seamless loop — any easing makes a continuous animation pulse at the seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-linear"
+          }
+        },
         "interaction": {
           "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
           "$type": "cubicBezier",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-easing-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "constant speed, so a looping animation has no perceptible seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-ambient"
           }
         }
       },
@@ -12009,6 +13395,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
         }
       },
+      "fg-success": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-success"
+        }
+      },
+      "fg-subtle-success": {
+        "$value": "#137043",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-success"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#c6adda",
@@ -12036,6 +13436,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "success": {
+          "$value": "#1b7a4b",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-success"
           }
         },
         "neutral": {
@@ -12074,6 +13481,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-subtle-pink"
+          }
+        },
+        "success": {
+          "$value": "#dff2e6",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-success"
           }
         }
       }
@@ -12248,6 +13662,59 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-border"
+          }
+        }
+      },
+      "danger": {
+        "bg": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ffffff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-fg"
+          }
+        },
+        "border": {
+          "$value": "#2e2618",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-border"
+          }
+        },
+        "stripe": {
+          "$value": "#a80000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe"
+          }
+        },
+        "stripe-width": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px band, so the diagonal repeats every 16px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-width"
+          }
+        },
+        "stripe-duration": {
+          "$value": "1600ms",
+          "$type": "other",
+          "$description": "one full pass of the pattern",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-duration"
+          }
+        },
+        "stripe-easing": {
+          "$value": "linear",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-easing"
           }
         }
       },
@@ -12978,6 +14445,181 @@
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
+    },
+    "toast": {
+      "bg": {
+        "$value": "#f4f0e4",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-bg"
+        }
+      },
+      "fg": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#6b5f4a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg-muted"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the 2px sticker edge — same as Card",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-color"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #2e2618",
+        "$type": "other",
+        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-shadow"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-padding"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-gap"
+        }
+      },
+      "min-width": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "matches the small dialog, so a toast and a confirmation read as the same family",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-min-width"
+        }
+      },
+      "edge-width": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-edge-width"
+        }
+      },
+      "edge": {
+        "success": {
+          "$value": "#137043",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-success"
+          }
+        },
+        "danger": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#6b5f4a",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-neutral"
+          }
+        }
+      },
+      "icon": {
+        "success": {
+          "$value": "#137043",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-success"
+          }
+        },
+        "danger": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#6b5f4a",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-neutral"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-weight"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "14px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-size"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
     }
   },
   "neon-dark": {
@@ -13203,6 +14845,56 @@
           "$description": "confetti brand Red — light/HC surfaces",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-500"
+          }
+        },
+        "600": {
+          "$value": "#a80000",
+          "$type": "color",
+          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "green": {
+        "100": {
+          "$value": "#dff2e6",
+          "$type": "color",
+          "$description": "pale tint — the subtle end of the pair in LIGHT mode, carrying green.700 (5.25:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-100"
+          }
+        },
+        "400": {
+          "$value": "#3fbe83",
+          "$type": "color",
+          "$description": "success AS TEXT on a dark surface — lifted enough to clear AA on card, the lightest dark surface (5.5:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-400"
+          }
+        },
+        "600": {
+          "$value": "#1b7a4b",
+          "$type": "color",
+          "$description": "the rich green — success as a FILL, carrying a white label (5.34:1). Same in both modes; a fill does not need to move.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-600"
+          }
+        },
+        "700": {
+          "$value": "#137043",
+          "$type": "color",
+          "$description": "success AS TEXT on a light surface (4.86:1 on cream)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-700"
+          }
+        },
+        "800": {
+          "$value": "#1a3b2c",
+          "$type": "color",
+          "$description": "deep tint — the subtle end of the pair in DARK mode, carrying chalk (10.37:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-800"
           }
         }
       },
@@ -14068,6 +15760,78 @@
             "com.confetti.cssVariable": "--color-border-none"
           }
         }
+      },
+      "status": {
+        "success": {
+          "bg": {
+            "$value": "#1b7a4b",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-fg"
+            }
+          },
+          "text": {
+            "$value": "#3fbe83",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-text"
+            }
+          },
+          "subtle": {
+            "$value": "#1a3b2c",
+            "$type": "color",
+            "$description": "the tint end goes deep in dark, like the accent tints",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-subtle"
+            }
+          },
+          "on-subtle": {
+            "$value": "#e8ecf0",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-on-subtle"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-fg"
+            }
+          },
+          "text": {
+            "$value": "#fa7263",
+            "$type": "color",
+            "$description": "danger AS TEXT — the same lift brand-as-text takes, so it clears AA on card (4.72:1)",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-text"
+            }
+          },
+          "deep": {
+            "$value": "#a80000",
+            "$type": "color",
+            "$description": "the hazard stripe on a danger control",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-deep"
+            }
+          }
+        }
       }
     },
     "radius": {
@@ -14329,12 +16093,28 @@
             "com.confetti.cssVariable": "--motion-duration-base"
           }
         },
+        "drift": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous ambient motion — slow enough to read as texture moving, not as a control reacting",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-drift"
+          }
+        },
         "interaction": {
           "$value": "180ms",
           "$type": "duration",
           "$description": "hover and focus transitions",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-duration-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous, non-reactive animation — a texture that drifts rather than a state that changes",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-ambient"
           }
         }
       },
@@ -14346,11 +16126,27 @@
             "com.confetti.cssVariable": "--motion-easing-standard"
           }
         },
+        "linear": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "the only correct curve for a seamless loop — any easing makes a continuous animation pulse at the seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-linear"
+          }
+        },
         "interaction": {
           "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
           "$type": "cubicBezier",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-easing-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "constant speed, so a looping animation has no perceptible seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-ambient"
           }
         }
       },
@@ -15251,6 +17047,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
         }
       },
+      "fg-success": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-success"
+        }
+      },
+      "fg-subtle-success": {
+        "$value": "#e8ecf0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-success"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#b26bff",
@@ -15278,6 +17088,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "success": {
+          "$value": "#1b7a4b",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-success"
           }
         },
         "neutral": {
@@ -15316,6 +17133,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-subtle-pink"
+          }
+        },
+        "success": {
+          "$value": "#1a3b2c",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-success"
           }
         }
       }
@@ -15490,6 +17314,59 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-border"
+          }
+        }
+      },
+      "danger": {
+        "bg": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ffffff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-fg"
+          }
+        },
+        "border": {
+          "$value": "#ede0ff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-border"
+          }
+        },
+        "stripe": {
+          "$value": "#a80000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe"
+          }
+        },
+        "stripe-width": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px band, so the diagonal repeats every 16px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-width"
+          }
+        },
+        "stripe-duration": {
+          "$value": "1600ms",
+          "$type": "other",
+          "$description": "one full pass of the pattern",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-duration"
+          }
+        },
+        "stripe-easing": {
+          "$value": "linear",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-easing"
           }
         }
       },
@@ -16220,6 +18097,181 @@
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
       }
+    },
+    "toast": {
+      "bg": {
+        "$value": "#170a2e",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg-muted"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the 2px sticker edge — same as Card",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-color"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #ede0ff",
+        "$type": "other",
+        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-shadow"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-padding"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-gap"
+        }
+      },
+      "min-width": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "matches the small dialog, so a toast and a confirmation read as the same family",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-min-width"
+        }
+      },
+      "edge-width": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-edge-width"
+        }
+      },
+      "edge": {
+        "success": {
+          "$value": "#3fbe83",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-success"
+          }
+        },
+        "danger": {
+          "$value": "#fa7263",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#a98fc9",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-neutral"
+          }
+        }
+      },
+      "icon": {
+        "success": {
+          "$value": "#3fbe83",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-success"
+          }
+        },
+        "danger": {
+          "$value": "#fa7263",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#a98fc9",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-neutral"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-weight"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "14px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-size"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
     }
   },
   "neon-light": {
@@ -16445,6 +18497,56 @@
           "$description": "confetti brand Red — light/HC surfaces",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-500"
+          }
+        },
+        "600": {
+          "$value": "#a80000",
+          "$type": "color",
+          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "green": {
+        "100": {
+          "$value": "#dff2e6",
+          "$type": "color",
+          "$description": "pale tint — the subtle end of the pair in LIGHT mode, carrying green.700 (5.25:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-100"
+          }
+        },
+        "400": {
+          "$value": "#3fbe83",
+          "$type": "color",
+          "$description": "success AS TEXT on a dark surface — lifted enough to clear AA on card, the lightest dark surface (5.5:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-400"
+          }
+        },
+        "600": {
+          "$value": "#1b7a4b",
+          "$type": "color",
+          "$description": "the rich green — success as a FILL, carrying a white label (5.34:1). Same in both modes; a fill does not need to move.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-600"
+          }
+        },
+        "700": {
+          "$value": "#137043",
+          "$type": "color",
+          "$description": "success AS TEXT on a light surface (4.86:1 on cream)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-700"
+          }
+        },
+        "800": {
+          "$value": "#1a3b2c",
+          "$type": "color",
+          "$description": "deep tint — the subtle end of the pair in DARK mode, carrying chalk (10.37:1)",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-green-800"
           }
         }
       },
@@ -17310,6 +19412,79 @@
             "com.confetti.cssVariable": "--color-border-none"
           }
         }
+      },
+      "status": {
+        "success": {
+          "bg": {
+            "$value": "#1b7a4b",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-fg"
+            }
+          },
+          "text": {
+            "$value": "#137043",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-text"
+            }
+          },
+          "subtle": {
+            "$value": "#dff2e6",
+            "$type": "color",
+            "$description": "the tint end of the pair — Badge subtle, Toast",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-subtle"
+            }
+          },
+          "on-subtle": {
+            "$value": "#137043",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-success-on-subtle"
+            }
+          }
+        },
+        "danger": {
+          "bg": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$description": "the same red the brand uses — in Confetti they coincide; in another theme danger stays red while the brand goes wherever it likes",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-bg"
+            }
+          },
+          "fg": {
+            "$value": "#ffffff",
+            "$type": "color",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-fg"
+            }
+          },
+          "text": {
+            "$value": "#c40000",
+            "$type": "color",
+            "$description": "danger AS TEXT — 4.97:1 on the page, 6.27:1 on card",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-text"
+            }
+          },
+          "deep": {
+            "$value": "#a80000",
+            "$type": "color",
+            "$description": "the hazard stripe on a danger control",
+            "$extensions": {
+              "com.confetti.cssVariable": "--color-status-danger-deep"
+            }
+          }
+        }
       }
     },
     "radius": {
@@ -17571,12 +19746,28 @@
             "com.confetti.cssVariable": "--motion-duration-base"
           }
         },
+        "drift": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous ambient motion — slow enough to read as texture moving, not as a control reacting",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-drift"
+          }
+        },
         "interaction": {
           "$value": "180ms",
           "$type": "duration",
           "$description": "hover and focus transitions",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-duration-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "1600ms",
+          "$type": "duration",
+          "$description": "one loop of a continuous, non-reactive animation — a texture that drifts rather than a state that changes",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-duration-ambient"
           }
         }
       },
@@ -17588,11 +19779,27 @@
             "com.confetti.cssVariable": "--motion-easing-standard"
           }
         },
+        "linear": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "the only correct curve for a seamless loop — any easing makes a continuous animation pulse at the seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-linear"
+          }
+        },
         "interaction": {
           "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
           "$type": "cubicBezier",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-easing-interaction"
+          }
+        },
+        "ambient": {
+          "$value": "linear",
+          "$type": "cubicBezier",
+          "$description": "constant speed, so a looping animation has no perceptible seam",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-easing-ambient"
           }
         }
       },
@@ -18493,6 +20700,20 @@
           "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
         }
       },
+      "fg-success": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-success"
+        }
+      },
+      "fg-subtle-success": {
+        "$value": "#137043",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--badge-fg-subtle-success"
+        }
+      },
       "bg": {
         "purple": {
           "$value": "#b26bff",
@@ -18520,6 +20741,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
+          }
+        },
+        "success": {
+          "$value": "#1b7a4b",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-success"
           }
         },
         "neutral": {
@@ -18558,6 +20786,13 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-subtle-pink"
+          }
+        },
+        "success": {
+          "$value": "#dff2e6",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--badge-bg-subtle-success"
           }
         }
       }
@@ -18732,6 +20967,59 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-border"
+          }
+        }
+      },
+      "danger": {
+        "bg": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-bg"
+          }
+        },
+        "fg": {
+          "$value": "#ffffff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-fg"
+          }
+        },
+        "border": {
+          "$value": "#1a0430",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-border"
+          }
+        },
+        "stripe": {
+          "$value": "#a80000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe"
+          }
+        },
+        "stripe-width": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px band, so the diagonal repeats every 16px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-width"
+          }
+        },
+        "stripe-duration": {
+          "$value": "1600ms",
+          "$type": "other",
+          "$description": "one full pass of the pattern",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-duration"
+          }
+        },
+        "stripe-easing": {
+          "$value": "linear",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-stripe-easing"
           }
         }
       },
@@ -19460,6 +21748,181 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-transition-easing"
+        }
+      }
+    },
+    "toast": {
+      "bg": {
+        "$value": "#faf6ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-bg"
+        }
+      },
+      "fg": {
+        "$value": "#1a0430",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg"
+        }
+      },
+      "fg-muted": {
+        "$value": "#5b3d7a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-fg-muted"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the 2px sticker edge — same as Card",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#1a0430",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-border-color"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-radius"
+        }
+      },
+      "shadow": {
+        "$value": "3px 3px 0px 0px #1a0430",
+        "$type": "other",
+        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-shadow"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-padding"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-gap"
+        }
+      },
+      "min-width": {
+        "$value": "420px",
+        "$type": "other",
+        "$description": "matches the small dialog, so a toast and a confirmation read as the same family",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-min-width"
+        }
+      },
+      "edge-width": {
+        "$value": "4px",
+        "$type": "other",
+        "$description": "4px",
+        "$extensions": {
+          "com.confetti.cssVariable": "--toast-edge-width"
+        }
+      },
+      "edge": {
+        "success": {
+          "$value": "#137043",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-success"
+          }
+        },
+        "danger": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#5b3d7a",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-edge-neutral"
+          }
+        }
+      },
+      "icon": {
+        "success": {
+          "$value": "#137043",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-success"
+          }
+        },
+        "danger": {
+          "$value": "#c40000",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-danger"
+          }
+        },
+        "neutral": {
+          "$value": "#5b3d7a",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-icon-neutral"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "16px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-title-font-weight"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "14px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-font-size"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--toast-body-leading"
+          }
         }
       }
     }

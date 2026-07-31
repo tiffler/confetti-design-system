@@ -25,6 +25,22 @@
       },
       "ghost": { "bg": { "value": "{color.base.transparent}" }, "fg": { "value": "{color.ink.600}" } }
     },
+    "$comment-status": "STATUS roles — success and danger. They live on the MODE axis, not the theme axis: what they mean is fixed (green is not a brand decision), but what reads on a page is not, so they carry a light and a dark value and every theme inherits both. `bg`/`fg` are the filled pair; `text` is the same status used AS TEXT, which needs its own step for the same reason text.accent does.",
+    "status": {
+      "success": {
+        "bg": { "value": "{color.green.600}" },
+        "fg": { "value": "{color.base.white}" },
+        "text": { "value": "{color.green.700}" },
+        "subtle": { "value": "{color.green.100}", "comment": "the tint end of the pair — Badge subtle, Toast" },
+        "on-subtle": { "value": "{color.green.700}" }
+      },
+      "danger": {
+        "bg": { "value": "{color.red.500}", "comment": "the same red the brand uses — in Confetti they coincide; in another theme danger stays red while the brand goes wherever it likes" },
+        "fg": { "value": "{color.base.white}" },
+        "text": { "value": "{color.red.500}", "comment": "danger AS TEXT — 4.97:1 on the page, 6.27:1 on card" },
+        "deep": { "value": "{color.red.600}", "comment": "the hazard stripe on a danger control" }
+      }
+    },
     "accent": {
       "purple": { "subtle": { "value": "{color.purple.100}" } },
       "teal": { "subtle": { "value": "{color.teal.100}" } },

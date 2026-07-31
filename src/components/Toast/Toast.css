@@ -1,0 +1,73 @@
+/* Consumes component tokens only — no hardcoded values, no primitives. */
+
+.cf-toast {
+  /* Neutral is the default tone. Each modifier below repoints these two properties, so a
+     tone is one place to edit rather than a rule per painted property. */
+  --toast-edge: var(--toast-edge-neutral);
+  --toast-icon: var(--toast-icon-neutral);
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--toast-gap);
+
+  box-sizing: border-box;
+  min-width: var(--toast-min-width);
+  max-width: 100%;
+
+  padding: var(--toast-padding);
+  background: var(--toast-bg);
+  color: var(--toast-fg);
+  border: var(--toast-border-width) solid var(--toast-border-color);
+  border-radius: var(--toast-radius);
+  box-shadow: var(--toast-shadow);
+
+  /* The tone stripe, wider than the sticker border so it reads as a deliberate rule rather
+     than a recoloured edge. `border-inline-start` rather than a pseudo-element: it follows
+     the writing direction for free, and the radius clips it without a second declaration
+     to keep in sync. */
+  border-inline-start: var(--toast-edge-width) solid var(--toast-edge);
+}
+
+.cf-toast--success {
+  --toast-edge: var(--toast-edge-success);
+  --toast-icon: var(--toast-icon-success);
+}
+
+.cf-toast--danger {
+  --toast-edge: var(--toast-edge-danger);
+  --toast-icon: var(--toast-icon-danger);
+}
+
+/* The other half of the tone signal. This is the one place in the system an Icon sets its
+   own color instead of inheriting — the surrounding text is deliberately not tinted. */
+.cf-toast__icon {
+  color: var(--toast-icon);
+  flex: none;
+}
+
+.cf-toast__content {
+  /* min-width: 0 so a long unbroken string wraps instead of stretching the toast. */
+  min-width: 0;
+  flex: 1;
+  display: grid;
+  gap: var(--toast-gap);
+}
+
+.cf-toast__title {
+  margin: 0;
+  font-family: var(--toast-title-font-family);
+  font-size: var(--toast-title-font-size);
+  font-weight: var(--toast-title-font-weight);
+}
+
+.cf-toast__body {
+  margin: 0;
+  font-family: var(--toast-body-font-family);
+  font-size: var(--toast-body-font-size);
+  line-height: var(--toast-body-leading);
+  color: var(--toast-fg-muted);
+}
+
+.cf-toast__action {
+  flex: none;
+}

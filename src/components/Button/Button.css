@@ -69,6 +69,63 @@
   border-color: var(--button-secondary-border);
 }
 
+/* Danger: primary's shape, hazard-taped. The stripes are a background-image sitting on the
+   fill rather than a second element, so nothing changes about the box — and because the
+   stripe color is a deepened step of the fill's own red (1.26:1 against it), the diagonal
+   reads as texture at a glance and only resolves into stripes up close. That is the point:
+   a destructive control should feel different in peripheral vision without shouting.
+
+   `background-color` + `background-image` rather than the `background` shorthand, so the
+   two can't clobber each other. Each band is one stripe-width; the pattern repeats at
+   twice that. */
+.cf-button--danger {
+  /* Two derived lengths, both from the one stripe-width token.
+
+     `period` is a dark band plus a clear one — the distance over which the pattern repeats,
+     measured perpendicular to the stripes.
+
+     `tile` is the size of the square the pattern is drawn into. It is period × √2 because
+     the stripes run at 45°: a horizontal traverse of period × √2 advances exactly one period
+     along the gradient's own axis, so the tile's right edge lines up with the next tile's
+     left edge, and its bottom with the next one's top. That is what makes the repeat
+     invisible — and what makes the animation below loop without a jump, since one tile of
+     travel is exactly one period of pattern.
+
+     √2 is geometry, not a design value, so it stays here rather than becoming a token. */
+  --cf-danger-period: calc(var(--button-danger-stripe-width) * 2);
+  --cf-danger-tile: calc(var(--cf-danger-period) * 1.41421356);
+
+  background-color: var(--button-danger-bg);
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--button-danger-stripe) 0,
+    var(--button-danger-stripe) var(--button-danger-stripe-width),
+    transparent var(--button-danger-stripe-width),
+    transparent var(--cf-danger-period)
+  );
+  /* Without an explicit size the gradient is rendered once at the size of the button, and
+     shifting it would drag a seam across the face. */
+  background-size: var(--cf-danger-tile) var(--cf-danger-tile);
+  animation: cf-button-danger-drift var(--button-danger-stripe-duration)
+    var(--button-danger-stripe-easing) infinite;
+
+  color: var(--button-danger-fg);
+  border-color: var(--button-danger-border);
+}
+
+/* One tile of travel per loop — see the note above. Only `background-position` moves, so
+   the label and the border stay perfectly still underneath. */
+@keyframes cf-button-danger-drift {
+  to {
+    background-position: var(--cf-danger-tile) 0;
+  }
+}
+
+/* A disabled control should not be asking for attention. */
+.cf-button--danger[disabled] {
+  animation: none;
+}
+
 .cf-button--ghost {
   background: var(--button-ghost-bg);
   color: var(--button-ghost-fg);
@@ -82,8 +139,10 @@
    all driven by component tokens the theme repoints. Ghost only shifts color. */
 .cf-button--primary:hover:not([disabled]),
 .cf-button--secondary:hover:not([disabled]),
+.cf-button--danger:hover:not([disabled]),
 .cf-button--primary[data-force~='hover']:not([disabled]),
-.cf-button--secondary[data-force~='hover']:not([disabled]) {
+.cf-button--secondary[data-force~='hover']:not([disabled]),
+.cf-button--danger[data-force~='hover']:not([disabled]) {
   transform: var(--button-transform-hover);
   box-shadow: var(--button-shadow-hover);
   filter: brightness(var(--button-hover-brightness));
@@ -111,10 +170,19 @@
   .cf-button {
     transition: none;
   }
+
+  /* The one animation in the system that never stops on its own. Continuous background
+     motion is a vestibular trigger, so it is not merely shortened here — it is switched off,
+     and the stripes stay as static texture, which is what carries the meaning anyway. */
+  .cf-button--danger {
+    animation: none;
+  }
   .cf-button--primary:hover:not([disabled]),
   .cf-button--secondary:hover:not([disabled]),
+  .cf-button--danger:hover:not([disabled]),
   .cf-button--primary[data-force~='hover']:not([disabled]),
-  .cf-button--secondary[data-force~='hover']:not([disabled]) {
+  .cf-button--secondary[data-force~='hover']:not([disabled]),
+  .cf-button--danger[data-force~='hover']:not([disabled]) {
     transform: none;
   }
 }

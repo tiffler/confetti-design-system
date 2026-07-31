@@ -7,7 +7,7 @@ import { Icon } from '../Icon/Icon';
 const STATES = ['rest', 'hover', 'focus', 'pressed'] as const;
 type ButtonState = (typeof STATES)[number];
 
-const VARIANTS = ['primary', 'secondary', 'ghost'] as const;
+const VARIANTS = ['primary', 'secondary', 'ghost', 'danger'] as const;
 
 /**
  * Story args add two knobs that are not component props: `state` pins an interaction
@@ -34,7 +34,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Three variants sharing one footprint. Primary and secondary lift onto a hard ink shadow on hover; ghost only shifts its text to red. Pressed is the inverse of hover — the sticker settles back down — so it resolves to the resting values in every theme. All values come from `--button-*` component tokens.\n\nUse the **state** control to pin hover, focus, or pressed: the CSS pairs each real pseudo-class with a `data-force` attribute, which is what lets a state be held still for a control or a snapshot.',
+          'Four variants sharing one footprint. Primary, secondary and danger lift onto a hard ink shadow on hover; ghost only shifts its text to the brand. Pressed is the inverse of hover — the sticker settles back down — so it resolves to the resting values in every theme. All values come from `--button-*` component tokens.\n\n**Danger** is the destructive action: primary\'s shape, but filled with the `status.danger` role rather than the brand — so it stays red in a theme whose brand is not — and hazard-striped with a deepened step of that same red. The stripes sit at just 1.26:1 against the fill — barely a shade. The 8px bands and the slow drift do the work, so the colour difference can stay almost nothing and the label never has to compete with it.\n\nUse the **state** control to pin hover, focus, or pressed: the CSS pairs each real pseudo-class with a `data-force` attribute, which is what lets a state be held still for a control or a snapshot.',
       },
     },
   },
@@ -42,7 +42,8 @@ const meta = {
     variant: {
       control: 'inline-radio',
       options: VARIANTS,
-      description: 'Primary = brand fill. Secondary = paper fill with ink border. Ghost = text only.',
+      description:
+        'Primary = brand fill. Secondary = paper fill with ink border. Ghost = text only. Danger = destructive, hazard-striped.',
       table: { defaultValue: { summary: 'primary' } },
     },
     state: {
@@ -99,10 +100,22 @@ export const Secondary: Story = { args: { variant: 'secondary' } };
 
 export const Ghost: Story = { args: { variant: 'ghost' } };
 
+export const Danger: Story = {
+  args: { variant: 'danger', children: 'Delete project' },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'The destructive action. It borrows primary\'s footprint and hover, so it never sits oddly next to one, and separates itself by texture instead of by size — the diagonal is a deepened step of the fill\'s own red, not a second colour. Because the fill comes from `status.danger` rather than the brand, it stays red in Adventure and Neon too.',
+      },
+    },
+  },
+};
+
 export const AllVariants: Story = {
   name: 'All variants',
   parameters: {
-    docs: { description: { story: 'Side by side — the footprint is identical across all three.' } },
+    docs: { description: { story: 'Side by side — the footprint is identical across all four.' } },
   },
   render: ({ state }) => (
     <div style={{ display: 'flex', gap: 'var(--space-stack)', alignItems: 'center', flexWrap: 'wrap' }}>

@@ -13,18 +13,23 @@
     "fg-subtle": { "value": "{color.accent.on-subtle}" },
     "fg-neutral": { "value": "{color.text.primary}" },
     "fg-subtle-neutral": { "value": "{color.text.muted}" },
+    "$comment-success": "Success is the one hue that is not decorative, so — like neutral — it carries its own foregrounds rather than the shared accent ones: its bold end is a deep green holding a white label, the inverse of an accent's light fill holding ink.",
+    "fg-success": { "value": "{color.status.success.fg}" },
+    "fg-subtle-success": { "value": "{color.status.success.on-subtle}" },
     "bg": {
       "purple": { "value": "{color.accent.purple.bold}" },
       "teal": { "value": "{color.accent.teal.bold}" },
       "orange": { "value": "{color.accent.orange.bold}" },
       "pink": { "value": "{color.accent.pink.bold}" },
+      "success": { "value": "{color.status.success.bg}" },
       "neutral": { "value": "{color.surface.raised}", "comment": "paper fill — a badge that isn't a category" }
     },
     "bg-subtle": {
       "purple": { "value": "{color.accent.purple.subtle}" },
       "teal": { "value": "{color.accent.teal.subtle}" },
       "orange": { "value": "{color.accent.orange.subtle}" },
-      "pink": { "value": "{color.accent.pink.subtle}" }
+      "pink": { "value": "{color.accent.pink.subtle}" },
+      "success": { "value": "{color.status.success.subtle}" }
     }
   }
 }

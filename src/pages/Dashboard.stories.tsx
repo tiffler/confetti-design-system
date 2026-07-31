@@ -17,7 +17,7 @@ import { Button } from '../components/Button/Button';
 import { Card } from '../components/Card/Card';
 import { Icon, type PhosphorIcon } from '../components/Icon/Icon';
 import { Modal } from '../components/Modal/Modal';
-import { Tabs } from '../components/Tabs/Tabs';
+import { Tabs, type TabHue } from '../components/Tabs/Tabs';
 import { Caption, Eyebrow, Figure, Grid, Lede, Page, Row, Rule, Stack, Text, Title } from './kit';
 
 /**
@@ -145,7 +145,9 @@ const ACTIVITY: Activity[] = [
   },
 ];
 
-const FILTERS: Array<{ value: 'all' | Status; label: string; hue: BadgeHue }> = [
+/* `TabHue`, not `BadgeHue`: the two overlap but are not the same set — a tab is a category,
+   so it has no `success`. The status badges above still use the Badge hues. */
+const FILTERS: Array<{ value: 'all' | Status; label: string; hue: TabHue }> = [
   { value: 'all', label: 'All', hue: 'neutral' },
   { value: 'shipped', label: 'Shipped', hue: 'teal' },
   { value: 'review', label: 'In review', hue: 'purple' },

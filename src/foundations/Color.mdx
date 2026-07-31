@@ -65,6 +65,28 @@ ink outline, ghost text-only with a red hover.
 
 <ColorGrid prefix="color-action-" />
 
+## Status
+
+Success and danger. Unlike the accents, these are not decorative and not brand: green
+means one thing, so status sits on the **mode** axis and every theme inherits the same
+pair rather than repointing it. Each has a filled pair (`bg` + `fg`) and a `text` step
+for the same status set as type — the fill can hold its white label on any page, but the
+same green as text drops to 2.43:1 on the card surface, so `text` lifts in dark mode for
+the same reason `text.accent` does.
+
+`danger.deep` is a deepened step of the danger red, used for the hazard stripes on a
+destructive control.
+
+<ColorGrid prefix="color-status-" />
+
+<ContrastPairs
+  pairs={[
+    { fg: 'color-status-success-fg', bg: 'color-status-success-bg', label: 'success fill', sample: 'Changes saved' },
+    { fg: 'color-status-danger-fg', bg: 'color-status-danger-bg', label: 'danger fill', sample: 'Delete project' },
+    { fg: 'color-status-danger-fg', bg: 'color-status-danger-deep', label: 'danger stripe', sample: 'Delete project' },
+  ]}
+/>
+
 ## Accents
 
 Four hues, each a tint/bold pair. `on-bold` and `on-subtle` are the foregrounds that
@@ -97,3 +119,4 @@ layer that should be consumed by name.
 <ColorGrid prefix="color-cream-" />
 <ColorGrid prefix="color-ink-" />
 <ColorGrid prefix="color-red-" />
+<ColorGrid prefix="color-green-" />

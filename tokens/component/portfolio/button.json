@@ -32,6 +32,16 @@
       "fg": { "value": "{color.action.secondary.fg}" },
       "border": { "value": "{color.border.default}" }
     },
+    "$comment-danger": "Danger is primary's shape in a different register: same footprint, same ink border, but the fill is the DANGER status rather than the brand — so it stays red in a theme whose brand isn't. The hazard stripes are a background-image over that fill, in a deepened step of the same red; the stripe geometry is a token so the texture scales with the system rather than being a magic number in the CSS.",
+    "danger": {
+      "bg": { "value": "{color.status.danger.bg}" },
+      "fg": { "value": "{color.status.danger.fg}" },
+      "border": { "value": "{color.border.default}" },
+      "stripe": { "value": "{color.status.danger.deep}" },
+      "stripe-width": { "value": "{space.inline}", "comment": "8px band, so the diagonal repeats every 16px" },
+      "stripe-duration": { "value": "{motion.duration.ambient}", "comment": "one full pass of the pattern" },
+      "stripe-easing": { "value": "{motion.easing.ambient}" }
+    },
     "ghost": {
       "bg": { "value": "{color.action.ghost.bg}" },
       "fg": { "value": "{color.action.ghost.fg}" },

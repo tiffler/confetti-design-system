@@ -170,7 +170,7 @@ export const RichContent: Story = {
           </Badge>
         </div>
         <p style={{ margin: 0 }}>
-          The system is now six components. Modal is the first to consume{' '}
+          Modal is the first component to consume{' '}
           <code>--color-scrim</code>, the fixed dim added in v0.2.1 — the same value in every
           theme × mode combination, because a scrim that shifted with the theme would
           read as a different depth each time.

@@ -6,7 +6,7 @@ import { Button } from '../components/Button/Button';
 import { Card } from '../components/Card/Card';
 import { Icon } from '../components/Icon/Icon';
 import { Modal } from '../components/Modal/Modal';
-import { Tabs } from '../components/Tabs/Tabs';
+import { Tabs, type TabHue } from '../components/Tabs/Tabs';
 import { Caption, Grid, Lede, Page, Row, Stack, Text, Title } from './kit';
 
 /**
@@ -123,7 +123,8 @@ const NOTES: Note[] = [
   },
 ];
 
-const FILTERS: Array<{ value: 'all' | Category; label: string; hue: BadgeHue }> = [
+/* `TabHue`, not `BadgeHue` — see the note in Dashboard: the sets overlap but differ. */
+const FILTERS: Array<{ value: 'all' | Category; label: string; hue: TabHue }> = [
   { value: 'all', label: 'All', hue: 'neutral' },
   { value: 'product', label: 'Product', hue: 'teal' },
   { value: 'systems', label: 'Systems', hue: 'purple' },

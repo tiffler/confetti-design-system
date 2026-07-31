@@ -1,7 +1,11 @@
 import type { HTMLAttributes, ReactNode } from 'react';
 import './Badge.css';
 
-export type BadgeHue = 'purple' | 'teal' | 'orange' | 'pink' | 'neutral';
+/**
+ * The four decorative hues, plus two that are not categories: `neutral` (a label, a count,
+ * a version) and `success` (a state). Both carry their own foregrounds — see Badge.css.
+ */
+export type BadgeHue = 'purple' | 'teal' | 'orange' | 'pink' | 'success' | 'neutral';
 export type BadgeTone = 'bold' | 'subtle';
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {

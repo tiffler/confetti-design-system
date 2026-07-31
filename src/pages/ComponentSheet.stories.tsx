@@ -7,6 +7,7 @@ import { Card, type CardSurface } from '../components/Card/Card';
 import { Icon, type IconSize, type IconTone } from '../components/Icon/Icon';
 import { Modal } from '../components/Modal/Modal';
 import { Tabs, type TabHue } from '../components/Tabs/Tabs';
+import { Toast, type ToastTone } from '../components/Toast/Toast';
 import { Caption, Eyebrow, Frame, Lede, Page, Row, Sheet, Stack, Text, Tick, Title } from './kit';
 
 /**
@@ -20,8 +21,13 @@ import { Caption, Eyebrow, Frame, Lede, Page, Row, Sheet, Stack, Text, Tick, Tit
  * component, which is why the sheet can sit beside a snapshot tool without lying.
  */
 
-const VARIANTS: ButtonVariant[] = ['primary', 'secondary', 'ghost'];
-const HUES: BadgeHue[] = ['purple', 'teal', 'orange', 'pink', 'neutral'];
+const VARIANTS: ButtonVariant[] = ['primary', 'secondary', 'ghost', 'danger'];
+
+/* Badge and Tabs share a palette but not a vocabulary: `success` is a state, and a tab is a
+   category, so the sets are listed separately rather than one being cast to the other. */
+const BADGE_HUES: BadgeHue[] = ['purple', 'teal', 'orange', 'pink', 'success', 'neutral'];
+const TAB_HUES: TabHue[] = ['purple', 'teal', 'orange', 'pink', 'neutral'];
+const TOAST_TONES: ToastTone[] = ['success', 'danger', 'neutral'];
 const TONES: BadgeTone[] = ['bold', 'subtle'];
 const ICON_SIZES: IconSize[] = ['sm', 'md', 'lg'];
 const ICON_TONES: IconTone[] = ['inherit', 'default', 'muted', 'accent'];
@@ -210,7 +216,7 @@ function ComponentSheet() {
         <Eyebrow>Specimen sheet</Eyebrow>
         <Title>Every component, every state</Title>
         <Lede>
-          Six components, their variants and their interaction states, pinned side by side.
+          Seven components, their variants and their interaction states, pinned side by side.
           Flip the Theme and Mode switchers — nothing here is hardcoded, so the whole sheet
           re-skins.
         </Lede>
@@ -230,11 +236,30 @@ function ComponentSheet() {
           into a 340px masonry column spill straight through the frame. */}
       <Frame label="Tabs — one per hue">
         <Row gap="var(--space-stack)" align="flex-start">
-          {(HUES as TabHue[]).map((hue) => (
+          {TAB_HUES.map((hue) => (
             <Stack key={hue} gap="var(--space-1)">
               <Tick>{hue}</Tick>
               <TabsSpecimen hue={hue} />
             </Stack>
+          ))}
+        </Row>
+      </Frame>
+
+      {/* Full width for the same reason as Tabs: a toast carries a `min-width` of the small
+          dialog, so three of them in a 340px masonry column spill through the frame. */}
+      <Frame label="Toast — tone">
+        <Row gap="var(--space-stack)" align="flex-start">
+          {TOAST_TONES.map((tone) => (
+            <Toast
+              key={tone}
+              tone={tone}
+              title={
+                tone === 'success' ? 'Changes saved' : tone === 'danger' ? "Couldn't publish" : 'Build queued'
+              }
+              onDismiss={() => {}}
+            >
+              {tone === 'danger' ? 'Nothing was written.' : 'Tone shows in the edge and the icon.'}
+            </Toast>
           ))}
         </Row>
       </Frame>
@@ -253,7 +278,7 @@ function ComponentSheet() {
             {TONES.map((tone) => (
               <Tick key={tone}>{tone}</Tick>
             ))}
-            {HUES.map((hue) => (
+            {BADGE_HUES.map((hue) => (
               <Fragment key={hue}>
                 <Tick>{hue}</Tick>
                 {TONES.map((tone) => (
@@ -304,6 +329,7 @@ function ComponentSheet() {
         <Frame label="Modal — sm / md">
           <ModalSpecimen />
         </Frame>
+
       </Sheet>
     </Page>
   );

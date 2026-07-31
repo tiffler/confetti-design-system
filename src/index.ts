@@ -15,6 +15,9 @@ export type { TabsProps, TabItem, TabHue } from './components/Tabs/Tabs';
 export { Modal } from './components/Modal/Modal';
 export type { ModalProps, ModalSize } from './components/Modal/Modal';
 
+export { Toast } from './components/Toast/Toast';
+export type { ToastProps, ToastTone } from './components/Toast/Toast';
+
 export { Icon } from './components/Icon/Icon';
 export type { IconProps, IconSize, IconTone, PhosphorIcon } from './components/Icon/Icon';
 
