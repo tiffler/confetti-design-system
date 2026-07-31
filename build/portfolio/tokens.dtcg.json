@@ -124,11 +124,87 @@
           }
         }
       },
+      "graphite": {
+        "400": {
+          "$value": "#2c3238",
+          "$type": "color",
+          "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-400"
+          }
+        },
+        "500": {
+          "$value": "#23282d",
+          "$type": "color",
+          "$description": "panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-500"
+          }
+        },
+        "700": {
+          "$value": "#1a1e21",
+          "$type": "color",
+          "$description": "raised",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-700"
+          }
+        },
+        "800": {
+          "$value": "#14171a",
+          "$type": "color",
+          "$description": "page background baseline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-800"
+          }
+        },
+        "900": {
+          "$value": "#0e1012",
+          "$type": "color",
+          "$description": "backdrop — the recessed mat below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-900"
+          }
+        },
+        "a16": {
+          "$value": "rgba(232, 236, 240, 0.16)",
+          "$type": "color",
+          "$description": "chalk at 16% — subtle border on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-a16"
+          }
+        }
+      },
+      "chalk": {
+        "100": {
+          "$value": "#e8ecf0",
+          "$type": "color",
+          "$description": "primary text and borders on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-100"
+          }
+        },
+        "400": {
+          "$value": "#98a2ac",
+          "$type": "color",
+          "$description": "muted text on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-400"
+          }
+        }
+      },
       "red": {
+        "200": {
+          "$value": "#fa7263",
+          "$type": "color",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-200"
+          }
+        },
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on the dark surface (4.69:1)",
+          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -165,8 +241,15 @@
             "com.confetti.cssVariable": "--color-purple-400"
           }
         },
+        "500": {
+          "$value": "#c9a4f5",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-500"
+          }
+        },
         "700": {
-          "$value": "#453552",
+          "$value": "#322a47",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-purple-700"
@@ -188,8 +271,15 @@
             "com.confetti.cssVariable": "--color-teal-400"
           }
         },
+        "500": {
+          "$value": "#7ce0cd",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-500"
+          }
+        },
         "700": {
-          "$value": "#2c463f",
+          "$value": "#1b3b38",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-teal-700"
@@ -211,8 +301,15 @@
             "com.confetti.cssVariable": "--color-orange-400"
           }
         },
+        "500": {
+          "$value": "#f7bf6a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-500"
+          }
+        },
         "700": {
-          "$value": "#54401f",
+          "$value": "#43331c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-orange-700"
@@ -234,8 +331,15 @@
             "com.confetti.cssVariable": "--color-pink-400"
           }
         },
+        "500": {
+          "$value": "#f7a6c6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-500"
+          }
+        },
         "700": {
-          "$value": "#4d323c",
+          "$value": "#43293c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-pink-700"
@@ -3261,11 +3365,87 @@
           }
         }
       },
+      "graphite": {
+        "400": {
+          "$value": "#2c3238",
+          "$type": "color",
+          "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-400"
+          }
+        },
+        "500": {
+          "$value": "#23282d",
+          "$type": "color",
+          "$description": "panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-500"
+          }
+        },
+        "700": {
+          "$value": "#1a1e21",
+          "$type": "color",
+          "$description": "raised",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-700"
+          }
+        },
+        "800": {
+          "$value": "#14171a",
+          "$type": "color",
+          "$description": "page background baseline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-800"
+          }
+        },
+        "900": {
+          "$value": "#0e1012",
+          "$type": "color",
+          "$description": "backdrop — the recessed mat below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-900"
+          }
+        },
+        "a16": {
+          "$value": "rgba(232, 236, 240, 0.16)",
+          "$type": "color",
+          "$description": "chalk at 16% — subtle border on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-a16"
+          }
+        }
+      },
+      "chalk": {
+        "100": {
+          "$value": "#e8ecf0",
+          "$type": "color",
+          "$description": "primary text and borders on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-100"
+          }
+        },
+        "400": {
+          "$value": "#98a2ac",
+          "$type": "color",
+          "$description": "muted text on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-400"
+          }
+        }
+      },
       "red": {
+        "200": {
+          "$value": "#fa7263",
+          "$type": "color",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-200"
+          }
+        },
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on the dark surface (4.69:1)",
+          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -3302,8 +3482,15 @@
             "com.confetti.cssVariable": "--color-purple-400"
           }
         },
+        "500": {
+          "$value": "#c9a4f5",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-500"
+          }
+        },
         "700": {
-          "$value": "#453552",
+          "$value": "#322a47",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-purple-700"
@@ -3325,8 +3512,15 @@
             "com.confetti.cssVariable": "--color-teal-400"
           }
         },
+        "500": {
+          "$value": "#7ce0cd",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-500"
+          }
+        },
         "700": {
-          "$value": "#2c463f",
+          "$value": "#1b3b38",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-teal-700"
@@ -3348,8 +3542,15 @@
             "com.confetti.cssVariable": "--color-orange-400"
           }
         },
+        "500": {
+          "$value": "#f7bf6a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-500"
+          }
+        },
         "700": {
-          "$value": "#54401f",
+          "$value": "#43331c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-orange-700"
@@ -3371,8 +3572,15 @@
             "com.confetti.cssVariable": "--color-pink-400"
           }
         },
+        "500": {
+          "$value": "#f7a6c6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-500"
+          }
+        },
         "700": {
-          "$value": "#4d323c",
+          "$value": "#43293c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-pink-700"
@@ -6398,11 +6606,87 @@
           }
         }
       },
+      "graphite": {
+        "400": {
+          "$value": "#2c3238",
+          "$type": "color",
+          "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-400"
+          }
+        },
+        "500": {
+          "$value": "#23282d",
+          "$type": "color",
+          "$description": "panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-500"
+          }
+        },
+        "700": {
+          "$value": "#1a1e21",
+          "$type": "color",
+          "$description": "raised",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-700"
+          }
+        },
+        "800": {
+          "$value": "#14171a",
+          "$type": "color",
+          "$description": "page background baseline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-800"
+          }
+        },
+        "900": {
+          "$value": "#0e1012",
+          "$type": "color",
+          "$description": "backdrop — the recessed mat below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-900"
+          }
+        },
+        "a16": {
+          "$value": "rgba(232, 236, 240, 0.16)",
+          "$type": "color",
+          "$description": "chalk at 16% — subtle border on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-a16"
+          }
+        }
+      },
+      "chalk": {
+        "100": {
+          "$value": "#e8ecf0",
+          "$type": "color",
+          "$description": "primary text and borders on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-100"
+          }
+        },
+        "400": {
+          "$value": "#98a2ac",
+          "$type": "color",
+          "$description": "muted text on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-400"
+          }
+        }
+      },
       "red": {
+        "200": {
+          "$value": "#fa7263",
+          "$type": "color",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-200"
+          }
+        },
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on the dark surface (4.69:1)",
+          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -6439,8 +6723,15 @@
             "com.confetti.cssVariable": "--color-purple-400"
           }
         },
+        "500": {
+          "$value": "#c9a4f5",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-500"
+          }
+        },
         "700": {
-          "$value": "#453552",
+          "$value": "#322a47",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-purple-700"
@@ -6462,8 +6753,15 @@
             "com.confetti.cssVariable": "--color-teal-400"
           }
         },
+        "500": {
+          "$value": "#7ce0cd",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-500"
+          }
+        },
         "700": {
-          "$value": "#2c463f",
+          "$value": "#1b3b38",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-teal-700"
@@ -6485,8 +6783,15 @@
             "com.confetti.cssVariable": "--color-orange-400"
           }
         },
+        "500": {
+          "$value": "#f7bf6a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-500"
+          }
+        },
         "700": {
-          "$value": "#54401f",
+          "$value": "#43331c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-orange-700"
@@ -6508,8 +6813,15 @@
             "com.confetti.cssVariable": "--color-pink-400"
           }
         },
+        "500": {
+          "$value": "#f7a6c6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-500"
+          }
+        },
         "700": {
-          "$value": "#4d323c",
+          "$value": "#43293c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-pink-700"
@@ -7010,28 +7322,28 @@
       },
       "text": {
         "accent": {
-          "$value": "#f04b3a",
+          "$value": "#fa7263",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-text-accent"
           }
         },
         "primary": {
-          "$value": "#ede4d3",
+          "$value": "#e8ecf0",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-text-primary"
           }
         },
         "muted": {
-          "$value": "#bfb6a6",
+          "$value": "#98a2ac",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-text-muted"
           }
         },
         "inverse": {
-          "$value": "#2e2618",
+          "$value": "#14171a",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-text-inverse"
@@ -7057,7 +7369,7 @@
         },
         "ghost": {
           "fg-hover": {
-            "$value": "#f04b3a",
+            "$value": "#fa7263",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-ghost-fg-hover"
@@ -7071,7 +7383,7 @@
             }
           },
           "fg": {
-            "$value": "#ede4d3",
+            "$value": "#e8ecf0",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-ghost-fg"
@@ -7080,14 +7392,14 @@
         },
         "secondary": {
           "bg": {
-            "$value": "#332a1c",
+            "$value": "#23282d",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-secondary-bg"
             }
           },
           "fg": {
-            "$value": "#ede4d3",
+            "$value": "#e8ecf0",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-secondary-fg"
@@ -7121,14 +7433,14 @@
       "accent": {
         "purple": {
           "bold": {
-            "$value": "#c6adda",
+            "$value": "#c9a4f5",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-accent-purple-bold"
             }
           },
           "subtle": {
-            "$value": "#453552",
+            "$value": "#322a47",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-accent-purple-subtle"
@@ -7137,14 +7449,14 @@
         },
         "teal": {
           "bold": {
-            "$value": "#a8d6cb",
+            "$value": "#7ce0cd",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-accent-teal-bold"
             }
           },
           "subtle": {
-            "$value": "#2c463f",
+            "$value": "#1b3b38",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-accent-teal-subtle"
@@ -7153,14 +7465,14 @@
         },
         "orange": {
           "bold": {
-            "$value": "#f0c07a",
+            "$value": "#f7bf6a",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-accent-orange-bold"
             }
           },
           "subtle": {
-            "$value": "#54401f",
+            "$value": "#43331c",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-accent-orange-subtle"
@@ -7169,14 +7481,14 @@
         },
         "pink": {
           "bold": {
-            "$value": "#e8b8cd",
+            "$value": "#f7a6c6",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-accent-pink-bold"
             }
           },
           "subtle": {
-            "$value": "#4d323c",
+            "$value": "#43293c",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-accent-pink-subtle"
@@ -7184,15 +7496,15 @@
           }
         },
         "on-bold": {
-          "$value": "#2e2618",
+          "$value": "#0e1012",
           "$type": "color",
-          "$description": "bold hues stay light in dark mode, so ink still reads",
+          "$description": "bold hues stay light in dark mode, so the deepest graphite reads on them",
           "$extensions": {
             "com.confetti.cssVariable": "--color-accent-on-bold"
           }
         },
         "on-subtle": {
-          "$value": "#ede4d3",
+          "$value": "#e8ecf0",
           "$type": "color",
           "$description": "subtle tints are deep in dark mode — needs the light foreground",
           "$extensions": {
@@ -7202,37 +7514,37 @@
       },
       "surface": {
         "page": {
-          "$value": "#211b12",
+          "$value": "#14171a",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-page"
           }
         },
         "raised": {
-          "$value": "#2a2317",
+          "$value": "#1a1e21",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-raised"
           }
         },
         "panel": {
-          "$value": "#332a1c",
+          "$value": "#23282d",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-panel"
           }
         },
         "card": {
-          "$value": "#3b3121",
+          "$value": "#2c3238",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-card"
           }
         },
         "backdrop": {
-          "$value": "#1a150d",
+          "$value": "#0e1012",
           "$type": "color",
-          "$description": "recessed mat — the deepest ink, below page",
+          "$description": "recessed mat — the deepest graphite, below page",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-backdrop"
           }
@@ -7240,14 +7552,14 @@
       },
       "border": {
         "default": {
-          "$value": "#ede4d3",
+          "$value": "#e8ecf0",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-border-default"
           }
         },
         "subtle": {
-          "$value": "rgba(237, 228, 211, 0.16)",
+          "$value": "rgba(232, 236, 240, 0.16)",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-border-subtle"
@@ -7421,7 +7733,7 @@
         }
       },
       "lift": {
-        "$value": "3px 3px 0px 0px #ede4d3",
+        "$value": "3px 3px 0px 0px #e8ecf0",
         "$type": "shadow",
         "$description": "card hover shadow",
         "$extensions": {
@@ -7429,7 +7741,7 @@
         }
       },
       "button-lift": {
-        "$value": "3px 3px 0px 0px #ede4d3",
+        "$value": "3px 3px 0px 0px #e8ecf0",
         "$type": "shadow",
         "$description": "button hover shadow — separate from card so a theme can drop or swap it",
         "$extensions": {
@@ -8225,7 +8537,7 @@
           }
         },
         "color": {
-          "$value": "#ede4d3",
+          "$value": "#e8ecf0",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--focus-ring-color"
@@ -8371,7 +8683,7 @@
         }
       },
       "border-color": {
-        "$value": "rgba(237, 228, 211, 0.16)",
+        "$value": "rgba(232, 236, 240, 0.16)",
         "$type": "other",
         "$description": "soft pill — subtle tint, not the ink sticker border",
         "$extensions": {
@@ -8421,28 +8733,28 @@
         }
       },
       "fg": {
-        "$value": "#2e2618",
+        "$value": "#0e1012",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-fg"
         }
       },
       "fg-subtle": {
-        "$value": "#ede4d3",
+        "$value": "#e8ecf0",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-fg-subtle"
         }
       },
       "fg-neutral": {
-        "$value": "#ede4d3",
+        "$value": "#e8ecf0",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-fg-neutral"
         }
       },
       "fg-subtle-neutral": {
-        "$value": "#bfb6a6",
+        "$value": "#98a2ac",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
@@ -8450,35 +8762,35 @@
       },
       "bg": {
         "purple": {
-          "$value": "#c6adda",
+          "$value": "#c9a4f5",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-purple"
           }
         },
         "teal": {
-          "$value": "#a8d6cb",
+          "$value": "#7ce0cd",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-teal"
           }
         },
         "orange": {
-          "$value": "#f0c07a",
+          "$value": "#f7bf6a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-orange"
           }
         },
         "pink": {
-          "$value": "#e8b8cd",
+          "$value": "#f7a6c6",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-pink"
           }
         },
         "neutral": {
-          "$value": "#2a2317",
+          "$value": "#1a1e21",
           "$type": "other",
           "$description": "paper fill — a badge that isn't a category",
           "$extensions": {
@@ -8488,28 +8800,28 @@
       },
       "bg-subtle": {
         "purple": {
-          "$value": "#453552",
+          "$value": "#322a47",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-subtle-purple"
           }
         },
         "teal": {
-          "$value": "#2c463f",
+          "$value": "#1b3b38",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-subtle-teal"
           }
         },
         "orange": {
-          "$value": "#54401f",
+          "$value": "#43331c",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-subtle-orange"
           }
         },
         "pink": {
-          "$value": "#4d323c",
+          "$value": "#43293c",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--badge-bg-subtle-pink"
@@ -8589,7 +8901,7 @@
         }
       },
       "shadow-hover": {
-        "$value": "3px 3px 0px 0px #ede4d3",
+        "$value": "3px 3px 0px 0px #e8ecf0",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-shadow-hover"
@@ -8660,7 +8972,7 @@
           }
         },
         "border": {
-          "$value": "#ede4d3",
+          "$value": "#e8ecf0",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-primary-border"
@@ -8669,21 +8981,21 @@
       },
       "secondary": {
         "bg": {
-          "$value": "#332a1c",
+          "$value": "#23282d",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-bg"
           }
         },
         "fg": {
-          "$value": "#ede4d3",
+          "$value": "#e8ecf0",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-fg"
           }
         },
         "border": {
-          "$value": "#ede4d3",
+          "$value": "#e8ecf0",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-border"
@@ -8699,14 +9011,14 @@
           }
         },
         "fg": {
-          "$value": "#ede4d3",
+          "$value": "#e8ecf0",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-ghost-fg"
           }
         },
         "fg-hover": {
-          "$value": "#f04b3a",
+          "$value": "#fa7263",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-ghost-fg-hover"
@@ -8723,35 +9035,35 @@
     },
     "card": {
       "bg": {
-        "$value": "#3b3121",
+        "$value": "#2c3238",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-bg"
         }
       },
       "bg-raised": {
-        "$value": "#2a2317",
+        "$value": "#1a1e21",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-bg-raised"
         }
       },
       "fg": {
-        "$value": "#ede4d3",
+        "$value": "#e8ecf0",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-fg"
         }
       },
       "fg-muted": {
-        "$value": "#bfb6a6",
+        "$value": "#98a2ac",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-fg-muted"
         }
       },
       "border-color": {
-        "$value": "#ede4d3",
+        "$value": "#e8ecf0",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-border-color"
@@ -8786,7 +9098,7 @@
         }
       },
       "shadow-hover": {
-        "$value": "3px 3px 0px 0px #ede4d3",
+        "$value": "3px 3px 0px 0px #e8ecf0",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-shadow-hover"
@@ -8943,7 +9255,7 @@
         }
       },
       "keyword": {
-        "$value": "#c6adda",
+        "$value": "#c9a4f5",
         "$type": "other",
         "$description": "keywords, booleans, constants",
         "$extensions": {
@@ -8951,7 +9263,7 @@
         }
       },
       "string": {
-        "$value": "#a8d6cb",
+        "$value": "#7ce0cd",
         "$type": "other",
         "$description": "strings, chars, attribute values",
         "$extensions": {
@@ -8959,7 +9271,7 @@
         }
       },
       "number": {
-        "$value": "#f0c07a",
+        "$value": "#f7bf6a",
         "$type": "other",
         "$description": "numbers and units",
         "$extensions": {
@@ -8967,7 +9279,7 @@
         }
       },
       "function": {
-        "$value": "#e8b8cd",
+        "$value": "#f7a6c6",
         "$type": "other",
         "$description": "functions, class names, JSX tags",
         "$extensions": {
@@ -8976,21 +9288,21 @@
       },
       "inline": {
         "bg": {
-          "$value": "#332a1c",
+          "$value": "#23282d",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--code-inline-bg"
           }
         },
         "fg": {
-          "$value": "#ede4d3",
+          "$value": "#e8ecf0",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--code-inline-fg"
           }
         },
         "border-color": {
-          "$value": "rgba(237, 228, 211, 0.16)",
+          "$value": "rgba(232, 236, 240, 0.16)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--code-inline-border-color"
@@ -9088,21 +9400,21 @@
         }
       },
       "color-default": {
-        "$value": "#ede4d3",
+        "$value": "#e8ecf0",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-default"
         }
       },
       "color-muted": {
-        "$value": "#bfb6a6",
+        "$value": "#98a2ac",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-muted"
         }
       },
       "color-accent": {
-        "$value": "#f04b3a",
+        "$value": "#fa7263",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
@@ -9127,28 +9439,28 @@
         }
       },
       "bg": {
-        "$value": "#3b3121",
+        "$value": "#2c3238",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-bg"
         }
       },
       "fg": {
-        "$value": "#ede4d3",
+        "$value": "#e8ecf0",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-fg"
         }
       },
       "fg-muted": {
-        "$value": "#bfb6a6",
+        "$value": "#98a2ac",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-fg-muted"
         }
       },
       "border-color": {
-        "$value": "#ede4d3",
+        "$value": "#e8ecf0",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-border-color"
@@ -9169,7 +9481,7 @@
         }
       },
       "shadow": {
-        "$value": "3px 3px 0px 0px #ede4d3",
+        "$value": "3px 3px 0px 0px #e8ecf0",
         "$type": "other",
         "$description": "the sticker lift, held at rest — a dialog is already raised",
         "$extensions": {
@@ -9297,7 +9609,7 @@
     },
     "tabs": {
       "track-bg": {
-        "$value": "#332a1c",
+        "$value": "#23282d",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
@@ -9305,7 +9617,7 @@
         }
       },
       "track-border-color": {
-        "$value": "rgba(237, 228, 211, 0.16)",
+        "$value": "rgba(232, 236, 240, 0.16)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-track-border-color"
@@ -9343,7 +9655,7 @@
         }
       },
       "idle-fg": {
-        "$value": "#bfb6a6",
+        "$value": "#98a2ac",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
@@ -9351,7 +9663,7 @@
         }
       },
       "hover-fg": {
-        "$value": "#ede4d3",
+        "$value": "#e8ecf0",
         "$type": "other",
         "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
         "$extensions": {
@@ -9543,11 +9855,87 @@
           }
         }
       },
+      "graphite": {
+        "400": {
+          "$value": "#2c3238",
+          "$type": "color",
+          "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-400"
+          }
+        },
+        "500": {
+          "$value": "#23282d",
+          "$type": "color",
+          "$description": "panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-500"
+          }
+        },
+        "700": {
+          "$value": "#1a1e21",
+          "$type": "color",
+          "$description": "raised",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-700"
+          }
+        },
+        "800": {
+          "$value": "#14171a",
+          "$type": "color",
+          "$description": "page background baseline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-800"
+          }
+        },
+        "900": {
+          "$value": "#0e1012",
+          "$type": "color",
+          "$description": "backdrop — the recessed mat below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-900"
+          }
+        },
+        "a16": {
+          "$value": "rgba(232, 236, 240, 0.16)",
+          "$type": "color",
+          "$description": "chalk at 16% — subtle border on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-a16"
+          }
+        }
+      },
+      "chalk": {
+        "100": {
+          "$value": "#e8ecf0",
+          "$type": "color",
+          "$description": "primary text and borders on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-100"
+          }
+        },
+        "400": {
+          "$value": "#98a2ac",
+          "$type": "color",
+          "$description": "muted text on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-400"
+          }
+        }
+      },
       "red": {
+        "200": {
+          "$value": "#fa7263",
+          "$type": "color",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-200"
+          }
+        },
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on the dark surface (4.69:1)",
+          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -9584,8 +9972,15 @@
             "com.confetti.cssVariable": "--color-purple-400"
           }
         },
+        "500": {
+          "$value": "#c9a4f5",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-500"
+          }
+        },
         "700": {
-          "$value": "#453552",
+          "$value": "#322a47",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-purple-700"
@@ -9607,8 +10002,15 @@
             "com.confetti.cssVariable": "--color-teal-400"
           }
         },
+        "500": {
+          "$value": "#7ce0cd",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-500"
+          }
+        },
         "700": {
-          "$value": "#2c463f",
+          "$value": "#1b3b38",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-teal-700"
@@ -9630,8 +10032,15 @@
             "com.confetti.cssVariable": "--color-orange-400"
           }
         },
+        "500": {
+          "$value": "#f7bf6a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-500"
+          }
+        },
         "700": {
-          "$value": "#54401f",
+          "$value": "#43331c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-orange-700"
@@ -9653,8 +10062,15 @@
             "com.confetti.cssVariable": "--color-pink-400"
           }
         },
+        "500": {
+          "$value": "#f7a6c6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-500"
+          }
+        },
         "700": {
-          "$value": "#4d323c",
+          "$value": "#43293c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-pink-700"
@@ -12688,11 +13104,87 @@
           }
         }
       },
+      "graphite": {
+        "400": {
+          "$value": "#2c3238",
+          "$type": "color",
+          "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-400"
+          }
+        },
+        "500": {
+          "$value": "#23282d",
+          "$type": "color",
+          "$description": "panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-500"
+          }
+        },
+        "700": {
+          "$value": "#1a1e21",
+          "$type": "color",
+          "$description": "raised",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-700"
+          }
+        },
+        "800": {
+          "$value": "#14171a",
+          "$type": "color",
+          "$description": "page background baseline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-800"
+          }
+        },
+        "900": {
+          "$value": "#0e1012",
+          "$type": "color",
+          "$description": "backdrop — the recessed mat below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-900"
+          }
+        },
+        "a16": {
+          "$value": "rgba(232, 236, 240, 0.16)",
+          "$type": "color",
+          "$description": "chalk at 16% — subtle border on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-a16"
+          }
+        }
+      },
+      "chalk": {
+        "100": {
+          "$value": "#e8ecf0",
+          "$type": "color",
+          "$description": "primary text and borders on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-100"
+          }
+        },
+        "400": {
+          "$value": "#98a2ac",
+          "$type": "color",
+          "$description": "muted text on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-400"
+          }
+        }
+      },
       "red": {
+        "200": {
+          "$value": "#fa7263",
+          "$type": "color",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-200"
+          }
+        },
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on the dark surface (4.69:1)",
+          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -12729,8 +13221,15 @@
             "com.confetti.cssVariable": "--color-purple-400"
           }
         },
+        "500": {
+          "$value": "#c9a4f5",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-500"
+          }
+        },
         "700": {
-          "$value": "#453552",
+          "$value": "#322a47",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-purple-700"
@@ -12752,8 +13251,15 @@
             "com.confetti.cssVariable": "--color-teal-400"
           }
         },
+        "500": {
+          "$value": "#7ce0cd",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-500"
+          }
+        },
         "700": {
-          "$value": "#2c463f",
+          "$value": "#1b3b38",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-teal-700"
@@ -12775,8 +13281,15 @@
             "com.confetti.cssVariable": "--color-orange-400"
           }
         },
+        "500": {
+          "$value": "#f7bf6a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-500"
+          }
+        },
         "700": {
-          "$value": "#54401f",
+          "$value": "#43331c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-orange-700"
@@ -12798,8 +13311,15 @@
             "com.confetti.cssVariable": "--color-pink-400"
           }
         },
+        "500": {
+          "$value": "#f7a6c6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-500"
+          }
+        },
         "700": {
-          "$value": "#4d323c",
+          "$value": "#43293c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-pink-700"
@@ -15826,11 +16346,87 @@
           }
         }
       },
+      "graphite": {
+        "400": {
+          "$value": "#2c3238",
+          "$type": "color",
+          "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-400"
+          }
+        },
+        "500": {
+          "$value": "#23282d",
+          "$type": "color",
+          "$description": "panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-500"
+          }
+        },
+        "700": {
+          "$value": "#1a1e21",
+          "$type": "color",
+          "$description": "raised",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-700"
+          }
+        },
+        "800": {
+          "$value": "#14171a",
+          "$type": "color",
+          "$description": "page background baseline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-800"
+          }
+        },
+        "900": {
+          "$value": "#0e1012",
+          "$type": "color",
+          "$description": "backdrop — the recessed mat below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-900"
+          }
+        },
+        "a16": {
+          "$value": "rgba(232, 236, 240, 0.16)",
+          "$type": "color",
+          "$description": "chalk at 16% — subtle border on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-graphite-a16"
+          }
+        }
+      },
+      "chalk": {
+        "100": {
+          "$value": "#e8ecf0",
+          "$type": "color",
+          "$description": "primary text and borders on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-100"
+          }
+        },
+        "400": {
+          "$value": "#98a2ac",
+          "$type": "color",
+          "$description": "muted text on graphite",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-chalk-400"
+          }
+        }
+      },
       "red": {
+        "200": {
+          "$value": "#fa7263",
+          "$type": "color",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-red-200"
+          }
+        },
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on the dark surface (4.69:1)",
+          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -15867,8 +16463,15 @@
             "com.confetti.cssVariable": "--color-purple-400"
           }
         },
+        "500": {
+          "$value": "#c9a4f5",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-purple-500"
+          }
+        },
         "700": {
-          "$value": "#453552",
+          "$value": "#322a47",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-purple-700"
@@ -15890,8 +16493,15 @@
             "com.confetti.cssVariable": "--color-teal-400"
           }
         },
+        "500": {
+          "$value": "#7ce0cd",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-teal-500"
+          }
+        },
         "700": {
-          "$value": "#2c463f",
+          "$value": "#1b3b38",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-teal-700"
@@ -15913,8 +16523,15 @@
             "com.confetti.cssVariable": "--color-orange-400"
           }
         },
+        "500": {
+          "$value": "#f7bf6a",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-orange-500"
+          }
+        },
         "700": {
-          "$value": "#54401f",
+          "$value": "#43331c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-orange-700"
@@ -15936,8 +16553,15 @@
             "com.confetti.cssVariable": "--color-pink-400"
           }
         },
+        "500": {
+          "$value": "#f7a6c6",
+          "$type": "color",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-pink-500"
+          }
+        },
         "700": {
-          "$value": "#4d323c",
+          "$value": "#43293c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-pink-700"

@@ -1,47 +1,47 @@
 {
-  "$comment": "MODE = dark. Neutrals only. Subtle accent tints deepen (X.700) so the light foreground reads on them; the hover shadow repoints to cream (a dark shadow on a dark surface reads as nothing). Emitted under [data-mode='dark'].",
+  "$comment": "MODE = dark. Neutrals only. This is Confetti's dark look and the fallback for any theme that doesn't bring its own — an EDITORIAL GRAY: neutral graphite surfaces with a slight cool cast, cool off-white text, and the brand red left as the one warm thing on the page. Light mode is warm cream paper; the two modes are deliberately different temperatures rather than one being a tinted copy of the other. Subtle accent tints deepen (X.700) so the light foreground reads on them; the hover shadow repoints to chalk, since a dark shadow on a dark surface reads as nothing. Emitted under [data-mode='dark'].",
   "color": {
     "surface": {
-      "page": { "value": "{color.ink.800}" },
-      "raised": { "value": "{color.ink.700}" },
-      "panel": { "value": "{color.ink.500}" },
-      "card": { "value": "{color.ink.400}" },
-      "backdrop": { "value": "{color.ink.900}", "comment": "recessed mat — the deepest ink, below page" }
+      "page": { "value": "{color.graphite.800}" },
+      "raised": { "value": "{color.graphite.700}" },
+      "panel": { "value": "{color.graphite.500}" },
+      "card": { "value": "{color.graphite.400}" },
+      "backdrop": { "value": "{color.graphite.900}", "comment": "recessed mat — the deepest graphite, below page" }
     },
     "text": {
-      "primary": { "value": "{color.cream.300}" },
-      "muted": { "value": "{color.ink.200}" },
-      "inverse": { "value": "{color.ink.600}" }
+      "primary": { "value": "{color.chalk.100}" },
+      "muted": { "value": "{color.chalk.400}" },
+      "inverse": { "value": "{color.graphite.800}" }
     },
     "border": {
-      "default": { "value": "{color.cream.300}" },
-      "subtle": { "value": "{color.cream.a16}" },
+      "default": { "value": "{color.chalk.100}" },
+      "subtle": { "value": "{color.graphite.a16}" },
       "none": { "value": "{color.base.transparent}" }
     },
     "action": {
       "secondary": {
-        "bg": { "value": "{color.ink.500}" },
-        "fg": { "value": "{color.cream.300}" }
+        "bg": { "value": "{color.graphite.500}" },
+        "fg": { "value": "{color.chalk.100}" }
       },
-      "ghost": { "bg": { "value": "{color.base.transparent}" }, "fg": { "value": "{color.cream.300}" } }
+      "ghost": { "bg": { "value": "{color.base.transparent}" }, "fg": { "value": "{color.chalk.100}" } }
     },
     "accent": {
       "purple": { "subtle": { "value": "{color.purple.700}" } },
       "teal": { "subtle": { "value": "{color.teal.700}" } },
       "orange": { "subtle": { "value": "{color.orange.700}" } },
       "pink": { "subtle": { "value": "{color.pink.700}" } },
-      "on-bold": { "value": "{color.ink.600}", "comment": "bold hues stay light in dark mode, so ink still reads" },
-      "on-subtle": { "value": "{color.cream.300}", "comment": "subtle tints are deep in dark mode — needs the light foreground" }
+      "on-bold": { "value": "{color.graphite.900}", "comment": "bold hues stay light in dark mode, so the deepest graphite reads on them" },
+      "on-subtle": { "value": "{color.chalk.100}", "comment": "subtle tints are deep in dark mode — needs the light foreground" }
     }
   },
   "shadow": {
-    "lift": { "value": "3px 3px 0px 0px {color.cream.300}", "comment": "card hover shadow" },
-    "button-lift": { "value": "3px 3px 0px 0px {color.cream.300}", "comment": "button hover shadow — separate from card so a theme can drop or swap it" }
+    "lift": { "value": "3px 3px 0px 0px {color.chalk.100}", "comment": "card hover shadow" },
+    "button-lift": { "value": "3px 3px 0px 0px {color.chalk.100}", "comment": "button hover shadow — separate from card so a theme can drop or swap it" }
   },
   "focus": {
     "ring": {
       "width": { "value": "{border.width.sticker}", "comment": "2px" },
-      "color": { "value": "{color.cream.300}" },
+      "color": { "value": "{color.chalk.100}" },
       "offset": { "value": "{border.width.sticker}", "comment": "2px" }
     }
   }

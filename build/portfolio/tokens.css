@@ -33,21 +33,34 @@
   --color-ink-a18: rgba(46, 38, 24, 0.18);
   --color-ink-a12: rgba(46, 38, 24, 0.12);
   --color-ink-a86: rgba(26, 21, 13, 0.86);
+  --color-graphite-400: #2c3238;
+  --color-graphite-500: #23282d;
+  --color-graphite-700: #1a1e21;
+  --color-graphite-800: #14171a;
+  --color-graphite-900: #0e1012;
+  --color-graphite-a16: rgba(232, 236, 240, 0.16);
+  --color-chalk-100: #e8ecf0;
+  --color-chalk-400: #98a2ac;
+  --color-red-200: #fa7263;
   --color-red-300: #f04b3a;
   --color-red-400: #e33b2e;
   --color-red-500: #c40000;
   --color-purple-100: #f0e5f2;
   --color-purple-400: #c6adda;
-  --color-purple-700: #453552;
+  --color-purple-500: #c9a4f5;
+  --color-purple-700: #322a47;
   --color-teal-100: #e4f1ec;
   --color-teal-400: #a8d6cb;
-  --color-teal-700: #2c463f;
+  --color-teal-500: #7ce0cd;
+  --color-teal-700: #1b3b38;
   --color-orange-100: #fbf0dc;
   --color-orange-400: #f0c07a;
-  --color-orange-700: #54401f;
+  --color-orange-500: #f7bf6a;
+  --color-orange-700: #43331c;
   --color-pink-100: #f5e4ea;
   --color-pink-400: #e8b8cd;
-  --color-pink-700: #4d323c;
+  --color-pink-500: #f7a6c6;
+  --color-pink-700: #43293c;
   --color-pine-300: #79b98c;
   --color-pine-400: #4a8f5b;
   --color-pine-500: #2f6b3f;
@@ -390,31 +403,31 @@
 }
 
 [data-mode="dark"] {
-  --color-surface-page: #211b12;
-  --color-surface-raised: #2a2317;
-  --color-surface-panel: #332a1c;
-  --color-surface-card: #3b3121;
-  --color-surface-backdrop: #1a150d;
-  --color-text-primary: #ede4d3;
-  --color-text-muted: #bfb6a6;
-  --color-text-inverse: #2e2618;
-  --color-border-default: #ede4d3;
-  --color-border-subtle: rgba(237, 228, 211, 0.16);
+  --color-surface-page: #14171a;
+  --color-surface-raised: #1a1e21;
+  --color-surface-panel: #23282d;
+  --color-surface-card: #2c3238;
+  --color-surface-backdrop: #0e1012;
+  --color-text-primary: #e8ecf0;
+  --color-text-muted: #98a2ac;
+  --color-text-inverse: #14171a;
+  --color-border-default: #e8ecf0;
+  --color-border-subtle: rgba(232, 236, 240, 0.16);
   --color-border-none: transparent;
-  --color-action-secondary-bg: #332a1c;
-  --color-action-secondary-fg: #ede4d3;
+  --color-action-secondary-bg: #23282d;
+  --color-action-secondary-fg: #e8ecf0;
   --color-action-ghost-bg: transparent;
-  --color-action-ghost-fg: #ede4d3;
-  --color-accent-purple-subtle: #453552;
-  --color-accent-teal-subtle: #2c463f;
-  --color-accent-orange-subtle: #54401f;
-  --color-accent-pink-subtle: #4d323c;
-  --color-accent-on-bold: #2e2618;
-  --color-accent-on-subtle: #ede4d3;
-  --shadow-lift: 3px 3px 0px 0px #ede4d3;
-  --shadow-button-lift: 3px 3px 0px 0px #ede4d3;
+  --color-action-ghost-fg: #e8ecf0;
+  --color-accent-purple-subtle: #322a47;
+  --color-accent-teal-subtle: #1b3b38;
+  --color-accent-orange-subtle: #43331c;
+  --color-accent-pink-subtle: #43293c;
+  --color-accent-on-bold: #0e1012;
+  --color-accent-on-subtle: #e8ecf0;
+  --shadow-lift: 3px 3px 0px 0px #e8ecf0;
+  --shadow-button-lift: 3px 3px 0px 0px #e8ecf0;
   --focus-ring-width: 2px;
-  --focus-ring-color: #ede4d3;
+  --focus-ring-color: #e8ecf0;
   --focus-ring-offset: 2px;
 }
 
@@ -571,8 +584,12 @@
 
 /* Theme override (own neutrals / a11y lift) — see tokens/overrides/confetti.dark.json */
 [data-theme="confetti"][data-mode="dark"] {
-  --color-text-accent: #f04b3a;
-  --color-action-ghost-fg-hover: #f04b3a;
+  --color-text-accent: #fa7263;
+  --color-action-ghost-fg-hover: #fa7263;
+  --color-accent-purple-bold: #c9a4f5;
+  --color-accent-teal-bold: #7ce0cd;
+  --color-accent-orange-bold: #f7bf6a;
+  --color-accent-pink-bold: #f7a6c6;
 }
 
 /* Theme override (own neutrals / a11y lift) — see tokens/overrides/neon.dark.json */
