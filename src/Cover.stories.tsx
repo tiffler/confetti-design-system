@@ -1,10 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ArrowUpRight } from '@phosphor-icons/react';
+import { ArrowUpRight, Confetti as ConfettiGlyph } from '@phosphor-icons/react';
 import { Button } from './components/Button/Button';
 import { Card } from './components/Card/Card';
 import { Badge } from './components/Badge/Badge';
 import { Icon } from './components/Icon/Icon';
 import pkg from '../package.json';
+import './Cover.css';
 
 /**
  * The landing page. Built from Confetti's own components (Button, Card, Badge, Icon) and
@@ -47,7 +48,8 @@ function Cover() {
             margin: 0,
           }}
         >
-          🎊 Confetti
+          {/* Decorative — the word beside it carries the meaning, so no `label`. */}
+          <Icon icon={ConfettiGlyph} size="lg" tone="accent" className="cf-cover__glyph" /> Confetti
         </h1>
 
         <p
@@ -139,7 +141,16 @@ const meta: Meta = {
 };
 export default meta;
 
+/**
+ * The story's name matches the title exactly, which is what triggers Storybook's
+ * single-story hoisting: a lone story whose name equals its component's name replaces that
+ * component in the sidebar instead of nesting inside it. So "Confetti" is one clickable
+ * entry that opens the cover, rather than a folder you have to expand first.
+ *
+ * The export keeps its old name so the story ID stays `confetti--welcome` and existing
+ * links do not break — hoisting keys off the display name, not the export.
+ */
 export const Welcome: StoryObj = {
-  name: 'Welcome',
+  name: 'Confetti',
   render: () => <Cover />,
 };

@@ -10,8 +10,13 @@ const preview: Preview = {
     controls: { matchers: { color: /(background|color)$/i } },
     options: {
       storySort: {
+        // `Confetti` and `Tokens` are root-level components rather than folders, and
+        // Storybook sorts those ahead of folders whatever this list says — so they are
+        // listed first to describe where they actually land, not where we wish they did.
         order: [
           'Confetti',
+          'Tokens',
+          ['All tokens'],
           'Foundations',
           ['Color', 'Typography', 'Spacing', 'Elevation'],
           'Components',

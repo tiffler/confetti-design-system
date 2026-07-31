@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 import { ColorGrid, ContrastPairs } from './Specimens';
+import { TokenTable } from './TokenTable';
 
 <Meta title="Foundations/Color" />
 
@@ -109,6 +110,18 @@ Each pair carrying its own intended foreground:
     { fg: 'color-accent-on-subtle', bg: 'color-accent-pink-subtle', label: 'pink subtle', sample: 'Featured' },
   ]}
 />
+
+## Semantic
+
+Every semantic colour role in one place. The sections above walk through them by job;
+this is the index — searchable, sortable, and read from the same generated file, so it
+cannot fall behind the build.
+
+This is the layer to consume. A role names what a colour is *for*, so it survives a
+re-skin: `surface-raised` still means "the canvas step above page" when the paint under
+it changes, while `cream-100` stops being true the moment it does.
+
+<TokenTable categories={['color']} layer="Semantic" />
 
 ## Primitives
 

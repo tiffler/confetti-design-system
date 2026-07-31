@@ -53,6 +53,26 @@
     padding: var(--code-inline-padding-y) var(--code-inline-padding-x) !important;
   }
 
+  /* …nor inside the token index, which puts a `code` in every cell of a dense table. The
+     chip above would turn several hundred cells into pills and drown the data. The table
+     supplies its own mono type; colour is set on the cell so `inherit` picks it up rather
+     than being clobbered by the `!important` above. */
+  .sbdocs-content .pg-token-table code {
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    color: inherit !important;
+  }
+
+  /* Storybook also zebra-stripes tables in docs with a hardcoded near-white. The chip above
+     used to hide it; without one, every even row became light text on a white band in dark
+     mode. The table draws its own hairline between rows, so the stripe is redundant as well
+     as broken — drop it. `tbody tr` only: the header cells paint the page colour to stay
+     legible while they are stuck to the top. */
+  .sbdocs-content .pg-token-table tbody tr {
+    background: none !important;
+  }
+
   /* …but not inside a block, which owns its own ground and syntax colors. Placed after the
      rule above so it wins on order as well as specificity. */
   .sbdocs-content pre code,

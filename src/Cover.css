@@ -1,0 +1,13 @@
+/* Cover-page CSS. One rule, and it exists to break a rule deliberately.
+
+   Icon's sizes mirror the type scale — sm/md/lg are 16/20/24px, sized for text and controls.
+   The cover's title is display type, which clamps up to ~104px, so `lg` beside it would read
+   as a mistake rather than a mark. This pins the glyph to `1em` so it scales with whatever
+   the title resolves to, exactly as the emoji it replaced did.
+
+   Two classes deep (`.cf-icon.cf-cover__glyph`) so it outranks `.cf-icon--lg`, which sets the
+   same property — a tie would be decided by stylesheet import order, which is not something
+   to leave to chance. */
+.cf-icon.cf-cover__glyph {
+  --cf-icon-size: 1em;
+}
