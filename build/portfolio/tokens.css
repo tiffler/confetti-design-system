@@ -33,14 +33,14 @@
   --color-ink-a18: rgba(46, 38, 24, 0.18);
   --color-ink-a12: rgba(46, 38, 24, 0.12);
   --color-ink-a86: rgba(26, 21, 13, 0.86);
-  --color-graphite-400: #363d45;
-  --color-graphite-500: #2b3138;
-  --color-graphite-700: #22272c;
-  --color-graphite-800: #1b1f23;
-  --color-graphite-900: #141719;
+  --color-graphite-400: #1e1e24;
+  --color-graphite-500: #16151b;
+  --color-graphite-700: #0e0d12;
+  --color-graphite-800: #000000;
+  --color-graphite-900: #000000;
   --color-graphite-a16: rgba(232, 236, 240, 0.16);
   --color-chalk-100: #e8ecf0;
-  --color-chalk-400: #a8b2bc;
+  --color-chalk-400: #868c99;
   --color-red-200: #ff8d80;
   --color-red-300: #f04b3a;
   --color-red-400: #e33b2e;
@@ -497,18 +497,18 @@
 }
 
 [data-mode="dark"] {
-  --color-surface-page: #1b1f23;
-  --color-surface-raised: #22272c;
-  --color-surface-panel: #2b3138;
-  --color-surface-card: #363d45;
-  --color-surface-backdrop: #141719;
+  --color-surface-page: #000000;
+  --color-surface-raised: #0e0d12;
+  --color-surface-panel: #16151b;
+  --color-surface-card: #1e1e24;
+  --color-surface-backdrop: #000000;
   --color-text-primary: #e8ecf0;
-  --color-text-muted: #a8b2bc;
-  --color-text-inverse: #1b1f23;
+  --color-text-muted: #868c99;
+  --color-text-inverse: #000000;
   --color-border-default: #e8ecf0;
   --color-border-subtle: rgba(232, 236, 240, 0.16);
   --color-border-none: transparent;
-  --color-action-secondary-bg: #2b3138;
+  --color-action-secondary-bg: #16151b;
   --color-action-secondary-fg: #e8ecf0;
   --color-action-ghost-bg: transparent;
   --color-action-ghost-fg: #e8ecf0;
@@ -525,7 +525,7 @@
   --color-accent-teal-subtle: #1b3b38;
   --color-accent-orange-subtle: #43331c;
   --color-accent-pink-subtle: #43293c;
-  --color-accent-on-bold: #141719;
+  --color-accent-on-bold: #000000;
   --color-accent-on-subtle: #e8ecf0;
   --shadow-lift: 3px 3px 0px 0px #e8ecf0;
   --shadow-button-lift: 3px 3px 0px 0px #e8ecf0;
@@ -696,8 +696,9 @@
 
 /* Theme override (own neutrals / a11y lift) — see tokens/overrides/confetti.dark.json */
 [data-theme="confetti"][data-mode="dark"] {
-  --color-text-accent: #ff8d80;
-  --color-action-ghost-fg-hover: #ff8d80;
+  --color-text-accent: #f04b3a;
+  --color-action-ghost-fg-hover: #f04b3a;
+  --color-status-danger-text: #f04b3a;
   --color-accent-purple-bold: #c9a4f5;
   --color-accent-teal-bold: #7ce0cd;
   --color-accent-orange-bold: #f7bf6a;

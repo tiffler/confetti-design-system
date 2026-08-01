@@ -126,7 +126,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#363d45",
+          "$value": "#1e1e24",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -134,7 +134,7 @@
           }
         },
         "500": {
-          "$value": "#2b3138",
+          "$value": "#16151b",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -142,7 +142,7 @@
           }
         },
         "700": {
-          "$value": "#22272c",
+          "$value": "#0e0d12",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -150,17 +150,17 @@
           }
         },
         "800": {
-          "$value": "#1b1f23",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "page background baseline",
+          "$description": "page background baseline — true black. The page is the floor, which is what lets the content surfaces sit deep without losing their edge against it: at zero luminance, page → card separation is free.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-800"
           }
         },
         "900": {
-          "$value": "#141719",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "backdrop — the recessed mat below page",
+          "$description": "backdrop — COLLAPSED into page. The role is the recessed mat BELOW page, and page is now the floor, so there is nowhere left to go. Kept as a distinct token so the semantic layer and the other themes are unaffected, but in Confetti dark it is the same black.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-900"
           }
@@ -184,9 +184,9 @@
           }
         },
         "400": {
-          "$value": "#a8b2bc",
+          "$value": "#868c99",
           "$type": "color",
-          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
+          "$description": "muted text on graphite — deepened alongside the surfaces, and pulled into their cool family. Clears AA on `card`, the lightest of them (4.92:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -196,7 +196,7 @@
         "200": {
           "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted furthest — what the dark-mode accent needed while `card` was a mid gray. Kept for any theme that inherits the dark mode with surfaces lighter than Confetti's own.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -204,7 +204,7 @@
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
+          "$description": "confetti brand Red, lifted just enough to read AS TEXT on EVERY dark surface, card included (4.56:1) — the dark-mode accent. It only clears on card because the surfaces went deep; against the older, lighter card it managed 3.56:1 and the accent had to settle for the far paler 200.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -1204,7 +1204,7 @@
           "text": {
             "$value": "#ff8d80",
             "$type": "color",
-            "$description": "danger AS TEXT — the same lift brand-as-text takes, so it clears AA on card (4.72:1)",
+            "$description": "danger AS TEXT — stays on the palest red HERE, on the mode axis, because a theme inheriting this mode may have surfaces much lighter than Confetti's. Adventure's `card` is #35492f and Neon's is #2e1650; red.300 fails on both. Confetti's dark override takes it down to red.300, which its deep charcoal can afford.",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-text"
             }
@@ -4153,7 +4153,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#363d45",
+          "$value": "#1e1e24",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -4161,7 +4161,7 @@
           }
         },
         "500": {
-          "$value": "#2b3138",
+          "$value": "#16151b",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -4169,7 +4169,7 @@
           }
         },
         "700": {
-          "$value": "#22272c",
+          "$value": "#0e0d12",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -4177,17 +4177,17 @@
           }
         },
         "800": {
-          "$value": "#1b1f23",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "page background baseline",
+          "$description": "page background baseline — true black. The page is the floor, which is what lets the content surfaces sit deep without losing their edge against it: at zero luminance, page → card separation is free.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-800"
           }
         },
         "900": {
-          "$value": "#141719",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "backdrop — the recessed mat below page",
+          "$description": "backdrop — COLLAPSED into page. The role is the recessed mat BELOW page, and page is now the floor, so there is nowhere left to go. Kept as a distinct token so the semantic layer and the other themes are unaffected, but in Confetti dark it is the same black.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-900"
           }
@@ -4211,9 +4211,9 @@
           }
         },
         "400": {
-          "$value": "#a8b2bc",
+          "$value": "#868c99",
           "$type": "color",
-          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
+          "$description": "muted text on graphite — deepened alongside the surfaces, and pulled into their cool family. Clears AA on `card`, the lightest of them (4.92:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -4223,7 +4223,7 @@
         "200": {
           "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted furthest — what the dark-mode accent needed while `card` was a mid gray. Kept for any theme that inherits the dark mode with surfaces lighter than Confetti's own.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -4231,7 +4231,7 @@
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
+          "$description": "confetti brand Red, lifted just enough to read AS TEXT on EVERY dark surface, card included (4.56:1) — the dark-mode accent. It only clears on card because the surfaces went deep; against the older, lighter card it managed 3.56:1 and the accent had to settle for the far paler 200.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -8181,7 +8181,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#363d45",
+          "$value": "#1e1e24",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -8189,7 +8189,7 @@
           }
         },
         "500": {
-          "$value": "#2b3138",
+          "$value": "#16151b",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -8197,7 +8197,7 @@
           }
         },
         "700": {
-          "$value": "#22272c",
+          "$value": "#0e0d12",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -8205,17 +8205,17 @@
           }
         },
         "800": {
-          "$value": "#1b1f23",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "page background baseline",
+          "$description": "page background baseline — true black. The page is the floor, which is what lets the content surfaces sit deep without losing their edge against it: at zero luminance, page → card separation is free.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-800"
           }
         },
         "900": {
-          "$value": "#141719",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "backdrop — the recessed mat below page",
+          "$description": "backdrop — COLLAPSED into page. The role is the recessed mat BELOW page, and page is now the floor, so there is nowhere left to go. Kept as a distinct token so the semantic layer and the other themes are unaffected, but in Confetti dark it is the same black.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-900"
           }
@@ -8239,9 +8239,9 @@
           }
         },
         "400": {
-          "$value": "#a8b2bc",
+          "$value": "#868c99",
           "$type": "color",
-          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
+          "$description": "muted text on graphite — deepened alongside the surfaces, and pulled into their cool family. Clears AA on `card`, the lightest of them (4.92:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -8251,7 +8251,7 @@
         "200": {
           "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted furthest — what the dark-mode accent needed while `card` was a mid gray. Kept for any theme that inherits the dark mode with surfaces lighter than Confetti's own.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -8259,7 +8259,7 @@
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
+          "$description": "confetti brand Red, lifted just enough to read AS TEXT on EVERY dark surface, card included (4.56:1) — the dark-mode accent. It only clears on card because the surfaces went deep; against the older, lighter card it managed 3.56:1 and the accent had to settle for the far paler 200.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -8953,7 +8953,7 @@
       },
       "text": {
         "accent": {
-          "$value": "#ff8d80",
+          "$value": "#f04b3a",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-text-accent"
@@ -8967,14 +8967,14 @@
           }
         },
         "muted": {
-          "$value": "#a8b2bc",
+          "$value": "#868c99",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-text-muted"
           }
         },
         "inverse": {
-          "$value": "#1b1f23",
+          "$value": "#000000",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-text-inverse"
@@ -9000,7 +9000,7 @@
         },
         "ghost": {
           "fg-hover": {
-            "$value": "#ff8d80",
+            "$value": "#f04b3a",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-ghost-fg-hover"
@@ -9023,7 +9023,7 @@
         },
         "secondary": {
           "bg": {
-            "$value": "#2b3138",
+            "$value": "#16151b",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-secondary-bg"
@@ -9127,7 +9127,7 @@
           }
         },
         "on-bold": {
-          "$value": "#141719",
+          "$value": "#000000",
           "$type": "color",
           "$description": "bold hues stay light in dark mode, so the deepest graphite reads on them",
           "$extensions": {
@@ -9145,37 +9145,37 @@
       },
       "surface": {
         "page": {
-          "$value": "#1b1f23",
+          "$value": "#000000",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-page"
           }
         },
         "raised": {
-          "$value": "#22272c",
+          "$value": "#0e0d12",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-raised"
           }
         },
         "panel": {
-          "$value": "#2b3138",
+          "$value": "#16151b",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-panel"
           }
         },
         "card": {
-          "$value": "#363d45",
+          "$value": "#1e1e24",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-card"
           }
         },
         "backdrop": {
-          "$value": "#141719",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "recessed mat — the deepest graphite, below page",
+          "$description": "recessed mat below page — but page is now true black, so in Confetti dark this collapses to the same #000. Anything that relied on backdrop reading darker than page (the Modal story's app frame) has to separate with a border instead. The role is kept because other themes inheriting this mode still have somewhere below their page to go.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-backdrop"
           }
@@ -9259,9 +9259,9 @@
             }
           },
           "text": {
-            "$value": "#ff8d80",
+            "$value": "#f04b3a",
             "$type": "color",
-            "$description": "danger AS TEXT — the same lift brand-as-text takes, so it clears AA on card (4.72:1)",
+            "$description": "danger AS TEXT takes the same lift brand-as-text takes, for the same reason — and like it, only Confetti can afford it. The mode axis leaves this on red.200 for the themes with lighter surfaces.",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-text"
             }
@@ -10512,7 +10512,7 @@
         }
       },
       "fg": {
-        "$value": "#141719",
+        "$value": "#000000",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-fg"
@@ -10533,7 +10533,7 @@
         }
       },
       "fg-subtle-neutral": {
-        "$value": "#a8b2bc",
+        "$value": "#868c99",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
@@ -10590,7 +10590,7 @@
           }
         },
         "neutral": {
-          "$value": "#22272c",
+          "$value": "#0e0d12",
           "$type": "other",
           "$description": "paper fill — a badge that isn't a category",
           "$extensions": {
@@ -10816,7 +10816,7 @@
       },
       "secondary": {
         "bg": {
-          "$value": "#2b3138",
+          "$value": "#16151b",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-bg"
@@ -10906,7 +10906,7 @@
           }
         },
         "fg-hover": {
-          "$value": "#ff8d80",
+          "$value": "#f04b3a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-ghost-fg-hover"
@@ -10923,14 +10923,14 @@
     },
     "card": {
       "bg": {
-        "$value": "#363d45",
+        "$value": "#1e1e24",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-bg"
         }
       },
       "bg-raised": {
-        "$value": "#22272c",
+        "$value": "#0e0d12",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-bg-raised"
@@ -10944,7 +10944,7 @@
         }
       },
       "fg-muted": {
-        "$value": "#a8b2bc",
+        "$value": "#868c99",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-fg-muted"
@@ -11176,7 +11176,7 @@
       },
       "inline": {
         "bg": {
-          "$value": "#2b3138",
+          "$value": "#16151b",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--code-inline-bg"
@@ -11295,14 +11295,14 @@
         }
       },
       "color-muted": {
-        "$value": "#a8b2bc",
+        "$value": "#868c99",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-muted"
         }
       },
       "color-accent": {
-        "$value": "#ff8d80",
+        "$value": "#f04b3a",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
@@ -11311,7 +11311,7 @@
     },
     "modal": {
       "bg": {
-        "$value": "#363d45",
+        "$value": "#1e1e24",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-bg"
@@ -11325,7 +11325,7 @@
         }
       },
       "fg-muted": {
-        "$value": "#a8b2bc",
+        "$value": "#868c99",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-fg-muted"
@@ -11529,7 +11529,7 @@
         }
       },
       "track-bg": {
-        "$value": "#2b3138",
+        "$value": "#16151b",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-track-bg"
@@ -11565,7 +11565,7 @@
         }
       },
       "thumb-bg": {
-        "$value": "#363d45",
+        "$value": "#1e1e24",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-bg"
@@ -11630,7 +11630,7 @@
         }
       },
       "value-color": {
-        "$value": "#a8b2bc",
+        "$value": "#868c99",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-value-color"
@@ -11696,7 +11696,7 @@
         }
       },
       "bg": {
-        "$value": "#2b3138",
+        "$value": "#16151b",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-bg"
@@ -11726,7 +11726,7 @@
         }
       },
       "icon-color": {
-        "$value": "#2b3138",
+        "$value": "#16151b",
         "$type": "other",
         "$description": "the glyph sits ON the thumb, so it takes the track's fill",
         "$extensions": {
@@ -11793,7 +11793,7 @@
     },
     "tabs": {
       "track-bg": {
-        "$value": "#2b3138",
+        "$value": "#16151b",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
@@ -11839,7 +11839,7 @@
         }
       },
       "idle-fg": {
-        "$value": "#a8b2bc",
+        "$value": "#868c99",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
@@ -11916,7 +11916,7 @@
     },
     "toast": {
       "bg": {
-        "$value": "#22272c",
+        "$value": "#0e0d12",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-bg"
@@ -11930,7 +11930,7 @@
         }
       },
       "fg-muted": {
-        "$value": "#a8b2bc",
+        "$value": "#868c99",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-fg-muted"
@@ -12005,14 +12005,14 @@
           }
         },
         "danger": {
-          "$value": "#ff8d80",
+          "$value": "#f04b3a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-danger"
           }
         },
         "neutral": {
-          "$value": "#a8b2bc",
+          "$value": "#868c99",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-neutral"
@@ -12028,14 +12028,14 @@
           }
         },
         "danger": {
-          "$value": "#ff8d80",
+          "$value": "#f04b3a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-danger"
           }
         },
         "neutral": {
-          "$value": "#a8b2bc",
+          "$value": "#868c99",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-neutral"
@@ -12216,7 +12216,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#363d45",
+          "$value": "#1e1e24",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -12224,7 +12224,7 @@
           }
         },
         "500": {
-          "$value": "#2b3138",
+          "$value": "#16151b",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -12232,7 +12232,7 @@
           }
         },
         "700": {
-          "$value": "#22272c",
+          "$value": "#0e0d12",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -12240,17 +12240,17 @@
           }
         },
         "800": {
-          "$value": "#1b1f23",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "page background baseline",
+          "$description": "page background baseline — true black. The page is the floor, which is what lets the content surfaces sit deep without losing their edge against it: at zero luminance, page → card separation is free.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-800"
           }
         },
         "900": {
-          "$value": "#141719",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "backdrop — the recessed mat below page",
+          "$description": "backdrop — COLLAPSED into page. The role is the recessed mat BELOW page, and page is now the floor, so there is nowhere left to go. Kept as a distinct token so the semantic layer and the other themes are unaffected, but in Confetti dark it is the same black.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-900"
           }
@@ -12274,9 +12274,9 @@
           }
         },
         "400": {
-          "$value": "#a8b2bc",
+          "$value": "#868c99",
           "$type": "color",
-          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
+          "$description": "muted text on graphite — deepened alongside the surfaces, and pulled into their cool family. Clears AA on `card`, the lightest of them (4.92:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -12286,7 +12286,7 @@
         "200": {
           "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted furthest — what the dark-mode accent needed while `card` was a mid gray. Kept for any theme that inherits the dark mode with surfaces lighter than Confetti's own.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -12294,7 +12294,7 @@
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
+          "$description": "confetti brand Red, lifted just enough to read AS TEXT on EVERY dark surface, card included (4.56:1) — the dark-mode accent. It only clears on card because the surfaces went deep; against the older, lighter card it managed 3.56:1 and the accent had to settle for the far paler 200.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -16252,7 +16252,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#363d45",
+          "$value": "#1e1e24",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -16260,7 +16260,7 @@
           }
         },
         "500": {
-          "$value": "#2b3138",
+          "$value": "#16151b",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -16268,7 +16268,7 @@
           }
         },
         "700": {
-          "$value": "#22272c",
+          "$value": "#0e0d12",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -16276,17 +16276,17 @@
           }
         },
         "800": {
-          "$value": "#1b1f23",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "page background baseline",
+          "$description": "page background baseline — true black. The page is the floor, which is what lets the content surfaces sit deep without losing their edge against it: at zero luminance, page → card separation is free.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-800"
           }
         },
         "900": {
-          "$value": "#141719",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "backdrop — the recessed mat below page",
+          "$description": "backdrop — COLLAPSED into page. The role is the recessed mat BELOW page, and page is now the floor, so there is nowhere left to go. Kept as a distinct token so the semantic layer and the other themes are unaffected, but in Confetti dark it is the same black.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-900"
           }
@@ -16310,9 +16310,9 @@
           }
         },
         "400": {
-          "$value": "#a8b2bc",
+          "$value": "#868c99",
           "$type": "color",
-          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
+          "$description": "muted text on graphite — deepened alongside the surfaces, and pulled into their cool family. Clears AA on `card`, the lightest of them (4.92:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -16322,7 +16322,7 @@
         "200": {
           "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted furthest — what the dark-mode accent needed while `card` was a mid gray. Kept for any theme that inherits the dark mode with surfaces lighter than Confetti's own.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -16330,7 +16330,7 @@
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
+          "$description": "confetti brand Red, lifted just enough to read AS TEXT on EVERY dark surface, card included (4.56:1) — the dark-mode accent. It only clears on card because the surfaces went deep; against the older, lighter card it managed 3.56:1 and the accent had to settle for the far paler 200.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
@@ -17330,7 +17330,7 @@
           "text": {
             "$value": "#ff8d80",
             "$type": "color",
-            "$description": "danger AS TEXT — the same lift brand-as-text takes, so it clears AA on card (4.72:1)",
+            "$description": "danger AS TEXT — stays on the palest red HERE, on the mode axis, because a theme inheriting this mode may have surfaces much lighter than Confetti's. Adventure's `card` is #35492f and Neon's is #2e1650; red.300 fails on both. Confetti's dark override takes it down to red.300, which its deep charcoal can afford.",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-text"
             }
@@ -20280,7 +20280,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#363d45",
+          "$value": "#1e1e24",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -20288,7 +20288,7 @@
           }
         },
         "500": {
-          "$value": "#2b3138",
+          "$value": "#16151b",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -20296,7 +20296,7 @@
           }
         },
         "700": {
-          "$value": "#22272c",
+          "$value": "#0e0d12",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -20304,17 +20304,17 @@
           }
         },
         "800": {
-          "$value": "#1b1f23",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "page background baseline",
+          "$description": "page background baseline — true black. The page is the floor, which is what lets the content surfaces sit deep without losing their edge against it: at zero luminance, page → card separation is free.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-800"
           }
         },
         "900": {
-          "$value": "#141719",
+          "$value": "#000000",
           "$type": "color",
-          "$description": "backdrop — the recessed mat below page",
+          "$description": "backdrop — COLLAPSED into page. The role is the recessed mat BELOW page, and page is now the floor, so there is nowhere left to go. Kept as a distinct token so the semantic layer and the other themes are unaffected, but in Confetti dark it is the same black.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-graphite-900"
           }
@@ -20338,9 +20338,9 @@
           }
         },
         "400": {
-          "$value": "#a8b2bc",
+          "$value": "#868c99",
           "$type": "color",
-          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
+          "$description": "muted text on graphite — deepened alongside the surfaces, and pulled into their cool family. Clears AA on `card`, the lightest of them (4.92:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -20350,7 +20350,7 @@
         "200": {
           "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted furthest — what the dark-mode accent needed while `card` was a mid gray. Kept for any theme that inherits the dark mode with surfaces lighter than Confetti's own.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -20358,7 +20358,7 @@
         "300": {
           "$value": "#f04b3a",
           "$type": "color",
-          "$description": "confetti brand Red, lifted — reads on the darker surfaces but not on card",
+          "$description": "confetti brand Red, lifted just enough to read AS TEXT on EVERY dark surface, card included (4.56:1) — the dark-mode accent. It only clears on card because the surfaces went deep; against the older, lighter card it managed 3.56:1 and the accent had to settle for the far paler 200.",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-300"
           }
