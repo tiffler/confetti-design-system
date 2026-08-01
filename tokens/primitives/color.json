@@ -22,24 +22,24 @@
       "a86": { "value": "rgba(26, 21, 13, 0.86)", "comment": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)" }
     },
     "graphite": {
-      "$comment": "Confetti DARK surfaces — cool charcoal on a true black page. The content surfaces are hue 244, where the red and green channels sit level and blue alone carries the cast: that is what makes it read as a COOL charcoal rather than a violet one. At 258 the red channel climbs back above green and the whole ramp reads purple. Saturation rises as the steps darken (9% → 12% → 15%) because at 8 bits a low-lightness color loses chroma to rounding, and holding the number flat would let `raised` drift back to plain gray while `card` stayed cool. Numbered by luminance like ink: 400 lightest, 900 darkest. Deliberately NOT the warm ink ramp: ink is Confetti's light-mode text color, and reusing it for dark surfaces made the whole dark theme read brown.",
-      "400": { "value": "#1e1e24", "comment": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark" },
-      "500": { "value": "#16151b", "comment": "panel" },
-      "700": { "value": "#0e0d12", "comment": "raised" },
-      "800": { "value": "#000000", "comment": "page background baseline — true black. The page is the floor, which is what lets the content surfaces sit deep without losing their edge against it: at zero luminance, page → card separation is free." },
-      "900": { "value": "#000000", "comment": "backdrop — COLLAPSED into page. The role is the recessed mat BELOW page, and page is now the floor, so there is nowhere left to go. Kept as a distinct token so the semantic layer and the other themes are unaffected, but in Confetti dark it is the same black." },
+      "$comment": "Confetti DARK surfaces — a near-neutral gray ramp on a near-black content ground, with true black beneath it. Every step is hue 240 at ~6% saturation: barely tinted, but tinted deliberately, so the grays read as chosen rather than as the default #888 family. `card` is the ceiling, not a preference — it is the lightest surface, so it sets the contrast floor for everything on it, and above roughly this value no red left in the ramp clears AA as text. Numbered by luminance like ink: 400 lightest, 900 darkest. Deliberately NOT the warm ink ramp: ink is Confetti's light-mode text color, and reusing it for dark surfaces made the whole dark theme read brown.",
+      "400": { "value": "#3b3b42", "comment": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark. Held here because it is the lightest value at which red.200, chalk.400 and green.400 all still clear AA; a step lighter and the brand red has no usable value left." },
+      "500": { "value": "#29292e", "comment": "panel" },
+      "700": { "value": "#1a1a1d", "comment": "raised" },
+      "800": { "value": "#101012", "comment": "page background baseline — the content ground. Not black: black sits below it as `backdrop`, which is what gives that role its meaning back." },
+      "900": { "value": "#000000", "comment": "backdrop — the recessed mat below page, and now genuinely below it. True black." },
       "a16": { "value": "rgba(232, 236, 240, 0.16)", "comment": "chalk at 16% — subtle border on graphite" }
     },
     "chalk": {
       "$comment": "Confetti DARK foreground neutrals — cool off-white, the counterpart to ink in light mode.",
       "100": { "value": "#e8ecf0", "comment": "primary text and borders on graphite" },
-      "400": { "value": "#868c99", "comment": "muted text on graphite — deepened alongside the surfaces, and pulled into their cool family. Clears AA on `card`, the lightest of them (4.92:1)" }
+      "400": { "value": "#a8b2bc", "comment": "muted text on graphite — clears AA on `card`, the lightest of them (5.16:1). Tied to how light `card` is: it had to go this pale once the surfaces came up." }
     },
     "red": {
       "500": { "value": "#c40000", "comment": "confetti brand Red — light/HC surfaces" },
       "400": { "value": "#e33b2e", "comment": "confetti brand Red, lifted" },
-      "300": { "value": "#f04b3a", "comment": "confetti brand Red, lifted just enough to read AS TEXT on EVERY dark surface, card included (4.56:1) — the dark-mode accent. It only clears on card because the surfaces went deep; against the older, lighter card it managed 3.56:1 and the accent had to settle for the far paler 200." },
-      "200": { "value": "#ff8d80", "comment": "confetti brand Red, lifted furthest — what the dark-mode accent needed while `card` was a mid gray. Kept for any theme that inherits the dark mode with surfaces lighter than Confetti's own." },
+      "300": { "value": "#f04b3a", "comment": "confetti brand Red, lifted — reads on the darker surfaces but not on card (3.50:1). Only usable as the dark accent when `card` is close to black, which it no longer is." },
+      "200": { "value": "#ff8d80", "comment": "confetti brand Red, lifted furthest — the palest step, and the ONLY one that reads AS TEXT on every dark surface including `card` (4.96:1). This is also the ceiling that fixes how light `card` can go: there is nothing paler to fall back on." },
       "600": { "value": "#a80000", "comment": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout." }
     },
     "green": {

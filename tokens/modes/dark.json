@@ -1,12 +1,12 @@
 {
-  "$comment": "MODE = dark. Neutrals only. This is Confetti's dark look and the fallback for any theme that doesn't bring its own — COOL CHARCOAL ON TRUE BLACK: the page is #000 and the content surfaces are a cool charcoal above it, with cool off-white text and the brand red left as the one warm thing on the page. Light mode is warm cream paper; the two modes are deliberately different temperatures rather than one being a tinted copy of the other. A black page is what makes the rest work: at zero luminance, page → card separation costs nothing, so the content surfaces can sit deep enough for a saturated brand red to clear AA on them. Subtle accent tints deepen (X.700) so the light foreground reads on them; the hover shadow repoints to chalk, since a dark shadow on a dark surface reads as nothing. Emitted under [data-mode='dark'].",
+  "$comment": "MODE = dark. Neutrals only. This is Confetti's dark look and the fallback for any theme that doesn't bring its own — a near-neutral GRAY ramp on a near-black content ground (#101012), with true black below it as the recessed mat, cool off-white text, and the brand red left as the one warm thing on the page. Light mode is warm cream paper; the two modes are deliberately different temperatures rather than one being a tinted copy of the other. How light `card` is drives almost everything else here: it is the lightest surface, so it sets the contrast floor, and the palest brand red is what caps it. Subtle accent tints deepen (X.700) so the light foreground reads on them; the hover shadow repoints to chalk, since a dark shadow on a dark surface reads as nothing. Emitted under [data-mode='dark'].",
   "color": {
     "surface": {
       "page": { "value": "{color.graphite.800}" },
       "raised": { "value": "{color.graphite.700}" },
       "panel": { "value": "{color.graphite.500}" },
       "card": { "value": "{color.graphite.400}" },
-      "backdrop": { "value": "{color.graphite.900}", "comment": "recessed mat below page — but page is now true black, so in Confetti dark this collapses to the same #000. Anything that relied on backdrop reading darker than page (the Modal story's app frame) has to separate with a border instead. The role is kept because other themes inheriting this mode still have somewhere below their page to go." }
+      "backdrop": { "value": "{color.graphite.900}", "comment": "recessed mat — the deepest graphite, below page. True black now that page sits at #101012, which gives this role real depth to work with again." }
     },
     "text": {
       "primary": { "value": "{color.chalk.100}" },
@@ -37,7 +37,7 @@
       "danger": {
         "bg": { "value": "{color.red.500}" },
         "fg": { "value": "{color.base.white}" },
-        "text": { "value": "{color.red.200}", "comment": "danger AS TEXT — stays on the palest red HERE, on the mode axis, because a theme inheriting this mode may have surfaces much lighter than Confetti's. Adventure's `card` is #35492f and Neon's is #2e1650; red.300 fails on both. Confetti's dark override takes it down to red.300, which its deep charcoal can afford." },
+        "text": { "value": "{color.red.200}", "comment": "danger AS TEXT — the palest red, and the same lift brand-as-text takes. It has to be the palest one: red.300 fails on Confetti's `card` (3.50:1) and on Adventure's #35492f and Neon's #2e1650 too, so no theme on this mode can afford the more saturated step." },
         "deep": { "value": "{color.red.600}", "comment": "the hazard stripe on a danger control" }
       }
     },
