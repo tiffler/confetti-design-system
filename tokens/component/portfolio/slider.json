@@ -1,0 +1,25 @@
+{
+  "$comment": "Slider — a value picked by dragging along a rail. The rail is the secondary paper fill, the travelled portion is the brand, and the knob is a card-weight disc with the sticker border, so the control reads as the same family as Button and Switch. The row is `size.control` tall regardless of how thin the rail is: the rail is the graphic, but the whole row is the target, which is what keeps a 12px rail comfortably grabbable.",
+  "slider": {
+    "height": { "value": "{size.control}", "comment": "48px — the hit area, not the rail" },
+    "track-height": { "value": "{size.slider.track-height}" },
+    "track-radius": { "value": "{radius.control}" },
+    "track-bg": { "value": "{color.action.secondary.bg}" },
+    "track-border-width": { "value": "{border.width.default}" },
+    "track-border-color": { "value": "{color.border.default}" },
+    "fill-bg": { "value": "{color.action.primary.bg}", "comment": "the travelled portion — brand, so progress reads at a glance" },
+    "thumb-size": { "value": "{size.slider.thumb}" },
+    "thumb-bg": { "value": "{color.surface.card}" },
+    "thumb-border-width": { "value": "{border.width.default}" },
+    "thumb-border-color": { "value": "{color.border.default}" },
+    "thumb-shadow": { "value": "{shadow.lift}", "comment": "the sticker lift, held at rest — the knob sits above the rail" },
+    "gap": { "value": "{space.inline}", "comment": "8px between the rail and an adjacent label or value" },
+    "label-color": { "value": "{color.text.primary}" },
+    "label-font-family": { "value": "{font.family.label}" },
+    "label-font-size": { "value": "{font.size.label}" },
+    "label-tracking": { "value": "{font.tracking.label}" },
+    "value-color": { "value": "{color.text.muted}" },
+    "transition-duration": { "value": "{motion.duration.interaction}" },
+    "transition-easing": { "value": "{motion.easing.interaction}" }
+  }
+}

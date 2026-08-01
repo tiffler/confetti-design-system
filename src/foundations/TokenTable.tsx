@@ -178,11 +178,19 @@ function SortButton({
 export function TokenTable({
   categories,
   layer,
+  fill = false,
 }: {
   /** Restrict to these categories. Omit for every token in the build. */
   categories?: CategoryKey[];
   /** Restrict to one tier — e.g. the semantic colour roles. */
   layer?: TokenLayer;
+  /**
+   * Take the full height of an already-sized parent instead of bounding against the
+   * viewport. Use it when the table is the only thing on the page, so the page itself never
+   * scrolls and there is exactly one scrollbar; leave it off when the table sits inside
+   * longer prose, where 70vh keeps it from swallowing the article.
+   */
+  fill?: boolean;
 }) {
   const tokens = useTokens();
   const [query, setQuery] = useState('');
@@ -288,7 +296,23 @@ export function TokenTable({
   return (
     /* `pg-token-table` exists only so the Storybook docs chrome can opt this table out of
        its inline-`code` chip styling — see the note in .storybook/preview-head.html. */
-    <div className="pg-token-table" style={{ display: 'grid', gap: 'var(--space-stack)' }}>
+    <div
+      className="pg-token-table"
+      style={{
+        display: 'grid',
+        gap: 'var(--space-stack)',
+        /* Toolbar, then the results taking whatever is left. `minmax(0, 1fr)` rather than
+           `1fr` so the row may shrink below its content — a plain `1fr` floors at the
+           content's height and the region never bounds.
+
+           `fill` also has to set a height here, not only on the region: a percentage
+           max-height resolves against the PARENT, and with this element left at auto height
+           the constraint stops dead before it reaches the scroller. */
+        gridTemplateRows: 'auto minmax(0, 1fr)',
+        minHeight: 0,
+        ...(fill ? { height: '100%' } : null),
+      }}
+    >
       <div
         style={{
           display: 'flex',
@@ -337,7 +361,8 @@ export function TokenTable({
            the token count. The sticky column headers now stick to this box, not the page. */
         <div
           style={{
-            maxHeight: '70vh',
+            ...(fill ? { height: '100%' } : { maxHeight: '70vh' }),
+            minHeight: 0,
             /* Both axes on ONE element. `position: sticky` resolves against the nearest
                scrolling ancestor, so a per-table `overflow-x` wrapper would capture the
                column headers and they would scroll away with the rows instead of sticking. */

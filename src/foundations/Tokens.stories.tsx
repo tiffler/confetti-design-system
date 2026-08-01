@@ -24,13 +24,31 @@ function TokenPage({
   layer?: TokenLayer;
 }) {
   return (
-    <Page width={1100}>
+    /* One scrollbar, not two. The table brings its own scroll region, so if the page were
+       also taller than the viewport you would get a bar on each — one moving the heading out
+       of view, one moving the rows. Pinning the page to the viewport height and giving the
+       table the leftover row (`1fr`, with `minHeight: 0` so it may shrink below its content)
+       leaves the table's region as the only thing that scrolls.
+
+       The subtraction is the preview decorator's padding, which this sits inside. */
+    <Page
+      width={1100}
+      style={{
+        height: 'calc(100vh - 2 * var(--space-inset))',
+        gridTemplateRows: 'auto 1fr',
+        minHeight: 0,
+        paddingBlock: 0,
+      }}
+      gap="var(--space-stack-lg)"
+    >
       <Stack gap="var(--space-2)">
         <Eyebrow>Tokens</Eyebrow>
         <Title>{title}</Title>
         <Lede>{lede}</Lede>
       </Stack>
-      <TokenTable categories={categories} layer={layer} />
+      <div style={{ minHeight: 0, display: 'grid' }}>
+        <TokenTable categories={categories} layer={layer} fill />
+      </div>
     </Page>
   );
 }

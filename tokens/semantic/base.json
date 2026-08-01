@@ -57,6 +57,11 @@
       "sm": { "value": "{width.dialog-sm}", "comment": "420px — confirmations" },
       "md": { "value": "{width.dialog-md}", "comment": "560px — the default dialog" }
     },
+    "slider": {
+      "$comment": "A slider is a thin rail with a knob that has to be grabbable: the rail is deliberately slimmer than a switch's track, and the knob larger than the rail is tall, so it reads as sitting ON the rail rather than in it.",
+      "track-height": { "value": "{space.3}", "comment": "12px" },
+      "thumb": { "value": "{space.6}", "comment": "24px" }
+    },
     "switch": {
       "$comment": "The one control whose proportions are its own: a track twice as wide as it is tall, and a thumb one step smaller so it sits inset rather than flush.",
       "track-width": { "value": "{space.12}", "comment": "48px — the control width, matching size.control" },

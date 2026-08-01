@@ -18,6 +18,9 @@ export type { OverlayProps, OverlayPlacement } from './components/Overlay/Overla
 export { Modal } from './components/Modal/Modal';
 export type { ModalProps, ModalSize } from './components/Modal/Modal';
 
+export { Slider } from './components/Slider/Slider';
+export type { SliderProps } from './components/Slider/Slider';
+
 export { Switch } from './components/Switch/Switch';
 export type { SwitchProps } from './components/Switch/Switch';
 

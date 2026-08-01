@@ -141,6 +141,10 @@ React, one `.tsx` + `.css` + `.stories.tsx` triple each, consuming component tok
   in track fill, thumb fill and thumb position, never colour alone. `ModeToggle` is this wired
   to `ThemeProvider` — the light/dark control the system previously expected every consumer to
   build for itself.
+- **Slider** — a value picked by dragging a rail. The knob is the focusable element and
+  carries `role="slider"`, so the value is announced rather than "button", and the platform's
+  slider keys apply (arrows step, Page Up/Down jump, Home/End). The rail is 12px but the row
+  is `size.control`, so a thin rail stays comfortably grabbable.
 - **Icon** — wraps Phosphor icons at bold weight; sizes mirror the type scale; decorative by
   default (a `label` promotes it to `role="img"`).
 
@@ -202,13 +206,13 @@ Confetti/
 │  ├─ modes/                  light / dark base neutrals
 │  ├─ themes/                 brand-kit inputs — confetti · adventure · neon
 │  ├─ overrides/              per-theme-per-mode neutrals + a11y lifts
-│  └─ component/portfolio/    button · card · badge · tabs · overlay · modal · toast · switch · icon
+│  └─ component/portfolio/    button · card · badge · tabs · overlay · modal · toast · switch · slider · icon
 ├─ style-dictionary/          build.js · audit-layers.js · validate-schema.js
 ├─ build/portfolio/           GENERATED, committed — tokens.css/json/dtcg + tailwind
 ├─ docs/ARCHITECTURE.md       this file
 ├─ public/fonts/              self-hosted Fredoka + JetBrains Mono
 └─ src/
-   ├─ components/             Button · Card · Badge · Tabs · Overlay · Modal · Toast · Switch · Icon
+   ├─ components/             Button · Card · Badge · Tabs · Overlay · Modal · Toast · Switch · Slider · Icon
    ├─ foundations/            Storybook docs + live token specimens
    ├─ theme/ThemeProvider.tsx
    └─ Cover.stories.tsx       the Storybook landing page

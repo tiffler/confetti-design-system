@@ -1,0 +1,104 @@
+/* Consumes component tokens only — no hardcoded values, no primitives. */
+
+.cf-slider {
+  display: flex;
+  align-items: center;
+  gap: var(--slider-gap);
+}
+
+/* The rail is the graphic; the ROW is the target. Keeping the row at control height means a
+   12px rail is still comfortable to grab, without drawing a 48px bar. */
+.cf-slider__rail {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: var(--slider-height);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  touch-action: none; /* the drag is ours — stop the browser panning the page instead */
+}
+
+/* Painted with ::before rather than on the element itself, so the rail's box can stay the
+   full 48px hit area while the visible bar is only `track-height` tall. */
+.cf-slider__rail::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  height: var(--slider-track-height);
+  box-sizing: border-box;
+  background: var(--slider-track-bg);
+  border: var(--slider-track-border-width) solid var(--slider-track-border-color);
+  border-radius: var(--slider-track-radius);
+}
+
+.cf-slider__fill {
+  position: absolute;
+  inset-inline-start: 0;
+  height: var(--slider-track-height);
+  box-sizing: border-box;
+  /* Rounded on the leading edge only, so the fill reads as growing out of the rail's cap
+     rather than as a separate pill floating inside it. */
+  border-radius: var(--slider-track-radius) 0 0 var(--slider-track-radius);
+  background: var(--slider-fill-bg);
+  /* Ends at the knob's centre — the knob travels a shortened distance (see below), so a
+     plain `fraction * 100%` would run out from under it at the top of the range. */
+  width: calc(
+    var(--cf-slider-fraction) * (100% - var(--slider-thumb-size)) + var(--slider-thumb-size) / 2
+  );
+}
+
+.cf-slider__thumb {
+  position: absolute;
+  box-sizing: border-box;
+  width: var(--slider-thumb-size);
+  height: var(--slider-thumb-size);
+  border-radius: var(--radius-circle);
+  background: var(--slider-thumb-bg);
+  border: var(--slider-thumb-border-width) solid var(--slider-thumb-border-color);
+  box-shadow: var(--slider-thumb-shadow);
+  cursor: grab;
+
+  /* Travels the rail MINUS its own width, so at 0 and at max it sits flush inside the ends
+     rather than hanging half over them — which otherwise puts the knob on top of the label
+     at one end and the value at the other. This is how a native range input behaves. */
+  inset-inline-start: calc(var(--cf-slider-fraction) * (100% - var(--slider-thumb-size)));
+}
+
+.cf-slider__thumb:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.cf-slider__thumb:active {
+  cursor: grabbing;
+}
+
+.cf-slider__label {
+  font-family: var(--slider-label-font-family);
+  font-size: var(--slider-label-font-size);
+  letter-spacing: var(--slider-label-tracking);
+  text-transform: uppercase;
+  color: var(--slider-label-color);
+  white-space: nowrap;
+}
+
+.cf-slider__value {
+  font-family: var(--slider-label-font-family);
+  font-size: var(--slider-label-font-size);
+  letter-spacing: var(--slider-label-tracking);
+  color: var(--slider-value-color);
+  white-space: nowrap;
+  /* Reserve room so the rail does not resize as the number's width changes while dragging. */
+  min-width: 4ch;
+  text-align: end;
+}
+
+.cf-slider:has([aria-disabled='true']) {
+  opacity: 0.45;
+}
+
+.cf-slider:has([aria-disabled='true']) .cf-slider__rail,
+.cf-slider:has([aria-disabled='true']) .cf-slider__thumb {
+  cursor: not-allowed;
+}

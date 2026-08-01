@@ -11,6 +11,7 @@ import { Button, type ButtonVariant } from '../components/Button/Button';
 import { Card, type CardSurface } from '../components/Card/Card';
 import { Icon, type IconSize, type IconTone } from '../components/Icon/Icon';
 import { Modal } from '../components/Modal/Modal';
+import { Slider } from '../components/Slider/Slider';
 import { Switch } from '../components/Switch/Switch';
 import { Tabs, type TabHue } from '../components/Tabs/Tabs';
 import { Toast, type ToastTone } from '../components/Toast/Toast';
@@ -246,7 +247,7 @@ function ComponentSheet() {
         <Eyebrow>Specimen sheet</Eyebrow>
         <Title>Every component, every state</Title>
         <Lede>
-          Nine components, their variants and their interaction states, pinned side by side.
+          Ten components, their variants and their interaction states, pinned side by side.
           Flip the Theme and Mode switchers — nothing here is hardcoded, so the whole sheet
           re-skins.
         </Lede>
@@ -354,6 +355,23 @@ function ComponentSheet() {
             `inherit` takes the surrounding text colour — which is what makes it correct
             inside a button or a link.
           </Caption>
+        </Frame>
+
+        <Frame label="Slider — value">
+          <Stack gap="var(--space-inline)">
+            <Slider value={0} onChange={() => {}} showValue>
+              Min
+            </Slider>
+            <Slider value={50} onChange={() => {}} showValue>
+              Mid
+            </Slider>
+            <Slider value={100} onChange={() => {}} showValue>
+              Max
+            </Slider>
+            <Slider value={30} onChange={() => {}} disabled showValue>
+              Off
+            </Slider>
+          </Stack>
         </Frame>
 
         <Frame label="Switch — state">
