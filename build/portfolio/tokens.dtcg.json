@@ -1840,28 +1840,28 @@
       },
       "size": {
         "12": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-12"
           }
         },
         "14": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-14"
           }
         },
         "16": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
         "18": {
-          "$value": "18px",
+          "$value": "1.125rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
           "$extensions": {
@@ -1869,14 +1869,14 @@
           }
         },
         "20": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
           }
         },
         "22": {
-          "$value": "22px",
+          "$value": "1.375rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
           "$extensions": {
@@ -1884,35 +1884,35 @@
           }
         },
         "24": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-24"
           }
         },
         "32": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-32"
           }
         },
         "40": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-40"
           }
         },
         "48": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-48"
           }
         },
         "hero": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "container-query driven headline, above the fixed ramp",
           "$extensions": {
@@ -1920,7 +1920,7 @@
           }
         },
         "display": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "hero only — fluid, sits above h1",
           "$extensions": {
@@ -1928,42 +1928,42 @@
           }
         },
         "h1": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h1"
           }
         },
         "h2": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h2"
           }
         },
         "h3": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h3"
           }
         },
         "h4": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h4"
           }
         },
         "h5": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h5"
           }
         },
         "h6": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "meets body size — weight and family carry the distinction",
           "$extensions": {
@@ -1971,7 +1971,7 @@
           }
         },
         "body": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — body primary",
           "$extensions": {
@@ -1979,7 +1979,7 @@
           }
         },
         "body-secondary": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$description": "14px — captions, meta, dense UI",
           "$extensions": {
@@ -1987,7 +1987,7 @@
           }
         },
         "label": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$description": "12px — mono eyebrows, uppercase",
           "$extensions": {
@@ -2223,7 +2223,7 @@
       },
       "icon": {
         "sm": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — inline with body and control labels",
           "$extensions": {
@@ -2231,7 +2231,7 @@
           }
         },
         "md": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$description": "20px — standalone UI affordances",
           "$extensions": {
@@ -2239,7 +2239,7 @@
           }
         },
         "lg": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$description": "24px — feature and empty-state icons",
           "$extensions": {
@@ -2414,7 +2414,7 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-font-size"
@@ -2596,7 +2596,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-font-size"
@@ -2701,7 +2701,7 @@
         }
       },
       "spinner-size": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-spinner-size"
@@ -2966,7 +2966,7 @@
           }
         },
         "font-size": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-font-size"
@@ -2996,7 +2996,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-font-size"
@@ -3033,7 +3033,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-font-size"
@@ -3187,7 +3187,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px — dense but readable",
         "$extensions": {
@@ -3204,21 +3204,21 @@
     },
     "icon": {
       "size-sm": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-sm"
         }
       },
       "size-md": {
-        "$value": "20px",
+        "$value": "1.25rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-md"
         }
       },
       "size-lg": {
-        "$value": "24px",
+        "$value": "1.5rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-lg"
@@ -3357,7 +3357,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-font-size"
@@ -3394,7 +3394,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-font-size"
@@ -3553,7 +3553,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-font-size"
@@ -3700,7 +3700,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-font-size"
@@ -3799,7 +3799,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
@@ -3988,7 +3988,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-title-font-size"
@@ -4011,7 +4011,7 @@
           }
         },
         "font-size": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-font-size"
@@ -5868,28 +5868,28 @@
       },
       "size": {
         "12": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-12"
           }
         },
         "14": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-14"
           }
         },
         "16": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
         "18": {
-          "$value": "18px",
+          "$value": "1.125rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
           "$extensions": {
@@ -5897,14 +5897,14 @@
           }
         },
         "20": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
           }
         },
         "22": {
-          "$value": "22px",
+          "$value": "1.375rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
           "$extensions": {
@@ -5912,35 +5912,35 @@
           }
         },
         "24": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-24"
           }
         },
         "32": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-32"
           }
         },
         "40": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-40"
           }
         },
         "48": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-48"
           }
         },
         "hero": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "container-query driven headline, above the fixed ramp",
           "$extensions": {
@@ -5948,7 +5948,7 @@
           }
         },
         "display": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "hero only — fluid, sits above h1",
           "$extensions": {
@@ -5956,42 +5956,42 @@
           }
         },
         "h1": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h1"
           }
         },
         "h2": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h2"
           }
         },
         "h3": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h3"
           }
         },
         "h4": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h4"
           }
         },
         "h5": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h5"
           }
         },
         "h6": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "meets body size — weight and family carry the distinction",
           "$extensions": {
@@ -5999,7 +5999,7 @@
           }
         },
         "body": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — body primary",
           "$extensions": {
@@ -6007,7 +6007,7 @@
           }
         },
         "body-secondary": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$description": "14px — captions, meta, dense UI",
           "$extensions": {
@@ -6015,7 +6015,7 @@
           }
         },
         "label": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$description": "12px — mono eyebrows, uppercase",
           "$extensions": {
@@ -6251,7 +6251,7 @@
       },
       "icon": {
         "sm": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — inline with body and control labels",
           "$extensions": {
@@ -6259,7 +6259,7 @@
           }
         },
         "md": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$description": "20px — standalone UI affordances",
           "$extensions": {
@@ -6267,7 +6267,7 @@
           }
         },
         "lg": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$description": "24px — feature and empty-state icons",
           "$extensions": {
@@ -6442,7 +6442,7 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-font-size"
@@ -6624,7 +6624,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-font-size"
@@ -6729,7 +6729,7 @@
         }
       },
       "spinner-size": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-spinner-size"
@@ -6994,7 +6994,7 @@
           }
         },
         "font-size": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-font-size"
@@ -7024,7 +7024,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-font-size"
@@ -7061,7 +7061,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-font-size"
@@ -7215,7 +7215,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px — dense but readable",
         "$extensions": {
@@ -7232,21 +7232,21 @@
     },
     "icon": {
       "size-sm": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-sm"
         }
       },
       "size-md": {
-        "$value": "20px",
+        "$value": "1.25rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-md"
         }
       },
       "size-lg": {
-        "$value": "24px",
+        "$value": "1.5rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-lg"
@@ -7385,7 +7385,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-font-size"
@@ -7422,7 +7422,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-font-size"
@@ -7581,7 +7581,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-font-size"
@@ -7728,7 +7728,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-font-size"
@@ -7827,7 +7827,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
@@ -8016,7 +8016,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-title-font-size"
@@ -8039,7 +8039,7 @@
           }
         },
         "font-size": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-font-size"
@@ -9897,28 +9897,28 @@
       },
       "size": {
         "12": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-12"
           }
         },
         "14": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-14"
           }
         },
         "16": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
         "18": {
-          "$value": "18px",
+          "$value": "1.125rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
           "$extensions": {
@@ -9926,14 +9926,14 @@
           }
         },
         "20": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
           }
         },
         "22": {
-          "$value": "22px",
+          "$value": "1.375rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
           "$extensions": {
@@ -9941,35 +9941,35 @@
           }
         },
         "24": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-24"
           }
         },
         "32": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-32"
           }
         },
         "40": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-40"
           }
         },
         "48": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-48"
           }
         },
         "hero": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "container-query driven headline, above the fixed ramp",
           "$extensions": {
@@ -9977,7 +9977,7 @@
           }
         },
         "display": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "hero only — fluid, sits above h1",
           "$extensions": {
@@ -9985,42 +9985,42 @@
           }
         },
         "h1": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h1"
           }
         },
         "h2": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h2"
           }
         },
         "h3": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h3"
           }
         },
         "h4": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h4"
           }
         },
         "h5": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h5"
           }
         },
         "h6": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "meets body size — weight and family carry the distinction",
           "$extensions": {
@@ -10028,7 +10028,7 @@
           }
         },
         "body": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — body primary",
           "$extensions": {
@@ -10036,7 +10036,7 @@
           }
         },
         "body-secondary": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$description": "14px — captions, meta, dense UI",
           "$extensions": {
@@ -10044,7 +10044,7 @@
           }
         },
         "label": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$description": "12px — mono eyebrows, uppercase",
           "$extensions": {
@@ -10280,7 +10280,7 @@
       },
       "icon": {
         "sm": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — inline with body and control labels",
           "$extensions": {
@@ -10288,7 +10288,7 @@
           }
         },
         "md": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$description": "20px — standalone UI affordances",
           "$extensions": {
@@ -10296,7 +10296,7 @@
           }
         },
         "lg": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$description": "24px — feature and empty-state icons",
           "$extensions": {
@@ -10477,7 +10477,7 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-font-size"
@@ -10659,7 +10659,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-font-size"
@@ -10764,7 +10764,7 @@
         }
       },
       "spinner-size": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-spinner-size"
@@ -11029,7 +11029,7 @@
           }
         },
         "font-size": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-font-size"
@@ -11059,7 +11059,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-font-size"
@@ -11096,7 +11096,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-font-size"
@@ -11250,7 +11250,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px — dense but readable",
         "$extensions": {
@@ -11267,21 +11267,21 @@
     },
     "icon": {
       "size-sm": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-sm"
         }
       },
       "size-md": {
-        "$value": "20px",
+        "$value": "1.25rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-md"
         }
       },
       "size-lg": {
-        "$value": "24px",
+        "$value": "1.5rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-lg"
@@ -11420,7 +11420,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-font-size"
@@ -11457,7 +11457,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-font-size"
@@ -11616,7 +11616,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-font-size"
@@ -11763,7 +11763,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-font-size"
@@ -11862,7 +11862,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
@@ -12051,7 +12051,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-title-font-size"
@@ -12074,7 +12074,7 @@
           }
         },
         "font-size": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-font-size"
@@ -13933,28 +13933,28 @@
       },
       "size": {
         "12": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-12"
           }
         },
         "14": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-14"
           }
         },
         "16": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
         "18": {
-          "$value": "18px",
+          "$value": "1.125rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
           "$extensions": {
@@ -13962,14 +13962,14 @@
           }
         },
         "20": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
           }
         },
         "22": {
-          "$value": "22px",
+          "$value": "1.375rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
           "$extensions": {
@@ -13977,35 +13977,35 @@
           }
         },
         "24": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-24"
           }
         },
         "32": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-32"
           }
         },
         "40": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-40"
           }
         },
         "48": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-48"
           }
         },
         "hero": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "container-query driven headline, above the fixed ramp",
           "$extensions": {
@@ -14013,7 +14013,7 @@
           }
         },
         "display": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "hero only — fluid, sits above h1",
           "$extensions": {
@@ -14021,42 +14021,42 @@
           }
         },
         "h1": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h1"
           }
         },
         "h2": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h2"
           }
         },
         "h3": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h3"
           }
         },
         "h4": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h4"
           }
         },
         "h5": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h5"
           }
         },
         "h6": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "meets body size — weight and family carry the distinction",
           "$extensions": {
@@ -14064,7 +14064,7 @@
           }
         },
         "body": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — body primary",
           "$extensions": {
@@ -14072,7 +14072,7 @@
           }
         },
         "body-secondary": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$description": "14px — captions, meta, dense UI",
           "$extensions": {
@@ -14080,7 +14080,7 @@
           }
         },
         "label": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$description": "12px — mono eyebrows, uppercase",
           "$extensions": {
@@ -14316,7 +14316,7 @@
       },
       "icon": {
         "sm": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — inline with body and control labels",
           "$extensions": {
@@ -14324,7 +14324,7 @@
           }
         },
         "md": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$description": "20px — standalone UI affordances",
           "$extensions": {
@@ -14332,7 +14332,7 @@
           }
         },
         "lg": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$description": "24px — feature and empty-state icons",
           "$extensions": {
@@ -14513,7 +14513,7 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-font-size"
@@ -14695,7 +14695,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-font-size"
@@ -14800,7 +14800,7 @@
         }
       },
       "spinner-size": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-spinner-size"
@@ -15065,7 +15065,7 @@
           }
         },
         "font-size": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-font-size"
@@ -15095,7 +15095,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-font-size"
@@ -15132,7 +15132,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-font-size"
@@ -15286,7 +15286,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px — dense but readable",
         "$extensions": {
@@ -15303,21 +15303,21 @@
     },
     "icon": {
       "size-sm": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-sm"
         }
       },
       "size-md": {
-        "$value": "20px",
+        "$value": "1.25rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-md"
         }
       },
       "size-lg": {
-        "$value": "24px",
+        "$value": "1.5rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-lg"
@@ -15456,7 +15456,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-font-size"
@@ -15493,7 +15493,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-font-size"
@@ -15652,7 +15652,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-font-size"
@@ -15799,7 +15799,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-font-size"
@@ -15898,7 +15898,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
@@ -16087,7 +16087,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-title-font-size"
@@ -16110,7 +16110,7 @@
           }
         },
         "font-size": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-font-size"
@@ -17966,28 +17966,28 @@
       },
       "size": {
         "12": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-12"
           }
         },
         "14": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-14"
           }
         },
         "16": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
         "18": {
-          "$value": "18px",
+          "$value": "1.125rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
           "$extensions": {
@@ -17995,14 +17995,14 @@
           }
         },
         "20": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
           }
         },
         "22": {
-          "$value": "22px",
+          "$value": "1.375rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
           "$extensions": {
@@ -18010,35 +18010,35 @@
           }
         },
         "24": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-24"
           }
         },
         "32": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-32"
           }
         },
         "40": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-40"
           }
         },
         "48": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-48"
           }
         },
         "hero": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "container-query driven headline, above the fixed ramp",
           "$extensions": {
@@ -18046,7 +18046,7 @@
           }
         },
         "display": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "hero only — fluid, sits above h1",
           "$extensions": {
@@ -18054,42 +18054,42 @@
           }
         },
         "h1": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h1"
           }
         },
         "h2": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h2"
           }
         },
         "h3": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h3"
           }
         },
         "h4": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h4"
           }
         },
         "h5": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h5"
           }
         },
         "h6": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "meets body size — weight and family carry the distinction",
           "$extensions": {
@@ -18097,7 +18097,7 @@
           }
         },
         "body": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — body primary",
           "$extensions": {
@@ -18105,7 +18105,7 @@
           }
         },
         "body-secondary": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$description": "14px — captions, meta, dense UI",
           "$extensions": {
@@ -18113,7 +18113,7 @@
           }
         },
         "label": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$description": "12px — mono eyebrows, uppercase",
           "$extensions": {
@@ -18349,7 +18349,7 @@
       },
       "icon": {
         "sm": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — inline with body and control labels",
           "$extensions": {
@@ -18357,7 +18357,7 @@
           }
         },
         "md": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$description": "20px — standalone UI affordances",
           "$extensions": {
@@ -18365,7 +18365,7 @@
           }
         },
         "lg": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$description": "24px — feature and empty-state icons",
           "$extensions": {
@@ -18541,7 +18541,7 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-font-size"
@@ -18723,7 +18723,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-font-size"
@@ -18828,7 +18828,7 @@
         }
       },
       "spinner-size": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-spinner-size"
@@ -19093,7 +19093,7 @@
           }
         },
         "font-size": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-font-size"
@@ -19123,7 +19123,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-font-size"
@@ -19160,7 +19160,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-font-size"
@@ -19314,7 +19314,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px — dense but readable",
         "$extensions": {
@@ -19331,21 +19331,21 @@
     },
     "icon": {
       "size-sm": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-sm"
         }
       },
       "size-md": {
-        "$value": "20px",
+        "$value": "1.25rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-md"
         }
       },
       "size-lg": {
-        "$value": "24px",
+        "$value": "1.5rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-lg"
@@ -19484,7 +19484,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-font-size"
@@ -19521,7 +19521,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-font-size"
@@ -19680,7 +19680,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-font-size"
@@ -19827,7 +19827,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-font-size"
@@ -19926,7 +19926,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
@@ -20115,7 +20115,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-title-font-size"
@@ -20138,7 +20138,7 @@
           }
         },
         "font-size": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-font-size"
@@ -21995,28 +21995,28 @@
       },
       "size": {
         "12": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-12"
           }
         },
         "14": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-14"
           }
         },
         "16": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-16"
           }
         },
         "18": {
-          "$value": "18px",
+          "$value": "1.125rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid (like 14), for body-large / small subheads",
           "$extensions": {
@@ -22024,14 +22024,14 @@
           }
         },
         "20": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-20"
           }
         },
         "22": {
-          "$value": "22px",
+          "$value": "1.375rem",
           "$type": "dimension",
           "$description": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)",
           "$extensions": {
@@ -22039,35 +22039,35 @@
           }
         },
         "24": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-24"
           }
         },
         "32": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-32"
           }
         },
         "40": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-40"
           }
         },
         "48": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-48"
           }
         },
         "hero": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "container-query driven headline, above the fixed ramp",
           "$extensions": {
@@ -22075,7 +22075,7 @@
           }
         },
         "display": {
-          "$value": "clamp(36px, 13cqw, 104px)",
+          "$value": "clamp(2.25rem, 13cqw, 6.5rem)",
           "$type": "dimension",
           "$description": "hero only — fluid, sits above h1",
           "$extensions": {
@@ -22083,42 +22083,42 @@
           }
         },
         "h1": {
-          "$value": "48px",
+          "$value": "3rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h1"
           }
         },
         "h2": {
-          "$value": "40px",
+          "$value": "2.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h2"
           }
         },
         "h3": {
-          "$value": "32px",
+          "$value": "2rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h3"
           }
         },
         "h4": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h4"
           }
         },
         "h5": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$extensions": {
             "com.confetti.cssVariable": "--font-size-h5"
           }
         },
         "h6": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "meets body size — weight and family carry the distinction",
           "$extensions": {
@@ -22126,7 +22126,7 @@
           }
         },
         "body": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — body primary",
           "$extensions": {
@@ -22134,7 +22134,7 @@
           }
         },
         "body-secondary": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "dimension",
           "$description": "14px — captions, meta, dense UI",
           "$extensions": {
@@ -22142,7 +22142,7 @@
           }
         },
         "label": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "dimension",
           "$description": "12px — mono eyebrows, uppercase",
           "$extensions": {
@@ -22378,7 +22378,7 @@
       },
       "icon": {
         "sm": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "dimension",
           "$description": "16px — inline with body and control labels",
           "$extensions": {
@@ -22386,7 +22386,7 @@
           }
         },
         "md": {
-          "$value": "20px",
+          "$value": "1.25rem",
           "$type": "dimension",
           "$description": "20px — standalone UI affordances",
           "$extensions": {
@@ -22394,7 +22394,7 @@
           }
         },
         "lg": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "dimension",
           "$description": "24px — feature and empty-state icons",
           "$extensions": {
@@ -22570,7 +22570,7 @@
         }
       },
       "font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-font-size"
@@ -22752,7 +22752,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-font-size"
@@ -22857,7 +22857,7 @@
         }
       },
       "spinner-size": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-spinner-size"
@@ -23122,7 +23122,7 @@
           }
         },
         "font-size": {
-          "$value": "12px",
+          "$value": "0.75rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-font-size"
@@ -23152,7 +23152,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-font-size"
@@ -23189,7 +23189,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-font-size"
@@ -23343,7 +23343,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px — dense but readable",
         "$extensions": {
@@ -23360,21 +23360,21 @@
     },
     "icon": {
       "size-sm": {
-        "$value": "16px",
+        "$value": "1rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-sm"
         }
       },
       "size-md": {
-        "$value": "20px",
+        "$value": "1.25rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-md"
         }
       },
       "size-lg": {
-        "$value": "24px",
+        "$value": "1.5rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-size-lg"
@@ -23513,7 +23513,7 @@
           }
         },
         "font-size": {
-          "$value": "24px",
+          "$value": "1.5rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-font-size"
@@ -23550,7 +23550,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-font-size"
@@ -23709,7 +23709,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-font-size"
@@ -23856,7 +23856,7 @@
         }
       },
       "label-font-size": {
-        "$value": "12px",
+        "$value": "0.75rem",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-font-size"
@@ -23955,7 +23955,7 @@
         }
       },
       "font-size": {
-        "$value": "14px",
+        "$value": "0.875rem",
         "$type": "other",
         "$description": "14px mono — the control label, sized for legibility",
         "$extensions": {
@@ -24144,7 +24144,7 @@
           }
         },
         "font-size": {
-          "$value": "16px",
+          "$value": "1rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-title-font-size"
@@ -24167,7 +24167,7 @@
           }
         },
         "font-size": {
-          "$value": "14px",
+          "$value": "0.875rem",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-font-size"

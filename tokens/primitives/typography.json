@@ -6,18 +6,18 @@
       "mono": { "value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" }
     },
     "size": {
-      "$comment": "Named by px so the ramp is self-documenting. Every step lands on the 4px grid the spacing scale uses, so type and space stay commensurate.",
-      "12": { "value": "12px" },
-      "14": { "value": "14px" },
-      "16": { "value": "16px" },
-      "18": { "value": "18px", "comment": "utility step — off the 4px grid (like 14), for body-large / small subheads" },
-      "20": { "value": "20px" },
-      "22": { "value": "22px", "comment": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)" },
-      "24": { "value": "24px" },
-      "32": { "value": "32px" },
-      "40": { "value": "40px" },
-      "48": { "value": "48px" },
-      "hero": { "value": "clamp(36px, 13cqw, 104px)", "comment": "container-query driven headline, above the fixed ramp" }
+      "$comment": "Named by px so the ramp is self-documenting; VALUES are rem (name ÷ 16) so type honours the visitor's browser font-size setting, which px silently ignores. Every step lands on the 4px grid the spacing scale uses, so type and space stay commensurate.",
+      "12": { "value": "0.75rem" },
+      "14": { "value": "0.875rem" },
+      "16": { "value": "1rem" },
+      "18": { "value": "1.125rem", "comment": "utility step — off the 4px grid (like 14), for body-large / small subheads" },
+      "20": { "value": "1.25rem" },
+      "22": { "value": "1.375rem", "comment": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)" },
+      "24": { "value": "1.5rem" },
+      "32": { "value": "2rem" },
+      "40": { "value": "2.5rem" },
+      "48": { "value": "3rem" },
+      "hero": { "value": "clamp(2.25rem, 13cqw, 6.5rem)", "comment": "container-query driven headline, above the fixed ramp" }
     },
     "weight": {
       "medium": { "value": "500" },
