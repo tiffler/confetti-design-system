@@ -1,5 +1,10 @@
 import type { ReactNode } from 'react';
-import { CheckCircle, Info, WarningCircle, X } from '@phosphor-icons/react';
+import {
+  CheckCircleIcon as CheckCircle,
+  InfoIcon as Info,
+  WarningCircleIcon as WarningCircle,
+  XIcon as X,
+} from '@phosphor-icons/react';
 import { Button } from '../Button/Button';
 import { Icon, type PhosphorIcon } from '../Icon/Icon';
 import './Toast.css';

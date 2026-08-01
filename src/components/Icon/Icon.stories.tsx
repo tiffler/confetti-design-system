@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import {
-  ArrowRight,
-  BookOpen,
-  DiamondsFour,
-  Wrench,
-  Sparkle,
-  Image as ImageIcon,
-  Copy,
-  Check,
+  ArrowRightIcon as ArrowRight,
+  BookOpenIcon as BookOpen,
+  DiamondsFourIcon as DiamondsFour,
+  WrenchIcon as Wrench,
+  SparkleIcon as Sparkle,
+  ImageIcon as ImageIcon,
+  CopyIcon as Copy,
+  CheckIcon as Check,
 } from '@phosphor-icons/react';
 import { Icon } from './Icon';
 import { Button } from '../Button/Button';

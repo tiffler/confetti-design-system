@@ -1,6 +1,10 @@
 import { useState, type KeyboardEvent } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ArrowRight, ArrowUpRight, Path } from '@phosphor-icons/react';
+import {
+  ArrowRightIcon as ArrowRight,
+  ArrowUpRightIcon as ArrowUpRight,
+  PathIcon as Path,
+} from '@phosphor-icons/react';
 import { Badge, type BadgeHue } from '../components/Badge/Badge';
 import { Button } from '../components/Button/Button';
 import { Card } from '../components/Card/Card';

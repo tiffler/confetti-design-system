@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ArrowUpRight, Confetti as ConfettiGlyph } from '@phosphor-icons/react';
+import {
+  ArrowUpRightIcon as ArrowUpRight,
+  ConfettiIcon as ConfettiGlyph,
+} from '@phosphor-icons/react';
 import { Button } from './components/Button/Button';
 import { Card } from './components/Card/Card';
 import { Badge } from './components/Badge/Badge';

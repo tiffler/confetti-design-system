@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import {
-  ArrowRight,
-  Clock,
-  DownloadSimple,
-  Eye,
-  GitBranch,
-  Lightning,
-  Plus,
-  TrendDown,
-  TrendUp,
-  Users,
+  ArrowRightIcon as ArrowRight,
+  ClockIcon as Clock,
+  DownloadSimpleIcon as DownloadSimple,
+  EyeIcon as Eye,
+  GitBranchIcon as GitBranch,
+  LightningIcon as Lightning,
+  PlusIcon as Plus,
+  TrendDownIcon as TrendDown,
+  TrendUpIcon as TrendUp,
+  UsersIcon as Users,
 } from '@phosphor-icons/react';
 import { Badge, type BadgeHue } from '../components/Badge/Badge';
 import { Button } from '../components/Button/Button';

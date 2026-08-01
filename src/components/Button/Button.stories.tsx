@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ArrowRight } from '@phosphor-icons/react';
+import { ArrowRightIcon as ArrowRight } from '@phosphor-icons/react';
 import { Button, type ButtonProps } from './Button';
 import { Icon } from '../Icon/Icon';
 

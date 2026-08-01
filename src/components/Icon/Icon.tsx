@@ -6,7 +6,7 @@ export type IconSize = 'sm' | 'md' | 'lg';
 export type IconTone = 'inherit' | 'default' | 'muted' | 'accent';
 
 /**
- * A Phosphor icon component — `import { ArrowRight } from '@phosphor-icons/react'`.
+ * A Phosphor icon component — `import { ArrowRightIcon } from '@phosphor-icons/react'`.
  * Passed as a value, not a name, so bundlers tree-shake to the icons actually used
  * rather than pulling in all ~9,000.
  */

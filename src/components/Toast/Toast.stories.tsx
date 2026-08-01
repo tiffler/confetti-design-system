@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ArrowCounterClockwise } from '@phosphor-icons/react';
+import { ArrowCounterClockwiseIcon as ArrowCounterClockwise } from '@phosphor-icons/react';
 import { Button } from '../Button/Button';
 import { Icon } from '../Icon/Icon';
 import { Toast, type ToastTone } from './Toast';

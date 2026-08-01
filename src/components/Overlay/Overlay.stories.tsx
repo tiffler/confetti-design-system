@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { X } from '@phosphor-icons/react';
+import { XIcon as X } from '@phosphor-icons/react';
 import { Button } from '../Button/Button';
 import { Icon } from '../Icon/Icon';
 import { Overlay } from './Overlay';

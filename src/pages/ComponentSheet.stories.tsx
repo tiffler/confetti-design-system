@@ -1,6 +1,11 @@
 import { Fragment, useState, type ReactElement } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ArrowRight, Moon, Plus, Sun } from '@phosphor-icons/react';
+import {
+  ArrowRightIcon as ArrowRight,
+  MoonIcon as Moon,
+  PlusIcon as Plus,
+  SunIcon as Sun,
+} from '@phosphor-icons/react';
 import { Badge, type BadgeHue, type BadgeTone } from '../components/Badge/Badge';
 import { Button, type ButtonVariant } from '../components/Button/Button';
 import { Card, type CardSurface } from '../components/Card/Card';

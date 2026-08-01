@@ -1,6 +1,10 @@
 import { useState, type CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Check, Envelope, Sparkle } from '@phosphor-icons/react';
+import {
+  CheckIcon as Check,
+  EnvelopeIcon as Envelope,
+  SparkleIcon as Sparkle,
+} from '@phosphor-icons/react';
 import { Badge } from '../components/Badge/Badge';
 import { Button } from '../components/Button/Button';
 import { Card } from '../components/Card/Card';

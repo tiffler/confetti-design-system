@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Bell, BellSlash, Eye, EyeSlash, Moon, Sun } from '@phosphor-icons/react';
+import {
+  BellIcon as Bell,
+  BellSlashIcon as BellSlash,
+  EyeIcon as Eye,
+  EyeSlashIcon as EyeSlash,
+  MoonIcon as Moon,
+  SunIcon as Sun,
+} from '@phosphor-icons/react';
 import { Switch } from './Switch';
 import { ModeToggle } from './ModeToggle';
 
