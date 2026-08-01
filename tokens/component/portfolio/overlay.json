@@ -1,0 +1,8 @@
+{
+  "$comment": "Overlay — the full-viewport dim that modal surfaces sit on. This is the primitive Modal is built from, and the one every other above-the-page surface (image viewer, mobile sheet, menu) should be built from too: it owns the scrim, the escape routes and the scroll lock so nothing else has to hand-roll them. It carries no fill, border or radius of its own — those belong to whatever is placed on it.",
+  "overlay": {
+    "scrim-bg": { "value": "{color.scrim}", "comment": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes" },
+    "fg": { "value": "{color.on-scrim}", "comment": "set on the scrim so anything placed straight onto it inherits a legible colour. Content that brings its own surface (Modal's panel) overrides this with its own foreground." },
+    "viewport-padding": { "value": "{space.inset}", "comment": "24px — keeps the content off the viewport edge on small screens" }
+  }
+}

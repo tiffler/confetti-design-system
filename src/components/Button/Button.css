@@ -4,7 +4,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--button-gap);
+  /* Positioning context for the loading spinner, which is absolutely centered over the
+     hidden label so the button keeps its width while an action is in flight. */
+  position: relative;
 
   /* Height is set here, not back-solved from padding — padding-y stays as the floor
      for labels that wrap to two lines. `box-sizing: border-box` so the 2px sticker
@@ -33,6 +35,16 @@
     box-shadow var(--button-transition-duration) var(--button-transition-easing),
     filter var(--button-transition-duration) var(--button-transition-easing),
     color var(--button-transition-duration) var(--button-transition-easing);
+}
+
+/* The label and any icons live in one flex box so they can be hidden as a unit while
+   loading. The inline gap between an icon and its label lives here, not on the button,
+   since the button's only flow child is this wrapper. */
+.cf-button__content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-gap);
 }
 
 /* `data-force` pins an interaction state that cannot otherwise be triggered from a
@@ -166,9 +178,58 @@
   filter: brightness(var(--button-pressed-brightness));
 }
 
+/* --- Loading -------------------------------------------------------------- */
+
+/* Loading disables the button (so it can't be hovered, pressed, or clicked) but is not
+   "unavailable": it keeps full color and shows the progress cursor rather than the
+   disabled fade, so the spinner reads clearly. Higher-ordered than `[disabled]` above at
+   equal specificity, so it wins. */
+.cf-button--loading[disabled] {
+  opacity: 1;
+  cursor: progress;
+}
+
+/* The label stays laid out but invisible, so the button holds its exact width while the
+   spinner takes its place — no reflow when an action starts or finishes. */
+.cf-button--loading .cf-button__content {
+  visibility: hidden;
+}
+
+/* A ring in the button's own text color with one quadrant cut away, centered over the
+   hidden label. `50%` here is geometry — a centered point and a circle — not a design
+   value, the same rationale as the √2 in the danger tile above. */
+.cf-button__spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--button-spinner-size);
+  height: var(--button-spinner-size);
+  border: var(--button-spinner-width) solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: cf-button-spin var(--button-spinner-duration) var(--button-spinner-easing) infinite;
+}
+
+/* The translate is carried through both keyframes so the spinner rotates about its own
+   center rather than orbiting the corner it is pinned to. */
+@keyframes cf-button-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cf-button {
     transition: none;
+  }
+
+  /* The spinner stops turning; it stays as a static ring and `aria-busy` still carries
+     the in-flight state. */
+  .cf-button__spinner {
+    animation: none;
   }
 
   /* The one animation in the system that never stops on its own. Continuous background

@@ -178,3 +178,56 @@ export const PerHue: Story = {
     </div>
   ),
 };
+
+/**
+ * Panels rendered outside the component. The three sections below are plain markup that Tabs
+ * does not own — the equivalent of server-rendered HTML or an Astro island's static content.
+ */
+export const ExternalPanels: Story = {
+  name: 'Panels rendered elsewhere',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Tabs does not render panels, because most consumers already have their content in React and only want the control. When the panels live elsewhere — server-rendered markup, an island, a sibling section — give each tab a `panelId`.\n\nThat alone wires `aria-controls`, and exposes each tab\'s generated `id` so a panel can point back with `aria-labelledby`. Add `managePanels` and Tabs will also show and hide them by toggling `hidden`.\n\nOne caveat worth knowing: `hidden` is `display: none`, so the panels do not reserve height and the page reflows when they differ in length. If that matters, leave `managePanels` off, keep `panelId` for the wiring, and drive visibility yourself — which is exactly what a no-reflow implementation does with a `visibility`-based attribute instead.',
+      },
+    },
+  },
+  render: function ExternalDemo() {
+    const [value, setValue] = useState('brief');
+    const tabs = [
+      { value: 'brief', label: 'Brief', panelId: 'demo-panel-brief', hue: 'purple' as const },
+      { value: 'process', label: 'Process', panelId: 'demo-panel-process', hue: 'purple' as const },
+      { value: 'outcome', label: 'Outcome', panelId: 'demo-panel-outcome', hue: 'purple' as const },
+    ];
+    const panel = {
+      fontFamily: 'var(--font-family-body)',
+      fontSize: 'var(--font-size-body)',
+      lineHeight: 'var(--font-leading-body)',
+      color: 'var(--color-text-primary)',
+      background: 'var(--color-surface-raised)',
+      border: 'var(--border-width-default) solid var(--color-border-default)',
+      borderRadius: 'var(--radius-container)',
+      padding: 'var(--space-inset)',
+      margin: 0,
+    };
+
+    return (
+      <div style={{ display: 'grid', gap: 'var(--space-stack)', justifyItems: 'start' }}>
+        <Tabs aria-label="Case study sections" tabs={tabs} value={value} onChange={setValue} managePanels />
+
+        {/* Authored with the initial tab's panel visible and the rest already hidden — the
+            effect that syncs them runs after paint, so the markup has to start correct. */}
+        <p id="demo-panel-brief" role="tabpanel" style={panel}>
+          The brief. This panel is ordinary markup outside the Tabs component; Tabs only knows its id.
+        </p>
+        <p id="demo-panel-process" role="tabpanel" style={panel} hidden>
+          The process. Toggled by `managePanels`, and wired to its tab by `aria-controls`.
+        </p>
+        <p id="demo-panel-outcome" role="tabpanel" style={panel} hidden>
+          The outcome. Inspect the tablist to see `aria-controls` pointing at each of these ids.
+        </p>
+      </div>
+    );
+  },
+};

@@ -1,38 +1,8 @@
-/* The <dialog> element IS the scrim — it fills the viewport and paints the dim, so a click
-   that misses the panel lands here and dismisses. No z-index: showModal() promotes the
-   element to the top layer, which sits above every stacking context on the page. */
-.cf-modal {
-  position: fixed;
-  inset: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  /* The UA sheet constrains a dialog to fit its content and centers it with auto margins;
-     this one is the full-viewport surface instead, and centers the panel itself. */
-  max-width: none;
-  max-height: none;
-  margin: 0;
+/* Consumes component tokens only — no hardcoded values, no primitives.
 
-  padding: var(--modal-viewport-padding);
-  border: 0;
-  background: var(--modal-scrim-bg);
-  overflow-y: auto;
-
-  display: grid;
-  place-items: center;
-}
-
-/* `display: grid` above overrides the UA's `display: none` for a closed dialog, which would
-   leave a shut modal painting a full-screen scrim. Put the hide back explicitly. */
-.cf-modal:not([open]) {
-  display: none;
-}
-
-/* The UA paints its own dim behind a modal dialog. Ours is on the element, so clear that
-   one — otherwise the two stack and the scrim reads darker than `--color-scrim` says. */
-.cf-modal::backdrop {
-  background: transparent;
-}
+   The scrim, the top layer, the escape routes and the scroll lock all come from Overlay —
+   `.cf-modal` is applied to that same <dialog> element, so everything below is the panel and
+   the two width variants. */
 
 /* A Card-weight surface: same fill, sticker border, container radius, and hard offset
    shadow — a dialog is a card that has come forward, not a new kind of object. Unlike a

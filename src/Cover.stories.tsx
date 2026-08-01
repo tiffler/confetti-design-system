@@ -52,21 +52,7 @@ function Cover() {
           <Icon icon={ConfettiGlyph} size="lg" tone="accent" className="cf-cover__glyph" /> Confetti
         </h1>
 
-        <p
-          style={{
-            fontFamily: 'var(--font-family-body)',
-            fontSize: 'var(--font-size-h5)',
-            color: 'var(--color-text-muted)',
-            lineHeight: 'var(--font-leading-body)',
-            margin: 0,
-          }}
-        >
-          A sticker-flavored, themeable design system. As many themes as you like, two modes,
-          one set of tokens — change a handful of values and the whole thing re-skins. Built to
-          make demos look <em>intentional</em>, not assembled.
-        </p>
-
-        <Card surface="raised" eyebrow="What's inside" title="Tokens, themed any way you like">
+        <Card surface="raised" eyebrow="What's inside" title="Themeable token system">
           Primitive → semantic → component tokens and a brand-kit contract: define a handful of
           inputs and you have a new theme, in light and dark. Three ship as worked examples —
           Confetti, Adventure and Neon. Have a poke around Foundations and Components in the

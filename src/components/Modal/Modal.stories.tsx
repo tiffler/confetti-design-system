@@ -112,7 +112,7 @@ export const Sizes: Story = {
     docs: {
       description: {
         story:
-          '`sm` (420px) is for a confirmation — a question and two buttons. `md` (560px) is the default, sized for a paragraph or two. Both cap the panel’s `max-width`; below that it fills the viewport minus `--modal-viewport-padding`, so the small end needs no separate mobile treatment.',
+          '`sm` (420px) is for a confirmation — a question and two buttons. `md` (560px) is the default, sized for a paragraph or two. Both cap the panel’s `max-width`; below that it fills the viewport minus `--overlay-viewport-padding`, so the small end needs no separate mobile treatment.',
       },
     },
   },

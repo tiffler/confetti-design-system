@@ -122,16 +122,25 @@ React, one `.tsx` + `.css` + `.stories.tsx` triple each, consuming component tok
   accent pair — and neither appears in `TabHue`, because a tab is a category.
 - **Tabs** — a segmented control: a pill group with a sliding active indicator that borrows
   Badge's palette, so a lit tab and a Badge read as one system per hue. Arrows / Home / End,
-  roving `tabindex`.
-- **Modal** — a dialog on the native `<dialog>` element. `showModal()` supplies the focus
-  trap, `inert`, Escape, and the top layer; the element itself paints `--color-scrim`, so a
-  click that misses the panel dismisses and nothing needs a z-index. The panel is
-  Card-weight, in two widths.
+  roving `tabindex`. It renders no panels; when the panels live outside the component, a
+  `panelId` per tab wires `aria-controls`, and `managePanels` will show and hide them too.
+- **Overlay** — the full-viewport dim that above-the-page surfaces sit on, and the only
+  place dialog behaviour is implemented. A native `<dialog>` opened with `showModal()`, so the
+  focus trap, `inert`, Escape and the top layer come from the platform; the element itself
+  paints `--color-scrim`, so a click that misses the content dismisses and nothing needs a
+  z-index. Carries no fill, border or radius — the content brings its own.
+- **Modal** — `Overlay` plus a Card-weight panel, in two widths, with header / body / footer
+  slots. Reach for Overlay directly when the thing on the scrim is not a panel.
 - **Toast** — a transient notification in `success` · `danger` · `neutral`. Card-weight
   paper with the tone on the leading edge and the icon rather than in a coloured fill, so the
   interior stays an ordinary surface and the ghost dismiss button matches every other one.
   Announces itself correctly (`role="alert"` for danger, `role="status"` otherwise);
   positioning, queueing and timers are the application's, as `open` is for Modal.
+- **Switch** — a binary control that takes effect immediately, as opposed to a checkbox,
+  which stages a value until submit. `role="switch"`, so it announces on/off; the states differ
+  in track fill, thumb fill and thumb position, never colour alone. `ModeToggle` is this wired
+  to `ThemeProvider` — the light/dark control the system previously expected every consumer to
+  build for itself.
 - **Icon** — wraps Phosphor icons at bold weight; sizes mirror the type scale; decorative by
   default (a `label` promotes it to `role="img"`).
 
@@ -193,13 +202,13 @@ Confetti/
 │  ├─ modes/                  light / dark base neutrals
 │  ├─ themes/                 brand-kit inputs — confetti · adventure · neon
 │  ├─ overrides/              per-theme-per-mode neutrals + a11y lifts
-│  └─ component/portfolio/    button · card · badge · tabs · modal · toast · icon
+│  └─ component/portfolio/    button · card · badge · tabs · overlay · modal · toast · switch · icon
 ├─ style-dictionary/          build.js · audit-layers.js · validate-schema.js
 ├─ build/portfolio/           GENERATED, committed — tokens.css/json/dtcg + tailwind
 ├─ docs/ARCHITECTURE.md       this file
 ├─ public/fonts/              self-hosted Fredoka + JetBrains Mono
 └─ src/
-   ├─ components/             Button · Card · Badge · Tabs · Modal · Toast · Icon
+   ├─ components/             Button · Card · Badge · Tabs · Overlay · Modal · Toast · Switch · Icon
    ├─ foundations/            Storybook docs + live token specimens
    ├─ theme/ThemeProvider.tsx
    └─ Cover.stories.tsx       the Storybook landing page

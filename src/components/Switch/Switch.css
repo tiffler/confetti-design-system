@@ -1,0 +1,90 @@
+/* Consumes component tokens only — no hardcoded values, no primitives. */
+
+.cf-switch {
+  /* The travel: track minus thumb, minus the inset on each side. Derived rather than
+     hardcoded so retuning the two size tokens keeps the thumb landing flush. */
+  --cf-switch-inset: calc((var(--switch-track-height) - var(--switch-thumb-size)) / 2 - var(--switch-border-width));
+  --cf-switch-travel: calc(
+    var(--switch-track-width) - var(--switch-thumb-size) - 2 * var(--switch-border-width) - 2 *
+      var(--cf-switch-inset)
+  );
+
+  box-sizing: border-box;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--cf-switch-inset);
+
+  width: var(--switch-track-width);
+  height: var(--switch-track-height);
+  background: var(--switch-bg);
+  border: var(--switch-border-width) solid var(--switch-border-color);
+  border-radius: var(--switch-radius);
+
+  cursor: pointer;
+  transition: background-color var(--switch-transition-duration) var(--switch-transition-easing);
+}
+
+.cf-switch[aria-checked='true'] {
+  background: var(--switch-bg-checked);
+}
+
+.cf-switch:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.cf-switch[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.cf-switch__thumb {
+  display: grid;
+  place-items: center;
+  width: var(--switch-thumb-size);
+  height: var(--switch-thumb-size);
+  border-radius: var(--switch-radius);
+  background: var(--switch-thumb-bg);
+  color: var(--switch-icon-color);
+
+  transition:
+    transform var(--switch-transition-duration) var(--switch-transition-easing),
+    background-color var(--switch-transition-duration) var(--switch-transition-easing),
+    color var(--switch-transition-duration) var(--switch-transition-easing);
+}
+
+.cf-switch[aria-checked='true'] .cf-switch__thumb {
+  transform: translateX(var(--cf-switch-travel));
+  background: var(--switch-thumb-bg-checked);
+  color: var(--switch-icon-color-checked);
+}
+
+/* The glyph is smaller than the thumb it sits on, so it never touches the edge. */
+.cf-switch__icon {
+  --cf-icon-size: calc(var(--switch-thumb-size) - var(--switch-border-width) * 3);
+}
+
+/* --- With a visible label -------------------------------------------------- */
+
+.cf-switch-field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--switch-gap);
+  cursor: pointer;
+}
+
+.cf-switch-field__label {
+  font-family: var(--switch-label-font-family);
+  font-size: var(--switch-label-font-size);
+  letter-spacing: var(--switch-label-tracking);
+  text-transform: uppercase;
+  color: var(--switch-label-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf-switch,
+  .cf-switch__thumb {
+    transition: none;
+  }
+}

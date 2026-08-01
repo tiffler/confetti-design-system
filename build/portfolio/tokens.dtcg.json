@@ -888,6 +888,14 @@
           "com.confetti.cssVariable": "--color-scrim"
         }
       },
+      "on-scrim": {
+        "$value": "#ffffff",
+        "$type": "color",
+        "$description": "text and controls placed directly on the scrim rather than on a panel — a lightbox caption, a close button. It cannot be text.primary (which follows the mode and would vanish in light) or text.inverse (which follows it the other way and vanishes in dark): the scrim is deep in BOTH modes, so its foreground is fixed like it is.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-on-scrim"
+        }
+      },
       "text": {
         "accent": {
           "$value": "#79b98c",
@@ -2169,6 +2177,32 @@
           }
         }
       },
+      "switch": {
+        "track-width": {
+          "$value": "48px",
+          "$type": "dimension",
+          "$description": "48px — the control width, matching size.control",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-width"
+          }
+        },
+        "track-height": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$description": "24px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-height"
+          }
+        },
+        "thumb": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$description": "20px — leaves a 2px inset on each side of the track",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-thumb"
+          }
+        }
+      },
       "icon": {
         "sm": {
           "$value": "16px",
@@ -2646,6 +2680,34 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-transition-easing"
+        }
+      },
+      "spinner-size": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-size"
+        }
+      },
+      "spinner-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-width"
+        }
+      },
+      "spinner-duration": {
+        "$value": "1600ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-duration"
+        }
+      },
+      "spinner-easing": {
+        "$value": "linear",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-easing"
         }
       },
       "primary": {
@@ -3167,22 +3229,6 @@
       }
     },
     "modal": {
-      "scrim-bg": {
-        "$value": "rgba(26, 21, 13, 0.86)",
-        "$type": "other",
-        "$description": "the dim behind the panel — fixed across themes and modes",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-scrim-bg"
-        }
-      },
-      "viewport-padding": {
-        "$value": "24px",
-        "$type": "other",
-        "$description": "24px — keeps the panel off the viewport edge on small screens",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-viewport-padding"
-        }
-      },
       "bg": {
         "$value": "#35492f",
         "$type": "other",
@@ -3349,6 +3395,172 @@
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-leading"
           }
+        }
+      }
+    },
+    "overlay": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-scrim-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$description": "set on the scrim so anything placed straight onto it inherits a legible colour. Content that brings its own surface (Modal's panel) overrides this with its own foreground.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-fg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the content off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-viewport-padding"
+        }
+      }
+    },
+    "switch": {
+      "track-width": {
+        "$value": "48px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-width"
+        }
+      },
+      "track-height": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-height"
+        }
+      },
+      "thumb-size": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-size"
+        }
+      },
+      "radius": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-radius"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-color"
+        }
+      },
+      "bg": {
+        "$value": "#2a3b2d",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg"
+        }
+      },
+      "bg-checked": {
+        "$value": "#2f6b3f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg-checked"
+        }
+      },
+      "thumb-bg": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "ink knob on the paper track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg"
+        }
+      },
+      "thumb-bg-checked": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$description": "and the inverse on the brand track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+        }
+      },
+      "icon-color": {
+        "$value": "#2a3b2d",
+        "$type": "other",
+        "$description": "the glyph sits ON the thumb, so it takes the track's fill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color"
+        }
+      },
+      "icon-color-checked": {
+        "$value": "#2f6b3f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color-checked"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between the switch and an adjacent label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-gap"
+        }
+      },
+      "label-color": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-color"
+        }
+      },
+      "label-font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-family"
+        }
+      },
+      "label-font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-size"
+        }
+      },
+      "label-tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-tracking"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-easing"
         }
       }
     },
@@ -4537,6 +4749,14 @@
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
           "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
+      "on-scrim": {
+        "$value": "#ffffff",
+        "$type": "color",
+        "$description": "text and controls placed directly on the scrim rather than on a panel — a lightbox caption, a close button. It cannot be text.primary (which follows the mode and would vanish in light) or text.inverse (which follows it the other way and vanishes in dark): the scrim is deep in BOTH modes, so its foreground is fixed like it is.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-on-scrim"
         }
       },
       "text": {
@@ -5821,6 +6041,32 @@
           }
         }
       },
+      "switch": {
+        "track-width": {
+          "$value": "48px",
+          "$type": "dimension",
+          "$description": "48px — the control width, matching size.control",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-width"
+          }
+        },
+        "track-height": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$description": "24px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-height"
+          }
+        },
+        "thumb": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$description": "20px — leaves a 2px inset on each side of the track",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-thumb"
+          }
+        }
+      },
       "icon": {
         "sm": {
           "$value": "16px",
@@ -6298,6 +6544,34 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-transition-easing"
+        }
+      },
+      "spinner-size": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-size"
+        }
+      },
+      "spinner-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-width"
+        }
+      },
+      "spinner-duration": {
+        "$value": "1600ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-duration"
+        }
+      },
+      "spinner-easing": {
+        "$value": "linear",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-easing"
         }
       },
       "primary": {
@@ -6819,22 +7093,6 @@
       }
     },
     "modal": {
-      "scrim-bg": {
-        "$value": "rgba(26, 21, 13, 0.86)",
-        "$type": "other",
-        "$description": "the dim behind the panel — fixed across themes and modes",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-scrim-bg"
-        }
-      },
-      "viewport-padding": {
-        "$value": "24px",
-        "$type": "other",
-        "$description": "24px — keeps the panel off the viewport edge on small screens",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-viewport-padding"
-        }
-      },
       "bg": {
         "$value": "#fbf7ee",
         "$type": "other",
@@ -7001,6 +7259,172 @@
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-leading"
           }
+        }
+      }
+    },
+    "overlay": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-scrim-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$description": "set on the scrim so anything placed straight onto it inherits a legible colour. Content that brings its own surface (Modal's panel) overrides this with its own foreground.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-fg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the content off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-viewport-padding"
+        }
+      }
+    },
+    "switch": {
+      "track-width": {
+        "$value": "48px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-width"
+        }
+      },
+      "track-height": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-height"
+        }
+      },
+      "thumb-size": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-size"
+        }
+      },
+      "radius": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-radius"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#33301f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-color"
+        }
+      },
+      "bg": {
+        "$value": "#e6dcc4",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg"
+        }
+      },
+      "bg-checked": {
+        "$value": "#2f6b3f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg-checked"
+        }
+      },
+      "thumb-bg": {
+        "$value": "#33301f",
+        "$type": "other",
+        "$description": "ink knob on the paper track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg"
+        }
+      },
+      "thumb-bg-checked": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$description": "and the inverse on the brand track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+        }
+      },
+      "icon-color": {
+        "$value": "#e6dcc4",
+        "$type": "other",
+        "$description": "the glyph sits ON the thumb, so it takes the track's fill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color"
+        }
+      },
+      "icon-color-checked": {
+        "$value": "#2f6b3f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color-checked"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between the switch and an adjacent label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-gap"
+        }
+      },
+      "label-color": {
+        "$value": "#33301f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-color"
+        }
+      },
+      "label-font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-family"
+        }
+      },
+      "label-font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-size"
+        }
+      },
+      "label-tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-tracking"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-easing"
         }
       }
     },
@@ -8189,6 +8613,14 @@
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
           "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
+      "on-scrim": {
+        "$value": "#ffffff",
+        "$type": "color",
+        "$description": "text and controls placed directly on the scrim rather than on a panel — a lightbox caption, a close button. It cannot be text.primary (which follows the mode and would vanish in light) or text.inverse (which follows it the other way and vanishes in dark): the scrim is deep in BOTH modes, so its foreground is fixed like it is.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-on-scrim"
         }
       },
       "text": {
@@ -9474,6 +9906,32 @@
           }
         }
       },
+      "switch": {
+        "track-width": {
+          "$value": "48px",
+          "$type": "dimension",
+          "$description": "48px — the control width, matching size.control",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-width"
+          }
+        },
+        "track-height": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$description": "24px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-height"
+          }
+        },
+        "thumb": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$description": "20px — leaves a 2px inset on each side of the track",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-thumb"
+          }
+        }
+      },
       "icon": {
         "sm": {
           "$value": "16px",
@@ -9957,6 +10415,34 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-transition-easing"
+        }
+      },
+      "spinner-size": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-size"
+        }
+      },
+      "spinner-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-width"
+        }
+      },
+      "spinner-duration": {
+        "$value": "1600ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-duration"
+        }
+      },
+      "spinner-easing": {
+        "$value": "linear",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-easing"
         }
       },
       "primary": {
@@ -10478,22 +10964,6 @@
       }
     },
     "modal": {
-      "scrim-bg": {
-        "$value": "rgba(26, 21, 13, 0.86)",
-        "$type": "other",
-        "$description": "the dim behind the panel — fixed across themes and modes",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-scrim-bg"
-        }
-      },
-      "viewport-padding": {
-        "$value": "24px",
-        "$type": "other",
-        "$description": "24px — keeps the panel off the viewport edge on small screens",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-viewport-padding"
-        }
-      },
       "bg": {
         "$value": "#2c3238",
         "$type": "other",
@@ -10660,6 +11130,172 @@
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-leading"
           }
+        }
+      }
+    },
+    "overlay": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-scrim-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$description": "set on the scrim so anything placed straight onto it inherits a legible colour. Content that brings its own surface (Modal's panel) overrides this with its own foreground.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-fg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the content off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-viewport-padding"
+        }
+      }
+    },
+    "switch": {
+      "track-width": {
+        "$value": "48px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-width"
+        }
+      },
+      "track-height": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-height"
+        }
+      },
+      "thumb-size": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-size"
+        }
+      },
+      "radius": {
+        "$value": "999px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-radius"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#e8ecf0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-color"
+        }
+      },
+      "bg": {
+        "$value": "#23282d",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg"
+        }
+      },
+      "bg-checked": {
+        "$value": "#c40000",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg-checked"
+        }
+      },
+      "thumb-bg": {
+        "$value": "#e8ecf0",
+        "$type": "other",
+        "$description": "ink knob on the paper track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg"
+        }
+      },
+      "thumb-bg-checked": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$description": "and the inverse on the brand track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+        }
+      },
+      "icon-color": {
+        "$value": "#23282d",
+        "$type": "other",
+        "$description": "the glyph sits ON the thumb, so it takes the track's fill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color"
+        }
+      },
+      "icon-color-checked": {
+        "$value": "#c40000",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color-checked"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between the switch and an adjacent label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-gap"
+        }
+      },
+      "label-color": {
+        "$value": "#e8ecf0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-color"
+        }
+      },
+      "label-font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-family"
+        }
+      },
+      "label-font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-size"
+        }
+      },
+      "label-tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-tracking"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-easing"
         }
       }
     },
@@ -11848,6 +12484,14 @@
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
           "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
+      "on-scrim": {
+        "$value": "#ffffff",
+        "$type": "color",
+        "$description": "text and controls placed directly on the scrim rather than on a panel — a lightbox caption, a close button. It cannot be text.primary (which follows the mode and would vanish in light) or text.inverse (which follows it the other way and vanishes in dark): the scrim is deep in BOTH modes, so its foreground is fixed like it is.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-on-scrim"
         }
       },
       "text": {
@@ -13134,6 +13778,32 @@
           }
         }
       },
+      "switch": {
+        "track-width": {
+          "$value": "48px",
+          "$type": "dimension",
+          "$description": "48px — the control width, matching size.control",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-width"
+          }
+        },
+        "track-height": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$description": "24px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-height"
+          }
+        },
+        "thumb": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$description": "20px — leaves a 2px inset on each side of the track",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-thumb"
+          }
+        }
+      },
       "icon": {
         "sm": {
           "$value": "16px",
@@ -13617,6 +14287,34 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-transition-easing"
+        }
+      },
+      "spinner-size": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-size"
+        }
+      },
+      "spinner-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-width"
+        }
+      },
+      "spinner-duration": {
+        "$value": "1600ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-duration"
+        }
+      },
+      "spinner-easing": {
+        "$value": "linear",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-easing"
         }
       },
       "primary": {
@@ -14138,22 +14836,6 @@
       }
     },
     "modal": {
-      "scrim-bg": {
-        "$value": "rgba(26, 21, 13, 0.86)",
-        "$type": "other",
-        "$description": "the dim behind the panel — fixed across themes and modes",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-scrim-bg"
-        }
-      },
-      "viewport-padding": {
-        "$value": "24px",
-        "$type": "other",
-        "$description": "24px — keeps the panel off the viewport edge on small screens",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-viewport-padding"
-        }
-      },
       "bg": {
         "$value": "#ffffff",
         "$type": "other",
@@ -14320,6 +15002,172 @@
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-leading"
           }
+        }
+      }
+    },
+    "overlay": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-scrim-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$description": "set on the scrim so anything placed straight onto it inherits a legible colour. Content that brings its own surface (Modal's panel) overrides this with its own foreground.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-fg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the content off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-viewport-padding"
+        }
+      }
+    },
+    "switch": {
+      "track-width": {
+        "$value": "48px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-width"
+        }
+      },
+      "track-height": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-height"
+        }
+      },
+      "thumb-size": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-size"
+        }
+      },
+      "radius": {
+        "$value": "999px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-radius"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-color"
+        }
+      },
+      "bg": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg"
+        }
+      },
+      "bg-checked": {
+        "$value": "#c40000",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg-checked"
+        }
+      },
+      "thumb-bg": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$description": "ink knob on the paper track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg"
+        }
+      },
+      "thumb-bg-checked": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$description": "and the inverse on the brand track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+        }
+      },
+      "icon-color": {
+        "$value": "#ede4d3",
+        "$type": "other",
+        "$description": "the glyph sits ON the thumb, so it takes the track's fill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color"
+        }
+      },
+      "icon-color-checked": {
+        "$value": "#c40000",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color-checked"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between the switch and an adjacent label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-gap"
+        }
+      },
+      "label-color": {
+        "$value": "#2e2618",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-color"
+        }
+      },
+      "label-font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-family"
+        }
+      },
+      "label-font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-size"
+        }
+      },
+      "label-tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-tracking"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-easing"
         }
       }
     },
@@ -15508,6 +16356,14 @@
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
           "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
+      "on-scrim": {
+        "$value": "#ffffff",
+        "$type": "color",
+        "$description": "text and controls placed directly on the scrim rather than on a panel — a lightbox caption, a close button. It cannot be text.primary (which follows the mode and would vanish in light) or text.inverse (which follows it the other way and vanishes in dark): the scrim is deep in BOTH modes, so its foreground is fixed like it is.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-on-scrim"
         }
       },
       "text": {
@@ -16791,6 +17647,32 @@
           }
         }
       },
+      "switch": {
+        "track-width": {
+          "$value": "48px",
+          "$type": "dimension",
+          "$description": "48px — the control width, matching size.control",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-width"
+          }
+        },
+        "track-height": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$description": "24px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-height"
+          }
+        },
+        "thumb": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$description": "20px — leaves a 2px inset on each side of the track",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-thumb"
+          }
+        }
+      },
       "icon": {
         "sm": {
           "$value": "16px",
@@ -17269,6 +18151,34 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-transition-easing"
+        }
+      },
+      "spinner-size": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-size"
+        }
+      },
+      "spinner-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-width"
+        }
+      },
+      "spinner-duration": {
+        "$value": "1600ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-duration"
+        }
+      },
+      "spinner-easing": {
+        "$value": "linear",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-easing"
         }
       },
       "primary": {
@@ -17790,22 +18700,6 @@
       }
     },
     "modal": {
-      "scrim-bg": {
-        "$value": "rgba(26, 21, 13, 0.86)",
-        "$type": "other",
-        "$description": "the dim behind the panel — fixed across themes and modes",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-scrim-bg"
-        }
-      },
-      "viewport-padding": {
-        "$value": "24px",
-        "$type": "other",
-        "$description": "24px — keeps the panel off the viewport edge on small screens",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-viewport-padding"
-        }
-      },
       "bg": {
         "$value": "#2e1650",
         "$type": "other",
@@ -17972,6 +18866,172 @@
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-leading"
           }
+        }
+      }
+    },
+    "overlay": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-scrim-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$description": "set on the scrim so anything placed straight onto it inherits a legible colour. Content that brings its own surface (Modal's panel) overrides this with its own foreground.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-fg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the content off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-viewport-padding"
+        }
+      }
+    },
+    "switch": {
+      "track-width": {
+        "$value": "48px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-width"
+        }
+      },
+      "track-height": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-height"
+        }
+      },
+      "thumb-size": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-size"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-radius"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-color"
+        }
+      },
+      "bg": {
+        "$value": "#23113f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg"
+        }
+      },
+      "bg-checked": {
+        "$value": "#ff2d95",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg-checked"
+        }
+      },
+      "thumb-bg": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$description": "ink knob on the paper track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg"
+        }
+      },
+      "thumb-bg-checked": {
+        "$value": "#000000",
+        "$type": "other",
+        "$description": "and the inverse on the brand track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+        }
+      },
+      "icon-color": {
+        "$value": "#23113f",
+        "$type": "other",
+        "$description": "the glyph sits ON the thumb, so it takes the track's fill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color"
+        }
+      },
+      "icon-color-checked": {
+        "$value": "#ff2d95",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color-checked"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between the switch and an adjacent label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-gap"
+        }
+      },
+      "label-color": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-color"
+        }
+      },
+      "label-font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-family"
+        }
+      },
+      "label-font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-size"
+        }
+      },
+      "label-tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-tracking"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-easing"
         }
       }
     },
@@ -19160,6 +20220,14 @@
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
           "com.confetti.cssVariable": "--color-scrim"
+        }
+      },
+      "on-scrim": {
+        "$value": "#ffffff",
+        "$type": "color",
+        "$description": "text and controls placed directly on the scrim rather than on a panel — a lightbox caption, a close button. It cannot be text.primary (which follows the mode and would vanish in light) or text.inverse (which follows it the other way and vanishes in dark): the scrim is deep in BOTH modes, so its foreground is fixed like it is.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--color-on-scrim"
         }
       },
       "text": {
@@ -20444,6 +21512,32 @@
           }
         }
       },
+      "switch": {
+        "track-width": {
+          "$value": "48px",
+          "$type": "dimension",
+          "$description": "48px — the control width, matching size.control",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-width"
+          }
+        },
+        "track-height": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$description": "24px",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-track-height"
+          }
+        },
+        "thumb": {
+          "$value": "20px",
+          "$type": "dimension",
+          "$description": "20px — leaves a 2px inset on each side of the track",
+          "$extensions": {
+            "com.confetti.cssVariable": "--size-switch-thumb"
+          }
+        }
+      },
       "icon": {
         "sm": {
           "$value": "16px",
@@ -20922,6 +22016,34 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-transition-easing"
+        }
+      },
+      "spinner-size": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-size"
+        }
+      },
+      "spinner-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-width"
+        }
+      },
+      "spinner-duration": {
+        "$value": "1600ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-duration"
+        }
+      },
+      "spinner-easing": {
+        "$value": "linear",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--button-spinner-easing"
         }
       },
       "primary": {
@@ -21443,22 +22565,6 @@
       }
     },
     "modal": {
-      "scrim-bg": {
-        "$value": "rgba(26, 21, 13, 0.86)",
-        "$type": "other",
-        "$description": "the dim behind the panel — fixed across themes and modes",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-scrim-bg"
-        }
-      },
-      "viewport-padding": {
-        "$value": "24px",
-        "$type": "other",
-        "$description": "24px — keeps the panel off the viewport edge on small screens",
-        "$extensions": {
-          "com.confetti.cssVariable": "--modal-viewport-padding"
-        }
-      },
       "bg": {
         "$value": "#ffffff",
         "$type": "other",
@@ -21625,6 +22731,172 @@
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-leading"
           }
+        }
+      }
+    },
+    "overlay": {
+      "scrim-bg": {
+        "$value": "rgba(26, 21, 13, 0.86)",
+        "$type": "other",
+        "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-scrim-bg"
+        }
+      },
+      "fg": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$description": "set on the scrim so anything placed straight onto it inherits a legible colour. Content that brings its own surface (Modal's panel) overrides this with its own foreground.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-fg"
+        }
+      },
+      "viewport-padding": {
+        "$value": "24px",
+        "$type": "other",
+        "$description": "24px — keeps the content off the viewport edge on small screens",
+        "$extensions": {
+          "com.confetti.cssVariable": "--overlay-viewport-padding"
+        }
+      }
+    },
+    "switch": {
+      "track-width": {
+        "$value": "48px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-width"
+        }
+      },
+      "track-height": {
+        "$value": "24px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-track-height"
+        }
+      },
+      "thumb-size": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-size"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-radius"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-width"
+        }
+      },
+      "border-color": {
+        "$value": "#1a0430",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-border-color"
+        }
+      },
+      "bg": {
+        "$value": "#f2e9ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg"
+        }
+      },
+      "bg-checked": {
+        "$value": "#ff2d95",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-bg-checked"
+        }
+      },
+      "thumb-bg": {
+        "$value": "#1a0430",
+        "$type": "other",
+        "$description": "ink knob on the paper track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg"
+        }
+      },
+      "thumb-bg-checked": {
+        "$value": "#000000",
+        "$type": "other",
+        "$description": "and the inverse on the brand track",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+        }
+      },
+      "icon-color": {
+        "$value": "#f2e9ff",
+        "$type": "other",
+        "$description": "the glyph sits ON the thumb, so it takes the track's fill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color"
+        }
+      },
+      "icon-color-checked": {
+        "$value": "#ff2d95",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-icon-color-checked"
+        }
+      },
+      "gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between the switch and an adjacent label",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-gap"
+        }
+      },
+      "label-color": {
+        "$value": "#1a0430",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-color"
+        }
+      },
+      "label-font-family": {
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-family"
+        }
+      },
+      "label-font-size": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-font-size"
+        }
+      },
+      "label-tracking": {
+        "$value": "0.16em",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-label-tracking"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--switch-transition-easing"
         }
       }
     },

@@ -1,0 +1,24 @@
+{
+  "$comment": "Switch — a binary control that takes effect immediately (dark mode, a preference), as opposed to a checkbox, which stages a value until something is submitted. Off is the paper fill every secondary control uses; on is the brand. The thumb inverts with it, so the two states differ in fill AND in which end carries the weight — never colour alone.",
+  "switch": {
+    "track-width": { "value": "{size.switch.track-width}" },
+    "track-height": { "value": "{size.switch.track-height}" },
+    "thumb-size": { "value": "{size.switch.thumb}" },
+    "radius": { "value": "{radius.control}" },
+    "border-width": { "value": "{border.width.default}", "comment": "the sticker edge — a switch is a control, so it carries the same outline as a button" },
+    "border-color": { "value": "{color.border.default}" },
+    "bg": { "value": "{color.action.secondary.bg}" },
+    "bg-checked": { "value": "{color.action.primary.bg}" },
+    "thumb-bg": { "value": "{color.text.primary}", "comment": "ink knob on the paper track" },
+    "thumb-bg-checked": { "value": "{color.action.primary.fg}", "comment": "and the inverse on the brand track" },
+    "icon-color": { "value": "{color.action.secondary.bg}", "comment": "the glyph sits ON the thumb, so it takes the track's fill" },
+    "icon-color-checked": { "value": "{color.action.primary.bg}" },
+    "gap": { "value": "{space.inline}", "comment": "8px between the switch and an adjacent label" },
+    "label-color": { "value": "{color.text.primary}" },
+    "label-font-family": { "value": "{font.family.label}" },
+    "label-font-size": { "value": "{font.size.label}" },
+    "label-tracking": { "value": "{font.tracking.label}" },
+    "transition-duration": { "value": "{motion.duration.interaction}" },
+    "transition-easing": { "value": "{motion.easing.interaction}" }
+  }
+}

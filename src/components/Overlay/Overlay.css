@@ -1,0 +1,50 @@
+/* Consumes component tokens only — no hardcoded values, no primitives. */
+
+/* The <dialog> element IS the scrim: it fills the viewport and paints the dim, so a click
+   that misses the content lands here and dismisses. No z-index — showModal() promotes the
+   element to the top layer, which sits above every stacking context on the page. */
+.cf-overlay {
+  position: fixed;
+  inset: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  /* The UA sheet constrains a dialog to fit its content and centers it with auto margins;
+     this one is the full-viewport surface instead, and places the content itself. */
+  max-width: none;
+  max-height: none;
+  margin: 0;
+
+  padding: var(--overlay-viewport-padding);
+  border: 0;
+  background: var(--overlay-scrim-bg);
+  /* Inherited by anything placed straight onto the scrim — a caption, a bare close control.
+     A surface that comes with its own foreground (Modal's panel) simply sets its own. */
+  color: var(--overlay-fg);
+  overflow-y: auto;
+
+  display: grid;
+}
+
+/* `display: grid` above overrides the UA's `display: none` for a closed dialog, which would
+   leave a shut overlay painting a full-screen scrim. Put the hide back explicitly. */
+.cf-overlay:not([open]) {
+  display: none;
+}
+
+/* The UA paints its own dim behind a modal dialog. Ours is on the element, so clear that
+   one — otherwise the two stack and the scrim reads darker than `--color-scrim` says. */
+.cf-overlay::backdrop {
+  background: transparent;
+}
+
+.cf-overlay--center {
+  place-items: center;
+}
+
+/* Sheet position. `align-items: end` rather than a fixed bottom offset, so the padding above
+   still applies and a tall sheet grows upward into the scroll area instead of off-screen. */
+.cf-overlay--bottom {
+  align-items: end;
+  justify-items: center;
+}

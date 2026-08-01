@@ -1,11 +1,12 @@
 import { Fragment, useState, type ReactElement } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { ArrowRight, Plus } from '@phosphor-icons/react';
+import { ArrowRight, Moon, Plus, Sun } from '@phosphor-icons/react';
 import { Badge, type BadgeHue, type BadgeTone } from '../components/Badge/Badge';
 import { Button, type ButtonVariant } from '../components/Button/Button';
 import { Card, type CardSurface } from '../components/Card/Card';
 import { Icon, type IconSize, type IconTone } from '../components/Icon/Icon';
 import { Modal } from '../components/Modal/Modal';
+import { Switch } from '../components/Switch/Switch';
 import { Tabs, type TabHue } from '../components/Tabs/Tabs';
 import { Toast, type ToastTone } from '../components/Toast/Toast';
 import { Caption, Eyebrow, Frame, Lede, Page, Row, Sheet, Stack, Text, Tick, Title } from './kit';
@@ -21,7 +22,18 @@ import { Caption, Eyebrow, Frame, Lede, Page, Row, Sheet, Stack, Text, Tick, Tit
  * component, which is why the sheet can sit beside a snapshot tool without lying.
  */
 
-const VARIANTS: ButtonVariant[] = ['primary', 'secondary', 'ghost', 'danger'];
+/* The three everyday variants, primary first as the default. Danger is the system's
+   fourth variant but sits out of this grid: it is the destructive action, documented
+   with its hazard treatment in the pages that actually use it rather than lined up
+   next to the neutral three. */
+const VARIANTS: ButtonVariant[] = ['primary', 'secondary', 'ghost'];
+
+const VARIANT_LABELS: Record<ButtonVariant, string> = {
+  primary: 'Primary (default)',
+  secondary: 'Secondary',
+  ghost: 'Ghost',
+  danger: 'Danger',
+};
 
 /* Badge and Tabs share a palette but not a vocabulary: `success` is a state, and a tab is a
    category, so the sets are listed separately rather than one being cast to the other. */
@@ -32,16 +44,23 @@ const TONES: BadgeTone[] = ['bold', 'subtle'];
 const ICON_SIZES: IconSize[] = ['sm', 'md', 'lg'];
 const ICON_TONES: IconTone[] = ['inherit', 'default', 'muted', 'accent'];
 
-type SpecimenRow = { key: string; label: string; force?: string; disabled?: boolean };
+type SpecimenRow = {
+  key: string;
+  label: string;
+  force?: string;
+  disabled?: boolean;
+  loading?: boolean;
+};
 
-/* Rest first, then the three states a page cannot otherwise hold still, then disabled —
-   which suppresses hover and pressed entirely, so it belongs at the end rather than in
-   the middle of the interactive run. */
+/* Rest first, then the three states a page cannot otherwise hold still. Loading and
+   disabled close the run: both are non-interactive (they suppress hover and pressed
+   entirely), so they belong after the interactive states rather than among them. */
 const BUTTON_ROWS: SpecimenRow[] = [
   { key: 'rest', label: 'Rest' },
   { key: 'hover', label: 'Hover', force: 'hover' },
   { key: 'focus', label: 'Focus', force: 'focus' },
   { key: 'pressed', label: 'Pressed', force: 'pressed' },
+  { key: 'loading', label: 'Loading', loading: true },
   { key: 'disabled', label: 'Disabled', disabled: true },
 ];
 
@@ -58,7 +77,7 @@ const BUTTON_CONFIGS: Array<{
     key: 'label',
     label: 'Label',
     render: (variant, row) => (
-      <Button variant={variant} disabled={row.disabled} {...forced(row)}>
+      <Button variant={variant} disabled={row.disabled} loading={row.loading} {...forced(row)}>
         btn_text
       </Button>
     ),
@@ -67,7 +86,7 @@ const BUTTON_CONFIGS: Array<{
     key: 'leading',
     label: 'Icon + label',
     render: (variant, row) => (
-      <Button variant={variant} disabled={row.disabled} {...forced(row)}>
+      <Button variant={variant} disabled={row.disabled} loading={row.loading} {...forced(row)}>
         <Icon icon={Plus} size="sm" /> btn_text
       </Button>
     ),
@@ -76,7 +95,7 @@ const BUTTON_CONFIGS: Array<{
     key: 'trailing',
     label: 'Label + icon',
     render: (variant, row) => (
-      <Button variant={variant} disabled={row.disabled} {...forced(row)}>
+      <Button variant={variant} disabled={row.disabled} loading={row.loading} {...forced(row)}>
         btn_text <Icon icon={ArrowRight} size="sm" />
       </Button>
     ),
@@ -85,7 +104,13 @@ const BUTTON_CONFIGS: Array<{
     key: 'iconOnly',
     label: 'Icon only',
     render: (variant, row) => (
-      <Button variant={variant} disabled={row.disabled} aria-label="Add item" {...forced(row)}>
+      <Button
+        variant={variant}
+        disabled={row.disabled}
+        loading={row.loading}
+        aria-label="Add item"
+        {...forced(row)}
+      >
         <Icon icon={Plus} size="md" />
       </Button>
     ),
@@ -96,7 +121,7 @@ function ButtonMatrix({ variant }: { variant: ButtonVariant }) {
   return (
     <Stack gap="var(--space-2)">
       <Tick style={{ color: 'var(--color-text-primary)', textTransform: 'uppercase' }}>
-        {variant}
+        {VARIANT_LABELS[variant]}
       </Tick>
       <div
         style={{
@@ -216,7 +241,7 @@ function ComponentSheet() {
         <Eyebrow>Specimen sheet</Eyebrow>
         <Title>Every component, every state</Title>
         <Lede>
-          Seven components, their variants and their interaction states, pinned side by side.
+          Nine components, their variants and their interaction states, pinned side by side.
           Flip the Theme and Mode switchers — nothing here is hardcoded, so the whole sheet
           re-skins.
         </Lede>
@@ -326,7 +351,21 @@ function ComponentSheet() {
           </Caption>
         </Frame>
 
-        <Frame label="Modal — sm / md">
+        <Frame label="Switch — state">
+          <Stack gap="var(--space-inline)">
+            <Switch checked={false} onChange={() => {}} iconOff={Sun} iconOn={Moon}>
+              Off
+            </Switch>
+            <Switch checked onChange={() => {}} iconOff={Sun} iconOn={Moon}>
+              On
+            </Switch>
+            <Switch checked={false} onChange={() => {}} disabled>
+              Disabled
+            </Switch>
+          </Stack>
+        </Frame>
+
+        <Frame label="Overlay & Modal">
           <ModalSpecimen />
         </Frame>
 

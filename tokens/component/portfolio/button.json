@@ -21,6 +21,11 @@
     "pressed-brightness": { "value": "{effect.brightness-rest}" },
     "transition-duration": { "value": "{motion.duration.interaction}" },
     "transition-easing": { "value": "{motion.easing.interaction}" },
+    "$comment-spinner": "Loading spinner — a ring in the button's own text color (currentColor) that spins while an action is in flight. Sized to the inline icon so it sits where a leading icon would; ambient duration/easing because it is a continuous, non-reactive loop, the same motion category as the danger drift.",
+    "spinner-size": { "value": "{size.icon.sm}" },
+    "spinner-width": { "value": "{border.width.default}" },
+    "spinner-duration": { "value": "{motion.duration.ambient}" },
+    "spinner-easing": { "value": "{motion.easing.ambient}" },
     "primary": {
       "bg": { "value": "{color.action.primary.bg}" },
       "fg": { "value": "{color.action.primary.fg}" },

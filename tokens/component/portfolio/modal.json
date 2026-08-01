@@ -1,8 +1,6 @@
 {
-  "$comment": "Modal / dialog. Two parts: the SCRIM (the full-viewport dim, the one consumer of the axis-independent --color-scrim role) and the PANEL, which is a Card-weight surface — same card fill, sticker border, container radius, and hard offset shadow — so a dialog reads as a card that has come forward rather than a new kind of object. There is no z-index token: showModal() promotes the dialog to the browser's top layer, which no ancestor stacking context can trap.",
+  "$comment": "Modal / dialog — the PANEL only. The scrim and the viewport padding it sits in belong to Overlay (tokens/component/portfolio/overlay.json), which Modal is composed from; there is no second copy of them here. The panel is a Card-weight surface — same card fill, sticker border, container radius, and hard offset shadow — so a dialog reads as a card that has come forward rather than a new kind of object. There is no z-index token: showModal() promotes the dialog to the browser's top layer, which no ancestor stacking context can trap.",
   "modal": {
-    "scrim-bg": { "value": "{color.scrim}", "comment": "the dim behind the panel — fixed across themes and modes" },
-    "viewport-padding": { "value": "{space.inset}", "comment": "24px — keeps the panel off the viewport edge on small screens" },
     "bg": { "value": "{color.surface.card}" },
     "fg": { "value": "{color.text.primary}" },
     "fg-muted": { "value": "{color.text.muted}" },

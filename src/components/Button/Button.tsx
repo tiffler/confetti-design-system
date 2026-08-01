@@ -13,6 +13,12 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
    * have read the label.
    */
   variant?: ButtonVariant;
+  /**
+   * Marks the action as in flight: a spinner replaces the label (which stays in the box,
+   * hidden, so the button never changes width) and the button goes non-interactive. The
+   * state is carried by `aria-busy`, so the spinner is never the only signal.
+   */
+  loading?: boolean;
   children: ReactNode;
 }
 
@@ -50,7 +56,14 @@ function warnIfUnnamedIconButton(
   }
 }
 
-export function Button({ variant = 'primary', children, className, ...rest }: ButtonProps) {
+export function Button({
+  variant = 'primary',
+  loading = false,
+  disabled,
+  children,
+  className,
+  ...rest
+}: ButtonProps) {
   if (import.meta.env.DEV) {
     warnIfUnnamedIconButton(children, rest);
   }
@@ -58,10 +71,17 @@ export function Button({ variant = 'primary', children, className, ...rest }: Bu
   return (
     <button
       type="button"
-      className={['cf-button', `cf-button--${variant}`, className].filter(Boolean).join(' ')}
+      className={['cf-button', `cf-button--${variant}`, loading && 'cf-button--loading', className]
+        .filter(Boolean)
+        .join(' ')}
       {...rest}
+      // Loading is a non-interactive state; setting it after the spread so a stray
+      // `disabled`/`aria-busy` in rest can't override the in-flight state.
+      disabled={disabled || loading}
+      aria-busy={loading || undefined}
     >
-      {children}
+      {loading && <span className="cf-button__spinner" aria-hidden="true" />}
+      <span className="cf-button__content">{children}</span>
     </button>
   );
 }

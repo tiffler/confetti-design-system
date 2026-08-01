@@ -113,6 +113,7 @@ export default {
     "base-black": "var(--color-base-black)",
     "base-transparent": "var(--color-base-transparent)",
     "scrim": "var(--color-scrim)",
+    "on-scrim": "var(--color-on-scrim)",
     "text-accent": "var(--color-text-accent)",
     "text-primary": "var(--color-text-primary)",
     "text-muted": "var(--color-text-muted)",
