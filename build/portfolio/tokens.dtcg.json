@@ -126,7 +126,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#2c3238",
+          "$value": "#363d45",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -134,7 +134,7 @@
           }
         },
         "500": {
-          "$value": "#23282d",
+          "$value": "#2b3138",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -142,7 +142,7 @@
           }
         },
         "700": {
-          "$value": "#1a1e21",
+          "$value": "#22272c",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -150,7 +150,7 @@
           }
         },
         "800": {
-          "$value": "#14171a",
+          "$value": "#1b1f23",
           "$type": "color",
           "$description": "page background baseline",
           "$extensions": {
@@ -158,7 +158,7 @@
           }
         },
         "900": {
-          "$value": "#0e1012",
+          "$value": "#141719",
           "$type": "color",
           "$description": "backdrop — the recessed mat below page",
           "$extensions": {
@@ -184,9 +184,9 @@
           }
         },
         "400": {
-          "$value": "#98a2ac",
+          "$value": "#a8b2bc",
           "$type": "color",
-          "$description": "muted text on graphite",
+          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -194,9 +194,9 @@
       },
       "red": {
         "200": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -1202,7 +1202,7 @@
             }
           },
           "text": {
-            "$value": "#fa7263",
+            "$value": "#ff8d80",
             "$type": "color",
             "$description": "danger AS TEXT — the same lift brand-as-text takes, so it clears AA on card (4.72:1)",
             "$extensions": {
@@ -3942,7 +3942,7 @@
           }
         },
         "danger": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-danger"
@@ -3965,7 +3965,7 @@
           }
         },
         "danger": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-danger"
@@ -4153,7 +4153,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#2c3238",
+          "$value": "#363d45",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -4161,7 +4161,7 @@
           }
         },
         "500": {
-          "$value": "#23282d",
+          "$value": "#2b3138",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -4169,7 +4169,7 @@
           }
         },
         "700": {
-          "$value": "#1a1e21",
+          "$value": "#22272c",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -4177,7 +4177,7 @@
           }
         },
         "800": {
-          "$value": "#14171a",
+          "$value": "#1b1f23",
           "$type": "color",
           "$description": "page background baseline",
           "$extensions": {
@@ -4185,7 +4185,7 @@
           }
         },
         "900": {
-          "$value": "#0e1012",
+          "$value": "#141719",
           "$type": "color",
           "$description": "backdrop — the recessed mat below page",
           "$extensions": {
@@ -4211,9 +4211,9 @@
           }
         },
         "400": {
-          "$value": "#98a2ac",
+          "$value": "#a8b2bc",
           "$type": "color",
-          "$description": "muted text on graphite",
+          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -4221,9 +4221,9 @@
       },
       "red": {
         "200": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -8181,7 +8181,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#2c3238",
+          "$value": "#363d45",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -8189,7 +8189,7 @@
           }
         },
         "500": {
-          "$value": "#23282d",
+          "$value": "#2b3138",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -8197,7 +8197,7 @@
           }
         },
         "700": {
-          "$value": "#1a1e21",
+          "$value": "#22272c",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -8205,7 +8205,7 @@
           }
         },
         "800": {
-          "$value": "#14171a",
+          "$value": "#1b1f23",
           "$type": "color",
           "$description": "page background baseline",
           "$extensions": {
@@ -8213,7 +8213,7 @@
           }
         },
         "900": {
-          "$value": "#0e1012",
+          "$value": "#141719",
           "$type": "color",
           "$description": "backdrop — the recessed mat below page",
           "$extensions": {
@@ -8239,9 +8239,9 @@
           }
         },
         "400": {
-          "$value": "#98a2ac",
+          "$value": "#a8b2bc",
           "$type": "color",
-          "$description": "muted text on graphite",
+          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -8249,9 +8249,9 @@
       },
       "red": {
         "200": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -8953,7 +8953,7 @@
       },
       "text": {
         "accent": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-text-accent"
@@ -8967,14 +8967,14 @@
           }
         },
         "muted": {
-          "$value": "#98a2ac",
+          "$value": "#a8b2bc",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-text-muted"
           }
         },
         "inverse": {
-          "$value": "#14171a",
+          "$value": "#1b1f23",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-text-inverse"
@@ -9000,7 +9000,7 @@
         },
         "ghost": {
           "fg-hover": {
-            "$value": "#fa7263",
+            "$value": "#ff8d80",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-ghost-fg-hover"
@@ -9023,7 +9023,7 @@
         },
         "secondary": {
           "bg": {
-            "$value": "#23282d",
+            "$value": "#2b3138",
             "$type": "color",
             "$extensions": {
               "com.confetti.cssVariable": "--color-action-secondary-bg"
@@ -9127,7 +9127,7 @@
           }
         },
         "on-bold": {
-          "$value": "#0e1012",
+          "$value": "#141719",
           "$type": "color",
           "$description": "bold hues stay light in dark mode, so the deepest graphite reads on them",
           "$extensions": {
@@ -9145,35 +9145,35 @@
       },
       "surface": {
         "page": {
-          "$value": "#14171a",
+          "$value": "#1b1f23",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-page"
           }
         },
         "raised": {
-          "$value": "#1a1e21",
+          "$value": "#22272c",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-raised"
           }
         },
         "panel": {
-          "$value": "#23282d",
+          "$value": "#2b3138",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-panel"
           }
         },
         "card": {
-          "$value": "#2c3238",
+          "$value": "#363d45",
           "$type": "color",
           "$extensions": {
             "com.confetti.cssVariable": "--color-surface-card"
           }
         },
         "backdrop": {
-          "$value": "#0e1012",
+          "$value": "#141719",
           "$type": "color",
           "$description": "recessed mat — the deepest graphite, below page",
           "$extensions": {
@@ -9259,7 +9259,7 @@
             }
           },
           "text": {
-            "$value": "#fa7263",
+            "$value": "#ff8d80",
             "$type": "color",
             "$description": "danger AS TEXT — the same lift brand-as-text takes, so it clears AA on card (4.72:1)",
             "$extensions": {
@@ -10512,7 +10512,7 @@
         }
       },
       "fg": {
-        "$value": "#0e1012",
+        "$value": "#141719",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-fg"
@@ -10533,7 +10533,7 @@
         }
       },
       "fg-subtle-neutral": {
-        "$value": "#98a2ac",
+        "$value": "#a8b2bc",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-fg-subtle-neutral"
@@ -10590,7 +10590,7 @@
           }
         },
         "neutral": {
-          "$value": "#1a1e21",
+          "$value": "#22272c",
           "$type": "other",
           "$description": "paper fill — a badge that isn't a category",
           "$extensions": {
@@ -10816,7 +10816,7 @@
       },
       "secondary": {
         "bg": {
-          "$value": "#23282d",
+          "$value": "#2b3138",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-bg"
@@ -10906,7 +10906,7 @@
           }
         },
         "fg-hover": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-ghost-fg-hover"
@@ -10923,14 +10923,14 @@
     },
     "card": {
       "bg": {
-        "$value": "#2c3238",
+        "$value": "#363d45",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-bg"
         }
       },
       "bg-raised": {
-        "$value": "#1a1e21",
+        "$value": "#22272c",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-bg-raised"
@@ -10944,7 +10944,7 @@
         }
       },
       "fg-muted": {
-        "$value": "#98a2ac",
+        "$value": "#a8b2bc",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-fg-muted"
@@ -11176,7 +11176,7 @@
       },
       "inline": {
         "bg": {
-          "$value": "#23282d",
+          "$value": "#2b3138",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--code-inline-bg"
@@ -11295,14 +11295,14 @@
         }
       },
       "color-muted": {
-        "$value": "#98a2ac",
+        "$value": "#a8b2bc",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-muted"
         }
       },
       "color-accent": {
-        "$value": "#fa7263",
+        "$value": "#ff8d80",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-accent"
@@ -11311,7 +11311,7 @@
     },
     "modal": {
       "bg": {
-        "$value": "#2c3238",
+        "$value": "#363d45",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-bg"
@@ -11325,7 +11325,7 @@
         }
       },
       "fg-muted": {
-        "$value": "#98a2ac",
+        "$value": "#a8b2bc",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-fg-muted"
@@ -11529,7 +11529,7 @@
         }
       },
       "track-bg": {
-        "$value": "#23282d",
+        "$value": "#2b3138",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-track-bg"
@@ -11565,7 +11565,7 @@
         }
       },
       "thumb-bg": {
-        "$value": "#2c3238",
+        "$value": "#363d45",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-bg"
@@ -11630,7 +11630,7 @@
         }
       },
       "value-color": {
-        "$value": "#98a2ac",
+        "$value": "#a8b2bc",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-value-color"
@@ -11696,7 +11696,7 @@
         }
       },
       "bg": {
-        "$value": "#23282d",
+        "$value": "#2b3138",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-bg"
@@ -11726,7 +11726,7 @@
         }
       },
       "icon-color": {
-        "$value": "#23282d",
+        "$value": "#2b3138",
         "$type": "other",
         "$description": "the glyph sits ON the thumb, so it takes the track's fill",
         "$extensions": {
@@ -11793,7 +11793,7 @@
     },
     "tabs": {
       "track-bg": {
-        "$value": "#23282d",
+        "$value": "#2b3138",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
@@ -11839,7 +11839,7 @@
         }
       },
       "idle-fg": {
-        "$value": "#98a2ac",
+        "$value": "#a8b2bc",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
@@ -11916,7 +11916,7 @@
     },
     "toast": {
       "bg": {
-        "$value": "#1a1e21",
+        "$value": "#22272c",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-bg"
@@ -11930,7 +11930,7 @@
         }
       },
       "fg-muted": {
-        "$value": "#98a2ac",
+        "$value": "#a8b2bc",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-fg-muted"
@@ -12005,14 +12005,14 @@
           }
         },
         "danger": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-danger"
           }
         },
         "neutral": {
-          "$value": "#98a2ac",
+          "$value": "#a8b2bc",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-neutral"
@@ -12028,14 +12028,14 @@
           }
         },
         "danger": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-danger"
           }
         },
         "neutral": {
-          "$value": "#98a2ac",
+          "$value": "#a8b2bc",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-neutral"
@@ -12216,7 +12216,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#2c3238",
+          "$value": "#363d45",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -12224,7 +12224,7 @@
           }
         },
         "500": {
-          "$value": "#23282d",
+          "$value": "#2b3138",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -12232,7 +12232,7 @@
           }
         },
         "700": {
-          "$value": "#1a1e21",
+          "$value": "#22272c",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -12240,7 +12240,7 @@
           }
         },
         "800": {
-          "$value": "#14171a",
+          "$value": "#1b1f23",
           "$type": "color",
           "$description": "page background baseline",
           "$extensions": {
@@ -12248,7 +12248,7 @@
           }
         },
         "900": {
-          "$value": "#0e1012",
+          "$value": "#141719",
           "$type": "color",
           "$description": "backdrop — the recessed mat below page",
           "$extensions": {
@@ -12274,9 +12274,9 @@
           }
         },
         "400": {
-          "$value": "#98a2ac",
+          "$value": "#a8b2bc",
           "$type": "color",
-          "$description": "muted text on graphite",
+          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -12284,9 +12284,9 @@
       },
       "red": {
         "200": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -16252,7 +16252,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#2c3238",
+          "$value": "#363d45",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -16260,7 +16260,7 @@
           }
         },
         "500": {
-          "$value": "#23282d",
+          "$value": "#2b3138",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -16268,7 +16268,7 @@
           }
         },
         "700": {
-          "$value": "#1a1e21",
+          "$value": "#22272c",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -16276,7 +16276,7 @@
           }
         },
         "800": {
-          "$value": "#14171a",
+          "$value": "#1b1f23",
           "$type": "color",
           "$description": "page background baseline",
           "$extensions": {
@@ -16284,7 +16284,7 @@
           }
         },
         "900": {
-          "$value": "#0e1012",
+          "$value": "#141719",
           "$type": "color",
           "$description": "backdrop — the recessed mat below page",
           "$extensions": {
@@ -16310,9 +16310,9 @@
           }
         },
         "400": {
-          "$value": "#98a2ac",
+          "$value": "#a8b2bc",
           "$type": "color",
-          "$description": "muted text on graphite",
+          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -16320,9 +16320,9 @@
       },
       "red": {
         "200": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }
@@ -17328,7 +17328,7 @@
             }
           },
           "text": {
-            "$value": "#fa7263",
+            "$value": "#ff8d80",
             "$type": "color",
             "$description": "danger AS TEXT — the same lift brand-as-text takes, so it clears AA on card (4.72:1)",
             "$extensions": {
@@ -20069,7 +20069,7 @@
           }
         },
         "danger": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-danger"
@@ -20092,7 +20092,7 @@
           }
         },
         "danger": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-danger"
@@ -20280,7 +20280,7 @@
       },
       "graphite": {
         "400": {
-          "$value": "#2c3238",
+          "$value": "#363d45",
           "$type": "color",
           "$description": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark",
           "$extensions": {
@@ -20288,7 +20288,7 @@
           }
         },
         "500": {
-          "$value": "#23282d",
+          "$value": "#2b3138",
           "$type": "color",
           "$description": "panel",
           "$extensions": {
@@ -20296,7 +20296,7 @@
           }
         },
         "700": {
-          "$value": "#1a1e21",
+          "$value": "#22272c",
           "$type": "color",
           "$description": "raised",
           "$extensions": {
@@ -20304,7 +20304,7 @@
           }
         },
         "800": {
-          "$value": "#14171a",
+          "$value": "#1b1f23",
           "$type": "color",
           "$description": "page background baseline",
           "$extensions": {
@@ -20312,7 +20312,7 @@
           }
         },
         "900": {
-          "$value": "#0e1012",
+          "$value": "#141719",
           "$type": "color",
           "$description": "backdrop — the recessed mat below page",
           "$extensions": {
@@ -20338,9 +20338,9 @@
           }
         },
         "400": {
-          "$value": "#98a2ac",
+          "$value": "#a8b2bc",
           "$type": "color",
-          "$description": "muted text on graphite",
+          "$description": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--color-chalk-400"
           }
@@ -20348,9 +20348,9 @@
       },
       "red": {
         "200": {
-          "$value": "#fa7263",
+          "$value": "#ff8d80",
           "$type": "color",
-          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent",
+          "$description": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-200"
           }

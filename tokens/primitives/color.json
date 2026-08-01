@@ -22,24 +22,24 @@
       "a86": { "value": "rgba(26, 21, 13, 0.86)", "comment": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)" }
     },
     "graphite": {
-      "$comment": "Confetti DARK surfaces — editorial neutral gray with a slight cool cast, the counterpart to cream in light mode. Numbered by luminance like ink: 400 lightest, 900 darkest. Deliberately NOT the warm ink ramp: ink is Confetti's light-mode text color, and reusing it for dark surfaces made the whole dark theme read brown.",
-      "400": { "value": "#2c3238", "comment": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark" },
-      "500": { "value": "#23282d", "comment": "panel" },
-      "700": { "value": "#1a1e21", "comment": "raised" },
-      "800": { "value": "#14171a", "comment": "page background baseline" },
-      "900": { "value": "#0e1012", "comment": "backdrop — the recessed mat below page" },
+      "$comment": "Confetti DARK surfaces — editorial neutral gray with a slight cool cast, the counterpart to cream in light mode. Deliberately not near-black: the page sits a step off the floor and `card` a clear step above the page, so a card reads as raised rather than as a slightly different shade of the same dark. Numbered by luminance like ink: 400 lightest, 900 darkest. Deliberately NOT the warm ink ramp: ink is Confetti's light-mode text color, and reusing it for dark surfaces made the whole dark theme read brown.",
+      "400": { "value": "#363d45", "comment": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark" },
+      "500": { "value": "#2b3138", "comment": "panel" },
+      "700": { "value": "#22272c", "comment": "raised" },
+      "800": { "value": "#1b1f23", "comment": "page background baseline" },
+      "900": { "value": "#141719", "comment": "backdrop — the recessed mat below page" },
       "a16": { "value": "rgba(232, 236, 240, 0.16)", "comment": "chalk at 16% — subtle border on graphite" }
     },
     "chalk": {
       "$comment": "Confetti DARK foreground neutrals — cool off-white, the counterpart to ink in light mode.",
       "100": { "value": "#e8ecf0", "comment": "primary text and borders on graphite" },
-      "400": { "value": "#98a2ac", "comment": "muted text on graphite" }
+      "400": { "value": "#a8b2bc", "comment": "muted text on graphite — lifted alongside the surfaces so it still clears AA on `card`, the lightest of them (5.11:1)" }
     },
     "red": {
       "500": { "value": "#c40000", "comment": "confetti brand Red — light/HC surfaces" },
       "400": { "value": "#e33b2e", "comment": "confetti brand Red, lifted" },
       "300": { "value": "#f04b3a", "comment": "confetti brand Red, lifted — reads on the darker surfaces but not on card" },
-      "200": { "value": "#fa7263", "comment": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.72:1) — the dark-mode accent" },
+      "200": { "value": "#ff8d80", "comment": "confetti brand Red, lifted enough to read AS TEXT on EVERY dark surface, card included (4.91:1) — the dark-mode accent" },
       "600": { "value": "#a80000", "comment": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout." }
     },
     "green": {

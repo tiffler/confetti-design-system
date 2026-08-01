@@ -33,15 +33,15 @@
   --color-ink-a18: rgba(46, 38, 24, 0.18);
   --color-ink-a12: rgba(46, 38, 24, 0.12);
   --color-ink-a86: rgba(26, 21, 13, 0.86);
-  --color-graphite-400: #2c3238;
-  --color-graphite-500: #23282d;
-  --color-graphite-700: #1a1e21;
-  --color-graphite-800: #14171a;
-  --color-graphite-900: #0e1012;
+  --color-graphite-400: #363d45;
+  --color-graphite-500: #2b3138;
+  --color-graphite-700: #22272c;
+  --color-graphite-800: #1b1f23;
+  --color-graphite-900: #141719;
   --color-graphite-a16: rgba(232, 236, 240, 0.16);
   --color-chalk-100: #e8ecf0;
-  --color-chalk-400: #98a2ac;
-  --color-red-200: #fa7263;
+  --color-chalk-400: #a8b2bc;
+  --color-red-200: #ff8d80;
   --color-red-300: #f04b3a;
   --color-red-400: #e33b2e;
   --color-red-500: #c40000;
@@ -497,18 +497,18 @@
 }
 
 [data-mode="dark"] {
-  --color-surface-page: #14171a;
-  --color-surface-raised: #1a1e21;
-  --color-surface-panel: #23282d;
-  --color-surface-card: #2c3238;
-  --color-surface-backdrop: #0e1012;
+  --color-surface-page: #1b1f23;
+  --color-surface-raised: #22272c;
+  --color-surface-panel: #2b3138;
+  --color-surface-card: #363d45;
+  --color-surface-backdrop: #141719;
   --color-text-primary: #e8ecf0;
-  --color-text-muted: #98a2ac;
-  --color-text-inverse: #14171a;
+  --color-text-muted: #a8b2bc;
+  --color-text-inverse: #1b1f23;
   --color-border-default: #e8ecf0;
   --color-border-subtle: rgba(232, 236, 240, 0.16);
   --color-border-none: transparent;
-  --color-action-secondary-bg: #23282d;
+  --color-action-secondary-bg: #2b3138;
   --color-action-secondary-fg: #e8ecf0;
   --color-action-ghost-bg: transparent;
   --color-action-ghost-fg: #e8ecf0;
@@ -519,13 +519,13 @@
   --color-status-success-on-subtle: #e8ecf0;
   --color-status-danger-bg: #c40000;
   --color-status-danger-fg: #ffffff;
-  --color-status-danger-text: #fa7263;
+  --color-status-danger-text: #ff8d80;
   --color-status-danger-deep: #a80000;
   --color-accent-purple-subtle: #322a47;
   --color-accent-teal-subtle: #1b3b38;
   --color-accent-orange-subtle: #43331c;
   --color-accent-pink-subtle: #43293c;
-  --color-accent-on-bold: #0e1012;
+  --color-accent-on-bold: #141719;
   --color-accent-on-subtle: #e8ecf0;
   --shadow-lift: 3px 3px 0px 0px #e8ecf0;
   --shadow-button-lift: 3px 3px 0px 0px #e8ecf0;
@@ -696,8 +696,8 @@
 
 /* Theme override (own neutrals / a11y lift) — see tokens/overrides/confetti.dark.json */
 [data-theme="confetti"][data-mode="dark"] {
-  --color-text-accent: #fa7263;
-  --color-action-ghost-fg-hover: #fa7263;
+  --color-text-accent: #ff8d80;
+  --color-action-ghost-fg-hover: #ff8d80;
   --color-accent-purple-bold: #c9a4f5;
   --color-accent-teal-bold: #7ce0cd;
   --color-accent-orange-bold: #f7bf6a;
