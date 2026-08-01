@@ -46,16 +46,6 @@ export default meta;
 
 export const All: StoryObj = {
   name: 'All tokens',
-  parameters: {
-    /**
-     * Not snapshotted. Every token in the build on one page is ~21,000px tall — three times
-     * the next largest story here — and a page that size is both expensive to capture and
-     * worthless as a regression subject: change one colour and the diff is the whole index,
-     * so the only rational response is to approve it blind. The seven per-category pages
-     * below cover the same content at a size where a diff still means something.
-     */
-    chromatic: { disableSnapshot: true },
-  },
   render: () => (
     <TokenPage
       title="Every token"

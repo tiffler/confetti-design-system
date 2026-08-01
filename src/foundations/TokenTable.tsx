@@ -267,10 +267,17 @@ export function TokenTable({
     ...mono,
     textAlign: 'left',
     padding: 'var(--space-inset-xs) var(--space-inline)',
-    borderBottom: 'var(--border-width-default) solid var(--color-border-default)',
+    /* An inset shadow, not a border. The table is `border-collapse: collapse`, where borders
+       are painted by the table rather than by the cell — so a sticky header's border stays
+       behind with the rows while the header itself travels, and the head ends up with no
+       rule under it. An inset shadow is painted by the element, so it comes along. */
+    boxShadow: 'inset 0 calc(-1 * var(--border-width-default)) 0 var(--color-border-default)',
     position: 'sticky',
     top: 0,
     background: 'var(--color-surface-page)',
+    /* Without this the header is in the right place and invisible: the rows come later in
+       the DOM, so they paint over a sticky cell that has no stacking order of its own. */
+    zIndex: 1,
   };
   const td: CSSProperties = {
     padding: 'var(--space-inset-xs) var(--space-inline)',
@@ -321,7 +328,26 @@ export function TokenTable({
           Nothing matches “{query}”.
         </p>
       ) : (
-        visible.map((category) => (
+        /* The results scroll inside a fixed region rather than growing the page.
+           Two reasons, and the second is the one that bites: with 471 tokens the page ran to
+           21,000px, which is a poor reading experience — the search box scrolls out of sight
+           the moment you start looking — and it is far past what a snapshot tool will
+           capture, which is exactly how this page broke the visual-regression build.
+           A bounded region keeps the toolbar in view and the page a constant height whatever
+           the token count. The sticky column headers now stick to this box, not the page. */
+        <div
+          style={{
+            maxHeight: '70vh',
+            /* Both axes on ONE element. `position: sticky` resolves against the nearest
+               scrolling ancestor, so a per-table `overflow-x` wrapper would capture the
+               column headers and they would scroll away with the rows instead of sticking. */
+            overflow: 'auto',
+            display: 'grid',
+            gap: 'var(--space-stack)',
+            alignContent: 'start',
+          }}
+        >
+          {visible.map((category) => (
           <section key={category.key} style={{ display: 'grid', gap: 'var(--space-inline)' }}>
             <h3
               style={{
@@ -337,7 +363,7 @@ export function TokenTable({
               </span>
             </h3>
 
-            <div style={{ overflowX: 'auto' }}>
+            <div>
               <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <thead>
                   <tr>
@@ -438,7 +464,8 @@ export function TokenTable({
               </table>
             </div>
           </section>
-        ))
+          ))}
+        </div>
       )}
     </div>
   );
