@@ -24,6 +24,15 @@ export type Mode = 'light' | 'dark';
 export const THEMES: Theme[] = ['confetti', 'adventure', 'neon'];
 export const MODES: Mode[] = ['light', 'dark'];
 
+/**
+ * The head of each axis is that axis's default. Everything that needs to start
+ * somewhere — the provider's own props, the Storybook toolbar's initial globals,
+ * the Foundations pages' seed value — reads these rather than repeating the
+ * literals, so reordering an axis moves the default in one edit instead of four.
+ */
+export const DEFAULT_THEME: Theme = THEMES[0];
+export const DEFAULT_MODE: Mode = MODES[0];
+
 type ThemeContextValue = {
   theme: Theme;
   mode: Mode;
@@ -48,8 +57,8 @@ export type ThemeProviderProps = {
 
 export function ThemeProvider({
   children,
-  theme: themeProp = 'confetti',
-  mode: modeProp = 'light',
+  theme: themeProp = DEFAULT_THEME,
+  mode: modeProp = DEFAULT_MODE,
   target = 'root',
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(themeProp);

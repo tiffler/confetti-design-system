@@ -127,7 +127,8 @@ const NOTES: Note[] = [
   },
 ];
 
-/* `TabHue`, not `BadgeHue` — see the note in Dashboard: the sets overlap but differ. */
+/* `TabHue`, not `BadgeHue`: the two overlap but are not the same set — a tab is a category,
+   so it has no `success`. */
 const FILTERS: Array<{ value: 'all' | Category; label: string; hue: TabHue }> = [
   { value: 'all', label: 'All', hue: 'neutral' },
   { value: 'product', label: 'Product', hue: 'teal' },

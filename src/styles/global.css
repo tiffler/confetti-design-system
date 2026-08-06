@@ -7,10 +7,15 @@
 @import 'tailwindcss';
 @config '../../tailwind.config.js';
 
-/* Fallback so a page renders themed before a ThemeProvider mounts. */
+/* Fallback so a page renders themed before a ThemeProvider mounts.
+
+   The mode blocks are keyed on [data-mode], so with neither attribute set yet
+   nothing resolves these two roles. Point them at the same primitives the light
+   mode aliases (tokens/modes/light.json) rather than restating the values —
+   copied hex drifts the moment the palette moves. */
 :root:not([data-theme]) {
-  --color-surface-page: #ede4d3;
-  --color-text-primary: #2e2618;
+  --color-surface-page: var(--color-cream-300);
+  --color-text-primary: var(--color-ink-600);
 }
 
 /* Global keyboard focus ring — mode-driven (2px ink/cream in light/dark).

@@ -14,7 +14,8 @@
     "$comment": "Hover lightness bump (CSS filter: brightness) for themes whose controls change lightness instead of lifting.",
     "brightness": {
       "none": { "value": "1", "comment": "no change" },
-      "lighten": { "value": "1.1", "comment": "10% brighter on hover" }
+      "lighten": { "value": "1.1", "comment": "10% brighter on hover" },
+      "lighten-strong": { "value": "1.22", "comment": "22% brighter — the bump a theme needs when brightness is carrying the whole hover, with no lift to help. 1.1 reads on a pale fill and all but vanishes on a deep one, which is what left Adventure's pine buttons looking inert." }
     }
   },
   "motion": {

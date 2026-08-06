@@ -40,7 +40,12 @@
       "400": { "value": "#e33b2e", "comment": "confetti brand Red, lifted" },
       "300": { "value": "#f04b3a", "comment": "confetti brand Red, lifted — reads on the darker surfaces but not on card (3.50:1). Only usable as the dark accent when `card` is close to black, which it no longer is." },
       "200": { "value": "#ff8d80", "comment": "confetti brand Red, lifted furthest — the palest step, and the ONLY one that reads AS TEXT on every dark surface including `card` (4.96:1). This is also the ceiling that fixes how light `card` can go: there is nothing paler to fall back on." },
-      "600": { "value": "#a80000", "comment": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout." }
+      "600": { "value": "#a80000", "comment": "deepened Red — kept as the danger family's dark step. No longer the hazard stripe: that pair moved to yellow/black (see the yellow family below)." }
+    },
+    "yellow": {
+      "$comment": "HAZARD yellow — the caution-tape ground under black stripes on a danger control. Like green it is not a brand hue and not one of the four confetti accents: it means one thing, so it sits on the status roles and every theme inherits it rather than repointing it. Saturated on purpose — the destructive control is the one place in the system that is allowed to shout.",
+      "500": { "value": "#f5c518", "comment": "hazard yellow on a light page — carries black at 12.88:1, and the black stripes read as stripes rather than texture" },
+      "600": { "value": "#d9ad0a", "comment": "the deeper step, for DARK mode where the 500 glares against a near-black page. Still carries black at 9.93:1." }
     },
     "green": {
       "$comment": "STATUS green — success. Not a brand hue and not one of the four confetti accents: it means one thing, so it sits on the status roles and is shared by every theme rather than being repointed per brand.",

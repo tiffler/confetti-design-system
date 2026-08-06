@@ -63,12 +63,27 @@ export function luminance([r, g, b]: Rgb): number {
   return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b);
 }
 
+/**
+ * Compositing backdrop of last resort, for when the caller has no page surface to
+ * offer or hands over something unparseable. White is the identity a browser
+ * composites against on a bare canvas, not a design value — every caller that has a
+ * real surface passes it, so this only decides what an alpha token flattens onto in
+ * the moment before the token index has loaded.
+ *
+ * This is the single definition. Callers pass `undefined` rather than restating it.
+ */
+const FALLBACK_BACKDROP: Rgb = [255, 255, 255];
+
+function backdropRgb(backdrop?: string): Rgb {
+  const parsed = backdrop === undefined ? null : parseColor(backdrop);
+  return parsed ? [parsed[0], parsed[1], parsed[2]] : FALLBACK_BACKDROP;
+}
+
 /** Relative luminance of a token value, flattened onto `backdrop` if translucent. */
-export function luminanceOf(value: string, backdrop = '#ffffff'): number | null {
+export function luminanceOf(value: string, backdrop?: string): number | null {
   const parsed = parseColor(value);
   if (!parsed) return null;
-  const bg = parseColor(backdrop);
-  return luminance(flatten(parsed, bg ? [bg[0], bg[1], bg[2]] : [255, 255, 255]));
+  return luminance(flatten(parsed, backdropRgb(backdrop)));
 }
 
 /**
@@ -80,16 +95,13 @@ export function luminanceOf(value: string, backdrop = '#ffffff'): number | null 
  * `ink-a12` measured 14.9:1 against cream that way, while the pixels on screen are
  * closer to 1.3:1.
  */
-export function contrastRatio(fgValue: string, bgValue: string, backdrop = '#ffffff'): number | null {
+export function contrastRatio(fgValue: string, bgValue: string, backdrop?: string): number | null {
   const fg = parseColor(fgValue);
   const bgParsed = parseColor(bgValue);
   if (!fg || !bgParsed) return null;
 
-  const back = parseColor(backdrop);
-  const backRgb: Rgb = back ? [back[0], back[1], back[2]] : [255, 255, 255];
-
   // Flatten the background first, then the foreground onto the result.
-  const bg = flatten(bgParsed, backRgb);
+  const bg = flatten(bgParsed, backdropRgb(backdrop));
   const [hi, lo] = [luminance(flatten(fg, bg)), luminance(bg)].sort((a, b) => b - a);
   return (hi + 0.05) / (lo + 0.05);
 }

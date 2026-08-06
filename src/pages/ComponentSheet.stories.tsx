@@ -244,7 +244,7 @@ function ComponentSheet() {
   return (
     <Page width={1280}>
       <Stack gap="var(--space-2)">
-        <Eyebrow>Specimen sheet</Eyebrow>
+        <Eyebrow>Component sheet</Eyebrow>
         <Title>Every component, every state</Title>
         <Lede>
           Ten components, their variants and their interaction states, pinned side by side.

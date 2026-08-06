@@ -35,10 +35,11 @@
         "on-subtle": { "value": "{color.green.700}" }
       },
       "danger": {
-        "bg": { "value": "{color.red.500}", "comment": "the same red the brand uses — in Confetti they coincide; in another theme danger stays red while the brand goes wherever it likes" },
-        "fg": { "value": "{color.base.white}" },
+        "$comment": "Danger splits by role. As a FILL it is caution tape — yellow ground, black label, black stripes — because a destructive control should be identifiable before the label is read. As TEXT it stays red: tape is an affordance on a control, not a way to set a sentence.",
+        "bg": { "value": "{color.yellow.500}", "comment": "hazard yellow ground, carrying a black label at 12.88:1" },
+        "fg": { "value": "{color.base.black}", "comment": "black on the tape — the other half of the caution pair" },
         "text": { "value": "{color.red.500}", "comment": "danger AS TEXT — 4.97:1 on the page, 6.27:1 on card" },
-        "deep": { "value": "{color.red.600}", "comment": "the hazard stripe on a danger control" }
+        "deep": { "value": "{color.base.black}", "comment": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture" }
       }
     },
     "accent": {

@@ -7,6 +7,7 @@ import { Button } from './components/Button/Button';
 import { Card } from './components/Card/Card';
 import { Badge } from './components/Badge/Badge';
 import { Icon } from './components/Icon/Icon';
+import { useTheme, DEFAULT_THEME, type Theme } from './theme/ThemeProvider';
 import pkg from '../package.json';
 import './Cover.css';
 
@@ -20,7 +21,20 @@ const LAST_UPDATED = 'July 27, 2026';
 // (Modal — the sixth component, and the first consumer of the scrim — v0.3.0)
 const PORTFOLIO = 'https://tienmedia.com';
 
+/**
+ * What the cover calls the theme it is currently wearing. The head of THEMES is the system's
+ * own starting point rather than a brand of its own, so it shows as "Default" — every other
+ * theme is named for itself. Derived from DEFAULT_THEME rather than matched against the
+ * string 'confetti', so reordering the axis moves this label with it.
+ */
+function themeLabel(theme: Theme): string {
+  if (theme === DEFAULT_THEME) return 'Default';
+  return theme.charAt(0).toUpperCase() + theme.slice(1);
+}
+
 function Cover() {
+  const { theme } = useTheme();
+
   return (
     <div style={{ display: 'grid', placeItems: 'center', minHeight: '82vh' }}>
       <div
@@ -42,18 +56,38 @@ function Cover() {
           </Badge>
         </div>
 
-        <h1
-          style={{
-            fontFamily: 'var(--font-family-display)',
-            fontSize: 'var(--font-size-display)',
-            color: 'var(--color-text-primary)',
-            lineHeight: 'var(--font-leading-heading)',
-            margin: 0,
-          }}
-        >
-          {/* Decorative — the word beside it carries the meaning, so no `label`. */}
-          <Icon icon={ConfettiGlyph} size="lg" tone="accent" className="cf-cover__glyph" /> Confetti
-        </h1>
+        {/* Title and theme name are one unit on their own tighter gap — as separate children
+            of the outer grid they would sit a full stack-lg apart and read as two blocks. */}
+        <div style={{ display: 'grid', gap: 'var(--space-inset-sm)', justifyItems: 'center' }}>
+          <h1
+            style={{
+              fontFamily: 'var(--font-family-display)',
+              fontSize: 'var(--font-size-display)',
+              color: 'var(--color-text-primary)',
+              lineHeight: 'var(--font-leading-heading)',
+              margin: 0,
+            }}
+          >
+            {/* Decorative — the word beside it carries the meaning, so no `label`. */}
+            <Icon icon={ConfettiGlyph} size="lg" tone="accent" className="cf-cover__glyph" /> Confetti
+          </h1>
+
+          {/* The theme currently selected in the toolbar, in that theme's own accent — so the
+              cover states which of the three you are looking at instead of leaving you to
+              infer it from the colors. */}
+          <p
+            style={{
+              fontFamily: 'var(--font-family-label)',
+              fontSize: 'var(--font-size-label)',
+              letterSpacing: 'var(--font-tracking-label)',
+              textTransform: 'uppercase',
+              color: 'var(--color-text-accent)',
+              margin: 0,
+            }}
+          >
+            {themeLabel(theme)}
+          </p>
+        </div>
 
         <Card surface="raised" eyebrow="What's inside" title="Themeable token system">
           Primitive → semantic → component tokens and a brand-kit contract: define a handful of

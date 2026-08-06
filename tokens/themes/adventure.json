@@ -28,8 +28,8 @@
     "label": { "value": "{font.family.mono}" }
   },
   "interaction": {
-    "$comment": "Adventure buttons do NOT lift — button-lift = rest (no move) and the hover shadow is dropped in the overrides (shadow.button-lift = none). Instead they get 10% brighter on hover.",
+    "$comment": "Adventure buttons still do NOT lift — button-lift = rest (no move), and that is what keeps this theme's controls distinct from Confetti's. Prominence on hover comes from the other two channels instead: a strong lightness bump, plus the hard trail shadow restored in the overrides (shadow.button-lift). The button pops off the page without travelling.",
     "button-lift": { "value": "{motion.rest}" },
-    "hover-brightness": { "value": "{effect.brightness.lighten}" }
+    "hover-brightness": { "value": "{effect.brightness.lighten-strong}" }
   }
 }

@@ -147,8 +147,9 @@ export function ColorGrid({ prefix, sort = 'luminance' }: { prefix: string; sort
   const all = useTokens();
 
   // Translucent tokens are flattened onto the page surface before ranking, so they
-  // sort by what renders rather than by their raw alpha value.
-  const page = all['color-surface-page']?.value ?? '#ffffff';
+  // sort by what renders rather than by their raw alpha value. Undefined until the
+  // index resolves; contrast.ts owns the fallback backdrop.
+  const page = all['color-surface-page']?.value;
   const ink = all['color-text-primary']?.value;
   const cream = all['color-text-inverse']?.value;
 
@@ -240,7 +241,7 @@ export function ContrastPairs({
 }) {
   const all = useTokens();
 
-  const page = all['color-surface-page']?.value ?? '#ffffff';
+  const page = all['color-surface-page']?.value;
 
   const passing = pairs
     .map((p) => {

@@ -8,7 +8,7 @@
   "scripts": {
     "tokens": "npm run audit:tokens && node style-dictionary/build.js",
     "audit:tokens": "node style-dictionary/audit-layers.js",
-    "storybook": "npm run tokens && storybook dev -p 6006",
+    "storybook": "npm run tokens && storybook dev",
     "build-storybook": "npm run tokens && storybook build",
     "chromatic": "chromatic --exit-zero-on-changes",
     "typecheck": "tsc --noEmit"
@@ -20,15 +20,15 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "^10.5.3",
-    "@storybook/react-vite": "^10.5.3",
+    "@storybook/addon-docs": "^10.5.7",
+    "@storybook/react-vite": "^10.5.7",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^6.0.4",
     "chromatic": "^18.1.0",
     "postcss": "^8.5.21",
-    "storybook": "^10.5.3",
+    "storybook": "^10.5.7",
     "style-dictionary": "^5.5.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",

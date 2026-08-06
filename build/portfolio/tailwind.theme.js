@@ -32,6 +32,8 @@ export default {
     "red-400": "var(--color-red-400)",
     "red-500": "var(--color-red-500)",
     "red-600": "var(--color-red-600)",
+    "yellow-500": "var(--color-yellow-500)",
+    "yellow-600": "var(--color-yellow-600)",
     "green-100": "var(--color-green-100)",
     "green-400": "var(--color-green-400)",
     "green-600": "var(--color-green-600)",

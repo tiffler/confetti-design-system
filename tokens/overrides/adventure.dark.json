@@ -41,7 +41,7 @@
   },
   "shadow": {
     "lift": { "value": "3px 3px 0px 0px {color.sand.200}", "comment": "cards still lift" },
-    "button-lift": { "value": "{shadow.none}", "comment": "buttons do NOT lift — they brighten on hover instead" }
+    "button-lift": { "value": "3px 3px 0px 0px {color.sand.200}", "comment": "buttons still do NOT move — button-lift (the transform) stays at rest. The shadow appears under a stationary button, which reads as it pressing outward rather than sliding, and gives the hover a second cue beyond the lightness bump." }
   },
   "focus": {
     "ring": {

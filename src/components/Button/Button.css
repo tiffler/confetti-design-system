@@ -82,10 +82,10 @@
 }
 
 /* Danger: primary's shape, hazard-taped. The stripes are a background-image sitting on the
-   fill rather than a second element, so nothing changes about the box — and because the
-   stripe color is a deepened step of the fill's own red (1.26:1 against it), the diagonal
-   reads as texture at a glance and only resolves into stripes up close. That is the point:
-   a destructive control should feel different in peripheral vision without shouting.
+   fill rather than a second element, so nothing changes about the box — and the pair is the
+   caution-tape one, black on yellow, at full contrast. Unlike every other surface in the
+   system this one is meant to shout: a destructive control should be identifiable in
+   peripheral vision, before the label has been read.
 
    `background-color` + `background-image` rather than the `background` shorthand, so the
    two can't clobber each other. Each band is one stripe-width; the pattern repeats at
@@ -125,6 +125,32 @@
   border-color: var(--button-danger-border);
 }
 
+/* The label rides on a solid plate of the fill, so the diagonals frame it instead of running
+   through it. Without this the black stripes and the black label share a ground and the words
+   are unreadable — the previous red-on-red pair got away with it because the stripe was barely
+   a shade off the fill. The plate is the content wrapper itself, so it tracks the label's width
+   and needs no second element; the stripes keep drifting behind it. */
+.cf-button--danger .cf-button__content {
+  background: var(--button-danger-bg);
+  padding: var(--button-danger-label-pad-y) var(--button-danger-label-pad-x);
+}
+
+/* Loading hides the content wrapper — and with it the plate, which is that wrapper's own
+   background — leaving the black spinner to spin against the black stripes, where it all but
+   disappears. So while loading the plate is drawn again as a pseudo-element, sized to the
+   spinner rather than to the label. `::before` paints beneath the spinner element that follows
+   it, so the ring stays on top of the clear colour. */
+.cf-button--danger.cf-button--loading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(var(--button-spinner-size) + var(--button-danger-label-pad-x) * 2);
+  height: calc(var(--button-spinner-size) + var(--button-danger-label-pad-y) * 2);
+  background: var(--button-danger-bg);
+}
+
 /* One tile of travel per loop — see the note above. Only `background-position` moves, so
    the label and the border stay perfectly still underneath. */
 @keyframes cf-button-danger-drift {
@@ -147,8 +173,9 @@
 /* --- Hover ---------------------------------------------------------------- */
 
 /* Filled variants respond on hover per the active theme: a lift onto a hard shadow
-   (Confetti), a lightness bump with no lift (Adventure), or a neon glow (Neon) —
-   all driven by component tokens the theme repoints. Ghost only shifts color. */
+   (Confetti), a strong lightness bump plus that hard shadow with no lift (Adventure), or a
+   neon glow (Neon) — all driven by component tokens the theme repoints. Ghost only shifts
+   color. */
 .cf-button--primary:hover:not([disabled]),
 .cf-button--secondary:hover:not([disabled]),
 .cf-button--danger:hover:not([disabled]),

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { addons } from 'storybook/preview-api';
 import tokenIndex from '../../build/portfolio/tokens.json';
-import type { Theme, Mode } from '../theme/ThemeProvider';
+import { DEFAULT_THEME, DEFAULT_MODE, type Theme, type Mode } from '../theme/ThemeProvider';
 
 export type TokenRecord = {
   value: string;
@@ -12,7 +12,7 @@ export type TokenRecord = {
 type TokenIndex = Record<string, Record<string, TokenRecord>>;
 type ThemeGlobals = { theme: Theme; mode: Mode };
 
-const DEFAULTS: ThemeGlobals = { theme: 'confetti', mode: 'light' };
+const DEFAULTS: ThemeGlobals = { theme: DEFAULT_THEME, mode: DEFAULT_MODE };
 
 // Event name literals rather than the @storybook/core-events import, whose
 // module path has moved between Storybook majors.

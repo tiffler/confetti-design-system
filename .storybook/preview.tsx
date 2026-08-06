@@ -1,5 +1,21 @@
 import type { Preview } from '@storybook/react-vite';
-import { ThemeProvider, THEMES, MODES, type Theme, type Mode } from '../src/theme/ThemeProvider';
+// Loaded for its side effect only, and the order matters. Storybook's interactions
+// loader replaces HTMLElement.prototype.focus with a getter that assumes `this` is an
+// element; react-aria (inside Storybook's own docs UI) later reads that property off
+// the prototype to save the original, which fires the getter with `this` bound to the
+// prototype and throws "Illegal invocation". Rendering a story before opening a docs
+// page is exactly that order, so the docs chunk is pulled in here at preview boot —
+// react-aria then reads the pristine native focus and nothing throws.
+import '@storybook/addon-docs/blocks';
+import {
+  ThemeProvider,
+  THEMES,
+  MODES,
+  DEFAULT_THEME,
+  DEFAULT_MODE,
+  type Theme,
+  type Mode,
+} from '../src/theme/ThemeProvider';
 import '../src/styles/global.css';
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -17,10 +33,10 @@ const preview: Preview = {
           'Confetti',
           'Tokens',
           ['All tokens'],
+          'Pages',
           'Foundations',
           ['Color', 'Typography', 'Spacing', 'Elevation'],
           'Components',
-          'Pages',
         ],
       },
     },
@@ -49,8 +65,8 @@ const preview: Preview = {
   },
 
   initialGlobals: {
-    theme: 'confetti',
-    mode: 'light',
+    theme: DEFAULT_THEME,
+    mode: DEFAULT_MODE,
   },
 
   decorators: [

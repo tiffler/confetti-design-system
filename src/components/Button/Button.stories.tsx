@@ -34,7 +34,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Four variants sharing one footprint. Primary, secondary and danger lift onto a hard ink shadow on hover; ghost only shifts its text to the brand. Pressed is the inverse of hover — the sticker settles back down — so it resolves to the resting values in every theme. All values come from `--button-*` component tokens.\n\n**Danger** is the destructive action: primary\'s shape, but filled with the `status.danger` role rather than the brand — so it stays red in a theme whose brand is not — and hazard-striped with a deepened step of that same red. The stripes sit at just 1.26:1 against the fill — barely a shade. The 8px bands and the slow drift do the work, so the colour difference can stay almost nothing and the label never has to compete with it.\n\nUse the **state** control to pin hover, focus, or pressed: the CSS pairs each real pseudo-class with a `data-force` attribute, which is what lets a state be held still for a control or a snapshot.',
+          'Four variants sharing one footprint. Primary, secondary and danger all respond on hover in whatever way the active theme specifies — Confetti lifts onto a hard ink shadow, Adventure brightens hard and drops the same shadow without moving, Neon glows; ghost only shifts its text to the brand. Pressed is the inverse of hover — the sticker settles back down — so it resolves to the resting values in every theme. All values come from `--button-*` component tokens.\n\n**Danger** is the destructive action: primary\'s shape, but filled with the `status.danger` role rather than the brand — so it is caution tape in every theme, whatever the brand is doing. Black diagonals on a hazard-yellow ground, in 8px bands that drift slowly. This is the one control in the system built to shout: it should be identifiable in peripheral vision, before the label has been read.\n\nUse the **state** control to pin hover, focus, or pressed: the CSS pairs each real pseudo-class with a `data-force` attribute, which is what lets a state be held still for a control or a snapshot.',
       },
     },
   },
@@ -106,7 +106,7 @@ export const Danger: Story = {
     docs: {
       description: {
         story:
-          'The destructive action. It borrows primary\'s footprint and hover, so it never sits oddly next to one, and separates itself by texture instead of by size — the diagonal is a deepened step of the fill\'s own red, not a second colour. Because the fill comes from `status.danger` rather than the brand, it stays red in Adventure and Neon too.',
+          'The destructive action. It borrows primary\'s footprint and hover, so it never sits oddly next to one, and separates itself by texture instead of by size — black diagonals on a hazard-yellow ground, the caution-tape pair. Because the fill comes from `status.danger` rather than the brand, it is the same tape in Adventure and Neon too. Danger AS TEXT stays red: the tape is an affordance on a control, not a way to set a sentence.',
       },
     },
   },

@@ -35,10 +35,11 @@
         "on-subtle": { "value": "{color.chalk.100}" }
       },
       "danger": {
-        "bg": { "value": "{color.red.500}" },
-        "fg": { "value": "{color.base.white}" },
+        "$comment": "See the note in modes/light.json — danger is caution tape as a FILL and red as TEXT. Dark takes the deeper yellow step: the light one glares against a near-black page.",
+        "bg": { "value": "{color.yellow.600}", "comment": "hazard yellow, deepened for dark — carries a black label at 9.93:1" },
+        "fg": { "value": "{color.base.black}", "comment": "black on the tape, the same pair as light" },
         "text": { "value": "{color.red.200}", "comment": "danger AS TEXT — the palest red, and the same lift brand-as-text takes. It has to be the palest one: red.300 fails on Confetti's `card` (3.50:1) and on Adventure's #35492f and Neon's #2e1650 too, so no theme on this mode can afford the more saturated step." },
-        "deep": { "value": "{color.red.600}", "comment": "the hazard stripe on a danger control" }
+        "deep": { "value": "{color.base.black}", "comment": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture" }
       }
     },
     "accent": {

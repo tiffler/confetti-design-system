@@ -3,8 +3,8 @@
    Card puts everything you hand it as `children` into one `.cf-card__body` block. That is
    the right default — a card is a container, not a layout — but it means a footer inside
    the body has no flex context to pin to, and no way to reach the bottom of a card that
-   was stretched taller by its neighbour. A row of pricing cards then ends up with its CTAs
-   at four different heights.
+   was stretched taller by its neighbour. A row of cards with CTAs then ends up with those
+   CTAs at four different heights.
 
    `.pg-fill` opts a card's body into being a column that fills the card, so `margin-top:
    auto` on a last child does what it looks like it does. The gap is a custom property so

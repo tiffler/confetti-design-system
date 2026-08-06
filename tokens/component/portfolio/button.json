@@ -37,7 +37,7 @@
       "fg": { "value": "{color.action.secondary.fg}" },
       "border": { "value": "{color.border.default}" }
     },
-    "$comment-danger": "Danger is primary's shape in a different register: same footprint, same ink border, but the fill is the DANGER status rather than the brand — so it stays red in a theme whose brand isn't. The hazard stripes are a background-image over that fill, in a deepened step of the same red; the stripe geometry is a token so the texture scales with the system rather than being a magic number in the CSS.",
+    "$comment-danger": "Danger is primary's shape in a different register: same footprint, same ink border, but the fill is the DANGER status rather than the brand — so it is caution tape in every theme, whatever the brand is doing. The hazard stripes are a background-image over that fill, in black on the yellow ground; the stripe geometry is a token so the texture scales with the system rather than being a magic number in the CSS.",
     "danger": {
       "bg": { "value": "{color.status.danger.bg}" },
       "fg": { "value": "{color.status.danger.fg}" },
@@ -45,7 +45,10 @@
       "stripe": { "value": "{color.status.danger.deep}" },
       "stripe-width": { "value": "{space.inline}", "comment": "8px band, so the diagonal repeats every 16px" },
       "stripe-duration": { "value": "{motion.duration.ambient}", "comment": "one full pass of the pattern" },
-      "stripe-easing": { "value": "{motion.easing.ambient}" }
+      "stripe-easing": { "value": "{motion.easing.ambient}" },
+      "$comment-label-plate": "Full-contrast stripes and a black label cannot share one ground — the diagonals cut straight through the text. So the label sits on a solid plate of the fill, which is what printed hazard tape does too: the stripes frame the thing, the words stay on clean colour.",
+      "label-pad-x": { "value": "{space.inline}", "comment": "8px — one stripe-width of clear colour either side of the label" },
+      "label-pad-y": { "value": "{space.inset-xs}", "comment": "4px — enough that a diagonal never clips an ascender or a descender" }
     },
     "ghost": {
       "bg": { "value": "{color.action.ghost.bg}" },

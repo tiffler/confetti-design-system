@@ -228,9 +228,27 @@
         "600": {
           "$value": "#a80000",
           "$type": "color",
-          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$description": "deepened Red — kept as the danger family's dark step. No longer the hazard stripe: that pair moved to yellow/black (see the yellow family below).",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "yellow": {
+        "500": {
+          "$value": "#f5c518",
+          "$type": "color",
+          "$description": "hazard yellow on a light page — carries black at 12.88:1, and the black stripes read as stripes rather than texture",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-500"
+          }
+        },
+        "600": {
+          "$value": "#d9ad0a",
+          "$type": "color",
+          "$description": "the deeper step, for DARK mode where the 500 glares against a near-black page. Still carries black at 9.93:1.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-600"
           }
         }
       },
@@ -1188,15 +1206,17 @@
         },
         "danger": {
           "bg": {
-            "$value": "#c40000",
+            "$value": "#d9ad0a",
             "$type": "color",
+            "$description": "hazard yellow, deepened for dark — carries a black label at 9.93:1",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-bg"
             }
           },
           "fg": {
-            "$value": "#ffffff",
+            "$value": "#000000",
             "$type": "color",
+            "$description": "black on the tape, the same pair as light",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-fg"
             }
@@ -1210,9 +1230,9 @@
             }
           },
           "deep": {
-            "$value": "#a80000",
+            "$value": "#000000",
             "$type": "color",
-            "$description": "the hazard stripe on a danger control",
+            "$description": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-deep"
             }
@@ -1387,9 +1407,9 @@
         }
       },
       "button-lift": {
-        "$value": "none",
+        "$value": "3px 3px 0px 0px #ece2ce",
         "$type": "shadow",
-        "$description": "buttons do NOT lift — they brighten on hover instead",
+        "$description": "buttons still do NOT move — button-lift (the transform) stays at rest. The shadow appears under a stationary button, which reads as it pressing outward rather than sliding, and gives the hover a second cue beyond the lightness bump.",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-button-lift"
         }
@@ -1412,6 +1432,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
           }
+        },
+        "lighten-strong": {
+          "$value": "1.22",
+          "$type": "other",
+          "$description": "22% brighter — the bump a theme needs when brightness is carrying the whole hover, with no lift to help. 1.1 reads on a pale fill and all but vanishes on a deep one, which is what left Adventure's pine buttons looking inert.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--effect-brightness-lighten-strong"
+          }
         }
       },
       "brightness-rest": {
@@ -1423,7 +1451,7 @@
         }
       },
       "button-hover-brightness": {
-        "$value": "1.1",
+        "$value": "1.22",
         "$type": "other",
         "$description": "hover lightness multiplier for buttons that change lightness instead of lifting",
         "$extensions": {
@@ -2375,7 +2403,7 @@
         }
       },
       "hover-brightness": {
-        "$value": "1.1",
+        "$value": "1.22",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--interaction-hover-brightness"
@@ -2645,7 +2673,7 @@
         }
       },
       "shadow-hover": {
-        "$value": "none",
+        "$value": "3px 3px 0px 0px #ece2ce",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-shadow-hover"
@@ -2659,7 +2687,7 @@
         }
       },
       "hover-brightness": {
-        "$value": "1.1",
+        "$value": "1.22",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-hover-brightness"
@@ -2776,14 +2804,14 @@
       },
       "danger": {
         "bg": {
-          "$value": "#c40000",
+          "$value": "#d9ad0a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-bg"
           }
         },
         "fg": {
-          "$value": "#ffffff",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-fg"
@@ -2797,7 +2825,7 @@
           }
         },
         "stripe": {
-          "$value": "#a80000",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe"
@@ -2824,6 +2852,22 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe-easing"
+          }
+        },
+        "label-pad-x": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px — one stripe-width of clear colour either side of the label",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-x"
+          }
+        },
+        "label-pad-y": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — enough that a diagonal never clips an ascender or a descender",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-y"
           }
         }
       },
@@ -4255,9 +4299,27 @@
         "600": {
           "$value": "#a80000",
           "$type": "color",
-          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$description": "deepened Red — kept as the danger family's dark step. No longer the hazard stripe: that pair moved to yellow/black (see the yellow family below).",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "yellow": {
+        "500": {
+          "$value": "#f5c518",
+          "$type": "color",
+          "$description": "hazard yellow on a light page — carries black at 12.88:1, and the black stripes read as stripes rather than texture",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-500"
+          }
+        },
+        "600": {
+          "$value": "#d9ad0a",
+          "$type": "color",
+          "$description": "the deeper step, for DARK mode where the 500 glares against a near-black page. Still carries black at 9.93:1.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-600"
           }
         }
       },
@@ -5215,16 +5277,17 @@
         },
         "danger": {
           "bg": {
-            "$value": "#c40000",
+            "$value": "#f5c518",
             "$type": "color",
-            "$description": "the same red the brand uses — in Confetti they coincide; in another theme danger stays red while the brand goes wherever it likes",
+            "$description": "hazard yellow ground, carrying a black label at 12.88:1",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-bg"
             }
           },
           "fg": {
-            "$value": "#ffffff",
+            "$value": "#000000",
             "$type": "color",
+            "$description": "black on the tape — the other half of the caution pair",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-fg"
             }
@@ -5238,9 +5301,9 @@
             }
           },
           "deep": {
-            "$value": "#a80000",
+            "$value": "#000000",
             "$type": "color",
-            "$description": "the hazard stripe on a danger control",
+            "$description": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-deep"
             }
@@ -5415,9 +5478,9 @@
         }
       },
       "button-lift": {
-        "$value": "none",
+        "$value": "3px 3px 0px 0px #33301f",
         "$type": "shadow",
-        "$description": "buttons do NOT lift — they brighten on hover instead",
+        "$description": "buttons still do NOT move — button-lift (the transform) stays at rest. The shadow appears under a stationary button, which reads as it pressing outward rather than sliding, and gives the hover a second cue beyond the lightness bump.",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-button-lift"
         }
@@ -5440,6 +5503,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
           }
+        },
+        "lighten-strong": {
+          "$value": "1.22",
+          "$type": "other",
+          "$description": "22% brighter — the bump a theme needs when brightness is carrying the whole hover, with no lift to help. 1.1 reads on a pale fill and all but vanishes on a deep one, which is what left Adventure's pine buttons looking inert.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--effect-brightness-lighten-strong"
+          }
         }
       },
       "brightness-rest": {
@@ -5451,7 +5522,7 @@
         }
       },
       "button-hover-brightness": {
-        "$value": "1.1",
+        "$value": "1.22",
         "$type": "other",
         "$description": "hover lightness multiplier for buttons that change lightness instead of lifting",
         "$extensions": {
@@ -6403,7 +6474,7 @@
         }
       },
       "hover-brightness": {
-        "$value": "1.1",
+        "$value": "1.22",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--interaction-hover-brightness"
@@ -6673,7 +6744,7 @@
         }
       },
       "shadow-hover": {
-        "$value": "none",
+        "$value": "3px 3px 0px 0px #33301f",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-shadow-hover"
@@ -6687,7 +6758,7 @@
         }
       },
       "hover-brightness": {
-        "$value": "1.1",
+        "$value": "1.22",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-hover-brightness"
@@ -6804,14 +6875,14 @@
       },
       "danger": {
         "bg": {
-          "$value": "#c40000",
+          "$value": "#f5c518",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-bg"
           }
         },
         "fg": {
-          "$value": "#ffffff",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-fg"
@@ -6825,7 +6896,7 @@
           }
         },
         "stripe": {
-          "$value": "#a80000",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe"
@@ -6852,6 +6923,22 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe-easing"
+          }
+        },
+        "label-pad-x": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px — one stripe-width of clear colour either side of the label",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-x"
+          }
+        },
+        "label-pad-y": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — enough that a diagonal never clips an ascender or a descender",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-y"
           }
         }
       },
@@ -8283,9 +8370,27 @@
         "600": {
           "$value": "#a80000",
           "$type": "color",
-          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$description": "deepened Red — kept as the danger family's dark step. No longer the hazard stripe: that pair moved to yellow/black (see the yellow family below).",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "yellow": {
+        "500": {
+          "$value": "#f5c518",
+          "$type": "color",
+          "$description": "hazard yellow on a light page — carries black at 12.88:1, and the black stripes read as stripes rather than texture",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-500"
+          }
+        },
+        "600": {
+          "$value": "#d9ad0a",
+          "$type": "color",
+          "$description": "the deeper step, for DARK mode where the 500 glares against a near-black page. Still carries black at 9.93:1.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-600"
           }
         }
       },
@@ -9245,15 +9350,17 @@
         },
         "danger": {
           "bg": {
-            "$value": "#c40000",
+            "$value": "#d9ad0a",
             "$type": "color",
+            "$description": "hazard yellow, deepened for dark — carries a black label at 9.93:1",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-bg"
             }
           },
           "fg": {
-            "$value": "#ffffff",
+            "$value": "#000000",
             "$type": "color",
+            "$description": "black on the tape, the same pair as light",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-fg"
             }
@@ -9267,9 +9374,9 @@
             }
           },
           "deep": {
-            "$value": "#a80000",
+            "$value": "#000000",
             "$type": "color",
-            "$description": "the hazard stripe on a danger control",
+            "$description": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-deep"
             }
@@ -9468,6 +9575,14 @@
           "$description": "10% brighter on hover",
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
+          }
+        },
+        "lighten-strong": {
+          "$value": "1.22",
+          "$type": "other",
+          "$description": "22% brighter — the bump a theme needs when brightness is carrying the whole hover, with no lift to help. 1.1 reads on a pale fill and all but vanishes on a deep one, which is what left Adventure's pine buttons looking inert.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--effect-brightness-lighten-strong"
           }
         }
       },
@@ -10839,14 +10954,14 @@
       },
       "danger": {
         "bg": {
-          "$value": "#c40000",
+          "$value": "#d9ad0a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-bg"
           }
         },
         "fg": {
-          "$value": "#ffffff",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-fg"
@@ -10860,7 +10975,7 @@
           }
         },
         "stripe": {
-          "$value": "#a80000",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe"
@@ -10887,6 +11002,22 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe-easing"
+          }
+        },
+        "label-pad-x": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px — one stripe-width of clear colour either side of the label",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-x"
+          }
+        },
+        "label-pad-y": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — enough that a diagonal never clips an ascender or a descender",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-y"
           }
         }
       },
@@ -12318,9 +12449,27 @@
         "600": {
           "$value": "#a80000",
           "$type": "color",
-          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$description": "deepened Red — kept as the danger family's dark step. No longer the hazard stripe: that pair moved to yellow/black (see the yellow family below).",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "yellow": {
+        "500": {
+          "$value": "#f5c518",
+          "$type": "color",
+          "$description": "hazard yellow on a light page — carries black at 12.88:1, and the black stripes read as stripes rather than texture",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-500"
+          }
+        },
+        "600": {
+          "$value": "#d9ad0a",
+          "$type": "color",
+          "$description": "the deeper step, for DARK mode where the 500 glares against a near-black page. Still carries black at 9.93:1.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-600"
           }
         }
       },
@@ -13280,16 +13429,17 @@
         },
         "danger": {
           "bg": {
-            "$value": "#c40000",
+            "$value": "#f5c518",
             "$type": "color",
-            "$description": "the same red the brand uses — in Confetti they coincide; in another theme danger stays red while the brand goes wherever it likes",
+            "$description": "hazard yellow ground, carrying a black label at 12.88:1",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-bg"
             }
           },
           "fg": {
-            "$value": "#ffffff",
+            "$value": "#000000",
             "$type": "color",
+            "$description": "black on the tape — the other half of the caution pair",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-fg"
             }
@@ -13303,9 +13453,9 @@
             }
           },
           "deep": {
-            "$value": "#a80000",
+            "$value": "#000000",
             "$type": "color",
-            "$description": "the hazard stripe on a danger control",
+            "$description": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-deep"
             }
@@ -13504,6 +13654,14 @@
           "$description": "10% brighter on hover",
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
+          }
+        },
+        "lighten-strong": {
+          "$value": "1.22",
+          "$type": "other",
+          "$description": "22% brighter — the bump a theme needs when brightness is carrying the whole hover, with no lift to help. 1.1 reads on a pale fill and all but vanishes on a deep one, which is what left Adventure's pine buttons looking inert.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--effect-brightness-lighten-strong"
           }
         }
       },
@@ -14875,14 +15033,14 @@
       },
       "danger": {
         "bg": {
-          "$value": "#c40000",
+          "$value": "#f5c518",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-bg"
           }
         },
         "fg": {
-          "$value": "#ffffff",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-fg"
@@ -14896,7 +15054,7 @@
           }
         },
         "stripe": {
-          "$value": "#a80000",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe"
@@ -14923,6 +15081,22 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe-easing"
+          }
+        },
+        "label-pad-x": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px — one stripe-width of clear colour either side of the label",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-x"
+          }
+        },
+        "label-pad-y": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — enough that a diagonal never clips an ascender or a descender",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-y"
           }
         }
       },
@@ -16354,9 +16528,27 @@
         "600": {
           "$value": "#a80000",
           "$type": "color",
-          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$description": "deepened Red — kept as the danger family's dark step. No longer the hazard stripe: that pair moved to yellow/black (see the yellow family below).",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "yellow": {
+        "500": {
+          "$value": "#f5c518",
+          "$type": "color",
+          "$description": "hazard yellow on a light page — carries black at 12.88:1, and the black stripes read as stripes rather than texture",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-500"
+          }
+        },
+        "600": {
+          "$value": "#d9ad0a",
+          "$type": "color",
+          "$description": "the deeper step, for DARK mode where the 500 glares against a near-black page. Still carries black at 9.93:1.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-600"
           }
         }
       },
@@ -17314,15 +17506,17 @@
         },
         "danger": {
           "bg": {
-            "$value": "#c40000",
+            "$value": "#d9ad0a",
             "$type": "color",
+            "$description": "hazard yellow, deepened for dark — carries a black label at 9.93:1",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-bg"
             }
           },
           "fg": {
-            "$value": "#ffffff",
+            "$value": "#000000",
             "$type": "color",
+            "$description": "black on the tape, the same pair as light",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-fg"
             }
@@ -17336,9 +17530,9 @@
             }
           },
           "deep": {
-            "$value": "#a80000",
+            "$value": "#000000",
             "$type": "color",
-            "$description": "the hazard stripe on a danger control",
+            "$description": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-deep"
             }
@@ -17537,6 +17731,14 @@
           "$description": "10% brighter on hover",
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
+          }
+        },
+        "lighten-strong": {
+          "$value": "1.22",
+          "$type": "other",
+          "$description": "22% brighter — the bump a theme needs when brightness is carrying the whole hover, with no lift to help. 1.1 reads on a pale fill and all but vanishes on a deep one, which is what left Adventure's pine buttons looking inert.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--effect-brightness-lighten-strong"
           }
         }
       },
@@ -18903,14 +19105,14 @@
       },
       "danger": {
         "bg": {
-          "$value": "#c40000",
+          "$value": "#d9ad0a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-bg"
           }
         },
         "fg": {
-          "$value": "#ffffff",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-fg"
@@ -18924,7 +19126,7 @@
           }
         },
         "stripe": {
-          "$value": "#a80000",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe"
@@ -18951,6 +19153,22 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe-easing"
+          }
+        },
+        "label-pad-x": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px — one stripe-width of clear colour either side of the label",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-x"
+          }
+        },
+        "label-pad-y": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — enough that a diagonal never clips an ascender or a descender",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-y"
           }
         }
       },
@@ -20382,9 +20600,27 @@
         "600": {
           "$value": "#a80000",
           "$type": "color",
-          "$description": "deepened Red — the hazard stripe on a danger control. 1.26:1 against the 500 fill: barely a shade, which is all it needs now the bands are 8px and moving. Motion and width carry the pattern; darkness would only make it shout.",
+          "$description": "deepened Red — kept as the danger family's dark step. No longer the hazard stripe: that pair moved to yellow/black (see the yellow family below).",
           "$extensions": {
             "com.confetti.cssVariable": "--color-red-600"
+          }
+        }
+      },
+      "yellow": {
+        "500": {
+          "$value": "#f5c518",
+          "$type": "color",
+          "$description": "hazard yellow on a light page — carries black at 12.88:1, and the black stripes read as stripes rather than texture",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-500"
+          }
+        },
+        "600": {
+          "$value": "#d9ad0a",
+          "$type": "color",
+          "$description": "the deeper step, for DARK mode where the 500 glares against a near-black page. Still carries black at 9.93:1.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--color-yellow-600"
           }
         }
       },
@@ -21342,16 +21578,17 @@
         },
         "danger": {
           "bg": {
-            "$value": "#c40000",
+            "$value": "#f5c518",
             "$type": "color",
-            "$description": "the same red the brand uses — in Confetti they coincide; in another theme danger stays red while the brand goes wherever it likes",
+            "$description": "hazard yellow ground, carrying a black label at 12.88:1",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-bg"
             }
           },
           "fg": {
-            "$value": "#ffffff",
+            "$value": "#000000",
             "$type": "color",
+            "$description": "black on the tape — the other half of the caution pair",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-fg"
             }
@@ -21365,9 +21602,9 @@
             }
           },
           "deep": {
-            "$value": "#a80000",
+            "$value": "#000000",
             "$type": "color",
-            "$description": "the hazard stripe on a danger control",
+            "$description": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture",
             "$extensions": {
               "com.confetti.cssVariable": "--color-status-danger-deep"
             }
@@ -21566,6 +21803,14 @@
           "$description": "10% brighter on hover",
           "$extensions": {
             "com.confetti.cssVariable": "--effect-brightness-lighten"
+          }
+        },
+        "lighten-strong": {
+          "$value": "1.22",
+          "$type": "other",
+          "$description": "22% brighter — the bump a theme needs when brightness is carrying the whole hover, with no lift to help. 1.1 reads on a pale fill and all but vanishes on a deep one, which is what left Adventure's pine buttons looking inert.",
+          "$extensions": {
+            "com.confetti.cssVariable": "--effect-brightness-lighten-strong"
           }
         }
       },
@@ -22932,14 +23177,14 @@
       },
       "danger": {
         "bg": {
-          "$value": "#c40000",
+          "$value": "#f5c518",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-bg"
           }
         },
         "fg": {
-          "$value": "#ffffff",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-fg"
@@ -22953,7 +23198,7 @@
           }
         },
         "stripe": {
-          "$value": "#a80000",
+          "$value": "#000000",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe"
@@ -22980,6 +23225,22 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-stripe-easing"
+          }
+        },
+        "label-pad-x": {
+          "$value": "8px",
+          "$type": "other",
+          "$description": "8px — one stripe-width of clear colour either side of the label",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-x"
+          }
+        },
+        "label-pad-y": {
+          "$value": "4px",
+          "$type": "other",
+          "$description": "4px — enough that a diagonal never clips an ascender or a descender",
+          "$extensions": {
+            "com.confetti.cssVariable": "--button-danger-label-pad-y"
           }
         }
       },

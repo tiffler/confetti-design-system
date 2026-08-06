@@ -223,7 +223,7 @@ export function TokenTable({
 
   /* Translucent values are flattened onto the page before ranking, so they sort by what
      actually renders — the same treatment ColorGrid gives them. */
-  const page = (tokens as Record<string, TokenRecord>)['color-surface-page']?.value ?? '#ffffff';
+  const page = (tokens as Record<string, TokenRecord>)['color-surface-page']?.value;
   const lum = (value: string) => (isColor(value) ? luminanceOf(value, page) : null);
 
   const compare = (a: Row, b: Row) => {

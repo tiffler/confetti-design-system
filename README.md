@@ -9,7 +9,7 @@
 ---
 
 <h3 align="center">
-  📄 <a href="CHROMATIC_URL_HERE"><b>Documentation</b></a>
+  📄 <a href="https://main--6a5dbe45138c58d9d6190f4d.chromatic.com/"><b>Documentation</b></a>
   —
   🏗️ <a href="./docs/ARCHITECTURE.md"><b>Architecture</b></a>
 </h3>
