@@ -29,9 +29,10 @@ function TokenPage({
        toolbar instead, so the one control you need stays put without the rows being boxed
        inside a second scroller.
 
-       The cost, and it is a real one: with the full build this page runs to roughly 21,000px.
-       That is past what Chromatic captures in a single snapshot, so treat this story's visual
-       coverage as the top of the page rather than the whole of it. */
+       The cost lands on the snapshot build: a page that scrolls is a page as tall as its
+       content, and `All tokens` reaches ~22,000px, past what Chromatic will capture. That one
+       story opts out (see the note on it); the category stories are small enough to snapshot
+       normally, so the component itself stays covered. */
     <Page width={1100} gap="var(--space-stack-lg)">
       <Stack gap="var(--space-2)">
         <Eyebrow>Tokens</Eyebrow>
@@ -52,8 +53,21 @@ const meta: Meta = {
 };
 export default meta;
 
+/**
+ * The only story here that Chromatic does not snapshot. Every token in one page-scrolling
+ * table runs to ~22,000px, which is past what the capture will take — build 42 failed on
+ * exactly this story while the category stories below, the largest of which is ~7,800px,
+ * all passed. It is not a render error: the story is fine in a browser, and the published
+ * Storybook shows all 487 rows.
+ *
+ * Visual coverage is not really lost. `TokenTable` is the same component in the same
+ * page-scroll mode here as in the eight category stories, sticky toolbar and all — this one
+ * differs only by row count, which is the one thing a snapshot of it cannot check anyway.
+ * Restore the snapshot if this page is ever split or virtualised.
+ */
 export const All: StoryObj = {
   name: 'All tokens',
+  parameters: { chromatic: { disableSnapshot: true } },
   render: () => (
     <TokenPage
       title="Every token"
