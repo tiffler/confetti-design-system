@@ -24,31 +24,21 @@ function TokenPage({
   layer?: TokenLayer;
 }) {
   return (
-    /* One scrollbar, not two. The table brings its own scroll region, so if the page were
-       also taller than the viewport you would get a bar on each — one moving the heading out
-       of view, one moving the rows. Pinning the page to the viewport height and giving the
-       table the leftover row (`1fr`, with `minHeight: 0` so it may shrink below its content)
-       leaves the table's region as the only thing that scrolls.
+    /* One scrollbar, and it is the page's. The heading scrolls away with everything else and
+       the table runs its full length; `TokenTable`'s `pageScroll` mode pins the search
+       toolbar instead, so the one control you need stays put without the rows being boxed
+       inside a second scroller.
 
-       The subtraction is the preview decorator's padding, which this sits inside. */
-    <Page
-      width={1100}
-      style={{
-        height: 'calc(100vh - 2 * var(--space-inset))',
-        gridTemplateRows: 'auto 1fr',
-        minHeight: 0,
-        paddingBlock: 0,
-      }}
-      gap="var(--space-stack-lg)"
-    >
+       The cost, and it is a real one: with the full build this page runs to roughly 21,000px.
+       That is past what Chromatic captures in a single snapshot, so treat this story's visual
+       coverage as the top of the page rather than the whole of it. */
+    <Page width={1100} gap="var(--space-stack-lg)">
       <Stack gap="var(--space-2)">
         <Eyebrow>Tokens</Eyebrow>
         <Title>{title}</Title>
         <Lede>{lede}</Lede>
       </Stack>
-      <div style={{ minHeight: 0, display: 'grid' }}>
-        <TokenTable categories={categories} layer={layer} fill />
-      </div>
+      <TokenTable categories={categories} layer={layer} pageScroll />
     </Page>
   );
 }

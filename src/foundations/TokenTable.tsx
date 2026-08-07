@@ -1,4 +1,4 @@
-import { useMemo, useState, type CSSProperties } from 'react';
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { useTokens, type TokenRecord } from './tokens';
 import { luminanceOf } from './contrast';
 
@@ -178,19 +178,19 @@ function SortButton({
 export function TokenTable({
   categories,
   layer,
-  fill = false,
+  pageScroll = false,
 }: {
   /** Restrict to these categories. Omit for every token in the build. */
   categories?: CategoryKey[];
   /** Restrict to one tier — e.g. the semantic colour roles. */
   layer?: TokenLayer;
   /**
-   * Take the full height of an already-sized parent instead of bounding against the
-   * viewport. Use it when the table is the only thing on the page, so the page itself never
-   * scrolls and there is exactly one scrollbar; leave it off when the table sits inside
-   * longer prose, where 70vh keeps it from swallowing the article.
+   * Let the results run their natural length and hand scrolling to the page, with the search
+   * toolbar pinned to the top instead. Use it when the table IS the page. Leave it off when
+   * the table sits inside longer prose, where the default bounded 70vh region keeps it from
+   * swallowing the article.
    */
-  fill?: boolean;
+  pageScroll?: boolean;
 }) {
   const tokens = useTokens();
   const [query, setQuery] = useState('');
@@ -198,6 +198,24 @@ export function TokenTable({
     key: 'name',
     dir: 'asc',
   });
+
+  /* Two stacked sticky layers: the toolbar at the very top, and each table's column headers
+     directly beneath it. CSS has no way to say "stick below the previous sticky sibling", and
+     the toolbar's height is not a constant — it wraps to two lines on a narrow viewport — so
+     the offset is measured rather than guessed. Stays deterministic for a given viewport,
+     which is what the snapshot build needs. */
+  const toolbarRef = useRef<HTMLDivElement>(null);
+  const [toolbarHeight, setToolbarHeight] = useState(0);
+
+  useEffect(() => {
+    const el = toolbarRef.current;
+    if (!pageScroll || !el) return;
+    const measure = () => setToolbarHeight(el.getBoundingClientRect().height);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [pageScroll]);
 
   const groups = useMemo(() => {
     const wanted = categories ? new Set<CategoryKey>(categories) : null;
@@ -281,7 +299,10 @@ export function TokenTable({
        rule under it. An inset shadow is painted by the element, so it comes along. */
     boxShadow: 'inset 0 calc(-1 * var(--border-width-default)) 0 var(--color-border-default)',
     position: 'sticky',
-    top: 0,
+    /* Against the page scroller the headers have to clear the sticky toolbar, or they pin
+       underneath it and are never seen. Inside the bounded region the toolbar is outside the
+       scroller entirely, so 0 is right there. */
+    top: pageScroll ? toolbarHeight : 0,
     background: 'var(--color-surface-page)',
     /* Without this the header is in the right place and invisible: the rows come later in
        the DOM, so they paint over a sticky cell that has no stacking order of its own. */
@@ -301,24 +322,34 @@ export function TokenTable({
       style={{
         display: 'grid',
         gap: 'var(--space-stack)',
-        /* Toolbar, then the results taking whatever is left. `minmax(0, 1fr)` rather than
-           `1fr` so the row may shrink below its content — a plain `1fr` floors at the
-           content's height and the region never bounds.
-
-           `fill` also has to set a height here, not only on the region: a percentage
-           max-height resolves against the PARENT, and with this element left at auto height
-           the constraint stops dead before it reaches the scroller. */
-        gridTemplateRows: 'auto minmax(0, 1fr)',
-        minHeight: 0,
-        ...(fill ? { height: '100%' } : null),
+        /* Bounded mode only: toolbar, then the results taking whatever is left.
+           `minmax(0, 1fr)` rather than `1fr` so the row may shrink below its content — a
+           plain `1fr` floors at the content's height and the region never bounds. In page
+           mode nothing is being bounded, so both rows are left to their natural height. */
+        ...(pageScroll ? null : { gridTemplateRows: 'auto minmax(0, 1fr)', minHeight: 0 }),
       }}
     >
       <div
+        ref={toolbarRef}
         style={{
           display: 'flex',
           gap: 'var(--space-inline)',
           alignItems: 'center',
           flexWrap: 'wrap',
+          /* Pinned to the top of the page scroller so the search box stays reachable however
+             far down the table you are — the one thing the bounded region used to guarantee
+             for free. It needs the page background and a stacking order of its own, or the
+             rows travelling underneath show straight through it. The padding is what stops a
+             row from touching the box as it passes behind. */
+          ...(pageScroll
+            ? {
+                position: 'sticky',
+                top: 0,
+                zIndex: 2,
+                background: 'var(--color-surface-page)',
+                paddingBlock: 'var(--space-inset-tight)',
+              }
+            : null),
         }}
       >
         <label style={{ display: 'contents' }}>
@@ -352,24 +383,28 @@ export function TokenTable({
           Nothing matches “{query}”.
         </p>
       ) : (
-        /* The results scroll inside a fixed region rather than growing the page.
-           Two reasons, and the second is the one that bites: with 471 tokens the page ran to
-           21,000px, which is a poor reading experience — the search box scrolls out of sight
-           the moment you start looking — and it is far past what a snapshot tool will
-           capture, which is exactly how this page broke the visual-regression build.
-           A bounded region keeps the toolbar in view and the page a constant height whatever
-           the token count. The sticky column headers now stick to this box, not the page. */
+        /* Two ways to run, chosen by `pageScroll`.
+
+           PAGE (the Tokens page): the results run their full length and the page scrolls.
+           What made a bounded region attractive was that the search box never left the
+           screen; the sticky toolbar above buys that back without trapping the rows in a box
+           inside a box. Worth knowing: with 471 tokens this page runs to something like
+           21,000px, and it has previously overrun what the snapshot tool would capture — see
+           the note in Tokens.stories.tsx.
+
+           BOUNDED (inside prose, e.g. Color.mdx): 70vh, so a full token dump cannot swallow
+           the article it is illustrating.
+
+           When bounded, both overflow axes go on ONE element. `position: sticky` resolves
+           against the nearest scrolling ancestor, so a per-table `overflow-x` wrapper would
+           capture the column headers and they would scroll away with the rows instead of
+           sticking. */
         <div
           style={{
-            ...(fill ? { height: '100%' } : { maxHeight: '70vh' }),
-            minHeight: 0,
-            /* Both axes on ONE element. `position: sticky` resolves against the nearest
-               scrolling ancestor, so a per-table `overflow-x` wrapper would capture the
-               column headers and they would scroll away with the rows instead of sticking. */
-            overflow: 'auto',
             display: 'grid',
             gap: 'var(--space-stack)',
             alignContent: 'start',
+            ...(pageScroll ? null : { maxHeight: '70vh', minHeight: 0, overflow: 'auto' }),
           }}
         >
           {visible.map((category) => (
