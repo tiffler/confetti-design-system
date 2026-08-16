@@ -20,24 +20,24 @@
 -->
 <style>
   .sbdocs.sbdocs-wrapper {
-    background: var(--color-surface-page);
-    color: var(--color-text-primary);
+    background: var(--surface-page);
+    color: var(--text-default);
   }
 
   /* The story preview block is a canvas, which is exactly the `raised` role. */
   .sbdocs .sb-previewBlock,
   .sbdocs .sbdocs-preview,
   .sbdocs .docs-story {
-    background: var(--color-surface-raised);
+    background: var(--surface-raised);
   }
 
   /* Storybook sets explicit colors here, so they have to be repointed rather than inherited. */
   .sbdocs-content :is(h1, h2, h3, h4, h5, h6, p, li, td, th, strong, blockquote) {
-    color: var(--color-text-primary);
+    color: var(--text-default);
   }
 
   .sbdocs-content :is(hr, table, th, td) {
-    border-color: var(--color-border-subtle);
+    border-color: var(--borders-stroke-color-subtle);
   }
 
   /* Inline `code` in prose. Storybook styles this as
@@ -46,11 +46,11 @@
      at runtime, i.e. after this file, so the tie always went to Storybook and the chip
      stayed near-white in dark mode. Hence `!important`, same as the code block below. */
   .sbdocs-content code {
-    background: var(--code-inline-bg) !important;
-    color: var(--code-inline-fg) !important;
-    border: var(--code-inline-border-width) solid var(--code-inline-border-color) !important;
+    background: var(--code-inline-fill) !important;
+    color: var(--code-inline-text) !important;
+    border: var(--code-inline-border-width) solid var(--code-inline-border) !important;
     border-radius: var(--code-inline-radius) !important;
-    padding: var(--code-inline-padding-y) var(--code-inline-padding-x) !important;
+    padding: var(--code-inline-padding-vertical) var(--code-inline-padding-horizontal) !important;
   }
 
   /* …nor inside the token index, which puts a `code` in every cell of a dense table. The
@@ -89,9 +89,9 @@
      renders the block wrapper and the table itself under different ones. Nested `div`s carry
      the hardcoded color; `span`s are left alone so the red required marker keeps its meaning. */
   :is(.sb-argstableBlock, .docblock-argstable) :is(th, td) {
-    background: var(--color-surface-raised) !important;
-    color: var(--color-text-primary) !important;
-    border-color: var(--color-border-subtle) !important;
+    background: var(--surface-raised) !important;
+    color: var(--text-default) !important;
+    border-color: var(--borders-stroke-color-subtle) !important;
   }
 
   :is(.sb-argstableBlock, .docblock-argstable) :is(th, td) :is(div, p) {
@@ -112,12 +112,12 @@
      repaint the story itself, muting every button/link/icon inside it. Excluding
      `.docs-story` keeps them on the toolbar, which is the only thing they are meant for. */
   .sbdocs.sbdocs-preview > *:first-child:not(.docs-story) {
-    background: var(--color-surface-panel) !important;
-    border-color: var(--color-border-subtle) !important;
+    background: var(--surface-panel) !important;
+    border-color: var(--borders-stroke-color-subtle) !important;
   }
 
   .sbdocs.sbdocs-preview > *:first-child:not(.docs-story) :is(button, svg, a) {
-    color: var(--color-text-muted) !important;
+    color: var(--text-muted) !important;
   }
 
   /* A drop-shadow tuned for a white table reads as a smudge on a dark one. */
@@ -128,7 +128,7 @@
   /* ---- Code blocks -------------------------------------------------------------
      Storybook ships a dark-theme Prism palette (near-white punctuation) but renders it
      on a transparent block, so snippets were pale text on a pale page. The block is now
-     an inset terminal on --code-bg, which is deep in BOTH modes so a single syntax
+     an inset terminal on --code-fill, which is deep in BOTH modes so a single syntax
      palette reads against it. Colors come from tokens/component/portfolio/code.json,
      which reuses each theme's four accent hues — every one clears AA on its own ground.
 
@@ -138,8 +138,8 @@
      third-party chrome, and it only reaches Storybook's own docs markup.                  */
   pre.prismjs,
   .docblock-source {
-    background: var(--code-bg) !important;
-    color: var(--code-fg) !important;
+    background: var(--code-fill) !important;
+    color: var(--code-text) !important;
     border: 0 !important;
     border-radius: var(--code-radius) !important;
     padding: var(--code-padding) !important;
@@ -179,6 +179,6 @@
   }
 
   pre.prismjs :is(.token.property, .token.literal-property, .token.attr-name, .token.variable, .token.parameter) {
-    color: var(--code-fg) !important;
+    color: var(--code-text) !important;
   }
 </style>

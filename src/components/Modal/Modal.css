@@ -15,9 +15,9 @@
   gap: var(--modal-gap);
 
   padding: var(--modal-padding);
-  background: var(--modal-bg);
-  color: var(--modal-fg);
-  border: var(--modal-border-width) solid var(--modal-border-color);
+  background: var(--modal-fill);
+  color: var(--modal-text);
+  border: var(--modal-border-width) solid var(--modal-border);
   border-radius: var(--modal-radius);
   box-shadow: var(--modal-shadow);
 }
@@ -53,7 +53,7 @@
   font-size: var(--modal-body-font-size);
   font-weight: var(--modal-body-font-weight);
   line-height: var(--modal-body-leading);
-  color: var(--modal-fg-muted);
+  color: var(--modal-text-muted);
 }
 
 .cf-modal__footer {

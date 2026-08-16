@@ -117,7 +117,7 @@ export function Eyebrow({ children, style }: { children: ReactNode; style?: CSSP
         fontWeight: 'var(--font-weight-label)',
         letterSpacing: 'var(--font-tracking-label)',
         textTransform: 'uppercase',
-        color: 'var(--color-text-muted)',
+        color: 'var(--text-muted)',
         ...style,
       }}
     >
@@ -154,7 +154,7 @@ export function Title({
         fontWeight: 'var(--font-weight-display)',
         lineHeight: leading,
         letterSpacing: 'var(--font-tracking-display)',
-        color: 'var(--color-text-primary)',
+        color: 'var(--text-default)',
         ...style,
       }}
     >
@@ -173,7 +173,7 @@ export function Lede({ children, style }: { children: ReactNode; style?: CSSProp
         fontFamily: 'var(--font-family-body)',
         fontSize: 'var(--font-size-h5)',
         lineHeight: 'var(--font-leading-body)',
-        color: 'var(--color-text-muted)',
+        color: 'var(--text-muted)',
         ...style,
       }}
     >
@@ -191,7 +191,7 @@ export function Text({ children, style }: { children: ReactNode; style?: CSSProp
         fontFamily: 'var(--font-family-body)',
         fontSize: 'var(--font-size-body)',
         lineHeight: 'var(--font-leading-body)',
-        color: 'var(--color-text-primary)',
+        color: 'var(--text-default)',
         ...style,
       }}
     >
@@ -208,7 +208,7 @@ export function Caption({ children, style }: { children: ReactNode; style?: CSSP
         fontFamily: 'var(--font-family-label)',
         fontSize: 'var(--font-size-label)',
         letterSpacing: 'var(--font-tracking-normal)',
-        color: 'var(--color-text-muted)',
+        color: 'var(--text-muted)',
         ...style,
       }}
     >
@@ -226,7 +226,7 @@ export function Figure({ children, style }: { children: ReactNode; style?: CSSPr
         fontSize: 'var(--font-size-h2)',
         fontWeight: 'var(--font-weight-display)',
         lineHeight: 'var(--font-leading-none)',
-        color: 'var(--color-text-primary)',
+        color: 'var(--text-default)',
         ...style,
       }}
     >
@@ -251,8 +251,8 @@ export function Frame({
   return (
     <section
       style={{
-        border: 'var(--border-width-hairline) dashed var(--color-accent-purple-bold)',
-        borderRadius: 'var(--radius-md)',
+        border: 'var(--size-100) dashed var(--accent-purple-bold)',
+        borderRadius: 'var(--radius-300)',
         padding: 'var(--space-inset)',
         display: 'grid',
         gap: 'var(--space-stack)',
@@ -297,7 +297,7 @@ export function Tick({ children, style }: { children: ReactNode; style?: CSSProp
         fontFamily: 'var(--font-family-label)',
         fontSize: 'var(--font-size-label)',
         letterSpacing: 'var(--font-tracking-normal)',
-        color: 'var(--color-text-muted)',
+        color: 'var(--text-muted)',
         alignSelf: 'center',
         ...style,
       }}
@@ -313,7 +313,7 @@ export function Rule({ style }: { style?: CSSProperties }) {
     <hr
       style={{
         border: 0,
-        borderTop: 'var(--border-width-hairline) solid var(--color-border-subtle)',
+        borderTop: 'var(--size-100) solid var(--borders-stroke-color-subtle)',
         margin: 0,
         ...style,
       }}

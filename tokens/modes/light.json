@@ -1,65 +1,158 @@
 {
   "$comment": "MODE = light. Neutrals only: surfaces, text, borders, the decorative accent tint-surfaces (subtle) + their foregrounds, the hover shadow, and the focus ring. Brand/accent-bold colors come from the active theme via [data-theme]. Emitted under [data-mode='light'].",
-  "color": {
-    "surface": {
-      "page": { "value": "{color.cream.300}" },
-      "raised": { "value": "{color.cream.100}" },
-      "panel": { "value": "{color.cream.200}" },
-      "card": { "value": "{color.base.white}" },
-      "backdrop": { "value": "{color.ink.200}", "comment": "recessed mat behind the app frame / control tracks — a step below page" }
+  "surface": {
+    "page": {
+      "value": "{colors.cream.300}"
     },
-    "text": {
-      "primary": { "value": "{color.ink.600}" },
-      "muted": { "value": "{color.ink.300}" },
-      "inverse": { "value": "{color.base.white}" }
+    "raised": {
+      "value": "{colors.cream.100}"
     },
-    "border": {
-      "default": { "value": "{color.ink.600}" },
-      "subtle": { "value": "{color.ink.a12}" },
-      "none": { "value": "{color.base.transparent}" }
+    "panel": {
+      "value": "{colors.cream.200}"
     },
-    "action": {
-      "secondary": {
-        "bg": { "value": "{color.cream.300}" },
-        "fg": { "value": "{color.ink.600}" }
-      },
-      "ghost": { "bg": { "value": "{color.base.transparent}" }, "fg": { "value": "{color.ink.600}" } }
+    "card": {
+      "value": "{colors.base.white}"
     },
-    "$comment-status": "STATUS roles — success and danger. They live on the MODE axis, not the theme axis: what they mean is fixed (green is not a brand decision), but what reads on a page is not, so they carry a light and a dark value and every theme inherits both. `bg`/`fg` are the filled pair; `text` is the same status used AS TEXT, which needs its own step for the same reason text.accent does.",
-    "status": {
-      "success": {
-        "bg": { "value": "{color.green.600}" },
-        "fg": { "value": "{color.base.white}" },
-        "text": { "value": "{color.green.700}" },
-        "subtle": { "value": "{color.green.100}", "comment": "the tint end of the pair — Badge subtle, Toast" },
-        "on-subtle": { "value": "{color.green.700}" }
-      },
-      "danger": {
-        "$comment": "Danger splits by role. As a FILL it is caution tape — yellow ground, black label, black stripes — because a destructive control should be identifiable before the label is read. As TEXT it stays red: tape is an affordance on a control, not a way to set a sentence.",
-        "bg": { "value": "{color.yellow.500}", "comment": "hazard yellow ground, carrying a black label at 12.88:1" },
-        "fg": { "value": "{color.base.black}", "comment": "black on the tape — the other half of the caution pair" },
-        "text": { "value": "{color.red.500}", "comment": "danger AS TEXT — 4.97:1 on the page, 6.27:1 on card" },
-        "deep": { "value": "{color.base.black}", "comment": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture" }
-      }
-    },
-    "accent": {
-      "purple": { "subtle": { "value": "{color.purple.100}" } },
-      "teal": { "subtle": { "value": "{color.teal.100}" } },
-      "orange": { "subtle": { "value": "{color.orange.100}" } },
-      "pink": { "subtle": { "value": "{color.pink.100}" } },
-      "on-bold": { "value": "{color.ink.600}", "comment": "ink reads on the light bold hues" },
-      "on-subtle": { "value": "{color.ink.600}", "comment": "ink reads on the pale subtle tints" }
+    "backdrop": {
+      "value": "{colors.ink.200}",
+      "comment": "recessed mat behind the app frame / control tracks — a step below page"
     }
   },
-  "shadow": {
-    "lift": { "value": "3px 3px 0px 0px {color.ink.600}", "comment": "card hover shadow" },
-    "button-lift": { "value": "3px 3px 0px 0px {color.ink.600}", "comment": "button hover shadow — separate from card so a theme can drop it (flat) or swap it (glow)" }
+  "text": {
+    "default": {
+      "value": "{colors.ink.600}"
+    },
+    "muted": {
+      "value": "{colors.ink.300}"
+    },
+    "inverse": {
+      "value": "{colors.base.white}"
+    }
+  },
+  "borders": {
+    "stroke-color": {
+      "default": {
+        "value": "{colors.ink.600}"
+      },
+      "subtle": {
+        "value": "{colors.ink.a12}"
+      },
+      "none": {
+        "value": "{colors.base.transparent}"
+      }
+    }
+  },
+  "action": {
+    "secondary": {
+      "fill": {
+        "value": "{colors.cream.300}"
+      },
+      "text": {
+        "value": "{colors.ink.600}"
+      }
+    },
+    "ghost": {
+      "fill": {
+        "value": "{colors.base.transparent}"
+      },
+      "text": {
+        "value": "{colors.ink.600}"
+      }
+    }
+  },
+  "status": {
+    "$comment": "STATUS roles — success and danger. They live on the MODE axis, not the theme axis: what they mean is fixed (green is not a brand decision), but what reads on a page is not, so they carry a light and a dark value and every theme inherits both. `fill`/`on-fill` are the filled pair; `text` is the same status used AS TEXT, which needs its own step for the same reason text.accent does.",
+    "success": {
+      "fill": {
+        "value": "{colors.green.600}"
+      },
+      "on-fill": {
+        "value": "{colors.base.white}"
+      },
+      "text": {
+        "value": "{colors.green.700}"
+      },
+      "subtle": {
+        "value": "{colors.green.100}",
+        "comment": "the tint end of the pair — Badge subtle, Toast"
+      },
+      "on-subtle": {
+        "value": "{colors.green.700}"
+      }
+    },
+    "danger": {
+      "$comment": "Danger splits by role. As a FILL it is caution tape — yellow ground, black label, black stripes — because a destructive control should be identifiable before the label is read. As TEXT it stays red: tape is an affordance on a control, not a way to set a sentence.",
+      "fill": {
+        "value": "{colors.yellow.500}",
+        "comment": "hazard yellow ground, carrying a black label at 12.88:1"
+      },
+      "on-fill": {
+        "value": "{colors.base.black}",
+        "comment": "black on the tape — the other half of the caution pair"
+      },
+      "text": {
+        "value": "{colors.red.500}",
+        "comment": "danger AS TEXT — 4.97:1 on the page, 6.27:1 on card"
+      },
+      "stripe": {
+        "value": "{colors.base.black}",
+        "comment": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture"
+      }
+    }
+  },
+  "accent": {
+    "purple": {
+      "subtle": {
+        "value": "{colors.purple.100}"
+      }
+    },
+    "teal": {
+      "subtle": {
+        "value": "{colors.teal.100}"
+      }
+    },
+    "orange": {
+      "subtle": {
+        "value": "{colors.orange.100}"
+      }
+    },
+    "pink": {
+      "subtle": {
+        "value": "{colors.pink.100}"
+      }
+    },
+    "on-bold": {
+      "value": "{colors.ink.600}",
+      "comment": "ink reads on the light bold hues"
+    },
+    "on-subtle": {
+      "value": "{colors.ink.600}",
+      "comment": "ink reads on the pale subtle tints"
+    }
+  },
+  "elevation": {
+    "lift": {
+      "value": "3px 3px 0px 0px {colors.ink.600}",
+      "comment": "card hover shadow"
+    },
+    "button-lift": {
+      "value": "3px 3px 0px 0px {colors.ink.600}",
+      "comment": "button hover shadow — separate from card so a theme can drop it (flat) or swap it (glow)"
+    }
   },
   "focus": {
     "ring": {
-      "width": { "value": "{border.width.sticker}", "comment": "2px" },
-      "color": { "value": "{color.ink.600}" },
-      "offset": { "value": "{border.width.sticker}", "comment": "2px" }
+      "width": {
+        "value": "{size.200}",
+        "comment": "2px"
+      },
+      "color": {
+        "value": "{colors.ink.600}"
+      },
+      "offset": {
+        "value": "{size.200}",
+        "comment": "2px"
+      }
     }
   }
 }

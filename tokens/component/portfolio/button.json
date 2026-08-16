@@ -1,60 +1,146 @@
 {
   "$comment": "Component tokens reference semantic tokens only — never primitives, never raw values.",
   "button": {
-    "radius": { "value": "{radius.control}" },
-    "border-width": { "value": "{border.width.default}" },
-    "font-family": { "value": "{font.family.label}" },
-    "font-size": { "value": "{font.size.body-secondary}" },
-    "font-weight": { "value": "{font.weight.control}" },
+    "radius": {
+      "value": "{borders.radius.control}"
+    },
+    "border-width": {
+      "value": "{borders.stroke-weight.default}"
+    },
+    "font-family": {
+      "value": "{font.family.label}"
+    },
+    "font-size": {
+      "value": "{font.size.body-secondary}"
+    },
+    "font-weight": {
+      "value": "{font.weight.control}"
+    },
     "$comment": "Mono uppercase always carries the wide label tracking — without it the caps set too tight to read.",
-    "tracking": { "value": "{font.tracking.label}" },
-    "min-height": { "value": "{size.control}" },
-    "padding-x": { "value": "{space.inset}" },
-    "padding-y": { "value": "{space.inset-tight}" },
-    "gap": { "value": "{space.inline}" },
-    "shadow-hover": { "value": "{shadow.button-lift}" },
-    "transform-hover": { "value": "{motion.button-lift}" },
-    "hover-brightness": { "value": "{effect.button-hover-brightness}" },
+    "tracking": {
+      "value": "{font.tracking.label}"
+    },
+    "min-height": {
+      "value": "{size.control}"
+    },
+    "padding-horizontal": {
+      "value": "{space.inset}"
+    },
+    "padding-vertical": {
+      "value": "{space.inset-tight}"
+    },
+    "gap": {
+      "value": "{space.inline}"
+    },
+    "shadow-hover": {
+      "value": "{elevation.button-lift}"
+    },
+    "transform-hover": {
+      "value": "{motion.button-lift}"
+    },
+    "hover-brightness": {
+      "value": "{effect.button-hover-brightness}"
+    },
     "$comment-pressed": "Pressed is the inverse of hover — the sticker settles back down. It resolves to the resting values in every theme, so a theme that lifts collapses the lift, and one that brightens (Adventure) drops back to no bump.",
-    "shadow-pressed": { "value": "{shadow.flat}" },
-    "transform-pressed": { "value": "{motion.transform.rest}" },
-    "pressed-brightness": { "value": "{effect.brightness-rest}" },
-    "transition-duration": { "value": "{motion.duration.interaction}" },
-    "transition-easing": { "value": "{motion.easing.interaction}" },
+    "shadow-pressed": {
+      "value": "{elevation.flat}"
+    },
+    "transform-pressed": {
+      "value": "{motion.transform.rest}"
+    },
+    "pressed-brightness": {
+      "value": "{effect.brightness-rest}"
+    },
+    "transition-duration": {
+      "value": "{motion.duration.interaction}"
+    },
+    "transition-easing": {
+      "value": "{motion.easing.interaction}"
+    },
     "$comment-spinner": "Loading spinner — a ring in the button's own text color (currentColor) that spins while an action is in flight. Sized to the inline icon so it sits where a leading icon would; ambient duration/easing because it is a continuous, non-reactive loop, the same motion category as the danger drift.",
-    "spinner-size": { "value": "{size.icon.sm}" },
-    "spinner-width": { "value": "{border.width.default}" },
-    "spinner-duration": { "value": "{motion.duration.ambient}" },
-    "spinner-easing": { "value": "{motion.easing.ambient}" },
+    "spinner-size": {
+      "value": "{size.icon.sm}"
+    },
+    "spinner-width": {
+      "value": "{borders.stroke-weight.default}"
+    },
+    "spinner-duration": {
+      "value": "{motion.duration.ambient}"
+    },
+    "spinner-easing": {
+      "value": "{motion.easing.ambient}"
+    },
     "primary": {
-      "bg": { "value": "{color.action.primary.bg}" },
-      "fg": { "value": "{color.action.primary.fg}" },
+      "fill": {
+        "value": "{action.primary.fill}"
+      },
+      "text": {
+        "value": "{action.primary.text}"
+      },
       "$comment": "Ink border is a global sticker rule — primary and secondary differ by fill, not by outline. The hard shadow extrudes from this edge.",
-      "border": { "value": "{color.border.default}" }
+      "border": {
+        "value": "{borders.stroke-color.default}"
+      }
     },
     "secondary": {
-      "bg": { "value": "{color.action.secondary.bg}" },
-      "fg": { "value": "{color.action.secondary.fg}" },
-      "border": { "value": "{color.border.default}" }
+      "fill": {
+        "value": "{action.secondary.fill}"
+      },
+      "text": {
+        "value": "{action.secondary.text}"
+      },
+      "border": {
+        "value": "{borders.stroke-color.default}"
+      }
     },
     "$comment-danger": "Danger is primary's shape in a different register: same footprint, same ink border, but the fill is the DANGER status rather than the brand — so it is caution tape in every theme, whatever the brand is doing. The hazard stripes are a background-image over that fill, in black on the yellow ground; the stripe geometry is a token so the texture scales with the system rather than being a magic number in the CSS.",
     "danger": {
-      "bg": { "value": "{color.status.danger.bg}" },
-      "fg": { "value": "{color.status.danger.fg}" },
-      "border": { "value": "{color.border.default}" },
-      "stripe": { "value": "{color.status.danger.deep}" },
-      "stripe-width": { "value": "{space.inline}", "comment": "8px band, so the diagonal repeats every 16px" },
-      "stripe-duration": { "value": "{motion.duration.ambient}", "comment": "one full pass of the pattern" },
-      "stripe-easing": { "value": "{motion.easing.ambient}" },
+      "fill": {
+        "value": "{status.danger.fill}"
+      },
+      "text": {
+        "value": "{status.danger.on-fill}"
+      },
+      "border": {
+        "value": "{borders.stroke-color.default}"
+      },
+      "stripe": {
+        "value": "{status.danger.stripe}"
+      },
+      "stripe-width": {
+        "value": "{space.inline}",
+        "comment": "8px band, so the diagonal repeats every 16px"
+      },
+      "stripe-duration": {
+        "value": "{motion.duration.ambient}",
+        "comment": "one full pass of the pattern"
+      },
+      "stripe-easing": {
+        "value": "{motion.easing.ambient}"
+      },
       "$comment-label-plate": "Full-contrast stripes and a black label cannot share one ground — the diagonals cut straight through the text. So the label sits on a solid plate of the fill, which is what printed hazard tape does too: the stripes frame the thing, the words stay on clean colour.",
-      "label-pad-x": { "value": "{space.inline}", "comment": "8px — one stripe-width of clear colour either side of the label" },
-      "label-pad-y": { "value": "{space.inset-xs}", "comment": "4px — enough that a diagonal never clips an ascender or a descender" }
+      "label-pad-x": {
+        "value": "{space.inline}",
+        "comment": "8px — one stripe-width of clear colour either side of the label"
+      },
+      "label-pad-y": {
+        "value": "{space.inset-xs}",
+        "comment": "4px — enough that a diagonal never clips an ascender or a descender"
+      }
     },
     "ghost": {
-      "bg": { "value": "{color.action.ghost.bg}" },
-      "fg": { "value": "{color.action.ghost.fg}" },
-      "fg-hover": { "value": "{color.action.ghost.fg-hover}" },
-      "border": { "value": "{color.border.none}" }
+      "fill": {
+        "value": "{action.ghost.fill}"
+      },
+      "text": {
+        "value": "{action.ghost.text}"
+      },
+      "text-hover": {
+        "value": "{action.ghost.text-hover}"
+      },
+      "border": {
+        "value": "{borders.stroke-color.none}"
+      }
     }
   }
 }

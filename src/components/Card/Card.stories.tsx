@@ -95,7 +95,7 @@ export const AllStates: Story = {
               fontSize: 'var(--font-size-label)',
               letterSpacing: 'var(--font-tracking-label)',
               textTransform: 'uppercase',
-              color: 'var(--color-text-muted)',
+              color: 'var(--text-muted)',
             }}
           >
             {surface}

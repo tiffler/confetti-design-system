@@ -14,8 +14,8 @@
    mode aliases (tokens/modes/light.json) rather than restating the values —
    copied hex drifts the moment the palette moves. */
 :root:not([data-theme]) {
-  --color-surface-page: var(--color-cream-300);
-  --color-text-primary: var(--color-ink-600);
+  --surface-page: var(--colors-cream-300);
+  --text-default: var(--colors-ink-600);
 }
 
 /* Global keyboard focus ring — mode-driven (2px ink/cream in light/dark).
@@ -27,8 +27,8 @@
 
 body {
   margin: 0;
-  background: var(--color-surface-page);
-  color: var(--color-text-primary);
+  background: var(--surface-page);
+  color: var(--text-default);
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-body);

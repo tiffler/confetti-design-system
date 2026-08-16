@@ -2,10 +2,10 @@
   display: inline-flex;
   align-items: center;
 
-  padding: var(--badge-padding-y) var(--badge-padding-x);
-  border: var(--badge-border-width) solid var(--badge-border-color);
+  padding: var(--badge-padding-vertical) var(--badge-padding-horizontal);
+  border: var(--badge-border-width) solid var(--badge-border);
   border-radius: var(--badge-radius);
-  color: var(--badge-fg);
+  color: var(--badge-text);
 
   font-family: var(--badge-font-family);
   font-size: var(--badge-font-size);
@@ -18,55 +18,55 @@
 
 /* Bold: saturated accent fill — badges, stat cards, tags. */
 .cf-badge--bold.cf-badge--purple {
-  background: var(--badge-bg-purple);
+  background: var(--badge-fill-purple);
 }
 .cf-badge--bold.cf-badge--teal {
-  background: var(--badge-bg-teal);
+  background: var(--badge-fill-teal);
 }
 .cf-badge--bold.cf-badge--orange {
-  background: var(--badge-bg-orange);
+  background: var(--badge-fill-orange);
 }
 .cf-badge--bold.cf-badge--pink {
-  background: var(--badge-bg-pink);
+  background: var(--badge-fill-pink);
 }
 /* Success: a state, not a category. Its bold end inverts the accent recipe — a deep fill
    carrying a light label, rather than a light fill carrying ink — so like neutral it brings
-   its own foreground instead of the shared `--badge-fg`. */
+   its own foreground instead of the shared `--badge-text`. */
 .cf-badge--bold.cf-badge--success {
-  background: var(--badge-bg-success);
-  color: var(--badge-fg-success);
+  background: var(--badge-fill-success);
+  color: var(--badge-text-success);
 }
 
 /* Neutral: paper fill + ink text (not a category — labels, versions, counts). */
 .cf-badge--bold.cf-badge--neutral {
-  background: var(--badge-bg-neutral);
-  color: var(--badge-fg-neutral);
+  background: var(--badge-fill-neutral);
+  color: var(--badge-text-neutral);
 }
 /* Neutral subtle: no fill, just the outline + muted text. */
 .cf-badge--subtle.cf-badge--neutral {
-  color: var(--badge-fg-subtle-neutral);
+  color: var(--badge-text-subtle-neutral);
 }
 
 /* Subtle: pastel tint — the card-background end of each hue pair. In dark mode
    the tint end goes deep, so the foreground flips with it. */
 .cf-badge--subtle {
-  color: var(--badge-fg-subtle);
+  color: var(--badge-text-subtle);
 }
 
 .cf-badge--subtle.cf-badge--purple {
-  background: var(--badge-bg-subtle-purple);
+  background: var(--badge-fill-subtle-purple);
 }
 .cf-badge--subtle.cf-badge--teal {
-  background: var(--badge-bg-subtle-teal);
+  background: var(--badge-fill-subtle-teal);
 }
 .cf-badge--subtle.cf-badge--orange {
-  background: var(--badge-bg-subtle-orange);
+  background: var(--badge-fill-subtle-orange);
 }
 .cf-badge--subtle.cf-badge--pink {
-  background: var(--badge-bg-subtle-pink);
+  background: var(--badge-fill-subtle-pink);
 }
 
 .cf-badge--subtle.cf-badge--success {
-  background: var(--badge-bg-subtle-success);
-  color: var(--badge-fg-subtle-success);
+  background: var(--badge-fill-subtle-success);
+  color: var(--badge-text-subtle-success);
 }

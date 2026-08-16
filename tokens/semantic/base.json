@@ -1,10 +1,17 @@
 {
   "$comment": "Base semantic layer — roles that do NOT vary by mode OR theme (type, space, non-themed radii, control/icon sizes, motion). Emitted once under :root. Color neutrals live in modes/; the THEME-tunable roles (brand colors, control/container radius, sticker border width) live in the wiring (tokens/semantic/theme-roles.json) as var() refs to the brand-kit inputs. Those combine via the [data-mode] / [data-theme] cascade.",
   "color": {
-    "$comment": "The only axis-independent color roles: the scrim is a fixed deep dim (used to focus a modal/lightbox), the same in every mode and theme — so the foreground that sits ON it has to be fixed too. Mode/theme neutrals live in modes/ and overrides/.",
-    "scrim": { "value": "{color.ink.a86}", "comment": "modal / lightbox overlay dim" },
+    "$comment": "The only axis-independent color roles: the scrim is a fixed deep dim (used to focus a modal/lightbox), the same in every mode and theme — so the foreground that sits ON it has to be fixed too. Mode/theme neutrals live in modes/ and overrides/."
+  },
+  "surface": {
+    "scrim": {
+      "value": "{colors.ink.a86}",
+      "comment": "modal / lightbox overlay dim"
+    }
+  },
+  "text": {
     "on-scrim": {
-      "value": "{color.base.white}",
+      "value": "{colors.base.white}",
       "comment": "text and controls placed directly on the scrim rather than on a panel — a lightbox caption, a close button. It cannot be text.primary (which follows the mode and would vanish in light) or text.inverse (which follows it the other way and vanishes in dark): the scrim is deep in BOTH modes, so its foreground is fixed like it is."
     }
   },
@@ -12,107 +19,263 @@
     "$comment": "family (display/body/label) is THEME-tunable and lives in the wiring; size/weight/tracking/leading are axis-independent here.",
     "size": {
       "$comment": "Heading ramp is a 1.25 modular scale rounded to the 4px grid: 48 / 40 / 32 / 24 / 20 / 16.",
-      "display": { "value": "{font.size.hero}", "comment": "hero only — fluid, sits above h1" },
-      "h1": { "value": "{font.size.48}" },
-      "h2": { "value": "{font.size.40}" },
-      "h3": { "value": "{font.size.32}" },
-      "h4": { "value": "{font.size.24}" },
-      "h5": { "value": "{font.size.20}" },
-      "h6": { "value": "{font.size.16}", "comment": "meets body size — weight and family carry the distinction" },
-      "body": { "value": "{font.size.16}", "comment": "16px — body primary" },
-      "body-secondary": { "value": "{font.size.14}", "comment": "14px — captions, meta, dense UI" },
-      "label": { "value": "{font.size.12}", "comment": "12px — mono eyebrows, uppercase" }
+      "display": {
+        "value": "{font-size.hero}",
+        "comment": "hero only — fluid, sits above h1"
+      },
+      "h1": {
+        "value": "{font-size.1000}"
+      },
+      "h2": {
+        "value": "{font-size.900}"
+      },
+      "h3": {
+        "value": "{font-size.800}"
+      },
+      "h4": {
+        "value": "{font-size.700}"
+      },
+      "h5": {
+        "value": "{font-size.500}"
+      },
+      "h6": {
+        "value": "{font-size.300}",
+        "comment": "meets body size — weight and family carry the distinction"
+      },
+      "body": {
+        "value": "{font-size.300}",
+        "comment": "16px — body primary"
+      },
+      "body-secondary": {
+        "value": "{font-size.200}",
+        "comment": "14px — captions, meta, dense UI"
+      },
+      "label": {
+        "value": "{font-size.100}",
+        "comment": "12px — mono eyebrows, uppercase"
+      }
     },
     "weight": {
-      "display": { "value": "{font.weight.semibold}" },
-      "body": { "value": "{font.weight.medium}" },
-      "control": { "value": "{font.weight.bold}", "comment": "700 — button and control labels" },
-      "label": { "value": "{font.weight.bold}" }
+      "display": {
+        "value": "{font.weight.semibold}"
+      },
+      "body": {
+        "value": "{font.weight.medium}"
+      },
+      "control": {
+        "value": "{font.weight.bold}",
+        "comment": "700 — button and control labels"
+      },
+      "label": {
+        "value": "{font.weight.bold}"
+      }
     },
     "tracking": {
-      "display": { "value": "{font.tracking.tight}" },
-      "label": { "value": "{font.tracking.wide}" }
+      "display": {
+        "value": "{font.tracking.tight}"
+      },
+      "label": {
+        "value": "{font.tracking.wide}"
+      }
     },
     "leading": {
-      "display": { "value": "{font.leading.none}" },
-      "heading": { "value": "{font.leading.snug}" },
-      "body": { "value": "{font.leading.normal}" }
+      "display": {
+        "value": "{font.leading.none}"
+      },
+      "heading": {
+        "value": "{font.leading.snug}"
+      },
+      "body": {
+        "value": "{font.leading.normal}"
+      }
     }
   },
   "radius": {
-    "$comment": "control (pills/buttons) and container (cards) are THEME-tunable and live in the wiring; chip/avatar are fixed here.",
-    "chip": { "value": "{radius.xs}" },
-    "avatar": { "value": "{radius.circle}" }
+    "$comment": "control (pills/buttons) and container (cards) are THEME-tunable and live in the wiring; chip/avatar are fixed here."
   },
-  "border": {
-    "$comment": "default (the themeable 2px sticker edge) lives in the wiring; thin is the fixed 1px outline of the soft pill — Badge and the Tabs active indicator. Leaf name differs from the border.width.hairline primitive to avoid a flat-namespace collision.",
-    "width": {
-      "thin": { "value": "{border.width.hairline}", "comment": "1px — soft pill / chip outline (Badge, Tabs indicator)" }
+  "borders": {
+    "radius": {
+      "chip": {
+        "value": "{radius.100}"
+      },
+      "avatar": {
+        "value": "{radius.circle}"
+      }
+    },
+    "stroke-weight": {
+      "thin": {
+        "value": "{size.100}",
+        "comment": "1px — soft pill / chip outline (Badge, Tabs indicator)"
+      }
     }
   },
+  "border": {
+    "$comment": "default (the themeable 2px sticker edge) lives in the wiring; thin is the fixed 1px outline of the soft pill — Badge and the Tabs active indicator. Leaf name differs from the border.width.hairline primitive to avoid a flat-namespace collision."
+  },
   "size": {
-    "control": { "value": "{space.12}", "comment": "48px — height of a tappable control." },
+    "control": {
+      "value": "{size.1200}",
+      "comment": "48px — height of a tappable control."
+    },
     "dialog": {
       "$comment": "Max width of a modal panel. Leaf names differ from the width.* primitives they alias to avoid a flat-namespace collision.",
-      "sm": { "value": "{width.dialog-sm}", "comment": "420px — confirmations" },
-      "md": { "value": "{width.dialog-md}", "comment": "560px — the default dialog" }
+      "sm": {
+        "value": "{width.dialog-sm}",
+        "comment": "420px — confirmations"
+      },
+      "md": {
+        "value": "{width.dialog-md}",
+        "comment": "560px — the default dialog"
+      }
     },
     "slider": {
       "$comment": "A slider is a thin rail with a knob that has to be grabbable: the rail is deliberately slimmer than a switch's track, and the knob larger than the rail is tall, so it reads as sitting ON the rail rather than in it.",
-      "track-height": { "value": "{space.3}", "comment": "12px" },
-      "thumb": { "value": "{space.6}", "comment": "24px" }
+      "track-height": {
+        "value": "{size.500}",
+        "comment": "12px"
+      },
+      "thumb": {
+        "value": "{size.900}",
+        "comment": "24px"
+      }
     },
     "switch": {
       "$comment": "The one control whose proportions are its own: a track twice as wide as it is tall, and a thumb one step smaller so it sits inset rather than flush.",
-      "track-width": { "value": "{space.12}", "comment": "48px — the control width, matching size.control" },
-      "track-height": { "value": "{space.6}", "comment": "24px" },
-      "thumb": { "value": "{space.5}", "comment": "20px — leaves a 2px inset on each side of the track" }
+      "track-width": {
+        "value": "{size.1200}",
+        "comment": "48px — the control width, matching size.control"
+      },
+      "track-height": {
+        "value": "{size.900}",
+        "comment": "24px"
+      },
+      "thumb": {
+        "value": "{size.800}",
+        "comment": "20px — leaves a 2px inset on each side of the track"
+      }
     },
     "icon": {
-      "$comment": "Icons sit on the type scale, not the space scale.",
-      "sm": { "value": "{font.size.16}", "comment": "16px — inline with body and control labels" },
-      "md": { "value": "{font.size.20}", "comment": "20px — standalone UI affordances" },
-      "lg": { "value": "{font.size.24}", "comment": "24px — feature and empty-state icons" }
+      "$comment": "Icon boxes mirror the TYPE ramp, not the numeric size ramp, and that is deliberate: they are rem-based so a glyph beside a label grows with the reader's font-size preference instead of staying pinned at a pixel count.",
+      "sm": {
+        "value": "{font-size.300}",
+        "comment": "16px — inline with body and control labels"
+      },
+      "md": {
+        "value": "{font-size.500}",
+        "comment": "20px — standalone UI affordances"
+      },
+      "lg": {
+        "value": "{font-size.700}",
+        "comment": "24px — feature and empty-state icons"
+      }
     }
   },
   "space": {
     "$comment": "Two families over one primitive ramp: COMPONENT (inset-* / stack / inline) and LAYOUT (layout-*).",
-    "none": { "value": "{space.0}", "comment": "0 — no space / reset" },
-    "inset-xs": { "value": "{space.1}", "comment": "4px — tightest inset, chips and dots" },
-    "inline": { "value": "{space.2}", "comment": "8px — gap between inline siblings" },
-    "inset-tight": { "value": "{space.2}", "comment": "8px — compact control padding" },
-    "inset-sm": { "value": "{space.3}", "comment": "12px — snug inset / tight stack gap" },
-    "stack": { "value": "{space.4}", "comment": "16px — vertical rhythm inside a container" },
-    "inset-lg": { "value": "{space.5}", "comment": "20px — roomy inset (e.g. stat cards)" },
-    "inset": { "value": "{space.6}", "comment": "24px — standard container padding" },
-    "stack-lg": { "value": "{space.8}", "comment": "32px — gap between larger blocks" },
-    "layout-sm": { "value": "{space.10}", "comment": "40px — small layout / section gap" },
-    "layout": { "value": "{space.12}", "comment": "48px — page / card gutter" },
-    "layout-lg": { "value": "{space.16}", "comment": "64px — space between major sections" },
-    "layout-xl": { "value": "{space.20}", "comment": "80px — largest section rhythm" }
+    "none": {
+      "value": "{space.0}",
+      "comment": "0 — no space / reset"
+    },
+    "inset-xs": {
+      "value": "{space.100}",
+      "comment": "4px — tightest inset, chips and dots"
+    },
+    "inline": {
+      "value": "{space.200}",
+      "comment": "8px — gap between inline siblings"
+    },
+    "inset-tight": {
+      "value": "{space.200}",
+      "comment": "8px — compact control padding"
+    },
+    "inset-sm": {
+      "value": "{space.300}",
+      "comment": "12px — snug inset / tight stack gap"
+    },
+    "stack": {
+      "value": "{space.400}",
+      "comment": "16px — vertical rhythm inside a container"
+    },
+    "inset-lg": {
+      "value": "{space.500}",
+      "comment": "20px — roomy inset (e.g. stat cards)"
+    },
+    "inset": {
+      "value": "{space.600}",
+      "comment": "24px — standard container padding"
+    },
+    "stack-lg": {
+      "value": "{space.700}",
+      "comment": "32px — gap between larger blocks"
+    },
+    "layout-sm": {
+      "value": "{space.800}",
+      "comment": "40px — small layout / section gap"
+    },
+    "layout": {
+      "value": "{space.900}",
+      "comment": "48px — page / card gutter"
+    },
+    "layout-lg": {
+      "value": "{space.1000}",
+      "comment": "64px — space between major sections"
+    },
+    "layout-xl": {
+      "value": "{space.1100}",
+      "comment": "80px — largest section rhythm"
+    }
   },
   "shadow": {
-    "$comment": "The lift shadows live on the mode axis (modes/) because they invert ink→cream. `flat` is axis-independent: it is the absence of one, used by the pressed state to collapse a hover lift. Leaf name differs from the shadow.none primitive it aliases.",
-    "flat": { "value": "{shadow.none}", "comment": "no shadow — pressed, and the resting default" }
+    "$comment": "The lift shadows live on the mode axis (modes/) because they invert ink→cream. `flat` is axis-independent: it is the absence of one, used by the pressed state to collapse a hover lift. Leaf name differs from the shadow.none primitive it aliases."
+  },
+  "elevation": {
+    "flat": {
+      "value": "{shadow.none}",
+      "comment": "no shadow — pressed, and the resting default"
+    }
   },
   "effect": {
     "$comment": "Leaf name differs from the effect.brightness.none primitive it aliases.",
-    "brightness-rest": { "value": "{effect.brightness.none}", "comment": "1 — no lightness change, the pressed counterpart to a theme's hover brightness" }
+    "brightness-rest": {
+      "value": "{effect.brightness.none}",
+      "comment": "1 — no lightness change, the pressed counterpart to a theme's hover brightness"
+    }
   },
   "motion": {
     "$comment": "Leaf names differ from the primitives they alias to avoid a flat-namespace collision.",
     "transform": {
-      "lift": { "value": "{motion.lift}", "comment": "how far an interactive surface rises on hover" },
-      "rest": { "value": "{motion.rest}" }
+      "lift": {
+        "value": "{motion.lift}",
+        "comment": "how far an interactive surface rises on hover"
+      },
+      "rest": {
+        "value": "{motion.rest}"
+      }
     },
-    "tilt": { "max": { "value": "{motion.tilt.subtle}", "comment": "outer bound of the hand-placed sticker angle" } },
+    "tilt": {
+      "max": {
+        "value": "{motion.tilt.subtle}",
+        "comment": "outer bound of the hand-placed sticker angle"
+      }
+    },
     "duration": {
-      "interaction": { "value": "{motion.duration.base}", "comment": "hover and focus transitions" },
-      "ambient": { "value": "{motion.duration.drift}", "comment": "one loop of a continuous, non-reactive animation — a texture that drifts rather than a state that changes" }
+      "interaction": {
+        "value": "{duration.200}",
+        "comment": "hover and focus transitions"
+      },
+      "ambient": {
+        "value": "{duration.300}",
+        "comment": "one loop of a continuous, non-reactive animation — a texture that drifts rather than a state that changes"
+      }
     },
     "easing": {
-      "interaction": { "value": "{motion.easing.standard}" },
-      "ambient": { "value": "{motion.easing.linear}", "comment": "constant speed, so a looping animation has no perceptible seam" }
+      "interaction": {
+        "value": "{easing.standard}"
+      },
+      "ambient": {
+        "value": "{easing.linear}",
+        "comment": "constant speed, so a looping animation has no perceptible seam"
+      }
     }
   }
 }

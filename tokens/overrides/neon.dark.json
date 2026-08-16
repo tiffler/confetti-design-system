@@ -1,51 +1,114 @@
 {
   "$comment": "Neon DARK — the hero synthwave look: deep-purple 'synth' surfaces, light-lavender 'glow' text, vivid neon accent tints. The bright magenta brand reads AS TEXT on the near-black surface (5:1), so no lift is needed here (text.accent + ghost hover come straight from the brand kit). The magenta button fill keeps its black label; buttons GLOW magenta on hover. Emitted under [data-theme='neon'][data-mode='dark'].",
-  "color": {
-    "surface": {
-      "page": { "value": "{color.synth.900}" },
-      "raised": { "value": "{color.synth.800}" },
-      "panel": { "value": "{color.synth.700}" },
-      "card": { "value": "{color.synth.600}" },
-      "backdrop": { "value": "{color.synth.900}", "comment": "recessed mat — collapses to the deepest synth (no darker neutral; demo default)" }
+  "surface": {
+    "page": {
+      "value": "{colors.synth.900}"
     },
-    "text": {
-      "primary": { "value": "{color.glow.100}" },
-      "muted": { "value": "{color.glow.400}" },
-      "inverse": { "value": "{color.synth.700}" }
+    "raised": {
+      "value": "{colors.synth.800}"
     },
-    "border": {
-      "default": { "value": "{color.glow.100}" },
-      "subtle": { "value": "{color.synth.a16}" },
-      "none": { "value": "{color.base.transparent}" }
+    "panel": {
+      "value": "{colors.synth.700}"
     },
-    "action": {
-      "secondary": {
-        "bg": { "value": "{color.synth.700}" },
-        "fg": { "value": "{color.glow.100}" }
-      },
-      "ghost": {
-        "bg": { "value": "{color.base.transparent}" },
-        "fg": { "value": "{color.glow.100}" }
-      }
+    "card": {
+      "value": "{colors.synth.600}"
     },
-    "accent": {
-      "purple": { "subtle": { "value": "{color.neon.purple.700}" } },
-      "teal": { "subtle": { "value": "{color.neon.cyan.700}" } },
-      "orange": { "subtle": { "value": "{color.neon.lime.700}" } },
-      "pink": { "subtle": { "value": "{color.neon.magenta.700}" } },
-      "on-bold": { "value": "{color.base.black}" },
-      "on-subtle": { "value": "{color.glow.100}" }
+    "backdrop": {
+      "value": "{colors.synth.900}",
+      "comment": "recessed mat — collapses to the deepest synth (no darker neutral; demo default)"
     }
   },
-  "shadow": {
-    "lift": { "value": "3px 3px 0px 0px {color.glow.100}", "comment": "cards keep a hard offset" },
-    "button-lift": { "value": "0 0 18px 0 {color.neon.pink.500}", "comment": "buttons GLOW magenta on hover" }
+  "text": {
+    "default": {
+      "value": "{colors.glow.100}"
+    },
+    "muted": {
+      "value": "{colors.glow.400}"
+    },
+    "inverse": {
+      "value": "{colors.synth.700}"
+    }
+  },
+  "borders": {
+    "stroke-color": {
+      "default": {
+        "value": "{colors.glow.100}"
+      },
+      "subtle": {
+        "value": "{colors.synth.a16}"
+      },
+      "none": {
+        "value": "{colors.base.transparent}"
+      }
+    }
+  },
+  "action": {
+    "secondary": {
+      "fill": {
+        "value": "{colors.synth.700}"
+      },
+      "text": {
+        "value": "{colors.glow.100}"
+      }
+    },
+    "ghost": {
+      "fill": {
+        "value": "{colors.base.transparent}"
+      },
+      "text": {
+        "value": "{colors.glow.100}"
+      }
+    }
+  },
+  "accent": {
+    "purple": {
+      "subtle": {
+        "value": "{colors.neon.purple.700}"
+      }
+    },
+    "teal": {
+      "subtle": {
+        "value": "{colors.neon.cyan.700}"
+      }
+    },
+    "orange": {
+      "subtle": {
+        "value": "{colors.neon.lime.700}"
+      }
+    },
+    "pink": {
+      "subtle": {
+        "value": "{colors.neon.magenta.700}"
+      }
+    },
+    "on-bold": {
+      "value": "{colors.base.black}"
+    },
+    "on-subtle": {
+      "value": "{colors.glow.100}"
+    }
+  },
+  "elevation": {
+    "lift": {
+      "value": "3px 3px 0px 0px {colors.glow.100}",
+      "comment": "cards keep a hard offset"
+    },
+    "button-lift": {
+      "value": "0 0 18px 0 {colors.neon.pink.500}",
+      "comment": "buttons GLOW magenta on hover"
+    }
   },
   "focus": {
     "ring": {
-      "width": { "value": "{border.width.sticker}" },
-      "color": { "value": "{color.glow.100}" },
-      "offset": { "value": "{border.width.sticker}" }
+      "width": {
+        "value": "{size.200}"
+      },
+      "color": {
+        "value": "{colors.glow.100}"
+      },
+      "offset": {
+        "value": "{size.200}"
+      }
     }
   }
 }

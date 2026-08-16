@@ -2,37 +2,45 @@
   "font": {
     "family": {
       "$comment": "Two typefaces, Fredoka and JetBrains Mono. Everything after the first name in each stack is a fallback for before the webfont loads — not a third face in the system.",
-      "fredoka": { "value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" },
-      "mono": { "value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" }
-    },
-    "size": {
-      "$comment": "Named by px so the ramp is self-documenting; VALUES are rem (name ÷ 16) so type honours the visitor's browser font-size setting, which px silently ignores. Every step lands on the 4px grid the spacing scale uses, so type and space stay commensurate.",
-      "12": { "value": "0.75rem" },
-      "14": { "value": "0.875rem" },
-      "16": { "value": "1rem" },
-      "18": { "value": "1.125rem", "comment": "utility step — off the 4px grid (like 14), for body-large / small subheads" },
-      "20": { "value": "1.25rem" },
-      "22": { "value": "1.375rem", "comment": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)" },
-      "24": { "value": "1.5rem" },
-      "32": { "value": "2rem" },
-      "40": { "value": "2.5rem" },
-      "48": { "value": "3rem" },
-      "hero": { "value": "clamp(2.25rem, 13cqw, 6.5rem)", "comment": "container-query driven headline, above the fixed ramp" }
+      "fredoka": {
+        "value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+      },
+      "mono": {
+        "value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+      }
     },
     "weight": {
-      "medium": { "value": "500" },
-      "semibold": { "value": "600" },
-      "bold": { "value": "700" }
+      "medium": {
+        "value": "500"
+      },
+      "semibold": {
+        "value": "600"
+      },
+      "bold": {
+        "value": "700"
+      }
     },
     "tracking": {
-      "tight": { "value": "-0.03em" },
-      "normal": { "value": "0" },
-      "wide": { "value": "0.16em" }
+      "tight": {
+        "value": "-0.03em"
+      },
+      "normal": {
+        "value": "0"
+      },
+      "wide": {
+        "value": "0.16em"
+      }
     },
     "leading": {
-      "none": { "value": "1" },
-      "snug": { "value": "1.3" },
-      "normal": { "value": "1.5" }
+      "none": {
+        "value": "1"
+      },
+      "snug": {
+        "value": "1.3"
+      },
+      "normal": {
+        "value": "1.5"
+      }
     }
   }
 }

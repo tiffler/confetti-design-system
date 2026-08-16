@@ -15,9 +15,9 @@
   max-width: 100%;
 
   padding: var(--toast-padding);
-  background: var(--toast-bg);
-  color: var(--toast-fg);
-  border: var(--toast-border-width) solid var(--toast-border-color);
+  background: var(--toast-fill);
+  color: var(--toast-text);
+  border: var(--toast-border-width) solid var(--toast-border);
   border-radius: var(--toast-radius);
   box-shadow: var(--toast-shadow);
 
@@ -65,7 +65,7 @@
   font-family: var(--toast-body-font-family);
   font-size: var(--toast-body-font-size);
   line-height: var(--toast-body-leading);
-  color: var(--toast-fg-muted);
+  color: var(--toast-text-muted);
 }
 
 .cf-toast__action {

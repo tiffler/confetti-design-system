@@ -81,7 +81,7 @@ export const Sizes: Story = {
       {(['sm', 'md', 'lg'] as const).map((size) => (
         <span key={size} style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-inline)' }}>
           <Icon {...args} size={size} />
-          <span style={{ fontFamily: 'var(--font-family-label)', fontSize: 'var(--font-size-label)', color: 'var(--color-text-muted)' }}>
+          <span style={{ fontFamily: 'var(--font-family-label)', fontSize: 'var(--font-size-label)', color: 'var(--text-muted)' }}>
             {size}
           </span>
         </span>
@@ -96,7 +96,7 @@ export const Tones: Story = {
       {(['default', 'muted', 'accent'] as const).map((tone) => (
         <span key={tone} style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-inline)' }}>
           <Icon {...args} size="md" tone={tone} />
-          <span style={{ fontFamily: 'var(--font-family-label)', fontSize: 'var(--font-size-label)', color: 'var(--color-text-muted)' }}>
+          <span style={{ fontFamily: 'var(--font-family-label)', fontSize: 'var(--font-size-label)', color: 'var(--text-muted)' }}>
             {tone}
           </span>
         </span>
@@ -152,7 +152,7 @@ export const InUse: Story = {
       ].map(({ icon, label }) => (
         <span key={label} style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-inline)' }}>
           <Icon icon={icon} size="md" tone="default" />
-          <span style={{ fontFamily: 'var(--font-family-label)', fontSize: 'var(--font-size-label)', color: 'var(--color-text-muted)' }}>
+          <span style={{ fontFamily: 'var(--font-family-label)', fontSize: 'var(--font-size-label)', color: 'var(--text-muted)' }}>
             {label}
           </span>
         </span>

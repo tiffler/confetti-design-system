@@ -12,7 +12,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'A dialog built on the native `<dialog>` element, opened with `showModal()` — so the focus trap, `inert` on the page behind, Escape handling, and the top layer all come from the platform rather than from component code. The panel is **Card-weight**: same fill, 2px sticker border, container radius, and hard offset shadow, held at rest. The dim is `--color-scrim`, the one axis-independent color role in the system (identical in every theme × mode) and this is its only consumer. Fully controlled — Escape, the close button, and a click on the scrim all route through `onClose`, and the parent decides.',
+          'A dialog built on the native `<dialog>` element, opened with `showModal()` — so the focus trap, `inert` on the page behind, Escape handling, and the top layer all come from the platform rather than from component code. The panel is **Card-weight**: same fill, 2px sticker border, container radius, and hard offset shadow, held at rest. The dim is `--surface-scrim`, the one axis-independent color role in the system (identical in every theme × mode) and this is its only consumer. Fully controlled — Escape, the close button, and a click on the scrim all route through `onClose`, and the parent decides.',
       },
     },
   },
@@ -99,7 +99,7 @@ export const Default: Story = {
     docs: {
       description: {
         story:
-          'Open it, then try every way out: **Escape**, the close button, or a click on the dim. Tab is trapped inside the panel while it is open, and focus returns to the trigger when it closes — all of that is `showModal()`, not component code.\n\nWorth flipping to **dark**: the scrim is a fixed deep ink in *both* modes, so the panel’s edge behaves differently in each. In dark, `--modal-border-color` and `--modal-shadow` resolve to cream and the full sticker treatment reads against the dim. In light they resolve to ink — ink on ink — so the outline and the offset shadow are painted but invisible, and the white panel’s own silhouette is the edge. That is the tokens repointing per mode exactly as designed, not a missing border: on a deep scrim there is no light page to separate the panel from.',
+          'Open it, then try every way out: **Escape**, the close button, or a click on the dim. Tab is trapped inside the panel while it is open, and focus returns to the trigger when it closes — all of that is `showModal()`, not component code.\n\nWorth flipping to **dark**: the scrim is a fixed deep ink in *both* modes, so the panel’s edge behaves differently in each. In dark, `--modal-border` and `--modal-shadow` resolve to cream and the full sticker treatment reads against the dim. In light they resolve to ink — ink on ink — so the outline and the offset shadow are painted but invisible, and the white panel’s own silhouette is the edge. That is the tokens repointing per mode exactly as designed, not a missing border: on a deep scrim there is no light page to separate the panel from.',
       },
     },
   },
@@ -171,7 +171,7 @@ export const RichContent: Story = {
         </div>
         <p style={{ margin: 0 }}>
           Modal is the first component to consume{' '}
-          <code>--color-scrim</code>, the fixed dim added in v0.2.1 — the same value in every
+          <code>--surface-scrim</code>, the fixed dim added in v0.2.1 — the same value in every
           theme × mode combination, because a scrim that shifted with the theme would
           read as a different depth each time.
         </p>
@@ -186,24 +186,24 @@ export const OnAnAppFrame: Story = {
     docs: {
       description: {
         story:
-          'The other v0.2.1 surface, `--color-surface-backdrop`, in its intended role: the recessed mat a step *below* page that an app frame sits on. It gives the scrim something with real depth to dim — worth checking in dark mode, where backdrop is the deepest ink and the scrim still has to separate the panel from it.',
+          'The other v0.2.1 surface, `--surface-backdrop`, in its intended role: the recessed mat a step *below* page that an app frame sits on. It gives the scrim something with real depth to dim — worth checking in dark mode, where backdrop is the deepest ink and the scrim still has to separate the panel from it.',
       },
     },
   },
   render: () => (
     <div
       style={{
-        background: 'var(--color-surface-backdrop)',
+        background: 'var(--surface-backdrop)',
         padding: 'var(--space-layout-sm)',
-        borderRadius: 'var(--radius-container)',
+        borderRadius: 'var(--borders-radius-container)',
       }}
     >
       <div
         style={{
-          background: 'var(--color-surface-raised)',
-          color: 'var(--color-text-primary)',
-          border: 'var(--border-width-default) solid var(--color-border-default)',
-          borderRadius: 'var(--radius-container)',
+          background: 'var(--surface-raised)',
+          color: 'var(--text-default)',
+          border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-default)',
+          borderRadius: 'var(--borders-radius-container)',
           padding: 'var(--space-inset)',
           display: 'grid',
           gap: 'var(--space-stack)',
@@ -211,7 +211,7 @@ export const OnAnAppFrame: Story = {
         }}
       >
         <h3 style={{ margin: 0, fontFamily: 'var(--font-family-display)' }}>Drafts</h3>
-        <p style={{ margin: 0, color: 'var(--color-text-muted)' }}>
+        <p style={{ margin: 0, color: 'var(--text-muted)' }}>
           Three case studies waiting on review.
         </p>
         <Demo />

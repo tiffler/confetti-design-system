@@ -125,8 +125,8 @@ const BUTTON_CONFIGS: Array<{
 
 function ButtonMatrix({ variant }: { variant: ButtonVariant }) {
   return (
-    <Stack gap="var(--space-2)">
-      <Tick style={{ color: 'var(--color-text-primary)', textTransform: 'uppercase' }}>
+    <Stack gap="var(--space-200)">
+      <Tick style={{ color: 'var(--text-default)', textTransform: 'uppercase' }}>
         {VARIANT_LABELS[variant]}
       </Tick>
       <div
@@ -230,7 +230,7 @@ function ModalSpecimen() {
           </>
         }
       >
-        <Text style={{ color: 'var(--color-text-muted)' }}>
+        <Text style={{ color: 'var(--text-muted)' }}>
           A controlled dialog on the native `&lt;dialog&gt;` element: real focus trap, the rest
           of the page inert, Escape handled, and the scrim is the element itself — a click that
           misses the panel dismisses it.
@@ -243,7 +243,7 @@ function ModalSpecimen() {
 function ComponentSheet() {
   return (
     <Page width={1280}>
-      <Stack gap="var(--space-2)">
+      <Stack gap="var(--space-200)">
         <Eyebrow>Component sheet</Eyebrow>
         <Title>Every component, every state</Title>
         <Lede>
@@ -268,7 +268,7 @@ function ComponentSheet() {
       <Frame label="Tabs — one per hue">
         <Row gap="var(--space-stack)" align="flex-start">
           {TAB_HUES.map((hue) => (
-            <Stack key={hue} gap="var(--space-1)">
+            <Stack key={hue} gap="var(--space-100)">
               <Tick>{hue}</Tick>
               <TabsSpecimen hue={hue} />
             </Stack>
@@ -334,7 +334,7 @@ function ComponentSheet() {
               staggers the labels underneath. */}
           <Row gap="var(--space-stack)" align="flex-end">
             {ICON_SIZES.map((size) => (
-              <Stack key={size} gap="var(--space-1)" style={{ justifyItems: 'center' }}>
+              <Stack key={size} gap="var(--space-100)" style={{ justifyItems: 'center' }}>
                 <Icon icon={Plus} size={size} tone="default" />
                 <Tick>{size}</Tick>
               </Stack>
@@ -345,7 +345,7 @@ function ComponentSheet() {
         <Frame label="Icon — tone">
           <Row gap="var(--space-stack)">
             {ICON_TONES.map((tone) => (
-              <Stack key={tone} gap="var(--space-1)" style={{ justifyItems: 'center' }}>
+              <Stack key={tone} gap="var(--space-100)" style={{ justifyItems: 'center' }}>
                 <Icon icon={Plus} size="md" tone={tone} />
                 <Tick>{tone}</Tick>
               </Stack>

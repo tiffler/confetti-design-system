@@ -85,7 +85,7 @@ export function useThemeGlobals(): ThemeGlobals {
  * spread this onto a specimen's root so its var() references resolve.
  *
  * The wrapper attributes alone are not enough, though. The theme WIRING
- * (`--color-accent-purple-bold: var(--accent-purple)` and friends) is declared once
+ * (`--accent-purple-bold: var(--accent-purple)` and friends) is declared once
  * under `:root`, and a `var()` is substituted where a property is DECLARED, not where
  * it is used — so a wrapper only inherits whatever `:root` already resolved. Foundations
  * pages have no stories, so no ThemeProvider ever runs in the docs iframe and `<html>`

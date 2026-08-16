@@ -66,7 +66,7 @@ function CopyValue({ text }: { text: string }) {
         padding: 0,
         margin: 0,
         cursor: 'pointer',
-        color: 'var(--color-text-muted)',
+        color: 'var(--text-muted)',
         font: 'inherit',
       }}
     >
@@ -86,9 +86,9 @@ function Caption({ name, value, comment }: { name: string; value: string; commen
       <div style={{ fontWeight: 700 }}>--{name}</div>
       {hex ? <CopyValue text={hex} /> : null}
       {rgb ? <CopyValue text={rgb} /> : null}
-      {!hex && !rgb ? <div style={{ color: 'var(--color-text-muted)' }}>{value}</div> : null}
+      {!hex && !rgb ? <div style={{ color: 'var(--text-muted)' }}>{value}</div> : null}
       {comment ? (
-        <div style={{ color: 'var(--color-text-muted)', fontStyle: 'italic' }}>{comment}</div>
+        <div style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>{comment}</div>
       ) : null}
     </div>
   );
@@ -109,10 +109,10 @@ function Surface({ children }: { children: ReactNode }) {
     <div
       {...themed}
       style={{
-        background: 'var(--color-surface-page)',
-        color: 'var(--color-text-primary)',
-        border: 'var(--border-width-default) solid var(--color-border-subtle)',
-        borderRadius: 'var(--radius-container)',
+        background: 'var(--surface-page)',
+        color: 'var(--text-default)',
+        border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-subtle)',
+        borderRadius: 'var(--borders-radius-container)',
         padding: 'var(--space-inset)',
         margin: 'var(--space-inset) 0',
       }}
@@ -126,7 +126,7 @@ function Surface({ children }: { children: ReactNode }) {
 function Ratio({ ratio }: { ratio: number }) {
   return (
     <span
-      style={{ ...mono, display: 'inline-flex', alignItems: 'center', gap: 4, color: 'var(--color-text-muted)' }}
+      style={{ ...mono, display: 'inline-flex', alignItems: 'center', gap: 4, color: 'var(--text-muted)' }}
       title={`${ratio.toFixed(2)}:1 — ${gradeText(ratio)} for body text`}
     >
       {ratio.toFixed(1)}:1 <span style={{ opacity: 0.75 }}>{gradeText(ratio)}</span>
@@ -178,8 +178,8 @@ export function ColorGrid({ prefix, sort = 'luminance' }: { prefix: string; sort
             <div
               style={{
                 background: `var(--${name})`,
-                border: 'var(--border-width-default) solid var(--color-border-default)',
-                borderRadius: 'var(--radius-container)',
+                border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-default)',
+                borderRadius: 'var(--borders-radius-container)',
                 padding: 'var(--space-inline)',
                 display: 'flex',
                 flexDirection: 'column',
@@ -189,12 +189,12 @@ export function ColorGrid({ prefix, sort = 'luminance' }: { prefix: string; sort
               }}
             >
               {inkOk ? (
-                <span style={{ color: 'var(--color-text-primary)', fontSize: 'var(--font-size-body)' }}>
+                <span style={{ color: 'var(--text-default)', fontSize: 'var(--font-size-body)' }}>
                   Aa — ink
                 </span>
               ) : null}
               {creamOk ? (
-                <span style={{ color: 'var(--color-text-inverse)', fontSize: 'var(--font-size-body)' }}>
+                <span style={{ color: 'var(--text-inverse)', fontSize: 'var(--font-size-body)' }}>
                   Aa — cream
                 </span>
               ) : null}
@@ -206,13 +206,13 @@ export function ColorGrid({ prefix, sort = 'luminance' }: { prefix: string; sort
               <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 {inkOk ? (
                   <span style={mono}>
-                    <span style={{ color: 'var(--color-text-muted)' }}>ink </span>
+                    <span style={{ color: 'var(--text-muted)' }}>ink </span>
                     <Ratio ratio={inkRatio as number} />
                   </span>
                 ) : null}
                 {creamOk ? (
                   <span style={mono}>
-                    <span style={{ color: 'var(--color-text-muted)' }}>cream </span>
+                    <span style={{ color: 'var(--text-muted)' }}>cream </span>
                     <Ratio ratio={creamRatio as number} />
                   </span>
                 ) : null}
@@ -275,8 +275,8 @@ export function ContrastPairs({
               style={{
                 flex: '1 1 320px',
                 background: `var(--${p.bg})`,
-                border: 'var(--border-width-default) solid var(--color-border-default)',
-                borderRadius: 'var(--radius-container)',
+                border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-default)',
+                borderRadius: 'var(--borders-radius-container)',
                 padding: 'var(--space-inline) var(--space-inset)',
               }}
             >
@@ -293,7 +293,7 @@ export function ContrastPairs({
                 minWidth: 240,
               }}
             >
-              <span style={{ ...mono, color: 'var(--color-text-muted)' }}>{p.label}</span>
+              <span style={{ ...mono, color: 'var(--text-muted)' }}>{p.label}</span>
               <Ratio ratio={ratio} />
             </span>
           </div>
@@ -316,7 +316,7 @@ export function TypeSpecimens({
     <div {...themed} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-inset)', margin: 'var(--space-inset) 0' }}>
       {roles.map((role) => (
         <div key={role.label} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-inline)' }}>
-          <div style={{ ...mono, color: 'var(--color-text-muted)' }}>{role.label}</div>
+          <div style={{ ...mono, color: 'var(--text-muted)' }}>{role.label}</div>
           <div
             style={{
               fontFamily: `var(--${role.family})`,
@@ -350,8 +350,8 @@ export function SpacingScale({ names }: { names: string[] }) {
               width: `var(--${name})`,
               height: 16,
               minWidth: 1,
-              background: 'var(--color-accent-purple-bold)',
-              border: 'var(--border-width-default) solid var(--color-border-default)',
+              background: 'var(--accent-purple-bold)',
+              border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-default)',
             }}
           />
           <span style={{ ...mono }}>
@@ -376,8 +376,8 @@ export function RadiusGrid({ prefix }: { prefix: string }) {
             style={{
               height: 72,
               width: 72,
-              background: 'var(--color-accent-teal-bold)',
-              border: 'var(--border-width-default) solid var(--color-border-default)',
+              background: 'var(--accent-teal-bold)',
+              border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-default)',
               borderRadius: `var(--${name})`,
             }}
           />
@@ -403,8 +403,8 @@ export function ElevationStack({
           key={step.token}
           style={{
             background: `var(--${step.token})`,
-            border: 'var(--border-width-default) solid var(--color-border-default)',
-            borderRadius: 'var(--radius-container)',
+            border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-default)',
+            borderRadius: 'var(--borders-radius-container)',
             padding: 'var(--space-inset)',
             ...mono,
           }}
@@ -420,9 +420,9 @@ export function ElevationStack({
 export function ShadowSpecimen() {
   const themed = useThemeAttrs();
   const box: CSSProperties = {
-    background: 'var(--color-surface-card)',
-    border: 'var(--border-width-default) solid var(--color-border-default)',
-    borderRadius: 'var(--radius-container)',
+    background: 'var(--surface-card)',
+    border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-default)',
+    borderRadius: 'var(--borders-radius-container)',
     padding: 'var(--space-inset)',
     ...mono,
   };
@@ -430,8 +430,8 @@ export function ShadowSpecimen() {
   return (
     <div {...themed} style={{ display: 'flex', gap: 'var(--space-inset)', margin: 'var(--space-inset) var(--space-inset) var(--space-inset) 0', flexWrap: 'wrap' }}>
       <div style={box}>rest</div>
-      <div style={{ ...box, boxShadow: 'var(--shadow-lift)', transform: 'translate(-2px, -2px)' }}>
-        --shadow-lift
+      <div style={{ ...box, boxShadow: 'var(--elevation-lift)', transform: 'translate(-2px, -2px)' }}>
+        --elevation-lift
       </div>
     </div>
   );
@@ -444,9 +444,9 @@ export function ShadowSpecimen() {
 export function CardElevation() {
   const themed = useThemeAttrs();
   const base: CSSProperties = {
-    background: 'var(--card-bg)',
-    color: 'var(--card-fg)',
-    border: 'var(--card-border-width) solid var(--card-border-color)',
+    background: 'var(--card-fill)',
+    color: 'var(--card-text)',
+    border: 'var(--card-border-width) solid var(--card-border)',
     borderRadius: 'var(--card-radius)',
     padding: 'var(--card-padding)',
     display: 'flex',
@@ -467,7 +467,7 @@ export function CardElevation() {
     fontFamily: 'var(--card-body-font-family)',
     fontSize: 'var(--card-body-font-size)',
     lineHeight: 'var(--card-body-leading)',
-    color: 'var(--card-fg-muted)',
+    color: 'var(--card-text-muted)',
   };
 
   return (

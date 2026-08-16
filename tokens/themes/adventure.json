@@ -1,35 +1,70 @@
 {
   "$comment": "THEME = adventure (Forest & trail). Brand-kit inputs only: a pine-green brand and four earthy accent hues (moss / clay / amber / berry mapped onto the teal / orange / pink / purple slots). Adventure OWNS ITS NEUTRALS per mode — see tokens/overrides/adventure.{light,dark}.json (sand paper in light, deep forest in dark). Shape and fonts match Confetti's defaults for now. Every brand-kit input must be defined here (the wiring under :root references them). Emitted under [data-theme='adventure'].",
   "brand": {
-    "primary": { "value": "{color.pine.500}", "comment": "pine green — reads as text on sand (4.7:1) and as button fill with white (6.5:1)" },
-    "on-primary": { "value": "{color.base.white}" }
-  },
-  "accent": {
-    "purple": { "value": "{color.berry.400}" },
-    "teal": { "value": "{color.moss.400}" },
-    "orange": { "value": "{color.clay.400}" },
-    "pink": { "value": "{color.amber.400}" }
+    "primary": {
+      "value": "{colors.pine.500}",
+      "comment": "pine green — reads as text on sand (4.7:1) and as button fill with white (6.5:1)"
+    },
+    "on-primary": {
+      "value": "{colors.base.white}"
+    },
+    "accent": {
+      "purple": {
+        "value": "{colors.berry.400}"
+      },
+      "teal": {
+        "value": "{colors.moss.400}"
+      },
+      "orange": {
+        "value": "{colors.clay.400}"
+      },
+      "pink": {
+        "value": "{colors.amber.400}"
+      }
+    }
   },
   "syntax": {
     "$comment": "Deep forest ground for code, with sand text and sage comments — see the note in themes/confetti.json for why this sits on the theme axis rather than the mode axis.",
-    "surface": { "value": "{color.forest.800}" },
-    "fg": { "value": "{color.sand.200}" },
-    "muted": { "value": "{color.sage.400}" }
+    "surface": {
+      "value": "{colors.forest.800}"
+    },
+    "fg": {
+      "value": "{colors.sand.200}"
+    },
+    "muted": {
+      "value": "{colors.sage.400}"
+    }
   },
   "shape": {
     "$comment": "Rounded-SQUARE controls (radius.lg = 12px), not Confetti's full pills.",
-    "control-radius": { "value": "{radius.lg}" },
-    "container-radius": { "value": "{radius.md}" },
-    "border-width": { "value": "{border.width.sticker}" }
+    "control-radius": {
+      "value": "{radius.400}"
+    },
+    "container-radius": {
+      "value": "{radius.300}"
+    },
+    "border-width": {
+      "value": "{size.200}"
+    }
   },
   "font": {
-    "display": { "value": "{font.family.fredoka}" },
-    "body": { "value": "{font.family.fredoka}" },
-    "label": { "value": "{font.family.mono}" }
+    "display": {
+      "value": "{font.family.fredoka}"
+    },
+    "body": {
+      "value": "{font.family.fredoka}"
+    },
+    "label": {
+      "value": "{font.family.mono}"
+    }
   },
   "interaction": {
     "$comment": "Adventure buttons still do NOT lift — button-lift = rest (no move), and that is what keeps this theme's controls distinct from Confetti's. Prominence on hover comes from the other two channels instead: a strong lightness bump, plus the hard trail shadow restored in the overrides (shadow.button-lift). The button pops off the page without travelling.",
-    "button-lift": { "value": "{motion.rest}" },
-    "hover-brightness": { "value": "{effect.brightness.lighten-strong}" }
+    "button-lift": {
+      "value": "{motion.rest}"
+    },
+    "hover-brightness": {
+      "value": "{effect.brightness.lighten-strong}"
+    }
   }
 }

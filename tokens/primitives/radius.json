@@ -1,0 +1,31 @@
+{
+  "$comment": "Ordinal radius ramp. `none`, `full` and `circle` are not steps on the ramp - they are absolutes - so they keep names rather than numbers.",
+  "radius": {
+    "none": {
+      "value": "0"
+    },
+    "100": {
+      "value": "2px",
+      "comment": "small UI chips / icons"
+    },
+    "200": {
+      "value": "4px"
+    },
+    "300": {
+      "value": "8px",
+      "comment": "card container"
+    },
+    "400": {
+      "value": "12px",
+      "comment": "rounded-square controls (e.g. Adventure buttons)"
+    },
+    "full": {
+      "value": "999px",
+      "comment": "buttons / pills"
+    },
+    "circle": {
+      "value": "50%",
+      "comment": "dots / avatars"
+    }
+  }
+}

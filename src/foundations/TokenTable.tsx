@@ -70,11 +70,18 @@ export type CategoryKey =
   | 'component';
 
 const CATEGORIES: Array<{ key: CategoryKey; label: string; roots: string[] }> = [
-  { key: 'color', label: 'Color', roots: ['color'] },
-  { key: 'type', label: 'Typography', roots: ['font'] },
+  // `colors` is the primitive palette; `surface` / `text` / `action` / `status` are the
+  // semantic roles built on it. All belong under one heading here — the Layer column is what
+  // distinguishes them on the page.
+  { key: 'color', label: 'Color', roots: ['colors', 'surface', 'text', 'action', 'status'] },
+  { key: 'type', label: 'Typography', roots: ['font', 'font-size'] },
   { key: 'space', label: 'Space & size', roots: ['space', 'size', 'width'] },
-  { key: 'shape', label: 'Shape', roots: ['radius', 'border'] },
-  { key: 'depth', label: 'Elevation & motion', roots: ['shadow', 'motion', 'effect', 'z', 'focus'] },
+  { key: 'shape', label: 'Shape', roots: ['radius', 'borders'] },
+  {
+    key: 'depth',
+    label: 'Elevation & motion',
+    roots: ['shadow', 'elevation', 'motion', 'effect', 'z', 'duration', 'easing', 'focus'],
+  },
   { key: 'brand', label: 'Brand kit', roots: ['brand', 'accent', 'syntax', 'shape', 'interaction'] },
   {
     key: 'component',
@@ -110,9 +117,9 @@ function LayerChip({ layer }: { layer: TokenLayer }) {
         display: 'inline-block',
         whiteSpace: 'nowrap',
         padding: '0 var(--space-inset-xs)',
-        borderRadius: 'var(--radius-chip)',
-        border: 'var(--border-width-thin) solid var(--color-border-subtle)',
-        color: 'var(--color-text-muted)',
+        borderRadius: 'var(--borders-radius-chip)',
+        border: 'var(--borders-stroke-weight-thin) solid var(--borders-stroke-color-subtle)',
+        color: 'var(--text-muted)',
       }}
     >
       {layer}
@@ -128,8 +135,8 @@ function Swatch({ value }: { value: string }) {
         display: 'inline-block',
         width: 'var(--size-icon-md)',
         height: 'var(--size-icon-md)',
-        borderRadius: 'var(--radius-xs)',
-        border: 'var(--border-width-thin) solid var(--color-border-subtle)',
+        borderRadius: 'var(--radius-100)',
+        border: 'var(--borders-stroke-weight-thin) solid var(--borders-stroke-color-subtle)',
         background: value,
         verticalAlign: '-0.25em',
       }}
@@ -163,7 +170,7 @@ function SortButton({
         cursor: 'pointer',
         textTransform: 'uppercase',
         letterSpacing: 'var(--font-tracking-label)',
-        color: active ? 'var(--color-text-primary)' : 'var(--color-text-muted)',
+        color: active ? 'var(--text-default)' : 'var(--text-muted)',
       }}
     >
       {label}
@@ -297,20 +304,20 @@ export function TokenTable({
        are painted by the table rather than by the cell — so a sticky header's border stays
        behind with the rows while the header itself travels, and the head ends up with no
        rule under it. An inset shadow is painted by the element, so it comes along. */
-    boxShadow: 'inset 0 calc(-1 * var(--border-width-default)) 0 var(--color-border-default)',
+    boxShadow: 'inset 0 calc(-1 * var(--borders-stroke-weight-default)) 0 var(--borders-stroke-color-default)',
     position: 'sticky',
     /* Against the page scroller the headers have to clear the sticky toolbar, or they pin
        underneath it and are never seen. Inside the bounded region the toolbar is outside the
        scroller entirely, so 0 is right there. */
     top: pageScroll ? toolbarHeight : 0,
-    background: 'var(--color-surface-page)',
+    background: 'var(--surface-page)',
     /* Without this the header is in the right place and invisible: the rows come later in
        the DOM, so they paint over a sticky cell that has no stacking order of its own. */
     zIndex: 1,
   };
   const td: CSSProperties = {
     padding: 'var(--space-inset-xs) var(--space-inline)',
-    borderBottom: 'var(--border-width-hairline) solid var(--color-border-subtle)',
+    borderBottom: 'var(--size-100) solid var(--borders-stroke-color-subtle)',
     verticalAlign: 'top',
   };
 
@@ -346,7 +353,7 @@ export function TokenTable({
                 position: 'sticky',
                 top: 0,
                 zIndex: 2,
-                background: 'var(--color-surface-page)',
+                background: 'var(--surface-page)',
                 paddingBlock: 'var(--space-inset-tight)',
               }
             : null),
@@ -366,20 +373,20 @@ export function TokenTable({
               flex: '1 1 22ch',
               minWidth: '18ch',
               padding: 'var(--space-inset-tight) var(--space-inset-sm)',
-              color: 'var(--color-text-primary)',
-              background: 'var(--color-surface-raised)',
-              border: 'var(--border-width-default) solid var(--color-border-default)',
-              borderRadius: 'var(--radius-control)',
+              color: 'var(--text-default)',
+              background: 'var(--surface-raised)',
+              border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-default)',
+              borderRadius: 'var(--borders-radius-control)',
             }}
           />
         </label>
-        <span style={{ ...mono, color: 'var(--color-text-muted)' }}>
+        <span style={{ ...mono, color: 'var(--text-muted)' }}>
           {shown === total ? `${total} tokens` : `${shown} of ${total} tokens`}
         </span>
       </div>
 
       {visible.length === 0 ? (
-        <p style={{ ...mono, color: 'var(--color-text-muted)', margin: 0 }}>
+        <p style={{ ...mono, color: 'var(--text-muted)', margin: 0 }}>
           Nothing matches “{query}”.
         </p>
       ) : (
@@ -414,11 +421,11 @@ export function TokenTable({
                 margin: 0,
                 fontFamily: 'var(--font-family-display)',
                 fontSize: 'var(--font-size-h5)',
-                color: 'var(--color-text-primary)',
+                color: 'var(--text-default)',
               }}
             >
               {category.label}{' '}
-              <span style={{ ...mono, color: 'var(--color-text-muted)' }}>
+              <span style={{ ...mono, color: 'var(--text-muted)' }}>
                 {category.rows.length}
               </span>
             </h3>
@@ -488,7 +495,7 @@ export function TokenTable({
                     <tr key={row.name}>
                       {/* Colour lives on the cell, not the `code` — the docs chrome resets
                           `code` colour with `!important`, which would beat an inline style. */}
-                      <td style={{ ...td, color: 'var(--color-text-primary)' }}>
+                      <td style={{ ...td, color: 'var(--text-default)' }}>
                         <code style={mono}>--{row.name}</code>
                         {row.comment ? (
                           <p
@@ -498,7 +505,7 @@ export function TokenTable({
                               fontFamily: 'var(--font-family-body)',
                               fontSize: 'var(--font-size-body-secondary)',
                               lineHeight: 'var(--font-leading-body)',
-                              color: 'var(--color-text-muted)',
+                              color: 'var(--text-muted)',
                             }}
                           >
                             {row.comment}
@@ -506,7 +513,7 @@ export function TokenTable({
                         ) : null}
                       </td>
                       <td
-                        style={{ ...td, whiteSpace: 'nowrap', color: 'var(--color-text-muted)' }}
+                        style={{ ...td, whiteSpace: 'nowrap', color: 'var(--text-muted)' }}
                       >
                         {isColor(row.value) ? (
                           <>

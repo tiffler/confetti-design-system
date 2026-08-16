@@ -17,10 +17,10 @@
 
   padding: var(--overlay-viewport-padding);
   border: 0;
-  background: var(--overlay-scrim-bg);
+  background: var(--overlay-scrim-fill);
   /* Inherited by anything placed straight onto the scrim — a caption, a bare close control.
      A surface that comes with its own foreground (Modal's panel) simply sets its own. */
-  color: var(--overlay-fg);
+  color: var(--overlay-text);
   overflow-y: auto;
 
   display: grid;
@@ -33,7 +33,7 @@
 }
 
 /* The UA paints its own dim behind a modal dialog. Ours is on the element, so clear that
-   one — otherwise the two stack and the scrim reads darker than `--color-scrim` says. */
+   one — otherwise the two stack and the scrim reads darker than `--surface-scrim` says. */
 .cf-overlay::backdrop {
   background: transparent;
 }

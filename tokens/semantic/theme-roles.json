@@ -2,46 +2,100 @@
   "$comment": "THEME WIRING — maps the semantic ROLES that components consume to the theme's brand-kit INPUTS (tokens/themes/*.json). Emitted ONCE under :root as var() references (confetti/css-declarations-refs), so it is theme-independent: overriding an input in a [data-theme] block repoints every role here via the cascade. This is what lets a demo re-skin the whole system by setting only a handful of input values. Neutral color roles are NOT here — they live on the mode axis (tokens/modes/). References point at theme-input tokens; the layer audit allows semantic → theme-input.",
   "font": {
     "family": {
-      "display": { "value": "{font.display}" },
-      "body": { "value": "{font.body}" },
-      "label": { "value": "{font.label}" }
+      "display": {
+        "value": "{font.display}"
+      },
+      "body": {
+        "value": "{font.body}"
+      },
+      "label": {
+        "value": "{font.label}"
+      }
+    }
+  },
+  "text": {
+    "accent": {
+      "value": "{brand.primary}"
+    },
+    "on-code": {
+      "value": "{syntax.fg}"
+    },
+    "on-code-muted": {
+      "value": "{syntax.muted}"
+    }
+  },
+  "action": {
+    "primary": {
+      "fill": {
+        "value": "{brand.primary}"
+      },
+      "text": {
+        "value": "{brand.on-primary}"
+      }
+    },
+    "ghost": {
+      "text-hover": {
+        "value": "{brand.primary}"
+      }
     }
   },
   "color": {
-    "text": { "accent": { "value": "{brand.primary}" } },
-    "action": {
-      "primary": {
-        "bg": { "value": "{brand.primary}" },
-        "fg": { "value": "{brand.on-primary}" }
-      },
-      "ghost": { "fg-hover": { "value": "{brand.primary}" } }
-    },
     "syntax": {
-      "$comment": "Code-block ground and its neutrals. Mode-independent by design — the block is deep in both — so unlike the other surfaces these come from the theme, not from modes/.",
-      "surface": { "value": "{syntax.surface}" },
-      "fg": { "value": "{syntax.fg}" },
-      "muted": { "value": "{syntax.muted}" }
-    },
-    "accent": {
-      "purple": { "bold": { "value": "{accent.purple}" } },
-      "teal": { "bold": { "value": "{accent.teal}" } },
-      "orange": { "bold": { "value": "{accent.orange}" } },
-      "pink": { "bold": { "value": "{accent.pink}" } }
+      "$comment": "Code-block ground and its neutrals. Mode-independent by design — the block is deep in both — so unlike the other surfaces these come from the theme, not from modes/."
     }
   },
-  "radius": {
-    "control": { "value": "{shape.control-radius}" },
-    "container": { "value": "{shape.container-radius}" }
+  "accent": {
+    "purple": {
+      "bold": {
+        "value": "{brand.accent.purple}"
+      }
+    },
+    "teal": {
+      "bold": {
+        "value": "{brand.accent.teal}"
+      }
+    },
+    "orange": {
+      "bold": {
+        "value": "{brand.accent.orange}"
+      }
+    },
+    "pink": {
+      "bold": {
+        "value": "{brand.accent.pink}"
+      }
+    }
   },
-  "border": {
-    "width": {
-      "default": { "value": "{shape.border-width}" }
+  "borders": {
+    "radius": {
+      "control": {
+        "value": "{shape.control-radius}"
+      },
+      "container": {
+        "value": "{shape.container-radius}"
+      }
+    },
+    "stroke-weight": {
+      "default": {
+        "value": "{shape.border-width}"
+      }
     }
   },
   "motion": {
-    "button-lift": { "value": "{interaction.button-lift}", "comment": "the hover transform on filled buttons — a lift, or rest (no move), per theme" }
+    "button-lift": {
+      "value": "{interaction.button-lift}",
+      "comment": "the hover transform on filled buttons — a lift, or rest (no move), per theme"
+    }
   },
   "effect": {
-    "button-hover-brightness": { "value": "{interaction.hover-brightness}", "comment": "hover lightness multiplier for buttons that change lightness instead of lifting" }
+    "button-hover-brightness": {
+      "value": "{interaction.hover-brightness}",
+      "comment": "hover lightness multiplier for buttons that change lightness instead of lifting"
+    }
+  },
+  "surface": {
+    "code": {
+      "value": "{syntax.surface}"
+    }
   }
 }

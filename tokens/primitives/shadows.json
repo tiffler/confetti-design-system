@@ -1,46 +1,81 @@
 {
   "shadow": {
-    "none": { "value": "none" },
+    "none": {
+      "value": "none"
+    },
     "hard-ink": {
-      "value": "3px 3px 0px 0px {color.ink.600}",
+      "value": "3px 3px 0px 0px {colors.ink.600}",
       "comment": "hard offset shadow — the sticker lift, no blur"
     },
     "hard-cream": {
-      "value": "3px 3px 0px 0px {color.cream.300}",
+      "value": "3px 3px 0px 0px {colors.cream.300}",
       "comment": "dark-mode counterpart — light offset against dark surfaces"
     }
   },
   "effect": {
     "$comment": "Hover lightness bump (CSS filter: brightness) for themes whose controls change lightness instead of lifting.",
     "brightness": {
-      "none": { "value": "1", "comment": "no change" },
-      "lighten": { "value": "1.1", "comment": "10% brighter on hover" },
-      "lighten-strong": { "value": "1.22", "comment": "22% brighter — the bump a theme needs when brightness is carrying the whole hover, with no lift to help. 1.1 reads on a pale fill and all but vanishes on a deep one, which is what left Adventure's pine buttons looking inert." }
+      "none": {
+        "value": "1",
+        "comment": "no change"
+      },
+      "lighten": {
+        "value": "1.1",
+        "comment": "10% brighter on hover"
+      },
+      "lighten-strong": {
+        "value": "1.22",
+        "comment": "22% brighter — the bump a theme needs when brightness is carrying the whole hover, with no lift to help. 1.1 reads on a pale fill and all but vanishes on a deep one, which is what left Adventure's pine buttons looking inert."
+      }
     }
   },
   "motion": {
-    "lift": { "value": "translate(-2px, -2px)" },
-    "rest": { "value": "translate(0, 0)" },
+    "lift": {
+      "value": "translate(-2px, -2px)"
+    },
+    "rest": {
+      "value": "translate(0, 0)"
+    },
     "tilt": {
       "subtle": {
         "value": "0.8deg",
         "comment": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1"
       }
+    }
+  },
+  "duration": {
+    "100": {
+      "value": "120ms"
     },
-    "duration": {
-      "fast": { "value": "120ms" },
-      "base": { "value": "180ms" },
-      "drift": { "value": "1600ms", "comment": "one loop of a continuous ambient motion — slow enough to read as texture moving, not as a control reacting" }
+    "200": {
+      "value": "180ms"
     },
-    "easing": {
-      "standard": { "value": "cubic-bezier(0.2, 0, 0.2, 1)" },
-      "linear": { "value": "linear", "comment": "the only correct curve for a seamless loop — any easing makes a continuous animation pulse at the seam" }
+    "300": {
+      "value": "1600ms",
+      "comment": "one loop of a continuous ambient motion — slow enough to read as texture moving, not as a control reacting"
+    }
+  },
+  "easing": {
+    "standard": {
+      "value": "cubic-bezier(0.2, 0, 0.2, 1)"
+    },
+    "linear": {
+      "value": "linear",
+      "comment": "the only correct curve for a seamless loop — any easing makes a continuous animation pulse at the seam"
     }
   },
   "z": {
-    "base": { "value": "0" },
-    "raised": { "value": "10" },
-    "sticky": { "value": "100" },
-    "overlay": { "value": "1000" }
+    "100": {
+      "value": "0"
+    },
+    "200": {
+      "value": "10"
+    },
+    "300": {
+      "value": "100"
+    },
+    "400": {
+      "value": "1000"
+    }
   }
 }

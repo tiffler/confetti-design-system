@@ -34,7 +34,7 @@ function TokenPage({
        story opts out (see the note on it); the category stories are small enough to snapshot
        normally, so the component itself stays covered. */
     <Page width={1100} gap="var(--space-stack-lg)">
-      <Stack gap="var(--space-2)">
+      <Stack gap="var(--space-200)">
         <Eyebrow>Tokens</Eyebrow>
         <Title>{title}</Title>
         <Lede>{lede}</Lede>

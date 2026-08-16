@@ -25,7 +25,7 @@ the exact values came out of the homepage hero widget code.
 
 ## Lift
 
-`--shadow-lift` is a 3px hard offset with no blur, paired with a
+`--elevation-lift` is a 3px hard offset with no blur, paired with a
 `translate(-2px, -2px)`. Buttons and interactive cards share it, which is what makes
 the whole system read as one sticker language.
 
@@ -54,7 +54,7 @@ under `prefers-reduced-motion: reduce`.
 ## Above the page
 
 The surface ramp and the lift both work *within* the page. One step goes above it: a modal,
-which separates itself with `--color-scrim` rather than with elevation. The scrim is the only
+which separates itself with `--surface-scrim` rather than with elevation. The scrim is the only
 axis-independent color role in the system — deep ink at 86%, identical in every theme × mode
 combination — because a dim that shifted with the theme would read as a different depth each
 time you opened it.

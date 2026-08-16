@@ -178,7 +178,7 @@ function NoteCard({ note, onOpen }: { note: Note; onOpen: () => void }) {
         <Badge hue={category.hue} tone="subtle">
           {category.label}
         </Badge>
-        <Caption style={{ color: 'var(--color-text-accent)', display: 'inline-flex', gap: 'var(--space-1)' }}>
+        <Caption style={{ color: 'var(--text-accent)', display: 'inline-flex', gap: 'var(--space-100)' }}>
           Read note <Icon icon={ArrowRight} size="sm" />
         </Caption>
       </Row>
@@ -207,7 +207,7 @@ function Gallery() {
       <Stack gap="var(--space-stack-lg)" style={{ justifyItems: 'start' }}>
         <Badge hue="pink" tone="bold">
           <Icon icon={Path} size="sm" />
-          <span style={{ marginInlineStart: 'var(--space-1)' }}>Field notes</span>
+          <span style={{ marginInlineStart: 'var(--space-100)' }}>Field notes</span>
         </Badge>
         <Title size="var(--font-size-display)" leading="var(--font-leading-display)">
           Notes from building the system
@@ -269,7 +269,7 @@ function Gallery() {
               </Caption>
             </Row>
             <Text style={{ fontWeight: 'var(--font-weight-semibold)' }}>{open.excerpt}</Text>
-            <Text style={{ color: 'var(--color-text-muted)' }}>{open.body}</Text>
+            <Text style={{ color: 'var(--text-muted)' }}>{open.body}</Text>
           </Stack>
         )}
       </Modal>

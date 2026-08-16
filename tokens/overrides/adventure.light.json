@@ -1,48 +1,114 @@
 {
   "$comment": "Adventure LIGHT — its own neutral palette: sand paper surfaces, warm bark ink, earthy accent tints. Emitted under [data-theme='adventure'][data-mode='light'] (specificity 0,2,0 beats the base [data-mode='light'] so it fully replaces Confetti's cream neutrals). Brand (pine) reads at 4.7:1 as text on sand, so no brand lift is needed in light.",
-  "color": {
-    "surface": {
-      "page": { "value": "{color.sand.300}" },
-      "raised": { "value": "{color.sand.100}" },
-      "panel": { "value": "{color.sand.200}" },
-      "card": { "value": "{color.sand.50}" },
-      "backdrop": { "value": "{color.sage.400}", "comment": "recessed mat — soft sage-gray below the sand surfaces (demo default)" }
+  "surface": {
+    "page": {
+      "value": "{colors.sand.300}"
     },
-    "text": {
-      "primary": { "value": "{color.bark.600}" },
-      "muted": { "value": "{color.bark.400}" },
-      "inverse": { "value": "{color.sand.50}" }
+    "raised": {
+      "value": "{colors.sand.100}"
     },
-    "border": {
-      "default": { "value": "{color.bark.600}" },
-      "subtle": { "value": "{color.sand.a12}" },
-      "none": { "value": "{color.base.transparent}" }
+    "panel": {
+      "value": "{colors.sand.200}"
     },
-    "action": {
-      "secondary": {
-        "bg": { "value": "{color.sand.300}" },
-        "fg": { "value": "{color.bark.600}" }
-      },
-      "ghost": { "bg": { "value": "{color.base.transparent}" }, "fg": { "value": "{color.bark.600}" } }
+    "card": {
+      "value": "{colors.sand.50}"
     },
-    "accent": {
-      "purple": { "subtle": { "value": "{color.berry.100}" } },
-      "teal": { "subtle": { "value": "{color.moss.100}" } },
-      "orange": { "subtle": { "value": "{color.clay.100}" } },
-      "pink": { "subtle": { "value": "{color.amber.100}" } },
-      "on-bold": { "value": "{color.bark.600}" },
-      "on-subtle": { "value": "{color.bark.600}" }
+    "backdrop": {
+      "value": "{colors.sage.400}",
+      "comment": "recessed mat — soft sage-gray below the sand surfaces (demo default)"
     }
   },
-  "shadow": {
-    "lift": { "value": "3px 3px 0px 0px {color.bark.600}", "comment": "cards still lift" },
-    "button-lift": { "value": "3px 3px 0px 0px {color.bark.600}", "comment": "buttons still do NOT move — button-lift (the transform) stays at rest. The shadow appears under a stationary button, which reads as it pressing outward rather than sliding, and gives the hover a second cue beyond the lightness bump." }
+  "text": {
+    "default": {
+      "value": "{colors.bark.600}"
+    },
+    "muted": {
+      "value": "{colors.bark.400}"
+    },
+    "inverse": {
+      "value": "{colors.sand.50}"
+    }
+  },
+  "borders": {
+    "stroke-color": {
+      "default": {
+        "value": "{colors.bark.600}"
+      },
+      "subtle": {
+        "value": "{colors.sand.a12}"
+      },
+      "none": {
+        "value": "{colors.base.transparent}"
+      }
+    }
+  },
+  "action": {
+    "secondary": {
+      "fill": {
+        "value": "{colors.sand.300}"
+      },
+      "text": {
+        "value": "{colors.bark.600}"
+      }
+    },
+    "ghost": {
+      "fill": {
+        "value": "{colors.base.transparent}"
+      },
+      "text": {
+        "value": "{colors.bark.600}"
+      }
+    }
+  },
+  "accent": {
+    "purple": {
+      "subtle": {
+        "value": "{colors.berry.100}"
+      }
+    },
+    "teal": {
+      "subtle": {
+        "value": "{colors.moss.100}"
+      }
+    },
+    "orange": {
+      "subtle": {
+        "value": "{colors.clay.100}"
+      }
+    },
+    "pink": {
+      "subtle": {
+        "value": "{colors.amber.100}"
+      }
+    },
+    "on-bold": {
+      "value": "{colors.bark.600}"
+    },
+    "on-subtle": {
+      "value": "{colors.bark.600}"
+    }
+  },
+  "elevation": {
+    "lift": {
+      "value": "3px 3px 0px 0px {colors.bark.600}",
+      "comment": "cards still lift"
+    },
+    "button-lift": {
+      "value": "3px 3px 0px 0px {colors.bark.600}",
+      "comment": "buttons still do NOT move — button-lift (the transform) stays at rest. The shadow appears under a stationary button, which reads as it pressing outward rather than sliding, and gives the hover a second cue beyond the lightness bump."
+    }
   },
   "focus": {
     "ring": {
-      "width": { "value": "{border.width.sticker}" },
-      "color": { "value": "{color.bark.600}" },
-      "offset": { "value": "{border.width.sticker}" }
+      "width": {
+        "value": "{size.200}"
+      },
+      "color": {
+        "value": "{colors.bark.600}"
+      },
+      "offset": {
+        "value": "{size.200}"
+      }
     }
   }
 }

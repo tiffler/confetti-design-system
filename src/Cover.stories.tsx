@@ -63,7 +63,7 @@ function Cover() {
             style={{
               fontFamily: 'var(--font-family-display)',
               fontSize: 'var(--font-size-display)',
-              color: 'var(--color-text-primary)',
+              color: 'var(--text-default)',
               lineHeight: 'var(--font-leading-heading)',
               margin: 0,
             }}
@@ -81,7 +81,7 @@ function Cover() {
               fontSize: 'var(--font-size-label)',
               letterSpacing: 'var(--font-tracking-label)',
               textTransform: 'uppercase',
-              color: 'var(--color-text-accent)',
+              color: 'var(--text-accent)',
               margin: 0,
             }}
           >
@@ -125,7 +125,7 @@ function Cover() {
             fontSize: 'var(--font-size-label)',
             letterSpacing: 'var(--font-tracking-label)',
             textTransform: 'uppercase',
-            color: 'var(--color-text-muted)',
+            color: 'var(--text-muted)',
             margin: 0,
             display: 'flex',
             gap: 'var(--space-inline)',
@@ -144,7 +144,7 @@ function Cover() {
               href={PORTFOLIO}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: 'var(--color-text-accent)', textDecoration: 'underline' }}
+              style={{ color: 'var(--text-accent)', textDecoration: 'underline' }}
             >
               tiffler
             </a>

@@ -3,49 +3,65 @@
   "baseTheme": "confetti",
   "baseMode": "light",
   "required": {
-    "color": [
-      "surface.page",
-      "surface.raised",
-      "surface.panel",
-      "surface.card",
-      "surface.backdrop",
-      "text.primary",
-      "text.muted",
-      "text.inverse",
-      "text.accent",
-      "border.default",
-      "border.subtle",
-      "border.none",
-      "action.primary.bg",
-      "action.primary.fg",
-      "action.secondary.bg",
-      "action.secondary.fg",
-      "action.ghost.fg",
-      "action.ghost.fg-hover",
-      "accent.purple.bold",
-      "accent.teal.bold",
-      "accent.orange.bold",
-      "accent.pink.bold",
-      "accent.purple.subtle",
-      "accent.teal.subtle",
-      "accent.orange.subtle",
-      "accent.pink.subtle",
-      "accent.on-bold",
-      "accent.on-subtle",
-      "status.success.bg",
-      "status.success.fg",
-      "status.success.text",
-      "status.success.subtle",
-      "status.success.on-subtle",
-      "status.danger.bg",
-      "status.danger.fg",
-      "status.danger.text",
-      "status.danger.deep",
-      "syntax.surface",
-      "syntax.fg",
-      "syntax.muted"
+    "accent": [
+      "purple.bold",
+      "teal.bold",
+      "orange.bold",
+      "pink.bold",
+      "purple.subtle",
+      "teal.subtle",
+      "orange.subtle",
+      "pink.subtle",
+      "on-bold",
+      "on-subtle"
     ],
-    "shadow": ["lift"],
-    "focus": ["ring.width", "ring.color", "ring.offset"]
+    "action": [
+      "primary.fill",
+      "primary.text",
+      "secondary.fill",
+      "secondary.text",
+      "ghost.text",
+      "ghost.text-hover"
+    ],
+    "borders": [
+      "stroke-color.default",
+      "stroke-color.subtle",
+      "stroke-color.none"
+    ],
+    "elevation": [
+      "lift"
+    ],
+    "focus": [
+      "ring.width",
+      "ring.color",
+      "ring.offset"
+    ],
+    "status": [
+      "success.fill",
+      "success.on-fill",
+      "success.text",
+      "success.subtle",
+      "success.on-subtle",
+      "danger.fill",
+      "danger.on-fill",
+      "danger.text",
+      "danger.stripe"
+    ],
+    "surface": [
+      "page",
+      "raised",
+      "panel",
+      "card",
+      "backdrop",
+      "code"
+    ],
+    "text": [
+      "default",
+      "muted",
+      "inverse",
+      "accent",
+      "on-code",
+      "on-code-muted"
+    ]
   }
 }

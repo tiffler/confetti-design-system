@@ -1,0 +1,464 @@
+{
+  "colors": {
+    "cream": {
+      "100": {
+        "value": "#f4f0e4",
+        "comment": "lightest cream — raised surfaces"
+      },
+      "200": {
+        "value": "#ede7d8",
+        "comment": "panel chrome"
+      },
+      "300": {
+        "value": "#ede4d3",
+        "comment": "page background baseline"
+      },
+      "a16": {
+        "value": "rgba(237, 228, 211, 0.16)",
+        "comment": "cream at 16% — the dark-mode counterpart to ink.a12"
+      }
+    },
+    "ink": {
+      "$comment": "Numbered by luminance: 200 lightest, 900 darkest. Renumbering is safe only while nothing outside this repo consumes primitives by name.",
+      "200": {
+        "value": "#bfb6a6"
+      },
+      "300": {
+        "value": "#6b5f4a"
+      },
+      "400": {
+        "value": "#3b3121"
+      },
+      "500": {
+        "value": "#332a1c"
+      },
+      "600": {
+        "value": "#2e2618",
+        "comment": "canonical Ink — warm near-black, text and borders"
+      },
+      "700": {
+        "value": "#2a2317"
+      },
+      "800": {
+        "value": "#211b12"
+      },
+      "900": {
+        "value": "#1a150d"
+      },
+      "a24": {
+        "value": "rgba(46, 38, 24, 0.24)"
+      },
+      "a18": {
+        "value": "rgba(46, 38, 24, 0.18)"
+      },
+      "a12": {
+        "value": "rgba(46, 38, 24, 0.12)"
+      },
+      "a86": {
+        "value": "rgba(26, 21, 13, 0.86)",
+        "comment": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)"
+      }
+    },
+    "graphite": {
+      "$comment": "Confetti DARK surfaces — a near-neutral gray ramp on a near-black content ground, with true black beneath it. Every step is hue 240 at ~6% saturation: barely tinted, but tinted deliberately, so the grays read as chosen rather than as the default #888 family. `card` is the ceiling, not a preference — it is the lightest surface, so it sets the contrast floor for everything on it, and above roughly this value no red left in the ramp clears AA as text. Numbered by luminance like ink: 400 lightest, 900 darkest. Deliberately NOT the warm ink ramp: ink is Confetti's light-mode text color, and reusing it for dark surfaces made the whole dark theme read brown.",
+      "400": {
+        "value": "#3b3b42",
+        "comment": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark. Held here because it is the lightest value at which red.200, chalk.400 and green.400 all still clear AA; a step lighter and the brand red has no usable value left."
+      },
+      "500": {
+        "value": "#29292e",
+        "comment": "panel"
+      },
+      "700": {
+        "value": "#1a1a1d",
+        "comment": "raised"
+      },
+      "800": {
+        "value": "#101012",
+        "comment": "page background baseline — the content ground. Not black: black sits below it as `backdrop`, which is what gives that role its meaning back."
+      },
+      "900": {
+        "value": "#000000",
+        "comment": "backdrop — the recessed mat below page, and now genuinely below it. True black."
+      },
+      "a16": {
+        "value": "rgba(232, 236, 240, 0.16)",
+        "comment": "chalk at 16% — subtle border on graphite"
+      }
+    },
+    "chalk": {
+      "$comment": "Confetti DARK foreground neutrals — cool off-white, the counterpart to ink in light mode.",
+      "100": {
+        "value": "#e8ecf0",
+        "comment": "primary text and borders on graphite"
+      },
+      "400": {
+        "value": "#a8b2bc",
+        "comment": "muted text on graphite — clears AA on `card`, the lightest of them (5.16:1). Tied to how light `card` is: it had to go this pale once the surfaces came up."
+      }
+    },
+    "red": {
+      "500": {
+        "value": "#c40000",
+        "comment": "confetti brand Red — light/HC surfaces"
+      },
+      "400": {
+        "value": "#e33b2e",
+        "comment": "confetti brand Red, lifted"
+      },
+      "300": {
+        "value": "#f04b3a",
+        "comment": "confetti brand Red, lifted — reads on the darker surfaces but not on card (3.50:1). Only usable as the dark accent when `card` is close to black, which it no longer is."
+      },
+      "200": {
+        "value": "#ff8d80",
+        "comment": "confetti brand Red, lifted furthest — the palest step, and the ONLY one that reads AS TEXT on every dark surface including `card` (4.96:1). This is also the ceiling that fixes how light `card` can go: there is nothing paler to fall back on."
+      },
+      "600": {
+        "value": "#a80000",
+        "comment": "deepened Red — kept as the danger family's dark step. No longer the hazard stripe: that pair moved to yellow/black (see the yellow family below)."
+      }
+    },
+    "yellow": {
+      "$comment": "HAZARD yellow — the caution-tape ground under black stripes on a danger control. Like green it is not a brand hue and not one of the four confetti accents: it means one thing, so it sits on the status roles and every theme inherits it rather than repointing it. Saturated on purpose — the destructive control is the one place in the system that is allowed to shout.",
+      "500": {
+        "value": "#f5c518",
+        "comment": "hazard yellow on a light page — carries black at 12.88:1, and the black stripes read as stripes rather than texture"
+      },
+      "600": {
+        "value": "#d9ad0a",
+        "comment": "the deeper step, for DARK mode where the 500 glares against a near-black page. Still carries black at 9.93:1."
+      }
+    },
+    "green": {
+      "$comment": "STATUS green — success. Not a brand hue and not one of the four confetti accents: it means one thing, so it sits on the status roles and is shared by every theme rather than being repointed per brand.",
+      "800": {
+        "value": "#1a3b2c",
+        "comment": "deep tint — the subtle end of the pair in DARK mode, carrying chalk (10.37:1)"
+      },
+      "700": {
+        "value": "#137043",
+        "comment": "success AS TEXT on a light surface (4.86:1 on cream)"
+      },
+      "600": {
+        "value": "#1b7a4b",
+        "comment": "the rich green — success as a FILL, carrying a white label (5.34:1). Same in both modes; a fill does not need to move."
+      },
+      "400": {
+        "value": "#3fbe83",
+        "comment": "success AS TEXT on a dark surface — lifted enough to clear AA on card, the lightest dark surface (5.5:1)"
+      },
+      "100": {
+        "value": "#dff2e6",
+        "comment": "pale tint — the subtle end of the pair in LIGHT mode, carrying green.700 (5.25:1)"
+      }
+    },
+    "$comment-confetti-accents": "The four confetti hues. Each ramp reads 100 (pale tint, light mode) → 400 (bold, light mode) → 500 (bold, DARK mode — same hue pushed for chroma so it reads as a choice on gray rather than a dusty pastel) → 700 (deep tint, dark mode).",
+    "purple": {
+      "700": {
+        "value": "#322a47"
+      },
+      "500": {
+        "value": "#c9a4f5"
+      },
+      "400": {
+        "value": "#c6adda"
+      },
+      "100": {
+        "value": "#f0e5f2"
+      }
+    },
+    "teal": {
+      "700": {
+        "value": "#1b3b38"
+      },
+      "500": {
+        "value": "#7ce0cd"
+      },
+      "400": {
+        "value": "#a8d6cb"
+      },
+      "100": {
+        "value": "#e4f1ec"
+      }
+    },
+    "orange": {
+      "700": {
+        "value": "#43331c"
+      },
+      "500": {
+        "value": "#f7bf6a"
+      },
+      "400": {
+        "value": "#f0c07a"
+      },
+      "100": {
+        "value": "#fbf0dc"
+      }
+    },
+    "pink": {
+      "700": {
+        "value": "#43293c"
+      },
+      "500": {
+        "value": "#f7a6c6"
+      },
+      "400": {
+        "value": "#e8b8cd"
+      },
+      "100": {
+        "value": "#f5e4ea"
+      }
+    },
+    "$comment-adventure": "Adventure theme (Forest & trail) — pine brand, sand light neutrals, forest dark neutrals, warm bark ink, and four earthy accent hues.",
+    "pine": {
+      "700": {
+        "value": "#234f2f"
+      },
+      "500": {
+        "value": "#2f6b3f",
+        "comment": "Adventure brand green — reads as text on sand (4.8:1) and as button fill w/ white (6.6:1)"
+      },
+      "400": {
+        "value": "#4a8f5b",
+        "comment": "brand, lifted"
+      },
+      "300": {
+        "value": "#79b98c",
+        "comment": "brand, lifted enough to read AS TEXT on the forest dark surface"
+      }
+    },
+    "sand": {
+      "50": {
+        "value": "#fbf7ee",
+        "comment": "warm card surface"
+      },
+      "100": {
+        "value": "#f3ecdd",
+        "comment": "raised"
+      },
+      "200": {
+        "value": "#ece2ce",
+        "comment": "panel / dark-mode text"
+      },
+      "300": {
+        "value": "#e6dcc4",
+        "comment": "page baseline"
+      },
+      "a12": {
+        "value": "rgba(51, 48, 31, 0.12)",
+        "comment": "bark at 12% — subtle border on sand"
+      }
+    },
+    "bark": {
+      "600": {
+        "value": "#33301f",
+        "comment": "warm near-black — Adventure light-mode text and borders"
+      },
+      "400": {
+        "value": "#6b6146",
+        "comment": "muted"
+      }
+    },
+    "forest": {
+      "800": {
+        "value": "#16231a",
+        "comment": "Adventure dark page"
+      },
+      "700": {
+        "value": "#1e2c20",
+        "comment": "raised"
+      },
+      "500": {
+        "value": "#2a3b2d",
+        "comment": "panel"
+      },
+      "400": {
+        "value": "#35492f",
+        "comment": "card"
+      },
+      "a16": {
+        "value": "rgba(236, 226, 206, 0.16)",
+        "comment": "sand at 16% — subtle border on forest"
+      }
+    },
+    "sage": {
+      "400": {
+        "value": "#9aa88f",
+        "comment": "muted text on forest dark"
+      }
+    },
+    "moss": {
+      "400": {
+        "value": "#9cc088"
+      },
+      "100": {
+        "value": "#e8f0df"
+      },
+      "700": {
+        "value": "#26341f"
+      }
+    },
+    "clay": {
+      "400": {
+        "value": "#dba679"
+      },
+      "100": {
+        "value": "#f5e6d6"
+      },
+      "700": {
+        "value": "#46311f"
+      }
+    },
+    "amber": {
+      "400": {
+        "value": "#e9c766"
+      },
+      "100": {
+        "value": "#f8f0d5"
+      },
+      "700": {
+        "value": "#453a1c"
+      }
+    },
+    "berry": {
+      "400": {
+        "value": "#d98fab"
+      },
+      "100": {
+        "value": "#f4e2ea"
+      },
+      "700": {
+        "value": "#402631"
+      }
+    },
+    "$comment-neon": "Neon theme (80s–90s synthwave) — magenta brand, cyan/purple/lime accents, light-lavender (haze) light surfaces, deep-purple (synth) dark surfaces.",
+    "neon": {
+      "pink": {
+        "500": {
+          "value": "#ff2d95",
+          "comment": "bright magenta brand + fill"
+        },
+        "600": {
+          "value": "#c0106e",
+          "comment": "deep magenta — brand AS TEXT on light"
+        }
+      },
+      "cyan": {
+        "400": {
+          "value": "#00e5ff"
+        },
+        "100": {
+          "value": "#d9f9ff"
+        },
+        "700": {
+          "value": "#093c48"
+        }
+      },
+      "purple": {
+        "400": {
+          "value": "#b26bff"
+        },
+        "100": {
+          "value": "#efe4ff"
+        },
+        "700": {
+          "value": "#2a1550"
+        }
+      },
+      "lime": {
+        "400": {
+          "value": "#aaff00"
+        },
+        "100": {
+          "value": "#eefcd0"
+        },
+        "700": {
+          "value": "#2e3d0a"
+        }
+      },
+      "magenta": {
+        "100": {
+          "value": "#ffe0f0"
+        },
+        "700": {
+          "value": "#4a0f2e"
+        }
+      }
+    },
+    "haze": {
+      "50": {
+        "value": "#ffffff",
+        "comment": "neon light card"
+      },
+      "100": {
+        "value": "#faf6ff",
+        "comment": "raised"
+      },
+      "200": {
+        "value": "#f2e9ff",
+        "comment": "panel"
+      },
+      "300": {
+        "value": "#ede0ff",
+        "comment": "page — light lavender"
+      },
+      "a12": {
+        "value": "rgba(26, 4, 48, 0.12)"
+      }
+    },
+    "grape": {
+      "900": {
+        "value": "#1a0430",
+        "comment": "neon light text / border — deep purple"
+      },
+      "500": {
+        "value": "#5b3d7a",
+        "comment": "muted"
+      }
+    },
+    "synth": {
+      "900": {
+        "value": "#0d0221",
+        "comment": "neon dark page — deep purple-black"
+      },
+      "800": {
+        "value": "#170a2e",
+        "comment": "raised"
+      },
+      "700": {
+        "value": "#23113f",
+        "comment": "panel"
+      },
+      "600": {
+        "value": "#2e1650",
+        "comment": "card"
+      },
+      "a16": {
+        "value": "rgba(237, 224, 255, 0.16)"
+      }
+    },
+    "glow": {
+      "100": {
+        "value": "#ede0ff",
+        "comment": "neon dark text / border — light lavender"
+      },
+      "400": {
+        "value": "#a98fc9",
+        "comment": "muted"
+      }
+    },
+    "base": {
+      "white": {
+        "value": "#ffffff"
+      },
+      "black": {
+        "value": "#000000",
+        "comment": "true black — high-contrast mode only"
+      },
+      "transparent": {
+        "value": "transparent"
+      }
+    }
+  }
+}

@@ -17,8 +17,8 @@
 
   width: var(--switch-track-width);
   height: var(--switch-track-height);
-  background: var(--switch-bg);
-  border: var(--switch-border-width) solid var(--switch-border-color);
+  background: var(--switch-fill);
+  border: var(--switch-border-width) solid var(--switch-border);
   border-radius: var(--switch-radius);
 
   cursor: pointer;
@@ -26,7 +26,7 @@
 }
 
 .cf-switch[aria-checked='true'] {
-  background: var(--switch-bg-checked);
+  background: var(--switch-fill-checked);
 }
 
 .cf-switch:focus-visible {
@@ -45,7 +45,7 @@
   width: var(--switch-thumb-size);
   height: var(--switch-thumb-size);
   border-radius: var(--switch-radius);
-  background: var(--switch-thumb-bg);
+  background: var(--switch-thumb-fill);
   color: var(--switch-icon-color);
 
   transition:
@@ -56,7 +56,7 @@
 
 .cf-switch[aria-checked='true'] .cf-switch__thumb {
   transform: translateX(var(--cf-switch-travel));
-  background: var(--switch-thumb-bg-checked);
+  background: var(--switch-thumb-fill-checked);
   color: var(--switch-icon-color-checked);
 }
 

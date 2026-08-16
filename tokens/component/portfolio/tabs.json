@@ -1,21 +1,62 @@
 {
   "$comment": "Tabs / segmented control. Its own tokens own the TRACK (rail), the idle label, and the tab's SIZE (a comfortable, tappable control — roomy padding + readable mono label, matching the portfolio's About-page slider). The active indicator borrows only Badge's PALETTE + treatment (--badge-bg-*, --badge-radius, --badge-border-*, --badge-fg) directly in Tabs.css, so a lit tab and a Badge share one look per hue — but a tab is deliberately larger than a category Badge.",
   "tabs": {
-    "track-bg": { "value": "{color.surface.panel}", "comment": "recessed rail behind the pills" },
-    "track-border-color": { "value": "{color.border.subtle}" },
-    "track-border-width": { "value": "{border.width.thin}" },
-    "track-radius": { "value": "{radius.control}", "comment": "matches the pill — the rail is a control, not a container, so it takes the same radius the indicator does (999px round in Confetti, 12px in Adventure, square in Neon)" },
-    "track-padding": { "value": "{space.inset-xs}", "comment": "4px — tight inset around the pills" },
-    "gap": { "value": "{space.inset-xs}", "comment": "4px between tabs" },
-    "idle-fg": { "value": "{color.text.muted}", "comment": "inactive tab label" },
-    "hover-fg": { "value": "{color.text.primary}", "comment": "an idle tab warms to full-strength text on hover, short of the lit pill" },
-    "font-family": { "value": "{font.family.label}" },
-    "font-size": { "value": "{font.size.body-secondary}", "comment": "14px mono — the control label, sized for legibility" },
-    "font-weight": { "value": "{font.weight.label}" },
-    "tracking": { "value": "{font.tracking.label}" },
-    "tab-padding-x": { "value": "{space.inset-lg}", "comment": "20px — roomy, so the control reads at a comfortable tap size" },
-    "tab-padding-y": { "value": "{space.inset-sm}", "comment": "12px" },
-    "transition-duration": { "value": "{motion.duration.interaction}" },
-    "transition-easing": { "value": "{motion.easing.interaction}" }
+    "track-bg": {
+      "value": "{surface.panel}",
+      "comment": "recessed rail behind the pills"
+    },
+    "track-border-color": {
+      "value": "{borders.stroke-color.subtle}"
+    },
+    "track-border-width": {
+      "value": "{borders.stroke-weight.thin}"
+    },
+    "track-radius": {
+      "value": "{borders.radius.control}",
+      "comment": "matches the pill — the rail is a control, not a container, so it takes the same radius the indicator does (999px round in Confetti, 12px in Adventure, square in Neon)"
+    },
+    "track-padding": {
+      "value": "{space.inset-xs}",
+      "comment": "4px — tight inset around the pills"
+    },
+    "gap": {
+      "value": "{space.inset-xs}",
+      "comment": "4px between tabs"
+    },
+    "idle-fg": {
+      "value": "{text.muted}",
+      "comment": "inactive tab label"
+    },
+    "hover-fg": {
+      "value": "{text.default}",
+      "comment": "an idle tab warms to full-strength text on hover, short of the lit pill"
+    },
+    "font-family": {
+      "value": "{font.family.label}"
+    },
+    "font-size": {
+      "value": "{font.size.body-secondary}",
+      "comment": "14px mono — the control label, sized for legibility"
+    },
+    "font-weight": {
+      "value": "{font.weight.label}"
+    },
+    "tracking": {
+      "value": "{font.tracking.label}"
+    },
+    "tab-padding-x": {
+      "value": "{space.inset-lg}",
+      "comment": "20px — roomy, so the control reads at a comfortable tap size"
+    },
+    "tab-padding-y": {
+      "value": "{space.inset-sm}",
+      "comment": "12px"
+    },
+    "transition-duration": {
+      "value": "{motion.duration.interaction}"
+    },
+    "transition-easing": {
+      "value": "{motion.easing.interaction}"
+    }
   }
 }

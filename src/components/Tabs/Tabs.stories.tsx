@@ -141,7 +141,7 @@ export const AllStates: Story = {
               fontSize: 'var(--font-size-label)',
               letterSpacing: 'var(--font-tracking-label)',
               textTransform: 'uppercase',
-              color: 'var(--color-text-muted)',
+              color: 'var(--text-muted)',
             }}
           >
             {state}
@@ -204,10 +204,10 @@ export const ExternalPanels: Story = {
       fontFamily: 'var(--font-family-body)',
       fontSize: 'var(--font-size-body)',
       lineHeight: 'var(--font-leading-body)',
-      color: 'var(--color-text-primary)',
-      background: 'var(--color-surface-raised)',
-      border: 'var(--border-width-default) solid var(--color-border-default)',
-      borderRadius: 'var(--radius-container)',
+      color: 'var(--text-default)',
+      background: 'var(--surface-raised)',
+      border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-default)',
+      borderRadius: 'var(--borders-radius-container)',
       padding: 'var(--space-inset)',
       margin: 0,
     };

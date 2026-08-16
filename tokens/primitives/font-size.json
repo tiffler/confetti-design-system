@@ -1,0 +1,41 @@
+{
+  "$comment": "Ordinal font-size ramp. A step name is its POSITION on the ramp, not the value sitting there - so retuning a step never makes its name a lie. `hero` is a fluid clamp() rather than a step on the ramp, so it keeps a name.",
+  "font-size": {
+    "100": {
+      "value": "0.75rem"
+    },
+    "200": {
+      "value": "0.875rem"
+    },
+    "300": {
+      "value": "1rem"
+    },
+    "400": {
+      "value": "1.125rem",
+      "comment": "utility step — off the 4px grid (like 14), for body-large / small subheads"
+    },
+    "500": {
+      "value": "1.25rem"
+    },
+    "600": {
+      "value": "1.375rem",
+      "comment": "utility step — off the 4px grid, sits between h5 (20) and h4 (24)"
+    },
+    "700": {
+      "value": "1.5rem"
+    },
+    "800": {
+      "value": "2rem"
+    },
+    "900": {
+      "value": "2.5rem"
+    },
+    "1000": {
+      "value": "3rem"
+    },
+    "hero": {
+      "value": "clamp(2.25rem, 13cqw, 6.5rem)",
+      "comment": "container-query driven headline, above the fixed ramp"
+    }
+  }
+}

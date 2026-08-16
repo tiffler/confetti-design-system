@@ -1,53 +1,120 @@
 {
   "$comment": "Neon LIGHT — light-lavender 'haze' surfaces, deep-purple 'grape' ink, neon accent tints. The bright magenta brand is too light to read AS TEXT on the pale surface, so text.accent + ghost hover DARKEN to neon.pink.600 (#c0106e, 5.1:1) — the opposite direction from Confetti/Adventure's dark lifts. The primary BUTTON keeps the bright magenta fill with a black label (6:1). Buttons GLOW magenta on hover (shadow.button-lift). Emitted under [data-theme='neon'][data-mode='light'].",
-  "color": {
-    "surface": {
-      "page": { "value": "{color.haze.300}" },
-      "raised": { "value": "{color.haze.100}" },
-      "panel": { "value": "{color.haze.200}" },
-      "card": { "value": "{color.haze.50}" },
-      "backdrop": { "value": "{color.glow.400}", "comment": "recessed mat — soft lavender-gray below the haze surfaces (demo default)" }
+  "surface": {
+    "page": {
+      "value": "{colors.haze.300}"
     },
-    "text": {
-      "primary": { "value": "{color.grape.900}" },
-      "muted": { "value": "{color.grape.500}" },
-      "inverse": { "value": "{color.haze.50}" },
-      "accent": { "value": "{color.neon.pink.600}" }
+    "raised": {
+      "value": "{colors.haze.100}"
     },
-    "border": {
-      "default": { "value": "{color.grape.900}" },
-      "subtle": { "value": "{color.haze.a12}" },
-      "none": { "value": "{color.base.transparent}" }
+    "panel": {
+      "value": "{colors.haze.200}"
     },
-    "action": {
-      "secondary": {
-        "bg": { "value": "{color.haze.200}" },
-        "fg": { "value": "{color.grape.900}" }
-      },
-      "ghost": {
-        "bg": { "value": "{color.base.transparent}" },
-        "fg": { "value": "{color.grape.900}" },
-        "fg-hover": { "value": "{color.neon.pink.600}" }
-      }
+    "card": {
+      "value": "{colors.haze.50}"
     },
-    "accent": {
-      "purple": { "subtle": { "value": "{color.neon.purple.100}" } },
-      "teal": { "subtle": { "value": "{color.neon.cyan.100}" } },
-      "orange": { "subtle": { "value": "{color.neon.lime.100}" } },
-      "pink": { "subtle": { "value": "{color.neon.magenta.100}" } },
-      "on-bold": { "value": "{color.base.black}" },
-      "on-subtle": { "value": "{color.grape.900}" }
+    "backdrop": {
+      "value": "{colors.glow.400}",
+      "comment": "recessed mat — soft lavender-gray below the haze surfaces (demo default)"
     }
   },
-  "shadow": {
-    "lift": { "value": "3px 3px 0px 0px {color.grape.900}", "comment": "cards keep a hard offset" },
-    "button-lift": { "value": "0 0 18px 0 {color.neon.pink.500}", "comment": "buttons GLOW magenta on hover" }
+  "text": {
+    "default": {
+      "value": "{colors.grape.900}"
+    },
+    "muted": {
+      "value": "{colors.grape.500}"
+    },
+    "inverse": {
+      "value": "{colors.haze.50}"
+    },
+    "accent": {
+      "value": "{colors.neon.pink.600}"
+    }
+  },
+  "borders": {
+    "stroke-color": {
+      "default": {
+        "value": "{colors.grape.900}"
+      },
+      "subtle": {
+        "value": "{colors.haze.a12}"
+      },
+      "none": {
+        "value": "{colors.base.transparent}"
+      }
+    }
+  },
+  "action": {
+    "secondary": {
+      "fill": {
+        "value": "{colors.haze.200}"
+      },
+      "text": {
+        "value": "{colors.grape.900}"
+      }
+    },
+    "ghost": {
+      "fill": {
+        "value": "{colors.base.transparent}"
+      },
+      "text": {
+        "value": "{colors.grape.900}"
+      },
+      "text-hover": {
+        "value": "{colors.neon.pink.600}"
+      }
+    }
+  },
+  "accent": {
+    "purple": {
+      "subtle": {
+        "value": "{colors.neon.purple.100}"
+      }
+    },
+    "teal": {
+      "subtle": {
+        "value": "{colors.neon.cyan.100}"
+      }
+    },
+    "orange": {
+      "subtle": {
+        "value": "{colors.neon.lime.100}"
+      }
+    },
+    "pink": {
+      "subtle": {
+        "value": "{colors.neon.magenta.100}"
+      }
+    },
+    "on-bold": {
+      "value": "{colors.base.black}"
+    },
+    "on-subtle": {
+      "value": "{colors.grape.900}"
+    }
+  },
+  "elevation": {
+    "lift": {
+      "value": "3px 3px 0px 0px {colors.grape.900}",
+      "comment": "cards keep a hard offset"
+    },
+    "button-lift": {
+      "value": "0 0 18px 0 {colors.neon.pink.500}",
+      "comment": "buttons GLOW magenta on hover"
+    }
   },
   "focus": {
     "ring": {
-      "width": { "value": "{border.width.sticker}" },
-      "color": { "value": "{color.grape.900}" },
-      "offset": { "value": "{border.width.sticker}" }
+      "width": {
+        "value": "{size.200}"
+      },
+      "color": {
+        "value": "{colors.grape.900}"
+      },
+      "offset": {
+        "value": "{size.200}"
+      }
     }
   }
 }

@@ -1,37 +1,76 @@
 {
   "$comment": "THEME = confetti (the flagship, and the default theme baked into the build). This file is the BRAND-KIT CONTRACT: the handful of input tokens a theme sets. Everything visible derives from these via the wiring in tokens/semantic/theme-roles.json (roles → inputs, emitted once under :root as var() refs). A downstream demo creates a new theme by overriding ONLY these inputs in its own [data-theme='<name>'] block — no changes to Confetti. Inputs reference primitives; neutrals (surfaces/text/borders) come from the active mode. Emitted under [data-theme='confetti'].",
   "brand": {
-    "primary": { "value": "{color.red.500}", "comment": "brand color — drives text.accent, primary action fill, ghost hover" },
-    "on-primary": { "value": "{color.base.white}", "comment": "foreground on the primary/brand fill" }
-  },
-  "accent": {
-    "$comment": "The four decorative 'confetti' hues (bold tone). A demo may repoint these or leave Confetti's.",
-    "purple": { "value": "{color.purple.400}" },
-    "teal": { "value": "{color.teal.400}" },
-    "orange": { "value": "{color.orange.400}" },
-    "pink": { "value": "{color.pink.400}" }
+    "primary": {
+      "value": "{colors.red.500}",
+      "comment": "brand color — drives text.accent, primary action fill, ghost hover"
+    },
+    "on-primary": {
+      "value": "{colors.base.white}",
+      "comment": "foreground on the primary/brand fill"
+    },
+    "accent": {
+      "purple": {
+        "value": "{colors.purple.400}"
+      },
+      "teal": {
+        "value": "{colors.teal.400}"
+      },
+      "orange": {
+        "value": "{colors.orange.400}"
+      },
+      "pink": {
+        "value": "{colors.pink.400}"
+      },
+      "$comment": "The four decorative 'confetti' hues (bold tone). A demo may repoint these or leave Confetti's."
+    }
   },
   "syntax": {
     "$comment": "The code-block surface and the two neutrals that sit on it. Deliberately on the THEME axis, not the mode axis: a snippet is an inset terminal, deep in light and dark alike, so one set of syntax colors has to read against it in both. The four accent hues above are the syntax colors — they are already tuned to carry ink on a light fill, which makes them light enough to read as text on this deep surface.",
-    "surface": { "value": "{color.ink.900}", "comment": "deepest ink — the code block ground" },
-    "fg": { "value": "{color.cream.300}", "comment": "plain code text" },
-    "muted": { "value": "{color.ink.200}", "comment": "comments and punctuation" }
+    "surface": {
+      "value": "{colors.ink.900}",
+      "comment": "deepest ink — the code block ground"
+    },
+    "fg": {
+      "value": "{colors.cream.300}",
+      "comment": "plain code text"
+    },
+    "muted": {
+      "value": "{colors.ink.200}",
+      "comment": "comments and punctuation"
+    }
   },
   "shape": {
     "$comment": "The theme's shape personality. control = pills/buttons, container = cards, border = the sticker outline weight.",
-    "control-radius": { "value": "{radius.full}" },
-    "container-radius": { "value": "{radius.md}" },
-    "border-width": { "value": "{border.width.sticker}" }
+    "control-radius": {
+      "value": "{radius.full}"
+    },
+    "container-radius": {
+      "value": "{radius.300}"
+    },
+    "border-width": {
+      "value": "{size.200}"
+    }
   },
   "font": {
     "$comment": "The theme's typefaces. display = headings/titles, body = prose/content, label = mono UI (buttons, badges, eyebrows). A demo repoints these to change the whole system's type.",
-    "display": { "value": "{font.family.fredoka}" },
-    "body": { "value": "{font.family.fredoka}" },
-    "label": { "value": "{font.family.mono}" }
+    "display": {
+      "value": "{font.family.fredoka}"
+    },
+    "body": {
+      "value": "{font.family.fredoka}"
+    },
+    "label": {
+      "value": "{font.family.mono}"
+    }
   },
   "interaction": {
     "$comment": "How filled buttons respond on hover. Confetti lifts onto the hard sticker shadow (no lightness change). button-lift = the transform; hover-brightness = 1 (none). The hover shadow lives on the mode axis (shadow.button-lift).",
-    "button-lift": { "value": "{motion.lift}" },
-    "hover-brightness": { "value": "{effect.brightness.none}" }
+    "button-lift": {
+      "value": "{motion.lift}"
+    },
+    "hover-brightness": {
+      "value": "{effect.brightness.none}"
+    }
   }
 }

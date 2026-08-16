@@ -91,10 +91,10 @@ function Tile({ icon, name }: { icon: PhosphorIcon; name: string }) {
         display: 'grid',
         placeItems: 'center',
         aspectRatio: '1',
-        background: 'var(--color-surface-raised)',
-        border: 'var(--border-width-hairline) solid var(--color-border-subtle)',
-        borderRadius: 'var(--radius-sm)',
-        color: 'var(--color-text-primary)',
+        background: 'var(--surface-raised)',
+        border: 'var(--size-100) solid var(--borders-stroke-color-subtle)',
+        borderRadius: 'var(--radius-200)',
+        color: 'var(--text-default)',
       }}
     >
       <Icon icon={icon} size="md" />
@@ -105,7 +105,7 @@ function Tile({ icon, name }: { icon: PhosphorIcon; name: string }) {
 function IconSheet() {
   return (
     <Page width={1280}>
-      <Stack gap="var(--space-2)">
+      <Stack gap="var(--space-200)">
         <Eyebrow>Specimen sheet</Eyebrow>
         <Title>Icons</Title>
         <Lede>
@@ -134,7 +134,7 @@ function IconSheet() {
         <Frame label="Size — sm 16 / md 20 / lg 24">
           <Row gap="var(--space-stack)" align="flex-end">
             {SIZES.map((size) => (
-              <Stack key={size} gap="var(--space-1)" style={{ justifyItems: 'center' }}>
+              <Stack key={size} gap="var(--space-100)" style={{ justifyItems: 'center' }}>
                 <Icon icon={Star} size={size} tone="default" />
                 <Tick>{size}</Tick>
               </Stack>
@@ -146,7 +146,7 @@ function IconSheet() {
         <Frame label="Tone">
           <Row gap="var(--space-stack)">
             {TONES.map((tone) => (
-              <Stack key={tone} gap="var(--space-1)" style={{ justifyItems: 'center' }}>
+              <Stack key={tone} gap="var(--space-100)" style={{ justifyItems: 'center' }}>
                 <Icon icon={Star} size="md" tone={tone} />
                 <Tick>{tone}</Tick>
               </Stack>
@@ -158,7 +158,7 @@ function IconSheet() {
         <Frame label="Weight — bold is the system weight">
           <Row gap="var(--space-stack)">
             {WEIGHTS.map((weight) => (
-              <Stack key={weight} gap="var(--space-1)" style={{ justifyItems: 'center' }}>
+              <Stack key={weight} gap="var(--space-100)" style={{ justifyItems: 'center' }}>
                 <Icon icon={Star} size="lg" tone="default" weight={weight} />
                 <Tick>{weight}</Tick>
               </Stack>
@@ -181,11 +181,11 @@ function IconSheet() {
           <Row gap="var(--space-inline)">
             <Badge hue="teal" tone="bold">
               <Icon icon={Check} size="sm" />
-              <span style={{ marginInlineStart: 'var(--space-1)' }}>Done</span>
+              <span style={{ marginInlineStart: 'var(--space-100)' }}>Done</span>
             </Badge>
             <Badge hue="orange" tone="subtle">
               <Icon icon={Bell} size="sm" />
-              <span style={{ marginInlineStart: 'var(--space-1)' }}>3 alerts</span>
+              <span style={{ marginInlineStart: 'var(--space-100)' }}>3 alerts</span>
             </Badge>
           </Row>
           <Caption>

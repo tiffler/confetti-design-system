@@ -40,11 +40,11 @@ function Panel({ children, onClose }: { children: React.ReactNode; onClose: () =
         display: 'grid',
         gap: 'var(--space-stack)',
         padding: 'var(--space-inset)',
-        background: 'var(--color-surface-card)',
-        color: 'var(--color-text-primary)',
-        border: 'var(--border-width-default) solid var(--color-border-default)',
-        borderRadius: 'var(--radius-container)',
-        boxShadow: 'var(--shadow-lift)',
+        background: 'var(--surface-card)',
+        color: 'var(--text-default)',
+        border: 'var(--borders-stroke-weight-default) solid var(--borders-stroke-color-default)',
+        borderRadius: 'var(--borders-radius-container)',
+        boxShadow: 'var(--elevation-lift)',
         fontFamily: 'var(--font-family-body)',
       }}
     >
@@ -154,9 +154,9 @@ export const AsImageViewer: Story = {
                 aspectRatio: '3 / 2',
                 display: 'grid',
                 placeItems: 'center',
-                background: 'var(--color-accent-purple-subtle)',
-                color: 'var(--color-accent-on-subtle)',
-                borderRadius: 'var(--radius-container)',
+                background: 'var(--accent-purple-subtle)',
+                color: 'var(--accent-on-subtle)',
+                borderRadius: 'var(--borders-radius-container)',
                 fontFamily: 'var(--font-family-label)',
                 fontSize: 'var(--font-size-label)',
                 letterSpacing: 'var(--font-tracking-label)',
@@ -165,7 +165,7 @@ export const AsImageViewer: Story = {
             >
               Stand-in for an image
             </div>
-            {/* No colour of its own: it inherits `--color-on-scrim` from the Overlay. */}
+            {/* No colour of its own: it inherits `--text-on-scrim` from the Overlay. */}
             <figcaption
               style={{ fontFamily: 'var(--font-family-label)', fontSize: 'var(--font-size-label)' }}
             >
@@ -202,7 +202,7 @@ export const AsImageViewer: Story = {
     docs: {
       description: {
         story:
-          'The case the portfolio hand-rolls four times over — lightbox, gallery viewer, mobile nav, and the table-of-contents sheet each re-implement portal + scrim + Escape + scroll lock. All four are this component with different content on top.\n\nNote what the caption and the close control do **not** do: set a colour. The scrim is deep in both modes, so its foreground is fixed too (`--color-on-scrim`), and Overlay sets it on the scrim for anything placed straight onto it to inherit. That is also why the close control here is a bare button rather than a ghost `Button` — Button\'s variants are coloured for a page surface, and ghost ink would disappear into the scrim in light mode. Content that brings its own surface, like Modal\'s panel, overrides the inherited colour with its own.',
+          'The case the portfolio hand-rolls four times over — lightbox, gallery viewer, mobile nav, and the table-of-contents sheet each re-implement portal + scrim + Escape + scroll lock. All four are this component with different content on top.\n\nNote what the caption and the close control do **not** do: set a colour. The scrim is deep in both modes, so its foreground is fixed too (`--text-on-scrim`), and Overlay sets it on the scrim for anything placed straight onto it to inherit. That is also why the close control here is a bare button rather than a ghost `Button` — Button\'s variants are coloured for a page surface, and ghost ink would disappear into the scrim in light mode. Content that brings its own surface, like Modal\'s panel, overrides the inherited colour with its own.',
       },
     },
   },

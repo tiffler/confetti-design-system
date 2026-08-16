@@ -14,7 +14,7 @@
   box-sizing: border-box;
   min-height: var(--button-min-height);
 
-  padding: var(--button-padding-y) var(--button-padding-x);
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
   border-radius: var(--button-radius);
   /* Every variant carries the border, transparent where the design has none,
      so all three share one footprint. */
@@ -70,14 +70,14 @@
 /* --- Variants ------------------------------------------------------------- */
 
 .cf-button--primary {
-  background: var(--button-primary-bg);
-  color: var(--button-primary-fg);
+  background: var(--button-primary-fill);
+  color: var(--button-primary-text);
   border-color: var(--button-primary-border);
 }
 
 .cf-button--secondary {
-  background: var(--button-secondary-bg);
-  color: var(--button-secondary-fg);
+  background: var(--button-secondary-fill);
+  color: var(--button-secondary-text);
   border-color: var(--button-secondary-border);
 }
 
@@ -107,7 +107,7 @@
   --cf-danger-period: calc(var(--button-danger-stripe-width) * 2);
   --cf-danger-tile: calc(var(--cf-danger-period) * 1.41421356);
 
-  background-color: var(--button-danger-bg);
+  background-color: var(--button-danger-fill);
   background-image: repeating-linear-gradient(
     45deg,
     var(--button-danger-stripe) 0,
@@ -121,7 +121,7 @@
   animation: cf-button-danger-drift var(--button-danger-stripe-duration)
     var(--button-danger-stripe-easing) infinite;
 
-  color: var(--button-danger-fg);
+  color: var(--button-danger-text);
   border-color: var(--button-danger-border);
 }
 
@@ -131,7 +131,7 @@
    a shade off the fill. The plate is the content wrapper itself, so it tracks the label's width
    and needs no second element; the stripes keep drifting behind it. */
 .cf-button--danger .cf-button__content {
-  background: var(--button-danger-bg);
+  background: var(--button-danger-fill);
   padding: var(--button-danger-label-pad-y) var(--button-danger-label-pad-x);
 }
 
@@ -148,7 +148,7 @@
   transform: translate(-50%, -50%);
   width: calc(var(--button-spinner-size) + var(--button-danger-label-pad-x) * 2);
   height: calc(var(--button-spinner-size) + var(--button-danger-label-pad-y) * 2);
-  background: var(--button-danger-bg);
+  background: var(--button-danger-fill);
 }
 
 /* One tile of travel per loop — see the note above. Only `background-position` moves, so
@@ -165,8 +165,8 @@
 }
 
 .cf-button--ghost {
-  background: var(--button-ghost-bg);
-  color: var(--button-ghost-fg);
+  background: var(--button-ghost-fill);
+  color: var(--button-ghost-text);
   border-color: var(--button-ghost-border);
 }
 
@@ -189,7 +189,7 @@
 
 .cf-button--ghost:hover:not([disabled]),
 .cf-button--ghost[data-force~='hover']:not([disabled]) {
-  color: var(--button-ghost-fg-hover);
+  color: var(--button-ghost-text-hover);
 }
 
 /* --- Pressed -------------------------------------------------------------- */

@@ -5,8 +5,8 @@
   gap: var(--tabs-gap);
 
   padding: var(--tabs-track-padding);
-  background: var(--tabs-track-bg);
-  border: var(--tabs-track-border-width) solid var(--tabs-track-border-color);
+  background: var(--tabs-track-fill);
+  border: var(--tabs-track-border-width) solid var(--tabs-track-border);
   border-radius: var(--tabs-track-radius);
 }
 
@@ -21,7 +21,7 @@
   z-index: 0;
   box-sizing: border-box;
 
-  border: var(--badge-border-width) solid var(--badge-border-color);
+  border: var(--badge-border-width) solid var(--badge-border);
   border-radius: var(--badge-radius);
 
   transition:
@@ -31,19 +31,19 @@
 }
 
 .cf-tabs__indicator--purple {
-  background: var(--badge-bg-purple);
+  background: var(--badge-fill-purple);
 }
 .cf-tabs__indicator--teal {
-  background: var(--badge-bg-teal);
+  background: var(--badge-fill-teal);
 }
 .cf-tabs__indicator--orange {
-  background: var(--badge-bg-orange);
+  background: var(--badge-fill-orange);
 }
 .cf-tabs__indicator--pink {
-  background: var(--badge-bg-pink);
+  background: var(--badge-fill-pink);
 }
 .cf-tabs__indicator--neutral {
-  background: var(--badge-bg-neutral);
+  background: var(--badge-fill-neutral);
 }
 
 .cf-tabs__tab {
@@ -57,11 +57,11 @@
   /* Roomy control padding (the About-slider size), plus a transparent border matching the
      indicator's, so the indicator overlays the tab exactly and the idle → active transition
      doesn't shift the label. */
-  padding: var(--tabs-tab-padding-y) var(--tabs-tab-padding-x);
-  border: var(--badge-border-width) solid var(--color-border-none);
+  padding: var(--tabs-tab-padding-vertical) var(--tabs-tab-padding-horizontal);
+  border: var(--badge-border-width) solid var(--borders-stroke-color-none);
   border-radius: var(--badge-radius);
   background: transparent;
-  color: var(--tabs-idle-fg);
+  color: var(--tabs-idle-text);
 
   font-family: var(--tabs-font-family);
   font-size: var(--tabs-font-size);
@@ -77,17 +77,17 @@
 
 /* Ink over the accent fill — the same foreground a bold Badge uses. */
 .cf-tabs__tab[aria-selected='true'] {
-  color: var(--badge-fg);
+  color: var(--badge-text);
 }
 
 /* Neutral is not an accent, and Badge already treats it as its own pair: the paper fill
-   carries `--badge-fg-neutral`, not the accent ink. The indicator mirrored Badge's fill per
-   hue but the label always took `--badge-fg`, so a neutral tab put accent ink on the neutral
+   carries `--badge-text-neutral`, not the accent ink. The indicator mirrored Badge's fill per
+   hue but the label always took `--badge-text`, so a neutral tab put accent ink on the neutral
    fill — fine in light, 1.1:1 in dark, where that fill goes deep and the label disappeared.
    The lit hue is on the track (`cf-tabs--<hue>`) rather than inferred from the indicator,
    because the indicator only exists after the first measuring pass. */
 .cf-tabs--neutral .cf-tabs__tab[aria-selected='true'] {
-  color: var(--badge-fg-neutral);
+  color: var(--badge-text-neutral);
 }
 
 /* `data-force` pins a state that a control cannot otherwise trigger — see the same hook
@@ -102,7 +102,7 @@
    the pill arrives. */
 .cf-tabs__tab:hover:not([aria-selected='true']),
 .cf-tabs__tab[data-force~='hover']:not([aria-selected='true']) {
-  color: var(--tabs-hover-fg);
+  color: var(--tabs-hover-text);
 }
 
 @media (prefers-reduced-motion: reduce) {

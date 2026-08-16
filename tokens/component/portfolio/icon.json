@@ -1,12 +1,24 @@
 {
   "$comment": "Component tokens reference semantic tokens only — never primitives, never raw values.",
   "icon": {
-    "size-sm": { "value": "{size.icon.sm}" },
-    "size-md": { "value": "{size.icon.md}" },
-    "size-lg": { "value": "{size.icon.lg}" },
+    "size-sm": {
+      "value": "{size.icon.sm}"
+    },
+    "size-md": {
+      "value": "{size.icon.md}"
+    },
+    "size-lg": {
+      "value": "{size.icon.lg}"
+    },
     "$comment": "Icons inherit color from their text context by default; these are the explicit escapes.",
-    "color-default": { "value": "{color.text.primary}" },
-    "color-muted": { "value": "{color.text.muted}" },
-    "color-accent": { "value": "{color.text.accent}" }
+    "color-default": {
+      "value": "{text.default}"
+    },
+    "color-muted": {
+      "value": "{text.muted}"
+    },
+    "color-accent": {
+      "value": "{text.accent}"
+    }
   }
 }

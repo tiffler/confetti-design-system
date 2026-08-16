@@ -1,0 +1,43 @@
+{
+  "$comment": "One ordinal numeric ramp for every width, height and stroke - control heights, icon boxes and border widths all draw from here rather than borrowing the space or font ramps. Steps the system has not needed yet are still listed: a ramp is a palette, and the layer audit treats an unused primitive as a notice, not a defect.",
+  "size": {
+    "100": {
+      "value": "1px"
+    },
+    "200": {
+      "value": "2px",
+      "comment": "thick-outline card and button borders"
+    },
+    "300": {
+      "value": "4px",
+      "comment": "high-contrast focus ring / emphasis edges"
+    },
+    "400": {
+      "value": "8px"
+    },
+    "500": {
+      "value": "12px"
+    },
+    "600": {
+      "value": "14px"
+    },
+    "700": {
+      "value": "16px"
+    },
+    "800": {
+      "value": "20px"
+    },
+    "900": {
+      "value": "24px"
+    },
+    "1000": {
+      "value": "32px"
+    },
+    "1100": {
+      "value": "40px"
+    },
+    "1200": {
+      "value": "48px"
+    }
+  }
+}

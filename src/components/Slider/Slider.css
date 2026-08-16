@@ -27,8 +27,8 @@
   inset-inline: 0;
   height: var(--slider-track-height);
   box-sizing: border-box;
-  background: var(--slider-track-bg);
-  border: var(--slider-track-border-width) solid var(--slider-track-border-color);
+  background: var(--slider-track-fill);
+  border: var(--slider-track-border-width) solid var(--slider-track-border);
   border-radius: var(--slider-track-radius);
 }
 
@@ -40,7 +40,7 @@
   /* Rounded on the leading edge only, so the fill reads as growing out of the rail's cap
      rather than as a separate pill floating inside it. */
   border-radius: var(--slider-track-radius) 0 0 var(--slider-track-radius);
-  background: var(--slider-fill-bg);
+  background: var(--slider-fill-fill);
   /* Ends at the knob's centre — the knob travels a shortened distance (see below), so a
      plain `fraction * 100%` would run out from under it at the top of the range. */
   width: calc(
@@ -54,8 +54,8 @@
   width: var(--slider-thumb-size);
   height: var(--slider-thumb-size);
   border-radius: var(--radius-circle);
-  background: var(--slider-thumb-bg);
-  border: var(--slider-thumb-border-width) solid var(--slider-thumb-border-color);
+  background: var(--slider-thumb-fill);
+  border: var(--slider-thumb-border-width) solid var(--slider-thumb-border);
   box-shadow: var(--slider-thumb-shadow);
   cursor: grab;
 

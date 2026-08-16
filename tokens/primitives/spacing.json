@@ -1,16 +1,41 @@
 {
+  "$comment": "Ordinal space ramp. Step names are positions, not values. `0` is kept as itself: zero is the absence of a step rather than a step on the ramp.",
   "space": {
-    "0": { "value": "0" },
-    "1": { "value": "4px" },
-    "2": { "value": "8px" },
-    "3": { "value": "12px" },
-    "4": { "value": "16px" },
-    "5": { "value": "20px" },
-    "6": { "value": "24px" },
-    "8": { "value": "32px" },
-    "10": { "value": "40px" },
-    "12": { "value": "48px" },
-    "16": { "value": "64px" },
-    "20": { "value": "80px" }
+    "0": {
+      "value": "0"
+    },
+    "100": {
+      "value": "4px"
+    },
+    "200": {
+      "value": "8px"
+    },
+    "300": {
+      "value": "12px"
+    },
+    "400": {
+      "value": "16px"
+    },
+    "500": {
+      "value": "20px"
+    },
+    "600": {
+      "value": "24px"
+    },
+    "700": {
+      "value": "32px"
+    },
+    "800": {
+      "value": "40px"
+    },
+    "900": {
+      "value": "48px"
+    },
+    "1000": {
+      "value": "64px"
+    },
+    "1100": {
+      "value": "80px"
+    }
   }
 }

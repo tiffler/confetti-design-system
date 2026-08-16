@@ -83,8 +83,8 @@ const preview: Preview = {
         <ThemeProvider theme={theme} mode={mode}>
           <div
             style={{
-              background: 'var(--color-surface-page)',
-              color: 'var(--color-text-primary)',
+              background: 'var(--surface-page)',
+              color: 'var(--text-default)',
               fontFamily: 'var(--font-family-body)',
               padding: 'var(--space-inset)',
               minHeight: isDocs ? undefined : '100vh',
