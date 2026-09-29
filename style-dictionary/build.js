@@ -21,8 +21,8 @@ const listNames = (dir) =>
     .filter((f) => f.endsWith('.json'))
     .map((f) => f.replace(/\.json$/, ''));
 
-const modes = listNames('modes').sort(); // dark, high-contrast, light
-const themes = listNames('themes').sort(); // confetti, ocean
+const modes = listNames('modes').sort(); // dark, light
+const themes = listNames('themes').sort(); // adventure, confetti, neon
 const overrideFiles = readdirSync(join(tokensDir, 'overrides')).filter((f) => f.endsWith('.json'));
 
 // overrides are named "<theme>.<mode>.json" — a theme's own neutrals for that mode

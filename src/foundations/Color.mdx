@@ -25,14 +25,14 @@ The pairs the components actually produce. These are the ones that matter.
 
 <ContrastPairs
   pairs={[
-    { fg: 'color-text-primary', bg: 'color-surface-page', label: 'primary on page' },
-    { fg: 'color-text-primary', bg: 'color-surface-card', label: 'primary on card' },
-    { fg: 'color-text-muted', bg: 'color-surface-page', label: 'muted on page' },
-    { fg: 'color-text-muted', bg: 'color-surface-card', label: 'muted on card' },
-    { fg: 'color-text-accent', bg: 'color-surface-page', label: 'accent on page' },
-    { fg: 'color-text-accent', bg: 'color-surface-card', label: 'accent on card' },
-    { fg: 'color-action-primary-fg', bg: 'color-action-primary-bg', label: 'primary button', sample: 'Primary button' },
-    { fg: 'color-action-secondary-fg', bg: 'color-action-secondary-bg', label: 'secondary button', sample: 'Secondary button' },
+    { fg: 'text-default', bg: 'surface-page', label: 'primary on page' },
+    { fg: 'text-default', bg: 'surface-card', label: 'primary on card' },
+    { fg: 'text-muted', bg: 'surface-page', label: 'muted on page' },
+    { fg: 'text-muted', bg: 'surface-card', label: 'muted on card' },
+    { fg: 'text-accent', bg: 'surface-page', label: 'accent on page' },
+    { fg: 'text-accent', bg: 'surface-card', label: 'accent on card' },
+    { fg: 'action-primary-text', bg: 'action-primary-fill', label: 'primary button', sample: 'Primary button' },
+    { fg: 'action-secondary-text', bg: 'action-secondary-fill', label: 'secondary button', sample: 'Secondary button' },
   ]}
 />
 
@@ -42,29 +42,29 @@ The elevation ramp. `backdrop` is the recessed mat a step below page (app frames
 control tracks), `page` is the baseline, `raised` is canvas and widget surfaces,
 `panel` is toolbar and sidebar chrome, `card` is the contrast interior.
 
-<ColorGrid prefix="color-surface-" />
+<ColorGrid prefix="surface-" />
 
 ## Overlay
 
 `scrim` is the modal / lightbox dim — deep ink at high alpha, held constant across
 themes and modes so a dimmed backdrop reads the same everywhere.
 
-<ColorGrid prefix="color-scrim" />
+<ColorGrid prefix="surface-scrim" />
 
 ## Text
 
-<ColorGrid prefix="color-text-" />
+<ColorGrid prefix="text-" />
 
 ## Border
 
-<ColorGrid prefix="color-border-" />
+<ColorGrid prefix="borders-stroke-color-" />
 
 ## Action
 
 Button-facing roles. Primary is the brand red, secondary the paper fill with an
 ink outline, ghost text-only with a red hover.
 
-<ColorGrid prefix="color-action-" />
+<ColorGrid prefix="action-" />
 
 ## Status
 
@@ -78,13 +78,13 @@ the same reason `text.accent` does.
 `danger.deep` is a deepened step of the danger red, used for the hazard stripes on a
 destructive control.
 
-<ColorGrid prefix="color-status-" />
+<ColorGrid prefix="status-" />
 
 <ContrastPairs
   pairs={[
-    { fg: 'color-status-success-fg', bg: 'color-status-success-bg', label: 'success fill', sample: 'Changes saved' },
-    { fg: 'color-status-danger-fg', bg: 'color-status-danger-bg', label: 'danger fill', sample: 'Delete project' },
-    { fg: 'color-status-danger-fg', bg: 'color-status-danger-deep', label: 'danger stripe', sample: 'Delete project' },
+    { fg: 'status-success-on-fill', bg: 'status-success-fill', label: 'success fill', sample: 'Changes saved' },
+    { fg: 'status-danger-on-fill', bg: 'status-danger-fill', label: 'danger fill', sample: 'Delete project' },
+    { fg: 'status-danger-on-fill', bg: 'status-danger-stripe', label: 'danger stripe', sample: 'Delete project' },
   ]}
 />
 
@@ -94,20 +94,20 @@ Four hues, each a tint/bold pair. `on-bold` and `on-subtle` are the foregrounds 
 stay legible against each end of the pair — they diverge in dark mode, which is why
 they are separate tokens.
 
-<ColorGrid prefix="color-accent-" />
+<ColorGrid prefix="accent-" />
 
 Each pair carrying its own intended foreground:
 
 <ContrastPairs
   pairs={[
-    { fg: 'color-accent-on-bold', bg: 'color-accent-purple-bold', label: 'purple bold', sample: 'Design systems' },
-    { fg: 'color-accent-on-subtle', bg: 'color-accent-purple-subtle', label: 'purple subtle', sample: 'Design systems' },
-    { fg: 'color-accent-on-bold', bg: 'color-accent-teal-bold', label: 'teal bold', sample: 'Case studies' },
-    { fg: 'color-accent-on-subtle', bg: 'color-accent-teal-subtle', label: 'teal subtle', sample: 'Case studies' },
-    { fg: 'color-accent-on-bold', bg: 'color-accent-orange-bold', label: 'orange bold', sample: "Tools I've built" },
-    { fg: 'color-accent-on-subtle', bg: 'color-accent-orange-subtle', label: 'orange subtle', sample: "Tools I've built" },
-    { fg: 'color-accent-on-bold', bg: 'color-accent-pink-bold', label: 'pink bold', sample: 'Featured' },
-    { fg: 'color-accent-on-subtle', bg: 'color-accent-pink-subtle', label: 'pink subtle', sample: 'Featured' },
+    { fg: 'accent-on-bold', bg: 'accent-purple-bold', label: 'purple bold', sample: 'Design systems' },
+    { fg: 'accent-on-subtle', bg: 'accent-purple-subtle', label: 'purple subtle', sample: 'Design systems' },
+    { fg: 'accent-on-bold', bg: 'accent-teal-bold', label: 'teal bold', sample: 'Case studies' },
+    { fg: 'accent-on-subtle', bg: 'accent-teal-subtle', label: 'teal subtle', sample: 'Case studies' },
+    { fg: 'accent-on-bold', bg: 'accent-orange-bold', label: 'orange bold', sample: "Tools I've built" },
+    { fg: 'accent-on-subtle', bg: 'accent-orange-subtle', label: 'orange subtle', sample: "Tools I've built" },
+    { fg: 'accent-on-bold', bg: 'accent-pink-bold', label: 'pink bold', sample: 'Featured' },
+    { fg: 'accent-on-subtle', bg: 'accent-pink-subtle', label: 'pink subtle', sample: 'Featured' },
   ]}
 />
 
@@ -129,7 +129,7 @@ The raw ramp underneath. Primitives are theme-independent — they are emitted o
 under `:root` and do not change with theme or mode. Semantic tokens are the only
 layer that should be consumed by name.
 
-<ColorGrid prefix="color-cream-" />
-<ColorGrid prefix="color-ink-" />
-<ColorGrid prefix="color-red-" />
-<ColorGrid prefix="color-green-" />
+<ColorGrid prefix="colors-cream-" />
+<ColorGrid prefix="colors-ink-" />
+<ColorGrid prefix="colors-red-" />
+<ColorGrid prefix="colors-green-" />

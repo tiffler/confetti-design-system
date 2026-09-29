@@ -175,7 +175,7 @@ token change.
   typed, with each token's CSS variable name under `$extensions`).
 - **An app** → link `build/portfolio/tokens.css`, set `data-theme` + `data-mode`, and
   consume component tokens (`--button-primary-bg`) or semantic roles
-  (`--color-text-primary`). Never primitives directly — they're the palette, not the API.
+  (`--text-default`). Never primitives directly — they're the palette, not the API.
 
 ---
 
@@ -185,7 +185,7 @@ token change.
    referencing primitives. Define all of them; the wiring references them all.
 2. *(optional)* `tokens/overrides/<name>.light.json` + `.dark.json` — the theme's own
    neutrals per mode, plus any accessibility lift.
-3. Add the brand/neutral primitives to `tokens/primitives/color.json`; add `'<name>'` to
+3. Add the brand/neutral primitives to `tokens/primitives/colors.json`; add `'<name>'` to
    `THEMES` in `src/theme/ThemeProvider.tsx`.
 4. `npm run tokens`, then measure contrast and add a lift wherever a brand color fails AA.
 

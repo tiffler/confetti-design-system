@@ -16,3 +16,6 @@ storybook-static/
 
 # Local design/build reference — not tracked
 Confetti Build Spec.md
+
+# macOS Finder custom-icon marker
+Icon[[:cntrl:]]
