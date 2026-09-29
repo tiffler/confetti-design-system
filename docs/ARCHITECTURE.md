@@ -127,7 +127,7 @@ React, one `.tsx` + `.css` + `.stories.tsx` triple each, consuming component tok
 - **Overlay** — the full-viewport dim that above-the-page surfaces sit on, and the only
   place dialog behaviour is implemented. A native `<dialog>` opened with `showModal()`, so the
   focus trap, `inert`, Escape and the top layer come from the platform; the element itself
-  paints `--color-scrim`, so a click that misses the content dismisses and nothing needs a
+  paints `--surface-scrim`, so a click that misses the content dismisses and nothing needs a
   z-index. Carries no fill, border or radius — the content brings its own.
 - **Modal** — `Overlay` plus a Card-weight panel, in two widths, with header / body / footer
   slots. Reach for Overlay directly when the thing on the scrim is not a panel.

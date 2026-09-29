@@ -26,11 +26,11 @@
     "fill-checked": {
       "value": "{action.primary.fill}"
     },
-    "thumb-bg": {
+    "thumb-fill": {
       "value": "{text.default}",
       "comment": "ink knob on the paper track"
     },
-    "thumb-bg-checked": {
+    "thumb-fill-checked": {
       "value": "{action.primary.text}",
       "comment": "and the inverse on the brand track"
     },

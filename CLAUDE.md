@@ -55,7 +55,7 @@ Themes and modes are discovered by directory listing. A new theme file is picked
 
 - One directory per component holding `X.tsx` + `X.css` + `X.stories.tsx`, plus `tokens/component/portfolio/x.json`.
 - CSS classes are BEM-ish under a `cf-` prefix: `.cf-button`, `.cf-button--primary`, `.cf-button__spinner`.
-- **Component CSS may only read component tokens** (`var(--button-primary-bg)`). Never a semantic role, never a primitive, never a literal color/size. That's what keeps a component ignorant of theme and mode.
+- **Component CSS may only read component tokens** (`var(--button-primary-fill)`). Never a semantic role, never a primitive, never a literal color/size. That's what keeps a component ignorant of theme and mode.
 - New components must be exported from `src/index.ts` (component + its types).
 - Story titles follow `Components/<Name>` and `Pages/<Name>`; ordering is set by `storySort` in `.storybook/preview.tsx`.
 - Accessibility is part of the component, not the story: `role`/`aria-*` on the element, keyboard handling in the component. Several components carry dev-only `console.warn` guards behind `import.meta.env.DEV` (see `Button.warnIfUnnamedIconButton`) — follow that pattern rather than documenting the requirement.

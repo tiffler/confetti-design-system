@@ -11,29 +11,29 @@
     "track-radius": {
       "value": "{borders.radius.control}"
     },
-    "track-bg": {
+    "track-fill": {
       "value": "{action.secondary.fill}"
     },
     "track-border-width": {
       "value": "{borders.stroke-weight.default}"
     },
-    "track-border-color": {
+    "track-border": {
       "value": "{borders.stroke-color.default}"
     },
-    "fill-bg": {
+    "fill-fill": {
       "value": "{action.primary.fill}",
       "comment": "the travelled portion — brand, so progress reads at a glance"
     },
     "thumb-size": {
       "value": "{size.slider.thumb}"
     },
-    "thumb-bg": {
+    "thumb-fill": {
       "value": "{surface.card}"
     },
     "thumb-border-width": {
       "value": "{borders.stroke-weight.default}"
     },
-    "thumb-border-color": {
+    "thumb-border": {
       "value": "{borders.stroke-color.default}"
     },
     "thumb-shadow": {

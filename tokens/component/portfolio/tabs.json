@@ -1,11 +1,11 @@
 {
   "$comment": "Tabs / segmented control. Its own tokens own the TRACK (rail), the idle label, and the tab's SIZE (a comfortable, tappable control — roomy padding + readable mono label, matching the portfolio's About-page slider). The active indicator borrows only Badge's PALETTE + treatment (--badge-bg-*, --badge-radius, --badge-border-*, --badge-fg) directly in Tabs.css, so a lit tab and a Badge share one look per hue — but a tab is deliberately larger than a category Badge.",
   "tabs": {
-    "track-bg": {
+    "track-fill": {
       "value": "{surface.panel}",
       "comment": "recessed rail behind the pills"
     },
-    "track-border-color": {
+    "track-border": {
       "value": "{borders.stroke-color.subtle}"
     },
     "track-border-width": {
@@ -23,11 +23,11 @@
       "value": "{space.inset-xs}",
       "comment": "4px between tabs"
     },
-    "idle-fg": {
+    "idle-text": {
       "value": "{text.muted}",
       "comment": "inactive tab label"
     },
-    "hover-fg": {
+    "hover-text": {
       "value": "{text.default}",
       "comment": "an idle tab warms to full-strength text on hover, short of the lit pill"
     },
@@ -44,11 +44,11 @@
     "tracking": {
       "value": "{font.tracking.label}"
     },
-    "tab-padding-x": {
+    "tab-padding-horizontal": {
       "value": "{space.inset-lg}",
       "comment": "20px — roomy, so the control reads at a comfortable tap size"
     },
-    "tab-padding-y": {
+    "tab-padding-vertical": {
       "value": "{space.inset-sm}",
       "comment": "12px"
     },

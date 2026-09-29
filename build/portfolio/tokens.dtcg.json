@@ -3532,12 +3532,12 @@
       }
     },
     "overlay": {
-      "scrim-bg": {
+      "scrim-fill": {
         "$value": "rgba(26, 21, 13, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
-          "com.confetti.cssVariable": "--overlay-scrim-bg"
+          "com.confetti.cssVariable": "--overlay-scrim-fill"
         }
       },
       "text": {
@@ -3580,11 +3580,11 @@
           "com.confetti.cssVariable": "--slider-track-radius"
         }
       },
-      "track-bg": {
+      "track-fill": {
         "$value": "#2a3b2d",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-bg"
+          "com.confetti.cssVariable": "--slider-track-fill"
         }
       },
       "track-border-width": {
@@ -3594,19 +3594,19 @@
           "com.confetti.cssVariable": "--slider-track-border-width"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "#ece2ce",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-border-color"
+          "com.confetti.cssVariable": "--slider-track-border"
         }
       },
-      "fill-bg": {
+      "fill-fill": {
         "$value": "#2f6b3f",
         "$type": "other",
         "$description": "the travelled portion — brand, so progress reads at a glance",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-fill-bg"
+          "com.confetti.cssVariable": "--slider-fill-fill"
         }
       },
       "thumb-size": {
@@ -3616,11 +3616,11 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#35492f",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-bg"
+          "com.confetti.cssVariable": "--slider-thumb-fill"
         }
       },
       "thumb-border-width": {
@@ -3630,11 +3630,11 @@
           "com.confetti.cssVariable": "--slider-thumb-border-width"
         }
       },
-      "thumb-border-color": {
+      "thumb-border": {
         "$value": "#ece2ce",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-border-color"
+          "com.confetti.cssVariable": "--slider-thumb-border"
         }
       },
       "thumb-shadow": {
@@ -3761,20 +3761,20 @@
           "com.confetti.cssVariable": "--switch-fill-checked"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#ece2ce",
         "$type": "other",
         "$description": "ink knob on the paper track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg"
+          "com.confetti.cssVariable": "--switch-thumb-fill"
         }
       },
-      "thumb-bg-checked": {
+      "thumb-fill-checked": {
         "$value": "#ffffff",
         "$type": "other",
         "$description": "and the inverse on the brand track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+          "com.confetti.cssVariable": "--switch-thumb-fill-checked"
         }
       },
       "icon-color": {
@@ -3844,19 +3844,19 @@
       }
     },
     "tabs": {
-      "track-bg": {
+      "track-fill": {
         "$value": "#2a3b2d",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-bg"
+          "com.confetti.cssVariable": "--tabs-track-fill"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "rgba(236, 226, 206, 0.16)",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-border-color"
+          "com.confetti.cssVariable": "--tabs-track-border"
         }
       },
       "track-border-width": {
@@ -3890,20 +3890,20 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
-      "idle-fg": {
+      "idle-text": {
         "$value": "#9aa88f",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-idle-fg"
+          "com.confetti.cssVariable": "--tabs-idle-text"
         }
       },
-      "hover-fg": {
+      "hover-text": {
         "$value": "#ece2ce",
         "$type": "other",
         "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-hover-fg"
+          "com.confetti.cssVariable": "--tabs-hover-text"
         }
       },
       "font-family": {
@@ -3935,20 +3935,20 @@
           "com.confetti.cssVariable": "--tabs-tracking"
         }
       },
-      "tab-padding-x": {
+      "tab-padding-horizontal": {
         "$value": "20px",
         "$type": "other",
         "$description": "20px — roomy, so the control reads at a comfortable tap size",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+          "com.confetti.cssVariable": "--tabs-tab-padding-horizontal"
         }
       },
-      "tab-padding-y": {
+      "tab-padding-vertical": {
         "$value": "12px",
         "$type": "other",
         "$description": "12px",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-y"
+          "com.confetti.cssVariable": "--tabs-tab-padding-vertical"
         }
       },
       "transition-duration": {
@@ -7674,12 +7674,12 @@
       }
     },
     "overlay": {
-      "scrim-bg": {
+      "scrim-fill": {
         "$value": "rgba(26, 21, 13, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
-          "com.confetti.cssVariable": "--overlay-scrim-bg"
+          "com.confetti.cssVariable": "--overlay-scrim-fill"
         }
       },
       "text": {
@@ -7722,11 +7722,11 @@
           "com.confetti.cssVariable": "--slider-track-radius"
         }
       },
-      "track-bg": {
+      "track-fill": {
         "$value": "#e6dcc4",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-bg"
+          "com.confetti.cssVariable": "--slider-track-fill"
         }
       },
       "track-border-width": {
@@ -7736,19 +7736,19 @@
           "com.confetti.cssVariable": "--slider-track-border-width"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "#33301f",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-border-color"
+          "com.confetti.cssVariable": "--slider-track-border"
         }
       },
-      "fill-bg": {
+      "fill-fill": {
         "$value": "#2f6b3f",
         "$type": "other",
         "$description": "the travelled portion — brand, so progress reads at a glance",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-fill-bg"
+          "com.confetti.cssVariable": "--slider-fill-fill"
         }
       },
       "thumb-size": {
@@ -7758,11 +7758,11 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#fbf7ee",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-bg"
+          "com.confetti.cssVariable": "--slider-thumb-fill"
         }
       },
       "thumb-border-width": {
@@ -7772,11 +7772,11 @@
           "com.confetti.cssVariable": "--slider-thumb-border-width"
         }
       },
-      "thumb-border-color": {
+      "thumb-border": {
         "$value": "#33301f",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-border-color"
+          "com.confetti.cssVariable": "--slider-thumb-border"
         }
       },
       "thumb-shadow": {
@@ -7903,20 +7903,20 @@
           "com.confetti.cssVariable": "--switch-fill-checked"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#33301f",
         "$type": "other",
         "$description": "ink knob on the paper track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg"
+          "com.confetti.cssVariable": "--switch-thumb-fill"
         }
       },
-      "thumb-bg-checked": {
+      "thumb-fill-checked": {
         "$value": "#ffffff",
         "$type": "other",
         "$description": "and the inverse on the brand track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+          "com.confetti.cssVariable": "--switch-thumb-fill-checked"
         }
       },
       "icon-color": {
@@ -7986,19 +7986,19 @@
       }
     },
     "tabs": {
-      "track-bg": {
+      "track-fill": {
         "$value": "#ece2ce",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-bg"
+          "com.confetti.cssVariable": "--tabs-track-fill"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "rgba(51, 48, 31, 0.12)",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-border-color"
+          "com.confetti.cssVariable": "--tabs-track-border"
         }
       },
       "track-border-width": {
@@ -8032,20 +8032,20 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
-      "idle-fg": {
+      "idle-text": {
         "$value": "#6b6146",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-idle-fg"
+          "com.confetti.cssVariable": "--tabs-idle-text"
         }
       },
-      "hover-fg": {
+      "hover-text": {
         "$value": "#33301f",
         "$type": "other",
         "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-hover-fg"
+          "com.confetti.cssVariable": "--tabs-hover-text"
         }
       },
       "font-family": {
@@ -8077,20 +8077,20 @@
           "com.confetti.cssVariable": "--tabs-tracking"
         }
       },
-      "tab-padding-x": {
+      "tab-padding-horizontal": {
         "$value": "20px",
         "$type": "other",
         "$description": "20px — roomy, so the control reads at a comfortable tap size",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+          "com.confetti.cssVariable": "--tabs-tab-padding-horizontal"
         }
       },
-      "tab-padding-y": {
+      "tab-padding-vertical": {
         "$value": "12px",
         "$type": "other",
         "$description": "12px",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-y"
+          "com.confetti.cssVariable": "--tabs-tab-padding-vertical"
         }
       },
       "transition-duration": {
@@ -11824,12 +11824,12 @@
       }
     },
     "overlay": {
-      "scrim-bg": {
+      "scrim-fill": {
         "$value": "rgba(26, 21, 13, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
-          "com.confetti.cssVariable": "--overlay-scrim-bg"
+          "com.confetti.cssVariable": "--overlay-scrim-fill"
         }
       },
       "text": {
@@ -11872,11 +11872,11 @@
           "com.confetti.cssVariable": "--slider-track-radius"
         }
       },
-      "track-bg": {
+      "track-fill": {
         "$value": "#29292e",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-bg"
+          "com.confetti.cssVariable": "--slider-track-fill"
         }
       },
       "track-border-width": {
@@ -11886,19 +11886,19 @@
           "com.confetti.cssVariable": "--slider-track-border-width"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "#e8ecf0",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-border-color"
+          "com.confetti.cssVariable": "--slider-track-border"
         }
       },
-      "fill-bg": {
+      "fill-fill": {
         "$value": "#c40000",
         "$type": "other",
         "$description": "the travelled portion — brand, so progress reads at a glance",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-fill-bg"
+          "com.confetti.cssVariable": "--slider-fill-fill"
         }
       },
       "thumb-size": {
@@ -11908,11 +11908,11 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#3b3b42",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-bg"
+          "com.confetti.cssVariable": "--slider-thumb-fill"
         }
       },
       "thumb-border-width": {
@@ -11922,11 +11922,11 @@
           "com.confetti.cssVariable": "--slider-thumb-border-width"
         }
       },
-      "thumb-border-color": {
+      "thumb-border": {
         "$value": "#e8ecf0",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-border-color"
+          "com.confetti.cssVariable": "--slider-thumb-border"
         }
       },
       "thumb-shadow": {
@@ -12053,20 +12053,20 @@
           "com.confetti.cssVariable": "--switch-fill-checked"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#e8ecf0",
         "$type": "other",
         "$description": "ink knob on the paper track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg"
+          "com.confetti.cssVariable": "--switch-thumb-fill"
         }
       },
-      "thumb-bg-checked": {
+      "thumb-fill-checked": {
         "$value": "#ffffff",
         "$type": "other",
         "$description": "and the inverse on the brand track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+          "com.confetti.cssVariable": "--switch-thumb-fill-checked"
         }
       },
       "icon-color": {
@@ -12136,19 +12136,19 @@
       }
     },
     "tabs": {
-      "track-bg": {
+      "track-fill": {
         "$value": "#29292e",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-bg"
+          "com.confetti.cssVariable": "--tabs-track-fill"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "rgba(232, 236, 240, 0.16)",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-border-color"
+          "com.confetti.cssVariable": "--tabs-track-border"
         }
       },
       "track-border-width": {
@@ -12182,20 +12182,20 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
-      "idle-fg": {
+      "idle-text": {
         "$value": "#a8b2bc",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-idle-fg"
+          "com.confetti.cssVariable": "--tabs-idle-text"
         }
       },
-      "hover-fg": {
+      "hover-text": {
         "$value": "#e8ecf0",
         "$type": "other",
         "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-hover-fg"
+          "com.confetti.cssVariable": "--tabs-hover-text"
         }
       },
       "font-family": {
@@ -12227,20 +12227,20 @@
           "com.confetti.cssVariable": "--tabs-tracking"
         }
       },
-      "tab-padding-x": {
+      "tab-padding-horizontal": {
         "$value": "20px",
         "$type": "other",
         "$description": "20px — roomy, so the control reads at a comfortable tap size",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+          "com.confetti.cssVariable": "--tabs-tab-padding-horizontal"
         }
       },
-      "tab-padding-y": {
+      "tab-padding-vertical": {
         "$value": "12px",
         "$type": "other",
         "$description": "12px",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-y"
+          "com.confetti.cssVariable": "--tabs-tab-padding-vertical"
         }
       },
       "transition-duration": {
@@ -15974,12 +15974,12 @@
       }
     },
     "overlay": {
-      "scrim-bg": {
+      "scrim-fill": {
         "$value": "rgba(26, 21, 13, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
-          "com.confetti.cssVariable": "--overlay-scrim-bg"
+          "com.confetti.cssVariable": "--overlay-scrim-fill"
         }
       },
       "text": {
@@ -16022,11 +16022,11 @@
           "com.confetti.cssVariable": "--slider-track-radius"
         }
       },
-      "track-bg": {
+      "track-fill": {
         "$value": "#ede4d3",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-bg"
+          "com.confetti.cssVariable": "--slider-track-fill"
         }
       },
       "track-border-width": {
@@ -16036,19 +16036,19 @@
           "com.confetti.cssVariable": "--slider-track-border-width"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "#2e2618",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-border-color"
+          "com.confetti.cssVariable": "--slider-track-border"
         }
       },
-      "fill-bg": {
+      "fill-fill": {
         "$value": "#c40000",
         "$type": "other",
         "$description": "the travelled portion — brand, so progress reads at a glance",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-fill-bg"
+          "com.confetti.cssVariable": "--slider-fill-fill"
         }
       },
       "thumb-size": {
@@ -16058,11 +16058,11 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#ffffff",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-bg"
+          "com.confetti.cssVariable": "--slider-thumb-fill"
         }
       },
       "thumb-border-width": {
@@ -16072,11 +16072,11 @@
           "com.confetti.cssVariable": "--slider-thumb-border-width"
         }
       },
-      "thumb-border-color": {
+      "thumb-border": {
         "$value": "#2e2618",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-border-color"
+          "com.confetti.cssVariable": "--slider-thumb-border"
         }
       },
       "thumb-shadow": {
@@ -16203,20 +16203,20 @@
           "com.confetti.cssVariable": "--switch-fill-checked"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#2e2618",
         "$type": "other",
         "$description": "ink knob on the paper track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg"
+          "com.confetti.cssVariable": "--switch-thumb-fill"
         }
       },
-      "thumb-bg-checked": {
+      "thumb-fill-checked": {
         "$value": "#ffffff",
         "$type": "other",
         "$description": "and the inverse on the brand track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+          "com.confetti.cssVariable": "--switch-thumb-fill-checked"
         }
       },
       "icon-color": {
@@ -16286,19 +16286,19 @@
       }
     },
     "tabs": {
-      "track-bg": {
+      "track-fill": {
         "$value": "#ede7d8",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-bg"
+          "com.confetti.cssVariable": "--tabs-track-fill"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "rgba(46, 38, 24, 0.12)",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-border-color"
+          "com.confetti.cssVariable": "--tabs-track-border"
         }
       },
       "track-border-width": {
@@ -16332,20 +16332,20 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
-      "idle-fg": {
+      "idle-text": {
         "$value": "#6b5f4a",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-idle-fg"
+          "com.confetti.cssVariable": "--tabs-idle-text"
         }
       },
-      "hover-fg": {
+      "hover-text": {
         "$value": "#2e2618",
         "$type": "other",
         "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-hover-fg"
+          "com.confetti.cssVariable": "--tabs-hover-text"
         }
       },
       "font-family": {
@@ -16377,20 +16377,20 @@
           "com.confetti.cssVariable": "--tabs-tracking"
         }
       },
-      "tab-padding-x": {
+      "tab-padding-horizontal": {
         "$value": "20px",
         "$type": "other",
         "$description": "20px — roomy, so the control reads at a comfortable tap size",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+          "com.confetti.cssVariable": "--tabs-tab-padding-horizontal"
         }
       },
-      "tab-padding-y": {
+      "tab-padding-vertical": {
         "$value": "12px",
         "$type": "other",
         "$description": "12px",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-y"
+          "com.confetti.cssVariable": "--tabs-tab-padding-vertical"
         }
       },
       "transition-duration": {
@@ -20117,12 +20117,12 @@
       }
     },
     "overlay": {
-      "scrim-bg": {
+      "scrim-fill": {
         "$value": "rgba(26, 21, 13, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
-          "com.confetti.cssVariable": "--overlay-scrim-bg"
+          "com.confetti.cssVariable": "--overlay-scrim-fill"
         }
       },
       "text": {
@@ -20165,11 +20165,11 @@
           "com.confetti.cssVariable": "--slider-track-radius"
         }
       },
-      "track-bg": {
+      "track-fill": {
         "$value": "#23113f",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-bg"
+          "com.confetti.cssVariable": "--slider-track-fill"
         }
       },
       "track-border-width": {
@@ -20179,19 +20179,19 @@
           "com.confetti.cssVariable": "--slider-track-border-width"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "#ede0ff",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-border-color"
+          "com.confetti.cssVariable": "--slider-track-border"
         }
       },
-      "fill-bg": {
+      "fill-fill": {
         "$value": "#ff2d95",
         "$type": "other",
         "$description": "the travelled portion — brand, so progress reads at a glance",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-fill-bg"
+          "com.confetti.cssVariable": "--slider-fill-fill"
         }
       },
       "thumb-size": {
@@ -20201,11 +20201,11 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#2e1650",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-bg"
+          "com.confetti.cssVariable": "--slider-thumb-fill"
         }
       },
       "thumb-border-width": {
@@ -20215,11 +20215,11 @@
           "com.confetti.cssVariable": "--slider-thumb-border-width"
         }
       },
-      "thumb-border-color": {
+      "thumb-border": {
         "$value": "#ede0ff",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-border-color"
+          "com.confetti.cssVariable": "--slider-thumb-border"
         }
       },
       "thumb-shadow": {
@@ -20346,20 +20346,20 @@
           "com.confetti.cssVariable": "--switch-fill-checked"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#ede0ff",
         "$type": "other",
         "$description": "ink knob on the paper track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg"
+          "com.confetti.cssVariable": "--switch-thumb-fill"
         }
       },
-      "thumb-bg-checked": {
+      "thumb-fill-checked": {
         "$value": "#000000",
         "$type": "other",
         "$description": "and the inverse on the brand track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+          "com.confetti.cssVariable": "--switch-thumb-fill-checked"
         }
       },
       "icon-color": {
@@ -20429,19 +20429,19 @@
       }
     },
     "tabs": {
-      "track-bg": {
+      "track-fill": {
         "$value": "#23113f",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-bg"
+          "com.confetti.cssVariable": "--tabs-track-fill"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "rgba(237, 224, 255, 0.16)",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-border-color"
+          "com.confetti.cssVariable": "--tabs-track-border"
         }
       },
       "track-border-width": {
@@ -20475,20 +20475,20 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
-      "idle-fg": {
+      "idle-text": {
         "$value": "#a98fc9",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-idle-fg"
+          "com.confetti.cssVariable": "--tabs-idle-text"
         }
       },
-      "hover-fg": {
+      "hover-text": {
         "$value": "#ede0ff",
         "$type": "other",
         "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-hover-fg"
+          "com.confetti.cssVariable": "--tabs-hover-text"
         }
       },
       "font-family": {
@@ -20520,20 +20520,20 @@
           "com.confetti.cssVariable": "--tabs-tracking"
         }
       },
-      "tab-padding-x": {
+      "tab-padding-horizontal": {
         "$value": "20px",
         "$type": "other",
         "$description": "20px — roomy, so the control reads at a comfortable tap size",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+          "com.confetti.cssVariable": "--tabs-tab-padding-horizontal"
         }
       },
-      "tab-padding-y": {
+      "tab-padding-vertical": {
         "$value": "12px",
         "$type": "other",
         "$description": "12px",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-y"
+          "com.confetti.cssVariable": "--tabs-tab-padding-vertical"
         }
       },
       "transition-duration": {
@@ -24260,12 +24260,12 @@
       }
     },
     "overlay": {
-      "scrim-bg": {
+      "scrim-fill": {
         "$value": "rgba(26, 21, 13, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
-          "com.confetti.cssVariable": "--overlay-scrim-bg"
+          "com.confetti.cssVariable": "--overlay-scrim-fill"
         }
       },
       "text": {
@@ -24308,11 +24308,11 @@
           "com.confetti.cssVariable": "--slider-track-radius"
         }
       },
-      "track-bg": {
+      "track-fill": {
         "$value": "#f2e9ff",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-bg"
+          "com.confetti.cssVariable": "--slider-track-fill"
         }
       },
       "track-border-width": {
@@ -24322,19 +24322,19 @@
           "com.confetti.cssVariable": "--slider-track-border-width"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "#1a0430",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-track-border-color"
+          "com.confetti.cssVariable": "--slider-track-border"
         }
       },
-      "fill-bg": {
+      "fill-fill": {
         "$value": "#ff2d95",
         "$type": "other",
         "$description": "the travelled portion — brand, so progress reads at a glance",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-fill-bg"
+          "com.confetti.cssVariable": "--slider-fill-fill"
         }
       },
       "thumb-size": {
@@ -24344,11 +24344,11 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#ffffff",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-bg"
+          "com.confetti.cssVariable": "--slider-thumb-fill"
         }
       },
       "thumb-border-width": {
@@ -24358,11 +24358,11 @@
           "com.confetti.cssVariable": "--slider-thumb-border-width"
         }
       },
-      "thumb-border-color": {
+      "thumb-border": {
         "$value": "#1a0430",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--slider-thumb-border-color"
+          "com.confetti.cssVariable": "--slider-thumb-border"
         }
       },
       "thumb-shadow": {
@@ -24489,20 +24489,20 @@
           "com.confetti.cssVariable": "--switch-fill-checked"
         }
       },
-      "thumb-bg": {
+      "thumb-fill": {
         "$value": "#1a0430",
         "$type": "other",
         "$description": "ink knob on the paper track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg"
+          "com.confetti.cssVariable": "--switch-thumb-fill"
         }
       },
-      "thumb-bg-checked": {
+      "thumb-fill-checked": {
         "$value": "#000000",
         "$type": "other",
         "$description": "and the inverse on the brand track",
         "$extensions": {
-          "com.confetti.cssVariable": "--switch-thumb-bg-checked"
+          "com.confetti.cssVariable": "--switch-thumb-fill-checked"
         }
       },
       "icon-color": {
@@ -24572,19 +24572,19 @@
       }
     },
     "tabs": {
-      "track-bg": {
+      "track-fill": {
         "$value": "#f2e9ff",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-bg"
+          "com.confetti.cssVariable": "--tabs-track-fill"
         }
       },
-      "track-border-color": {
+      "track-border": {
         "$value": "rgba(26, 4, 48, 0.12)",
         "$type": "other",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-track-border-color"
+          "com.confetti.cssVariable": "--tabs-track-border"
         }
       },
       "track-border-width": {
@@ -24618,20 +24618,20 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
-      "idle-fg": {
+      "idle-text": {
         "$value": "#5b3d7a",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-idle-fg"
+          "com.confetti.cssVariable": "--tabs-idle-text"
         }
       },
-      "hover-fg": {
+      "hover-text": {
         "$value": "#1a0430",
         "$type": "other",
         "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-hover-fg"
+          "com.confetti.cssVariable": "--tabs-hover-text"
         }
       },
       "font-family": {
@@ -24663,20 +24663,20 @@
           "com.confetti.cssVariable": "--tabs-tracking"
         }
       },
-      "tab-padding-x": {
+      "tab-padding-horizontal": {
         "$value": "20px",
         "$type": "other",
         "$description": "20px — roomy, so the control reads at a comfortable tap size",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-x"
+          "com.confetti.cssVariable": "--tabs-tab-padding-horizontal"
         }
       },
-      "tab-padding-y": {
+      "tab-padding-vertical": {
         "$value": "12px",
         "$type": "other",
         "$description": "12px",
         "$extensions": {
-          "com.confetti.cssVariable": "--tabs-tab-padding-y"
+          "com.confetti.cssVariable": "--tabs-tab-padding-vertical"
         }
       },
       "transition-duration": {
