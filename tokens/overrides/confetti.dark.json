@@ -33,5 +33,17 @@
         "value": "{colors.pink.500}"
       }
     }
+  },
+  "motion": {
+    "transform": {
+      "lift": {
+        "value": "{motion.lift-soft}"
+      }
+    },
+    "tilt": {
+      "max": {
+        "value": "{motion.tilt.none}"
+      }
+    }
   }
 }

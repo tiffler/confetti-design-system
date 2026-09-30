@@ -32,7 +32,7 @@
   "borders": {
     "stroke-color": {
       "default": {
-        "value": "{colors.stone.900}"
+        "value": "{colors.stone.a24}"
       },
       "subtle": {
         "value": "{colors.stone.a12}"
@@ -132,11 +132,11 @@
   },
   "elevation": {
     "lift": {
-      "value": "3px 3px 0px 0px {colors.stone.900}",
+      "value": "{shadow.lifted}",
       "comment": "card hover shadow"
     },
     "button-lift": {
-      "value": "3px 3px 0px 0px {colors.stone.900}",
+      "value": "{shadow.soft}",
       "comment": "button hover shadow — separate from card so a theme can drop it (flat) or swap it (glow)"
     }
   },

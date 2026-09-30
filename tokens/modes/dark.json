@@ -32,7 +32,7 @@
   "borders": {
     "stroke-color": {
       "default": {
-        "value": "{colors.chalk.100}"
+        "value": "{colors.graphite.a32}"
       },
       "subtle": {
         "value": "{colors.graphite.a16}"
@@ -132,11 +132,11 @@
   },
   "elevation": {
     "lift": {
-      "value": "3px 3px 0px 0px {colors.chalk.100}",
+      "value": "{shadow.lifted-deep}",
       "comment": "card hover shadow"
     },
     "button-lift": {
-      "value": "3px 3px 0px 0px {colors.chalk.100}",
+      "value": "{shadow.soft-deep}",
       "comment": "button hover shadow — separate from card so a theme can drop or swap it"
     }
   },

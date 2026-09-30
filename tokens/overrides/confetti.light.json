@@ -1,0 +1,15 @@
+{
+  "$comment": "Confetti LIGHT — no neutrals of its own (the base light mode IS Confetti's), only the premium motion: cards rise quietly instead of sliding up-left, and stay square instead of tilting. Mirrors the same two entries in confetti.dark.json. Emitted under [data-theme='confetti'][data-mode='light'].",
+  "motion": {
+    "transform": {
+      "lift": {
+        "value": "{motion.lift-soft}"
+      }
+    },
+    "tilt": {
+      "max": {
+        "value": "{motion.tilt.none}"
+      }
+    }
+  }
+}

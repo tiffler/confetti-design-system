@@ -171,6 +171,8 @@ unchanged (476 → 476, identical multiset).
 
 ### Confetti's documented deviations
 
+- `shadow.soft` / `lifted` / `soft-deep` / `lifted-deep` and `motion.lift-soft` / `tilt.none` stay named, for the
+  same reason as `hard-ink` below: `-deep` is the dark-surface counterpart of a shadow, not a larger step.
 - `shadow.none` / `hard-ink` / `hard-cream` stay named. They are two mode counterparts of one
   hard-offset shadow, not a magnitude ramp — ordinal steps would imply an ordering that does
   not exist. The *roles* built on them are `elevation.*`, which is the part that matters.

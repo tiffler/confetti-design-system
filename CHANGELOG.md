@@ -6,6 +6,15 @@ the token sync); additive-only, non-visual changes are **patch**.
 
 ## [Unreleased]
 
+### Changed
+
+- **Premium restyle of the Confetti theme** *(visual — consumers will see it)*. Light neutrals
+  move from cream to a warm greige (`colors.stone`). The sticker language is softened: 1px
+  hairline borders (`borders.stroke-color.default` is now a low-alpha stroke), soft diffuse
+  shadows (`shadow.soft` / `lifted`, with `-deep` counterparts for dark), a 20px container
+  radius (`radius.500`), a quiet 2px rise on hover (`motion.lift-soft`) and no card tilt. The brand
+  red and the four accent hues are unchanged. Adventure and Neon are unaffected.
+
 ### Added
 
 - **Every component now documents every state.** `argTypes` are complete across all six —

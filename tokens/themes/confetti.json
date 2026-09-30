@@ -41,15 +41,15 @@
     }
   },
   "shape": {
-    "$comment": "The theme's shape personality. control = pills/buttons, container = cards, border = the sticker outline weight.",
+    "$comment": "The theme's shape personality. control = pills/buttons, container = cards, border = the hairline outline weight.",
     "control-radius": {
       "value": "{radius.full}"
     },
     "container-radius": {
-      "value": "{radius.300}"
+      "value": "{radius.500}"
     },
     "border-width": {
-      "value": "{size.200}"
+      "value": "{size.100}"
     }
   },
   "font": {
@@ -65,9 +65,9 @@
     }
   },
   "interaction": {
-    "$comment": "How filled buttons respond on hover. Confetti lifts onto the hard sticker shadow (no lightness change). button-lift = the transform; hover-brightness = 1 (none). The hover shadow lives on the mode axis (shadow.button-lift).",
+    "$comment": "How filled buttons respond on hover. Confetti rises quietly onto a soft diffuse shadow (no lightness change). button-lift = the transform; hover-brightness = 1 (none). The hover shadow lives on the mode axis (elevation.button-lift).",
     "button-lift": {
-      "value": "{motion.lift}"
+      "value": "{motion.lift-soft}"
     },
     "hover-brightness": {
       "value": "{effect.brightness.none}"

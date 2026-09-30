@@ -35,6 +35,7 @@ export default {
     "200": "var(--radius-200)",
     "300": "var(--radius-300)",
     "400": "var(--radius-400)",
+    "500": "var(--radius-500)",
     "none": "var(--radius-none)",
     "full": "var(--radius-full)",
     "circle": "var(--radius-circle)"
@@ -96,7 +97,11 @@ export default {
   "boxShadow": {
     "none": "var(--shadow-none)",
     "hard-ink": "var(--shadow-hard-ink)",
-    "hard-cream": "var(--shadow-hard-cream)"
+    "hard-cream": "var(--shadow-hard-cream)",
+    "soft": "var(--shadow-soft)",
+    "lifted": "var(--shadow-lifted)",
+    "soft-deep": "var(--shadow-soft-deep)",
+    "lifted-deep": "var(--shadow-lifted-deep)"
   },
   "zIndex": {
     "100": "var(--z-100)",

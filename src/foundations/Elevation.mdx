@@ -5,8 +5,8 @@ import { ElevationStack, ShadowSpecimen, CardElevation } from './Specimens';
 
 # Elevation
 
-Confetti has no blur-based elevation. Depth comes from two things: a small surface
-ramp, and a hard offset shadow on hover.
+Confetti's depth is quiet. It comes from two things: a small surface ramp, and a soft
+diffuse shadow that appears on hover.
 
 ## Surface ramp
 
@@ -25,12 +25,12 @@ the exact values came out of the homepage hero widget code.
 
 ## Lift
 
-`--elevation-lift` is a 3px hard offset with no blur, paired with a
-`translate(-2px, -2px)`. Buttons and interactive cards share it, which is what makes
-the whole system read as one sticker language.
+`--elevation-lift` is a soft, wide, low-opacity shadow paired with a 2px upward rise
+(`translate(0, -2px)`). Buttons use the lighter `--elevation-button-lift`. Cards, modals and
+toasts share the same language: a hairline border at rest, air underneath on hover.
 
-In dark mode the shadow inverts to cream — a dark shadow on a dark surface reads as
-nothing, so the token repoints rather than the component changing.
+In dark mode the shadow repoints to a black-based one — a low-opacity ink shadow does not
+read on a dark surface — so the token changes rather than the component.
 
 <ShadowSpecimen />
 

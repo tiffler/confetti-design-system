@@ -84,6 +84,10 @@
       "a16": {
         "value": "rgba(232, 236, 240, 0.16)",
         "comment": "chalk at 16% — subtle border on graphite"
+      },
+      "a32": {
+        "value": "rgba(232, 236, 240, 0.32)",
+        "comment": "dark-mode hairline border"
       }
     },
     "chalk": {
@@ -458,6 +462,12 @@
       },
       "transparent": {
         "value": "transparent"
+      },
+      "black-a40": {
+        "value": "rgba(0, 0, 0, 0.4)"
+      },
+      "black-a60": {
+        "value": "rgba(0, 0, 0, 0.6)"
       }
     },
     "stone": {
@@ -502,6 +512,16 @@
       },
       "a86": {
         "value": "rgba(28, 27, 25, 0.86)"
+      },
+      "a04": {
+        "value": "rgba(28, 27, 25, 0.04)"
+      },
+      "a16": {
+        "value": "rgba(28, 27, 25, 0.16)"
+      },
+      "a24": {
+        "value": "rgba(28, 27, 25, 0.24)",
+        "comment": "hairline border — the quiet outline"
       }
     }
   }

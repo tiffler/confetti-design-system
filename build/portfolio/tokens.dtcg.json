@@ -172,6 +172,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--colors-graphite-a16"
           }
+        },
+        "a32": {
+          "$value": "rgba(232, 236, 240, 0.32)",
+          "$type": "other",
+          "$description": "dark-mode hairline border",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-graphite-a32"
+          }
         }
       },
       "chalk": {
@@ -896,6 +904,20 @@
           "$extensions": {
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
+        },
+        "black-a40": {
+          "$value": "rgba(0, 0, 0, 0.4)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a40"
+          }
+        },
+        "black-a60": {
+          "$value": "rgba(0, 0, 0, 0.6)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a60"
+          }
         }
       },
       "stone": {
@@ -986,6 +1008,28 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        },
+        "a04": {
+          "$value": "rgba(28, 27, 25, 0.04)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a04"
+          }
+        },
+        "a16": {
+          "$value": "rgba(28, 27, 25, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a16"
+          }
+        },
+        "a24": {
+          "$value": "rgba(28, 27, 25, 0.24)",
+          "$type": "other",
+          "$description": "hairline border — the quiet outline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a24"
           }
         }
       }
@@ -1104,6 +1148,14 @@
           "com.confetti.cssVariable": "--radius-400"
         }
       },
+      "500": {
+        "$value": "20px",
+        "$type": "dimension",
+        "$description": "premium container radius — cards, modals",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-500"
+        }
+      },
       "none": {
         "$value": "0",
         "$type": "dimension",
@@ -1150,6 +1202,38 @@
         "$description": "dark-mode counterpart — light offset against dark surfaces",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-hard-cream"
+        }
+      },
+      "soft": {
+        "$value": "0 1px 2px 0 rgba(28, 27, 25, 0.04), 0 8px 24px -6px rgba(28, 27, 25, 0.12)",
+        "$type": "shadow",
+        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft"
+        }
+      },
+      "lifted": {
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
+        "$type": "shadow",
+        "$description": "soft, deeper — hover and floating surfaces on light",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted"
+        }
+      },
+      "soft-deep": {
+        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft-deep"
+        }
+      },
+      "lifted-deep": {
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of lifted",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted-deep"
         }
       }
     },
@@ -1221,6 +1305,14 @@
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
         },
+        "none": {
+          "$value": "0deg",
+          "$type": "other",
+          "$description": "no tilt — cards stay square on hover",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-tilt-none"
+          }
+        },
         "max": {
           "$value": "0.8deg",
           "$type": "other",
@@ -1228,6 +1320,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-max"
           }
+        }
+      },
+      "lift-soft": {
+        "$value": "translate(0, -2px)",
+        "$type": "other",
+        "$description": "a quiet rise with no sideways travel — the premium counterpart of lift",
+        "$extensions": {
+          "com.confetti.cssVariable": "--motion-lift-soft"
         }
       },
       "transform": {
@@ -4405,6 +4505,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--colors-graphite-a16"
           }
+        },
+        "a32": {
+          "$value": "rgba(232, 236, 240, 0.32)",
+          "$type": "other",
+          "$description": "dark-mode hairline border",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-graphite-a32"
+          }
         }
       },
       "chalk": {
@@ -5129,6 +5237,20 @@
           "$extensions": {
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
+        },
+        "black-a40": {
+          "$value": "rgba(0, 0, 0, 0.4)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a40"
+          }
+        },
+        "black-a60": {
+          "$value": "rgba(0, 0, 0, 0.6)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a60"
+          }
         }
       },
       "stone": {
@@ -5219,6 +5341,28 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        },
+        "a04": {
+          "$value": "rgba(28, 27, 25, 0.04)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a04"
+          }
+        },
+        "a16": {
+          "$value": "rgba(28, 27, 25, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a16"
+          }
+        },
+        "a24": {
+          "$value": "rgba(28, 27, 25, 0.24)",
+          "$type": "other",
+          "$description": "hairline border — the quiet outline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a24"
           }
         }
       }
@@ -5337,6 +5481,14 @@
           "com.confetti.cssVariable": "--radius-400"
         }
       },
+      "500": {
+        "$value": "20px",
+        "$type": "dimension",
+        "$description": "premium container radius — cards, modals",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-500"
+        }
+      },
       "none": {
         "$value": "0",
         "$type": "dimension",
@@ -5383,6 +5535,38 @@
         "$description": "dark-mode counterpart — light offset against dark surfaces",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-hard-cream"
+        }
+      },
+      "soft": {
+        "$value": "0 1px 2px 0 rgba(28, 27, 25, 0.04), 0 8px 24px -6px rgba(28, 27, 25, 0.12)",
+        "$type": "shadow",
+        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft"
+        }
+      },
+      "lifted": {
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
+        "$type": "shadow",
+        "$description": "soft, deeper — hover and floating surfaces on light",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted"
+        }
+      },
+      "soft-deep": {
+        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft-deep"
+        }
+      },
+      "lifted-deep": {
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of lifted",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted-deep"
         }
       }
     },
@@ -5454,6 +5638,14 @@
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
         },
+        "none": {
+          "$value": "0deg",
+          "$type": "other",
+          "$description": "no tilt — cards stay square on hover",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-tilt-none"
+          }
+        },
         "max": {
           "$value": "0.8deg",
           "$type": "other",
@@ -5461,6 +5653,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-max"
           }
+        }
+      },
+      "lift-soft": {
+        "$value": "translate(0, -2px)",
+        "$type": "other",
+        "$description": "a quiet rise with no sideways travel — the premium counterpart of lift",
+        "$extensions": {
+          "com.confetti.cssVariable": "--motion-lift-soft"
         }
       },
       "transform": {
@@ -8638,6 +8838,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--colors-graphite-a16"
           }
+        },
+        "a32": {
+          "$value": "rgba(232, 236, 240, 0.32)",
+          "$type": "other",
+          "$description": "dark-mode hairline border",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-graphite-a32"
+          }
         }
       },
       "chalk": {
@@ -9362,6 +9570,20 @@
           "$extensions": {
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
+        },
+        "black-a40": {
+          "$value": "rgba(0, 0, 0, 0.4)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a40"
+          }
+        },
+        "black-a60": {
+          "$value": "rgba(0, 0, 0, 0.6)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a60"
+          }
         }
       },
       "stone": {
@@ -9452,6 +9674,28 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        },
+        "a04": {
+          "$value": "rgba(28, 27, 25, 0.04)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a04"
+          }
+        },
+        "a16": {
+          "$value": "rgba(28, 27, 25, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a16"
+          }
+        },
+        "a24": {
+          "$value": "rgba(28, 27, 25, 0.24)",
+          "$type": "other",
+          "$description": "hairline border — the quiet outline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a24"
           }
         }
       }
@@ -9570,6 +9814,14 @@
           "com.confetti.cssVariable": "--radius-400"
         }
       },
+      "500": {
+        "$value": "20px",
+        "$type": "dimension",
+        "$description": "premium container radius — cards, modals",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-500"
+        }
+      },
       "none": {
         "$value": "0",
         "$type": "dimension",
@@ -9616,6 +9868,38 @@
         "$description": "dark-mode counterpart — light offset against dark surfaces",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-hard-cream"
+        }
+      },
+      "soft": {
+        "$value": "0 1px 2px 0 rgba(28, 27, 25, 0.04), 0 8px 24px -6px rgba(28, 27, 25, 0.12)",
+        "$type": "shadow",
+        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft"
+        }
+      },
+      "lifted": {
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
+        "$type": "shadow",
+        "$description": "soft, deeper — hover and floating surfaces on light",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted"
+        }
+      },
+      "soft-deep": {
+        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft-deep"
+        }
+      },
+      "lifted-deep": {
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of lifted",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted-deep"
         }
       }
     },
@@ -9687,20 +9971,34 @@
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
         },
-        "max": {
-          "$value": "0.8deg",
+        "none": {
+          "$value": "0deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker angle",
+          "$description": "no tilt — cards stay square on hover",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-tilt-none"
+          }
+        },
+        "max": {
+          "$value": "0deg",
+          "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-max"
           }
         }
       },
+      "lift-soft": {
+        "$value": "translate(0, -2px)",
+        "$type": "other",
+        "$description": "a quiet rise with no sideways travel — the premium counterpart of lift",
+        "$extensions": {
+          "com.confetti.cssVariable": "--motion-lift-soft"
+        }
+      },
       "transform": {
         "lift": {
-          "$value": "translate(-2px, -2px)",
+          "$value": "translate(0, -2px)",
           "$type": "other",
-          "$description": "how far an interactive surface rises on hover",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-transform-lift"
           }
@@ -9749,7 +10047,7 @@
         }
       },
       "button-lift": {
-        "$value": "translate(-2px, -2px)",
+        "$value": "translate(0, -2px)",
         "$type": "other",
         "$description": "the hover transform on filled buttons — a lift, or rest (no move), per theme",
         "$extensions": {
@@ -10619,7 +10917,7 @@
           }
         },
         "container": {
-          "$value": "8px",
+          "$value": "20px",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--borders-radius-container"
@@ -10636,7 +10934,7 @@
           }
         },
         "default": {
-          "$value": "2px",
+          "$value": "1px",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--borders-stroke-weight-default"
@@ -10645,7 +10943,7 @@
       },
       "stroke-color": {
         "default": {
-          "$value": "#e8ecf0",
+          "$value": "rgba(232, 236, 240, 0.32)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--borders-stroke-color-default"
@@ -10677,7 +10975,7 @@
         }
       },
       "lift": {
-        "$value": "3px 3px 0px 0px #e8ecf0",
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
         "$type": "other",
         "$description": "card hover shadow",
         "$extensions": {
@@ -10685,7 +10983,7 @@
         }
       },
       "button-lift": {
-        "$value": "3px 3px 0px 0px #e8ecf0",
+        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
         "$type": "other",
         "$description": "button hover shadow — separate from card so a theme can drop or swap it",
         "$extensions": {
@@ -11016,14 +11314,14 @@
         }
       },
       "container-radius": {
-        "$value": "8px",
+        "$value": "20px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--shape-container-radius"
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--shape-border-width"
@@ -11032,7 +11330,7 @@
     },
     "interaction": {
       "button-lift": {
-        "$value": "translate(-2px, -2px)",
+        "$value": "translate(0, -2px)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--interaction-button-lift"
@@ -11246,7 +11544,7 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-border-width"
@@ -11309,14 +11607,14 @@
         }
       },
       "shadow-hover": {
-        "$value": "3px 3px 0px 0px #e8ecf0",
+        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-shadow-hover"
         }
       },
       "transform-hover": {
-        "$value": "translate(-2px, -2px)",
+        "$value": "translate(0, -2px)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-transform-hover"
@@ -11372,7 +11670,7 @@
         }
       },
       "spinner-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-spinner-width"
@@ -11408,7 +11706,7 @@
           }
         },
         "border": {
-          "$value": "#e8ecf0",
+          "$value": "rgba(232, 236, 240, 0.32)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-primary-border"
@@ -11431,7 +11729,7 @@
           }
         },
         "border": {
-          "$value": "#e8ecf0",
+          "$value": "rgba(232, 236, 240, 0.32)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-border"
@@ -11454,7 +11752,7 @@
           }
         },
         "border": {
-          "$value": "#e8ecf0",
+          "$value": "rgba(232, 236, 240, 0.32)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-border"
@@ -11568,21 +11866,21 @@
         }
       },
       "border": {
-        "$value": "#e8ecf0",
+        "$value": "rgba(232, 236, 240, 0.32)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-border"
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-border-width"
         }
       },
       "radius": {
-        "$value": "8px",
+        "$value": "20px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-radius"
@@ -11603,21 +11901,21 @@
         }
       },
       "shadow-hover": {
-        "$value": "3px 3px 0px 0px #e8ecf0",
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-shadow-hover"
         }
       },
       "transform-hover": {
-        "$value": "translate(-2px, -2px)",
+        "$value": "translate(0, -2px)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-transform-hover"
         }
       },
       "tilt-max": {
-        "$value": "0.8deg",
+        "$value": "0deg",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-tilt-max"
@@ -11845,7 +12143,7 @@
         }
       },
       "radius": {
-        "$value": "8px",
+        "$value": "20px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--code-radius"
@@ -11949,28 +12247,28 @@
         }
       },
       "border": {
-        "$value": "#e8ecf0",
+        "$value": "rgba(232, 236, 240, 0.32)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-border"
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-border-width"
         }
       },
       "radius": {
-        "$value": "8px",
+        "$value": "20px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-radius"
         }
       },
       "shadow": {
-        "$value": "3px 3px 0px 0px #e8ecf0",
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
         "$type": "other",
         "$description": "the sticker lift, held at rest — a dialog is already raised",
         "$extensions": {
@@ -12153,14 +12451,14 @@
         }
       },
       "track-border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-track-border-width"
         }
       },
       "track-border": {
-        "$value": "#e8ecf0",
+        "$value": "rgba(232, 236, 240, 0.32)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-track-border"
@@ -12189,21 +12487,21 @@
         }
       },
       "thumb-border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-border-width"
         }
       },
       "thumb-border": {
-        "$value": "#e8ecf0",
+        "$value": "rgba(232, 236, 240, 0.32)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-border"
         }
       },
       "thumb-shadow": {
-        "$value": "3px 3px 0px 0px #e8ecf0",
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
         "$type": "other",
         "$description": "the sticker lift, held at rest — the knob sits above the rail",
         "$extensions": {
@@ -12298,7 +12596,7 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
         "$extensions": {
@@ -12306,7 +12604,7 @@
         }
       },
       "border": {
-        "$value": "#e8ecf0",
+        "$value": "rgba(232, 236, 240, 0.32)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-border"
@@ -12554,7 +12852,7 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$description": "the 2px sticker edge — same as Card",
         "$extensions": {
@@ -12562,21 +12860,21 @@
         }
       },
       "border": {
-        "$value": "#e8ecf0",
+        "$value": "rgba(232, 236, 240, 0.32)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-border"
         }
       },
       "radius": {
-        "$value": "8px",
+        "$value": "20px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-radius"
         }
       },
       "shadow": {
-        "$value": "3px 3px 0px 0px #e8ecf0",
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
         "$type": "other",
         "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
         "$extensions": {
@@ -12878,6 +13176,14 @@
           "$description": "chalk at 16% — subtle border on graphite",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-graphite-a16"
+          }
+        },
+        "a32": {
+          "$value": "rgba(232, 236, 240, 0.32)",
+          "$type": "other",
+          "$description": "dark-mode hairline border",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-graphite-a32"
           }
         }
       },
@@ -13603,6 +13909,20 @@
           "$extensions": {
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
+        },
+        "black-a40": {
+          "$value": "rgba(0, 0, 0, 0.4)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a40"
+          }
+        },
+        "black-a60": {
+          "$value": "rgba(0, 0, 0, 0.6)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a60"
+          }
         }
       },
       "stone": {
@@ -13693,6 +14013,28 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        },
+        "a04": {
+          "$value": "rgba(28, 27, 25, 0.04)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a04"
+          }
+        },
+        "a16": {
+          "$value": "rgba(28, 27, 25, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a16"
+          }
+        },
+        "a24": {
+          "$value": "rgba(28, 27, 25, 0.24)",
+          "$type": "other",
+          "$description": "hairline border — the quiet outline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a24"
           }
         }
       }
@@ -13811,6 +14153,14 @@
           "com.confetti.cssVariable": "--radius-400"
         }
       },
+      "500": {
+        "$value": "20px",
+        "$type": "dimension",
+        "$description": "premium container radius — cards, modals",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-500"
+        }
+      },
       "none": {
         "$value": "0",
         "$type": "dimension",
@@ -13857,6 +14207,38 @@
         "$description": "dark-mode counterpart — light offset against dark surfaces",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-hard-cream"
+        }
+      },
+      "soft": {
+        "$value": "0 1px 2px 0 rgba(28, 27, 25, 0.04), 0 8px 24px -6px rgba(28, 27, 25, 0.12)",
+        "$type": "shadow",
+        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft"
+        }
+      },
+      "lifted": {
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
+        "$type": "shadow",
+        "$description": "soft, deeper — hover and floating surfaces on light",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted"
+        }
+      },
+      "soft-deep": {
+        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft-deep"
+        }
+      },
+      "lifted-deep": {
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of lifted",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted-deep"
         }
       }
     },
@@ -13928,20 +14310,34 @@
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
         },
-        "max": {
-          "$value": "0.8deg",
+        "none": {
+          "$value": "0deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker angle",
+          "$description": "no tilt — cards stay square on hover",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-tilt-none"
+          }
+        },
+        "max": {
+          "$value": "0deg",
+          "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-max"
           }
         }
       },
+      "lift-soft": {
+        "$value": "translate(0, -2px)",
+        "$type": "other",
+        "$description": "a quiet rise with no sideways travel — the premium counterpart of lift",
+        "$extensions": {
+          "com.confetti.cssVariable": "--motion-lift-soft"
+        }
+      },
       "transform": {
         "lift": {
-          "$value": "translate(-2px, -2px)",
+          "$value": "translate(0, -2px)",
           "$type": "other",
-          "$description": "how far an interactive surface rises on hover",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-transform-lift"
           }
@@ -13990,7 +14386,7 @@
         }
       },
       "button-lift": {
-        "$value": "translate(-2px, -2px)",
+        "$value": "translate(0, -2px)",
         "$type": "other",
         "$description": "the hover transform on filled buttons — a lift, or rest (no move), per theme",
         "$extensions": {
@@ -14860,7 +15256,7 @@
           }
         },
         "container": {
-          "$value": "8px",
+          "$value": "20px",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--borders-radius-container"
@@ -14877,7 +15273,7 @@
           }
         },
         "default": {
-          "$value": "2px",
+          "$value": "1px",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--borders-stroke-weight-default"
@@ -14886,7 +15282,7 @@
       },
       "stroke-color": {
         "default": {
-          "$value": "#1c1b19",
+          "$value": "rgba(28, 27, 25, 0.24)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--borders-stroke-color-default"
@@ -14918,7 +15314,7 @@
         }
       },
       "lift": {
-        "$value": "3px 3px 0px 0px #1c1b19",
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
         "$type": "other",
         "$description": "card hover shadow",
         "$extensions": {
@@ -14926,7 +15322,7 @@
         }
       },
       "button-lift": {
-        "$value": "3px 3px 0px 0px #1c1b19",
+        "$value": "0 1px 2px 0 rgba(28, 27, 25, 0.04), 0 8px 24px -6px rgba(28, 27, 25, 0.12)",
         "$type": "other",
         "$description": "button hover shadow — separate from card so a theme can drop it (flat) or swap it (glow)",
         "$extensions": {
@@ -15257,14 +15653,14 @@
         }
       },
       "container-radius": {
-        "$value": "8px",
+        "$value": "20px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--shape-container-radius"
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--shape-border-width"
@@ -15273,7 +15669,7 @@
     },
     "interaction": {
       "button-lift": {
-        "$value": "translate(-2px, -2px)",
+        "$value": "translate(0, -2px)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--interaction-button-lift"
@@ -15487,7 +15883,7 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-border-width"
@@ -15550,14 +15946,14 @@
         }
       },
       "shadow-hover": {
-        "$value": "3px 3px 0px 0px #1c1b19",
+        "$value": "0 1px 2px 0 rgba(28, 27, 25, 0.04), 0 8px 24px -6px rgba(28, 27, 25, 0.12)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-shadow-hover"
         }
       },
       "transform-hover": {
-        "$value": "translate(-2px, -2px)",
+        "$value": "translate(0, -2px)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-transform-hover"
@@ -15613,7 +16009,7 @@
         }
       },
       "spinner-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-spinner-width"
@@ -15649,7 +16045,7 @@
           }
         },
         "border": {
-          "$value": "#1c1b19",
+          "$value": "rgba(28, 27, 25, 0.24)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-primary-border"
@@ -15672,7 +16068,7 @@
           }
         },
         "border": {
-          "$value": "#1c1b19",
+          "$value": "rgba(28, 27, 25, 0.24)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-border"
@@ -15695,7 +16091,7 @@
           }
         },
         "border": {
-          "$value": "#1c1b19",
+          "$value": "rgba(28, 27, 25, 0.24)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-border"
@@ -15809,21 +16205,21 @@
         }
       },
       "border": {
-        "$value": "#1c1b19",
+        "$value": "rgba(28, 27, 25, 0.24)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-border"
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-border-width"
         }
       },
       "radius": {
-        "$value": "8px",
+        "$value": "20px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-radius"
@@ -15844,21 +16240,21 @@
         }
       },
       "shadow-hover": {
-        "$value": "3px 3px 0px 0px #1c1b19",
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-shadow-hover"
         }
       },
       "transform-hover": {
-        "$value": "translate(-2px, -2px)",
+        "$value": "translate(0, -2px)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-transform-hover"
         }
       },
       "tilt-max": {
-        "$value": "0.8deg",
+        "$value": "0deg",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-tilt-max"
@@ -16086,7 +16482,7 @@
         }
       },
       "radius": {
-        "$value": "8px",
+        "$value": "20px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--code-radius"
@@ -16190,28 +16586,28 @@
         }
       },
       "border": {
-        "$value": "#1c1b19",
+        "$value": "rgba(28, 27, 25, 0.24)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-border"
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-border-width"
         }
       },
       "radius": {
-        "$value": "8px",
+        "$value": "20px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-radius"
         }
       },
       "shadow": {
-        "$value": "3px 3px 0px 0px #1c1b19",
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
         "$type": "other",
         "$description": "the sticker lift, held at rest — a dialog is already raised",
         "$extensions": {
@@ -16394,14 +16790,14 @@
         }
       },
       "track-border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-track-border-width"
         }
       },
       "track-border": {
-        "$value": "#1c1b19",
+        "$value": "rgba(28, 27, 25, 0.24)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-track-border"
@@ -16430,21 +16826,21 @@
         }
       },
       "thumb-border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-border-width"
         }
       },
       "thumb-border": {
-        "$value": "#1c1b19",
+        "$value": "rgba(28, 27, 25, 0.24)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-border"
         }
       },
       "thumb-shadow": {
-        "$value": "3px 3px 0px 0px #1c1b19",
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
         "$type": "other",
         "$description": "the sticker lift, held at rest — the knob sits above the rail",
         "$extensions": {
@@ -16539,7 +16935,7 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
         "$extensions": {
@@ -16547,7 +16943,7 @@
         }
       },
       "border": {
-        "$value": "#1c1b19",
+        "$value": "rgba(28, 27, 25, 0.24)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-border"
@@ -16795,7 +17191,7 @@
         }
       },
       "border-width": {
-        "$value": "2px",
+        "$value": "1px",
         "$type": "other",
         "$description": "the 2px sticker edge — same as Card",
         "$extensions": {
@@ -16803,21 +17199,21 @@
         }
       },
       "border": {
-        "$value": "#1c1b19",
+        "$value": "rgba(28, 27, 25, 0.24)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-border"
         }
       },
       "radius": {
-        "$value": "8px",
+        "$value": "20px",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-radius"
         }
       },
       "shadow": {
-        "$value": "3px 3px 0px 0px #1c1b19",
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
         "$type": "other",
         "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
         "$extensions": {
@@ -17119,6 +17515,14 @@
           "$description": "chalk at 16% — subtle border on graphite",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-graphite-a16"
+          }
+        },
+        "a32": {
+          "$value": "rgba(232, 236, 240, 0.32)",
+          "$type": "other",
+          "$description": "dark-mode hairline border",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-graphite-a32"
           }
         }
       },
@@ -17844,6 +18248,20 @@
           "$extensions": {
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
+        },
+        "black-a40": {
+          "$value": "rgba(0, 0, 0, 0.4)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a40"
+          }
+        },
+        "black-a60": {
+          "$value": "rgba(0, 0, 0, 0.6)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a60"
+          }
         }
       },
       "stone": {
@@ -17934,6 +18352,28 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        },
+        "a04": {
+          "$value": "rgba(28, 27, 25, 0.04)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a04"
+          }
+        },
+        "a16": {
+          "$value": "rgba(28, 27, 25, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a16"
+          }
+        },
+        "a24": {
+          "$value": "rgba(28, 27, 25, 0.24)",
+          "$type": "other",
+          "$description": "hairline border — the quiet outline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a24"
           }
         }
       }
@@ -18052,6 +18492,14 @@
           "com.confetti.cssVariable": "--radius-400"
         }
       },
+      "500": {
+        "$value": "20px",
+        "$type": "dimension",
+        "$description": "premium container radius — cards, modals",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-500"
+        }
+      },
       "none": {
         "$value": "0",
         "$type": "dimension",
@@ -18098,6 +18546,38 @@
         "$description": "dark-mode counterpart — light offset against dark surfaces",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-hard-cream"
+        }
+      },
+      "soft": {
+        "$value": "0 1px 2px 0 rgba(28, 27, 25, 0.04), 0 8px 24px -6px rgba(28, 27, 25, 0.12)",
+        "$type": "shadow",
+        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft"
+        }
+      },
+      "lifted": {
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
+        "$type": "shadow",
+        "$description": "soft, deeper — hover and floating surfaces on light",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted"
+        }
+      },
+      "soft-deep": {
+        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft-deep"
+        }
+      },
+      "lifted-deep": {
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of lifted",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted-deep"
         }
       }
     },
@@ -18169,6 +18649,14 @@
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
         },
+        "none": {
+          "$value": "0deg",
+          "$type": "other",
+          "$description": "no tilt — cards stay square on hover",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-tilt-none"
+          }
+        },
         "max": {
           "$value": "0.8deg",
           "$type": "other",
@@ -18176,6 +18664,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-max"
           }
+        }
+      },
+      "lift-soft": {
+        "$value": "translate(0, -2px)",
+        "$type": "other",
+        "$description": "a quiet rise with no sideways travel — the premium counterpart of lift",
+        "$extensions": {
+          "com.confetti.cssVariable": "--motion-lift-soft"
         }
       },
       "transform": {
@@ -21354,6 +21850,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--colors-graphite-a16"
           }
+        },
+        "a32": {
+          "$value": "rgba(232, 236, 240, 0.32)",
+          "$type": "other",
+          "$description": "dark-mode hairline border",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-graphite-a32"
+          }
         }
       },
       "chalk": {
@@ -22078,6 +22582,20 @@
           "$extensions": {
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
+        },
+        "black-a40": {
+          "$value": "rgba(0, 0, 0, 0.4)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a40"
+          }
+        },
+        "black-a60": {
+          "$value": "rgba(0, 0, 0, 0.6)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-base-black-a60"
+          }
         }
       },
       "stone": {
@@ -22168,6 +22686,28 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        },
+        "a04": {
+          "$value": "rgba(28, 27, 25, 0.04)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a04"
+          }
+        },
+        "a16": {
+          "$value": "rgba(28, 27, 25, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a16"
+          }
+        },
+        "a24": {
+          "$value": "rgba(28, 27, 25, 0.24)",
+          "$type": "other",
+          "$description": "hairline border — the quiet outline",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a24"
           }
         }
       }
@@ -22286,6 +22826,14 @@
           "com.confetti.cssVariable": "--radius-400"
         }
       },
+      "500": {
+        "$value": "20px",
+        "$type": "dimension",
+        "$description": "premium container radius — cards, modals",
+        "$extensions": {
+          "com.confetti.cssVariable": "--radius-500"
+        }
+      },
       "none": {
         "$value": "0",
         "$type": "dimension",
@@ -22332,6 +22880,38 @@
         "$description": "dark-mode counterpart — light offset against dark surfaces",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-hard-cream"
+        }
+      },
+      "soft": {
+        "$value": "0 1px 2px 0 rgba(28, 27, 25, 0.04), 0 8px 24px -6px rgba(28, 27, 25, 0.12)",
+        "$type": "shadow",
+        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft"
+        }
+      },
+      "lifted": {
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
+        "$type": "shadow",
+        "$description": "soft, deeper — hover and floating surfaces on light",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted"
+        }
+      },
+      "soft-deep": {
+        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-soft-deep"
+        }
+      },
+      "lifted-deep": {
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
+        "$type": "shadow",
+        "$description": "dark-surface counterpart of lifted",
+        "$extensions": {
+          "com.confetti.cssVariable": "--shadow-lifted-deep"
         }
       }
     },
@@ -22403,6 +22983,14 @@
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
         },
+        "none": {
+          "$value": "0deg",
+          "$type": "other",
+          "$description": "no tilt — cards stay square on hover",
+          "$extensions": {
+            "com.confetti.cssVariable": "--motion-tilt-none"
+          }
+        },
         "max": {
           "$value": "0.8deg",
           "$type": "other",
@@ -22410,6 +22998,14 @@
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-max"
           }
+        }
+      },
+      "lift-soft": {
+        "$value": "translate(0, -2px)",
+        "$type": "other",
+        "$description": "a quiet rise with no sideways travel — the premium counterpart of lift",
+        "$extensions": {
+          "com.confetti.cssVariable": "--motion-lift-soft"
         }
       },
       "transform": {

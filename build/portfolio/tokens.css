@@ -39,6 +39,7 @@
   --colors-graphite-800: #101012;
   --colors-graphite-900: #000000;
   --colors-graphite-a16: rgba(232, 236, 240, 0.16);
+  --colors-graphite-a32: rgba(232, 236, 240, 0.32);
   --colors-chalk-100: #e8ecf0;
   --colors-chalk-400: #a8b2bc;
   --colors-red-200: #ff8d80;
@@ -128,6 +129,8 @@
   --colors-base-white: #ffffff;
   --colors-base-black: #000000;
   --colors-base-transparent: transparent;
+  --colors-base-black-a40: rgba(0, 0, 0, 0.4);
+  --colors-base-black-a60: rgba(0, 0, 0, 0.6);
   --colors-stone-50: #faf9f7;
   --colors-stone-100: #f5f4f1;
   --colors-stone-200: #ecebe7;
@@ -140,6 +143,9 @@
   --colors-stone-900: #1c1b19;
   --colors-stone-a12: rgba(28, 27, 25, 0.12);
   --colors-stone-a86: rgba(28, 27, 25, 0.86);
+  --colors-stone-a04: rgba(28, 27, 25, 0.04);
+  --colors-stone-a16: rgba(28, 27, 25, 0.16);
+  --colors-stone-a24: rgba(28, 27, 25, 0.24);
   --font-size-100: 0.75rem;
   --font-size-200: 0.875rem;
   --font-size-300: 1rem;
@@ -155,12 +161,17 @@
   --radius-200: 4px;
   --radius-300: 8px;
   --radius-400: 12px;
+  --radius-500: 20px;
   --radius-none: 0;
   --radius-full: 999px;
   --radius-circle: 50%;
   --shadow-none: none;
   --shadow-hard-ink: 3px 3px 0px 0px #2e2618;
   --shadow-hard-cream: 3px 3px 0px 0px #ede4d3;
+  --shadow-soft: 0 1px 2px 0 rgba(28, 27, 25, 0.04), 0 8px 24px -6px rgba(28, 27, 25, 0.12);
+  --shadow-lifted: 0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16);
+  --shadow-soft-deep: 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4);
+  --shadow-lifted-deep: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6);
   --effect-brightness-none: 1;
   --effect-brightness-lighten: 1.1;
   --effect-brightness-lighten-strong: 1.22;
@@ -168,7 +179,9 @@
   --motion-lift: translate(-2px, -2px);
   --motion-rest: translate(0, 0);
   --motion-tilt-subtle: 0.8deg;
+  --motion-tilt-none: 0deg;
   --motion-tilt-max: 0.8deg;
+  --motion-lift-soft: translate(0, -2px);
   --motion-transform-lift: translate(-2px, -2px);
   --motion-transform-rest: translate(0, 0);
   --motion-duration-interaction: 180ms;
@@ -531,11 +544,11 @@
   --text-default: #e8ecf0;
   --text-muted: #a8b2bc;
   --text-inverse: #101012;
-  --borders-stroke-color-default: #e8ecf0;
+  --borders-stroke-color-default: rgba(232, 236, 240, 0.32);
   --borders-stroke-color-subtle: rgba(232, 236, 240, 0.16);
   --borders-stroke-color-none: transparent;
-  --elevation-lift: 3px 3px 0px 0px #e8ecf0;
-  --elevation-button-lift: 3px 3px 0px 0px #e8ecf0;
+  --elevation-lift: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6);
+  --elevation-button-lift: 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4);
   --action-secondary-fill: #29292e;
   --action-secondary-text: #e8ecf0;
   --action-ghost-fill: transparent;
@@ -569,11 +582,11 @@
   --text-default: #1c1b19;
   --text-muted: #6b6861;
   --text-inverse: #ffffff;
-  --borders-stroke-color-default: #1c1b19;
+  --borders-stroke-color-default: rgba(28, 27, 25, 0.24);
   --borders-stroke-color-subtle: rgba(28, 27, 25, 0.12);
   --borders-stroke-color-none: transparent;
-  --elevation-lift: 3px 3px 0px 0px #1c1b19;
-  --elevation-button-lift: 3px 3px 0px 0px #1c1b19;
+  --elevation-lift: 0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16);
+  --elevation-button-lift: 0 1px 2px 0 rgba(28, 27, 25, 0.04), 0 8px 24px -6px rgba(28, 27, 25, 0.12);
   --action-secondary-fill: #f5f4f1;
   --action-secondary-text: #1c1b19;
   --action-ghost-fill: transparent;
@@ -632,9 +645,9 @@
   --syntax-fg: #f5f4f1;
   --syntax-muted: #cfccc5;
   --shape-control-radius: 999px;
-  --shape-container-radius: 8px;
-  --shape-border-width: 2px;
-  --interaction-button-lift: translate(-2px, -2px);
+  --shape-container-radius: 20px;
+  --shape-border-width: 1px;
+  --interaction-button-lift: translate(0, -2px);
   --interaction-hover-brightness: 1;
 }
 
@@ -722,12 +735,20 @@
 
 /* Theme override (own neutrals / a11y lift) — see tokens/overrides/confetti.dark.json */
 [data-theme="confetti"][data-mode="dark"] {
+  --motion-tilt-max: 0deg;
+  --motion-transform-lift: translate(0, -2px);
   --text-accent: #ff8d80;
   --action-ghost-text-hover: #ff8d80;
   --accent-purple-bold: #c9a4f5;
   --accent-teal-bold: #7ce0cd;
   --accent-orange-bold: #f7bf6a;
   --accent-pink-bold: #f7a6c6;
+}
+
+/* Theme override (own neutrals / a11y lift) — see tokens/overrides/confetti.light.json */
+[data-theme="confetti"][data-mode="light"] {
+  --motion-tilt-max: 0deg;
+  --motion-transform-lift: translate(0, -2px);
 }
 
 /* Theme override (own neutrals / a11y lift) — see tokens/overrides/neon.dark.json */

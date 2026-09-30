@@ -26,6 +26,10 @@
     "circle": {
       "value": "50%",
       "comment": "dots / avatars"
+    },
+    "500": {
+      "value": "20px",
+      "comment": "premium container radius — cards, modals"
     }
   }
 }
