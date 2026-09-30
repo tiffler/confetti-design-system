@@ -1557,6 +1557,14 @@
           "com.confetti.cssVariable": "--size-control"
         }
       },
+      "control-compact": {
+        "$value": "40px",
+        "$type": "dimension",
+        "$description": "40px — a compact control, for secondary affordances such as a dialog's close button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--size-control-compact"
+        }
+      },
       "dialog": {
         "sm": {
           "$value": "420px",
@@ -2147,6 +2155,14 @@
           "com.confetti.cssVariable": "--surface-code"
         }
       },
+      "deep": {
+        "$value": "#16231a",
+        "$type": "other",
+        "$description": "a deep ground that stays deep in BOTH modes — a dark panel on a light page. Wired to the theme's syntax surface, which is already that: an inset dark ground per theme. Split into its own brand-kit input if a theme ever needs the panel and the code block to differ.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--surface-deep"
+        }
+      },
       "page": {
         "$value": "#16231a",
         "$type": "other",
@@ -2212,6 +2228,22 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-on-code-muted"
+        }
+      },
+      "on-deep": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep"
+        }
+      },
+      "on-deep-muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$description": "secondary text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep-muted"
         }
       },
       "default": {
@@ -3515,6 +3547,161 @@
         }
       }
     },
+    "dark-panel": {
+      "fill": {
+        "$value": "#16231a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-fill"
+        }
+      },
+      "text": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text-muted"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-radius"
+        }
+      },
+      "padding": {
+        "$value": "32px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-action-gap"
+        }
+      },
+      "focus-ring-color": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "the page ring is ink in light mode, which disappears on this ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-focus-ring-color"
+        }
+      },
+      "secondary-fill": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "an inverted secondary: light fill on the deep ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-fill"
+        }
+      },
+      "secondary-text": {
+        "$value": "#16231a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-text"
+        }
+      },
+      "ghost-text": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text"
+        }
+      },
+      "ghost-text-hover": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text-hover"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "2rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-leading"
+          }
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "1rem",
@@ -3631,6 +3818,22 @@
         "$description": "8px between footer buttons",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "close-size": {
+        "$value": "40px",
+        "$type": "other",
+        "$description": "the close button's square footprint — a compact 40px hit area instead of a full 48px control pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-size"
+        }
+      },
+      "close-inset": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "how far the close button is pulled into the panel padding, so its glyph sits nearer the corner than the content column does",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-inset"
         }
       },
       "width-sm": {
@@ -4335,6 +4538,333 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
+    },
+    "work-card": {
+      "fill": {
+        "$value": "#35492f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-fill"
+        }
+      },
+      "text": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text-muted"
+        }
+      },
+      "border": {
+        "$value": "rgba(236, 226, 206, 0.16)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border-width"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-padding"
+        }
+      },
+      "gap": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-gap"
+        }
+      },
+      "shadow-hover": {
+        "$value": "3px 3px 0px 0px #ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-shadow-hover"
+        }
+      },
+      "transform-hover": {
+        "$value": "translate(-2px, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transform-hover"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-easing"
+        }
+      },
+      "media-fill": {
+        "$value": "#2a3b2d",
+        "$type": "other",
+        "$description": "what shows before an image loads, or when there is none",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-fill"
+        }
+      },
+      "media-inset": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "how far the tag and index sit from the media edges",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-inset"
+        }
+      },
+      "tag": {
+        "fill": {
+          "$value": "#35492f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-fill"
+          }
+        },
+        "text": {
+          "$value": "#ece2ce",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-text"
+          }
+        },
+        "border": {
+          "$value": "rgba(236, 226, 206, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border-width"
+          }
+        },
+        "radius": {
+          "$value": "12px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-radius"
+          }
+        },
+        "padding-horizontal": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-horizontal"
+          }
+        },
+        "padding-vertical": {
+          "$value": "4px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-vertical"
+          }
+        },
+        "gap": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-gap"
+          }
+        },
+        "dot-size": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-size"
+          }
+        },
+        "dot-purple": {
+          "$value": "#d98fab",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-purple"
+          }
+        },
+        "dot-teal": {
+          "$value": "#9cc088",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-teal"
+          }
+        },
+        "dot-orange": {
+          "$value": "#dba679",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-orange"
+          }
+        },
+        "dot-pink": {
+          "$value": "#e9c766",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-pink"
+          }
+        },
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-weight"
+          }
+        }
+      },
+      "index": {
+        "color": {
+          "$value": "#9aa88f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-tracking"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1.25rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-leading"
+          }
+        }
+      },
+      "meta": {
+        "color": {
+          "$value": "#9aa88f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-tracking"
           }
         }
       }
@@ -5897,6 +6427,14 @@
           "com.confetti.cssVariable": "--size-control"
         }
       },
+      "control-compact": {
+        "$value": "40px",
+        "$type": "dimension",
+        "$description": "40px — a compact control, for secondary affordances such as a dialog's close button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--size-control-compact"
+        }
+      },
       "dialog": {
         "sm": {
           "$value": "420px",
@@ -6487,6 +7025,14 @@
           "com.confetti.cssVariable": "--surface-code"
         }
       },
+      "deep": {
+        "$value": "#16231a",
+        "$type": "other",
+        "$description": "a deep ground that stays deep in BOTH modes — a dark panel on a light page. Wired to the theme's syntax surface, which is already that: an inset dark ground per theme. Split into its own brand-kit input if a theme ever needs the panel and the code block to differ.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--surface-deep"
+        }
+      },
       "page": {
         "$value": "#e6dcc4",
         "$type": "other",
@@ -6552,6 +7098,22 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-on-code-muted"
+        }
+      },
+      "on-deep": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep"
+        }
+      },
+      "on-deep-muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$description": "secondary text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep-muted"
         }
       },
       "default": {
@@ -7855,6 +8417,161 @@
         }
       }
     },
+    "dark-panel": {
+      "fill": {
+        "$value": "#16231a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-fill"
+        }
+      },
+      "text": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text-muted"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-radius"
+        }
+      },
+      "padding": {
+        "$value": "32px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-action-gap"
+        }
+      },
+      "focus-ring-color": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "the page ring is ink in light mode, which disappears on this ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-focus-ring-color"
+        }
+      },
+      "secondary-fill": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "an inverted secondary: light fill on the deep ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-fill"
+        }
+      },
+      "secondary-text": {
+        "$value": "#16231a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-text"
+        }
+      },
+      "ghost-text": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text"
+        }
+      },
+      "ghost-text-hover": {
+        "$value": "#9aa88f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text-hover"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "2rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-leading"
+          }
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "1rem",
@@ -7971,6 +8688,22 @@
         "$description": "8px between footer buttons",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "close-size": {
+        "$value": "40px",
+        "$type": "other",
+        "$description": "the close button's square footprint — a compact 40px hit area instead of a full 48px control pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-size"
+        }
+      },
+      "close-inset": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "how far the close button is pulled into the panel padding, so its glyph sits nearer the corner than the content column does",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-inset"
         }
       },
       "width-sm": {
@@ -8675,6 +9408,333 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
+    },
+    "work-card": {
+      "fill": {
+        "$value": "#fbf7ee",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-fill"
+        }
+      },
+      "text": {
+        "$value": "#33301f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#6b6146",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text-muted"
+        }
+      },
+      "border": {
+        "$value": "rgba(51, 48, 31, 0.12)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border-width"
+        }
+      },
+      "radius": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-padding"
+        }
+      },
+      "gap": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-gap"
+        }
+      },
+      "shadow-hover": {
+        "$value": "3px 3px 0px 0px #33301f",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-shadow-hover"
+        }
+      },
+      "transform-hover": {
+        "$value": "translate(-2px, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transform-hover"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-easing"
+        }
+      },
+      "media-fill": {
+        "$value": "#ece2ce",
+        "$type": "other",
+        "$description": "what shows before an image loads, or when there is none",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-fill"
+        }
+      },
+      "media-inset": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "how far the tag and index sit from the media edges",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-inset"
+        }
+      },
+      "tag": {
+        "fill": {
+          "$value": "#fbf7ee",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-fill"
+          }
+        },
+        "text": {
+          "$value": "#33301f",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-text"
+          }
+        },
+        "border": {
+          "$value": "rgba(51, 48, 31, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border-width"
+          }
+        },
+        "radius": {
+          "$value": "12px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-radius"
+          }
+        },
+        "padding-horizontal": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-horizontal"
+          }
+        },
+        "padding-vertical": {
+          "$value": "4px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-vertical"
+          }
+        },
+        "gap": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-gap"
+          }
+        },
+        "dot-size": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-size"
+          }
+        },
+        "dot-purple": {
+          "$value": "#d98fab",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-purple"
+          }
+        },
+        "dot-teal": {
+          "$value": "#9cc088",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-teal"
+          }
+        },
+        "dot-orange": {
+          "$value": "#dba679",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-orange"
+          }
+        },
+        "dot-pink": {
+          "$value": "#e9c766",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-pink"
+          }
+        },
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-weight"
+          }
+        }
+      },
+      "index": {
+        "color": {
+          "$value": "#6b6146",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-tracking"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1.25rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-leading"
+          }
+        }
+      },
+      "meta": {
+        "color": {
+          "$value": "#6b6146",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-tracking"
           }
         }
       }
@@ -10235,6 +11295,14 @@
           "com.confetti.cssVariable": "--size-control"
         }
       },
+      "control-compact": {
+        "$value": "40px",
+        "$type": "dimension",
+        "$description": "40px — a compact control, for secondary affordances such as a dialog's close button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--size-control-compact"
+        }
+      },
       "dialog": {
         "sm": {
           "$value": "420px",
@@ -10825,6 +11893,14 @@
           "com.confetti.cssVariable": "--surface-code"
         }
       },
+      "deep": {
+        "$value": "#1c1b19",
+        "$type": "other",
+        "$description": "a deep ground that stays deep in BOTH modes — a dark panel on a light page. Wired to the theme's syntax surface, which is already that: an inset dark ground per theme. Split into its own brand-kit input if a theme ever needs the panel and the code block to differ.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--surface-deep"
+        }
+      },
       "page": {
         "$value": "#101012",
         "$type": "other",
@@ -10890,6 +11966,22 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-on-code-muted"
+        }
+      },
+      "on-deep": {
+        "$value": "#f5f4f1",
+        "$type": "other",
+        "$description": "text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep"
+        }
+      },
+      "on-deep-muted": {
+        "$value": "#cfccc5",
+        "$type": "other",
+        "$description": "secondary text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep-muted"
         }
       },
       "default": {
@@ -12201,6 +13293,161 @@
         }
       }
     },
+    "dark-panel": {
+      "fill": {
+        "$value": "#1c1b19",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-fill"
+        }
+      },
+      "text": {
+        "$value": "#f5f4f1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#cfccc5",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text-muted"
+        }
+      },
+      "radius": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-radius"
+        }
+      },
+      "padding": {
+        "$value": "32px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-action-gap"
+        }
+      },
+      "focus-ring-color": {
+        "$value": "#f5f4f1",
+        "$type": "other",
+        "$description": "the page ring is ink in light mode, which disappears on this ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-focus-ring-color"
+        }
+      },
+      "secondary-fill": {
+        "$value": "#f5f4f1",
+        "$type": "other",
+        "$description": "an inverted secondary: light fill on the deep ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-fill"
+        }
+      },
+      "secondary-text": {
+        "$value": "#1c1b19",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-text"
+        }
+      },
+      "ghost-text": {
+        "$value": "#f5f4f1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text"
+        }
+      },
+      "ghost-text-hover": {
+        "$value": "#cfccc5",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text-hover"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "2rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "400",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-leading"
+          }
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "1rem",
@@ -12317,6 +13564,22 @@
         "$description": "8px between footer buttons",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "close-size": {
+        "$value": "40px",
+        "$type": "other",
+        "$description": "the close button's square footprint — a compact 40px hit area instead of a full 48px control pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-size"
+        }
+      },
+      "close-inset": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "how far the close button is pulled into the panel padding, so its glyph sits nearer the corner than the content column does",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-inset"
         }
       },
       "width-sm": {
@@ -13021,6 +14284,333 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
+    },
+    "work-card": {
+      "fill": {
+        "$value": "#3b3b42",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-fill"
+        }
+      },
+      "text": {
+        "$value": "#e8ecf0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#a8b2bc",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text-muted"
+        }
+      },
+      "border": {
+        "$value": "rgba(232, 236, 240, 0.16)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border"
+        }
+      },
+      "border-width": {
+        "$value": "1px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border-width"
+        }
+      },
+      "radius": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-padding"
+        }
+      },
+      "gap": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-gap"
+        }
+      },
+      "shadow-hover": {
+        "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-shadow-hover"
+        }
+      },
+      "transform-hover": {
+        "$value": "translate(0, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transform-hover"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-easing"
+        }
+      },
+      "media-fill": {
+        "$value": "#29292e",
+        "$type": "other",
+        "$description": "what shows before an image loads, or when there is none",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-fill"
+        }
+      },
+      "media-inset": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "how far the tag and index sit from the media edges",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-inset"
+        }
+      },
+      "tag": {
+        "fill": {
+          "$value": "#3b3b42",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-fill"
+          }
+        },
+        "text": {
+          "$value": "#e8ecf0",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-text"
+          }
+        },
+        "border": {
+          "$value": "rgba(232, 236, 240, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border-width"
+          }
+        },
+        "radius": {
+          "$value": "999px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-radius"
+          }
+        },
+        "padding-horizontal": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-horizontal"
+          }
+        },
+        "padding-vertical": {
+          "$value": "4px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-vertical"
+          }
+        },
+        "gap": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-gap"
+          }
+        },
+        "dot-size": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-size"
+          }
+        },
+        "dot-purple": {
+          "$value": "#c9a4f5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-purple"
+          }
+        },
+        "dot-teal": {
+          "$value": "#7ce0cd",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-teal"
+          }
+        },
+        "dot-orange": {
+          "$value": "#f7bf6a",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-orange"
+          }
+        },
+        "dot-pink": {
+          "$value": "#f7a6c6",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-pink"
+          }
+        },
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-weight"
+          }
+        }
+      },
+      "index": {
+        "color": {
+          "$value": "#a8b2bc",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-tracking"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1.25rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "400",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-leading"
+          }
+        }
+      },
+      "meta": {
+        "color": {
+          "$value": "#a8b2bc",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-tracking"
           }
         }
       }
@@ -14581,6 +16171,14 @@
           "com.confetti.cssVariable": "--size-control"
         }
       },
+      "control-compact": {
+        "$value": "40px",
+        "$type": "dimension",
+        "$description": "40px — a compact control, for secondary affordances such as a dialog's close button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--size-control-compact"
+        }
+      },
       "dialog": {
         "sm": {
           "$value": "420px",
@@ -15171,6 +16769,14 @@
           "com.confetti.cssVariable": "--surface-code"
         }
       },
+      "deep": {
+        "$value": "#1c1b19",
+        "$type": "other",
+        "$description": "a deep ground that stays deep in BOTH modes — a dark panel on a light page. Wired to the theme's syntax surface, which is already that: an inset dark ground per theme. Split into its own brand-kit input if a theme ever needs the panel and the code block to differ.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--surface-deep"
+        }
+      },
       "page": {
         "$value": "#f5f4f1",
         "$type": "other",
@@ -15236,6 +16842,22 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-on-code-muted"
+        }
+      },
+      "on-deep": {
+        "$value": "#f5f4f1",
+        "$type": "other",
+        "$description": "text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep"
+        }
+      },
+      "on-deep-muted": {
+        "$value": "#cfccc5",
+        "$type": "other",
+        "$description": "secondary text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep-muted"
         }
       },
       "default": {
@@ -16547,6 +18169,161 @@
         }
       }
     },
+    "dark-panel": {
+      "fill": {
+        "$value": "#1c1b19",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-fill"
+        }
+      },
+      "text": {
+        "$value": "#f5f4f1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#cfccc5",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text-muted"
+        }
+      },
+      "radius": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-radius"
+        }
+      },
+      "padding": {
+        "$value": "32px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-action-gap"
+        }
+      },
+      "focus-ring-color": {
+        "$value": "#f5f4f1",
+        "$type": "other",
+        "$description": "the page ring is ink in light mode, which disappears on this ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-focus-ring-color"
+        }
+      },
+      "secondary-fill": {
+        "$value": "#f5f4f1",
+        "$type": "other",
+        "$description": "an inverted secondary: light fill on the deep ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-fill"
+        }
+      },
+      "secondary-text": {
+        "$value": "#1c1b19",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-text"
+        }
+      },
+      "ghost-text": {
+        "$value": "#f5f4f1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text"
+        }
+      },
+      "ghost-text-hover": {
+        "$value": "#cfccc5",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text-hover"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "2rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "400",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-leading"
+          }
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "1rem",
@@ -16663,6 +18440,22 @@
         "$description": "8px between footer buttons",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "close-size": {
+        "$value": "40px",
+        "$type": "other",
+        "$description": "the close button's square footprint — a compact 40px hit area instead of a full 48px control pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-size"
+        }
+      },
+      "close-inset": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "how far the close button is pulled into the panel padding, so its glyph sits nearer the corner than the content column does",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-inset"
         }
       },
       "width-sm": {
@@ -17367,6 +19160,333 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
+    },
+    "work-card": {
+      "fill": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-fill"
+        }
+      },
+      "text": {
+        "$value": "#1c1b19",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#6b6861",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text-muted"
+        }
+      },
+      "border": {
+        "$value": "rgba(28, 27, 25, 0.12)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border"
+        }
+      },
+      "border-width": {
+        "$value": "1px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border-width"
+        }
+      },
+      "radius": {
+        "$value": "20px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-padding"
+        }
+      },
+      "gap": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-gap"
+        }
+      },
+      "shadow-hover": {
+        "$value": "0 2px 4px 0 rgba(28, 27, 25, 0.04), 0 16px 40px -8px rgba(28, 27, 25, 0.16)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-shadow-hover"
+        }
+      },
+      "transform-hover": {
+        "$value": "translate(0, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transform-hover"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-easing"
+        }
+      },
+      "media-fill": {
+        "$value": "#ecebe7",
+        "$type": "other",
+        "$description": "what shows before an image loads, or when there is none",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-fill"
+        }
+      },
+      "media-inset": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "how far the tag and index sit from the media edges",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-inset"
+        }
+      },
+      "tag": {
+        "fill": {
+          "$value": "#ffffff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-fill"
+          }
+        },
+        "text": {
+          "$value": "#1c1b19",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-text"
+          }
+        },
+        "border": {
+          "$value": "rgba(28, 27, 25, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border-width"
+          }
+        },
+        "radius": {
+          "$value": "999px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-radius"
+          }
+        },
+        "padding-horizontal": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-horizontal"
+          }
+        },
+        "padding-vertical": {
+          "$value": "4px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-vertical"
+          }
+        },
+        "gap": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-gap"
+          }
+        },
+        "dot-size": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-size"
+          }
+        },
+        "dot-purple": {
+          "$value": "#c6adda",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-purple"
+          }
+        },
+        "dot-teal": {
+          "$value": "#a8d6cb",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-teal"
+          }
+        },
+        "dot-orange": {
+          "$value": "#f0c07a",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-orange"
+          }
+        },
+        "dot-pink": {
+          "$value": "#e8b8cd",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-pink"
+          }
+        },
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-weight"
+          }
+        }
+      },
+      "index": {
+        "color": {
+          "$value": "#6b6861",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-tracking"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1.25rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "400",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-leading"
+          }
+        }
+      },
+      "meta": {
+        "color": {
+          "$value": "#6b6861",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-tracking"
           }
         }
       }
@@ -18929,6 +21049,14 @@
           "com.confetti.cssVariable": "--size-control"
         }
       },
+      "control-compact": {
+        "$value": "40px",
+        "$type": "dimension",
+        "$description": "40px — a compact control, for secondary affordances such as a dialog's close button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--size-control-compact"
+        }
+      },
       "dialog": {
         "sm": {
           "$value": "420px",
@@ -19519,6 +21647,14 @@
           "com.confetti.cssVariable": "--surface-code"
         }
       },
+      "deep": {
+        "$value": "#0d0221",
+        "$type": "other",
+        "$description": "a deep ground that stays deep in BOTH modes — a dark panel on a light page. Wired to the theme's syntax surface, which is already that: an inset dark ground per theme. Split into its own brand-kit input if a theme ever needs the panel and the code block to differ.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--surface-deep"
+        }
+      },
       "page": {
         "$value": "#0d0221",
         "$type": "other",
@@ -19584,6 +21720,22 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-on-code-muted"
+        }
+      },
+      "on-deep": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$description": "text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep"
+        }
+      },
+      "on-deep-muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$description": "secondary text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep-muted"
         }
       },
       "default": {
@@ -20888,6 +23040,161 @@
         }
       }
     },
+    "dark-panel": {
+      "fill": {
+        "$value": "#0d0221",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-fill"
+        }
+      },
+      "text": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text-muted"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-radius"
+        }
+      },
+      "padding": {
+        "$value": "32px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-action-gap"
+        }
+      },
+      "focus-ring-color": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$description": "the page ring is ink in light mode, which disappears on this ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-focus-ring-color"
+        }
+      },
+      "secondary-fill": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$description": "an inverted secondary: light fill on the deep ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-fill"
+        }
+      },
+      "secondary-text": {
+        "$value": "#0d0221",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-text"
+        }
+      },
+      "ghost-text": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text"
+        }
+      },
+      "ghost-text-hover": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text-hover"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "2rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-leading"
+          }
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "1rem",
@@ -21004,6 +23311,22 @@
         "$description": "8px between footer buttons",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "close-size": {
+        "$value": "40px",
+        "$type": "other",
+        "$description": "the close button's square footprint — a compact 40px hit area instead of a full 48px control pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-size"
+        }
+      },
+      "close-inset": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "how far the close button is pulled into the panel padding, so its glyph sits nearer the corner than the content column does",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-inset"
         }
       },
       "width-sm": {
@@ -21708,6 +24031,333 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
+    },
+    "work-card": {
+      "fill": {
+        "$value": "#2e1650",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-fill"
+        }
+      },
+      "text": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text-muted"
+        }
+      },
+      "border": {
+        "$value": "rgba(237, 224, 255, 0.16)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border-width"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-padding"
+        }
+      },
+      "gap": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-gap"
+        }
+      },
+      "shadow-hover": {
+        "$value": "3px 3px 0px 0px #ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-shadow-hover"
+        }
+      },
+      "transform-hover": {
+        "$value": "translate(-2px, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transform-hover"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-easing"
+        }
+      },
+      "media-fill": {
+        "$value": "#23113f",
+        "$type": "other",
+        "$description": "what shows before an image loads, or when there is none",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-fill"
+        }
+      },
+      "media-inset": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "how far the tag and index sit from the media edges",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-inset"
+        }
+      },
+      "tag": {
+        "fill": {
+          "$value": "#2e1650",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-fill"
+          }
+        },
+        "text": {
+          "$value": "#ede0ff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-text"
+          }
+        },
+        "border": {
+          "$value": "rgba(237, 224, 255, 0.16)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border-width"
+          }
+        },
+        "radius": {
+          "$value": "0",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-radius"
+          }
+        },
+        "padding-horizontal": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-horizontal"
+          }
+        },
+        "padding-vertical": {
+          "$value": "4px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-vertical"
+          }
+        },
+        "gap": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-gap"
+          }
+        },
+        "dot-size": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-size"
+          }
+        },
+        "dot-purple": {
+          "$value": "#b26bff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-purple"
+          }
+        },
+        "dot-teal": {
+          "$value": "#00e5ff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-teal"
+          }
+        },
+        "dot-orange": {
+          "$value": "#aaff00",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-orange"
+          }
+        },
+        "dot-pink": {
+          "$value": "#ff2d95",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-pink"
+          }
+        },
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-weight"
+          }
+        }
+      },
+      "index": {
+        "color": {
+          "$value": "#a98fc9",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-tracking"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1.25rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-leading"
+          }
+        }
+      },
+      "meta": {
+        "color": {
+          "$value": "#a98fc9",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-tracking"
           }
         }
       }
@@ -23270,6 +25920,14 @@
           "com.confetti.cssVariable": "--size-control"
         }
       },
+      "control-compact": {
+        "$value": "40px",
+        "$type": "dimension",
+        "$description": "40px — a compact control, for secondary affordances such as a dialog's close button",
+        "$extensions": {
+          "com.confetti.cssVariable": "--size-control-compact"
+        }
+      },
       "dialog": {
         "sm": {
           "$value": "420px",
@@ -23860,6 +26518,14 @@
           "com.confetti.cssVariable": "--surface-code"
         }
       },
+      "deep": {
+        "$value": "#0d0221",
+        "$type": "other",
+        "$description": "a deep ground that stays deep in BOTH modes — a dark panel on a light page. Wired to the theme's syntax surface, which is already that: an inset dark ground per theme. Split into its own brand-kit input if a theme ever needs the panel and the code block to differ.",
+        "$extensions": {
+          "com.confetti.cssVariable": "--surface-deep"
+        }
+      },
       "page": {
         "$value": "#ede0ff",
         "$type": "other",
@@ -23925,6 +26591,22 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-on-code-muted"
+        }
+      },
+      "on-deep": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$description": "text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep"
+        }
+      },
+      "on-deep-muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$description": "secondary text on surface.deep",
+        "$extensions": {
+          "com.confetti.cssVariable": "--text-on-deep-muted"
         }
       },
       "default": {
@@ -25229,6 +27911,161 @@
         }
       }
     },
+    "dark-panel": {
+      "fill": {
+        "$value": "#0d0221",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-fill"
+        }
+      },
+      "text": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-text-muted"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-radius"
+        }
+      },
+      "padding": {
+        "$value": "32px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-padding"
+        }
+      },
+      "gap": {
+        "$value": "16px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-gap"
+        }
+      },
+      "action-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-action-gap"
+        }
+      },
+      "focus-ring-color": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$description": "the page ring is ink in light mode, which disappears on this ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-focus-ring-color"
+        }
+      },
+      "secondary-fill": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$description": "an inverted secondary: light fill on the deep ground",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-fill"
+        }
+      },
+      "secondary-text": {
+        "$value": "#0d0221",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-secondary-text"
+        }
+      },
+      "ghost-text": {
+        "$value": "#ede0ff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text"
+        }
+      },
+      "ghost-text-hover": {
+        "$value": "#a98fc9",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--dark-panel-ghost-text-hover"
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "2rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-title-leading"
+          }
+        }
+      },
+      "body": {
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-font-weight"
+          }
+        },
+        "leading": {
+          "$value": "1.5",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--dark-panel-body-leading"
+          }
+        }
+      }
+    },
     "icon": {
       "size-sm": {
         "$value": "1rem",
@@ -25345,6 +28182,22 @@
         "$description": "8px between footer buttons",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-action-gap"
+        }
+      },
+      "close-size": {
+        "$value": "40px",
+        "$type": "other",
+        "$description": "the close button's square footprint — a compact 40px hit area instead of a full 48px control pill",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-size"
+        }
+      },
+      "close-inset": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "how far the close button is pulled into the panel padding, so its glyph sits nearer the corner than the content column does",
+        "$extensions": {
+          "com.confetti.cssVariable": "--modal-close-inset"
         }
       },
       "width-sm": {
@@ -26049,6 +28902,333 @@
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-leading"
+          }
+        }
+      }
+    },
+    "work-card": {
+      "fill": {
+        "$value": "#ffffff",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-fill"
+        }
+      },
+      "text": {
+        "$value": "#1a0430",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text"
+        }
+      },
+      "text-muted": {
+        "$value": "#5b3d7a",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-text-muted"
+        }
+      },
+      "border": {
+        "$value": "rgba(26, 4, 48, 0.12)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border"
+        }
+      },
+      "border-width": {
+        "$value": "2px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-border-width"
+        }
+      },
+      "radius": {
+        "$value": "0",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-radius"
+        }
+      },
+      "padding": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-padding"
+        }
+      },
+      "gap": {
+        "$value": "12px",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-gap"
+        }
+      },
+      "shadow-hover": {
+        "$value": "3px 3px 0px 0px #1a0430",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-shadow-hover"
+        }
+      },
+      "transform-hover": {
+        "$value": "translate(-2px, -2px)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transform-hover"
+        }
+      },
+      "transition-duration": {
+        "$value": "180ms",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-duration"
+        }
+      },
+      "transition-easing": {
+        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-transition-easing"
+        }
+      },
+      "media-fill": {
+        "$value": "#f2e9ff",
+        "$type": "other",
+        "$description": "what shows before an image loads, or when there is none",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-fill"
+        }
+      },
+      "media-inset": {
+        "$value": "12px",
+        "$type": "other",
+        "$description": "how far the tag and index sit from the media edges",
+        "$extensions": {
+          "com.confetti.cssVariable": "--work-card-media-inset"
+        }
+      },
+      "tag": {
+        "fill": {
+          "$value": "#ffffff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-fill"
+          }
+        },
+        "text": {
+          "$value": "#1a0430",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-text"
+          }
+        },
+        "border": {
+          "$value": "rgba(26, 4, 48, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border"
+          }
+        },
+        "border-width": {
+          "$value": "1px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-border-width"
+          }
+        },
+        "radius": {
+          "$value": "0",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-radius"
+          }
+        },
+        "padding-horizontal": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-horizontal"
+          }
+        },
+        "padding-vertical": {
+          "$value": "4px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-padding-vertical"
+          }
+        },
+        "gap": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-gap"
+          }
+        },
+        "dot-size": {
+          "$value": "8px",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-size"
+          }
+        },
+        "dot-purple": {
+          "$value": "#b26bff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-purple"
+          }
+        },
+        "dot-teal": {
+          "$value": "#00e5ff",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-teal"
+          }
+        },
+        "dot-orange": {
+          "$value": "#aaff00",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-orange"
+          }
+        },
+        "dot-pink": {
+          "$value": "#ff2d95",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-dot-pink"
+          }
+        },
+        "font-family": {
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "500",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-tag-font-weight"
+          }
+        }
+      },
+      "index": {
+        "color": {
+          "$value": "#5b3d7a",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-index-tracking"
+          }
+        }
+      },
+      "title": {
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "1.25rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "600",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "-0.03em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-tracking"
+          }
+        },
+        "leading": {
+          "$value": "1.3",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-title-leading"
+          }
+        }
+      },
+      "meta": {
+        "color": {
+          "$value": "#5b3d7a",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-color"
+          }
+        },
+        "font-family": {
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-family"
+          }
+        },
+        "font-size": {
+          "$value": "0.75rem",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-size"
+          }
+        },
+        "font-weight": {
+          "$value": "700",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-font-weight"
+          }
+        },
+        "tracking": {
+          "$value": "0.16em",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--work-card-meta-tracking"
           }
         }
       }

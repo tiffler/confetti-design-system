@@ -1,0 +1,150 @@
+{
+  "work-card": {
+    "$comment": "Work card — an image-first project card: a framed media area carrying a category tag and an index number, with the title and date underneath. It is a Card-weight surface (same fill, hairline border, container radius, lift on hover) but deliberately NOT a Card variant: Card is text-first (eyebrow, title, body) and this is media-first, so folding one into the other would mean every Card prop is conditional on which it is. The media radius is derived in CSS as container radius minus padding, so the frame stays concentric in any theme without a token of its own.",
+    "fill": {
+      "value": "{surface.card}"
+    },
+    "text": {
+      "value": "{text.default}"
+    },
+    "text-muted": {
+      "value": "{text.muted}"
+    },
+    "border": {
+      "value": "{borders.stroke-color.subtle}"
+    },
+    "border-width": {
+      "value": "{borders.stroke-weight.default}"
+    },
+    "radius": {
+      "value": "{borders.radius.container}"
+    },
+    "padding": {
+      "value": "{space.inset-sm}"
+    },
+    "gap": {
+      "value": "{space.inset-sm}"
+    },
+    "shadow-hover": {
+      "value": "{elevation.lift}"
+    },
+    "transform-hover": {
+      "value": "{motion.transform.lift}"
+    },
+    "transition-duration": {
+      "value": "{motion.duration.interaction}"
+    },
+    "transition-easing": {
+      "value": "{motion.easing.interaction}"
+    },
+    "media-fill": {
+      "value": "{surface.panel}",
+      "comment": "what shows before an image loads, or when there is none"
+    },
+    "media-inset": {
+      "value": "{space.inset-sm}",
+      "comment": "how far the tag and index sit from the media edges"
+    },
+    "tag": {
+      "fill": {
+        "value": "{surface.card}"
+      },
+      "text": {
+        "value": "{text.default}"
+      },
+      "border": {
+        "value": "{borders.stroke-color.subtle}"
+      },
+      "border-width": {
+        "value": "{borders.stroke-weight.thin}"
+      },
+      "radius": {
+        "value": "{borders.radius.control}"
+      },
+      "padding-horizontal": {
+        "value": "{space.inset-tight}"
+      },
+      "padding-vertical": {
+        "value": "{space.inset-xs}"
+      },
+      "gap": {
+        "value": "{space.inline}"
+      },
+      "dot-size": {
+        "value": "{space.inset-tight}"
+      },
+      "dot-purple": {
+        "value": "{accent.purple.bold}"
+      },
+      "dot-teal": {
+        "value": "{accent.teal.bold}"
+      },
+      "dot-orange": {
+        "value": "{accent.orange.bold}"
+      },
+      "dot-pink": {
+        "value": "{accent.pink.bold}"
+      },
+      "font-family": {
+        "value": "{font.family.body}"
+      },
+      "font-size": {
+        "value": "{font.size.label}"
+      },
+      "font-weight": {
+        "value": "{font.weight.body}"
+      }
+    },
+    "index": {
+      "color": {
+        "value": "{text.muted}"
+      },
+      "font-family": {
+        "value": "{font.family.label}"
+      },
+      "font-size": {
+        "value": "{font.size.label}"
+      },
+      "font-weight": {
+        "value": "{font.weight.label}"
+      },
+      "tracking": {
+        "value": "{font.tracking.label}"
+      }
+    },
+    "title": {
+      "font-family": {
+        "value": "{font.family.display}"
+      },
+      "font-size": {
+        "value": "{font.size.h5}"
+      },
+      "font-weight": {
+        "value": "{font.weight.display}"
+      },
+      "tracking": {
+        "value": "{font.tracking.display}"
+      },
+      "leading": {
+        "value": "{font.leading.heading}"
+      }
+    },
+    "meta": {
+      "color": {
+        "value": "{text.muted}"
+      },
+      "font-family": {
+        "value": "{font.family.label}"
+      },
+      "font-size": {
+        "value": "{font.size.label}"
+      },
+      "font-weight": {
+        "value": "{font.weight.label}"
+      },
+      "tracking": {
+        "value": "{font.tracking.label}"
+      }
+    }
+  }
+}

@@ -116,6 +116,12 @@ React, one `.tsx` + `.css` + `.stories.tsx` triple each, consuming component tok
   in a theme whose brand is not — and hazard-stripes it with a deepened step of that red.
 - **Card** — eyebrow · title · body; tilts on hover by a deterministic hash of its seed (no
   `Math.random()`, so visual snapshots stay stable).
+- **WorkCard** — an image-first project card: a framed media area with a category tag and an
+  index number over it, then a title and date. Deliberately not a Card variant (Card is
+  text-first). Renders a link with a hover lift when given an `href`.
+- **DarkPanel** — a deep call-to-action block that stays dark in both modes (`surface.deep`).
+  It repoints the secondary and ghost Button variants and the focus ring, so every Button
+  variant reads on it.
 - **Badge** — four accent hues plus `success` and `neutral`, in `bold` and `subtle` tones.
   The source of truth for the pill palette, which Tabs reuses. `success` and `neutral` are
   states rather than categories, so both carry their own foregrounds instead of the shared
@@ -206,13 +212,13 @@ Confetti/
 │  ├─ modes/                  light / dark base neutrals
 │  ├─ themes/                 brand-kit inputs — confetti · adventure · neon
 │  ├─ overrides/              per-theme-per-mode neutrals + a11y lifts
-│  └─ component/portfolio/    button · card · badge · tabs · overlay · modal · toast · switch · slider · icon
+│  └─ component/portfolio/    button · card · work-card · dark-panel · badge · tabs · overlay · modal · toast · switch · slider · icon
 ├─ style-dictionary/          build.js · audit-layers.js · validate-schema.js
 ├─ build/portfolio/           GENERATED, committed — tokens.css/json/dtcg + tailwind
 ├─ docs/ARCHITECTURE.md       this file
 ├─ public/fonts/              self-hosted Fredoka + JetBrains Mono
 └─ src/
-   ├─ components/             Button · Card · Badge · Tabs · Overlay · Modal · Toast · Switch · Slider · Icon
+   ├─ components/             Button · Card · WorkCard · DarkPanel · Badge · Tabs · Overlay · Modal · Toast · Switch · Slider · Icon
    ├─ foundations/            Storybook docs + live token specimens
    ├─ theme/ThemeProvider.tsx
    └─ Cover.stories.tsx       the Storybook landing page

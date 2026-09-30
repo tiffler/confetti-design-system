@@ -1,0 +1,143 @@
+/* Consumes component tokens only — no hardcoded colors, sizes, or primitives. */
+
+.cf-work-card {
+  --cf-work-card-ratio: 4 / 3;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--work-card-gap);
+  box-sizing: border-box;
+
+  padding: var(--work-card-padding);
+  background: var(--work-card-fill);
+  color: var(--work-card-text);
+  border: var(--work-card-border-width) solid var(--work-card-border);
+  border-radius: var(--work-card-radius);
+  text-decoration: none;
+
+  transition:
+    transform var(--work-card-transition-duration) var(--work-card-transition-easing),
+    box-shadow var(--work-card-transition-duration) var(--work-card-transition-easing);
+}
+
+.cf-work-card--interactive {
+  cursor: pointer;
+}
+
+/* `data-force="hover"` pins the state for a control or a snapshot — see Button.css. */
+.cf-work-card--interactive:hover,
+.cf-work-card--interactive[data-force~='hover'] {
+  transform: var(--work-card-transform-hover);
+  box-shadow: var(--work-card-shadow-hover);
+}
+
+/* The frame. Its radius is the card's minus the card's padding, so the two curves stay
+   concentric in whatever radius a theme sets. Never below zero. */
+.cf-work-card__media {
+  position: relative;
+  aspect-ratio: var(--cf-work-card-ratio);
+  overflow: hidden;
+  background: var(--work-card-media-fill);
+  border-radius: max(0px, calc(var(--work-card-radius) - var(--work-card-padding)));
+}
+
+.cf-work-card__media > :is(img, video) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tag left, index right, on one centered row so the two share a centerline. */
+.cf-work-card__overlay {
+  position: absolute;
+  inset: var(--work-card-media-inset) var(--work-card-media-inset) auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cf-work-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--work-card-tag-gap);
+  padding: var(--work-card-tag-padding-vertical) var(--work-card-tag-padding-horizontal);
+  background: var(--work-card-tag-fill);
+  color: var(--work-card-tag-text);
+  border: var(--work-card-tag-border-width) solid var(--work-card-tag-border);
+  border-radius: var(--work-card-tag-radius);
+
+  font-family: var(--work-card-tag-font-family);
+  font-size: var(--work-card-tag-font-size);
+  font-weight: var(--work-card-tag-font-weight);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.cf-work-card__dot {
+  flex: none;
+  width: var(--work-card-tag-dot-size);
+  height: var(--work-card-tag-dot-size);
+  border-radius: 50%;
+  background: var(--cf-work-card-dot);
+}
+.cf-work-card__tag--purple {
+  --cf-work-card-dot: var(--work-card-tag-dot-purple);
+}
+.cf-work-card__tag--teal {
+  --cf-work-card-dot: var(--work-card-tag-dot-teal);
+}
+.cf-work-card__tag--orange {
+  --cf-work-card-dot: var(--work-card-tag-dot-orange);
+}
+.cf-work-card__tag--pink {
+  --cf-work-card-dot: var(--work-card-tag-dot-pink);
+}
+
+.cf-work-card__index {
+  color: var(--work-card-index-color);
+  font-family: var(--work-card-index-font-family);
+  font-size: var(--work-card-index-font-size);
+  font-weight: var(--work-card-index-font-weight);
+  letter-spacing: var(--work-card-index-tracking);
+  line-height: 1;
+}
+
+.cf-work-card__footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--work-card-gap);
+  /* Line the text up with the media's inner edge rather than the card's. */
+  padding-inline: var(--work-card-media-inset);
+  padding-block-end: calc(var(--work-card-media-inset) / 2);
+}
+
+.cf-work-card__title {
+  margin: 0;
+  font-family: var(--work-card-title-font-family);
+  font-size: var(--work-card-title-font-size);
+  font-weight: var(--work-card-title-font-weight);
+  letter-spacing: var(--work-card-title-tracking);
+  line-height: var(--work-card-title-leading);
+}
+
+.cf-work-card__meta {
+  flex: none;
+  color: var(--work-card-meta-color);
+  font-family: var(--work-card-meta-font-family);
+  font-size: var(--work-card-meta-font-size);
+  font-weight: var(--work-card-meta-font-weight);
+  letter-spacing: var(--work-card-meta-tracking);
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf-work-card {
+    transition: none;
+  }
+  .cf-work-card--interactive:hover,
+  .cf-work-card--interactive[data-force~='hover'] {
+    transform: none;
+  }
+}

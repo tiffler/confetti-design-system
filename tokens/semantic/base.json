@@ -117,6 +117,10 @@
       "value": "{size.1200}",
       "comment": "48px — height of a tappable control."
     },
+    "control-compact": {
+      "value": "{size.1100}",
+      "comment": "40px — a compact control, for secondary affordances such as a dialog's close button"
+    },
     "dialog": {
       "$comment": "Max width of a modal panel. Leaf names differ from the width.* primitives they alias to avoid a flat-namespace collision.",
       "sm": {

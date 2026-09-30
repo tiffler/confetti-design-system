@@ -6,6 +6,12 @@ export type { ButtonProps, ButtonVariant } from './components/Button/Button';
 export { Card } from './components/Card/Card';
 export type { CardProps, CardSurface } from './components/Card/Card';
 
+export { WorkCard } from './components/WorkCard/WorkCard';
+export type { WorkCardProps, WorkCardTagHue } from './components/WorkCard/WorkCard';
+
+export { DarkPanel } from './components/DarkPanel/DarkPanel';
+export type { DarkPanelProps } from './components/DarkPanel/DarkPanel';
+
 export { Badge } from './components/Badge/Badge';
 export type { BadgeProps, BadgeHue, BadgeTone } from './components/Badge/Badge';
 

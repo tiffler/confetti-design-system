@@ -20,6 +20,15 @@ the token sync); additive-only, non-visual changes are **patch**.
 
 ### Added
 
+- **`WorkCard`** — an image-first project card (media frame with category tag and index number,
+  title and date beneath), as a link when given an `href`. Tokens under `work-card.*`.
+- **`DarkPanel`** — a deep call-to-action block that stays dark in light and dark mode, with
+  every Button variant legible on it. Backed by new semantic roles `surface.deep`,
+  `text.on-deep` and `text.on-deep-muted` (required by the schema; wired to each theme's
+  syntax inputs) and `dark-panel.*` tokens.
+- New semantic `size.control-compact` (40px). Fixes a layering violation in `modal.close-size`,
+  which referenced a primitive directly.
+
 - **Every component now documents every state.** `argTypes` are complete across all six —
   each prop has a typed control, a description, and its default in the props table — and
   Button, Card and Tabs gained an **All states** story.

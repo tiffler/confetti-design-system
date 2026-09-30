@@ -1,0 +1,54 @@
+/* Consumes component tokens only — no hardcoded colors, sizes, or primitives. */
+
+.cf-dark-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dark-panel-gap);
+  box-sizing: border-box;
+
+  padding: var(--dark-panel-padding);
+  background: var(--dark-panel-fill);
+  color: var(--dark-panel-text);
+  border-radius: var(--dark-panel-radius);
+
+  /* Buttons read the PAGE's ink for their secondary and ghost variants, which vanishes on
+     this ground. Repointing the button tokens here — rather than restyling `.cf-button` —
+     keeps Button ignorant of the panel: it still reads only its own tokens. */
+  --button-secondary-fill: var(--dark-panel-secondary-fill);
+  --button-secondary-text: var(--dark-panel-secondary-text);
+  --button-ghost-text: var(--dark-panel-ghost-text);
+  --button-ghost-text-hover: var(--dark-panel-ghost-text-hover);
+  --focus-ring-color: var(--dark-panel-focus-ring-color);
+}
+
+.cf-dark-panel__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dark-panel-gap);
+  min-width: 0;
+}
+
+.cf-dark-panel__title {
+  margin: 0;
+  font-family: var(--dark-panel-title-font-family);
+  font-size: var(--dark-panel-title-font-size);
+  font-weight: var(--dark-panel-title-font-weight);
+  letter-spacing: var(--dark-panel-title-tracking);
+  line-height: var(--dark-panel-title-leading);
+}
+
+.cf-dark-panel__body {
+  color: var(--dark-panel-text-muted);
+  font-family: var(--dark-panel-body-font-family);
+  font-size: var(--dark-panel-body-font-size);
+  font-weight: var(--dark-panel-body-font-weight);
+  line-height: var(--dark-panel-body-leading);
+}
+
+.cf-dark-panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dark-panel-action-gap);
+}

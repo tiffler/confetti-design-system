@@ -22,6 +22,14 @@
     },
     "on-code-muted": {
       "value": "{syntax.muted}"
+    },
+    "on-deep": {
+      "value": "{syntax.fg}",
+      "comment": "text on surface.deep"
+    },
+    "on-deep-muted": {
+      "value": "{syntax.muted}",
+      "comment": "secondary text on surface.deep"
     }
   },
   "action": {
@@ -96,6 +104,10 @@
   "surface": {
     "code": {
       "value": "{syntax.surface}"
+    },
+    "deep": {
+      "value": "{syntax.surface}",
+      "comment": "a deep ground that stays deep in BOTH modes — a dark panel on a light page. Wired to the theme's syntax surface, which is already that: an inset dark ground per theme. Split into its own brand-kit input if a theme ever needs the panel and the code block to differ."
     }
   }
 }

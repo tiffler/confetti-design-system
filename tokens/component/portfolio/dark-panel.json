@@ -1,0 +1,74 @@
+{
+  "dark-panel": {
+    "$comment": "Dark panel — a deep, rounded call-to-action block that stays dark in light AND dark mode (surface.deep). Everything inside it inherits the light-on-deep pair, including Buttons: the secondary and ghost variants read the page's ink and would vanish on a deep ground, so the panel repoints them, and the focus ring, to the on-deep foreground. Primary and danger already carry their own fills and need nothing.",
+    "fill": {
+      "value": "{surface.deep}"
+    },
+    "text": {
+      "value": "{text.on-deep}"
+    },
+    "text-muted": {
+      "value": "{text.on-deep-muted}"
+    },
+    "radius": {
+      "value": "{borders.radius.container}"
+    },
+    "padding": {
+      "value": "{space.stack-lg}"
+    },
+    "gap": {
+      "value": "{space.stack}"
+    },
+    "action-gap": {
+      "value": "{space.inline}"
+    },
+    "focus-ring-color": {
+      "value": "{text.on-deep}",
+      "comment": "the page ring is ink in light mode, which disappears on this ground"
+    },
+    "secondary-fill": {
+      "value": "{text.on-deep}",
+      "comment": "an inverted secondary: light fill on the deep ground"
+    },
+    "secondary-text": {
+      "value": "{surface.deep}"
+    },
+    "ghost-text": {
+      "value": "{text.on-deep}"
+    },
+    "ghost-text-hover": {
+      "value": "{text.on-deep-muted}"
+    },
+    "title": {
+      "font-family": {
+        "value": "{font.family.display}"
+      },
+      "font-size": {
+        "value": "{font.size.h3}"
+      },
+      "font-weight": {
+        "value": "{font.weight.display}"
+      },
+      "tracking": {
+        "value": "{font.tracking.display}"
+      },
+      "leading": {
+        "value": "{font.leading.heading}"
+      }
+    },
+    "body": {
+      "font-family": {
+        "value": "{font.family.body}"
+      },
+      "font-size": {
+        "value": "{font.size.body}"
+      },
+      "font-weight": {
+        "value": "{font.weight.body}"
+      },
+      "leading": {
+        "value": "{font.leading.body}"
+      }
+    }
+  }
+}

@@ -35,7 +35,7 @@
       "comment": "8px between footer buttons"
     },
     "close-size": {
-      "value": "{size.1100}",
+      "value": "{size.control-compact}",
       "comment": "the close button's square footprint — a compact 40px hit area instead of a full 48px control pill"
     },
     "close-inset": {
