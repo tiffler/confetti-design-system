@@ -1,5 +1,5 @@
 {
-  "$comment": "Confetti DARK — the theme-specific half of the editorial-gray dark mode. The neutrals themselves live on the mode axis (tokens/modes/dark.json), because Confetti's dark IS the base dark. Two things belong here instead, because both concern the BRAND and would be wrong for another theme inheriting the mode. (1) ACCESSIBILITY EXCEPTION — brand-as-text: the brand red (#c40000) is far below AA as TEXT on the graphite surfaces, so text.accent and the ghost hover lift to red.200 (#ff8d80), the palest step, which clears AA on EVERY dark surface including `card`, the lightest one (4.96:1). red.300 (#f04b3a) is the more saturated and more brand-true red and would be preferred, but it reaches only 3.50:1 on `card` — it is usable as the accent only when `card` sits close to black, which it does not. status.danger.text needs the same lift and gets it from the mode axis, which already points at red.200, so it is not repeated here. The primary BUTTON is deliberately not overridden — its white label on the #c40000 fill is 6.27:1, so the fill stays brand-exact. (2) The four confetti hues get their own dark-mode BOLD values (the X.500 step): the light-mode bolds are pastels tuned to carry ink on cream, and on a neutral gray page they go dusty and read as washed out rather than chosen. These sit here and NOT on the mode axis because accent.* are brand-kit inputs — putting them in modes/dark.json would repaint Adventure's and Neon's accents too. Emitted under [data-theme='confetti'][data-mode='dark'] (specificity 0,2,0 — beats both the theme block and the mode block).",
+  "$comment": "Confetti DARK — the theme-specific half of the editorial-gray dark mode. The neutrals themselves live on the mode axis (tokens/modes/dark.json), because Confetti's dark IS the base dark. Two things belong here instead, because both concern the BRAND and would be wrong for another theme inheriting the mode. (1) ACCESSIBILITY EXCEPTION — brand-as-text: the brand red (#c40000) is far below AA as TEXT on the graphite surfaces, so text.accent and the ghost hover lift to red.200 (#ff8d80), the palest step, which clears AA on EVERY dark surface including `card`, the lightest one (4.96:1). red.300 (#f04b3a) is the more saturated and more brand-true red and would be preferred, but it reaches only 3.50:1 on `card` — it is usable as the accent only when `card` sits close to black, which it does not. status.danger.text needs the same lift and gets it from the mode axis, which already points at red.200, so it is not repeated here. The primary BUTTON is deliberately not overridden — its white label on the #c40000 fill is 6.27:1, so the fill stays brand-exact. (2) The four confetti hues get their own dark-mode BOLD values (the X.500 step): the light-mode bolds are pastels tuned to carry ink on cream, and on a neutral gray page they go dusty and read as washed out rather than chosen. These sit here and NOT on the mode axis because accent.* are brand-kit inputs — putting them in modes/dark.json would repaint Adventure's and Neon's accents too. Emitted under [data-theme='confetti'][data-mode='dark'] (specificity 0,2,0 — beats both the theme block and the mode block). TYPE: headings at regular (400) weight, and uppercase labels/controls in Fredoka at medium weight with 0.1em tracking — the same entries appear in the other mode's file.",
   "text": {
     "accent": {
       "value": "{colors.red.200}"
@@ -43,6 +43,24 @@
     "tilt": {
       "max": {
         "value": "{motion.tilt.none}"
+      }
+    }
+  },
+  "font": {
+    "weight": {
+      "display": {
+        "value": "{font.weight.regular}"
+      },
+      "control": {
+        "value": "{font.weight.medium}"
+      },
+      "label": {
+        "value": "{font.weight.medium}"
+      }
+    },
+    "tracking": {
+      "label": {
+        "value": "{font.tracking.loose}"
       }
     }
   }

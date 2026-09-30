@@ -10,6 +10,9 @@
       }
     },
     "weight": {
+      "regular": {
+        "value": "400"
+      },
       "medium": {
         "value": "500"
       },
@@ -29,6 +32,10 @@
       },
       "wide": {
         "value": "0.16em"
+      },
+      "loose": {
+        "value": "0.1em",
+        "comment": "uppercase labels and controls in a proportional face — open, but a step under wide (which suits mono)"
       }
     },
     "leading": {

@@ -71,6 +71,7 @@ export default {
     "label": "var(--font-size-label)"
   },
   "fontWeight": {
+    "regular": "var(--font-weight-regular)",
     "medium": "var(--font-weight-medium)",
     "semibold": "var(--font-weight-semibold)",
     "bold": "var(--font-weight-bold)",
@@ -83,6 +84,7 @@ export default {
     "tight": "var(--font-tracking-tight)",
     "normal": "var(--font-tracking-normal)",
     "wide": "var(--font-tracking-wide)",
+    "loose": "var(--font-tracking-loose)",
     "display": "var(--font-tracking-display)",
     "label": "var(--font-tracking-label)"
   },
