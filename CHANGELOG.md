@@ -14,10 +14,9 @@ the token sync); additive-only, non-visual changes are **patch**.
   shadows (`shadow.soft` / `lifted`, with `-deep` counterparts for dark), a 20px container
   radius (`radius.500`), a quiet 2px rise on hover (`motion.lift-soft`) and no card tilt. The brand
   red and the four accent hues are unchanged. Adventure and Neon are unaffected.
-- **Lighter Confetti typography** *(visual — consumers will see it)*. Still Fredoka, but headings
-  drop from 600 to 400, and uppercase labels and controls move from bold JetBrains Mono to Fredoka
-  500 at `0.1em` tracking (new `font.weight.regular`, `font.tracking.loose`). Adventure and Neon
-  are unaffected.
+- **Lighter Confetti headings** *(visual — consumers will see it)*. Still Fredoka, but headings
+  drop from 600 to 400 (new `font.weight.regular`). Labels and controls keep their tracked mono.
+  Adventure and Neon are unaffected.
 
 ### Added
 

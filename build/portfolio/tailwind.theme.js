@@ -84,7 +84,6 @@ export default {
     "tight": "var(--font-tracking-tight)",
     "normal": "var(--font-tracking-normal)",
     "wide": "var(--font-tracking-wide)",
-    "loose": "var(--font-tracking-loose)",
     "display": "var(--font-tracking-display)",
     "label": "var(--font-tracking-label)"
   },
