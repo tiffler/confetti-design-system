@@ -1870,21 +1870,6 @@
             "com.confetti.cssVariable": "--font-family-mono"
           }
         },
-        "instrument-serif": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
-          "$type": "fontFamily",
-          "$description": "refined display serif — one weight (400), so display weight must be regular, never a synthesized bold",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-instrument-serif"
-          }
-        },
-        "inter": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
-          "$type": "fontFamily",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-inter"
-          }
-        },
         "display": {
           "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "fontFamily",
@@ -1908,13 +1893,6 @@
         }
       },
       "weight": {
-        "regular": {
-          "$value": "400",
-          "$type": "fontWeight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-weight-regular"
-          }
-        },
         "medium": {
           "$value": "500",
           "$type": "fontWeight",
@@ -1986,22 +1964,6 @@
           "$type": "number",
           "$extensions": {
             "com.confetti.cssVariable": "--font-tracking-wide"
-          }
-        },
-        "snug": {
-          "$value": "-0.02em",
-          "$type": "number",
-          "$description": "serif display — tighter than normal, gentler than tight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-snug"
-          }
-        },
-        "loose": {
-          "$value": "0.1em",
-          "$type": "number",
-          "$description": "uppercase labels and controls — open, but a step under wide",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-loose"
           }
         },
         "display": {
@@ -6241,21 +6203,6 @@
             "com.confetti.cssVariable": "--font-family-mono"
           }
         },
-        "instrument-serif": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
-          "$type": "fontFamily",
-          "$description": "refined display serif — one weight (400), so display weight must be regular, never a synthesized bold",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-instrument-serif"
-          }
-        },
-        "inter": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
-          "$type": "fontFamily",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-inter"
-          }
-        },
         "display": {
           "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "fontFamily",
@@ -6279,13 +6226,6 @@
         }
       },
       "weight": {
-        "regular": {
-          "$value": "400",
-          "$type": "fontWeight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-weight-regular"
-          }
-        },
         "medium": {
           "$value": "500",
           "$type": "fontWeight",
@@ -6357,22 +6297,6 @@
           "$type": "number",
           "$extensions": {
             "com.confetti.cssVariable": "--font-tracking-wide"
-          }
-        },
-        "snug": {
-          "$value": "-0.02em",
-          "$type": "number",
-          "$description": "serif display — tighter than normal, gentler than tight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-snug"
-          }
-        },
-        "loose": {
-          "$value": "0.1em",
-          "$type": "number",
-          "$description": "uppercase labels and controls — open, but a step under wide",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-loose"
           }
         },
         "display": {
@@ -10610,37 +10534,22 @@
             "com.confetti.cssVariable": "--font-family-mono"
           }
         },
-        "instrument-serif": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
-          "$type": "fontFamily",
-          "$description": "refined display serif — one weight (400), so display weight must be regular, never a synthesized bold",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-instrument-serif"
-          }
-        },
-        "inter": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
-          "$type": "fontFamily",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-inter"
-          }
-        },
         "display": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "fontFamily",
           "$extensions": {
             "com.confetti.cssVariable": "--font-family-display"
           }
         },
         "body": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "fontFamily",
           "$extensions": {
             "com.confetti.cssVariable": "--font-family-body"
           }
         },
         "label": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
           "$type": "fontFamily",
           "$extensions": {
             "com.confetti.cssVariable": "--font-family-label"
@@ -10648,13 +10557,6 @@
         }
       },
       "weight": {
-        "regular": {
-          "$value": "400",
-          "$type": "fontWeight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-weight-regular"
-          }
-        },
         "medium": {
           "$value": "500",
           "$type": "fontWeight",
@@ -10677,28 +10579,29 @@
           }
         },
         "display": {
-          "$value": "400",
+          "$value": "600",
           "$type": "fontWeight",
           "$extensions": {
             "com.confetti.cssVariable": "--font-weight-display"
           }
         },
         "body": {
-          "$value": "400",
+          "$value": "500",
           "$type": "fontWeight",
           "$extensions": {
             "com.confetti.cssVariable": "--font-weight-body"
           }
         },
         "control": {
-          "$value": "500",
+          "$value": "700",
           "$type": "fontWeight",
+          "$description": "700 — button and control labels",
           "$extensions": {
             "com.confetti.cssVariable": "--font-weight-control"
           }
         },
         "label": {
-          "$value": "500",
+          "$value": "700",
           "$type": "fontWeight",
           "$extensions": {
             "com.confetti.cssVariable": "--font-weight-label"
@@ -10727,31 +10630,15 @@
             "com.confetti.cssVariable": "--font-tracking-wide"
           }
         },
-        "snug": {
-          "$value": "-0.02em",
-          "$type": "number",
-          "$description": "serif display — tighter than normal, gentler than tight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-snug"
-          }
-        },
-        "loose": {
-          "$value": "0.1em",
-          "$type": "number",
-          "$description": "uppercase labels and controls — open, but a step under wide",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-loose"
-          }
-        },
         "display": {
-          "$value": "-0.02em",
+          "$value": "-0.03em",
           "$type": "number",
           "$extensions": {
             "com.confetti.cssVariable": "--font-tracking-display"
           }
         },
         "label": {
-          "$value": "0.1em",
+          "$value": "0.16em",
           "$type": "number",
           "$extensions": {
             "com.confetti.cssVariable": "--font-tracking-label"
@@ -10880,21 +10767,21 @@
         }
       },
       "display": {
-        "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
+        "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--font-display"
         }
       },
       "body": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--font-body"
         }
       },
       "label": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--font-label"
@@ -11482,7 +11369,7 @@
         }
       },
       "font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-font-family"
@@ -11496,14 +11383,14 @@
         }
       },
       "font-weight": {
-        "$value": "500",
+        "$value": "700",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-font-weight"
         }
       },
       "tracking": {
-        "$value": "0.1em",
+        "$value": "0.16em",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-tracking"
@@ -11664,7 +11551,7 @@
         }
       },
       "font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-font-family"
@@ -11678,14 +11565,14 @@
         }
       },
       "font-weight": {
-        "$value": "500",
+        "$value": "700",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-font-weight"
         }
       },
       "tracking": {
-        "$value": "0.1em",
+        "$value": "0.16em",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-tracking"
@@ -12050,7 +11937,7 @@
       },
       "eyebrow": {
         "font-family": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-font-family"
@@ -12064,14 +11951,14 @@
           }
         },
         "font-weight": {
-          "$value": "500",
+          "$value": "700",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-font-weight"
           }
         },
         "tracking": {
-          "$value": "0.1em",
+          "$value": "0.16em",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-tracking"
@@ -12080,7 +11967,7 @@
       },
       "title": {
         "font-family": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-font-family"
@@ -12094,14 +11981,14 @@
           }
         },
         "font-weight": {
-          "$value": "400",
+          "$value": "600",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-font-weight"
           }
         },
         "tracking": {
-          "$value": "-0.02em",
+          "$value": "-0.03em",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-tracking"
@@ -12117,7 +12004,7 @@
       },
       "body": {
         "font-family": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-font-family"
@@ -12131,7 +12018,7 @@
           }
         },
         "font-weight": {
-          "$value": "400",
+          "$value": "500",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-font-weight"
@@ -12270,7 +12157,7 @@
         }
       },
       "font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$description": "the mono face — same one Badge and Tabs label with",
         "$extensions": {
@@ -12441,7 +12328,7 @@
       },
       "title": {
         "font-family": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-font-family"
@@ -12455,14 +12342,14 @@
           }
         },
         "font-weight": {
-          "$value": "400",
+          "$value": "600",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-font-weight"
           }
         },
         "tracking": {
-          "$value": "-0.02em",
+          "$value": "-0.03em",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-tracking"
@@ -12478,7 +12365,7 @@
       },
       "body": {
         "font-family": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-font-family"
@@ -12492,7 +12379,7 @@
           }
         },
         "font-weight": {
-          "$value": "400",
+          "$value": "500",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-font-weight"
@@ -12637,7 +12524,7 @@
         }
       },
       "label-font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-font-family"
@@ -12651,7 +12538,7 @@
         }
       },
       "label-tracking": {
-        "$value": "0.1em",
+        "$value": "0.16em",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-tracking"
@@ -12784,7 +12671,7 @@
         }
       },
       "label-font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-font-family"
@@ -12798,7 +12685,7 @@
         }
       },
       "label-tracking": {
-        "$value": "0.1em",
+        "$value": "0.16em",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-tracking"
@@ -12883,7 +12770,7 @@
         }
       },
       "font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-font-family"
@@ -12898,14 +12785,14 @@
         }
       },
       "font-weight": {
-        "$value": "500",
+        "$value": "700",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-font-weight"
         }
       },
       "tracking": {
-        "$value": "0.1em",
+        "$value": "0.16em",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-tracking"
@@ -13072,7 +12959,7 @@
       },
       "title": {
         "font-family": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-title-font-family"
@@ -13086,7 +12973,7 @@
           }
         },
         "font-weight": {
-          "$value": "500",
+          "$value": "700",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-title-font-weight"
@@ -13095,7 +12982,7 @@
       },
       "body": {
         "font-family": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-font-family"
@@ -14986,37 +14873,22 @@
             "com.confetti.cssVariable": "--font-family-mono"
           }
         },
-        "instrument-serif": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
-          "$type": "fontFamily",
-          "$description": "refined display serif — one weight (400), so display weight must be regular, never a synthesized bold",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-instrument-serif"
-          }
-        },
-        "inter": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
-          "$type": "fontFamily",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-inter"
-          }
-        },
         "display": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "fontFamily",
           "$extensions": {
             "com.confetti.cssVariable": "--font-family-display"
           }
         },
         "body": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "fontFamily",
           "$extensions": {
             "com.confetti.cssVariable": "--font-family-body"
           }
         },
         "label": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
           "$type": "fontFamily",
           "$extensions": {
             "com.confetti.cssVariable": "--font-family-label"
@@ -15024,13 +14896,6 @@
         }
       },
       "weight": {
-        "regular": {
-          "$value": "400",
-          "$type": "fontWeight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-weight-regular"
-          }
-        },
         "medium": {
           "$value": "500",
           "$type": "fontWeight",
@@ -15053,28 +14918,29 @@
           }
         },
         "display": {
-          "$value": "400",
+          "$value": "600",
           "$type": "fontWeight",
           "$extensions": {
             "com.confetti.cssVariable": "--font-weight-display"
           }
         },
         "body": {
-          "$value": "400",
+          "$value": "500",
           "$type": "fontWeight",
           "$extensions": {
             "com.confetti.cssVariable": "--font-weight-body"
           }
         },
         "control": {
-          "$value": "500",
+          "$value": "700",
           "$type": "fontWeight",
+          "$description": "700 — button and control labels",
           "$extensions": {
             "com.confetti.cssVariable": "--font-weight-control"
           }
         },
         "label": {
-          "$value": "500",
+          "$value": "700",
           "$type": "fontWeight",
           "$extensions": {
             "com.confetti.cssVariable": "--font-weight-label"
@@ -15103,31 +14969,15 @@
             "com.confetti.cssVariable": "--font-tracking-wide"
           }
         },
-        "snug": {
-          "$value": "-0.02em",
-          "$type": "number",
-          "$description": "serif display — tighter than normal, gentler than tight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-snug"
-          }
-        },
-        "loose": {
-          "$value": "0.1em",
-          "$type": "number",
-          "$description": "uppercase labels and controls — open, but a step under wide",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-loose"
-          }
-        },
         "display": {
-          "$value": "-0.02em",
+          "$value": "-0.03em",
           "$type": "number",
           "$extensions": {
             "com.confetti.cssVariable": "--font-tracking-display"
           }
         },
         "label": {
-          "$value": "0.1em",
+          "$value": "0.16em",
           "$type": "number",
           "$extensions": {
             "com.confetti.cssVariable": "--font-tracking-label"
@@ -15256,21 +15106,21 @@
         }
       },
       "display": {
-        "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
+        "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--font-display"
         }
       },
       "body": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--font-body"
         }
       },
       "label": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--font-label"
@@ -15858,7 +15708,7 @@
         }
       },
       "font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-font-family"
@@ -15872,14 +15722,14 @@
         }
       },
       "font-weight": {
-        "$value": "500",
+        "$value": "700",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-font-weight"
         }
       },
       "tracking": {
-        "$value": "0.1em",
+        "$value": "0.16em",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-tracking"
@@ -16040,7 +15890,7 @@
         }
       },
       "font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-font-family"
@@ -16054,14 +15904,14 @@
         }
       },
       "font-weight": {
-        "$value": "500",
+        "$value": "700",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-font-weight"
         }
       },
       "tracking": {
-        "$value": "0.1em",
+        "$value": "0.16em",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-tracking"
@@ -16426,7 +16276,7 @@
       },
       "eyebrow": {
         "font-family": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-font-family"
@@ -16440,14 +16290,14 @@
           }
         },
         "font-weight": {
-          "$value": "500",
+          "$value": "700",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-font-weight"
           }
         },
         "tracking": {
-          "$value": "0.1em",
+          "$value": "0.16em",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-eyebrow-tracking"
@@ -16456,7 +16306,7 @@
       },
       "title": {
         "font-family": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-font-family"
@@ -16470,14 +16320,14 @@
           }
         },
         "font-weight": {
-          "$value": "400",
+          "$value": "600",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-font-weight"
           }
         },
         "tracking": {
-          "$value": "-0.02em",
+          "$value": "-0.03em",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-title-tracking"
@@ -16493,7 +16343,7 @@
       },
       "body": {
         "font-family": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-font-family"
@@ -16507,7 +16357,7 @@
           }
         },
         "font-weight": {
-          "$value": "400",
+          "$value": "500",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--card-body-font-weight"
@@ -16646,7 +16496,7 @@
         }
       },
       "font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$description": "the mono face — same one Badge and Tabs label with",
         "$extensions": {
@@ -16817,7 +16667,7 @@
       },
       "title": {
         "font-family": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-font-family"
@@ -16831,14 +16681,14 @@
           }
         },
         "font-weight": {
-          "$value": "400",
+          "$value": "600",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-font-weight"
           }
         },
         "tracking": {
-          "$value": "-0.02em",
+          "$value": "-0.03em",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-title-tracking"
@@ -16854,7 +16704,7 @@
       },
       "body": {
         "font-family": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-font-family"
@@ -16868,7 +16718,7 @@
           }
         },
         "font-weight": {
-          "$value": "400",
+          "$value": "500",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--modal-body-font-weight"
@@ -17013,7 +16863,7 @@
         }
       },
       "label-font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-font-family"
@@ -17027,7 +16877,7 @@
         }
       },
       "label-tracking": {
-        "$value": "0.1em",
+        "$value": "0.16em",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-tracking"
@@ -17160,7 +17010,7 @@
         }
       },
       "label-font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-font-family"
@@ -17174,7 +17024,7 @@
         }
       },
       "label-tracking": {
-        "$value": "0.1em",
+        "$value": "0.16em",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-tracking"
@@ -17259,7 +17109,7 @@
         }
       },
       "font-family": {
-        "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-font-family"
@@ -17274,14 +17124,14 @@
         }
       },
       "font-weight": {
-        "$value": "500",
+        "$value": "700",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-font-weight"
         }
       },
       "tracking": {
-        "$value": "0.1em",
+        "$value": "0.16em",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-tracking"
@@ -17448,7 +17298,7 @@
       },
       "title": {
         "font-family": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-title-font-family"
@@ -17462,7 +17312,7 @@
           }
         },
         "font-weight": {
-          "$value": "500",
+          "$value": "700",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-title-font-weight"
@@ -17471,7 +17321,7 @@
       },
       "body": {
         "font-family": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+          "$value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-body-font-family"
@@ -19364,21 +19214,6 @@
             "com.confetti.cssVariable": "--font-family-mono"
           }
         },
-        "instrument-serif": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
-          "$type": "fontFamily",
-          "$description": "refined display serif — one weight (400), so display weight must be regular, never a synthesized bold",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-instrument-serif"
-          }
-        },
-        "inter": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
-          "$type": "fontFamily",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-inter"
-          }
-        },
         "display": {
           "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
           "$type": "fontFamily",
@@ -19402,13 +19237,6 @@
         }
       },
       "weight": {
-        "regular": {
-          "$value": "400",
-          "$type": "fontWeight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-weight-regular"
-          }
-        },
         "medium": {
           "$value": "500",
           "$type": "fontWeight",
@@ -19480,22 +19308,6 @@
           "$type": "number",
           "$extensions": {
             "com.confetti.cssVariable": "--font-tracking-wide"
-          }
-        },
-        "snug": {
-          "$value": "-0.02em",
-          "$type": "number",
-          "$description": "serif display — tighter than normal, gentler than tight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-snug"
-          }
-        },
-        "loose": {
-          "$value": "0.1em",
-          "$type": "number",
-          "$description": "uppercase labels and controls — open, but a step under wide",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-loose"
           }
         },
         "display": {
@@ -23736,21 +23548,6 @@
             "com.confetti.cssVariable": "--font-family-mono"
           }
         },
-        "instrument-serif": {
-          "$value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
-          "$type": "fontFamily",
-          "$description": "refined display serif — one weight (400), so display weight must be regular, never a synthesized bold",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-instrument-serif"
-          }
-        },
-        "inter": {
-          "$value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
-          "$type": "fontFamily",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-family-inter"
-          }
-        },
         "display": {
           "$value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
           "$type": "fontFamily",
@@ -23774,13 +23571,6 @@
         }
       },
       "weight": {
-        "regular": {
-          "$value": "400",
-          "$type": "fontWeight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-weight-regular"
-          }
-        },
         "medium": {
           "$value": "500",
           "$type": "fontWeight",
@@ -23852,22 +23642,6 @@
           "$type": "number",
           "$extensions": {
             "com.confetti.cssVariable": "--font-tracking-wide"
-          }
-        },
-        "snug": {
-          "$value": "-0.02em",
-          "$type": "number",
-          "$description": "serif display — tighter than normal, gentler than tight",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-snug"
-          }
-        },
-        "loose": {
-          "$value": "0.1em",
-          "$type": "number",
-          "$description": "uppercase labels and controls — open, but a step under wide",
-          "$extensions": {
-            "com.confetti.cssVariable": "--font-tracking-loose"
           }
         },
         "display": {

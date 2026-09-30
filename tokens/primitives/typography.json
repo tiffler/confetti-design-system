@@ -1,25 +1,15 @@
 {
   "font": {
     "family": {
-      "$comment": "Fredoka and JetBrains Mono are the playful pair (Adventure, Neon); Instrument Serif and Inter are the premium pair (Confetti). Everything after the first name in each stack is a fallback for before the webfont loads, not another face in the system.",
+      "$comment": "Two typefaces, Fredoka and JetBrains Mono. Everything after the first name in each stack is a fallback for before the webfont loads — not a third face in the system.",
       "fredoka": {
         "value": "Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
       },
       "mono": {
         "value": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
-      },
-      "instrument-serif": {
-        "value": "'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif",
-        "comment": "refined display serif — one weight (400), so display weight must be regular, never a synthesized bold"
-      },
-      "inter": {
-        "value": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
       }
     },
     "weight": {
-      "regular": {
-        "value": "400"
-      },
       "medium": {
         "value": "500"
       },
@@ -39,14 +29,6 @@
       },
       "wide": {
         "value": "0.16em"
-      },
-      "snug": {
-        "value": "-0.02em",
-        "comment": "serif display — tighter than normal, gentler than tight"
-      },
-      "loose": {
-        "value": "0.1em",
-        "comment": "uppercase labels and controls — open, but a step under wide"
       }
     },
     "leading": {

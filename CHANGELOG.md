@@ -14,10 +14,6 @@ the token sync); additive-only, non-visual changes are **patch**.
   shadows (`shadow.soft` / `lifted`, with `-deep` counterparts for dark), a 20px container
   radius (`radius.500`), a quiet 2px rise on hover (`motion.lift-soft`) and no card tilt. The brand
   red and the four accent hues are unchanged. Adventure and Neon are unaffected.
-- **Premium typography for Confetti** *(visual — consumers will see it)*. Instrument Serif for
-  display, Inter for body and labels (mono is now for code only). Instrument Serif has a single
-  weight, so display and body drop to regular and controls and labels to medium; labels track at
-  `0.1em`. New self-hosted `public/fonts` files (Inter variable, Instrument Serif 400).
 
 ### Added
 
