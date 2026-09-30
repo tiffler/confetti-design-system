@@ -25,12 +25,13 @@ the exact values came out of the homepage hero widget code.
 
 ## Lift
 
-`--elevation-lift` is a soft, wide, low-opacity shadow paired with a 2px upward rise
-(`translate(0, -2px)`). Buttons use the lighter `--elevation-button-lift`. Cards, modals and
-toasts share the same language: a hairline border at rest, air underneath on hover.
-
-In dark mode the shadow repoints to a black-based one — a low-opacity ink shadow does not
-read on a dark surface — so the token changes rather than the component.
+Nothing moves on hover. On a **card**, `--elevation-lift` is a soft, wide shadow on a light
+surface, and in dark mode an indigo **glow** with a brighter edge — a shadow does not read on
+dark, light does. The glow belongs to cards alone. Buttons cast no shadow at all
+(`--elevation-button-lift` is flat) — they respond with colour instead — and dialogs, toasts and slider thumbs hold a still
+shadow at rest (`--elevation-float`). On dark, raised surfaces also carry a faint light along
+the top edge (`--elevation-edge`) that separates a card from the page. The tokens change with
+the mode; the components do not.
 
 <ShadowSpecimen />
 
@@ -61,6 +62,6 @@ time you opened it.
 
 Modal is its only consumer, and it needs no z-index at all: `showModal()` puts the dialog in
 the browser's top layer, which sits above every stacking context on the page. Note the
-consequence for the panel's edge — on a deep scrim, dark mode's cream border and shadow read
-clearly while light mode's ink ones do not, so in light the panel's white silhouette is the
+consequence for the panel's edge — on a deep scrim, dark mode's light border reads
+clearly while light mode's ink one does not, so in light the panel's white silhouette is the
 edge. See **Components → Modal**.

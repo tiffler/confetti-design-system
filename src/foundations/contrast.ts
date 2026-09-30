@@ -90,9 +90,9 @@ export function luminanceOf(value: string, backdrop?: string): number | null {
  * WCAG contrast ratio, 1–21. Returns null if either color can't be parsed.
  *
  * `backdrop` is what sits behind a translucent *background* — required, because a
- * background like `rgba(46, 38, 24, 0.12)` renders as 12% ink over paper, not as solid
+ * background like `rgba(20, 20, 28, 0.12)` renders as 12% ink over paper, not as solid
  * ink. Ignoring the background's own alpha reports the ratio of a color nobody sees:
- * `ink-a12` measured 14.9:1 against cream that way, while the pixels on screen are
+ * `ink-a12` measured 14.9:1 against the page that way, while the pixels on screen are
  * closer to 1.3:1.
  */
 export function contrastRatio(fgValue: string, bgValue: string, backdrop?: string): number | null {

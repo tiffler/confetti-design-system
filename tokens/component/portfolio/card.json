@@ -27,6 +27,10 @@
     "gap": {
       "value": "{space.stack}"
     },
+    "shadow": {
+      "value": "{elevation.edge}",
+      "comment": "resting edge; the hover shadow below replaces it"
+    },
     "shadow-hover": {
       "value": "{elevation.lift}"
     },

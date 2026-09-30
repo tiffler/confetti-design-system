@@ -1,9 +1,14 @@
 {
-  "$comment": "Confetti LIGHT — no neutrals of its own (the base light mode IS Confetti's), only the premium motion: cards rise quietly instead of sliding up-left, and stay square instead of tilting. Mirrors the same two entries in confetti.dark.json. Emitted under [data-theme='confetti'][data-mode='light']. TYPE: headings at regular (400) weight; labels and controls stay bold tracked mono. The same entry appears in the other mode's file.",
+  "$comment": "Confetti LIGHT — no neutrals of its own (the base light mode IS Confetti's), only the premium motion and type: nothing moves on hover (the lift shadows do the work), cards stay square instead of tilting, and headings drop to regular (400) weight. Mirrors the same entries in confetti.dark.json. Emitted under [data-theme='confetti'][data-mode='light'].",
   "motion": {
     "transform": {
       "lift": {
-        "value": "{motion.lift-soft}"
+        "value": "{motion.still}",
+        "comment": "hover changes light, not position — and sets no transform at all, so nothing is re-rasterized"
+      },
+      "rest": {
+        "value": "{motion.still}",
+        "comment": "the pressed/rest transform, likewise none"
       }
     },
     "tilt": {

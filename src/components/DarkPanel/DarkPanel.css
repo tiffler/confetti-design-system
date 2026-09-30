@@ -14,12 +14,14 @@
   border-radius: var(--dark-panel-radius);
 
   /* Buttons read the PAGE's ink for their secondary and ghost variants, which vanishes on
-     this ground. Repointing the button tokens here — rather than restyling `.cf-button` —
+     this ground, and the danger label's red is below AA on it. Repointing the button tokens here — rather than restyling `.cf-button` —
      keeps Button ignorant of the panel: it still reads only its own tokens. */
   --button-secondary-fill: var(--dark-panel-secondary-fill);
   --button-secondary-text: var(--dark-panel-secondary-text);
   --button-ghost-text: var(--dark-panel-ghost-text);
   --button-ghost-text-hover: var(--dark-panel-ghost-text-hover);
+  --button-danger-text: var(--dark-panel-danger-text);
+  --button-danger-border: var(--dark-panel-danger-border);
   --focus-ring-color: var(--dark-panel-focus-ring-color);
 }
 

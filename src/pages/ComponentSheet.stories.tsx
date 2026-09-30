@@ -30,8 +30,7 @@ import { Caption, Eyebrow, Frame, Lede, Page, Row, Sheet, Stack, Text, Tick, Tit
 
 /* The three everyday variants, primary first as the default. Danger is the system's
    fourth variant but sits out of this grid: it is the destructive action, documented
-   with its hazard treatment in the pages that actually use it rather than lined up
-   next to the neutral three. */
+   in the pages that actually use it rather than lined up next to the neutral three. */
 const VARIANTS: ButtonVariant[] = ['primary', 'secondary', 'ghost'];
 
 const VARIANT_LABELS: Record<ButtonVariant, string> = {

@@ -20,7 +20,7 @@
       "value": "{borders.radius.container}"
     },
     "shadow": {
-      "value": "{elevation.lift}",
+      "value": "{elevation.float}",
       "comment": "the sticker lift, held at rest — a dialog is already raised"
     },
     "padding": {

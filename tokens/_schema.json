@@ -21,7 +21,8 @@
       "secondary.fill",
       "secondary.text",
       "ghost.text",
-      "ghost.text-hover"
+      "ghost.text-hover",
+      "secondary.fill-hover"
     ],
     "borders": [
       "stroke-color.default",
@@ -29,7 +30,8 @@
       "stroke-color.none"
     ],
     "elevation": [
-      "lift"
+      "lift",
+      "float"
     ],
     "focus": [
       "ring.width",
@@ -44,8 +46,7 @@
       "success.on-subtle",
       "danger.fill",
       "danger.on-fill",
-      "danger.text",
-      "danger.stripe"
+      "danger.text"
     ],
     "surface": [
       "backdrop",

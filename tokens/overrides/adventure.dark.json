@@ -52,6 +52,10 @@
       },
       "text": {
         "value": "{colors.sand.200}"
+      },
+      "fill-hover": {
+        "value": "{action.secondary.fill}",
+        "comment": "this theme's secondary responds through brightness, not a background change, so the fill stays put"
       }
     },
     "ghost": {
@@ -102,6 +106,10 @@
     "button-lift": {
       "value": "3px 3px 0px 0px {colors.sand.200}",
       "comment": "buttons still do NOT move — button-lift (the transform) stays at rest. The shadow appears under a stationary button, which reads as it pressing outward rather than sliding, and gives the hover a second cue beyond the lightness bump."
+    },
+    "float": {
+      "value": "{elevation.lift}",
+      "comment": "held at rest by dialogs, toasts and thumbs — the same shadow as a card's lift in this theme"
     }
   },
   "focus": {

@@ -1,8 +1,8 @@
 <h1 align="center">🎊 Confetti</h1>
 
 <p align="center">
-  A sticker-flavored, multi-theme design system — thick ink outlines, hard offset shadows
-  (no blur), warm paper tones, and controls that sit square at rest and tilt on hover.<br>
+  A premium, multi-theme design system — hairline borders, soft light instead of hard shadows,
+  a clean luxury white and a deep indigo dark, and hover states that glow rather than move.<br>
   Themeable to any brand — a new look is a handful of token values, in light and dark.
 </p>
 

@@ -1,6 +1,6 @@
 {
   "dark-panel": {
-    "$comment": "Dark panel — a deep, rounded call-to-action block that stays dark in light AND dark mode (surface.deep). Everything inside it inherits the light-on-deep pair, including Buttons: the secondary and ghost variants read the page's ink and would vanish on a deep ground, so the panel repoints them, and the focus ring, to the on-deep foreground. Primary and danger already carry their own fills and need nothing.",
+    "$comment": "Dark panel — a deep, rounded call-to-action block that stays dark in light AND dark mode (surface.deep). Everything inside it inherits the light-on-deep pair, including Buttons: the secondary and ghost variants read the page's ink and would vanish on a deep ground, so the panel repoints them, and the focus ring, to the on-deep foreground. Primary already carries its own fill and needs nothing. Danger keeps its red outline but takes a light label, since the status red is below AA as text on a deep ground.",
     "fill": {
       "value": "{surface.deep}"
     },
@@ -69,6 +69,13 @@
       "leading": {
         "value": "{font.leading.body}"
       }
+    },
+    "danger-text": {
+      "value": "{text.on-deep}",
+      "comment": "the danger label at rest — the status red is below AA as text on this ground, so the label goes light and the outline carries the red"
+    },
+    "danger-border": {
+      "value": "{status.danger.fill}"
     }
   }
 }

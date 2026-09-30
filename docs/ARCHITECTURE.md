@@ -111,9 +111,9 @@ its own CSS) without touching Confetti. `target="scope"` writes the attributes t
 React, one `.tsx` + `.css` + `.stories.tsx` triple each, consuming component tokens only.
 
 - **Button** — `primary` · `secondary` · `ghost` · `danger`. Hover is per-theme: Confetti
-  rises onto a soft shadow, Adventure brightens with no lift, Neon glows. `danger` takes
-  primary's footprint but fills from `status.danger` rather than the brand — so it stays red
-  in a theme whose brand is not — and hazard-stripes it with a deepened step of that red.
+  changes colour only (nothing moves, no shadow), Adventure brightens with no lift, Neon glows. `danger` takes
+  primary's footprint but reads `status.danger` rather than the brand — so it stays red in a
+  theme whose brand is not — as an outline at rest that fills solid on hover.
 - **Card** — eyebrow · title · body; tilts on hover by a deterministic hash of its seed (no
   `Math.random()`, so visual snapshots stay stable).
 - **WorkCard** — an image-first project card: a framed media area with a category tag and an

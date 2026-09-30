@@ -28,15 +28,15 @@
   "syntax": {
     "$comment": "The code-block surface and the two neutrals that sit on it. Deliberately on the THEME axis, not the mode axis: a snippet is an inset terminal, deep in light and dark alike, so one set of syntax colors has to read against it in both. The four accent hues above are the syntax colors — they are already tuned to carry ink on a light fill, which makes them light enough to read as text on this deep surface.",
     "surface": {
-      "value": "{colors.stone.900}",
-      "comment": "deepest ink — the code block ground"
+      "value": "{colors.midnight.900}",
+      "comment": "deepest midnight — the code block ground"
     },
     "fg": {
-      "value": "{colors.stone.100}",
+      "value": "{colors.midnight.100}",
       "comment": "plain code text"
     },
     "muted": {
-      "value": "{colors.stone.400}",
+      "value": "{colors.midnight.400}",
       "comment": "comments and punctuation"
     }
   },
@@ -65,12 +65,16 @@
     }
   },
   "interaction": {
-    "$comment": "How filled buttons respond on hover. Confetti rises quietly onto a soft diffuse shadow (no lightness change). button-lift = the transform; hover-brightness = 1 (none). The hover shadow lives on the mode axis (elevation.button-lift).",
+    "$comment": "How filled buttons respond on hover. Confetti does not move, glow or cast a shadow: primary and danger lighten a step (hover-brightness), and secondary takes a subtle background (secondary-hover-brightness stays at none). The glow is reserved for cards. button-lift = the transform, held as none.",
     "button-lift": {
-      "value": "{motion.lift-soft}"
+      "value": "{motion.still}"
     },
     "hover-brightness": {
-      "value": "{effect.brightness.none}"
+      "value": "{effect.brightness.lighten}"
+    },
+    "secondary-hover-brightness": {
+      "value": "{effect.brightness.none}",
+      "comment": "a secondary button changes its BACKGROUND on hover (action.secondary.fill-hover), not its lightness — brightening a near-white fill would cancel the very change we are after"
     }
   }
 }

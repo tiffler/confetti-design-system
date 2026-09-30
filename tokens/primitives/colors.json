@@ -1,106 +1,5 @@
 {
   "colors": {
-    "cream": {
-      "100": {
-        "value": "#f4f0e4",
-        "comment": "lightest cream — raised surfaces"
-      },
-      "200": {
-        "value": "#ede7d8",
-        "comment": "panel chrome"
-      },
-      "300": {
-        "value": "#ede4d3",
-        "comment": "page background baseline"
-      },
-      "a16": {
-        "value": "rgba(237, 228, 211, 0.16)",
-        "comment": "cream at 16% — the dark-mode counterpart to ink.a12"
-      }
-    },
-    "ink": {
-      "$comment": "Numbered by luminance: 200 lightest, 900 darkest. Renumbering is safe only while nothing outside this repo consumes primitives by name.",
-      "200": {
-        "value": "#bfb6a6"
-      },
-      "300": {
-        "value": "#6b5f4a"
-      },
-      "400": {
-        "value": "#3b3121"
-      },
-      "500": {
-        "value": "#332a1c"
-      },
-      "600": {
-        "value": "#2e2618",
-        "comment": "canonical Ink — warm near-black, text and borders"
-      },
-      "700": {
-        "value": "#2a2317"
-      },
-      "800": {
-        "value": "#211b12"
-      },
-      "900": {
-        "value": "#1a150d"
-      },
-      "a24": {
-        "value": "rgba(46, 38, 24, 0.24)"
-      },
-      "a18": {
-        "value": "rgba(46, 38, 24, 0.18)"
-      },
-      "a12": {
-        "value": "rgba(46, 38, 24, 0.12)"
-      },
-      "a86": {
-        "value": "rgba(26, 21, 13, 0.86)",
-        "comment": "ink 900 at 86% — the modal / lightbox scrim (deeper base than the a12/a18/a24 borders)"
-      }
-    },
-    "graphite": {
-      "$comment": "Confetti DARK surfaces — a near-neutral gray ramp on a near-black content ground, with true black beneath it. Every step is hue 240 at ~6% saturation: barely tinted, but tinted deliberately, so the grays read as chosen rather than as the default #888 family. `card` is the ceiling, not a preference — it is the lightest surface, so it sets the contrast floor for everything on it, and above roughly this value no red left in the ramp clears AA as text. Numbered by luminance like ink: 400 lightest, 900 darkest. Deliberately NOT the warm ink ramp: ink is Confetti's light-mode text color, and reusing it for dark surfaces made the whole dark theme read brown.",
-      "400": {
-        "value": "#3b3b42",
-        "comment": "card — the lightest dark surface, so it sets the contrast floor for everything that sits on dark. Held here because it is the lightest value at which red.200, chalk.400 and green.400 all still clear AA; a step lighter and the brand red has no usable value left."
-      },
-      "500": {
-        "value": "#29292e",
-        "comment": "panel"
-      },
-      "700": {
-        "value": "#1a1a1d",
-        "comment": "raised"
-      },
-      "800": {
-        "value": "#101012",
-        "comment": "page background baseline — the content ground. Not black: black sits below it as `backdrop`, which is what gives that role its meaning back."
-      },
-      "900": {
-        "value": "#000000",
-        "comment": "backdrop — the recessed mat below page, and now genuinely below it. True black."
-      },
-      "a16": {
-        "value": "rgba(232, 236, 240, 0.16)",
-        "comment": "chalk at 16% — subtle border on graphite"
-      },
-      "a32": {
-        "value": "rgba(232, 236, 240, 0.32)",
-        "comment": "dark-mode hairline border"
-      }
-    },
-    "chalk": {
-      "$comment": "Confetti DARK foreground neutrals — cool off-white, the counterpart to ink in light mode.",
-      "100": {
-        "value": "#e8ecf0",
-        "comment": "primary text and borders on graphite"
-      },
-      "400": {
-        "value": "#a8b2bc",
-        "comment": "muted text on graphite — clears AA on `card`, the lightest of them (5.16:1). Tied to how light `card` is: it had to go this pale once the surfaces came up."
-      }
-    },
     "red": {
       "500": {
         "value": "#c40000",
@@ -120,18 +19,7 @@
       },
       "600": {
         "value": "#a80000",
-        "comment": "deepened Red — kept as the danger family's dark step. No longer the hazard stripe: that pair moved to yellow/black (see the yellow family below)."
-      }
-    },
-    "yellow": {
-      "$comment": "HAZARD yellow — the caution-tape ground under black stripes on a danger control. Like green it is not a brand hue and not one of the four confetti accents: it means one thing, so it sits on the status roles and every theme inherits it rather than repointing it. Saturated on purpose — the destructive control is the one place in the system that is allowed to shout.",
-      "500": {
-        "value": "#f5c518",
-        "comment": "hazard yellow on a light page — carries black at 12.88:1, and the black stripes read as stripes rather than texture"
-      },
-      "600": {
-        "value": "#d9ad0a",
-        "comment": "the deeper step, for DARK mode where the 500 glares against a near-black page. Still carries black at 9.93:1."
+        "comment": "deepened Red — the danger family's dark step."
       }
     },
     "green": {
@@ -142,7 +30,7 @@
       },
       "700": {
         "value": "#137043",
-        "comment": "success AS TEXT on a light surface (4.86:1 on cream)"
+        "comment": "success AS TEXT on a light surface (4.86:1 on the old cream; 5.0:1 on porcelain)"
       },
       "600": {
         "value": "#1b7a4b",
@@ -470,58 +358,112 @@
         "value": "rgba(0, 0, 0, 0.6)"
       }
     },
-    "stone": {
-      "$comment": "Warm-neutral greige — a barely-there warmth, no yellow cast. Numbered by luminance: 50 lightest, 900 darkest. Drives Confetti's light neutrals (surfaces, text, borders, shadow, syntax ground).",
+    "midnight": {
+      "$comment": "Midnight indigo — Confetti's dark mode, and the deep ground of its code blocks and dark panels. A rich, saturated indigo-black rather than a gray: the tint is what keeps dark reading as a colour, and the four surface steps (800 page, 700 raised, 600 panel, 500 card) are evenly spaced in luminance, so each layer reads as one step up and depth comes from layering. Numbered by luminance: 100 lightest, 900 darkest. The named alpha steps at the end are the glow and edge light used on hover and at the top of a card.",
+      "100": {
+        "value": "#eeeef9",
+        "comment": "text — 17.1:1 on page"
+      },
+      "300": {
+        "value": "#a7a9cc",
+        "comment": "muted text — 8.61:1 on page, 6.51:1 on card, the lightest surface"
+      },
+      "400": {
+        "value": "#8b8db3",
+        "comment": "muted text on the deep ground — 6.35:1 on 900"
+      },
+      "450": {
+        "value": "#2d2f55",
+        "comment": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 11:1 with text"
+      },
+      "500": {
+        "value": "#232541",
+        "comment": "card, the lightest surface — and so the one that sets the contrast floor: the palest brand red still reads at 6.64:1 on it"
+      },
+      "600": {
+        "value": "#1e1f38",
+        "comment": "panel chrome — between raised and card"
+      },
+      "700": {
+        "value": "#17182b",
+        "comment": "raised — the canvas one step above page, at the midpoint between page and card"
+      },
+      "800": {
+        "value": "#0a0a15",
+        "comment": "page background"
+      },
+      "900": {
+        "value": "#05050c",
+        "comment": "recessed mat below page; also the deep ground of code blocks and dark panels"
+      },
+      "a14": {
+        "value": "rgba(200, 205, 255, 0.14)",
+        "comment": "hairline border"
+      },
+      "a28": {
+        "value": "rgba(200, 205, 255, 0.28)",
+        "comment": "default border"
+      },
+      "a86": {
+        "value": "rgba(5, 5, 12, 0.86)",
+        "comment": "scrim"
+      },
+      "glow": {
+        "value": "rgba(118, 100, 255, 0.72)",
+        "comment": "the halo on hover — a saturated indigo, bright enough to read as light rather than shadow, close to a neon tube"
+      },
+      "glow-edge": {
+        "value": "rgba(165, 150, 255, 0.95)",
+        "comment": "the bright edge that defines the halo — near full strength, like the lit rim of a neon tube"
+      },
+      "highlight": {
+        "value": "rgba(200, 205, 255, 0.07)",
+        "comment": "a faint light along the top edge of a surface — the sheen that separates a raised card from the page"
+      }
+    },
+    "porcelain": {
+      "$comment": "Luxury white — Confetti's light mode. A clean, bright white with only the faintest cool cast (matching the midnight ramp's hue, so the two modes read as one brand) and an indigo-black ink. No cream, no yellow. Numbered by luminance: 50 lightest, 900 darkest. The four surface steps (white card, 50 raised, 100 page, 200 panel) are close but evenly spaced, so each layer reads as one step and the hairline border does the separating.",
       "50": {
-        "value": "#faf9f7"
+        "value": "#fbfbfe",
+        "comment": "raised — the canvas one step above page, at the midpoint between page and card"
       },
       "100": {
-        "value": "#f5f4f1",
+        "value": "#f7f7fa",
         "comment": "page background"
       },
       "200": {
-        "value": "#ecebe7",
-        "comment": "panel chrome"
+        "value": "#eeeef3",
+        "comment": "panel chrome — one step below page"
       },
       "300": {
-        "value": "#e2e0db"
+        "value": "#e4e4ed",
+        "comment": "hover fill for a light control — a clear step below panel; 14.5:1 with ink"
       },
       "400": {
-        "value": "#cfccc5",
-        "comment": "recessed mat — a step below page"
-      },
-      "500": {
-        "value": "#a19d95"
+        "value": "#dcdce3",
+        "comment": "recessed mat below page — app frames, control tracks"
       },
       "600": {
-        "value": "#6b6861",
-        "comment": "muted text — 5.05:1 on page, 5.28:1 on raised, 4.66:1 on panel"
-      },
-      "700": {
-        "value": "#4a4843"
-      },
-      "800": {
-        "value": "#2b2a27"
+        "value": "#62637a",
+        "comment": "muted text — 5.47:1 on page, 5.86:1 on card, 4.85:1 on panel"
       },
       "900": {
-        "value": "#1c1b19",
-        "comment": "ink — 15.65:1 on page"
-      },
-      "a12": {
-        "value": "rgba(28, 27, 25, 0.12)"
-      },
-      "a86": {
-        "value": "rgba(28, 27, 25, 0.86)"
+        "value": "#14141c",
+        "comment": "ink — 17.1:1 on page"
       },
       "a04": {
-        "value": "rgba(28, 27, 25, 0.04)"
+        "value": "rgba(20, 20, 28, 0.04)"
+      },
+      "a12": {
+        "value": "rgba(20, 20, 28, 0.12)",
+        "comment": "hairline border"
       },
       "a16": {
-        "value": "rgba(28, 27, 25, 0.16)"
+        "value": "rgba(20, 20, 28, 0.16)"
       },
       "a24": {
-        "value": "rgba(28, 27, 25, 0.24)",
-        "comment": "hairline border — the quiet outline"
+        "value": "rgba(20, 20, 28, 0.24)",
+        "comment": "default border, and the halo on a card's hover"
       }
     }
   }

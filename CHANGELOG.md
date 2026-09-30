@@ -9,14 +9,39 @@ the token sync); additive-only, non-visual changes are **patch**.
 ### Changed
 
 - **Premium restyle of the Confetti theme** *(visual — consumers will see it)*. Light neutrals
-  move from cream to a warm greige (`colors.stone`). The sticker language is softened: 1px
+  move from cream to a luxury white (`colors.porcelain`, no cream or yellow cast, with an
+  indigo-black ink matching the dark mode). The sticker language is softened: 1px
   hairline borders (`borders.stroke-color.default` is now a low-alpha stroke), soft diffuse
   shadows (`shadow.soft` / `lifted`, with `-deep` counterparts for dark), a 20px container
-  radius (`radius.500`), a quiet 2px rise on hover (`motion.lift-soft`) and no card tilt. The brand
+  radius (`radius.500`) and no card tilt. The brand
   red and the four accent hues are unchanged. Adventure and Neon are unaffected.
 - **Lighter Confetti headings** *(visual — consumers will see it)*. Still Fredoka, but headings
   drop from 600 to 400 (new `font.weight.regular`). Labels and controls keep their tracked mono.
   Adventure and Neon are unaffected.
+
+- **Midnight-indigo dark mode with a glow hover** *(visual — consumers will see it)*. Dark neutrals
+  move to a new, richer `colors.midnight` ramp — a deep indigo-black with evenly spaced surface steps
+  (raised sits at the midpoint between page and card) and lavender-tinged text. Hover no longer
+  moves anything: on dark, **cards** glow in a bright, saturated indigo with a lit edge, close to a neon tube (`shadow.halo-deep`) and gain a faint light along the top edge (`shadow.highlight`, via new
+  `elevation.edge`); on light, a card's hover is the same halo (`shadow.halo`) in ink — identical size and spread — with no rise. Buttons
+  neither move nor cast a shadow on hover: primary and danger lighten a step, and secondary takes
+  a clear background (new `action.secondary.fill-hover`, using the new `porcelain.300` and
+  `midnight.450` steps). Dialogs, toasts and slider thumbs hold a still
+  shadow at rest through a new required role, `elevation.float`, so the card glow doesn't spread
+  to them (Adventure and Neon set it equal to their lift, so nothing changes there).
+  `motion.transform.lift` is held at rest for Confetti. The code-block / dark-panel
+  ground and the scrim move to midnight too, so no brown or cream remains in Confetti's dark.
+  Contrast improves (the palest brand red reads at 6.64:1 on the lightest surface, up from
+  4.96:1). The unused `colors.graphite`, `chalk`, `cream` and `ink` primitives and the
+  `shadow.hard-ink` / `hard-cream` shadows are removed. Adventure and Neon keep their own
+  palettes; the shared scrim and the success-on-subtle text tint shift with it.
+- **Danger button reworked** *(visual — consumers will see it, in every theme)*. The hazard-tape
+  treatment (yellow ground, black drifting stripes, label plate) is replaced by an outline at
+  rest — `status.danger` red text and edge on a clear ground — that fills solid red on hover.
+  `status.danger.fill` is now red with a white `on-fill` (was yellow/black), and
+  `status.danger.stripe`, the `colors.yellow` primitives and the `button.danger.stripe-*` and
+  `label-pad-*` tokens are gone. New `button.danger.fill-hover` / `text-hover` / `border-hover`.
+  The stripe animation is removed with them.
 
 ### Added
 

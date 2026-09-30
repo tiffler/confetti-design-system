@@ -34,6 +34,8 @@
     transform var(--button-transition-duration) var(--button-transition-easing),
     box-shadow var(--button-transition-duration) var(--button-transition-easing),
     filter var(--button-transition-duration) var(--button-transition-easing),
+    background-color var(--button-transition-duration) var(--button-transition-easing),
+    border-color var(--button-transition-duration) var(--button-transition-easing),
     color var(--button-transition-duration) var(--button-transition-easing);
 }
 
@@ -81,87 +83,13 @@
   border-color: var(--button-secondary-border);
 }
 
-/* Danger: primary's shape, hazard-taped. The stripes are a background-image sitting on the
-   fill rather than a second element, so nothing changes about the box — and the pair is the
-   caution-tape one, black on yellow, at full contrast. Unlike every other surface in the
-   system this one is meant to shout: a destructive control should be identifiable in
-   peripheral vision, before the label has been read.
-
-   `background-color` + `background-image` rather than the `background` shorthand, so the
-   two can't clobber each other. Each band is one stripe-width; the pattern repeats at
-   twice that. */
+/* Danger: an outline at rest, solid on hover. Red text and edge on a clear ground keeps a
+   destructive control from competing with a primary beside it; the fill on hover makes the
+   commitment unmistakable at the moment it matters. */
 .cf-button--danger {
-  /* Two derived lengths, both from the one stripe-width token.
-
-     `period` is a dark band plus a clear one — the distance over which the pattern repeats,
-     measured perpendicular to the stripes.
-
-     `tile` is the size of the square the pattern is drawn into. It is period × √2 because
-     the stripes run at 45°: a horizontal traverse of period × √2 advances exactly one period
-     along the gradient's own axis, so the tile's right edge lines up with the next tile's
-     left edge, and its bottom with the next one's top. That is what makes the repeat
-     invisible — and what makes the animation below loop without a jump, since one tile of
-     travel is exactly one period of pattern.
-
-     √2 is geometry, not a design value, so it stays here rather than becoming a token. */
-  --cf-danger-period: calc(var(--button-danger-stripe-width) * 2);
-  --cf-danger-tile: calc(var(--cf-danger-period) * 1.41421356);
-
-  background-color: var(--button-danger-fill);
-  background-image: repeating-linear-gradient(
-    45deg,
-    var(--button-danger-stripe) 0,
-    var(--button-danger-stripe) var(--button-danger-stripe-width),
-    transparent var(--button-danger-stripe-width),
-    transparent var(--cf-danger-period)
-  );
-  /* Without an explicit size the gradient is rendered once at the size of the button, and
-     shifting it would drag a seam across the face. */
-  background-size: var(--cf-danger-tile) var(--cf-danger-tile);
-  animation: cf-button-danger-drift var(--button-danger-stripe-duration)
-    var(--button-danger-stripe-easing) infinite;
-
+  background: var(--button-danger-fill);
   color: var(--button-danger-text);
   border-color: var(--button-danger-border);
-}
-
-/* The label rides on a solid plate of the fill, so the diagonals frame it instead of running
-   through it. Without this the black stripes and the black label share a ground and the words
-   are unreadable — the previous red-on-red pair got away with it because the stripe was barely
-   a shade off the fill. The plate is the content wrapper itself, so it tracks the label's width
-   and needs no second element; the stripes keep drifting behind it. */
-.cf-button--danger .cf-button__content {
-  background: var(--button-danger-fill);
-  padding: var(--button-danger-label-pad-y) var(--button-danger-label-pad-x);
-}
-
-/* Loading hides the content wrapper — and with it the plate, which is that wrapper's own
-   background — leaving the black spinner to spin against the black stripes, where it all but
-   disappears. So while loading the plate is drawn again as a pseudo-element, sized to the
-   spinner rather than to the label. `::before` paints beneath the spinner element that follows
-   it, so the ring stays on top of the clear colour. */
-.cf-button--danger.cf-button--loading::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(var(--button-spinner-size) + var(--button-danger-label-pad-x) * 2);
-  height: calc(var(--button-spinner-size) + var(--button-danger-label-pad-y) * 2);
-  background: var(--button-danger-fill);
-}
-
-/* One tile of travel per loop — see the note above. Only `background-position` moves, so
-   the label and the border stay perfectly still underneath. */
-@keyframes cf-button-danger-drift {
-  to {
-    background-position: var(--cf-danger-tile) 0;
-  }
-}
-
-/* A disabled control should not be asking for attention. */
-.cf-button--danger[disabled] {
-  animation: none;
 }
 
 .cf-button--ghost {
@@ -185,6 +113,22 @@
   transform: var(--button-transform-hover);
   box-shadow: var(--button-shadow-hover);
   filter: brightness(var(--button-hover-brightness));
+}
+
+.cf-button--secondary:hover:not([disabled]),
+.cf-button--secondary[data-force~='hover']:not([disabled]) {
+  background: var(--button-secondary-fill-hover);
+  /* Secondary answers hover with a background of its own, so it opts out of the shared
+     lightness bump above — brightening the fill would undo the change. Themes that respond
+     through brightness set this token to their bump. */
+  filter: brightness(var(--button-secondary-hover-brightness));
+}
+
+.cf-button--danger:hover:not([disabled]),
+.cf-button--danger[data-force~='hover']:not([disabled]) {
+  background: var(--button-danger-fill-hover);
+  color: var(--button-danger-text-hover);
+  border-color: var(--button-danger-border-hover);
 }
 
 .cf-button--ghost:hover:not([disabled]),
@@ -224,7 +168,7 @@
 
 /* A ring in the button's own text color with one quadrant cut away, centered over the
    hidden label. `50%` here is geometry — a centered point and a circle — not a design
-   value, the same rationale as the √2 in the danger tile above. */
+   value. */
 .cf-button__spinner {
   position: absolute;
   top: 50%;
@@ -256,13 +200,6 @@
   /* The spinner stops turning; it stays as a static ring and `aria-busy` still carries
      the in-flight state. */
   .cf-button__spinner {
-    animation: none;
-  }
-
-  /* The one animation in the system that never stops on its own. Continuous background
-     motion is a vestibular trigger, so it is not merely shortened here — it is switched off,
-     and the stripes stay as static texture, which is what carries the meaning anyway. */
-  .cf-button--danger {
     animation: none;
   }
   .cf-button--primary:hover:not([disabled]),

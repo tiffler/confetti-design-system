@@ -65,6 +65,10 @@
     },
     "hover-brightness": {
       "value": "{effect.brightness.lighten-strong}"
+    },
+    "secondary-hover-brightness": {
+      "value": "{effect.brightness.lighten-strong}",
+      "comment": "how a secondary button responds on hover — this theme keeps the same lightness response as its other filled buttons"
     }
   }
 }

@@ -12,6 +12,7 @@
   color: var(--card-text);
   border: var(--card-border-width) solid var(--card-border);
   border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
 
   transition:
     transform var(--card-transition-duration) var(--card-transition-easing),
@@ -28,14 +29,18 @@
   cursor: pointer;
 }
 
-/* Square at rest; the sticker peels up and turns only on hover. Order matters: rotate
-   first, then translate along the page axes.
+/* Square at rest; the card lifts and turns only on hover, and only where the theme says so.
+   `rotate` is its own property rather than a `transform` function, so a theme with no
+   movement can set `transform: none` and leave the element genuinely untransformed — an
+   identity transform would still promote it to a layer and shift its text by a subpixel.
+   The individual `rotate` composes outside `transform`, which is the order this had before.
 
    `data-force="hover"` pins the state so a control or a snapshot can hold it — see the
    same hook in Button.css. It changes nothing at runtime; no consumer sets it. */
 .cf-card--interactive:hover,
 .cf-card--interactive[data-force~='hover'] {
-  transform: rotate(var(--card-tilt-hover)) var(--card-transform-hover);
+  transform: var(--card-transform-hover);
+  rotate: var(--card-tilt-hover);
   box-shadow: var(--card-shadow-hover);
 }
 

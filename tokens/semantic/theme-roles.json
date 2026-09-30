@@ -99,6 +99,9 @@
     "button-hover-brightness": {
       "value": "{interaction.hover-brightness}",
       "comment": "hover lightness multiplier for buttons that change lightness instead of lifting"
+    },
+    "secondary-hover-brightness": {
+      "value": "{interaction.secondary-hover-brightness}"
     }
   },
   "surface": {

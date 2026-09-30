@@ -2,28 +2,28 @@
   "$comment": "MODE = light. Neutrals only: surfaces, text, borders, the decorative accent tint-surfaces (subtle) + their foregrounds, the hover shadow, and the focus ring. Brand/accent-bold colors come from the active theme via [data-theme]. Emitted under [data-mode='light'].",
   "surface": {
     "page": {
-      "value": "{colors.stone.100}"
+      "value": "{colors.porcelain.100}"
     },
     "raised": {
-      "value": "{colors.stone.50}"
+      "value": "{colors.porcelain.50}"
     },
     "panel": {
-      "value": "{colors.stone.200}"
+      "value": "{colors.porcelain.200}"
     },
     "card": {
       "value": "{colors.base.white}"
     },
     "backdrop": {
-      "value": "{colors.stone.400}",
+      "value": "{colors.porcelain.400}",
       "comment": "recessed mat behind the app frame / control tracks — a step below page"
     }
   },
   "text": {
     "default": {
-      "value": "{colors.stone.900}"
+      "value": "{colors.porcelain.900}"
     },
     "muted": {
-      "value": "{colors.stone.600}"
+      "value": "{colors.porcelain.600}"
     },
     "inverse": {
       "value": "{colors.base.white}"
@@ -32,10 +32,10 @@
   "borders": {
     "stroke-color": {
       "default": {
-        "value": "{colors.stone.a24}"
+        "value": "{colors.porcelain.a24}"
       },
       "subtle": {
-        "value": "{colors.stone.a12}"
+        "value": "{colors.porcelain.a12}"
       },
       "none": {
         "value": "{colors.base.transparent}"
@@ -45,10 +45,14 @@
   "action": {
     "secondary": {
       "fill": {
-        "value": "{colors.stone.100}"
+        "value": "{colors.porcelain.100}"
       },
       "text": {
-        "value": "{colors.stone.900}"
+        "value": "{colors.porcelain.900}"
+      },
+      "fill-hover": {
+        "value": "{colors.porcelain.300}",
+        "comment": "a clear step darker than the resting fill"
       }
     },
     "ghost": {
@@ -56,7 +60,7 @@
         "value": "{colors.base.transparent}"
       },
       "text": {
-        "value": "{colors.stone.900}"
+        "value": "{colors.porcelain.900}"
       }
     }
   },
@@ -81,22 +85,18 @@
       }
     },
     "danger": {
-      "$comment": "Danger splits by role. As a FILL it is caution tape — yellow ground, black label, black stripes — because a destructive control should be identifiable before the label is read. As TEXT it stays red: tape is an affordance on a control, not a way to set a sentence.",
+      "$comment": "Danger splits by role. As a FILL it is solid red carrying a white label — the state a destructive control lands in on hover, and what a destructive surface is painted with. As TEXT (and the resting outline of a danger button) it is the same red, lifted to the palest step in dark mode so it holds AA on every dark surface.",
       "fill": {
-        "value": "{colors.yellow.500}",
-        "comment": "hazard yellow ground, carrying a black label at 12.88:1"
+        "value": "{colors.red.500}",
+        "comment": "solid danger red, carrying a white label at 6.27:1 — the same in both modes; a fill does not need to move"
       },
       "on-fill": {
-        "value": "{colors.base.black}",
-        "comment": "black on the tape — the other half of the caution pair"
+        "value": "{colors.base.white}",
+        "comment": "white on the danger fill"
       },
       "text": {
         "value": "{colors.red.500}",
         "comment": "danger AS TEXT — 4.97:1 on the page, 6.27:1 on card"
-      },
-      "stripe": {
-        "value": "{colors.base.black}",
-        "comment": "the hazard stripe on a danger control — full black on yellow, so the diagonal reads as tape rather than as texture"
       }
     }
   },
@@ -122,22 +122,26 @@
       }
     },
     "on-bold": {
-      "value": "{colors.stone.900}",
+      "value": "{colors.porcelain.900}",
       "comment": "ink reads on the light bold hues"
     },
     "on-subtle": {
-      "value": "{colors.stone.900}",
+      "value": "{colors.porcelain.900}",
       "comment": "ink reads on the pale subtle tints"
     }
   },
   "elevation": {
     "lift": {
-      "value": "{shadow.lifted}",
-      "comment": "card hover shadow"
+      "value": "{shadow.halo}",
+      "comment": "a card's hover — the halo, the same size and spread as dark's glow"
     },
     "button-lift": {
-      "value": "{shadow.soft}",
-      "comment": "button hover shadow — separate from card so a theme can drop it (flat) or swap it (glow)"
+      "value": "{elevation.flat}",
+      "comment": "buttons cast no shadow on hover — nothing raises"
+    },
+    "float": {
+      "value": "{shadow.lifted}",
+      "comment": "the shadow a surface holds at REST because it is already raised — a dialog, a toast, a slider thumb. Distinct from `lift`, which is the hover response of a card."
     }
   },
   "focus": {
@@ -147,7 +151,7 @@
         "comment": "2px"
       },
       "color": {
-        "value": "{colors.stone.900}"
+        "value": "{colors.porcelain.900}"
       },
       "offset": {
         "value": "{size.200}",

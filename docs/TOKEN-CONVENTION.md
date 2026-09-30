@@ -46,7 +46,7 @@ entire argument: retuning a step must never require renaming it.
 
 | Group | Contains |
 | --- | --- |
-| `colors` | hue families, each with ordinal steps — `colors.ink.600` |
+| `colors` | hue families, each with ordinal steps — `colors.porcelain.900` |
 | `font-size` | the type ramp |
 | `space` | the spacing ramp |
 | `size` | one ramp for **every** width, height and stroke |
@@ -171,11 +171,13 @@ unchanged (476 → 476, identical multiset).
 
 ### Confetti's documented deviations
 
-- `shadow.soft` / `lifted` / `soft-deep` / `lifted-deep` and `motion.lift-soft` / `tilt.none` stay named, for the
-  same reason as `hard-ink` below: `-deep` is the dark-surface counterpart of a shadow, not a larger step.
-- `shadow.none` / `hard-ink` / `hard-cream` stay named. They are two mode counterparts of one
-  hard-offset shadow, not a magnitude ramp — ordinal steps would imply an ordering that does
-  not exist. The *roles* built on them are `elevation.*`, which is the part that matters.
+- `shadow.soft` / `lifted` / `soft-deep` / `lifted-deep` / `glow` / `highlight` and `motion.tilt.none` stay named,
+  for the same reason as `none` below: they are kinds of light and depth, and `-deep` is the dark-surface
+  counterpart of a shadow, not a larger step.
+- `colors.midnight.glow` / `glow-edge` / `highlight` stay named alongside the `a14` / `a28` / `a86` alpha steps. They are
+  translucent light effects (a hover halo, the edge of one, a sheen), not positions on the luminance ramp, so ordinal
+  numbers would imply an ordering that does not exist.
+- `shadow.none` stays named — it is the absence of a shadow, not a step on a magnitude ramp.
 - `motion.lift` / `rest` / `tilt` and `effect.brightness.*` stay named for the same reason.
 - Brand-kit inputs live under `brand.*` (including `brand.accent.*`). Keeping them in a
   separate namespace from the `accent.*` **roles** is not cosmetic: when both were called

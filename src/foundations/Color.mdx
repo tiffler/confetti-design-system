@@ -75,16 +75,12 @@ for the same status set as type — the fill can hold its white label on any pag
 same green as text drops to 2.43:1 on the card surface, so `text` lifts in dark mode for
 the same reason `text.accent` does.
 
-`danger.deep` is a deepened step of the danger red, used for the hazard stripes on a
-destructive control.
-
 <ColorGrid prefix="status-" />
 
 <ContrastPairs
   pairs={[
     { fg: 'status-success-on-fill', bg: 'status-success-fill', label: 'success fill', sample: 'Changes saved' },
     { fg: 'status-danger-on-fill', bg: 'status-danger-fill', label: 'danger fill', sample: 'Delete project' },
-    { fg: 'status-danger-on-fill', bg: 'status-danger-stripe', label: 'danger stripe', sample: 'Delete project' },
   ]}
 />
 
@@ -119,7 +115,7 @@ cannot fall behind the build.
 
 This is the layer to consume. A role names what a colour is *for*, so it survives a
 re-skin: `surface-raised` still means "the canvas step above page" when the paint under
-it changes, while `cream-100` stops being true the moment it does.
+it changes, while `porcelain-50` stops being true the moment it does.
 
 <TokenTable categories={['color']} layer="Semantic" />
 
@@ -129,7 +125,7 @@ The raw ramp underneath. Primitives are theme-independent — they are emitted o
 under `:root` and do not change with theme or mode. Semantic tokens are the only
 layer that should be consumed by name.
 
-<ColorGrid prefix="colors-cream-" />
-<ColorGrid prefix="colors-ink-" />
+<ColorGrid prefix="colors-porcelain-" />
+<ColorGrid prefix="colors-midnight-" />
 <ColorGrid prefix="colors-red-" />
 <ColorGrid prefix="colors-green-" />

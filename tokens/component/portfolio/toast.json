@@ -21,7 +21,7 @@
       "value": "{borders.radius.container}"
     },
     "shadow": {
-      "value": "{elevation.lift}",
+      "value": "{elevation.float}",
       "comment": "the hard offset — a toast sits above the page, and this is how this system says so"
     },
     "padding": {

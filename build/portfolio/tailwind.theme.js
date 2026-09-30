@@ -97,12 +97,13 @@ export default {
   },
   "boxShadow": {
     "none": "var(--shadow-none)",
-    "hard-ink": "var(--shadow-hard-ink)",
-    "hard-cream": "var(--shadow-hard-cream)",
     "soft": "var(--shadow-soft)",
     "lifted": "var(--shadow-lifted)",
     "soft-deep": "var(--shadow-soft-deep)",
-    "lifted-deep": "var(--shadow-lifted-deep)"
+    "lifted-deep": "var(--shadow-lifted-deep)",
+    "halo": "var(--shadow-halo)",
+    "halo-deep": "var(--shadow-halo-deep)",
+    "highlight": "var(--shadow-highlight)"
   },
   "zIndex": {
     "100": "var(--z-100)",

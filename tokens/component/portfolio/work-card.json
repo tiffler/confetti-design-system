@@ -25,6 +25,9 @@
     "gap": {
       "value": "{space.inset-sm}"
     },
+    "shadow": {
+      "value": "{elevation.edge}"
+    },
     "shadow-hover": {
       "value": "{elevation.lift}"
     },

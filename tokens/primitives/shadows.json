@@ -3,20 +3,12 @@
     "none": {
       "value": "none"
     },
-    "hard-ink": {
-      "value": "3px 3px 0px 0px {colors.ink.600}",
-      "comment": "hard offset shadow — the sticker lift, no blur"
-    },
-    "hard-cream": {
-      "value": "3px 3px 0px 0px {colors.cream.300}",
-      "comment": "dark-mode counterpart — light offset against dark surfaces"
-    },
     "soft": {
-      "value": "0 1px 2px 0 {colors.stone.a04}, 0 8px 24px -6px {colors.stone.a12}",
+      "value": "0 1px 2px 0 {colors.porcelain.a04}, 0 8px 24px -6px {colors.porcelain.a12}",
       "comment": "diffuse ambient shadow on light surfaces — rests just above the page"
     },
     "lifted": {
-      "value": "0 2px 4px 0 {colors.stone.a04}, 0 16px 40px -8px {colors.stone.a16}",
+      "value": "0 2px 4px 0 {colors.porcelain.a04}, 0 16px 40px -8px {colors.porcelain.a16}",
       "comment": "soft, deeper — hover and floating surfaces on light"
     },
     "soft-deep": {
@@ -26,6 +18,18 @@
     "lifted-deep": {
       "value": "0 2px 4px 0 {colors.base.black-a40}, 0 16px 40px -8px {colors.base.black-a60}",
       "comment": "dark-surface counterpart of lifted"
+    },
+    "halo": {
+      "value": "0 0 0 1px {colors.porcelain.a16}, 0 0 28px -6px {colors.porcelain.a24}, 0 10px 36px -16px {colors.porcelain.a24}",
+      "comment": "a card's hover on a light surface: a soft halo of ink. IDENTICAL geometry to halo-deep — the two must always be the same size and spread; only the colour differs, because a dark shadow is what reads on light and light is what reads on dark."
+    },
+    "halo-deep": {
+      "value": "0 0 0 1px {colors.midnight.glow-edge}, 0 0 28px -6px {colors.midnight.glow}, 0 10px 36px -16px {colors.midnight.glow}",
+      "comment": "a card's hover on a dark surface: a bright, saturated indigo glow with a lit edge. Same geometry as halo — keep them in step."
+    },
+    "highlight": {
+      "value": "inset 0 1px 0 0 {colors.midnight.highlight}",
+      "comment": "the light top edge of a raised surface on dark"
     }
   },
   "effect": {
@@ -62,9 +66,9 @@
         "comment": "no tilt — cards stay square on hover"
       }
     },
-    "lift-soft": {
-      "value": "translate(0, -2px)",
-      "comment": "a quiet rise with no sideways travel — the premium counterpart of lift"
+    "still": {
+      "value": "none",
+      "comment": "no transform at all. Distinct from `rest`, an identity translate: an identity transform is still a transform change, which promotes the element to its own layer and can shift its text by a subpixel on hover. A theme that does not move things should use this."
     }
   },
   "duration": {

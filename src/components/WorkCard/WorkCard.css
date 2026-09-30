@@ -13,6 +13,7 @@
   color: var(--work-card-text);
   border: var(--work-card-border-width) solid var(--work-card-border);
   border-radius: var(--work-card-radius);
+  box-shadow: var(--work-card-shadow);
   text-decoration: none;
 
   transition:

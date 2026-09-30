@@ -49,6 +49,10 @@
       },
       "text": {
         "value": "{colors.glow.100}"
+      },
+      "fill-hover": {
+        "value": "{action.secondary.fill}",
+        "comment": "this theme's secondary responds through brightness, not a background change, so the fill stays put"
       }
     },
     "ghost": {
@@ -96,6 +100,10 @@
     "button-lift": {
       "value": "0 0 18px 0 {colors.neon.pink.500}",
       "comment": "buttons GLOW magenta on hover"
+    },
+    "float": {
+      "value": "{elevation.lift}",
+      "comment": "held at rest by dialogs, toasts and thumbs — the same shadow as a card's lift in this theme"
     }
   },
   "focus": {
