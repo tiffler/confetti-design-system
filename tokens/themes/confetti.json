@@ -28,15 +28,15 @@
   "syntax": {
     "$comment": "The code-block surface and the two neutrals that sit on it. Deliberately on the THEME axis, not the mode axis: a snippet is an inset terminal, deep in light and dark alike, so one set of syntax colors has to read against it in both. The four accent hues above are the syntax colors — they are already tuned to carry ink on a light fill, which makes them light enough to read as text on this deep surface.",
     "surface": {
-      "value": "{colors.ink.900}",
+      "value": "{colors.stone.900}",
       "comment": "deepest ink — the code block ground"
     },
     "fg": {
-      "value": "{colors.cream.300}",
+      "value": "{colors.stone.100}",
       "comment": "plain code text"
     },
     "muted": {
-      "value": "{colors.ink.200}",
+      "value": "{colors.stone.400}",
       "comment": "comments and punctuation"
     }
   },

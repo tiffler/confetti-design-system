@@ -459,6 +459,50 @@
       "transparent": {
         "value": "transparent"
       }
+    },
+    "stone": {
+      "$comment": "Warm-neutral greige — a barely-there warmth, no yellow cast. Numbered by luminance: 50 lightest, 900 darkest. Drives Confetti's light neutrals (surfaces, text, borders, shadow, syntax ground).",
+      "50": {
+        "value": "#faf9f7"
+      },
+      "100": {
+        "value": "#f5f4f1",
+        "comment": "page background"
+      },
+      "200": {
+        "value": "#ecebe7",
+        "comment": "panel chrome"
+      },
+      "300": {
+        "value": "#e2e0db"
+      },
+      "400": {
+        "value": "#cfccc5",
+        "comment": "recessed mat — a step below page"
+      },
+      "500": {
+        "value": "#a19d95"
+      },
+      "600": {
+        "value": "#6b6861",
+        "comment": "muted text — 5.05:1 on page, 5.28:1 on raised, 4.66:1 on panel"
+      },
+      "700": {
+        "value": "#4a4843"
+      },
+      "800": {
+        "value": "#2b2a27"
+      },
+      "900": {
+        "value": "#1c1b19",
+        "comment": "ink — 15.65:1 on page"
+      },
+      "a12": {
+        "value": "rgba(28, 27, 25, 0.12)"
+      },
+      "a86": {
+        "value": "rgba(28, 27, 25, 0.86)"
+      }
     }
   }
 }

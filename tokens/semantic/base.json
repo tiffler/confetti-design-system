@@ -5,7 +5,7 @@
   },
   "surface": {
     "scrim": {
-      "value": "{colors.ink.a86}",
+      "value": "{colors.stone.a86}",
       "comment": "modal / lightbox overlay dim"
     }
   },

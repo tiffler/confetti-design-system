@@ -897,6 +897,97 @@
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
         }
+      },
+      "stone": {
+        "50": {
+          "$value": "#faf9f7",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-50"
+          }
+        },
+        "100": {
+          "$value": "#f5f4f1",
+          "$type": "other",
+          "$description": "page background",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-100"
+          }
+        },
+        "200": {
+          "$value": "#ecebe7",
+          "$type": "other",
+          "$description": "panel chrome",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-200"
+          }
+        },
+        "300": {
+          "$value": "#e2e0db",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-300"
+          }
+        },
+        "400": {
+          "$value": "#cfccc5",
+          "$type": "other",
+          "$description": "recessed mat — a step below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-400"
+          }
+        },
+        "500": {
+          "$value": "#a19d95",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-500"
+          }
+        },
+        "600": {
+          "$value": "#6b6861",
+          "$type": "other",
+          "$description": "muted text — 5.05:1 on page, 5.28:1 on raised, 4.66:1 on panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-600"
+          }
+        },
+        "700": {
+          "$value": "#4a4843",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-700"
+          }
+        },
+        "800": {
+          "$value": "#2b2a27",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-800"
+          }
+        },
+        "900": {
+          "$value": "#1c1b19",
+          "$type": "other",
+          "$description": "ink — 15.65:1 on page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-900"
+          }
+        },
+        "a12": {
+          "$value": "rgba(28, 27, 25, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a12"
+          }
+        },
+        "a86": {
+          "$value": "rgba(28, 27, 25, 0.86)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        }
       }
     },
     "font-size": {
@@ -1935,7 +2026,7 @@
     },
     "surface": {
       "scrim": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
@@ -3533,7 +3624,7 @@
     },
     "overlay": {
       "scrim-fill": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
@@ -5039,6 +5130,97 @@
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
         }
+      },
+      "stone": {
+        "50": {
+          "$value": "#faf9f7",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-50"
+          }
+        },
+        "100": {
+          "$value": "#f5f4f1",
+          "$type": "other",
+          "$description": "page background",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-100"
+          }
+        },
+        "200": {
+          "$value": "#ecebe7",
+          "$type": "other",
+          "$description": "panel chrome",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-200"
+          }
+        },
+        "300": {
+          "$value": "#e2e0db",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-300"
+          }
+        },
+        "400": {
+          "$value": "#cfccc5",
+          "$type": "other",
+          "$description": "recessed mat — a step below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-400"
+          }
+        },
+        "500": {
+          "$value": "#a19d95",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-500"
+          }
+        },
+        "600": {
+          "$value": "#6b6861",
+          "$type": "other",
+          "$description": "muted text — 5.05:1 on page, 5.28:1 on raised, 4.66:1 on panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-600"
+          }
+        },
+        "700": {
+          "$value": "#4a4843",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-700"
+          }
+        },
+        "800": {
+          "$value": "#2b2a27",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-800"
+          }
+        },
+        "900": {
+          "$value": "#1c1b19",
+          "$type": "other",
+          "$description": "ink — 15.65:1 on page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-900"
+          }
+        },
+        "a12": {
+          "$value": "rgba(28, 27, 25, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a12"
+          }
+        },
+        "a86": {
+          "$value": "rgba(28, 27, 25, 0.86)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        }
       }
     },
     "font-size": {
@@ -6077,7 +6259,7 @@
     },
     "surface": {
       "scrim": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
@@ -7675,7 +7857,7 @@
     },
     "overlay": {
       "scrim-fill": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
@@ -9181,6 +9363,97 @@
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
         }
+      },
+      "stone": {
+        "50": {
+          "$value": "#faf9f7",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-50"
+          }
+        },
+        "100": {
+          "$value": "#f5f4f1",
+          "$type": "other",
+          "$description": "page background",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-100"
+          }
+        },
+        "200": {
+          "$value": "#ecebe7",
+          "$type": "other",
+          "$description": "panel chrome",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-200"
+          }
+        },
+        "300": {
+          "$value": "#e2e0db",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-300"
+          }
+        },
+        "400": {
+          "$value": "#cfccc5",
+          "$type": "other",
+          "$description": "recessed mat — a step below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-400"
+          }
+        },
+        "500": {
+          "$value": "#a19d95",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-500"
+          }
+        },
+        "600": {
+          "$value": "#6b6861",
+          "$type": "other",
+          "$description": "muted text — 5.05:1 on page, 5.28:1 on raised, 4.66:1 on panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-600"
+          }
+        },
+        "700": {
+          "$value": "#4a4843",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-700"
+          }
+        },
+        "800": {
+          "$value": "#2b2a27",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-800"
+          }
+        },
+        "900": {
+          "$value": "#1c1b19",
+          "$type": "other",
+          "$description": "ink — 15.65:1 on page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-900"
+          }
+        },
+        "a12": {
+          "$value": "rgba(28, 27, 25, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a12"
+          }
+        },
+        "a86": {
+          "$value": "rgba(28, 27, 25, 0.86)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        }
       }
     },
     "font-size": {
@@ -10219,7 +10492,7 @@
     },
     "surface": {
       "scrim": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
@@ -10227,7 +10500,7 @@
         }
       },
       "code": {
-        "$value": "#1a150d",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--surface-code"
@@ -10287,14 +10560,14 @@
         }
       },
       "on-code": {
-        "$value": "#ede4d3",
+        "$value": "#f5f4f1",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-on-code"
         }
       },
       "on-code-muted": {
-        "$value": "#bfb6a6",
+        "$value": "#cfccc5",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-on-code-muted"
@@ -10710,7 +10983,7 @@
     },
     "syntax": {
       "surface": {
-        "$value": "#1a150d",
+        "$value": "#1c1b19",
         "$type": "other",
         "$description": "deepest ink — the code block ground",
         "$extensions": {
@@ -10718,7 +10991,7 @@
         }
       },
       "fg": {
-        "$value": "#ede4d3",
+        "$value": "#f5f4f1",
         "$type": "other",
         "$description": "plain code text",
         "$extensions": {
@@ -10726,7 +10999,7 @@
         }
       },
       "muted": {
-        "$value": "#bfb6a6",
+        "$value": "#cfccc5",
         "$type": "other",
         "$description": "comments and punctuation",
         "$extensions": {
@@ -11464,14 +11737,14 @@
     },
     "code": {
       "fill": {
-        "$value": "#1a150d",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--code-fill"
         }
       },
       "text": {
-        "$value": "#ede4d3",
+        "$value": "#f5f4f1",
         "$type": "other",
         "$description": "plain text — identifiers, properties, operators",
         "$extensions": {
@@ -11479,7 +11752,7 @@
         }
       },
       "muted": {
-        "$value": "#bfb6a6",
+        "$value": "#cfccc5",
         "$type": "other",
         "$description": "comments and punctuation — present but receding",
         "$extensions": {
@@ -11825,7 +12098,7 @@
     },
     "overlay": {
       "scrim-fill": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
@@ -13331,6 +13604,97 @@
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
         }
+      },
+      "stone": {
+        "50": {
+          "$value": "#faf9f7",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-50"
+          }
+        },
+        "100": {
+          "$value": "#f5f4f1",
+          "$type": "other",
+          "$description": "page background",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-100"
+          }
+        },
+        "200": {
+          "$value": "#ecebe7",
+          "$type": "other",
+          "$description": "panel chrome",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-200"
+          }
+        },
+        "300": {
+          "$value": "#e2e0db",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-300"
+          }
+        },
+        "400": {
+          "$value": "#cfccc5",
+          "$type": "other",
+          "$description": "recessed mat — a step below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-400"
+          }
+        },
+        "500": {
+          "$value": "#a19d95",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-500"
+          }
+        },
+        "600": {
+          "$value": "#6b6861",
+          "$type": "other",
+          "$description": "muted text — 5.05:1 on page, 5.28:1 on raised, 4.66:1 on panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-600"
+          }
+        },
+        "700": {
+          "$value": "#4a4843",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-700"
+          }
+        },
+        "800": {
+          "$value": "#2b2a27",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-800"
+          }
+        },
+        "900": {
+          "$value": "#1c1b19",
+          "$type": "other",
+          "$description": "ink — 15.65:1 on page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-900"
+          }
+        },
+        "a12": {
+          "$value": "rgba(28, 27, 25, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a12"
+          }
+        },
+        "a86": {
+          "$value": "rgba(28, 27, 25, 0.86)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        }
       }
     },
     "font-size": {
@@ -14369,7 +14733,7 @@
     },
     "surface": {
       "scrim": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
@@ -14377,28 +14741,28 @@
         }
       },
       "code": {
-        "$value": "#1a150d",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--surface-code"
         }
       },
       "page": {
-        "$value": "#ede4d3",
+        "$value": "#f5f4f1",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--surface-page"
         }
       },
       "raised": {
-        "$value": "#f4f0e4",
+        "$value": "#faf9f7",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--surface-raised"
         }
       },
       "panel": {
-        "$value": "#ede7d8",
+        "$value": "#ecebe7",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--surface-panel"
@@ -14412,7 +14776,7 @@
         }
       },
       "backdrop": {
-        "$value": "#bfb6a6",
+        "$value": "#cfccc5",
         "$type": "other",
         "$description": "recessed mat behind the app frame / control tracks — a step below page",
         "$extensions": {
@@ -14437,28 +14801,28 @@
         }
       },
       "on-code": {
-        "$value": "#ede4d3",
+        "$value": "#f5f4f1",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-on-code"
         }
       },
       "on-code-muted": {
-        "$value": "#bfb6a6",
+        "$value": "#cfccc5",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-on-code-muted"
         }
       },
       "default": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-default"
         }
       },
       "muted": {
-        "$value": "#6b5f4a",
+        "$value": "#6b6861",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-muted"
@@ -14522,14 +14886,14 @@
       },
       "stroke-color": {
         "default": {
-          "$value": "#2e2618",
+          "$value": "#1c1b19",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--borders-stroke-color-default"
           }
         },
         "subtle": {
-          "$value": "rgba(46, 38, 24, 0.12)",
+          "$value": "rgba(28, 27, 25, 0.12)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--borders-stroke-color-subtle"
@@ -14554,7 +14918,7 @@
         }
       },
       "lift": {
-        "$value": "3px 3px 0px 0px #2e2618",
+        "$value": "3px 3px 0px 0px #1c1b19",
         "$type": "other",
         "$description": "card hover shadow",
         "$extensions": {
@@ -14562,7 +14926,7 @@
         }
       },
       "button-lift": {
-        "$value": "3px 3px 0px 0px #2e2618",
+        "$value": "3px 3px 0px 0px #1c1b19",
         "$type": "other",
         "$description": "button hover shadow — separate from card so a theme can drop it (flat) or swap it (glow)",
         "$extensions": {
@@ -14603,7 +14967,7 @@
           }
         },
         "text": {
-          "$value": "#2e2618",
+          "$value": "#1c1b19",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--action-ghost-text"
@@ -14612,14 +14976,14 @@
       },
       "secondary": {
         "fill": {
-          "$value": "#ede4d3",
+          "$value": "#f5f4f1",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--action-secondary-fill"
           }
         },
         "text": {
-          "$value": "#2e2618",
+          "$value": "#1c1b19",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--action-secondary-text"
@@ -14693,7 +15057,7 @@
         }
       },
       "on-bold": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$description": "ink reads on the light bold hues",
         "$extensions": {
@@ -14701,7 +15065,7 @@
         }
       },
       "on-subtle": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$description": "ink reads on the pale subtle tints",
         "$extensions": {
@@ -14794,7 +15158,7 @@
           }
         },
         "color": {
-          "$value": "#2e2618",
+          "$value": "#1c1b19",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--focus-ring-color"
@@ -14860,7 +15224,7 @@
     },
     "syntax": {
       "surface": {
-        "$value": "#1a150d",
+        "$value": "#1c1b19",
         "$type": "other",
         "$description": "deepest ink — the code block ground",
         "$extensions": {
@@ -14868,7 +15232,7 @@
         }
       },
       "fg": {
-        "$value": "#ede4d3",
+        "$value": "#f5f4f1",
         "$type": "other",
         "$description": "plain code text",
         "$extensions": {
@@ -14876,7 +15240,7 @@
         }
       },
       "muted": {
-        "$value": "#bfb6a6",
+        "$value": "#cfccc5",
         "$type": "other",
         "$description": "comments and punctuation",
         "$extensions": {
@@ -14940,7 +15304,7 @@
         }
       },
       "border": {
-        "$value": "rgba(46, 38, 24, 0.12)",
+        "$value": "rgba(28, 27, 25, 0.12)",
         "$type": "other",
         "$description": "soft pill — subtle tint, not the ink sticker border",
         "$extensions": {
@@ -14990,28 +15354,28 @@
         }
       },
       "text": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-text"
         }
       },
       "text-subtle": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-text-subtle"
         }
       },
       "text-neutral": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-text-neutral"
         }
       },
       "text-subtle-neutral": {
-        "$value": "#6b5f4a",
+        "$value": "#6b6861",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-text-subtle-neutral"
@@ -15068,7 +15432,7 @@
           }
         },
         "neutral": {
-          "$value": "#f4f0e4",
+          "$value": "#faf9f7",
           "$type": "other",
           "$description": "paper fill — a badge that isn't a category",
           "$extensions": {
@@ -15186,7 +15550,7 @@
         }
       },
       "shadow-hover": {
-        "$value": "3px 3px 0px 0px #2e2618",
+        "$value": "3px 3px 0px 0px #1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--button-shadow-hover"
@@ -15285,7 +15649,7 @@
           }
         },
         "border": {
-          "$value": "#2e2618",
+          "$value": "#1c1b19",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-primary-border"
@@ -15294,21 +15658,21 @@
       },
       "secondary": {
         "fill": {
-          "$value": "#ede4d3",
+          "$value": "#f5f4f1",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-fill"
           }
         },
         "text": {
-          "$value": "#2e2618",
+          "$value": "#1c1b19",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-text"
           }
         },
         "border": {
-          "$value": "#2e2618",
+          "$value": "#1c1b19",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-border"
@@ -15331,7 +15695,7 @@
           }
         },
         "border": {
-          "$value": "#2e2618",
+          "$value": "#1c1b19",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-danger-border"
@@ -15393,7 +15757,7 @@
           }
         },
         "text": {
-          "$value": "#2e2618",
+          "$value": "#1c1b19",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-ghost-text"
@@ -15424,28 +15788,28 @@
         }
       },
       "fill-raised": {
-        "$value": "#f4f0e4",
+        "$value": "#faf9f7",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-fill-raised"
         }
       },
       "text": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-text"
         }
       },
       "text-muted": {
-        "$value": "#6b5f4a",
+        "$value": "#6b6861",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-text-muted"
         }
       },
       "border": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-border"
@@ -15480,7 +15844,7 @@
         }
       },
       "shadow-hover": {
-        "$value": "3px 3px 0px 0px #2e2618",
+        "$value": "3px 3px 0px 0px #1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-shadow-hover"
@@ -15614,14 +15978,14 @@
     },
     "code": {
       "fill": {
-        "$value": "#1a150d",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--code-fill"
         }
       },
       "text": {
-        "$value": "#ede4d3",
+        "$value": "#f5f4f1",
         "$type": "other",
         "$description": "plain text — identifiers, properties, operators",
         "$extensions": {
@@ -15629,7 +15993,7 @@
         }
       },
       "muted": {
-        "$value": "#bfb6a6",
+        "$value": "#cfccc5",
         "$type": "other",
         "$description": "comments and punctuation — present but receding",
         "$extensions": {
@@ -15670,21 +16034,21 @@
       },
       "inline": {
         "fill": {
-          "$value": "#ede7d8",
+          "$value": "#ecebe7",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--code-inline-fill"
           }
         },
         "text": {
-          "$value": "#2e2618",
+          "$value": "#1c1b19",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--code-inline-text"
           }
         },
         "border": {
-          "$value": "rgba(46, 38, 24, 0.12)",
+          "$value": "rgba(28, 27, 25, 0.12)",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--code-inline-border"
@@ -15782,14 +16146,14 @@
         }
       },
       "color-default": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-default"
         }
       },
       "color-muted": {
-        "$value": "#6b5f4a",
+        "$value": "#6b6861",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-muted"
@@ -15812,21 +16176,21 @@
         }
       },
       "text": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-text"
         }
       },
       "text-muted": {
-        "$value": "#6b5f4a",
+        "$value": "#6b6861",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-text-muted"
         }
       },
       "border": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-border"
@@ -15847,7 +16211,7 @@
         }
       },
       "shadow": {
-        "$value": "3px 3px 0px 0px #2e2618",
+        "$value": "3px 3px 0px 0px #1c1b19",
         "$type": "other",
         "$description": "the sticker lift, held at rest — a dialog is already raised",
         "$extensions": {
@@ -15975,7 +16339,7 @@
     },
     "overlay": {
       "scrim-fill": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
@@ -16023,7 +16387,7 @@
         }
       },
       "track-fill": {
-        "$value": "#ede4d3",
+        "$value": "#f5f4f1",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-track-fill"
@@ -16037,7 +16401,7 @@
         }
       },
       "track-border": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-track-border"
@@ -16073,14 +16437,14 @@
         }
       },
       "thumb-border": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-border"
         }
       },
       "thumb-shadow": {
-        "$value": "3px 3px 0px 0px #2e2618",
+        "$value": "3px 3px 0px 0px #1c1b19",
         "$type": "other",
         "$description": "the sticker lift, held at rest — the knob sits above the rail",
         "$extensions": {
@@ -16096,7 +16460,7 @@
         }
       },
       "label-color": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-label-color"
@@ -16124,7 +16488,7 @@
         }
       },
       "value-color": {
-        "$value": "#6b5f4a",
+        "$value": "#6b6861",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-value-color"
@@ -16183,14 +16547,14 @@
         }
       },
       "border": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-border"
         }
       },
       "fill": {
-        "$value": "#ede4d3",
+        "$value": "#f5f4f1",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-fill"
@@ -16204,7 +16568,7 @@
         }
       },
       "thumb-fill": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$description": "ink knob on the paper track",
         "$extensions": {
@@ -16220,7 +16584,7 @@
         }
       },
       "icon-color": {
-        "$value": "#ede4d3",
+        "$value": "#f5f4f1",
         "$type": "other",
         "$description": "the glyph sits ON the thumb, so it takes the track's fill",
         "$extensions": {
@@ -16243,7 +16607,7 @@
         }
       },
       "label-color": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-label-color"
@@ -16287,7 +16651,7 @@
     },
     "tabs": {
       "track-fill": {
-        "$value": "#ede7d8",
+        "$value": "#ecebe7",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
@@ -16295,7 +16659,7 @@
         }
       },
       "track-border": {
-        "$value": "rgba(46, 38, 24, 0.12)",
+        "$value": "rgba(28, 27, 25, 0.12)",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-track-border"
@@ -16333,7 +16697,7 @@
         }
       },
       "idle-text": {
-        "$value": "#6b5f4a",
+        "$value": "#6b6861",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
@@ -16341,7 +16705,7 @@
         }
       },
       "hover-text": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$description": "an idle tab warms to full-strength text on hover, short of the lit pill",
         "$extensions": {
@@ -16410,21 +16774,21 @@
     },
     "toast": {
       "fill": {
-        "$value": "#f4f0e4",
+        "$value": "#faf9f7",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-fill"
         }
       },
       "text": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-text"
         }
       },
       "text-muted": {
-        "$value": "#6b5f4a",
+        "$value": "#6b6861",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-text-muted"
@@ -16439,7 +16803,7 @@
         }
       },
       "border": {
-        "$value": "#2e2618",
+        "$value": "#1c1b19",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-border"
@@ -16453,7 +16817,7 @@
         }
       },
       "shadow": {
-        "$value": "3px 3px 0px 0px #2e2618",
+        "$value": "3px 3px 0px 0px #1c1b19",
         "$type": "other",
         "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
         "$extensions": {
@@ -16506,7 +16870,7 @@
           }
         },
         "neutral": {
-          "$value": "#6b5f4a",
+          "$value": "#6b6861",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-neutral"
@@ -16529,7 +16893,7 @@
           }
         },
         "neutral": {
-          "$value": "#6b5f4a",
+          "$value": "#6b6861",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-neutral"
@@ -17481,6 +17845,97 @@
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
         }
+      },
+      "stone": {
+        "50": {
+          "$value": "#faf9f7",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-50"
+          }
+        },
+        "100": {
+          "$value": "#f5f4f1",
+          "$type": "other",
+          "$description": "page background",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-100"
+          }
+        },
+        "200": {
+          "$value": "#ecebe7",
+          "$type": "other",
+          "$description": "panel chrome",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-200"
+          }
+        },
+        "300": {
+          "$value": "#e2e0db",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-300"
+          }
+        },
+        "400": {
+          "$value": "#cfccc5",
+          "$type": "other",
+          "$description": "recessed mat — a step below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-400"
+          }
+        },
+        "500": {
+          "$value": "#a19d95",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-500"
+          }
+        },
+        "600": {
+          "$value": "#6b6861",
+          "$type": "other",
+          "$description": "muted text — 5.05:1 on page, 5.28:1 on raised, 4.66:1 on panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-600"
+          }
+        },
+        "700": {
+          "$value": "#4a4843",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-700"
+          }
+        },
+        "800": {
+          "$value": "#2b2a27",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-800"
+          }
+        },
+        "900": {
+          "$value": "#1c1b19",
+          "$type": "other",
+          "$description": "ink — 15.65:1 on page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-900"
+          }
+        },
+        "a12": {
+          "$value": "rgba(28, 27, 25, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a12"
+          }
+        },
+        "a86": {
+          "$value": "rgba(28, 27, 25, 0.86)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        }
       }
     },
     "font-size": {
@@ -18519,7 +18974,7 @@
     },
     "surface": {
       "scrim": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
@@ -20118,7 +20573,7 @@
     },
     "overlay": {
       "scrim-fill": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {
@@ -21624,6 +22079,97 @@
             "com.confetti.cssVariable": "--colors-base-transparent"
           }
         }
+      },
+      "stone": {
+        "50": {
+          "$value": "#faf9f7",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-50"
+          }
+        },
+        "100": {
+          "$value": "#f5f4f1",
+          "$type": "other",
+          "$description": "page background",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-100"
+          }
+        },
+        "200": {
+          "$value": "#ecebe7",
+          "$type": "other",
+          "$description": "panel chrome",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-200"
+          }
+        },
+        "300": {
+          "$value": "#e2e0db",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-300"
+          }
+        },
+        "400": {
+          "$value": "#cfccc5",
+          "$type": "other",
+          "$description": "recessed mat — a step below page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-400"
+          }
+        },
+        "500": {
+          "$value": "#a19d95",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-500"
+          }
+        },
+        "600": {
+          "$value": "#6b6861",
+          "$type": "other",
+          "$description": "muted text — 5.05:1 on page, 5.28:1 on raised, 4.66:1 on panel",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-600"
+          }
+        },
+        "700": {
+          "$value": "#4a4843",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-700"
+          }
+        },
+        "800": {
+          "$value": "#2b2a27",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-800"
+          }
+        },
+        "900": {
+          "$value": "#1c1b19",
+          "$type": "other",
+          "$description": "ink — 15.65:1 on page",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-900"
+          }
+        },
+        "a12": {
+          "$value": "rgba(28, 27, 25, 0.12)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a12"
+          }
+        },
+        "a86": {
+          "$value": "rgba(28, 27, 25, 0.86)",
+          "$type": "other",
+          "$extensions": {
+            "com.confetti.cssVariable": "--colors-stone-a86"
+          }
+        }
       }
     },
     "font-size": {
@@ -22662,7 +23208,7 @@
     },
     "surface": {
       "scrim": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "modal / lightbox overlay dim",
         "$extensions": {
@@ -24261,7 +24807,7 @@
     },
     "overlay": {
       "scrim-fill": {
-        "$value": "rgba(26, 21, 13, 0.86)",
+        "$value": "rgba(28, 27, 25, 0.86)",
         "$type": "other",
         "$description": "the dim itself — the one consumer of the axis-independent --color-scrim role, fixed across themes and modes",
         "$extensions": {

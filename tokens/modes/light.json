@@ -2,28 +2,28 @@
   "$comment": "MODE = light. Neutrals only: surfaces, text, borders, the decorative accent tint-surfaces (subtle) + their foregrounds, the hover shadow, and the focus ring. Brand/accent-bold colors come from the active theme via [data-theme]. Emitted under [data-mode='light'].",
   "surface": {
     "page": {
-      "value": "{colors.cream.300}"
+      "value": "{colors.stone.100}"
     },
     "raised": {
-      "value": "{colors.cream.100}"
+      "value": "{colors.stone.50}"
     },
     "panel": {
-      "value": "{colors.cream.200}"
+      "value": "{colors.stone.200}"
     },
     "card": {
       "value": "{colors.base.white}"
     },
     "backdrop": {
-      "value": "{colors.ink.200}",
+      "value": "{colors.stone.400}",
       "comment": "recessed mat behind the app frame / control tracks — a step below page"
     }
   },
   "text": {
     "default": {
-      "value": "{colors.ink.600}"
+      "value": "{colors.stone.900}"
     },
     "muted": {
-      "value": "{colors.ink.300}"
+      "value": "{colors.stone.600}"
     },
     "inverse": {
       "value": "{colors.base.white}"
@@ -32,10 +32,10 @@
   "borders": {
     "stroke-color": {
       "default": {
-        "value": "{colors.ink.600}"
+        "value": "{colors.stone.900}"
       },
       "subtle": {
-        "value": "{colors.ink.a12}"
+        "value": "{colors.stone.a12}"
       },
       "none": {
         "value": "{colors.base.transparent}"
@@ -45,10 +45,10 @@
   "action": {
     "secondary": {
       "fill": {
-        "value": "{colors.cream.300}"
+        "value": "{colors.stone.100}"
       },
       "text": {
-        "value": "{colors.ink.600}"
+        "value": "{colors.stone.900}"
       }
     },
     "ghost": {
@@ -56,7 +56,7 @@
         "value": "{colors.base.transparent}"
       },
       "text": {
-        "value": "{colors.ink.600}"
+        "value": "{colors.stone.900}"
       }
     }
   },
@@ -122,21 +122,21 @@
       }
     },
     "on-bold": {
-      "value": "{colors.ink.600}",
+      "value": "{colors.stone.900}",
       "comment": "ink reads on the light bold hues"
     },
     "on-subtle": {
-      "value": "{colors.ink.600}",
+      "value": "{colors.stone.900}",
       "comment": "ink reads on the pale subtle tints"
     }
   },
   "elevation": {
     "lift": {
-      "value": "3px 3px 0px 0px {colors.ink.600}",
+      "value": "3px 3px 0px 0px {colors.stone.900}",
       "comment": "card hover shadow"
     },
     "button-lift": {
-      "value": "3px 3px 0px 0px {colors.ink.600}",
+      "value": "3px 3px 0px 0px {colors.stone.900}",
       "comment": "button hover shadow — separate from card so a theme can drop it (flat) or swap it (glow)"
     }
   },
@@ -147,7 +147,7 @@
         "comment": "2px"
       },
       "color": {
-        "value": "{colors.ink.600}"
+        "value": "{colors.stone.900}"
       },
       "offset": {
         "value": "{size.200}",
