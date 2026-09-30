@@ -34,6 +34,14 @@
       "value": "{space.inline}",
       "comment": "8px between footer buttons"
     },
+    "close-size": {
+      "value": "{size.1100}",
+      "comment": "the close button's square footprint — a compact 40px hit area instead of a full 48px control pill"
+    },
+    "close-inset": {
+      "value": "{space.inset-tight}",
+      "comment": "how far the close button is pulled into the panel padding, so its glyph sits nearer the corner than the content column does"
+    },
     "width-sm": {
       "value": "{size.dialog.sm}"
     },

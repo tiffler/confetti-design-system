@@ -39,6 +39,17 @@
   gap: var(--modal-gap);
 }
 
+/* A compact square close button, pulled into the panel padding. The full control pill is a
+   48px-tall, 24px-padded target, which parked the glyph ~48px from the corner. The negative
+   margin only moves the box; the header's flex-start keeps it on the title's first line. */
+.cf-modal__close {
+  min-height: var(--modal-close-size);
+  width: var(--modal-close-size);
+  padding: 0;
+  margin: calc(var(--modal-close-inset) * -1) calc(var(--modal-close-inset) * -1) 0 0;
+  flex: none;
+}
+
 .cf-modal__title {
   margin: 0;
   font-family: var(--modal-title-font-family);

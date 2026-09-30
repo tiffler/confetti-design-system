@@ -47,7 +47,7 @@ export function Modal({ open, onClose, title, size = 'md', children, footer }: M
           <h2 className="cf-modal__title" id={titleId}>
             {title}
           </h2>
-          <Button variant="ghost" aria-label="Close" onClick={onClose}>
+          <Button variant="ghost" className="cf-modal__close" aria-label="Close" onClick={onClose}>
             <Icon icon={X} size="md" />
           </Button>
         </header>
