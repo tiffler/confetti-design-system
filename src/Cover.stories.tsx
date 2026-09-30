@@ -63,6 +63,8 @@ function Cover() {
             style={{
               fontFamily: 'var(--font-family-display)',
               fontSize: 'var(--font-size-display)',
+              fontWeight: 'var(--font-weight-display)',
+              letterSpacing: 'var(--font-tracking-display)',
               color: 'var(--text-default)',
               lineHeight: 'var(--font-leading-heading)',
               margin: 0,
@@ -79,6 +81,7 @@ function Cover() {
             style={{
               fontFamily: 'var(--font-family-label)',
               fontSize: 'var(--font-size-label)',
+              fontWeight: 'var(--font-weight-label)',
               letterSpacing: 'var(--font-tracking-label)',
               textTransform: 'uppercase',
               color: 'var(--text-accent)',
@@ -123,6 +126,7 @@ function Cover() {
           style={{
             fontFamily: 'var(--font-family-label)',
             fontSize: 'var(--font-size-label)',
+            fontWeight: 'var(--font-weight-label)',
             letterSpacing: 'var(--font-tracking-label)',
             textTransform: 'uppercase',
             color: 'var(--text-muted)',
