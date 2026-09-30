@@ -43,6 +43,8 @@ export default {
   "fontFamily": {
     "fredoka": "var(--font-family-fredoka)",
     "mono": "var(--font-family-mono)",
+    "instrument-serif": "var(--font-family-instrument-serif)",
+    "inter": "var(--font-family-inter)",
     "display": "var(--font-family-display)",
     "body": "var(--font-family-body)",
     "label": "var(--font-family-label)"
@@ -71,6 +73,7 @@ export default {
     "label": "var(--font-size-label)"
   },
   "fontWeight": {
+    "regular": "var(--font-weight-regular)",
     "medium": "var(--font-weight-medium)",
     "semibold": "var(--font-weight-semibold)",
     "bold": "var(--font-weight-bold)",
@@ -83,6 +86,8 @@ export default {
     "tight": "var(--font-tracking-tight)",
     "normal": "var(--font-tracking-normal)",
     "wide": "var(--font-tracking-wide)",
+    "snug": "var(--font-tracking-snug)",
+    "loose": "var(--font-tracking-loose)",
     "display": "var(--font-tracking-display)",
     "label": "var(--font-tracking-label)"
   },

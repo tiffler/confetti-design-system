@@ -1,5 +1,5 @@
 {
-  "$comment": "Confetti LIGHT — no neutrals of its own (the base light mode IS Confetti's), only the premium motion: cards rise quietly instead of sliding up-left, and stay square instead of tilting. Mirrors the same two entries in confetti.dark.json. Emitted under [data-theme='confetti'][data-mode='light'].",
+  "$comment": "Confetti LIGHT — no neutrals of its own (the base light mode IS Confetti's), only the premium motion (cards rise quietly instead of sliding up-left, and stay square instead of tilting) and premium type weights (Instrument Serif has a single weight, so display and body drop to regular, controls and labels to medium). Mirrors the same two entries in confetti.dark.json. Emitted under [data-theme='confetti'][data-mode='light'].",
   "motion": {
     "transform": {
       "lift": {
@@ -9,6 +9,30 @@
     "tilt": {
       "max": {
         "value": "{motion.tilt.none}"
+      }
+    }
+  },
+  "font": {
+    "weight": {
+      "display": {
+        "value": "{font.weight.regular}"
+      },
+      "body": {
+        "value": "{font.weight.regular}"
+      },
+      "control": {
+        "value": "{font.weight.medium}"
+      },
+      "label": {
+        "value": "{font.weight.medium}"
+      }
+    },
+    "tracking": {
+      "display": {
+        "value": "{font.tracking.snug}"
+      },
+      "label": {
+        "value": "{font.tracking.loose}"
       }
     }
   }

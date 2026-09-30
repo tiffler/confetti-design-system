@@ -210,7 +210,7 @@ Confetti/
 ├─ style-dictionary/          build.js · audit-layers.js · validate-schema.js
 ├─ build/portfolio/           GENERATED, committed — tokens.css/json/dtcg + tailwind
 ├─ docs/ARCHITECTURE.md       this file
-├─ public/fonts/              self-hosted Fredoka + JetBrains Mono
+├─ public/fonts/              self-hosted Instrument Serif, Inter, Fredoka, JetBrains Mono
 └─ src/
    ├─ components/             Button · Card · Badge · Tabs · Overlay · Modal · Toast · Switch · Slider · Icon
    ├─ foundations/            Storybook docs + live token specimens

@@ -249,6 +249,9 @@
   --space-layout-xl: 80px;
   --font-family-fredoka: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-family-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-family-instrument-serif: 'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-family-inter: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
@@ -259,6 +262,8 @@
   --font-tracking-tight: -0.03em;
   --font-tracking-normal: 0;
   --font-tracking-wide: 0.16em;
+  --font-tracking-snug: -0.02em;
+  --font-tracking-loose: 0.1em;
   --font-tracking-display: -0.03em;
   --font-tracking-label: 0.16em;
   --font-leading-none: 1;
@@ -632,9 +637,9 @@
 }
 
 [data-theme="confetti"] {
-  --font-display: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-body: Fredoka, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-label: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: 'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-body: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-label: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --brand-primary: #c40000;
   --brand-on-primary: #ffffff;
   --brand-accent-purple: #c6adda;
@@ -737,6 +742,12 @@
 [data-theme="confetti"][data-mode="dark"] {
   --motion-tilt-max: 0deg;
   --motion-transform-lift: translate(0, -2px);
+  --font-weight-display: 400;
+  --font-weight-body: 400;
+  --font-weight-control: 500;
+  --font-weight-label: 500;
+  --font-tracking-display: -0.02em;
+  --font-tracking-label: 0.1em;
   --text-accent: #ff8d80;
   --action-ghost-text-hover: #ff8d80;
   --accent-purple-bold: #c9a4f5;
@@ -749,6 +760,12 @@
 [data-theme="confetti"][data-mode="light"] {
   --motion-tilt-max: 0deg;
   --motion-transform-lift: translate(0, -2px);
+  --font-weight-display: 400;
+  --font-weight-body: 400;
+  --font-weight-control: 500;
+  --font-weight-label: 500;
+  --font-tracking-display: -0.02em;
+  --font-tracking-label: 0.1em;
 }
 
 /* Theme override (own neutrals / a11y lift) — see tokens/overrides/neon.dark.json */

@@ -55,13 +55,13 @@
   "font": {
     "$comment": "The theme's typefaces. display = headings/titles, body = prose/content, label = mono UI (buttons, badges, eyebrows). A demo repoints these to change the whole system's type.",
     "display": {
-      "value": "{font.family.fredoka}"
+      "value": "{font.family.instrument-serif}"
     },
     "body": {
-      "value": "{font.family.fredoka}"
+      "value": "{font.family.inter}"
     },
     "label": {
-      "value": "{font.family.mono}"
+      "value": "{font.family.inter}"
     }
   },
   "interaction": {
