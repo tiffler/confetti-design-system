@@ -35,9 +35,9 @@ export interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>
   /** Optional mono eyebrow above the title. */
   eyebrow?: ReactNode;
   title?: ReactNode;
-  /** Adds the hover lift + hard shadow. Use for cards that link somewhere. */
+  /** Adds the theme's hover response (a halo, glow or lift). Use for cards that link somewhere. */
   interactive?: boolean;
-  /** `raised` uses the paper-raised surface instead of the card interior. */
+  /** `raised` uses the raised surface instead of the card interior. */
   surface?: CardSurface;
   /**
    * String the hover angle is derived from. Defaults to `title` when it's a string. The
@@ -72,7 +72,7 @@ export function Card({
   const hoverStep = tilt ?? (seedText ? tiltStep(seedText) : 0);
 
   const tiltStyle = {
-    '--card-tilt-hover': `calc(var(--card-tilt-max) * ${hoverStep})`,
+    '--cf-card-tilt': `calc(var(--card-tilt-max) * ${hoverStep})`,
     ...style,
   } as CSSProperties;
 

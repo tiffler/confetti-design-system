@@ -21,7 +21,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Thick-outline container with an optional mono eyebrow and display-face title. `interactive` adds the same hover lift the buttons use, plus a slight turn derived from `seed` — so a card always tilts the same way.\n\nThe **state** control pins hover via `data-force`; it only does anything while `interactive` is on, since a static card has no hover visual.',
+          'Container with an optional mono eyebrow and display-face title. `interactive` adds the theme\'s hover response — a soft halo in Confetti, a lift onto a hard shadow in Adventure and Neon — plus, in a theme that sets one, a slight turn derived from `seed`, so a card always tilts the same way.\n\nThe **state** control pins hover via `data-force`; it only does anything while `interactive` is on, since a static card has no hover visual.',
       },
     },
   },
@@ -29,12 +29,12 @@ const meta = {
     surface: {
       control: 'inline-radio',
       options: ['card', 'raised'],
-      description: '`raised` uses the paper-raised surface instead of the card interior.',
+      description: '`raised` uses the raised surface instead of the card interior.',
       table: { defaultValue: { summary: 'card' } },
     },
     interactive: {
       control: 'boolean',
-      description: 'Adds the hover lift + hard shadow. Use for cards that link somewhere.',
+      description: 'Adds the theme\'s hover response (a halo, glow or lift). Use for cards that link somewhere.',
       table: { defaultValue: { summary: 'false' } },
     },
     state: {

@@ -123,7 +123,7 @@ export const ElevationAndMotion: StoryObj = {
   render: () => (
     <TokenPage
       title="Elevation & motion"
-      lede="Hard offset shadows, the focus ring, transforms, durations and easings. The lift shadows live on the mode axis because they invert ink → chalk; `flat` is axis-independent because it is the absence of one."
+      lede="Shadows and glows, the focus ring, transforms, durations and easings. The lift shadows live on the mode axis because a shadow that reads on a light surface does not read on a dark one; `flat` is axis-independent because it is the absence of one."
       categories={['depth']}
     />
   ),

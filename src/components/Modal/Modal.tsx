@@ -26,8 +26,8 @@ export interface ModalProps {
  *
  * Everything about being above the page — the native `<dialog>`, the focus trap, `inert`,
  * Escape, the top layer, the scrim and the scroll lock — lives in `Overlay` and is shared
- * with every other surface built on it. What Modal adds is the panel: the card fill, sticker
- * border, container radius and hard offset shadow, plus the header / body / footer slots.
+ * with every other surface built on it. What Modal adds is the panel: the card fill, border,
+ * container radius and resting shadow, plus the header / body / footer slots.
  *
  * Reach for Overlay directly when the thing on the scrim is not a panel — an image viewer, a
  * sheet, a menu.

@@ -41,7 +41,7 @@
     "hover-brightness": {
       "value": "{effect.button-hover-brightness}"
     },
-    "$comment-pressed": "Pressed is the inverse of hover — the sticker settles back down. It resolves to the resting values in every theme, so a theme that lifts collapses the lift, and one that brightens (Adventure) drops back to no bump.",
+    "$comment-pressed": "Pressed is the inverse of hover — the control settles back. It resolves to the resting values in every theme, so a theme that lifts collapses the lift, and one that brightens (Adventure) drops back to no bump.",
     "shadow-pressed": {
       "value": "{elevation.flat}"
     },
@@ -77,7 +77,7 @@
       "text": {
         "value": "{action.primary.text}"
       },
-      "$comment": "Ink border is a global sticker rule — primary and secondary differ by fill, not by outline. The hard shadow extrudes from this edge.",
+      "$comment": "The border is shared — primary and secondary differ by fill, not by outline.",
       "border": {
         "value": "{borders.stroke-color.default}"
       }

@@ -53,7 +53,7 @@
   box-sizing: border-box;
   width: var(--slider-thumb-size);
   height: var(--slider-thumb-size);
-  border-radius: var(--radius-circle);
+  border-radius: var(--slider-thumb-radius);
   background: var(--slider-thumb-fill);
   border: var(--slider-thumb-border-width) solid var(--slider-thumb-border);
   box-shadow: var(--slider-thumb-shadow);
@@ -63,11 +63,6 @@
      rather than hanging half over them — which otherwise puts the knob on top of the label
      at one end and the value at the other. This is how a native range input behaves. */
   inset-inline-start: calc(var(--cf-slider-fraction) * (100% - var(--slider-thumb-size)));
-}
-
-.cf-slider__thumb:focus-visible {
-  outline: var(--focus-ring-width) solid var(--focus-ring-color);
-  outline-offset: var(--focus-ring-offset);
 }
 
 .cf-slider__thumb:active {

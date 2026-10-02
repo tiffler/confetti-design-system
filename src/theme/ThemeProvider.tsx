@@ -64,9 +64,19 @@ export function ThemeProvider({
   const [theme, setTheme] = useState<Theme>(themeProp);
   const [mode, setMode] = useState<Mode>(modeProp);
 
-  // Follow controlled props when the consumer drives them (Storybook toolbar).
-  useEffect(() => setTheme(themeProp), [themeProp]);
-  useEffect(() => setMode(modeProp), [modeProp]);
+  // Follow the props when the consumer drives them (the Storybook toolbar does). Adjusting
+  // state while rendering — rather than in an effect — is React's pattern for state derived
+  // from a changed prop: it avoids a second render pass with a stale value on screen.
+  const [seenTheme, setSeenTheme] = useState<Theme>(themeProp);
+  if (themeProp !== seenTheme) {
+    setSeenTheme(themeProp);
+    setTheme(themeProp);
+  }
+  const [seenMode, setSeenMode] = useState<Mode>(modeProp);
+  if (modeProp !== seenMode) {
+    setSeenMode(modeProp);
+    setMode(modeProp);
+  }
 
   useEffect(() => {
     if (target !== 'root') return;

@@ -70,9 +70,9 @@
           }
         },
         "700": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
-          "$description": "success AS TEXT on a light surface (4.86:1 on the old cream; 5.0:1 on porcelain)",
+          "$description": "success AS TEXT on a light surface (4.87:1 on Adventure's sand page, the darkest it sits on)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-green-700"
           }
@@ -283,9 +283,9 @@
       },
       "bark": {
         "400": {
-          "$value": "#6b6146",
+          "$value": "#665d42",
           "$type": "other",
-          "$description": "muted",
+          "$description": "muted — 4.80:1 on the sand page, the darkest surface it sits on",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-bark-400"
           }
@@ -301,17 +301,17 @@
       },
       "forest": {
         "400": {
-          "$value": "#35492f",
+          "$value": "#2d3e28",
           "$type": "other",
-          "$description": "card",
+          "$description": "card — the lightest Adventure dark surface, and so the one that sets the contrast floor. Retuned darker so every text role clears AA on it (muted 4.57:1, danger 5.12:1, success 4.86:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-400"
           }
         },
         "500": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
-          "$description": "panel",
+          "$description": "panel — kept a step below card",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-500"
           }
@@ -1069,28 +1069,12 @@
           "com.confetti.cssVariable": "--shadow-none"
         }
       },
-      "soft": {
-        "$value": "0 1px 2px 0 rgba(20, 20, 28, 0.04), 0 8px 24px -6px rgba(20, 20, 28, 0.12)",
-        "$type": "shadow",
-        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft"
-        }
-      },
       "lifted": {
         "$value": "0 2px 4px 0 rgba(20, 20, 28, 0.04), 0 16px 40px -8px rgba(20, 20, 28, 0.16)",
         "$type": "shadow",
         "$description": "soft, deeper — hover and floating surfaces on light",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-lifted"
-        }
-      },
-      "soft-deep": {
-        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
-        "$type": "shadow",
-        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft-deep"
         }
       },
       "lifted-deep": {
@@ -1196,7 +1180,7 @@
         "subtle": {
           "$value": "0.8deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1",
+          "$description": "outer bound of the hand-placed tilt a theme may apply — components scale this by a per-instance multiplier in -1..1",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
@@ -1212,7 +1196,7 @@
         "max": {
           "$value": "0.8deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker angle",
+          "$description": "outer bound of the hand-placed angle",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-max"
           }
@@ -1369,7 +1353,7 @@
       "200": {
         "$value": "2px",
         "$type": "dimension",
-        "$description": "thick-outline card and button borders",
+        "$description": "the heavier card and control border, for themes that outline strongly",
         "$extensions": {
           "com.confetti.cssVariable": "--size-200"
         }
@@ -2074,14 +2058,14 @@
         }
       },
       "panel": {
-        "$value": "#2a3b2d",
+        "$value": "#26362a",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--surface-panel"
         }
       },
       "card": {
-        "$value": "#35492f",
+        "$value": "#2d3e28",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--surface-card"
@@ -2320,7 +2304,7 @@
       },
       "secondary": {
         "fill": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--action-secondary-fill"
@@ -2334,7 +2318,7 @@
           }
         },
         "fill-hover": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
           "$description": "this theme's secondary responds through brightness, not a background change, so the fill stays put",
           "$extensions": {
@@ -2642,7 +2626,7 @@
       "border-width": {
         "$value": "1px",
         "$type": "other",
-        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
+        "$description": "soft pill — a 1px hairline, not the heavier control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
@@ -2650,7 +2634,7 @@
       "border": {
         "$value": "rgba(236, 226, 206, 0.16)",
         "$type": "other",
-        "$description": "soft pill — subtle tint, not the ink sticker border",
+        "$description": "soft pill — a subtle tint, not the strong control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border"
         }
@@ -3002,7 +2986,7 @@
       },
       "secondary": {
         "fill": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-fill"
@@ -3023,7 +3007,7 @@
           }
         },
         "fill-hover": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-fill-hover"
@@ -3115,7 +3099,7 @@
     },
     "card": {
       "fill": {
-        "$value": "#35492f",
+        "$value": "#2d3e28",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-fill"
@@ -3376,7 +3360,7 @@
       },
       "inline": {
         "fill": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--code-inline-fill"
@@ -3681,7 +3665,7 @@
     },
     "modal": {
       "fill": {
-        "$value": "#35492f",
+        "$value": "#2d3e28",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-fill"
@@ -3725,7 +3709,7 @@
       "shadow": {
         "$value": "3px 3px 0px 0px #ece2ce",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$description": "the resting shadow (elevation.float) — a dialog is already raised",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-shadow"
         }
@@ -3915,7 +3899,7 @@
         }
       },
       "track-fill": {
-        "$value": "#2a3b2d",
+        "$value": "#26362a",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-track-fill"
@@ -3950,8 +3934,16 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
+      "thumb-radius": {
+        "$value": "50%",
+        "$type": "other",
+        "$description": "a circle",
+        "$extensions": {
+          "com.confetti.cssVariable": "--slider-thumb-radius"
+        }
+      },
       "thumb-fill": {
-        "$value": "#35492f",
+        "$value": "#2d3e28",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-fill"
@@ -3974,7 +3966,7 @@
       "thumb-shadow": {
         "$value": "3px 3px 0px 0px #ece2ce",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — the knob sits above the rail",
+        "$description": "the resting shadow (elevation.float) — the knob sits above the rail",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-shadow"
         }
@@ -4021,20 +4013,6 @@
         "$extensions": {
           "com.confetti.cssVariable": "--slider-value-color"
         }
-      },
-      "transition-duration": {
-        "$value": "180ms",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-duration"
-        }
-      },
-      "transition-easing": {
-        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-easing"
-        }
       }
     },
     "switch": {
@@ -4069,7 +4047,7 @@
       "border-width": {
         "$value": "2px",
         "$type": "other",
-        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$description": "the border — a switch is a control, so it carries the same outline as a button",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-border-width"
         }
@@ -4082,7 +4060,7 @@
         }
       },
       "fill": {
-        "$value": "#2a3b2d",
+        "$value": "#26362a",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-fill"
@@ -4112,7 +4090,7 @@
         }
       },
       "icon-color": {
-        "$value": "#2a3b2d",
+        "$value": "#26362a",
         "$type": "other",
         "$description": "the glyph sits ON the thumb, so it takes the track's fill",
         "$extensions": {
@@ -4179,7 +4157,7 @@
     },
     "tabs": {
       "track-fill": {
-        "$value": "#2a3b2d",
+        "$value": "#26362a",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
@@ -4222,6 +4200,14 @@
         "$description": "4px between tabs",
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-gap"
+        }
+      },
+      "tab-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between a tab's label and an icon",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-gap"
         }
       },
       "idle-text": {
@@ -4298,6 +4284,21 @@
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
+      },
+      "tab-border": {
+        "$value": "transparent",
+        "$type": "other",
+        "$description": "a transparent edge matching the indicator's, so the indicator overlays the tab exactly",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-border"
+        }
+      },
+      "tab-leading": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-leading"
+        }
       }
     },
     "toast": {
@@ -4325,7 +4326,7 @@
       "border-width": {
         "$value": "2px",
         "$type": "other",
-        "$description": "the 2px sticker edge — same as Card",
+        "$description": "the card's border weight — same as Card",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-border-width"
         }
@@ -4347,7 +4348,7 @@
       "shadow": {
         "$value": "3px 3px 0px 0px #ece2ce",
         "$type": "other",
-        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$description": "the resting shadow (elevation.float) — a toast sits above the page, and this is how the active theme says so",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-shadow"
         }
@@ -4477,7 +4478,7 @@
     },
     "work-card": {
       "fill": {
-        "$value": "#35492f",
+        "$value": "#2d3e28",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--work-card-fill"
@@ -4488,13 +4489,6 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--work-card-text"
-        }
-      },
-      "text-muted": {
-        "$value": "#9aa88f",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--work-card-text-muted"
         }
       },
       "border": {
@@ -4568,7 +4562,7 @@
         }
       },
       "media-fill": {
-        "$value": "#2a3b2d",
+        "$value": "#26362a",
         "$type": "other",
         "$description": "what shows before an image loads, or when there is none",
         "$extensions": {
@@ -4585,7 +4579,7 @@
       },
       "tag": {
         "fill": {
-          "$value": "#35492f",
+          "$value": "#2d3e28",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--work-card-tag-fill"
@@ -4880,9 +4874,9 @@
           }
         },
         "700": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
-          "$description": "success AS TEXT on a light surface (4.86:1 on the old cream; 5.0:1 on porcelain)",
+          "$description": "success AS TEXT on a light surface (4.87:1 on Adventure's sand page, the darkest it sits on)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-green-700"
           }
@@ -5093,9 +5087,9 @@
       },
       "bark": {
         "400": {
-          "$value": "#6b6146",
+          "$value": "#665d42",
           "$type": "other",
-          "$description": "muted",
+          "$description": "muted — 4.80:1 on the sand page, the darkest surface it sits on",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-bark-400"
           }
@@ -5111,17 +5105,17 @@
       },
       "forest": {
         "400": {
-          "$value": "#35492f",
+          "$value": "#2d3e28",
           "$type": "other",
-          "$description": "card",
+          "$description": "card — the lightest Adventure dark surface, and so the one that sets the contrast floor. Retuned darker so every text role clears AA on it (muted 4.57:1, danger 5.12:1, success 4.86:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-400"
           }
         },
         "500": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
-          "$description": "panel",
+          "$description": "panel — kept a step below card",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-500"
           }
@@ -5879,28 +5873,12 @@
           "com.confetti.cssVariable": "--shadow-none"
         }
       },
-      "soft": {
-        "$value": "0 1px 2px 0 rgba(20, 20, 28, 0.04), 0 8px 24px -6px rgba(20, 20, 28, 0.12)",
-        "$type": "shadow",
-        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft"
-        }
-      },
       "lifted": {
         "$value": "0 2px 4px 0 rgba(20, 20, 28, 0.04), 0 16px 40px -8px rgba(20, 20, 28, 0.16)",
         "$type": "shadow",
         "$description": "soft, deeper — hover and floating surfaces on light",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-lifted"
-        }
-      },
-      "soft-deep": {
-        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
-        "$type": "shadow",
-        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft-deep"
         }
       },
       "lifted-deep": {
@@ -6006,7 +5984,7 @@
         "subtle": {
           "$value": "0.8deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1",
+          "$description": "outer bound of the hand-placed tilt a theme may apply — components scale this by a per-instance multiplier in -1..1",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
@@ -6022,7 +6000,7 @@
         "max": {
           "$value": "0.8deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker angle",
+          "$description": "outer bound of the hand-placed angle",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-max"
           }
@@ -6179,7 +6157,7 @@
       "200": {
         "$value": "2px",
         "$type": "dimension",
-        "$description": "thick-outline card and button borders",
+        "$description": "the heavier card and control border, for themes that outline strongly",
         "$extensions": {
           "com.confetti.cssVariable": "--size-200"
         }
@@ -6960,7 +6938,7 @@
         }
       },
       "muted": {
-        "$value": "#6b6146",
+        "$value": "#665d42",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--text-muted"
@@ -7250,7 +7228,7 @@
           }
         },
         "text": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--status-success-text"
@@ -7265,7 +7243,7 @@
           }
         },
         "on-subtle": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--status-success-on-subtle"
@@ -7452,7 +7430,7 @@
       "border-width": {
         "$value": "1px",
         "$type": "other",
-        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
+        "$description": "soft pill — a 1px hairline, not the heavier control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
@@ -7460,7 +7438,7 @@
       "border": {
         "$value": "rgba(51, 48, 31, 0.12)",
         "$type": "other",
-        "$description": "soft pill — subtle tint, not the ink sticker border",
+        "$description": "soft pill — a subtle tint, not the strong control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border"
         }
@@ -7529,7 +7507,7 @@
         }
       },
       "text-subtle-neutral": {
-        "$value": "#6b6146",
+        "$value": "#665d42",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-text-subtle-neutral"
@@ -7543,7 +7521,7 @@
         }
       },
       "text-subtle-success": {
-        "$value": "#137043",
+        "$value": "#126a40",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-text-subtle-success"
@@ -7946,7 +7924,7 @@
         }
       },
       "text-muted": {
-        "$value": "#6b6146",
+        "$value": "#665d42",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-text-muted"
@@ -8475,7 +8453,7 @@
         }
       },
       "color-muted": {
-        "$value": "#6b6146",
+        "$value": "#665d42",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--icon-color-muted"
@@ -8505,7 +8483,7 @@
         }
       },
       "text-muted": {
-        "$value": "#6b6146",
+        "$value": "#665d42",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-text-muted"
@@ -8535,7 +8513,7 @@
       "shadow": {
         "$value": "3px 3px 0px 0px #33301f",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$description": "the resting shadow (elevation.float) — a dialog is already raised",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-shadow"
         }
@@ -8760,6 +8738,14 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
+      "thumb-radius": {
+        "$value": "50%",
+        "$type": "other",
+        "$description": "a circle",
+        "$extensions": {
+          "com.confetti.cssVariable": "--slider-thumb-radius"
+        }
+      },
       "thumb-fill": {
         "$value": "#fbf7ee",
         "$type": "other",
@@ -8784,7 +8770,7 @@
       "thumb-shadow": {
         "$value": "3px 3px 0px 0px #33301f",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — the knob sits above the rail",
+        "$description": "the resting shadow (elevation.float) — the knob sits above the rail",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-shadow"
         }
@@ -8826,24 +8812,10 @@
         }
       },
       "value-color": {
-        "$value": "#6b6146",
+        "$value": "#665d42",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-value-color"
-        }
-      },
-      "transition-duration": {
-        "$value": "180ms",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-duration"
-        }
-      },
-      "transition-easing": {
-        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-easing"
         }
       }
     },
@@ -8879,7 +8851,7 @@
       "border-width": {
         "$value": "2px",
         "$type": "other",
-        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$description": "the border — a switch is a control, so it carries the same outline as a button",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-border-width"
         }
@@ -9034,8 +9006,16 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
+      "tab-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between a tab's label and an icon",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-gap"
+        }
+      },
       "idle-text": {
-        "$value": "#6b6146",
+        "$value": "#665d42",
         "$type": "other",
         "$description": "inactive tab label",
         "$extensions": {
@@ -9108,6 +9088,21 @@
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
+      },
+      "tab-border": {
+        "$value": "transparent",
+        "$type": "other",
+        "$description": "a transparent edge matching the indicator's, so the indicator overlays the tab exactly",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-border"
+        }
+      },
+      "tab-leading": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-leading"
+        }
       }
     },
     "toast": {
@@ -9126,7 +9121,7 @@
         }
       },
       "text-muted": {
-        "$value": "#6b6146",
+        "$value": "#665d42",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-text-muted"
@@ -9135,7 +9130,7 @@
       "border-width": {
         "$value": "2px",
         "$type": "other",
-        "$description": "the 2px sticker edge — same as Card",
+        "$description": "the card's border weight — same as Card",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-border-width"
         }
@@ -9157,7 +9152,7 @@
       "shadow": {
         "$value": "3px 3px 0px 0px #33301f",
         "$type": "other",
-        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$description": "the resting shadow (elevation.float) — a toast sits above the page, and this is how the active theme says so",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-shadow"
         }
@@ -9194,7 +9189,7 @@
       },
       "edge": {
         "success": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-success"
@@ -9208,7 +9203,7 @@
           }
         },
         "neutral": {
-          "$value": "#6b6146",
+          "$value": "#665d42",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-neutral"
@@ -9217,7 +9212,7 @@
       },
       "icon": {
         "success": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-success"
@@ -9231,7 +9226,7 @@
           }
         },
         "neutral": {
-          "$value": "#6b6146",
+          "$value": "#665d42",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-neutral"
@@ -9298,13 +9293,6 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--work-card-text"
-        }
-      },
-      "text-muted": {
-        "$value": "#6b6146",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--work-card-text-muted"
         }
       },
       "border": {
@@ -9509,7 +9497,7 @@
       },
       "index": {
         "color": {
-          "$value": "#6b6146",
+          "$value": "#665d42",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--work-card-index-color"
@@ -9583,7 +9571,7 @@
       },
       "meta": {
         "color": {
-          "$value": "#6b6146",
+          "$value": "#665d42",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--work-card-meta-color"
@@ -9690,9 +9678,9 @@
           }
         },
         "700": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
-          "$description": "success AS TEXT on a light surface (4.86:1 on the old cream; 5.0:1 on porcelain)",
+          "$description": "success AS TEXT on a light surface (4.87:1 on Adventure's sand page, the darkest it sits on)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-green-700"
           }
@@ -9903,9 +9891,9 @@
       },
       "bark": {
         "400": {
-          "$value": "#6b6146",
+          "$value": "#665d42",
           "$type": "other",
-          "$description": "muted",
+          "$description": "muted — 4.80:1 on the sand page, the darkest surface it sits on",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-bark-400"
           }
@@ -9921,17 +9909,17 @@
       },
       "forest": {
         "400": {
-          "$value": "#35492f",
+          "$value": "#2d3e28",
           "$type": "other",
-          "$description": "card",
+          "$description": "card — the lightest Adventure dark surface, and so the one that sets the contrast floor. Retuned darker so every text role clears AA on it (muted 4.57:1, danger 5.12:1, success 4.86:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-400"
           }
         },
         "500": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
-          "$description": "panel",
+          "$description": "panel — kept a step below card",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-500"
           }
@@ -10689,28 +10677,12 @@
           "com.confetti.cssVariable": "--shadow-none"
         }
       },
-      "soft": {
-        "$value": "0 1px 2px 0 rgba(20, 20, 28, 0.04), 0 8px 24px -6px rgba(20, 20, 28, 0.12)",
-        "$type": "shadow",
-        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft"
-        }
-      },
       "lifted": {
         "$value": "0 2px 4px 0 rgba(20, 20, 28, 0.04), 0 16px 40px -8px rgba(20, 20, 28, 0.16)",
         "$type": "shadow",
         "$description": "soft, deeper — hover and floating surfaces on light",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-lifted"
-        }
-      },
-      "soft-deep": {
-        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
-        "$type": "shadow",
-        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft-deep"
         }
       },
       "lifted-deep": {
@@ -10816,7 +10788,7 @@
         "subtle": {
           "$value": "0.8deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1",
+          "$description": "outer bound of the hand-placed tilt a theme may apply — components scale this by a per-instance multiplier in -1..1",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
@@ -10989,7 +10961,7 @@
       "200": {
         "$value": "2px",
         "$type": "dimension",
-        "$description": "thick-outline card and button borders",
+        "$description": "the heavier card and control border, for themes that outline strongly",
         "$extensions": {
           "com.confetti.cssVariable": "--size-200"
         }
@@ -12270,7 +12242,7 @@
       "border-width": {
         "$value": "1px",
         "$type": "other",
-        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
+        "$description": "soft pill — a 1px hairline, not the heavier control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
@@ -12278,7 +12250,7 @@
       "border": {
         "$value": "rgba(200, 205, 255, 0.14)",
         "$type": "other",
-        "$description": "soft pill — subtle tint, not the ink sticker border",
+        "$description": "soft pill — a subtle tint, not the strong control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border"
         }
@@ -13353,7 +13325,7 @@
       "shadow": {
         "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(200, 205, 255, 0.07)",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$description": "the resting shadow (elevation.float) — a dialog is already raised",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-shadow"
         }
@@ -13578,6 +13550,14 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
+      "thumb-radius": {
+        "$value": "50%",
+        "$type": "other",
+        "$description": "a circle",
+        "$extensions": {
+          "com.confetti.cssVariable": "--slider-thumb-radius"
+        }
+      },
       "thumb-fill": {
         "$value": "#1f1f24",
         "$type": "other",
@@ -13602,7 +13582,7 @@
       "thumb-shadow": {
         "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(200, 205, 255, 0.07)",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — the knob sits above the rail",
+        "$description": "the resting shadow (elevation.float) — the knob sits above the rail",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-shadow"
         }
@@ -13649,20 +13629,6 @@
         "$extensions": {
           "com.confetti.cssVariable": "--slider-value-color"
         }
-      },
-      "transition-duration": {
-        "$value": "180ms",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-duration"
-        }
-      },
-      "transition-easing": {
-        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-easing"
-        }
       }
     },
     "switch": {
@@ -13697,7 +13663,7 @@
       "border-width": {
         "$value": "1px",
         "$type": "other",
-        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$description": "the border — a switch is a control, so it carries the same outline as a button",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-border-width"
         }
@@ -13852,6 +13818,14 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
+      "tab-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between a tab's label and an icon",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-gap"
+        }
+      },
       "idle-text": {
         "$value": "#a7a9cc",
         "$type": "other",
@@ -13926,6 +13900,21 @@
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
+      },
+      "tab-border": {
+        "$value": "transparent",
+        "$type": "other",
+        "$description": "a transparent edge matching the indicator's, so the indicator overlays the tab exactly",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-border"
+        }
+      },
+      "tab-leading": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-leading"
+        }
       }
     },
     "toast": {
@@ -13953,7 +13942,7 @@
       "border-width": {
         "$value": "1px",
         "$type": "other",
-        "$description": "the 2px sticker edge — same as Card",
+        "$description": "the card's border weight — same as Card",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-border-width"
         }
@@ -13975,7 +13964,7 @@
       "shadow": {
         "$value": "0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(200, 205, 255, 0.07)",
         "$type": "other",
-        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$description": "the resting shadow (elevation.float) — a toast sits above the page, and this is how the active theme says so",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-shadow"
         }
@@ -14116,13 +14105,6 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--work-card-text"
-        }
-      },
-      "text-muted": {
-        "$value": "#a7a9cc",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--work-card-text-muted"
         }
       },
       "border": {
@@ -14508,9 +14490,9 @@
           }
         },
         "700": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
-          "$description": "success AS TEXT on a light surface (4.86:1 on the old cream; 5.0:1 on porcelain)",
+          "$description": "success AS TEXT on a light surface (4.87:1 on Adventure's sand page, the darkest it sits on)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-green-700"
           }
@@ -14721,9 +14703,9 @@
       },
       "bark": {
         "400": {
-          "$value": "#6b6146",
+          "$value": "#665d42",
           "$type": "other",
-          "$description": "muted",
+          "$description": "muted — 4.80:1 on the sand page, the darkest surface it sits on",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-bark-400"
           }
@@ -14739,17 +14721,17 @@
       },
       "forest": {
         "400": {
-          "$value": "#35492f",
+          "$value": "#2d3e28",
           "$type": "other",
-          "$description": "card",
+          "$description": "card — the lightest Adventure dark surface, and so the one that sets the contrast floor. Retuned darker so every text role clears AA on it (muted 4.57:1, danger 5.12:1, success 4.86:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-400"
           }
         },
         "500": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
-          "$description": "panel",
+          "$description": "panel — kept a step below card",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-500"
           }
@@ -15507,28 +15489,12 @@
           "com.confetti.cssVariable": "--shadow-none"
         }
       },
-      "soft": {
-        "$value": "0 1px 2px 0 rgba(20, 20, 28, 0.04), 0 8px 24px -6px rgba(20, 20, 28, 0.12)",
-        "$type": "shadow",
-        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft"
-        }
-      },
       "lifted": {
         "$value": "0 2px 4px 0 rgba(20, 20, 28, 0.04), 0 16px 40px -8px rgba(20, 20, 28, 0.16)",
         "$type": "shadow",
         "$description": "soft, deeper — hover and floating surfaces on light",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-lifted"
-        }
-      },
-      "soft-deep": {
-        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
-        "$type": "shadow",
-        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft-deep"
         }
       },
       "lifted-deep": {
@@ -15634,7 +15600,7 @@
         "subtle": {
           "$value": "0.8deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1",
+          "$description": "outer bound of the hand-placed tilt a theme may apply — components scale this by a per-instance multiplier in -1..1",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
@@ -15807,7 +15773,7 @@
       "200": {
         "$value": "2px",
         "$type": "dimension",
-        "$description": "thick-outline card and button borders",
+        "$description": "the heavier card and control border, for themes that outline strongly",
         "$extensions": {
           "com.confetti.cssVariable": "--size-200"
         }
@@ -16880,7 +16846,7 @@
           }
         },
         "text": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--status-success-text"
@@ -16895,7 +16861,7 @@
           }
         },
         "on-subtle": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--status-success-on-subtle"
@@ -17088,7 +17054,7 @@
       "border-width": {
         "$value": "1px",
         "$type": "other",
-        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
+        "$description": "soft pill — a 1px hairline, not the heavier control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
@@ -17096,7 +17062,7 @@
       "border": {
         "$value": "rgba(20, 20, 28, 0.12)",
         "$type": "other",
-        "$description": "soft pill — subtle tint, not the ink sticker border",
+        "$description": "soft pill — a subtle tint, not the strong control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border"
         }
@@ -17179,7 +17145,7 @@
         }
       },
       "text-subtle-success": {
-        "$value": "#137043",
+        "$value": "#126a40",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-text-subtle-success"
@@ -18171,7 +18137,7 @@
       "shadow": {
         "$value": "0 2px 4px 0 rgba(20, 20, 28, 0.04), 0 16px 40px -8px rgba(20, 20, 28, 0.16)",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$description": "the resting shadow (elevation.float) — a dialog is already raised",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-shadow"
         }
@@ -18396,6 +18362,14 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
+      "thumb-radius": {
+        "$value": "50%",
+        "$type": "other",
+        "$description": "a circle",
+        "$extensions": {
+          "com.confetti.cssVariable": "--slider-thumb-radius"
+        }
+      },
       "thumb-fill": {
         "$value": "#ffffff",
         "$type": "other",
@@ -18420,7 +18394,7 @@
       "thumb-shadow": {
         "$value": "0 2px 4px 0 rgba(20, 20, 28, 0.04), 0 16px 40px -8px rgba(20, 20, 28, 0.16)",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — the knob sits above the rail",
+        "$description": "the resting shadow (elevation.float) — the knob sits above the rail",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-shadow"
         }
@@ -18467,20 +18441,6 @@
         "$extensions": {
           "com.confetti.cssVariable": "--slider-value-color"
         }
-      },
-      "transition-duration": {
-        "$value": "180ms",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-duration"
-        }
-      },
-      "transition-easing": {
-        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-easing"
-        }
       }
     },
     "switch": {
@@ -18515,7 +18475,7 @@
       "border-width": {
         "$value": "1px",
         "$type": "other",
-        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$description": "the border — a switch is a control, so it carries the same outline as a button",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-border-width"
         }
@@ -18670,6 +18630,14 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
+      "tab-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between a tab's label and an icon",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-gap"
+        }
+      },
       "idle-text": {
         "$value": "#62637a",
         "$type": "other",
@@ -18744,6 +18712,21 @@
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
+      },
+      "tab-border": {
+        "$value": "transparent",
+        "$type": "other",
+        "$description": "a transparent edge matching the indicator's, so the indicator overlays the tab exactly",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-border"
+        }
+      },
+      "tab-leading": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-leading"
+        }
       }
     },
     "toast": {
@@ -18771,7 +18754,7 @@
       "border-width": {
         "$value": "1px",
         "$type": "other",
-        "$description": "the 2px sticker edge — same as Card",
+        "$description": "the card's border weight — same as Card",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-border-width"
         }
@@ -18793,7 +18776,7 @@
       "shadow": {
         "$value": "0 2px 4px 0 rgba(20, 20, 28, 0.04), 0 16px 40px -8px rgba(20, 20, 28, 0.16)",
         "$type": "other",
-        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$description": "the resting shadow (elevation.float) — a toast sits above the page, and this is how the active theme says so",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-shadow"
         }
@@ -18830,7 +18813,7 @@
       },
       "edge": {
         "success": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-success"
@@ -18853,7 +18836,7 @@
       },
       "icon": {
         "success": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-success"
@@ -18934,13 +18917,6 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--work-card-text"
-        }
-      },
-      "text-muted": {
-        "$value": "#62637a",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--work-card-text-muted"
         }
       },
       "border": {
@@ -19326,9 +19302,9 @@
           }
         },
         "700": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
-          "$description": "success AS TEXT on a light surface (4.86:1 on the old cream; 5.0:1 on porcelain)",
+          "$description": "success AS TEXT on a light surface (4.87:1 on Adventure's sand page, the darkest it sits on)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-green-700"
           }
@@ -19539,9 +19515,9 @@
       },
       "bark": {
         "400": {
-          "$value": "#6b6146",
+          "$value": "#665d42",
           "$type": "other",
-          "$description": "muted",
+          "$description": "muted — 4.80:1 on the sand page, the darkest surface it sits on",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-bark-400"
           }
@@ -19557,17 +19533,17 @@
       },
       "forest": {
         "400": {
-          "$value": "#35492f",
+          "$value": "#2d3e28",
           "$type": "other",
-          "$description": "card",
+          "$description": "card — the lightest Adventure dark surface, and so the one that sets the contrast floor. Retuned darker so every text role clears AA on it (muted 4.57:1, danger 5.12:1, success 4.86:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-400"
           }
         },
         "500": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
-          "$description": "panel",
+          "$description": "panel — kept a step below card",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-500"
           }
@@ -20325,28 +20301,12 @@
           "com.confetti.cssVariable": "--shadow-none"
         }
       },
-      "soft": {
-        "$value": "0 1px 2px 0 rgba(20, 20, 28, 0.04), 0 8px 24px -6px rgba(20, 20, 28, 0.12)",
-        "$type": "shadow",
-        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft"
-        }
-      },
       "lifted": {
         "$value": "0 2px 4px 0 rgba(20, 20, 28, 0.04), 0 16px 40px -8px rgba(20, 20, 28, 0.16)",
         "$type": "shadow",
         "$description": "soft, deeper — hover and floating surfaces on light",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-lifted"
-        }
-      },
-      "soft-deep": {
-        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
-        "$type": "shadow",
-        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft-deep"
         }
       },
       "lifted-deep": {
@@ -20452,7 +20412,7 @@
         "subtle": {
           "$value": "0.8deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1",
+          "$description": "outer bound of the hand-placed tilt a theme may apply — components scale this by a per-instance multiplier in -1..1",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
@@ -20468,7 +20428,7 @@
         "max": {
           "$value": "0.8deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker angle",
+          "$description": "outer bound of the hand-placed angle",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-max"
           }
@@ -20625,7 +20585,7 @@
       "200": {
         "$value": "2px",
         "$type": "dimension",
-        "$description": "thick-outline card and button borders",
+        "$description": "the heavier card and control border, for themes that outline strongly",
         "$extensions": {
           "com.confetti.cssVariable": "--size-200"
         }
@@ -21899,7 +21859,7 @@
       "border-width": {
         "$value": "1px",
         "$type": "other",
-        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
+        "$description": "soft pill — a 1px hairline, not the heavier control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
@@ -21907,7 +21867,7 @@
       "border": {
         "$value": "rgba(237, 224, 255, 0.16)",
         "$type": "other",
-        "$description": "soft pill — subtle tint, not the ink sticker border",
+        "$description": "soft pill — a subtle tint, not the strong control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border"
         }
@@ -22982,7 +22942,7 @@
       "shadow": {
         "$value": "3px 3px 0px 0px #ede0ff",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$description": "the resting shadow (elevation.float) — a dialog is already raised",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-shadow"
         }
@@ -23207,6 +23167,14 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
+      "thumb-radius": {
+        "$value": "50%",
+        "$type": "other",
+        "$description": "a circle",
+        "$extensions": {
+          "com.confetti.cssVariable": "--slider-thumb-radius"
+        }
+      },
       "thumb-fill": {
         "$value": "#2e1650",
         "$type": "other",
@@ -23231,7 +23199,7 @@
       "thumb-shadow": {
         "$value": "3px 3px 0px 0px #ede0ff",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — the knob sits above the rail",
+        "$description": "the resting shadow (elevation.float) — the knob sits above the rail",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-shadow"
         }
@@ -23278,20 +23246,6 @@
         "$extensions": {
           "com.confetti.cssVariable": "--slider-value-color"
         }
-      },
-      "transition-duration": {
-        "$value": "180ms",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-duration"
-        }
-      },
-      "transition-easing": {
-        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-easing"
-        }
       }
     },
     "switch": {
@@ -23326,7 +23280,7 @@
       "border-width": {
         "$value": "2px",
         "$type": "other",
-        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$description": "the border — a switch is a control, so it carries the same outline as a button",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-border-width"
         }
@@ -23481,6 +23435,14 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
+      "tab-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between a tab's label and an icon",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-gap"
+        }
+      },
       "idle-text": {
         "$value": "#a98fc9",
         "$type": "other",
@@ -23555,6 +23517,21 @@
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
+      },
+      "tab-border": {
+        "$value": "transparent",
+        "$type": "other",
+        "$description": "a transparent edge matching the indicator's, so the indicator overlays the tab exactly",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-border"
+        }
+      },
+      "tab-leading": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-leading"
+        }
       }
     },
     "toast": {
@@ -23582,7 +23559,7 @@
       "border-width": {
         "$value": "2px",
         "$type": "other",
-        "$description": "the 2px sticker edge — same as Card",
+        "$description": "the card's border weight — same as Card",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-border-width"
         }
@@ -23604,7 +23581,7 @@
       "shadow": {
         "$value": "3px 3px 0px 0px #ede0ff",
         "$type": "other",
-        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$description": "the resting shadow (elevation.float) — a toast sits above the page, and this is how the active theme says so",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-shadow"
         }
@@ -23745,13 +23722,6 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--work-card-text"
-        }
-      },
-      "text-muted": {
-        "$value": "#a98fc9",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--work-card-text-muted"
         }
       },
       "border": {
@@ -24137,9 +24107,9 @@
           }
         },
         "700": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
-          "$description": "success AS TEXT on a light surface (4.86:1 on the old cream; 5.0:1 on porcelain)",
+          "$description": "success AS TEXT on a light surface (4.87:1 on Adventure's sand page, the darkest it sits on)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-green-700"
           }
@@ -24350,9 +24320,9 @@
       },
       "bark": {
         "400": {
-          "$value": "#6b6146",
+          "$value": "#665d42",
           "$type": "other",
-          "$description": "muted",
+          "$description": "muted — 4.80:1 on the sand page, the darkest surface it sits on",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-bark-400"
           }
@@ -24368,17 +24338,17 @@
       },
       "forest": {
         "400": {
-          "$value": "#35492f",
+          "$value": "#2d3e28",
           "$type": "other",
-          "$description": "card",
+          "$description": "card — the lightest Adventure dark surface, and so the one that sets the contrast floor. Retuned darker so every text role clears AA on it (muted 4.57:1, danger 5.12:1, success 4.86:1)",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-400"
           }
         },
         "500": {
-          "$value": "#2a3b2d",
+          "$value": "#26362a",
           "$type": "other",
-          "$description": "panel",
+          "$description": "panel — kept a step below card",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-forest-500"
           }
@@ -25136,28 +25106,12 @@
           "com.confetti.cssVariable": "--shadow-none"
         }
       },
-      "soft": {
-        "$value": "0 1px 2px 0 rgba(20, 20, 28, 0.04), 0 8px 24px -6px rgba(20, 20, 28, 0.12)",
-        "$type": "shadow",
-        "$description": "diffuse ambient shadow on light surfaces — rests just above the page",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft"
-        }
-      },
       "lifted": {
         "$value": "0 2px 4px 0 rgba(20, 20, 28, 0.04), 0 16px 40px -8px rgba(20, 20, 28, 0.16)",
         "$type": "shadow",
         "$description": "soft, deeper — hover and floating surfaces on light",
         "$extensions": {
           "com.confetti.cssVariable": "--shadow-lifted"
-        }
-      },
-      "soft-deep": {
-        "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4)",
-        "$type": "shadow",
-        "$description": "dark-surface counterpart of soft — black, since a light shadow does not read on dark",
-        "$extensions": {
-          "com.confetti.cssVariable": "--shadow-soft-deep"
         }
       },
       "lifted-deep": {
@@ -25263,7 +25217,7 @@
         "subtle": {
           "$value": "0.8deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1",
+          "$description": "outer bound of the hand-placed tilt a theme may apply — components scale this by a per-instance multiplier in -1..1",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-subtle"
           }
@@ -25279,7 +25233,7 @@
         "max": {
           "$value": "0.8deg",
           "$type": "other",
-          "$description": "outer bound of the hand-placed sticker angle",
+          "$description": "outer bound of the hand-placed angle",
           "$extensions": {
             "com.confetti.cssVariable": "--motion-tilt-max"
           }
@@ -25436,7 +25390,7 @@
       "200": {
         "$value": "2px",
         "$type": "dimension",
-        "$description": "thick-outline card and button borders",
+        "$description": "the heavier card and control border, for themes that outline strongly",
         "$extensions": {
           "com.confetti.cssVariable": "--size-200"
         }
@@ -26507,7 +26461,7 @@
           }
         },
         "text": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--status-success-text"
@@ -26522,7 +26476,7 @@
           }
         },
         "on-subtle": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--status-success-on-subtle"
@@ -26710,7 +26664,7 @@
       "border-width": {
         "$value": "1px",
         "$type": "other",
-        "$description": "soft pill — 1px hairline, not the 2px sticker edge",
+        "$description": "soft pill — a 1px hairline, not the heavier control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border-width"
         }
@@ -26718,7 +26672,7 @@
       "border": {
         "$value": "rgba(26, 4, 48, 0.12)",
         "$type": "other",
-        "$description": "soft pill — subtle tint, not the ink sticker border",
+        "$description": "soft pill — a subtle tint, not the strong control border",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-border"
         }
@@ -26801,7 +26755,7 @@
         }
       },
       "text-subtle-success": {
-        "$value": "#137043",
+        "$value": "#126a40",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--badge-text-subtle-success"
@@ -27793,7 +27747,7 @@
       "shadow": {
         "$value": "3px 3px 0px 0px #1a0430",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — a dialog is already raised",
+        "$description": "the resting shadow (elevation.float) — a dialog is already raised",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-shadow"
         }
@@ -28018,6 +27972,14 @@
           "com.confetti.cssVariable": "--slider-thumb-size"
         }
       },
+      "thumb-radius": {
+        "$value": "50%",
+        "$type": "other",
+        "$description": "a circle",
+        "$extensions": {
+          "com.confetti.cssVariable": "--slider-thumb-radius"
+        }
+      },
       "thumb-fill": {
         "$value": "#ffffff",
         "$type": "other",
@@ -28042,7 +28004,7 @@
       "thumb-shadow": {
         "$value": "3px 3px 0px 0px #1a0430",
         "$type": "other",
-        "$description": "the sticker lift, held at rest — the knob sits above the rail",
+        "$description": "the resting shadow (elevation.float) — the knob sits above the rail",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-shadow"
         }
@@ -28089,20 +28051,6 @@
         "$extensions": {
           "com.confetti.cssVariable": "--slider-value-color"
         }
-      },
-      "transition-duration": {
-        "$value": "180ms",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-duration"
-        }
-      },
-      "transition-easing": {
-        "$value": "cubic-bezier(0.2, 0, 0.2, 1)",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--slider-transition-easing"
-        }
       }
     },
     "switch": {
@@ -28137,7 +28085,7 @@
       "border-width": {
         "$value": "2px",
         "$type": "other",
-        "$description": "the sticker edge — a switch is a control, so it carries the same outline as a button",
+        "$description": "the border — a switch is a control, so it carries the same outline as a button",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-border-width"
         }
@@ -28292,6 +28240,14 @@
           "com.confetti.cssVariable": "--tabs-gap"
         }
       },
+      "tab-gap": {
+        "$value": "8px",
+        "$type": "other",
+        "$description": "8px between a tab's label and an icon",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-gap"
+        }
+      },
       "idle-text": {
         "$value": "#5b3d7a",
         "$type": "other",
@@ -28366,6 +28322,21 @@
         "$extensions": {
           "com.confetti.cssVariable": "--tabs-transition-easing"
         }
+      },
+      "tab-border": {
+        "$value": "transparent",
+        "$type": "other",
+        "$description": "a transparent edge matching the indicator's, so the indicator overlays the tab exactly",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-border"
+        }
+      },
+      "tab-leading": {
+        "$value": "1",
+        "$type": "other",
+        "$extensions": {
+          "com.confetti.cssVariable": "--tabs-tab-leading"
+        }
       }
     },
     "toast": {
@@ -28393,7 +28364,7 @@
       "border-width": {
         "$value": "2px",
         "$type": "other",
-        "$description": "the 2px sticker edge — same as Card",
+        "$description": "the card's border weight — same as Card",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-border-width"
         }
@@ -28415,7 +28386,7 @@
       "shadow": {
         "$value": "3px 3px 0px 0px #1a0430",
         "$type": "other",
-        "$description": "the hard offset — a toast sits above the page, and this is how this system says so",
+        "$description": "the resting shadow (elevation.float) — a toast sits above the page, and this is how the active theme says so",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-shadow"
         }
@@ -28452,7 +28423,7 @@
       },
       "edge": {
         "success": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-edge-success"
@@ -28475,7 +28446,7 @@
       },
       "icon": {
         "success": {
-          "$value": "#137043",
+          "$value": "#126a40",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--toast-icon-success"
@@ -28556,13 +28527,6 @@
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--work-card-text"
-        }
-      },
-      "text-muted": {
-        "$value": "#5b3d7a",
-        "$type": "other",
-        "$extensions": {
-          "com.confetti.cssVariable": "--work-card-text-muted"
         }
       },
       "border": {

@@ -79,7 +79,7 @@ const GLYPHS: Array<{ icon: PhosphorIcon; name: string }> = [
 const SIZES: IconSize[] = ['sm', 'md', 'lg'];
 const TONES: IconTone[] = ['inherit', 'default', 'muted', 'accent'];
 
-/* Bold is the system weight — it matches the 2px sticker linework. The others are shown
+/* Bold is the system weight — it matches the weight of the type beside it. The others are shown
    so the escape hatch is documented, not so it gets used. */
 const WEIGHTS: IconWeight[] = ['regular', 'bold', 'fill'];
 

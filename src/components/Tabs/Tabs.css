@@ -52,13 +52,13 @@
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
-  gap: var(--space-inline);
+  gap: var(--tabs-tab-gap);
 
   /* Roomy control padding (the About-slider size), plus a transparent border matching the
      indicator's, so the indicator overlays the tab exactly and the idle → active transition
      doesn't shift the label. */
   padding: var(--tabs-tab-padding-vertical) var(--tabs-tab-padding-horizontal);
-  border: var(--badge-border-width) solid var(--borders-stroke-color-none);
+  border: var(--badge-border-width) solid var(--tabs-tab-border);
   border-radius: var(--badge-radius);
   background: transparent;
   color: var(--tabs-idle-text);
@@ -67,7 +67,7 @@
   font-size: var(--tabs-font-size);
   font-weight: var(--tabs-font-weight);
   letter-spacing: var(--tabs-tracking);
-  line-height: var(--font-leading-none);
+  line-height: var(--tabs-tab-leading);
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
@@ -88,14 +88,6 @@
    because the indicator only exists after the first measuring pass. */
 .cf-tabs--neutral .cf-tabs__tab[aria-selected='true'] {
   color: var(--badge-text-neutral);
-}
-
-/* `data-force` pins a state that a control cannot otherwise trigger — see the same hook
-   in Button.css. Nothing sets it at runtime. */
-.cf-tabs__tab:focus-visible,
-.cf-tabs__tab[data-force~='focus'] {
-  outline: var(--focus-ring-width) solid var(--focus-ring-color);
-  outline-offset: var(--focus-ring-offset);
 }
 
 /* An idle tab warms toward the active label on hover, so the group feels live before

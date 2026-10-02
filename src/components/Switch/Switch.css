@@ -29,11 +29,6 @@
   background: var(--switch-fill-checked);
 }
 
-.cf-switch:focus-visible {
-  outline: var(--focus-ring-width) solid var(--focus-ring-color);
-  outline-offset: var(--focus-ring-offset);
-}
-
 .cf-switch[disabled] {
   opacity: 0.45;
   cursor: not-allowed;

@@ -217,24 +217,6 @@ export function Caption({ children, style }: { children: ReactNode; style?: CSSP
   );
 }
 
-/** The big number on a stat tile. Display face, tight leading so it sits on its label. */
-export function Figure({ children, style }: { children: ReactNode; style?: CSSProperties }) {
-  return (
-    <span
-      style={{
-        fontFamily: 'var(--font-family-display)',
-        fontSize: 'var(--font-size-h2)',
-        fontWeight: 'var(--font-weight-display)',
-        lineHeight: 'var(--font-leading-none)',
-        color: 'var(--text-default)',
-        ...style,
-      }}
-    >
-      {children}
-    </span>
-  );
-}
-
 /**
  * Dashed annotation frame — the spec-sheet convention, one group per component family.
  *
@@ -304,19 +286,5 @@ export function Tick({ children, style }: { children: ReactNode; style?: CSSProp
     >
       {children}
     </span>
-  );
-}
-
-/** Hairline separator on the subtle border role. */
-export function Rule({ style }: { style?: CSSProperties }) {
-  return (
-    <hr
-      style={{
-        border: 0,
-        borderTop: 'var(--size-100) solid var(--borders-stroke-color-subtle)',
-        margin: 0,
-        ...style,
-      }}
-    />
   );
 }

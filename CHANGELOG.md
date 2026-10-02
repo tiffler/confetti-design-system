@@ -6,54 +6,54 @@ the token sync); additive-only, non-visual changes are **patch**.
 
 ## [Unreleased]
 
+
 ### Changed
 
-- **Premium restyle of the Confetti theme** *(visual — consumers will see it)*. Light neutrals
-  move from cream to a luxury white (`colors.porcelain`, no cream or yellow cast, with an
-  indigo-black ink matching the dark mode). The sticker language is softened: 1px
-  hairline borders (`borders.stroke-color.default` is now a low-alpha stroke), soft diffuse
-  shadows (`shadow.soft` / `lifted`, with `-deep` counterparts for dark), a 20px container
-  radius (`radius.500`) and no card tilt. The brand
-  red and the four accent hues are unchanged. Adventure and Neon are unaffected.
-- **Lighter Confetti headings** *(visual — consumers will see it)*. Still Fredoka, but headings
-  drop from 600 to 400 (new `font.weight.regular`). Labels and controls keep their tracked mono.
-  Adventure and Neon are unaffected.
+Everything below is **visual — consumers will see it.** It applies to the Confetti theme;
+Adventure and Neon resolve to identical values apart from the shared scrim tint and the
+success-on-subtle text tint.
 
-- **Midnight-indigo dark mode with a glow hover** *(visual — consumers will see it)*. Dark neutrals
-  move to a new `colors.midnight` ramp — a rich indigo-black page with dark charcoal cards (a tiny hint of indigo) and evenly spaced surface steps
-  (raised sits at the midpoint between page and card) and lavender-tinged text. Hover no longer
-  moves anything: on dark, **cards** glow in a bright, saturated indigo with a lit edge, close to a neon tube (`shadow.halo-deep`) and gain a faint light along the top edge (`shadow.highlight`, via new
-  `elevation.edge`); on light, a card's hover is the same halo (`shadow.halo`) in ink — identical size and spread — with no rise. Buttons
-  neither move nor cast a shadow on hover: primary and danger lighten a step, and secondary takes
-  a clear background (new `action.secondary.fill-hover`, using the new `porcelain.300` and
-  `midnight.450` steps). Dialogs, toasts and slider thumbs hold a still
-  shadow at rest through a new required role, `elevation.float`, so the card glow doesn't spread
-  to them (Adventure and Neon set it equal to their lift, so nothing changes there).
-  `motion.transform.lift` is held at rest for Confetti. The code-block / dark-panel
-  ground and the scrim move to midnight too, so no brown or cream remains in Confetti's dark.
-  Contrast improves (the palest brand red reads at 6.64:1 on the lightest surface, up from
-  4.96:1). The unused `colors.graphite`, `chalk`, `cream` and `ink` primitives and the
-  `shadow.hard-ink` / `hard-cream` shadows are removed. Adventure and Neon keep their own
-  palettes; the shared scrim and the success-on-subtle text tint shift with it.
-- **Danger button reworked** *(visual — consumers will see it, in every theme)*. The hazard-tape
-  treatment (yellow ground, black drifting stripes, label plate) is replaced by an outline at
-  rest — `status.danger` red text and edge on a clear ground — that fills solid red on hover.
-  `status.danger.fill` is now red with a white `on-fill` (was yellow/black), and
-  `status.danger.stripe`, the `colors.yellow` primitives and the `button.danger.stripe-*` and
-  `label-pad-*` tokens are gone. New `button.danger.fill-hover` / `text-hover` / `border-hover`.
-  The stripe animation is removed with them.
+- **Light mode is a luxury white.** A new `colors.porcelain` ramp replaces the cream/greige:
+  a bright white with the faintest cool cast and an indigo-black ink. The four surface steps
+  (card, raised, page, panel) are evenly spaced, with raised at the midpoint of page and card.
+- **Dark mode is midnight.** A new `colors.midnight` ramp: a rich indigo-black page with dark
+  charcoal cards that carry a tiny hint of indigo, evenly spaced surface steps, and
+  lavender-tinged text. The code-block / dark-panel ground and the scrim follow it, so no brown
+  or cream remains in Confetti's dark. Contrast improves (the palest brand red reads at 7.32:1
+  on the lightest surface, up from 4.96:1). The unused `graphite`, `chalk`, `cream`, `ink` and
+  `stone` primitives and the hard shadows are removed.
+- **Softer shape.** Hairline borders (`borders.stroke-color.default` is a low-alpha stroke), a
+  20px container radius (`radius.500`), no card tilt, and headings at Fredoka 400
+  (`font.weight.regular`). Labels and controls keep their tracked mono.
+- **Hover never moves anything.** Cards glow instead: an indigo halo with a lit edge on dark
+  (`shadow.halo-deep`, plus a faint top edge via `elevation.edge`) and an ink halo of identical
+  size and spread on light (`shadow.halo`). The glow is card-only. Buttons neither move nor cast
+  a shadow: primary and danger lighten a step, and secondary takes a clear background (new
+  `action.secondary.fill-hover`, using `porcelain.300` / `midnight.450`). Dialogs, toasts and
+  slider thumbs hold a still shadow through the new required role `elevation.float`
+  (Adventure and Neon set it equal to their lift). Confetti sets no transform at all on hover
+  (`motion.still`), because an identity `translate(0,0)` still re-rasterizes the element's text.
+- **Danger button reworked, in every theme.** The hazard-tape treatment (yellow ground, drifting
+  black stripes, label plate) is replaced by an outline at rest that fills solid red on hover.
+  `status.danger.fill` is now red with a white `on-fill`; `status.danger.stripe`, the
+  `colors.yellow` primitives and the `button.danger.stripe-*` / `label-pad-*` tokens are gone.
+- **Modal close button** is a compact 40px square pulled toward the corner
+  (`modal.close-size`, `modal.close-inset`), instead of a full-size control pill.
+
+- **Tabs track radius** now matches the pill (`radius.control` instead of `radius.container`)
+  — 999px in Confetti, 12px in Adventure, square in Neon.
 
 ### Added
 
-- **`WorkCard`** — an image-first project card (media frame with category tag and index number,
-  title and date beneath), as a link when given an `href`. Tokens under `work-card.*`.
-- **`DarkPanel`** — a deep call-to-action block that stays dark in light and dark mode, with
-  every Button variant legible on it. Backed by new semantic roles `surface.deep`,
-  `text.on-deep` and `text.on-deep-muted` (required by the schema; wired to each theme's
-  syntax inputs) and `dark-panel.*` tokens.
-- New semantic `size.control-compact` (40px). Fixes a layering violation in `modal.close-size`,
-  which referenced a primitive directly.
-
+- **`WorkCard`** — an image-first project card: a media frame with category tag and index number,
+  title and date beneath, as a link when given an `href`. Tokens under `work-card.*`.
+- **`DarkPanel`** — a deep call-to-action block that stays dark in both modes, with every Button
+  variant legible on it. Backed by the required semantic roles `surface.deep`, `text.on-deep`
+  and `text.on-deep-muted` (wired to each theme's syntax inputs) and `dark-panel.*` tokens.
+- **Linting.** `npm run lint` runs ESLint (TypeScript, React, hooks, a11y), Stylelint, and a new
+  `audit:css` that fails component CSS reading anything but its own component tokens.
+  `npm run check` runs everything CI runs, and a new `checks` workflow does so on every push and
+  PR, including a check that the committed `build/portfolio/` is not stale.
 - **Every component now documents every state.** `argTypes` are complete across all six —
   each prop has a typed control, a description, and its default in the props table — and
   Button, Card and Tabs gained an **All states** story.
@@ -94,6 +94,25 @@ the token sync); additive-only, non-visual changes are **patch**.
 
 ### Fixed
 
+- **Foundations docs rendered empty.** They still used token names from before the rename
+  (`color-text-primary`, `space-12`, `font-size-18`, ...). Mapped to current names.
+- **Tabs, Slider, Switch and Overlay were partly unstyled.** Their CSS used the new
+  `fill` / `text` / `border` / `horizontal` names while the token files kept `bg` / `fg` /
+  `border-color` / `padding-x`. The tokens are renamed to match.
+- **The Elevation docs page hard-coded a `translate(-2px, -2px)` hover**, contradicting the
+  no-movement hover. It now reads the real tokens.
+- **Tailwind output had no colours.** `build/portfolio/tailwind.theme.js` mapped a `color-` prefix
+  that no token has had since the rename, so `colors` was empty. It now maps the semantic colour
+  roles (surface, text, action, status, accent, border, icon).
+- **Adventure failed AA in places**: muted, accent, danger and success text on the dark card
+  (3.9–4.4:1) and two light values at 4.49–4.50:1. Retuned `forest.400` / `forest.500`,
+  `bark.400` and `green.700`; every text and fill pair now clears 4.5:1 in all six theme × mode
+  combinations.
+- **A modal token referenced a primitive** (`modal.close-size`), failing the three-tier audit; the
+  semantic `size.control-compact` (40px) fixes it.
+- Stale wording across docs, stories and token comments (sticker, hard offset, cream, hazard
+  tape) now describes what the system does.
+
 - **Mode toggle only worked one way.** Changing a global makes Storybook rewrite the preview
   URL and remount the docs page, and Storybook only writes a `globals` param for values that
   differ from `initialGlobals` — so `mode:dark` was added but switching back to light never
@@ -107,10 +126,19 @@ the token sync); additive-only, non-visual changes are **patch**.
   fills, borders, radii and fonts vanished while the spacing ramp kept working. The
   Foundations hook now mirrors the toolbar onto the docs root.
 
-### Changed
+### Removed
 
-- **Tabs track radius** now matches the pill (`radius.control` instead of `radius.container`)
-  — 999px in Confetti, 12px in Adventure, square in Neon.
+- Unused dependencies `@vercel/speed-insights` and `@vitejs/plugin-react`; dead exports and the
+  unused `Figure` / `Rule` helpers; the unused `slider.transition-*` and `work-card.text-muted`
+  tokens.
+
+### Internal
+
+- One global focus ring (`src/styles/global.css`); components no longer restate it.
+- Component CSS reads only component tokens: new `tabs.tab-gap`, `tab-border`, `tab-leading` and
+  `slider.thumb-radius`; component-local custom properties are namespaced `--cf-*`.
+- `ThemeProvider` follows its props by adjusting state during render instead of in an effect.
+- Dependencies updated within their semver ranges (Storybook 10.6, React 19.3, Vite 8.3, ...).
 
 ## [0.3.0] — 2026-07-27
 

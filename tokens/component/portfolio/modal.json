@@ -1,5 +1,5 @@
 {
-  "$comment": "Modal / dialog — the PANEL only. The scrim and the viewport padding it sits in belong to Overlay (tokens/component/portfolio/overlay.json), which Modal is composed from; there is no second copy of them here. The panel is a Card-weight surface — same card fill, sticker border, container radius, and hard offset shadow — so a dialog reads as a card that has come forward rather than a new kind of object. There is no z-index token: showModal() promotes the dialog to the browser's top layer, which no ancestor stacking context can trap.",
+  "$comment": "Modal / dialog — the PANEL only. The scrim and the viewport padding it sits in belong to Overlay (tokens/component/portfolio/overlay.json), which Modal is composed from; there is no second copy of them here. The panel is a Card-weight surface — same card fill, border, container radius and resting shadow — so a dialog reads as a card that has come forward rather than a new kind of object. There is no z-index token: showModal() promotes the dialog to the browser's top layer, which no ancestor stacking context can trap.",
   "modal": {
     "fill": {
       "value": "{surface.card}"
@@ -21,7 +21,7 @@
     },
     "shadow": {
       "value": "{elevation.float}",
-      "comment": "the sticker lift, held at rest — a dialog is already raised"
+      "comment": "the resting shadow (elevation.float) — a dialog is already raised"
     },
     "padding": {
       "value": "{space.inset}"

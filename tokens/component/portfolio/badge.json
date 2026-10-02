@@ -5,11 +5,11 @@
     },
     "border-width": {
       "value": "{borders.stroke-weight.thin}",
-      "comment": "soft pill — 1px hairline, not the 2px sticker edge"
+      "comment": "soft pill — a 1px hairline, not the heavier control border"
     },
     "border": {
       "value": "{borders.stroke-color.subtle}",
-      "comment": "soft pill — subtle tint, not the ink sticker border"
+      "comment": "soft pill — a subtle tint, not the strong control border"
     },
     "font-family": {
       "value": "{font.family.label}"

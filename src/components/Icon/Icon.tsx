@@ -33,8 +33,8 @@ export interface IconProps {
 }
 
 /**
- * Bold is the system weight: it matches the 2px sticker linework on buttons and cards.
- * Regular reads thin and clinical beside them.
+ * Bold is the system weight: it matches the weight of the type and strokes it sits
+ * beside. Regular reads thin and clinical next to them.
  */
 const SYSTEM_WEIGHT: IconWeight = 'bold';
 

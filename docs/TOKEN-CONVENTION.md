@@ -171,7 +171,7 @@ unchanged (476 → 476, identical multiset).
 
 ### Confetti's documented deviations
 
-- `shadow.soft` / `lifted` / `soft-deep` / `lifted-deep` / `glow` / `highlight` and `motion.tilt.none` stay named,
+- `shadow.lifted` / `lifted-deep` / `halo` / `halo-deep` / `highlight` and `motion.tilt.none` / `motion.still` stay named,
   for the same reason as `none` below: they are kinds of light and depth, and `-deep` is the dark-surface
   counterpart of a shadow, not a larger step.
 - `colors.midnight.glow` / `glow-edge` / `highlight` stay named alongside the `a14` / `a28` / `a86` alpha steps. They are

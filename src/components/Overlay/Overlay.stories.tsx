@@ -92,8 +92,8 @@ export const Bottom: Story = {
         <Overlay open={open} onClose={() => setOpen(false)} label="Example sheet" placement="bottom">
           <Panel onClose={() => setOpen(false)}>
             <p style={{ margin: 0 }}>
-              `placement="bottom"` is the mobile-sheet position. The viewport padding still applies,
-              so a tall sheet grows upward into the scroll area rather than off-screen.
+              {'`placement="bottom"`'} is the mobile-sheet position. The viewport padding still
+              applies, so a tall sheet grows upward into the scroll area rather than off-screen.
             </p>
           </Panel>
         </Overlay>

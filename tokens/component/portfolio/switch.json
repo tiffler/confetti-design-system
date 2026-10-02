@@ -15,7 +15,7 @@
     },
     "border-width": {
       "value": "{borders.stroke-weight.default}",
-      "comment": "the sticker edge — a switch is a control, so it carries the same outline as a button"
+      "comment": "the border — a switch is a control, so it carries the same outline as a button"
     },
     "border": {
       "value": "{borders.stroke-color.default}"

@@ -23,6 +23,10 @@
       "value": "{space.inset-xs}",
       "comment": "4px between tabs"
     },
+    "tab-gap": {
+      "value": "{space.inline}",
+      "comment": "8px between a tab's label and an icon"
+    },
     "idle-text": {
       "value": "{text.muted}",
       "comment": "inactive tab label"
@@ -57,6 +61,13 @@
     },
     "transition-easing": {
       "value": "{motion.easing.interaction}"
+    },
+    "tab-border": {
+      "value": "{borders.stroke-color.none}",
+      "comment": "a transparent edge matching the indicator's, so the indicator overlays the tab exactly"
+    },
+    "tab-leading": {
+      "value": "{font.leading.display}"
     }
   }
 }

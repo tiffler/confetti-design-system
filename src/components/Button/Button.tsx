@@ -7,7 +7,7 @@ export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
-   * Primary = brand fill. Secondary = paper fill with ink border. Ghost = text only.
+   * Primary = brand fill. Secondary = quiet fill with a hairline edge. Ghost = text only.
    * Danger = the destructive action: same footprint as primary, an outline in the danger
    * status red that fills solid on hover.
    */

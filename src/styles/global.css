@@ -18,9 +18,18 @@
   --text-default: var(--colors-porcelain-900);
 }
 
-/* Global keyboard focus ring — mode-driven (2px ink/cream in light/dark).
-   Components may override with a tighter rule. */
-:focus-visible {
+/* The one keyboard focus ring for the whole system, driven by the mode-axis focus.ring
+   roles. It is an outline with real width, never a colour change alone, so it holds for
+   people who cannot tell two colours apart.
+
+   Components do not restate it: Button, Tabs, Slider and Switch all inherit this rule. A
+   surface where the ring would vanish repoints `--focus-ring-color` (DarkPanel does) rather
+   than writing its own outline.
+
+   `data-force="focus"` pins the state so a Storybook control or a Chromatic snapshot can hold
+   it — a focus ring cannot otherwise be triggered from a story. Nothing sets it at runtime. */
+:focus-visible,
+[data-force~='focus'] {
   outline: var(--focus-ring-width, 2px) solid var(--focus-ring-color, currentColor);
   outline-offset: var(--focus-ring-offset, 2px);
 }

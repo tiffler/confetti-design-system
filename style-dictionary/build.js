@@ -163,8 +163,20 @@ const themeFrom = (prefix, flat) =>
   );
 
 const base = tokenIndex[`${schema.baseTheme}.${schema.baseMode}`];
+
+// Colour utilities map the semantic ROLES only — never primitives, which are the palette and
+// not the API. Keys keep their full role name, so `bg-surface-page` and `text-text-muted` read
+// as the token they are. The list is by group rather than by value-sniffing: a role's group is
+// stable, whereas guessing "is this a colour?" from a value string is not.
+const COLOR_ROLE_GROUPS = ['surface-', 'text-', 'action-', 'status-', 'accent-', 'borders-stroke-color-', 'icon-color-'];
+const colorRoles = Object.fromEntries(
+  Object.keys(base)
+    .filter((name) => COLOR_ROLE_GROUPS.some((group) => name.startsWith(group)))
+    .map((name) => [name, `var(--${name})`])
+);
+
 const tailwindTheme = {
-  colors: themeFrom('color-', base),
+  colors: colorRoles,
   spacing: themeFrom('space-', base),
   borderRadius: themeFrom('radius-', base),
   fontFamily: themeFrom('font-family-', base),

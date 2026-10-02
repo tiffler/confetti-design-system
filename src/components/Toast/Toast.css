@@ -3,8 +3,8 @@
 .cf-toast {
   /* Neutral is the default tone. Each modifier below repoints these two properties, so a
      tone is one place to edit rather than a rule per painted property. */
-  --toast-edge: var(--toast-edge-neutral);
-  --toast-icon: var(--toast-icon-neutral);
+  --cf-toast-edge: var(--toast-edge-neutral);
+  --cf-toast-icon: var(--toast-icon-neutral);
 
   display: flex;
   align-items: flex-start;
@@ -21,27 +21,27 @@
   border-radius: var(--toast-radius);
   box-shadow: var(--toast-shadow);
 
-  /* The tone stripe, wider than the sticker border so it reads as a deliberate rule rather
+  /* The tone stripe, wider than the card border so it reads as a deliberate rule rather
      than a recoloured edge. `border-inline-start` rather than a pseudo-element: it follows
      the writing direction for free, and the radius clips it without a second declaration
      to keep in sync. */
-  border-inline-start: var(--toast-edge-width) solid var(--toast-edge);
+  border-inline-start: var(--toast-edge-width) solid var(--cf-toast-edge);
 }
 
 .cf-toast--success {
-  --toast-edge: var(--toast-edge-success);
-  --toast-icon: var(--toast-icon-success);
+  --cf-toast-edge: var(--toast-edge-success);
+  --cf-toast-icon: var(--toast-icon-success);
 }
 
 .cf-toast--danger {
-  --toast-edge: var(--toast-edge-danger);
-  --toast-icon: var(--toast-icon-danger);
+  --cf-toast-edge: var(--toast-edge-danger);
+  --cf-toast-icon: var(--toast-icon-danger);
 }
 
 /* The other half of the tone signal. This is the one place in the system an Icon sets its
    own color instead of inheriting — the surrounding text is deliberately not tinted. */
 .cf-toast__icon {
-  color: var(--toast-icon);
+  color: var(--cf-toast-icon);
   flex: none;
 }
 

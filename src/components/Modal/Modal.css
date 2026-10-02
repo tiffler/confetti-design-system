@@ -4,8 +4,8 @@
    `.cf-modal` is applied to that same <dialog> element, so everything below is the panel and
    the two width variants. */
 
-/* A Card-weight surface: same fill, sticker border, container radius, and hard offset
-   shadow — a dialog is a card that has come forward, not a new kind of object. Unlike a
+/* A Card-weight surface: same fill, border and container radius, plus the resting
+   shadow (`--modal-shadow`) — a dialog is a card that has come forward, not a new kind of object. Unlike a
    card it holds the lift at rest, since it is already raised. */
 .cf-modal__panel {
   box-sizing: border-box;

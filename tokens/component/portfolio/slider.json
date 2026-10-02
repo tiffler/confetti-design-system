@@ -1,5 +1,5 @@
 {
-  "$comment": "Slider — a value picked by dragging along a rail. The rail is the secondary paper fill, the travelled portion is the brand, and the knob is a card-weight disc with the sticker border, so the control reads as the same family as Button and Switch. The row is `size.control` tall regardless of how thin the rail is: the rail is the graphic, but the whole row is the target, which is what keeps a 12px rail comfortably grabbable.",
+  "$comment": "Slider — a value picked by dragging along a rail. The rail is the secondary paper fill, the travelled portion is the brand, and the knob is a card-weight disc with the card border, so the control reads as the same family as Button and Switch. The row is `size.control` tall regardless of how thin the rail is: the rail is the graphic, but the whole row is the target, which is what keeps a 12px rail comfortably grabbable.",
   "slider": {
     "height": {
       "value": "{size.control}",
@@ -27,6 +27,10 @@
     "thumb-size": {
       "value": "{size.slider.thumb}"
     },
+    "thumb-radius": {
+      "value": "{borders.radius.avatar}",
+      "comment": "a circle"
+    },
     "thumb-fill": {
       "value": "{surface.card}"
     },
@@ -38,7 +42,7 @@
     },
     "thumb-shadow": {
       "value": "{elevation.float}",
-      "comment": "the sticker lift, held at rest — the knob sits above the rail"
+      "comment": "the resting shadow (elevation.float) — the knob sits above the rail"
     },
     "gap": {
       "value": "{space.inline}",
@@ -58,12 +62,6 @@
     },
     "value-color": {
       "value": "{text.muted}"
-    },
-    "transition-duration": {
-      "value": "{motion.duration.interaction}"
-    },
-    "transition-easing": {
-      "value": "{motion.easing.interaction}"
     }
   }
 }

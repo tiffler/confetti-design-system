@@ -7,9 +7,6 @@
     "text": {
       "value": "{text.default}"
     },
-    "text-muted": {
-      "value": "{text.muted}"
-    },
     "border": {
       "value": "{borders.stroke-color.subtle}"
     },

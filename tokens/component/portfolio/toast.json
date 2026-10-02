@@ -1,5 +1,5 @@
 {
-  "$comment": "Toast — a transient notification. It is Card-weight paper (raised surface, sticker border, hard offset shadow) with a tone carried by an ACCENT EDGE and the icon rather than by a coloured fill. That choice is deliberate: a solid green or red panel would force every foreground inside it — label, body, the dismiss control — onto a second set of tokens, and the dismiss button would stop matching every other ghost button in the system. Colouring the edge instead keeps the toast's interior identical to any other paper surface, so text.primary, text.muted and Button ghost all work unchanged, and the tone still reads instantly from across the page.",
+  "$comment": "Toast — a transient notification. It is Card-weight paper (raised surface, hairline border, the same resting shadow as a dialog) with a tone carried by an ACCENT EDGE and the icon rather than by a coloured fill. That choice is deliberate: a solid green or red panel would force every foreground inside it — label, body, the dismiss control — onto a second set of tokens, and the dismiss button would stop matching every other ghost button in the system. Colouring the edge instead keeps the toast's interior identical to any other paper surface, so text.primary, text.muted and Button ghost all work unchanged, and the tone still reads instantly from across the page.",
   "toast": {
     "fill": {
       "value": "{surface.raised}"
@@ -12,7 +12,7 @@
     },
     "border-width": {
       "value": "{borders.stroke-weight.default}",
-      "comment": "the 2px sticker edge — same as Card"
+      "comment": "the card's border weight — same as Card"
     },
     "border": {
       "value": "{borders.stroke-color.default}"
@@ -22,7 +22,7 @@
     },
     "shadow": {
       "value": "{elevation.float}",
-      "comment": "the hard offset — a toast sits above the page, and this is how this system says so"
+      "comment": "the resting shadow (elevation.float) — a toast sits above the page, and this is how the active theme says so"
     },
     "padding": {
       "value": "{space.inset-sm}"
@@ -34,7 +34,7 @@
       "value": "{size.dialog.sm}",
       "comment": "matches the small dialog, so a toast and a confirmation read as the same family"
     },
-    "$comment-edge": "The tone stripe down the leading edge. Wider than the sticker border it replaces on that side, so it reads as a deliberate rule rather than a recoloured edge — hence a space step rather than a border width.",
+    "$comment-edge": "The tone stripe down the leading edge. Wider than the card border it replaces on that side, so it reads as a deliberate rule rather than a recoloured edge — hence a space step rather than a border width.",
     "edge-width": {
       "value": "{space.inset-xs}",
       "comment": "4px"

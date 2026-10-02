@@ -34,7 +34,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Four variants sharing one footprint. Primary, secondary and danger all respond on hover in whatever way the active theme specifies — Confetti lifts onto a hard ink shadow, Adventure brightens hard and drops the same shadow without moving, Neon glows; ghost only shifts its text to the brand. Pressed is the inverse of hover — the sticker settles back down — so it resolves to the resting values in every theme. All values come from `--button-*` component tokens.\n\n**Danger** is the destructive action: primary\'s shape in a quieter register. An outline in `status.danger` red at rest, filling solid on hover — so it never competes with a primary beside it, and still turns unmistakable at the moment of commitment. It reads the danger status rather than the brand, so it stays red in every theme.\n\nUse the **state** control to pin hover, focus, or pressed: the CSS pairs each real pseudo-class with a `data-force` attribute, which is what lets a state be held still for a control or a snapshot.',
+          'Four variants sharing one footprint. Primary, secondary and danger all respond on hover in whatever way the active theme specifies — Confetti changes colour only (nothing moves, no shadow), Adventure brightens hard and drops a hard shadow without moving, Neon glows; ghost only shifts its text to the brand. Pressed is the inverse of hover — the control settles back — so it resolves to the resting values in every theme. All values come from `--button-*` component tokens.\n\n**Danger** is the destructive action: primary\'s shape in a quieter register. An outline in `status.danger` red at rest, filling solid on hover — so it never competes with a primary beside it, and still turns unmistakable at the moment of commitment. It reads the danger status rather than the brand, so it stays red in every theme.\n\nUse the **state** control to pin hover, focus, or pressed: the CSS pairs each real pseudo-class with a `data-force` attribute, which is what lets a state be held still for a control or a snapshot.',
       },
     },
   },
@@ -43,7 +43,7 @@ const meta = {
       control: 'inline-radio',
       options: VARIANTS,
       description:
-        'Primary = brand fill. Secondary = paper fill with ink border. Ghost = text only. Danger = destructive, a red outline that fills on hover.',
+        'Primary = brand fill. Secondary = quiet fill with a hairline edge. Ghost = text only. Danger = destructive, a red outline that fills on hover.',
       table: { defaultValue: { summary: 'primary' } },
     },
     state: {

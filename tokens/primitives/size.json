@@ -6,7 +6,7 @@
     },
     "200": {
       "value": "2px",
-      "comment": "thick-outline card and button borders"
+      "comment": "the heavier card and control border, for themes that outline strongly"
     },
     "300": {
       "value": "4px",

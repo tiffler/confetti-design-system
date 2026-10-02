@@ -25,7 +25,7 @@
   --colors-green-100: #dff2e6;
   --colors-green-400: #3fbe83;
   --colors-green-600: #1b7a4b;
-  --colors-green-700: #137043;
+  --colors-green-700: #126a40;
   --colors-green-800: #1a3b2c;
   --colors-purple-100: #f0e5f2;
   --colors-purple-400: #c6adda;
@@ -52,10 +52,10 @@
   --colors-sand-200: #ece2ce;
   --colors-sand-300: #e6dcc4;
   --colors-sand-a12: rgba(51, 48, 31, 0.12);
-  --colors-bark-400: #6b6146;
+  --colors-bark-400: #665d42;
   --colors-bark-600: #33301f;
-  --colors-forest-400: #35492f;
-  --colors-forest-500: #2a3b2d;
+  --colors-forest-400: #2d3e28;
+  --colors-forest-500: #26362a;
   --colors-forest-700: #1e2c20;
   --colors-forest-800: #16231a;
   --colors-forest-a16: rgba(236, 226, 206, 0.16);
@@ -150,9 +150,7 @@
   --radius-full: 999px;
   --radius-circle: 50%;
   --shadow-none: none;
-  --shadow-soft: 0 1px 2px 0 rgba(20, 20, 28, 0.04), 0 8px 24px -6px rgba(20, 20, 28, 0.12);
   --shadow-lifted: 0 2px 4px 0 rgba(20, 20, 28, 0.04), 0 16px 40px -8px rgba(20, 20, 28, 0.16);
-  --shadow-soft-deep: 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.4);
   --shadow-lifted-deep: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6);
   --shadow-halo: 0 0 0 1px rgba(20, 20, 28, 0.16), 0 0 28px -6px rgba(20, 20, 28, 0.24), 0 10px 36px -16px rgba(20, 20, 28, 0.24);
   --shadow-halo-deep: 0 0 0 1px rgba(165, 150, 255, 0.95), 0 0 28px -6px rgba(118, 100, 255, 0.72), 0 10px 36px -16px rgba(118, 100, 255, 0.72);
@@ -480,6 +478,7 @@
   --slider-track-border: var(--borders-stroke-color-default);
   --slider-fill-fill: var(--action-primary-fill);
   --slider-thumb-size: var(--size-slider-thumb);
+  --slider-thumb-radius: var(--borders-radius-avatar);
   --slider-thumb-fill: var(--surface-card);
   --slider-thumb-border-width: var(--borders-stroke-weight-default);
   --slider-thumb-border: var(--borders-stroke-color-default);
@@ -490,8 +489,6 @@
   --slider-label-font-size: var(--font-size-label);
   --slider-label-tracking: var(--font-tracking-label);
   --slider-value-color: var(--text-muted);
-  --slider-transition-duration: var(--motion-duration-interaction);
-  --slider-transition-easing: var(--motion-easing-interaction);
   --switch-track-width: var(--size-switch-track-width);
   --switch-track-height: var(--size-switch-track-height);
   --switch-thumb-size: var(--size-switch-thumb);
@@ -517,6 +514,7 @@
   --tabs-track-radius: var(--borders-radius-control);
   --tabs-track-padding: var(--space-inset-xs);
   --tabs-gap: var(--space-inset-xs);
+  --tabs-tab-gap: var(--space-inline);
   --tabs-idle-text: var(--text-muted);
   --tabs-hover-text: var(--text-default);
   --tabs-font-family: var(--font-family-label);
@@ -527,6 +525,8 @@
   --tabs-tab-padding-vertical: var(--space-inset-sm);
   --tabs-transition-duration: var(--motion-duration-interaction);
   --tabs-transition-easing: var(--motion-easing-interaction);
+  --tabs-tab-border: var(--borders-stroke-color-none);
+  --tabs-tab-leading: var(--font-leading-display);
   --toast-fill: var(--surface-raised);
   --toast-text: var(--text-default);
   --toast-text-muted: var(--text-muted);
@@ -552,7 +552,6 @@
   --toast-body-leading: var(--font-leading-body);
   --work-card-fill: var(--surface-card);
   --work-card-text: var(--text-default);
-  --work-card-text-muted: var(--text-muted);
   --work-card-border: var(--borders-stroke-color-subtle);
   --work-card-border-width: var(--borders-stroke-weight-default);
   --work-card-radius: var(--borders-radius-container);
@@ -659,9 +658,9 @@
   --action-ghost-text: #14141c;
   --status-success-fill: #1b7a4b;
   --status-success-on-fill: #ffffff;
-  --status-success-text: #137043;
+  --status-success-text: #126a40;
   --status-success-subtle: #dff2e6;
-  --status-success-on-subtle: #137043;
+  --status-success-on-subtle: #126a40;
   --status-danger-fill: #c40000;
   --status-danger-on-fill: #ffffff;
   --status-danger-text: #c40000;
@@ -743,8 +742,8 @@
 [data-theme="adventure"][data-mode="dark"] {
   --surface-page: #16231a;
   --surface-raised: #1e2c20;
-  --surface-panel: #2a3b2d;
-  --surface-card: #35492f;
+  --surface-panel: #26362a;
+  --surface-card: #2d3e28;
   --surface-backdrop: #16231a;
   --text-default: #ece2ce;
   --text-muted: #9aa88f;
@@ -753,9 +752,9 @@
   --borders-stroke-color-default: #ece2ce;
   --borders-stroke-color-subtle: rgba(236, 226, 206, 0.16);
   --borders-stroke-color-none: transparent;
-  --action-secondary-fill: #2a3b2d;
+  --action-secondary-fill: #26362a;
   --action-secondary-text: #ece2ce;
-  --action-secondary-fill-hover: #2a3b2d;
+  --action-secondary-fill-hover: #26362a;
   --action-ghost-fill: transparent;
   --action-ghost-text: #ece2ce;
   --action-ghost-text-hover: #79b98c;
@@ -781,7 +780,7 @@
   --surface-card: #fbf7ee;
   --surface-backdrop: #9aa88f;
   --text-default: #33301f;
-  --text-muted: #6b6146;
+  --text-muted: #665d42;
   --text-inverse: #fbf7ee;
   --borders-stroke-color-default: #33301f;
   --borders-stroke-color-subtle: rgba(51, 48, 31, 0.12);

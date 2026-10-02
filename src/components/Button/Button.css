@@ -9,7 +9,7 @@
   position: relative;
 
   /* Height is set here, not back-solved from padding — padding-y stays as the floor
-     for labels that wrap to two lines. `box-sizing: border-box` so the 2px sticker
+     for labels that wrap to two lines. `box-sizing: border-box` so the
      border counts inward and the button measures exactly 48px. */
   box-sizing: border-box;
   min-height: var(--button-min-height);
@@ -55,14 +55,6 @@
    pressed on demand and Chromatic can regression-test them. It changes nothing at
    runtime: no consumer sets the attribute, and the pseudo-classes remain the real
    trigger. Space-separated, so `data-force="hover pressed"` composes. */
-
-/* Focus ring comes from the mode axis: 2px ink/cream in light/dark. Never
-   color-only — it is an outline with real width. */
-.cf-button:focus-visible,
-.cf-button[data-force~='focus'] {
-  outline: var(--focus-ring-width) solid var(--focus-ring-color);
-  outline-offset: var(--focus-ring-offset);
-}
 
 .cf-button[disabled] {
   opacity: 0.45;
@@ -138,7 +130,7 @@
 
 /* --- Pressed -------------------------------------------------------------- */
 
-/* The inverse of hover: the sticker settles back down. Because pressing happens while
+/* The inverse of hover: the control settles back. Because pressing happens while
    hovering, this has to out-rank the hover rules above — hence the later position and
    the matching specificity. Statically it reads the same as rest, which is the point:
    the button is flat again. */

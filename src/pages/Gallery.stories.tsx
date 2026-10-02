@@ -15,8 +15,8 @@ import { Caption, Grid, Lede, Page, Row, Stack, Text, Title } from './kit';
 
 /**
  * An index page — a hero, a working category filter, and a grid of interactive cards.
- * This is the page that shows the sticker hover at scale: each card's tilt is derived from
- * its title, so neighbours turn different ways and the angle survives a re-filter.
+ * This is the page that shows the card hover at scale. In a theme that tilts, each card's angle
+ * is derived from its title, so neighbours turn different ways and the angle survives a re-filter.
  *
  * The whole card is the control here, so there is deliberately no button nested inside it —
  * the "Read note" line is a plain affordance, and the card itself carries the role, tab stop
@@ -60,7 +60,7 @@ const NOTES: Note[] = [
     date: 'Jul 19',
     minutes: 4,
     excerpt: 'The lift is not decoration. It is the control telling you it will accept a click.',
-    body: 'Confetti lifts a filled button onto a hard offset shadow; Adventure brightens it in place; Neon lights it up. Each reads as the same promise because each is the same token repointed — and a theme added tomorrow gets to answer the question its own way without touching a component. Pressed is the inverse everywhere — the sticker settles back down — which is why it resolves to the resting values rather than to some separate look nobody designed.',
+    body: 'Confetti changes a filled button’s colour in place; Adventure brightens it and drops a hard shadow; Neon lights it up. Each reads as the same promise because each is the same token repointed — and a theme added tomorrow gets to answer the question its own way without touching a component. Pressed is the inverse everywhere — the control settles back — which is why it resolves to the resting values rather than to some separate look nobody designed.',
   },
   {
     id: 'n3',
@@ -86,7 +86,7 @@ const NOTES: Note[] = [
     category: 'writing',
     date: 'Jul 6',
     minutes: 3,
-    excerpt: 'surface-raised, not cream-100. The second one is true and useless.',
+    excerpt: 'surface-raised, not porcelain-50. The second one is true and useless.',
     body: 'A name that describes the paint locks the value in place: rename the paint and every reference lies. A name that describes the job survives a re-skin, because the job does not change when the brand does. This is the entire argument for the semantic layer, and it fits in a sentence.',
   },
   {
@@ -105,7 +105,7 @@ const NOTES: Note[] = [
     date: 'Jun 22',
     minutes: 4,
     excerpt: 'Two pixels, a real outline, and never colour alone.',
-    body: 'A focus state signalled only by a colour shift is invisible to a good portion of the people who depend on it most. The ring here is an outline with actual width, offset from the control, and it comes from the mode axis so it flips to cream on a dark page instead of vanishing into it.',
+    body: 'A focus state signalled only by a colour shift is invisible to a good portion of the people who depend on it most. The ring here is an outline with actual width, offset from the control, and it comes from the mode axis so it flips to a light ring on a dark page instead of vanishing into it.',
   },
   {
     id: 'n8',
@@ -243,7 +243,7 @@ function Gallery() {
               Load {Math.min(remaining, PAGE_SIZE)} more
             </Button>
           ) : (
-            <Caption>That's all of them.</Caption>
+            <Caption>That&apos;s all of them.</Caption>
           )}
         </Row>
       </Stack>

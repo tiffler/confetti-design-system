@@ -29,8 +29,8 @@
         "comment": "deep tint — the subtle end of the pair in DARK mode, carrying chalk (10.37:1)"
       },
       "700": {
-        "value": "#137043",
-        "comment": "success AS TEXT on a light surface (4.86:1 on the old cream; 5.0:1 on porcelain)"
+        "value": "#126a40",
+        "comment": "success AS TEXT on a light surface (4.87:1 on Adventure's sand page, the darkest it sits on)"
       },
       "600": {
         "value": "#1b7a4b",
@@ -148,8 +148,8 @@
         "comment": "warm near-black — Adventure light-mode text and borders"
       },
       "400": {
-        "value": "#6b6146",
-        "comment": "muted"
+        "value": "#665d42",
+        "comment": "muted — 4.80:1 on the sand page, the darkest surface it sits on"
       }
     },
     "forest": {
@@ -162,12 +162,12 @@
         "comment": "raised"
       },
       "500": {
-        "value": "#2a3b2d",
-        "comment": "panel"
+        "value": "#26362a",
+        "comment": "panel — kept a step below card"
       },
       "400": {
-        "value": "#35492f",
-        "comment": "card"
+        "value": "#2d3e28",
+        "comment": "card — the lightest Adventure dark surface, and so the one that sets the contrast floor. Retuned darker so every text role clears AA on it (muted 4.57:1, danger 5.12:1, success 4.86:1)"
       },
       "a16": {
         "value": "rgba(236, 226, 206, 0.16)",

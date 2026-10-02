@@ -13,8 +13,13 @@ Confetti is a React + CSS design system whose real product is a **token pipeline
 | `npm run storybook` | Builds tokens, then serves Storybook on `:6006` (`STORYBOOK_PORT=<n>` to move it). |
 | `npm run build-storybook` | Builds tokens, then a static Storybook into `storybook-static/`. |
 | `npm run typecheck` | `tsc --noEmit`. |
+| `npm run lint` | ESLint (TS, React, hooks, a11y) + Stylelint + `audit:css`. |
+| `npm run audit:css` | Component CSS reads only component tokens; nothing reads a variable that doesn't exist. |
+| `npm run check` | `tokens` + `typecheck` + `lint` — everything CI runs. Run it before committing. |
 
-There is **no test runner**. Verification is `npm run typecheck`, `npm run tokens` (which fails hard on contract or schema violations), and Chromatic visual snapshots in CI (`.github/workflows/chromatic.yml`, runs `build-storybook` on push to `main` and every PR).
+There is **no test runner**. Verification is `npm run check` (CI runs the same, plus a check that the committed `build/portfolio/` is not stale — `.github/workflows/checks.yml`) and Chromatic visual snapshots (`.github/workflows/chromatic.yml`, runs `build-storybook` on push to `main` and every PR).
+
+**Always read the exit code, not just the last line of output.** `npm run tokens` prints its summary after the audit, so a failing audit can scroll away — a layering violation once shipped to `main` that way.
 
 ## The token pipeline
 
@@ -40,6 +45,8 @@ The audit's "unused primitive / unused semantic role" notices are informational,
 
 `tokens/_schema.json` lists roles that every theme × mode combination must resolve. `style-dictionary/validate-schema.js` runs during the build and throws for the specific `theme (mode)` that's missing one. Adding a name to `required` means supplying it in **every** mode file and/or through every theme's brand-kit inputs — otherwise the build breaks for the combinations you didn't touch.
 
+**Isolation.** Adventure and Neon bring their own neutrals and shadows through `tokens/overrides/`. A new role that a *mode* file defines would otherwise leak Confetti's value into them, so when you add one (as `elevation.float` and `action.secondary.fill-hover` were) set it in every theme's override files too — for a theme that should not change, as an alias of the role it already used (`{elevation.lift}`). Verify by diffing the resolved `build/portfolio/tokens.json` before and after: only the theme you meant to change should differ.
+
 ### How the CSS is emitted
 
 Two independent axes composed by the cascade, never a matrix. `style-dictionary/build.js` emits:
@@ -55,7 +62,10 @@ Themes and modes are discovered by directory listing. A new theme file is picked
 
 - One directory per component holding `X.tsx` + `X.css` + `X.stories.tsx`, plus `tokens/component/portfolio/x.json`.
 - CSS classes are BEM-ish under a `cf-` prefix: `.cf-button`, `.cf-button--primary`, `.cf-button__spinner`.
-- **Component CSS may only read component tokens** (`var(--button-primary-fill)`). Never a semantic role, never a primitive, never a literal color/size. That's what keeps a component ignorant of theme and mode.
+- **Component CSS may only read component tokens** (`var(--button-primary-fill)`), plus `--cf-*` custom properties the component sets itself (e.g. `--cf-slider-fraction`, set inline from TSX). Never a semantic role, never a primitive, never a literal color/size. That's what keeps a component ignorant of theme and mode — and `npm run audit:css` enforces it. If a component needs a value no token provides, add a component token; don't reach past it.
+- **Don't restate the focus ring.** `src/styles/global.css` owns the one `:focus-visible` rule (and its `data-force="focus"` snapshot hook). A surface where it vanishes repoints `--focus-ring-color` (see `DarkPanel`).
+- **Hover that doesn't move sets no transform at all** — use `motion.still` (`none`), not an identity `translate(0,0)`: an identity transform is still a transform change, which re-rasterizes the element's text by a subpixel.
+- **Hover is a theme decision.** Components read `--*-shadow-hover` / `--*-transform-hover` tokens and never assume a lift, a glow or a tilt.
 - New components must be exported from `src/index.ts` (component + its types).
 - Story titles follow `Components/<Name>` and `Pages/<Name>`; ordering is set by `storySort` in `.storybook/preview.tsx`.
 - Accessibility is part of the component, not the story: `role`/`aria-*` on the element, keyboard handling in the component. Several components carry dev-only `console.warn` guards behind `import.meta.env.DEV` (see `Button.warnIfUnnamedIconButton`) — follow that pattern rather than documenting the requirement.

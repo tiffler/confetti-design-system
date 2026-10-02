@@ -138,7 +138,7 @@ function Ratio({ ratio }: { ratio: number }) {
  * Color swatches for every token matching `prefix`, live from the build.
  *
  * Sorted lightest to darkest by relative luminance rather than source order, so a
- * ramp reads as a ramp. Each swatch carries live text in both ink and cream with
+ * ramp reads as a ramp. Each swatch carries live text in both the default and inverse text colours with
  * the measured ratio, which is the only way to see at a glance which foreground a
  * surface can actually carry.
  */
@@ -150,8 +150,8 @@ export function ColorGrid({ prefix, sort = 'luminance' }: { prefix: string; sort
   // sort by what renders rather than by their raw alpha value. Undefined until the
   // index resolves; contrast.ts owns the fallback backdrop.
   const page = all['surface-page']?.value;
-  const ink = all['text-default']?.value;
-  const cream = all['text-inverse']?.value;
+  const textDefault = all['text-default']?.value;
+  const textInverse = all['text-inverse']?.value;
 
   const ordered =
     sort === 'source'
@@ -166,10 +166,10 @@ export function ColorGrid({ prefix, sort = 'luminance' }: { prefix: string; sort
       {ordered.map(([name, token]) => {
         // `page` is the backdrop: translucent swatches render over the page surface,
         // so that is what their alpha composites against.
-        const inkRatio = ink ? contrastRatio(ink, token.value, page) : null;
-        const creamRatio = cream ? contrastRatio(cream, token.value, page) : null;
-        const inkOk = !!inkRatio && inkRatio >= AA;
-        const creamOk = !!creamRatio && creamRatio >= AA;
+        const defaultRatio = textDefault ? contrastRatio(textDefault, token.value, page) : null;
+        const inverseRatio = textInverse ? contrastRatio(textInverse, token.value, page) : null;
+        const defaultOk = !!defaultRatio && defaultRatio >= AA;
+        const inverseOk = !!inverseRatio && inverseRatio >= AA;
 
         return (
           <div key={name} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-inline)' }}>
@@ -188,32 +188,32 @@ export function ColorGrid({ prefix, sort = 'luminance' }: { prefix: string; sort
                 minHeight: 64,
               }}
             >
-              {inkOk ? (
+              {defaultOk ? (
                 <span style={{ color: 'var(--text-default)', fontSize: 'var(--font-size-body)' }}>
-                  Aa — ink
+                  Aa — default
                 </span>
               ) : null}
-              {creamOk ? (
+              {inverseOk ? (
                 <span style={{ color: 'var(--text-inverse)', fontSize: 'var(--font-size-body)' }}>
-                  Aa — cream
+                  Aa — inverse
                 </span>
               ) : null}
             </div>
 
             <Caption name={name} value={token.value} comment={token.comment} />
 
-            {inkOk || creamOk ? (
+            {defaultOk || inverseOk ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                {inkOk ? (
+                {defaultOk ? (
                   <span style={mono}>
-                    <span style={{ color: 'var(--text-muted)' }}>ink </span>
-                    <Ratio ratio={inkRatio as number} />
+                    <span style={{ color: 'var(--text-muted)' }}>default </span>
+                    <Ratio ratio={defaultRatio as number} />
                   </span>
                 ) : null}
-                {creamOk ? (
+                {inverseOk ? (
                   <span style={mono}>
-                    <span style={{ color: 'var(--text-muted)' }}>cream </span>
-                    <Ratio ratio={creamRatio as number} />
+                    <span style={{ color: 'var(--text-muted)' }}>inverse </span>
+                    <Ratio ratio={inverseRatio as number} />
                   </span>
                 ) : null}
               </div>
@@ -416,7 +416,7 @@ export function ElevationStack({
   );
 }
 
-/** The hard-offset "sticker lift" shadow, shown at rest and lifted. */
+/** The card hover shadow (`--elevation-lift`), shown at rest and lifted. */
 export function ShadowSpecimen() {
   const themed = useThemeAttrs();
   const box: CSSProperties = {
@@ -430,7 +430,7 @@ export function ShadowSpecimen() {
   return (
     <div {...themed} style={{ display: 'flex', gap: 'var(--space-inset)', margin: 'var(--space-inset) var(--space-inset) var(--space-inset) 0', flexWrap: 'wrap' }}>
       <div style={box}>rest</div>
-      <div style={{ ...box, boxShadow: 'var(--elevation-lift)', transform: 'translate(-2px, -2px)' }}>
+      <div style={{ ...box, boxShadow: 'var(--elevation-lift)', transform: 'var(--motion-transform-lift)' }}>
         --elevation-lift
       </div>
     </div>
@@ -452,6 +452,7 @@ export function CardElevation() {
     display: 'flex',
     flexDirection: 'column',
     gap: 'var(--card-gap)',
+    boxShadow: 'var(--card-shadow)',
     flex: '1 1 240px',
   };
 
@@ -477,19 +478,19 @@ export function CardElevation() {
     >
       <div style={base}>
         <span style={title}>At rest</span>
-        <span style={body}>Sits flat on its surface. The 2px ink border is the only edge.</span>
+        <span style={body}>Sits on its surface. Its border (and, on dark, a faint top edge) is all that separates it.</span>
       </div>
       <div
         style={{
           ...base,
           boxShadow: 'var(--card-shadow-hover)',
-          transform: 'translate(-2px, -2px)',
+          transform: 'var(--card-transform-hover)',
         }}
       >
         <span style={title}>Lifted</span>
         <span style={body}>
-          On hover, an interactive card shifts up-left onto a 3px hard shadow extruded
-          from its own border.
+          On hover, an interactive card takes its theme&apos;s response — a halo, a glow or a
+          hard-shadow lift — and moves only if the theme says so.
         </span>
       </div>
     </div>

@@ -1,11 +1,8 @@
 import StyleDictionary from 'style-dictionary';
 
 /** Doc keys like `$comment` sit alongside real token groups; never emit them. */
-export const isDocKey = (token) => token.path.some((segment) => segment.startsWith('$'));
+const isDocKey = (token) => token.path.some((segment) => segment.startsWith('$'));
 const real = (token) => !isDocKey(token);
-
-/** Tokens under tokens/primitives/ — emitted once in :root. */
-export const isPrimitive = (token) => token.filePath?.includes('/tokens/primitives/');
 
 export function registerTransforms() {
   // ── Layer filters — each selects one input layer by file path, so the build

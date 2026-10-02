@@ -82,6 +82,11 @@ export function Overlay({
   }
 
   return (
+    // Dismissing on a scrim click is the standard dialog pattern and a pointer-only
+    // convenience: keyboard and assistive-tech users have Escape (handleCancel) and the close
+    // control the content provides, and the platform already traps focus. A key handler here
+    // would only duplicate Escape, so the two a11y rules that expect one are waived on purpose.
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
     <dialog
       ref={ref}
       className={['cf-overlay', `cf-overlay--${placement}`, className].filter(Boolean).join(' ')}

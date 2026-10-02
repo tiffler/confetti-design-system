@@ -1,0 +1,39 @@
+name: Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# One run per ref; a newer push cancels an older one still in flight.
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          # 24 is the current LTS line; package.json `engines` allows 20.19+ and 22.12+.
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # Layer audit + schema validation + Style Dictionary build. Fails on any contract break.
+      - name: Tokens
+        run: npm run tokens
+
+      # build/portfolio/ is committed on purpose. If rebuilding changed it, the commit is stale.
+      - name: Committed token output is up to date
+        run: git diff --exit-code -- build/portfolio
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint

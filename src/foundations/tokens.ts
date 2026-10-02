@@ -53,7 +53,7 @@ let lastKnown: ThemeGlobals = { ...DEFAULTS, ...readGlobalsFromUrl() };
  * both. So we read the toolbar state off the addons channel instead: the cache
  * above seeds the initial value, then SET_GLOBALS / GLOBALS_UPDATED keep it live.
  */
-export function useThemeGlobals(): ThemeGlobals {
+function useThemeGlobals(): ThemeGlobals {
   const [globals, setGlobals] = useState<ThemeGlobals>(lastKnown);
 
   useEffect(() => {

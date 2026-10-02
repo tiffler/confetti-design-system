@@ -1,7 +1,7 @@
 .cf-card {
   /* Overridden per instance by Card.tsx; square is the fallback when the component
      isn't driving it (e.g. plain markup using the class). */
-  --card-tilt-hover: 0deg;
+  --cf-card-tilt: 0deg;
 
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@
 .cf-card--interactive:hover,
 .cf-card--interactive[data-force~='hover'] {
   transform: var(--card-transform-hover);
-  rotate: var(--card-tilt-hover);
+  rotate: var(--cf-card-tilt);
   box-shadow: var(--card-shadow-hover);
 }
 

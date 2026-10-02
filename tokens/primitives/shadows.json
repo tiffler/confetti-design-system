@@ -3,17 +3,9 @@
     "none": {
       "value": "none"
     },
-    "soft": {
-      "value": "0 1px 2px 0 {colors.porcelain.a04}, 0 8px 24px -6px {colors.porcelain.a12}",
-      "comment": "diffuse ambient shadow on light surfaces — rests just above the page"
-    },
     "lifted": {
       "value": "0 2px 4px 0 {colors.porcelain.a04}, 0 16px 40px -8px {colors.porcelain.a16}",
       "comment": "soft, deeper — hover and floating surfaces on light"
-    },
-    "soft-deep": {
-      "value": "0 1px 2px 0 {colors.base.black-a40}, 0 8px 24px -6px {colors.base.black-a40}",
-      "comment": "dark-surface counterpart of soft — black, since a light shadow does not read on dark"
     },
     "lifted-deep": {
       "value": "0 2px 4px 0 {colors.base.black-a40}, 0 16px 40px -8px {colors.base.black-a60}",
@@ -59,7 +51,7 @@
     "tilt": {
       "subtle": {
         "value": "0.8deg",
-        "comment": "outer bound of the hand-placed sticker tilt — components scale this by a per-instance multiplier in -1..1"
+        "comment": "outer bound of the hand-placed tilt a theme may apply — components scale this by a per-instance multiplier in -1..1"
       },
       "none": {
         "value": "0deg",

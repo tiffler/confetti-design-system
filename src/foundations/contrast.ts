@@ -3,11 +3,11 @@
  * computed from the build rather than typed in by hand.
  */
 
-export type Rgb = [number, number, number];
-export type Rgba = [number, number, number, number];
+type Rgb = [number, number, number];
+type Rgba = [number, number, number, number];
 
 /** Accepts `#abc`, `#aabbcc`, `rgb()` and `rgba()`. Returns null for anything else. */
-export function parseColor(input: string): Rgba | null {
+function parseColor(input: string): Rgba | null {
   const c = String(input).trim();
 
   if (c.startsWith('#')) {
@@ -30,7 +30,7 @@ export function parseColor(input: string): Rgba | null {
  * against what actually renders — `border-subtle` is rgba, so comparing its raw value
  * to a surface would report a ratio no one ever sees.
  */
-export function flatten(fg: Rgba, bg: Rgb): Rgb {
+function flatten(fg: Rgba, bg: Rgb): Rgb {
   const a = fg[3];
   if (a >= 1) return [fg[0], fg[1], fg[2]];
   return [0, 1, 2].map((i) => fg[i] * a + bg[i] * (1 - a)) as unknown as Rgb;
@@ -59,7 +59,7 @@ function channel(v: number): number {
   return s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
 }
 
-export function luminance([r, g, b]: Rgb): number {
+function luminance([r, g, b]: Rgb): number {
   return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b);
 }
 
@@ -106,7 +106,7 @@ export function contrastRatio(fgValue: string, bgValue: string, backdrop?: strin
   return (hi + 0.05) / (lo + 0.05);
 }
 
-export type Level = 'AAA' | 'AA' | 'AA Large' | 'Fail';
+type Level = 'AAA' | 'AA' | 'AA Large' | 'Fail';
 
 /** Grades a ratio for body text. Large-text and UI thresholds are lower. */
 export function gradeText(ratio: number): Level {

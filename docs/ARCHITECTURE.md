@@ -27,6 +27,9 @@ flip through every theme × mode combination the project defines.
 | `npm run storybook` | Build tokens, then the Storybook dev server on `:6006` |
 | `npm run build-storybook` | Build tokens, then a static Storybook |
 | `npm run typecheck` | `tsc --noEmit` |
+| `npm run lint` | ESLint (TypeScript, React, hooks, a11y), Stylelint, and the component-CSS audit |
+| `npm run audit:css` | Component CSS reads only component tokens, and nothing reads a variable that no longer exists |
+| `npm run check` | Everything CI runs: tokens, typecheck, lint |
 
 ---
 
@@ -47,15 +50,15 @@ raw values      roles + a       per-widget
 - **Semantic** (`tokens/semantic/`, `tokens/modes/`, `tokens/themes/`, `tokens/overrides/`)
   — purpose-named roles. This includes the neutrals (per mode), the **brand-kit inputs** a
   theme sets, and the wiring that binds roles to those inputs.
-- **Component** (`tokens/component/`) — per-widget values (`--button-primary-bg`,
-  `--badge-bg-neutral`) that reference semantic roles only. Components consume these and
+- **Component** (`tokens/component/`) — per-widget values (`--button-primary-fill`,
+  `--badge-fill-neutral`) that reference semantic roles only. Components consume these and
   nothing else, so they never know which theme or mode is active.
 
 ### The brand-kit contract
 
 A theme is a small set of **inputs** — brand color, four accents, control/container radius,
 border width, three fonts, and the button hover style. A `wiring` layer binds the roles
-components use (e.g. `action.primary.bg`) to those inputs once, under `:root`. Override an
+components use (e.g. `action.primary.fill`) to those inputs once, under `:root`. Override an
 input in a `[data-theme]` block and every wired role repoints through the cascade — that's
 how a whole theme comes from changing a handful of values.
 
@@ -77,7 +80,9 @@ from the mode block. Adding a theme adds one CSS block and multiplies nothing.
 `npm run audit:tokens` walks every token and fails the build on: a semantic/component token
 holding a raw value, a component token skipping a layer into a primitive, or a reference to
 a token that doesn't exist. A companion schema check fails any theme × mode that's missing a
-required role. So the architecture can't quietly rot.
+required role, and `npm run audit:css` fails component CSS that reads anything but its own
+component tokens (or a `--cf-*` local it sets itself). CI runs all of it, and fails if the
+committed `build/portfolio/` is stale. So the architecture can't quietly rot.
 
 ---
 
@@ -114,8 +119,9 @@ React, one `.tsx` + `.css` + `.stories.tsx` triple each, consuming component tok
   changes colour only (nothing moves, no shadow), Adventure brightens with no lift, Neon glows. `danger` takes
   primary's footprint but reads `status.danger` rather than the brand — so it stays red in a
   theme whose brand is not — as an outline at rest that fills solid on hover.
-- **Card** — eyebrow · title · body; tilts on hover by a deterministic hash of its seed (no
-  `Math.random()`, so visual snapshots stay stable).
+- **Card** — eyebrow · title · body. Its hover is the theme's: a halo or glow in Confetti, a lift
+  onto a hard shadow in Adventure and Neon. Where a theme sets a tilt, it comes from a
+  deterministic hash of the card's seed (no `Math.random()`, so visual snapshots stay stable).
 - **WorkCard** — an image-first project card: a framed media area with a category tag and an
   index number over it, then a title and date. Deliberately not a Card variant (Card is
   text-first). Renders a link with a hover lift when given an `href`.
@@ -213,9 +219,11 @@ Confetti/
 │  ├─ themes/                 brand-kit inputs — confetti · adventure · neon
 │  ├─ overrides/              per-theme-per-mode neutrals + a11y lifts
 │  └─ component/portfolio/    button · card · work-card · dark-panel · badge · tabs · overlay · modal · toast · switch · slider · icon
-├─ style-dictionary/          build.js · audit-layers.js · validate-schema.js
+├─ style-dictionary/          build.js · audit-layers.js · audit-css.js · validate-schema.js
+├─ .github/workflows/         checks (tokens · stale build · typecheck · lint) · chromatic
 ├─ build/portfolio/           GENERATED, committed — tokens.css/json/dtcg + tailwind
-├─ docs/ARCHITECTURE.md       this file
+├─ eslint.config.js · stylelint.config.js   lint configuration
+├─ docs/                      ARCHITECTURE (this file) · TOKEN-CONVENTION · PERSPECTIVE-MIGRATION
 ├─ public/fonts/              self-hosted Fredoka + JetBrains Mono
 └─ src/
    ├─ components/             Button · Card · WorkCard · DarkPanel · Badge · Tabs · Overlay · Modal · Toast · Switch · Slider · Icon
