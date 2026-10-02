@@ -107,10 +107,10 @@
   --colors-midnight-100: #eeeef9;
   --colors-midnight-300: #a7a9cc;
   --colors-midnight-400: #8b8db3;
-  --colors-midnight-450: #2d2f55;
-  --colors-midnight-500: #232541;
-  --colors-midnight-600: #1e1f38;
-  --colors-midnight-700: #17182b;
+  --colors-midnight-450: #2a2a30;
+  --colors-midnight-500: #1f1f24;
+  --colors-midnight-600: #1a1a20;
+  --colors-midnight-700: #14141b;
   --colors-midnight-800: #0a0a15;
   --colors-midnight-900: #05050c;
   --colors-midnight-a14: rgba(200, 205, 255, 0.14);
@@ -600,9 +600,9 @@
 
 [data-mode="dark"] {
   --surface-page: #0a0a15;
-  --surface-raised: #17182b;
-  --surface-panel: #1e1f38;
-  --surface-card: #232541;
+  --surface-raised: #14141b;
+  --surface-panel: #1a1a20;
+  --surface-card: #1f1f24;
   --surface-backdrop: #05050c;
   --text-default: #eeeef9;
   --text-muted: #a7a9cc;
@@ -613,9 +613,9 @@
   --elevation-lift: 0 0 0 1px rgba(165, 150, 255, 0.95), 0 0 28px -6px rgba(118, 100, 255, 0.72), 0 10px 36px -16px rgba(118, 100, 255, 0.72), inset 0 1px 0 0 rgba(200, 205, 255, 0.07);
   --elevation-button-lift: none;
   --elevation-float: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 16px 40px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(200, 205, 255, 0.07);
-  --action-secondary-fill: #1e1f38;
+  --action-secondary-fill: #1a1a20;
   --action-secondary-text: #eeeef9;
-  --action-secondary-fill-hover: #2d2f55;
+  --action-secondary-fill-hover: #2a2a30;
   --action-ghost-fill: transparent;
   --action-ghost-text: #eeeef9;
   --status-success-fill: #1b7a4b;

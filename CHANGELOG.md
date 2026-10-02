@@ -20,7 +20,7 @@ the token sync); additive-only, non-visual changes are **patch**.
   Adventure and Neon are unaffected.
 
 - **Midnight-indigo dark mode with a glow hover** *(visual — consumers will see it)*. Dark neutrals
-  move to a new, richer `colors.midnight` ramp — a deep indigo-black with evenly spaced surface steps
+  move to a new `colors.midnight` ramp — a rich indigo-black page with dark charcoal cards (a tiny hint of indigo) and evenly spaced surface steps
   (raised sits at the midpoint between page and card) and lavender-tinged text. Hover no longer
   moves anything: on dark, **cards** glow in a bright, saturated indigo with a lit edge, close to a neon tube (`shadow.halo-deep`) and gain a faint light along the top edge (`shadow.highlight`, via new
   `elevation.edge`); on light, a card's hover is the same halo (`shadow.halo`) in ink — identical size and spread — with no rise. Buttons

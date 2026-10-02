@@ -359,34 +359,34 @@
       }
     },
     "midnight": {
-      "$comment": "Midnight indigo — Confetti's dark mode, and the deep ground of its code blocks and dark panels. A rich, saturated indigo-black rather than a gray: the tint is what keeps dark reading as a colour, and the four surface steps (800 page, 700 raised, 600 panel, 500 card) are evenly spaced in luminance, so each layer reads as one step up and depth comes from layering. Numbered by luminance: 100 lightest, 900 darkest. The named alpha steps at the end are the glow and edge light used on hover and at the top of a card.",
+      "$comment": "Midnight — Confetti's dark mode, and the deep ground of its code blocks and dark panels. The page is a rich indigo-black; the raised surfaces above it are a luxurious dark charcoal with only a tiny hint of indigo, so cards read as dark and quiet rather than bright. The four surface steps (800 page, 700 raised, 600 panel, 500 card) are evenly spaced in luminance, so each layer reads as one step up and depth comes from layering. Numbered by luminance: 100 lightest, 900 darkest. The named alpha steps at the end are the glow and edge light used on hover and at the top of a card.",
       "100": {
         "value": "#eeeef9",
         "comment": "text — 17.1:1 on page"
       },
       "300": {
         "value": "#a7a9cc",
-        "comment": "muted text — 8.61:1 on page, 6.51:1 on card, the lightest surface"
+        "comment": "muted text — 8.61:1 on page, 7.18:1 on card, the lightest surface"
       },
       "400": {
         "value": "#8b8db3",
         "comment": "muted text on the deep ground — 6.35:1 on 900"
       },
       "450": {
-        "value": "#2d2f55",
-        "comment": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 11:1 with text"
+        "value": "#2a2a30",
+        "comment": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 12.4:1 with text"
       },
       "500": {
-        "value": "#232541",
-        "comment": "card, the lightest surface — and so the one that sets the contrast floor: the palest brand red still reads at 6.64:1 on it"
+        "value": "#1f1f24",
+        "comment": "card — dark charcoal with a tiny hint of indigo. The lightest surface, and so the one that sets the contrast floor: the palest brand red still reads at 7.32:1 on it"
       },
       "600": {
-        "value": "#1e1f38",
+        "value": "#1a1a20",
         "comment": "panel chrome — between raised and card"
       },
       "700": {
-        "value": "#17182b",
-        "comment": "raised — the canvas one step above page, at the midpoint between page and card"
+        "value": "#14141b",
+        "comment": "raised — the canvas one step above page, a grayer charcoal"
       },
       "800": {
         "value": "#0a0a15",

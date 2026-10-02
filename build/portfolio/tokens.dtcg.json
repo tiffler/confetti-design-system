@@ -716,7 +716,7 @@
         "300": {
           "$value": "#a7a9cc",
           "$type": "other",
-          "$description": "muted text — 8.61:1 on page, 6.51:1 on card, the lightest surface",
+          "$description": "muted text — 8.61:1 on page, 7.18:1 on card, the lightest surface",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-300"
           }
@@ -730,23 +730,23 @@
           }
         },
         "450": {
-          "$value": "#2d2f55",
+          "$value": "#2a2a30",
           "$type": "other",
-          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 11:1 with text",
+          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 12.4:1 with text",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-450"
           }
         },
         "500": {
-          "$value": "#232541",
+          "$value": "#1f1f24",
           "$type": "other",
-          "$description": "card, the lightest surface — and so the one that sets the contrast floor: the palest brand red still reads at 6.64:1 on it",
+          "$description": "card — dark charcoal with a tiny hint of indigo. The lightest surface, and so the one that sets the contrast floor: the palest brand red still reads at 7.32:1 on it",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-500"
           }
         },
         "600": {
-          "$value": "#1e1f38",
+          "$value": "#1a1a20",
           "$type": "other",
           "$description": "panel chrome — between raised and card",
           "$extensions": {
@@ -754,9 +754,9 @@
           }
         },
         "700": {
-          "$value": "#17182b",
+          "$value": "#14141b",
           "$type": "other",
-          "$description": "raised — the canvas one step above page, at the midpoint between page and card",
+          "$description": "raised — the canvas one step above page, a grayer charcoal",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-700"
           }
@@ -5526,7 +5526,7 @@
         "300": {
           "$value": "#a7a9cc",
           "$type": "other",
-          "$description": "muted text — 8.61:1 on page, 6.51:1 on card, the lightest surface",
+          "$description": "muted text — 8.61:1 on page, 7.18:1 on card, the lightest surface",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-300"
           }
@@ -5540,23 +5540,23 @@
           }
         },
         "450": {
-          "$value": "#2d2f55",
+          "$value": "#2a2a30",
           "$type": "other",
-          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 11:1 with text",
+          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 12.4:1 with text",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-450"
           }
         },
         "500": {
-          "$value": "#232541",
+          "$value": "#1f1f24",
           "$type": "other",
-          "$description": "card, the lightest surface — and so the one that sets the contrast floor: the palest brand red still reads at 6.64:1 on it",
+          "$description": "card — dark charcoal with a tiny hint of indigo. The lightest surface, and so the one that sets the contrast floor: the palest brand red still reads at 7.32:1 on it",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-500"
           }
         },
         "600": {
-          "$value": "#1e1f38",
+          "$value": "#1a1a20",
           "$type": "other",
           "$description": "panel chrome — between raised and card",
           "$extensions": {
@@ -5564,9 +5564,9 @@
           }
         },
         "700": {
-          "$value": "#17182b",
+          "$value": "#14141b",
           "$type": "other",
-          "$description": "raised — the canvas one step above page, at the midpoint between page and card",
+          "$description": "raised — the canvas one step above page, a grayer charcoal",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-700"
           }
@@ -10336,7 +10336,7 @@
         "300": {
           "$value": "#a7a9cc",
           "$type": "other",
-          "$description": "muted text — 8.61:1 on page, 6.51:1 on card, the lightest surface",
+          "$description": "muted text — 8.61:1 on page, 7.18:1 on card, the lightest surface",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-300"
           }
@@ -10350,23 +10350,23 @@
           }
         },
         "450": {
-          "$value": "#2d2f55",
+          "$value": "#2a2a30",
           "$type": "other",
-          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 11:1 with text",
+          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 12.4:1 with text",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-450"
           }
         },
         "500": {
-          "$value": "#232541",
+          "$value": "#1f1f24",
           "$type": "other",
-          "$description": "card, the lightest surface — and so the one that sets the contrast floor: the palest brand red still reads at 6.64:1 on it",
+          "$description": "card — dark charcoal with a tiny hint of indigo. The lightest surface, and so the one that sets the contrast floor: the palest brand red still reads at 7.32:1 on it",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-500"
           }
         },
         "600": {
-          "$value": "#1e1f38",
+          "$value": "#1a1a20",
           "$type": "other",
           "$description": "panel chrome — between raised and card",
           "$extensions": {
@@ -10374,9 +10374,9 @@
           }
         },
         "700": {
-          "$value": "#17182b",
+          "$value": "#14141b",
           "$type": "other",
-          "$description": "raised — the canvas one step above page, at the midpoint between page and card",
+          "$description": "raised — the canvas one step above page, a grayer charcoal",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-700"
           }
@@ -11687,21 +11687,21 @@
         }
       },
       "raised": {
-        "$value": "#17182b",
+        "$value": "#14141b",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--surface-raised"
         }
       },
       "panel": {
-        "$value": "#1e1f38",
+        "$value": "#1a1a20",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--surface-panel"
         }
       },
       "card": {
-        "$value": "#232541",
+        "$value": "#1f1f24",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--surface-card"
@@ -11940,7 +11940,7 @@
       },
       "secondary": {
         "fill": {
-          "$value": "#1e1f38",
+          "$value": "#1a1a20",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--action-secondary-fill"
@@ -11954,7 +11954,7 @@
           }
         },
         "fill-hover": {
-          "$value": "#2d2f55",
+          "$value": "#2a2a30",
           "$type": "other",
           "$description": "a clear step lighter than the resting fill",
           "$extensions": {
@@ -12404,7 +12404,7 @@
           }
         },
         "neutral": {
-          "$value": "#17182b",
+          "$value": "#14141b",
           "$type": "other",
           "$description": "paper fill — a badge that isn't a category",
           "$extensions": {
@@ -12630,7 +12630,7 @@
       },
       "secondary": {
         "fill": {
-          "$value": "#1e1f38",
+          "$value": "#1a1a20",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-fill"
@@ -12651,7 +12651,7 @@
           }
         },
         "fill-hover": {
-          "$value": "#2d2f55",
+          "$value": "#2a2a30",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--button-secondary-fill-hover"
@@ -12743,14 +12743,14 @@
     },
     "card": {
       "fill": {
-        "$value": "#232541",
+        "$value": "#1f1f24",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-fill"
         }
       },
       "fill-raised": {
-        "$value": "#17182b",
+        "$value": "#14141b",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--card-fill-raised"
@@ -13004,7 +13004,7 @@
       },
       "inline": {
         "fill": {
-          "$value": "#1e1f38",
+          "$value": "#1a1a20",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--code-inline-fill"
@@ -13309,7 +13309,7 @@
     },
     "modal": {
       "fill": {
-        "$value": "#232541",
+        "$value": "#1f1f24",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--modal-fill"
@@ -13543,7 +13543,7 @@
         }
       },
       "track-fill": {
-        "$value": "#1e1f38",
+        "$value": "#1a1a20",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-track-fill"
@@ -13579,7 +13579,7 @@
         }
       },
       "thumb-fill": {
-        "$value": "#232541",
+        "$value": "#1f1f24",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--slider-thumb-fill"
@@ -13710,7 +13710,7 @@
         }
       },
       "fill": {
-        "$value": "#1e1f38",
+        "$value": "#1a1a20",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--switch-fill"
@@ -13740,7 +13740,7 @@
         }
       },
       "icon-color": {
-        "$value": "#1e1f38",
+        "$value": "#1a1a20",
         "$type": "other",
         "$description": "the glyph sits ON the thumb, so it takes the track's fill",
         "$extensions": {
@@ -13807,7 +13807,7 @@
     },
     "tabs": {
       "track-fill": {
-        "$value": "#1e1f38",
+        "$value": "#1a1a20",
         "$type": "other",
         "$description": "recessed rail behind the pills",
         "$extensions": {
@@ -13930,7 +13930,7 @@
     },
     "toast": {
       "fill": {
-        "$value": "#17182b",
+        "$value": "#14141b",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--toast-fill"
@@ -14105,7 +14105,7 @@
     },
     "work-card": {
       "fill": {
-        "$value": "#232541",
+        "$value": "#1f1f24",
         "$type": "other",
         "$extensions": {
           "com.confetti.cssVariable": "--work-card-fill"
@@ -14196,7 +14196,7 @@
         }
       },
       "media-fill": {
-        "$value": "#1e1f38",
+        "$value": "#1a1a20",
         "$type": "other",
         "$description": "what shows before an image loads, or when there is none",
         "$extensions": {
@@ -14213,7 +14213,7 @@
       },
       "tag": {
         "fill": {
-          "$value": "#232541",
+          "$value": "#1f1f24",
           "$type": "other",
           "$extensions": {
             "com.confetti.cssVariable": "--work-card-tag-fill"
@@ -15154,7 +15154,7 @@
         "300": {
           "$value": "#a7a9cc",
           "$type": "other",
-          "$description": "muted text — 8.61:1 on page, 6.51:1 on card, the lightest surface",
+          "$description": "muted text — 8.61:1 on page, 7.18:1 on card, the lightest surface",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-300"
           }
@@ -15168,23 +15168,23 @@
           }
         },
         "450": {
-          "$value": "#2d2f55",
+          "$value": "#2a2a30",
           "$type": "other",
-          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 11:1 with text",
+          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 12.4:1 with text",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-450"
           }
         },
         "500": {
-          "$value": "#232541",
+          "$value": "#1f1f24",
           "$type": "other",
-          "$description": "card, the lightest surface — and so the one that sets the contrast floor: the palest brand red still reads at 6.64:1 on it",
+          "$description": "card — dark charcoal with a tiny hint of indigo. The lightest surface, and so the one that sets the contrast floor: the palest brand red still reads at 7.32:1 on it",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-500"
           }
         },
         "600": {
-          "$value": "#1e1f38",
+          "$value": "#1a1a20",
           "$type": "other",
           "$description": "panel chrome — between raised and card",
           "$extensions": {
@@ -15192,9 +15192,9 @@
           }
         },
         "700": {
-          "$value": "#17182b",
+          "$value": "#14141b",
           "$type": "other",
-          "$description": "raised — the canvas one step above page, at the midpoint between page and card",
+          "$description": "raised — the canvas one step above page, a grayer charcoal",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-700"
           }
@@ -19972,7 +19972,7 @@
         "300": {
           "$value": "#a7a9cc",
           "$type": "other",
-          "$description": "muted text — 8.61:1 on page, 6.51:1 on card, the lightest surface",
+          "$description": "muted text — 8.61:1 on page, 7.18:1 on card, the lightest surface",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-300"
           }
@@ -19986,23 +19986,23 @@
           }
         },
         "450": {
-          "$value": "#2d2f55",
+          "$value": "#2a2a30",
           "$type": "other",
-          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 11:1 with text",
+          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 12.4:1 with text",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-450"
           }
         },
         "500": {
-          "$value": "#232541",
+          "$value": "#1f1f24",
           "$type": "other",
-          "$description": "card, the lightest surface — and so the one that sets the contrast floor: the palest brand red still reads at 6.64:1 on it",
+          "$description": "card — dark charcoal with a tiny hint of indigo. The lightest surface, and so the one that sets the contrast floor: the palest brand red still reads at 7.32:1 on it",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-500"
           }
         },
         "600": {
-          "$value": "#1e1f38",
+          "$value": "#1a1a20",
           "$type": "other",
           "$description": "panel chrome — between raised and card",
           "$extensions": {
@@ -20010,9 +20010,9 @@
           }
         },
         "700": {
-          "$value": "#17182b",
+          "$value": "#14141b",
           "$type": "other",
-          "$description": "raised — the canvas one step above page, at the midpoint between page and card",
+          "$description": "raised — the canvas one step above page, a grayer charcoal",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-700"
           }
@@ -24783,7 +24783,7 @@
         "300": {
           "$value": "#a7a9cc",
           "$type": "other",
-          "$description": "muted text — 8.61:1 on page, 6.51:1 on card, the lightest surface",
+          "$description": "muted text — 8.61:1 on page, 7.18:1 on card, the lightest surface",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-300"
           }
@@ -24797,23 +24797,23 @@
           }
         },
         "450": {
-          "$value": "#2d2f55",
+          "$value": "#2a2a30",
           "$type": "other",
-          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 11:1 with text",
+          "$description": "hover fill for a dark control — a clear step above card (a half-step, since it sits between the card surface and the text steps); 12.4:1 with text",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-450"
           }
         },
         "500": {
-          "$value": "#232541",
+          "$value": "#1f1f24",
           "$type": "other",
-          "$description": "card, the lightest surface — and so the one that sets the contrast floor: the palest brand red still reads at 6.64:1 on it",
+          "$description": "card — dark charcoal with a tiny hint of indigo. The lightest surface, and so the one that sets the contrast floor: the palest brand red still reads at 7.32:1 on it",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-500"
           }
         },
         "600": {
-          "$value": "#1e1f38",
+          "$value": "#1a1a20",
           "$type": "other",
           "$description": "panel chrome — between raised and card",
           "$extensions": {
@@ -24821,9 +24821,9 @@
           }
         },
         "700": {
-          "$value": "#17182b",
+          "$value": "#14141b",
           "$type": "other",
-          "$description": "raised — the canvas one step above page, at the midpoint between page and card",
+          "$description": "raised — the canvas one step above page, a grayer charcoal",
           "$extensions": {
             "com.confetti.cssVariable": "--colors-midnight-700"
           }
